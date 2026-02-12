@@ -74,3 +74,7 @@ If you only changed one file, prefer adding it explicitly:
 ```bash
 git add README.md
 ```
+
+## Release notes
+
+- `v0.1-docs`: baseline documentation release (first-day setup, quickstart, and git sync workflow)
