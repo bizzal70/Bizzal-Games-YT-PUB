@@ -1,0 +1,84 @@
+defaults:
+  length: shorts
+  spice_rate: 0.35
+  tones:
+  - neutral
+  - gritty
+  - heroic
+voices:
+  friendly_vet:
+    hooks:
+    - 'Old-school kit check: {name}.'
+    - 'Dungeon kit spotlight: {name}.'
+    ctas:
+    - 'DMs: drop one in the dungeon and watch the party start thinking like engineers.'
+    - 'Players: buy this before your next shiny weapon.'
+    hooks_monster_tactic:
+    - 'Monster check: {name}.'
+    - 'Table troublemaker: {name}.'
+    ctas_monster_tactic:
+    - 'DMs: run it like it wants to win, not like it wants to die politely.'
+    - "Players: solve the monster, don\u2019t just swing at it."
+    hooks_spell_use_case:
+    - 'Spell play: {name}.'
+    - 'Pocket magic: {name}.'
+    ctas_spell_use_case:
+    - 'DMs: let clever casting change the scene.'
+    - "Players: don\u2019t cast it\u2014*aim* it."
+  gritty_dm:
+    hooks:
+    - 'In the dark, rope beats steel: {name}.'
+    - 'This is how you move the world: {name}.'
+    ctas:
+    - 'DMs: make the environment heavy. Let tools matter.'
+    - 'Players: win fights by winning terrain first.'
+    hooks_monster_tactic:
+    - In the dark, {name} is a problem.
+    - "Tonight\u2019s lesson: {name}."
+    ctas_monster_tactic:
+    - "DMs: hit hard, then disengage\u2014predators don\u2019t trade blows."
+    - 'Players: control space or bleed for it.'
+    hooks_spell_use_case:
+    - 'Magic with teeth: {name}.'
+    - 'When it matters: {name}.'
+    ctas_spell_use_case:
+    - 'DMs: make magic costly, not pointless.'
+    - 'Players: spend the slot when it swings the fight.'
+  rules_lawyer:
+    hooks:
+    - 'Mechanics moment: {name}.'
+    - 'Rules-forward pick: {name}.'
+    ctas:
+    - "If you want \u2018smart play\u2019, reward prep like this."
+    - "Track time, anchors, and positioning\u2014this is where it earns its keep."
+    hooks_monster_tactic:
+    - 'Statblock truth: {name}.'
+    - 'Tactics note: {name}.'
+    ctas_monster_tactic:
+    - 'DMs: reward good positioning; punish sloppy clustering.'
+    - 'Players: deny advantage, deny actions, deny turns.'
+    hooks_spell_use_case:
+    - 'Spell timing note: {name}.'
+    - 'Rules nugget: {name}.'
+    ctas_spell_use_case:
+    - "DMs: enforce components and concentration\u2014spells get sharper."
+    - 'Players: read the target line twice, then cast.'
+category_rules:
+  monster_tactic:
+    angles:
+    - how_it_wins
+    - common_mistake
+    - counterplay
+    voices:
+    - gritty_dm
+    - rules_lawyer
+    - friendly_vet
+  spell_use_case:
+    angles:
+    - best_moment
+    - common_misplay
+    - dm_twist
+    voices:
+    - friendly_vet
+    - rules_lawyer
+    - gritty_dm

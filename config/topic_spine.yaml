@@ -1,0 +1,71 @@
+weekly_spine:
+  mon: monster_tactic
+  tue: spell_use_case
+  wed: rules_ruling
+  thu: item_spotlight
+  fri: encounter_seed
+  sat: rules_myth
+  sun: character_micro_tip
+
+defaults:
+  ruleset: wotc_srd_2024
+  target_seconds: 55
+  tone: friendly_veteran
+  reading_level: general
+  no_homebrew_mechanics: true
+
+category_weights:
+  monster_tactic:
+    angles:
+      how_it_wins: 3
+      how_to_counter: 3
+      terrain_synergy: 2
+      party_level_scaling: 2
+      roleplay_hook: 1
+
+  spell_use_case:
+    angles:
+      best_moment: 3
+      combo_pairing: 2
+      common_mistake: 2
+      upcast_tip: 2
+      dm_counterplay: 1
+
+  rules_ruling:
+    angles:
+      common_table_mistake: 3
+      fast_ruling: 3
+      edge_case: 2
+      dm_fairness_tip: 2
+      player_tip: 1
+
+  item_spotlight:
+    angles:
+      best_user: 3
+      clever_use: 3
+      drawback_watchout: 2
+      dm_counterplay: 2
+      story_hook: 1
+
+  encounter_seed:
+    angles:
+      three_beats: 3
+      twist: 3
+      terrain_feature: 2
+      time_pressure: 2
+      moral_choice: 1
+
+  rules_myth:
+    angles:
+      myth_vs_rule: 4
+      why_people_get_it_wrong: 2
+      quick_example: 2
+      dm_callout: 1
+
+  character_micro_tip:
+    angles:
+      level_1_choice: 3
+      party_role: 3
+      survivability: 2
+      exploration_edge: 2
+      table_etiquette: 1

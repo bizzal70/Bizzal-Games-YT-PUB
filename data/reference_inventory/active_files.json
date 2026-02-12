@@ -1,0 +1,1714 @@
+{
+  "generated_utc": "2026-02-12T03:55:12Z",
+  "active_srd_path": "/home/umbrel/umbrel/data/reference/open5e/open5e-api/data/v2/wizards-of-the-coast/srd-2024",
+  "file_count": 32,
+  "files": {
+    "AbilityDescription.json": {
+      "bytes": 1072,
+      "sha256": "d0d9d0b322cfbfede0ddbad8a9e6f014adeedc859072b5597a26a0a3e4803456",
+      "record_count": 6,
+      "models": {
+        "api_v2.abilitydescription": 6
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          6
+        ],
+        [
+          "describes",
+          6
+        ],
+        [
+          "document",
+          6
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "Confidence, poise, and charm",
+          "describes": "cha",
+          "document": "srd-2024"
+        },
+        "model": "api_v2.abilitydescription",
+        "pk": "srd-2024_cha"
+      }
+    },
+    "AlignmentDescription.json": {
+      "bytes": 3287,
+      "sha256": "458b51211c076daf11c63747cec260c939e63b5be241c067a2e126e9ea936b00",
+      "record_count": 9,
+      "models": {
+        "api_v2.alignmentdescription": 9
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          9
+        ],
+        [
+          "describes",
+          9
+        ],
+        [
+          "document",
+          9
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "Chaotic Evil creatures act with arbitrary violence, spurred by their hatred or bloodlust. A villain pursuing schemes of vengeance and havoc is probably Chaotic Evil.",
+          "describes": "chaotic-evil",
+          "document": "srd-2024"
+        },
+        "model": "api_v2.alignmentdescription",
+        "pk": "srd-2024_chaotic-evil"
+      }
+    },
+    "Armor.json": {
+      "bytes": 3741,
+      "sha256": "b1978065995aa5d44fd0f28a84d9537fe85f1a9c0a6f43baecf14ea1043d626b",
+      "record_count": 13,
+      "models": {
+        "api_v2.armor": 13
+      },
+      "top_field_keys": [
+        [
+          "ac_add_dexmod",
+          13
+        ],
+        [
+          "ac_base",
+          13
+        ],
+        [
+          "ac_cap_dexmod",
+          13
+        ],
+        [
+          "document",
+          13
+        ],
+        [
+          "grants_stealth_disadvantage",
+          13
+        ],
+        [
+          "name",
+          13
+        ],
+        [
+          "strength_score_required",
+          13
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "ac_add_dexmod": true,
+          "ac_base": 14,
+          "ac_cap_dexmod": 2,
+          "document": "srd-2024",
+          "grants_stealth_disadvantage": false,
+          "name": "Breastplate",
+          "strength_score_required": null
+        },
+        "model": "api_v2.armor",
+        "pk": "srd-2024_breastplate"
+      }
+    },
+    "Background.json": {
+      "bytes": 594,
+      "sha256": "2e55d2f849487104f597a24b35db2a11d6f9ed04e50c3fe213775ba32bf8bcac",
+      "record_count": 4,
+      "models": {
+        "api_v2.background": 4
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          4
+        ],
+        [
+          "document",
+          4
+        ],
+        [
+          "name",
+          4
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "",
+          "document": "srd-2024",
+          "name": "Acolyte"
+        },
+        "model": "api_v2.background",
+        "pk": "srd-2024_acolyte"
+      }
+    },
+    "BackgroundBenefit.json": {
+      "bytes": 5031,
+      "sha256": "43d84260fd436d481bc317b37fe7e826930bae3eb6b772959701da0381108d23",
+      "record_count": 20,
+      "models": {
+        "api_v2.backgroundbenefit": 20
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          20
+        ],
+        [
+          "name",
+          20
+        ],
+        [
+          "parent",
+          20
+        ],
+        [
+          "type",
+          20
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "Intelligence, Wisdom, Charisma",
+          "name": "Ability Scores",
+          "parent": "srd-2024_acolyte",
+          "type": "ability_score"
+        },
+        "model": "api_v2.backgroundbenefit",
+        "pk": "srd-2024_acolyte_ability-scores"
+      }
+    },
+    "CharacterClass.json": {
+      "bytes": 11719,
+      "sha256": "17a6be1d4bd783dce17b2f6fb5646562fa90a4590b7dd9d254b7ef8e1c56b4e1",
+      "record_count": 24,
+      "models": {
+        "api_v2.characterclass": 24
+      },
+      "top_field_keys": [
+        [
+          "caster_type",
+          24
+        ],
+        [
+          "document",
+          24
+        ],
+        [
+          "hit_dice",
+          24
+        ],
+        [
+          "name",
+          24
+        ],
+        [
+          "primary_abilities",
+          24
+        ],
+        [
+          "saving_throws",
+          24
+        ],
+        [
+          "subclass_of",
+          24
+        ],
+        [
+          "desc",
+          12
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "caster_type": "NONE",
+          "document": "srd-2024",
+          "hit_dice": "D12",
+          "name": "Barbarian",
+          "primary_abilities": [],
+          "saving_throws": [
+            "con",
+            "str"
+          ],
+          "subclass_of": null
+        },
+        "model": "api_v2.characterclass",
+        "pk": "srd-2024_barbarian"
+      }
+    },
+    "ClassFeature.json": {
+      "bytes": 225357,
+      "sha256": "3e2b21d79e327ae8d2ec3afc3af5c92e0c62dee89dba58c19566ecf41534cf57",
+      "record_count": 352,
+      "models": {
+        "api_v2.classfeature": 352
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          352
+        ],
+        [
+          "document",
+          352
+        ],
+        [
+          "name",
+          352
+        ],
+        [
+          "parent",
+          352
+        ],
+        [
+          "feature_type",
+          111
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "You gain the Ability Score Improvement feat (see \"Feats\") or another feat of your choice for which you qualify. You gain this feature again at Barbarian levels 8, 12, and 16.",
+          "document": "srd-2024",
+          "name": "Ability Score Improvement",
+          "parent": "srd-2024_barbarian"
+        },
+        "model": "api_v2.classfeature",
+        "pk": "srd-2024_barbarian_ability-score-improvement"
+      }
+    },
+    "ClassFeatureItem.json": {
+      "bytes": 390692,
+      "sha256": "817c92f603aeebd2a429150109d090fc1d57478630a7ab8292b7607768a5f040",
+      "record_count": 1800,
+      "models": {
+        "api_v2.classfeatureitem": 1800
+      },
+      "top_field_keys": [
+        [
+          "column_value",
+          1800
+        ],
+        [
+          "detail",
+          1800
+        ],
+        [
+          "level",
+          1800
+        ],
+        [
+          "parent",
+          1800
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "column_value": null,
+          "detail": null,
+          "level": 12,
+          "parent": "srd-2024_barbarian_ability-score-improvement"
+        },
+        "model": "api_v2.classfeatureitem",
+        "pk": "srd-2024_barbarian_ability-score-improvement_12"
+      }
+    },
+    "ConditionDescription.json": {
+      "bytes": 8446,
+      "sha256": "45cb5ea5d74dbd99f62ac4d9d33ac60d44e91957bc76920b90b89ad651d295d5",
+      "record_count": 15,
+      "models": {
+        "api_v2.conditiondescription": 15
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          15
+        ],
+        [
+          "document",
+          15
+        ],
+        [
+          "describes",
+          15
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "While you have the Blinded condition, you experience the following effects.\n * Can’t See. You can’t see and automatically fail any ability check that requires sight.\n * Attacks Affected. Attack rolls against you have Advantage, and your attack rolls have Disadvantage.",
+          "document": "srd-2024",
+          "describes": "blinded"
+        },
+        "model": "api_v2.conditiondescription",
+        "pk": "srd-2024_blinded"
+      }
+    },
+    "Creature.json": {
+      "bytes": 864453,
+      "sha256": "314d506d40f53d7cb062ef1d310f92d6f5130835901c6e77959f208955dc32c4",
+      "record_count": 329,
+      "models": {
+        "api_v2.creature": 329
+      },
+      "top_field_keys": [
+        [
+          "ability_score_charisma",
+          329
+        ],
+        [
+          "ability_score_constitution",
+          329
+        ],
+        [
+          "ability_score_dexterity",
+          329
+        ],
+        [
+          "ability_score_intelligence",
+          329
+        ],
+        [
+          "ability_score_strength",
+          329
+        ],
+        [
+          "ability_score_wisdom",
+          329
+        ],
+        [
+          "alignment",
+          329
+        ],
+        [
+          "armor_class",
+          329
+        ],
+        [
+          "armor_detail",
+          329
+        ],
+        [
+          "blindsight_range",
+          329
+        ],
+        [
+          "burrow",
+          329
+        ],
+        [
+          "category",
+          329
+        ],
+        [
+          "challenge_rating_decimal",
+          329
+        ],
+        [
+          "climb",
+          329
+        ],
+        [
+          "condition_immunities",
+          329
+        ],
+        [
+          "condition_immunities_display",
+          329
+        ],
+        [
+          "damage_immunities",
+          329
+        ],
+        [
+          "damage_immunities_display",
+          329
+        ],
+        [
+          "damage_resistances",
+          329
+        ],
+        [
+          "damage_resistances_display",
+          329
+        ],
+        [
+          "damage_vulnerabilities",
+          329
+        ],
+        [
+          "damage_vulnerabilities_display",
+          329
+        ],
+        [
+          "darkvision_range",
+          329
+        ],
+        [
+          "document",
+          329
+        ],
+        [
+          "environments",
+          329
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "ability_score_charisma": 18,
+          "ability_score_constitution": 15,
+          "ability_score_dexterity": 9,
+          "ability_score_intelligence": 18,
+          "ability_score_strength": 21,
+          "ability_score_wisdom": 15,
+          "alignment": "lawful evil",
+          "armor_class": 17,
+          "armor_detail": "natural armor",
+          "blindsight_range": null,
+          "burrow": null,
+          "category": "Monsters",
+          "challenge_rating_decimal": "10.000",
+          "climb": null,
+          "condition_immunities": [],
+          "condition_immunities_display": "",
+          "damage_immunities": [],
+          "damage_immunities_display": "",
+          "damage_resistances": [],
+          "damage_resistances_display": "",
+          "damage_vulnerabilities": [],
+          "damage_vulnerabilities_display": "",
+          "darkvision_range": 120,
+          "document": "srd-2024",
+          "environments": [],
+          "experience_points_integer": null,
+          "fly": null,
+          "hit_dice": "20d10 + 40",
+          "hit_points": 150,
+          "hover": false,
+          "illustration": null,
+          "initiative_bonus": 7,
+          "languages": [
+            "deep-speech"
+          ],
+          "languages_desc": "Deep Speech; telepathy 120 ft.",
+          "name": "Aboleth",
+          "nonmagical_attack_immunity": false,
+          "nonmagical_attack_resistance": false,
+          "normal_sight_range": 10560,
+          "passive_perception": 20,
+          "proficiency_bonus": null,
+          "saving_throw_charisma": 4,
+          "saving_throw_constitution": 6,
+          "saving_throw_dexterity": 3,
+          "saving_throw_intelligence": 8,
+          "saving_throw_strength": 5,
+          "saving_throw_wisdom": 6,
+          "size": "large",
+          "skill_bonus_acrobatics": null,
+          "skill_bonus_animal_handling": null,
+          "skill_bonus_arcana": null,
+          "skill_bonus_athletics": null,
+          "skill_bonus_deception": null,
+          "skill_bonus_history": 12,
+          "skill_bonus_insight": null,
+          "skill_bonus_intimidation": null,
+          "skill_bonus_investigation": null,
+          "skill_bonus_medicine": null,
+          "skill_bonus_nature": null,
+          "skill_bonus_perception": 10,
+          "skill_bonus_performance": null,
+          "skill_bonus_persuasion": null,
+          "skill_bonus_religion": null,
+          "skill_bonus_sleight_of_hand": null,
+          "skill_bonus_stealth": null,
+          "skill_bonus_survival": null,
+          "subcategory": null,
+          "swim": 40,
+          "telepathy_range": 120,
+          "tremorsense_range": null,
+          "truesight_range": null,
+          "type": "aberration",
+          "unit": null,
+          "walk": 10,
+          "weight": "0.000"
+        },
+        "model": "api_v2.creature",
+        "pk": "srd-2024_aboleth"
+      }
+    },
+    "CreatureAction.json": {
+      "bytes": 424346,
+      "sha256": "aa8c796d674426225475a8ac8fdcdd59921b56a562e8a8e3a6ae98aa8e5b68e6",
+      "record_count": 888,
+      "models": {
+        "api_v2.creatureaction": 888
+      },
+      "top_field_keys": [
+        [
+          "action_type",
+          888
+        ],
+        [
+          "desc",
+          888
+        ],
+        [
+          "form_condition",
+          888
+        ],
+        [
+          "legendary_cost",
+          888
+        ],
+        [
+          "name",
+          888
+        ],
+        [
+          "order",
+          888
+        ],
+        [
+          "parent",
+          888
+        ],
+        [
+          "uses_param",
+          888
+        ],
+        [
+          "uses_type",
+          888
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "action_type": "ACTION",
+          "desc": "Intelligence Saving Throw: DC 16, one creature within 30 feet that is Charmed or Grappled by the aboleth. Failure: 10 (3d6) Psychic damage. Success: Half damage. Failure or Success: The aboleth gains the target's memories if the target is a Humanoid and is reduced to 0 Hit Points by this action.",
+          "form_condition": null,
+          "legendary_cost": 1,
+          "name": "Consume Memories",
+          "order": 2,
+          "parent": "srd-2024_aboleth",
+          "uses_param": null,
+          "uses_type": null
+        },
+        "model": "api_v2.creatureaction",
+        "pk": "srd-2024_aboleth_consume-memories"
+      }
+    },
+    "CreatureActionAttack.json": {
+      "bytes": 254053,
+      "sha256": "41101f4a2fb182686ca45e31331d2ab680e655a2daf0c8fafafaabf77457f1d8",
+      "record_count": 388,
+      "models": {
+        "api_v2.creatureactionattack": 388
+      },
+      "top_field_keys": [
+        [
+          "attack_type",
+          388
+        ],
+        [
+          "damage_bonus",
+          388
+        ],
+        [
+          "damage_die_count",
+          388
+        ],
+        [
+          "damage_die_type",
+          388
+        ],
+        [
+          "damage_type",
+          388
+        ],
+        [
+          "distance_unit",
+          388
+        ],
+        [
+          "extra_damage_bonus",
+          388
+        ],
+        [
+          "extra_damage_die_count",
+          388
+        ],
+        [
+          "extra_damage_die_type",
+          388
+        ],
+        [
+          "extra_damage_type",
+          388
+        ],
+        [
+          "long_range",
+          388
+        ],
+        [
+          "name",
+          388
+        ],
+        [
+          "parent",
+          388
+        ],
+        [
+          "range",
+          388
+        ],
+        [
+          "reach",
+          388
+        ],
+        [
+          "target_creature_only",
+          388
+        ],
+        [
+          "to_hit_mod",
+          388
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "attack_type": "WEAPON",
+          "damage_bonus": 5,
+          "damage_die_count": 2,
+          "damage_die_type": "D6",
+          "damage_type": null,
+          "distance_unit": null,
+          "extra_damage_bonus": null,
+          "extra_damage_die_count": null,
+          "extra_damage_die_type": null,
+          "extra_damage_type": "bludgeoning",
+          "long_range": null,
+          "name": "Tentacle attack",
+          "parent": "srd-2024_aboleth_tentacle",
+          "range": null,
+          "reach": 15,
+          "target_creature_only": false,
+          "to_hit_mod": 9
+        },
+        "model": "api_v2.creatureactionattack",
+        "pk": "srd-2024_aboleth_tentacle_tentacle-attack"
+      }
+    },
+    "CreatureTrait.json": {
+      "bytes": 110591,
+      "sha256": "62028a60863678bcd8f736540fa7ec86dbbf0109723f0d69ccfc575e87654201",
+      "record_count": 324,
+      "models": {
+        "api_v2.creaturetrait": 324
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          324
+        ],
+        [
+          "name",
+          324
+        ],
+        [
+          "parent",
+          324
+        ],
+        [
+          "type",
+          324
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "The aboleth can breathe air and water.",
+          "name": "Amphibious",
+          "parent": "srd-2024_aboleth",
+          "type": null
+        },
+        "model": "api_v2.creaturetrait",
+        "pk": "srd-2024_aboleth_amphibious"
+      }
+    },
+    "CreatureTypeDescription.json": {
+      "bytes": 3562,
+      "sha256": "5d4fe2d830b5c2695b4a7c7881abb5e1209ee212018dd47da482166d34dfea4e",
+      "record_count": 14,
+      "models": {
+        "api_v2.creaturetypedescription": 14
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          14
+        ],
+        [
+          "describes",
+          14
+        ],
+        [
+          "document",
+          14
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "Aberrations are utterly alien beings, such as aboleths and cloakers.",
+          "describes": "aberration",
+          "document": "srd-2024"
+        },
+        "model": "api_v2.creaturetypedescription",
+        "pk": "srd-2024_aberration"
+      }
+    },
+    "DamageTypeDescription.json": {
+      "bytes": 2441,
+      "sha256": "dad4b1108206edbbe123fded63410a1ad604987960ded7c0a9687c8638630895",
+      "record_count": 13,
+      "models": {
+        "api_v2.damagetypedescription": 13
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          13
+        ],
+        [
+          "describes",
+          13
+        ],
+        [
+          "document",
+          13
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "Corrosive liquids, digestive enzymes",
+          "describes": "acid",
+          "document": "srd-2024"
+        },
+        "model": "api_v2.damagetypedescription",
+        "pk": "srd-2024_acid"
+      }
+    },
+    "Document.json": {
+      "bytes": 607,
+      "sha256": "c9a85da12a2a90cf272f35f061f7ec60adf52f501312c45ee59fb17890611b1a",
+      "record_count": 1,
+      "models": {
+        "api_v2.document": 1
+      },
+      "top_field_keys": [
+        [
+          "author",
+          1
+        ],
+        [
+          "desc",
+          1
+        ],
+        [
+          "display_name",
+          1
+        ],
+        [
+          "distance_unit",
+          1
+        ],
+        [
+          "gamesystem",
+          1
+        ],
+        [
+          "licenses",
+          1
+        ],
+        [
+          "name",
+          1
+        ],
+        [
+          "permalink",
+          1
+        ],
+        [
+          "publication_date",
+          1
+        ],
+        [
+          "publisher",
+          1
+        ],
+        [
+          "weight_unit",
+          1
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "author": "Wizards of the Coast",
+          "desc": "The System Reference Document (SRD) contains guidelines for publishing content under Creative Commons.",
+          "display_name": "5e 2024 Rules",
+          "distance_unit": "feet",
+          "gamesystem": "5e-2024",
+          "licenses": [
+            "cc-by-40"
+          ],
+          "name": "System Reference Document 5.2",
+          "permalink": "https://dnd.wizards.com/resources/systems-reference-document",
+          "publication_date": "2024-01-01T00:00:00",
+          "publisher": "wizards-of-the-coast",
+          "weight_unit": "lb"
+        },
+        "model": "api_v2.document",
+        "pk": "srd-2024"
+      }
+    },
+    "Feat.json": {
+      "bytes": 4129,
+      "sha256": "d5603d98c36a31775d295101f28307fa4b7a4841dd59200976aa1760329d60ba",
+      "record_count": 17,
+      "models": {
+        "api_v2.feat": 17
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          17
+        ],
+        [
+          "document",
+          17
+        ],
+        [
+          "name",
+          17
+        ],
+        [
+          "prerequisite",
+          17
+        ],
+        [
+          "type",
+          17
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "You gain the following benefits.",
+          "document": "srd-2024",
+          "name": "Alert",
+          "prerequisite": "",
+          "type": "Origin"
+        },
+        "model": "api_v2.feat",
+        "pk": "srd-2024_alert"
+      }
+    },
+    "FeatBenefit.json": {
+      "bytes": 11399,
+      "sha256": "e294da40babae3c00683a8a0c43a2d04f51ba836bc3de18e2f74a297324915d1",
+      "record_count": 35,
+      "models": {
+        "api_v2.featbenefit": 35
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          35
+        ],
+        [
+          "name",
+          35
+        ],
+        [
+          "parent",
+          35
+        ],
+        [
+          "type",
+          35
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "When you roll Initiative, you can add your Proficiency Bonus to the roll.",
+          "name": "Initiative Proficiency",
+          "parent": "srd-2024_alert",
+          "type": null
+        },
+        "model": "api_v2.featbenefit",
+        "pk": "srd-2024_alert_1_initative-proficiency"
+      }
+    },
+    "Item.json": {
+      "bytes": 1021724,
+      "sha256": "5547e722a208647d3c93863c5d0d75a20a4679c065a9dd4eff09a6f91e4df73e",
+      "record_count": 960,
+      "models": {
+        "api_v2.item": 960
+      },
+      "top_field_keys": [
+        [
+          "armor",
+          960
+        ],
+        [
+          "armor_class",
+          960
+        ],
+        [
+          "armor_detail",
+          960
+        ],
+        [
+          "category",
+          960
+        ],
+        [
+          "cost",
+          960
+        ],
+        [
+          "damage_immunities",
+          960
+        ],
+        [
+          "damage_resistances",
+          960
+        ],
+        [
+          "damage_vulnerabilities",
+          960
+        ],
+        [
+          "desc",
+          960
+        ],
+        [
+          "document",
+          960
+        ],
+        [
+          "hit_dice",
+          960
+        ],
+        [
+          "hit_points",
+          960
+        ],
+        [
+          "name",
+          960
+        ],
+        [
+          "nonmagical_attack_immunity",
+          960
+        ],
+        [
+          "nonmagical_attack_resistance",
+          960
+        ],
+        [
+          "rarity",
+          960
+        ],
+        [
+          "requires_attunement",
+          960
+        ],
+        [
+          "size",
+          960
+        ],
+        [
+          "weapon",
+          960
+        ],
+        [
+          "weight",
+          960
+        ],
+        [
+          "attunement_detail",
+          19
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "armor": null,
+          "armor_class": 0,
+          "armor_detail": "",
+          "category": "weapon",
+          "cost": "25.00",
+          "damage_immunities": [
+            "poison",
+            "psychic"
+          ],
+          "damage_resistances": [],
+          "damage_vulnerabilities": [],
+          "desc": "When you take the Attack action, you can replace one of your attacks with throwing a vial of Acid. Target one creature or object you can see within 20 feet of yourself. The target must succeed on a Dexterity saving throw (DC 8 plus your Dexterity modifier and Proficiency Bonus) or take 2d6 Acid damage.",
+          "document": "srd-2024",
+          "hit_dice": null,
+          "hit_points": 0,
+          "name": "Acid",
+          "nonmagical_attack_immunity": false,
+          "nonmagical_attack_resistance": false,
+          "rarity": null,
+          "requires_attunement": false,
+          "size": "tiny",
+          "weapon": null,
+          "weight": "1.000"
+        },
+        "model": "api_v2.item",
+        "pk": "srd-2024_acid"
+      }
+    },
+    "ItemCategory.json": {
+      "bytes": 291,
+      "sha256": "ae72b38eccae8f98a0719cfd8a70ae781e8eea0bab8506f5610b3e7106aa5bc3",
+      "record_count": 2,
+      "models": {
+        "api_v2.itemcategory": 2
+      },
+      "top_field_keys": [
+        [
+          "document",
+          2
+        ],
+        [
+          "name",
+          2
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "document": "srd-2024",
+          "name": "Equipment Pack"
+        },
+        "model": "api_v2.itemcategory",
+        "pk": "equipment-pack"
+      }
+    },
+    "Rule.json": {
+      "bytes": 57805,
+      "sha256": "8f90a69065cd25d38e665c6d9aac3f01f974b7c98b74e760ac9db26c9776ec87",
+      "record_count": 41,
+      "models": {
+        "api_v2.rule": 41
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          41
+        ],
+        [
+          "document",
+          41
+        ],
+        [
+          "index",
+          41
+        ],
+        [
+          "initialHeaderLevel",
+          41
+        ],
+        [
+          "name",
+          41
+        ],
+        [
+          "ruleset",
+          41
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "Each ability has a score from 1 to 20, although some monsters have a score as high as 30. The score represents the magnitude of an ability. The Ability Scores table summarizes what the scores mean.\n\n|Score|Meaning|\n|---|---|\n|1| This is the lowest a score can normally go. If an effect reduces a score to 0, that effect explains what happens. |\n|2–9| This represents a weak capability.|\n|10–11| This represents the human average.|\n|12–19| This represents a strong capability.|\n|20| This is the highest an adventurer's score can go unless a feature says otherwise. |\n|21–29| This represents an extraordinary capability. |\n|30| This is the highest a score can go.|",
+          "document": "srd-2024",
+          "index": 1,
+          "initialHeaderLevel": 2,
+          "name": "Ability Scores",
+          "ruleset": "srd-2024_the-six-abilities"
+        },
+        "model": "api_v2.rule",
+        "pk": "srd-2024_the-six-abilities_ability-scores"
+      }
+    },
+    "RuleSet.json": {
+      "bytes": 7396,
+      "sha256": "79bd00f39b0edb28cf27cffef9dab9f50556be3df3c1e8a06b89e32be42220dc",
+      "record_count": 8,
+      "models": {
+        "api_v2.ruleset": 8
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          8
+        ],
+        [
+          "document",
+          8
+        ],
+        [
+          "name",
+          8
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "The three main pillars of D&D play are social interaction, exploration, and combat. Whichever one you're experiencing, the game unfolds according to this basic pattern:\n\n1. **The Game Master Describes a Scene**. The GM tells the players where their adventurers are and what's around them (how many doors lead out of a room, what's on a table, and so on).\n2. **The Players Describe What Their Characters Do.** Typically, the characters stick together as they travel through a dungeon or another environment. Sometimes different adventurers do different things: one adventurer might search a treasure chest while a second examines a mysterious symbol engraved on a wall and a third keeps watch for monsters. Outside combat, the GM ensures that every character has a chance to act and decides how to resolve their activity. In combat, the characters take turns.\n3. **The GM Narrates the Results of the Adventurers' Actions.** Sometimes resolving a task is easy. If an adventurer walks across a room and tries to open a door, the GM might say the door opens and describe what lies beyond. But the door might be locked, the floor might hide a trap, or some other circumstance might make it challenging for an adventurer to complete a task. In those cases, the GM might ask the player to roll a die to help determine what happens. Describing the results often leads to another decision point, which brings the game back to step 1.\n\nThis pattern holds during every game session (each time you sit down to play D&D), whether the adventurers are talking to a noble, exploring a ruin, or fighting a dragon. In certain situations—particularly combat—the action is more structured, and everyone takes turns.\n\n> **Exceptions Supersede General Rules**\n> General rules govern each part of the game. For example, the combat rules tell you that melee attacks use Strength and ranged attacks use Dexterity. That's a general rule, and a general rule is in effect as long as something in the game doesn't explicitly say otherwise.\n> The game also includes elements—class features, feats, weapon properties, spells, magic items, monster abilities, and the like—that sometimes contradict a general rule. When an exception and a general rule disagree, the exception wins. For example, if a feature says you can make melee attacks using your Charisma, you can do so, even though that statement disagrees with the general rule.",
+          "document": "srd-2024",
+          "name": "Rhythm of Play"
+        },
+        "model": "api_v2.ruleset",
+        "pk": "srd-2024_rhythm-of-play"
+      }
+    },
+    "Service.json": {
+      "bytes": 7804,
+      "sha256": "df7186ba9c98ff6e19f1d2a0fe16727914d59e20b13a290b8957052fbce0aa72",
+      "record_count": 30,
+      "models": {
+        "api_v2.service": 30
+      },
+      "top_field_keys": [
+        [
+          "cost",
+          30
+        ],
+        [
+          "desc",
+          30
+        ],
+        [
+          "detail",
+          30
+        ],
+        [
+          "document",
+          30
+        ],
+        [
+          "name",
+          30
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "cost": "10.00",
+          "desc": "You pay for the best and might have a staff that supports your lifestyle. Others notice your wealth and might encourage you to share it, either legally or otherwise.",
+          "detail": "1 day",
+          "document": "srd-2024",
+          "name": "Lifestyle - Aristocratic"
+        },
+        "model": "api_v2.service",
+        "pk": "srd-2024_lifestyle-aristocratic"
+      }
+    },
+    "Services.json": {
+      "bytes": 8472,
+      "sha256": "d061497b93c835c4b7ce653e87de170c3f28356cc988cb61506f87cf877bb4fd",
+      "record_count": 30,
+      "models": {
+        "api_v2.service": 30
+      },
+      "top_field_keys": [
+        [
+          "name",
+          30
+        ],
+        [
+          "desc",
+          30
+        ],
+        [
+          "document",
+          30
+        ],
+        [
+          "cost",
+          30
+        ],
+        [
+          "detail",
+          30
+        ]
+      ],
+      "sample_record": {
+        "model": "api_v2.service",
+        "pk": "srd-2024_lifestyle-wretched",
+        "fields": {
+          "name": "Lifestyle - Wretched",
+          "desc": "You survive via chance and charity. You're often exposed to natural dangers as a result of sleeping outside.",
+          "document": "srd-2024",
+          "cost": "0.00",
+          "detail": null
+        }
+      }
+    },
+    "SkillDescription.json": {
+      "bytes": 4058,
+      "sha256": "2d96dcf43218f49a82ecb0fda0f3b91722af11ca49a1385f7020d484bec415f0",
+      "record_count": 18,
+      "models": {
+        "api_v2.skilldescription": 18
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          18
+        ],
+        [
+          "describes",
+          18
+        ],
+        [
+          "document",
+          18
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "Stay on your feet in a tricky situation, or perform an acrobatic stunt.",
+          "describes": "acrobatics",
+          "document": "srd-2024"
+        },
+        "model": "api_v2.skilldescription",
+        "pk": "srd-2024_acrobatics"
+      }
+    },
+    "Species.json": {
+      "bytes": 1541,
+      "sha256": "1330e8f5220f41773dadb231adcb109f223b79e25fd5be26952300364a0d90ca",
+      "record_count": 9,
+      "models": {
+        "api_v2.species": 9
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          9
+        ],
+        [
+          "document",
+          9
+        ],
+        [
+          "name",
+          9
+        ],
+        [
+          "subspecies_of",
+          9
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "",
+          "document": "srd-2024",
+          "name": "Dragonborn",
+          "subspecies_of": null
+        },
+        "model": "api_v2.species",
+        "pk": "srd-2024_dragonborn"
+      }
+    },
+    "SpeciesTrait.json": {
+      "bytes": 20630,
+      "sha256": "c42c5cfed9c3a181b873f21cdd38ea459db3cd558cb4bc7f372adf7759a85c77",
+      "record_count": 51,
+      "models": {
+        "api_v2.speciestrait": 51
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          51
+        ],
+        [
+          "name",
+          51
+        ],
+        [
+          "order",
+          51
+        ],
+        [
+          "parent",
+          51
+        ],
+        [
+          "type",
+          51
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "Medium (about 5–7 feet tall)",
+          "name": "Size",
+          "order": 1,
+          "parent": "srd-2024_dragonborn",
+          "type": "SIZE"
+        },
+        "model": "api_v2.speciestrait",
+        "pk": "srd-2024_dragonborn_size"
+      }
+    },
+    "Spell.json": {
+      "bytes": 552456,
+      "sha256": "8048fc3a0a4adbf6125e834261b52bede4e5125701b36f1c7c06fdabe63dabd5",
+      "record_count": 339,
+      "models": {
+        "api_v2.spell": 339
+      },
+      "top_field_keys": [
+        [
+          "name",
+          339
+        ],
+        [
+          "desc",
+          339
+        ],
+        [
+          "document",
+          339
+        ],
+        [
+          "level",
+          339
+        ],
+        [
+          "school",
+          339
+        ],
+        [
+          "higher_level",
+          339
+        ],
+        [
+          "target_type",
+          339
+        ],
+        [
+          "range_text",
+          339
+        ],
+        [
+          "range",
+          339
+        ],
+        [
+          "range_unit",
+          339
+        ],
+        [
+          "ritual",
+          339
+        ],
+        [
+          "casting_time",
+          339
+        ],
+        [
+          "reaction_condition",
+          339
+        ],
+        [
+          "verbal",
+          339
+        ],
+        [
+          "somatic",
+          339
+        ],
+        [
+          "material",
+          339
+        ],
+        [
+          "material_specified",
+          339
+        ],
+        [
+          "material_cost",
+          339
+        ],
+        [
+          "material_consumed",
+          339
+        ],
+        [
+          "target_count",
+          339
+        ],
+        [
+          "saving_throw_ability",
+          339
+        ],
+        [
+          "attack_roll",
+          339
+        ],
+        [
+          "damage_roll",
+          339
+        ],
+        [
+          "damage_types",
+          339
+        ],
+        [
+          "duration",
+          339
+        ]
+      ],
+      "sample_record": {
+        "model": "api_v2.spell",
+        "pk": "srd-2024_acid-arrow",
+        "fields": {
+          "name": "Acid Arrow",
+          "desc": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 Acid damage and 2d4 Acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage only.",
+          "document": "srd-2024",
+          "level": 2,
+          "school": "evocation",
+          "higher_level": "The damage (both initial and later) increases by 1d4 for each spell slot level above 2.",
+          "target_type": "creature",
+          "range_text": "90 feet",
+          "range": 90,
+          "range_unit": "feet",
+          "ritual": false,
+          "casting_time": "action",
+          "reaction_condition": null,
+          "verbal": true,
+          "somatic": true,
+          "material": true,
+          "material_specified": "powdered rhubarb leaf",
+          "material_cost": null,
+          "material_consumed": false,
+          "target_count": 1,
+          "saving_throw_ability": "",
+          "attack_roll": true,
+          "damage_roll": "4d4",
+          "damage_types": [
+            "acid"
+          ],
+          "duration": "instantaneous",
+          "shape_type": null,
+          "shape_size": null,
+          "shape_size_unit": null,
+          "concentration": false,
+          "classes": [
+            "srd-2024_wizard"
+          ]
+        }
+      }
+    },
+    "SpellCastingOption.json": {
+      "bytes": 229825,
+      "sha256": "c0a89c9b6b004209ee9f2cd482e99fc9d1dc7120e6032f0d6db94ef44785dc58",
+      "record_count": 671,
+      "models": {
+        "api_v2.spellcastingoption": 671
+      },
+      "top_field_keys": [
+        [
+          "concentration",
+          671
+        ],
+        [
+          "damage_roll",
+          671
+        ],
+        [
+          "desc",
+          671
+        ],
+        [
+          "duration",
+          671
+        ],
+        [
+          "parent",
+          671
+        ],
+        [
+          "range",
+          671
+        ],
+        [
+          "shape_size",
+          671
+        ],
+        [
+          "target_count",
+          671
+        ],
+        [
+          "type",
+          671
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "concentration": null,
+          "damage_roll": "5d4",
+          "desc": null,
+          "duration": null,
+          "parent": "srd-2024_acid-arrow",
+          "range": null,
+          "shape_size": null,
+          "target_count": null,
+          "type": "slot_level_3"
+        },
+        "model": "api_v2.spellcastingoption",
+        "pk": 10000
+      }
+    },
+    "Weapon.json": {
+      "bytes": 12720,
+      "sha256": "0582eb569c47f04593045d12eb8c39a2e20bd1caad8472de6d7604b1eabfb2ad",
+      "record_count": 38,
+      "models": {
+        "api_v2.weapon": 38
+      },
+      "top_field_keys": [
+        [
+          "damage_dice",
+          38
+        ],
+        [
+          "damage_type",
+          38
+        ],
+        [
+          "distance_unit",
+          38
+        ],
+        [
+          "document",
+          38
+        ],
+        [
+          "is_improvised",
+          38
+        ],
+        [
+          "is_simple",
+          38
+        ],
+        [
+          "long_range",
+          38
+        ],
+        [
+          "name",
+          38
+        ],
+        [
+          "range",
+          38
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "damage_dice": "1d8",
+          "damage_type": "slashing",
+          "distance_unit": null,
+          "document": "srd-2024",
+          "is_improvised": false,
+          "is_simple": false,
+          "long_range": 0,
+          "name": "Battleaxe",
+          "range": 0
+        },
+        "model": "api_v2.weapon",
+        "pk": "srd-2024_battleaxe"
+      }
+    },
+    "WeaponProperty.json": {
+      "bytes": 6785,
+      "sha256": "77b6a718fc6a2f7a92da63c85b5921635600ac72acc4ecc8861963e75755ce8e",
+      "record_count": 17,
+      "models": {
+        "api_v2.weaponproperty": 17
+      },
+      "top_field_keys": [
+        [
+          "desc",
+          17
+        ],
+        [
+          "document",
+          17
+        ],
+        [
+          "name",
+          17
+        ],
+        [
+          "type",
+          17
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "desc": "You can use a weapon that has the Ammunition property to make a ranged attack only if you have ammunition to fire from it. The type of ammunition required is specified with the weapon's range. Each attack expends one piece of ammunition. Drawing the ammunition is part of the attack (you need a free hand to load a one-handed weapon). After a fight, you can spend 1 minute to recover half the ammunition (round down) you used in the fight; the rest is lost.",
+          "document": "srd-2024",
+          "name": "Ammunition",
+          "type": null
+        },
+        "model": "api_v2.weaponproperty",
+        "pk": "srd-2024_ammunition-wp"
+      }
+    },
+    "WeaponPropertyAssignment.json": {
+      "bytes": 24718,
+      "sha256": "6a646a5dd8d32cd45dcf576940faa323b2b0d54cf1bd8992a4252f92a9dc09d0",
+      "record_count": 108,
+      "models": {
+        "api_v2.weaponpropertyassignment": 108
+      },
+      "top_field_keys": [
+        [
+          "detail",
+          108
+        ],
+        [
+          "document",
+          108
+        ],
+        [
+          "property",
+          108
+        ],
+        [
+          "weapon",
+          108
+        ]
+      ],
+      "sample_record": {
+        "fields": {
+          "detail": null,
+          "document": "srd-2024",
+          "property": "srd-2024_topple-mastery",
+          "weapon": "srd-2024_battleaxe"
+        },
+        "model": "api_v2.weaponpropertyassignment",
+        "pk": "srd-2024_battleaxe_topple"
+      }
+    }
+  }
+}

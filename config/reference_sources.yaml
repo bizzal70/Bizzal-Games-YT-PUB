@@ -1,0 +1,49 @@
+# Canonical reference sources for WotC SRD 2024 (Django fixture JSON)
+active_srd_path: /home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD
+
+sources:
+  creatures:
+    file: Creature.json
+    joins:
+      actions: CreatureAction.json
+      attacks: CreatureActionAttack.json
+      traits: CreatureTrait.json
+
+  spells:
+    file: Spell.json
+    joins:
+      casting_options: SpellCastingOption.json
+
+  items:
+    file: Item.json
+    joins:
+      item_category: ItemCategory.json
+    also:
+      armor: Armor.json
+      weapons: Weapon.json
+      weapon_properties: WeaponProperty.json
+      weapon_property_assignments: WeaponPropertyAssignment.json
+
+  classes:
+    file: CharacterClass.json
+    joins:
+      features: ClassFeature.json
+      feature_items: ClassFeatureItem.json
+
+  rules:
+    file: Rule.json
+    joins:
+      rulesets: RuleSet.json
+
+  species:
+    file: Species.json
+    joins:
+      traits: SpeciesTrait.json
+
+  flavor:
+    alignment: AlignmentDescription.json
+    ability: AbilityDescription.json
+    condition: ConditionDescription.json
+    damage_type: DamageTypeDescription.json
+    creature_type: CreatureTypeDescription.json
+    environment: null

@@ -1,0 +1,30 @@
+{
+  "date": "YYYY-MM-DD",
+  "ruleset": "wotc_srd_2024",
+  "category": "monster_tactic",
+  "angle": "how_it_wins",
+  "picks": {
+    "creature_pk": 0,
+    "spell_pk": null,
+    "item_pk": null,
+    "rule_pk": null,
+    "class_pk": null
+  },
+  "constraints": {
+    "target_seconds": 55,
+    "reading_level": "general",
+    "tone": "friendly_veteran",
+    "no_homebrew_mechanics": true
+  },
+  "source": {
+    "active_srd_path": "/home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD",
+    "compiled_manifest_sha256": null,
+    "srd_pdf_path": "/home/umbrel/umbrel/data/reference/srd/SRD_CC_v5.2.1.pdf"
+  },
+  "script": {
+    "hook": "",
+    "body": "",
+    "cta": ""
+  },
+  "script_id": ""
+}

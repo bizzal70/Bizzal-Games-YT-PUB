@@ -1,0 +1,124 @@
+#!/usr/bin/env python3
+import json
+import os
+import random
+import sys
+from datetime import datetime, timezone
+
+try:
+    import yaml
+except ImportError:
+    print("ERROR: Missing PyYAML. Install with: python3 -m pip install --user pyyaml", file=sys.stderr)
+    sys.exit(2)
+
+REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
+CONFIG_SPINE = os.path.join(REPO_ROOT, "config", "topic_spine.yaml")
+CONFIG_SCHEMA = os.path.join(REPO_ROOT, "config", "atom_schema_min.json")
+
+OUT_DIR = os.path.join(REPO_ROOT, "data", "atoms", "incoming")
+
+DOW_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
+
+
+def weighted_choice(weights: dict) -> str:
+    # weights: {name: int}
+    items = list(weights.items())
+    total = sum(max(0, int(w)) for _, w in items)
+    if total <= 0:
+        # fall back: uniform
+        return random.choice([k for k, _ in items]) if items else None
+    r = random.uniform(0, total)
+    upto = 0.0
+    for k, w in items:
+        w = max(0, int(w))
+        upto += w
+        if r <= upto:
+            return k
+    return items[-1][0]
+
+
+def load_yaml(path: str) -> dict:
+    with open(path, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+
+def load_json(path: str) -> dict:
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def today_local_date_str() -> str:
+    # Umbrel is typically local time; we just use system local date.
+    return datetime.now().strftime("%Y-%m-%d")
+
+
+def weekday_key() -> str:
+    # Monday=0 ... Sunday=6
+    i = datetime.now().weekday()
+    return DOW_KEYS[i]
+
+
+def main():
+    random.seed()  # system entropy
+
+    spine = load_yaml(CONFIG_SPINE)
+    schema = load_json(CONFIG_SCHEMA)
+
+    wk = spine.get("weekly_spine", {})
+    defaults = spine.get("defaults", {})
+    weights = spine.get("category_weights", {})
+
+    dow = weekday_key()
+    category = wk.get(dow)
+    if not category:
+        print(f"ERROR: No category for weekday '{dow}' in weekly_spine", file=sys.stderr)
+        sys.exit(3)
+
+    angle_weights = ((weights.get(category) or {}).get("angles") or {})
+    if not angle_weights:
+        print(f"ERROR: No angle weights for category '{category}'", file=sys.stderr)
+        sys.exit(4)
+
+    angle = weighted_choice(angle_weights)
+    if not angle:
+        print(f"ERROR: Could not select angle for category '{category}'", file=sys.stderr)
+        sys.exit(5)
+
+    # Build atom from schema template + defaults
+    atom = schema.copy()
+
+    atom["date"] = today_local_date_str()
+    atom["ruleset"] = defaults.get("ruleset", atom.get("ruleset", "wotc_srd_2024"))
+    atom["category"] = category
+    atom["angle"] = angle
+
+    # constraints defaults
+    atom.setdefault("constraints", {})
+    atom["constraints"]["target_seconds"] = int(defaults.get("target_seconds", atom["constraints"].get("target_seconds", 55)))
+    atom["constraints"]["reading_level"] = defaults.get("reading_level", atom["constraints"].get("reading_level", "general"))
+    atom["constraints"]["tone"] = defaults.get("tone", atom["constraints"].get("tone", "friendly_veteran"))
+    atom["constraints"]["no_homebrew_mechanics"] = bool(defaults.get("no_homebrew_mechanics", True))
+
+    # source paths are already set in schema; add generation timestamp
+    atom.setdefault("source", {})
+    atom["source"]["generated_utc"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    # Ensure output dir
+    os.makedirs(OUT_DIR, exist_ok=True)
+
+    out_path = os.path.join(OUT_DIR, f'{atom["date"]}.json')
+
+    # Don’t overwrite if it already exists (safety)
+    if os.path.exists(out_path):
+        print(f"ERROR: Atom already exists: {out_path}", file=sys.stderr)
+        sys.exit(6)
+
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(atom, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
+    print(out_path)
+
+
+if __name__ == "__main__":
+    main()
