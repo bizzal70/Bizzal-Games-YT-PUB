@@ -1,14 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+command -v jq >/dev/null || { echo "[render] missing dependency: jq" >&2; exit 1; }
+command -v ffmpeg >/dev/null || { echo "[render] missing dependency: ffmpeg" >&2; exit 1; }
+
 DAY="${1:-$(date +%F)}"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
 ATOM="$ROOT/data/atoms/validated/${DAY}.json"
 OUT_DIR="$ROOT/data/renders/by_day"
 LATEST_DIR="$ROOT/data/renders/latest"
+TMP_DIR="$ROOT/tmp/render"
 
-mkdir -p "$OUT_DIR" "$LATEST_DIR"
+mkdir -p "$OUT_DIR" "$LATEST_DIR" "$TMP_DIR"
 
 if [[ ! -f "$ATOM" ]]; then
   echo "[render] missing validated atom: $ATOM" >&2
@@ -19,7 +23,6 @@ HOOK="$(jq -r '.script.hook // ""' "$ATOM")"
 BODY="$(jq -r '.script.body // ""' "$ATOM")"
 CTA="$(jq -r '.script.cta  // ""' "$ATOM")"
 
-# Basic word-count duration: ~140 wpm, min 12s, max 30s
 WORDS="$(printf "%s %s %s" "$HOOK" "$BODY" "$CTA" | wc -w | tr -d ' ')"
 DUR="$(python3 - <<PY
 w=$WORDS
@@ -34,28 +37,28 @@ LATEST="$LATEST_DIR/latest.mp4"
 echo "[render] DAY=$DAY words=$WORDS dur=${DUR}s"
 echo "[render] out=$OUT"
 
-# Text layout
-# - drawtext uses a font; DejaVuSans is usually present on Ubuntu
 FONT="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 if [[ ! -f "$FONT" ]]; then
   echo "[render] missing font $FONT" >&2
   exit 1
 fi
 
-# Escape for drawtext (basic)
-ESC() { printf "%s" "$1" | sed 's/:/\\:/g; s/%/\\%/g; s/\\/\\\\/g; s/'\''/\\'\''/g'; }
+# Write text to files to avoid drawtext escaping issues
+HOOK_TXT="$TMP_DIR/hook.txt"
+BODY_TXT="$TMP_DIR/body.txt"
+CTA_TXT="$TMP_DIR/cta.txt"
 
-HOOK_E="$(ESC "$HOOK")"
-BODY_E="$(ESC "$BODY")"
-CTA_E="$(ESC "$CTA")"
+printf "%s\n" "$HOOK" > "$HOOK_TXT"
+printf "%s\n" "$BODY" > "$BODY_TXT"
+printf "%s\n" "$CTA"  > "$CTA_TXT"
 
 ffmpeg -y \
-  -f lavfi -i "color=c=black:s=1080x1920:d=${DUR}" \
+  -f lavfi -i "color=c=black:s=1080x1920:d=${DUR}:r=30" \
   -vf "\
-drawtext=fontfile=${FONT}:text='${HOOK_E}':x=60:y=120:fontsize=64:line_spacing=8:wrap=1, \
-drawtext=fontfile=${FONT}:text='${BODY_E}':x=60:y=320:fontsize=44:line_spacing=10:wrap=1, \
-drawtext=fontfile=${FONT}:text='${CTA_E}':x=60:y=1660:fontsize=44:line_spacing=10:wrap=1" \
-  -r 30 -pix_fmt yuv420p \
+drawtext=fontfile=${FONT}:textfile=${HOOK_TXT}:reload=1:x=60:y=120:fontsize=64:line_spacing=8:box=1:boxborderw=18:boxcolor=black@0.35, \
+drawtext=fontfile=${FONT}:textfile=${BODY_TXT}:reload=1:x=60:y=320:fontsize=44:line_spacing=10:box=1:boxborderw=18:boxcolor=black@0.35, \
+drawtext=fontfile=${FONT}:textfile=${CTA_TXT}:reload=1:x=60:y=1660:fontsize=44:line_spacing=10:box=1:boxborderw=18:boxcolor=black@0.35" \
+  -pix_fmt yuv420p \
   "$OUT"
 
 cp -f "$OUT" "$LATEST"
