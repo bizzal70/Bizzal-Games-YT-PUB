@@ -75,6 +75,7 @@ If you only changed one file, prefer adding it explicitly:
 git add README.md
 ```
 
-## Release notes
+## Changelog
 
-- `v0.1-docs`: baseline documentation release (first-day setup, quickstart, and git sync workflow)
+- v0.1-docs: baseline documentation release (first-day setup, quickstart, and git sync workflow)
+- v0.1.1-docs: added README release-note/changelog update for docs tags
