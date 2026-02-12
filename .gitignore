@@ -1,0 +1,24 @@
+# runtime + logs
+runtime/
+logs/
+tmp/
+
+# generated and archival outputs
+data/archive/
+data/atoms/
+data/manifests/
+data/renders/
+data/www/
+
+# large/replaceable assets (optional; you can choose to keep these in git later)
+data/assets/
+
+# reference corpuses (keep attribution/licenses if you want)
+reference/open5e/
+reference/srd5.1/
+
+# misc
+__pycache__/
+*.pyc
+.venv/
+.vscode/
