@@ -79,3 +79,9 @@ git add README.md
 
 - v0.1-docs: baseline documentation release (first-day setup, quickstart, and git sync workflow)
 - v0.1.1-docs: added README release-note/changelog update for docs tags
+
+## Version tags
+
+- v0.1-docs
+- v0.1.1-docs
+- v0.1.2-docs
