@@ -35,8 +35,8 @@ jq -r '.script.cta  // ""' "$ATOM" > "$CTA_TXT"
 
 # Wrap first, then paginate by line-count so nothing can overflow the frame.
 python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$HOOK_TXT" --out "$HOOK_TXT" --width 30
-python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$BODY_TXT" --out "$BODY_TXT" --width 46
-python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$CTA_TXT"  --out "$CTA_TXT"  --width 46
+python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$BODY_TXT" --out "$BODY_TXT" --width 42
+python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$CTA_TXT"  --out "$CTA_TXT"  --width 40
 
 PAGEDIR="$TMPDIR/pages"
 mkdir -p "$PAGEDIR"
@@ -48,10 +48,10 @@ cp -f "$HOOK_TXT" "$PAGEDIR/hook.txt"
 cp -f "$CTA_TXT"  "$PAGEDIR/cta.txt"
 
 # Dynamic segment pacing (defaults tuned for 30s Shorts).
-# Hook + body page 1 share segment 1, body page 2 is segment 2, CTA is segment 3.
+# Hook/title is segment 1, body pages are segment 2/3, CTA is the final segment.
 DUR="${BIZZAL_SHORTS_DURATION:-30}"
-HOOK_MIN=6
-HOOK_MAX=12
+HOOK_MIN=4
+HOOK_MAX=8
 CTA_MIN=5
 CTA_MAX=10
 BODY_MIN=8
@@ -135,14 +135,34 @@ if (( BODY_SEC < BODY_MIN )); then
 fi
 
 HOOK_END="$HOOK_SEC"
-BODY_END=$(( HOOK_SEC + BODY_SEC ))
 
 echo "[render] pacing words hook=$HOOK_WORDS body=$BODY_WORDS cta=$CTA_WORDS total=$TOTAL_WORDS" >&2
 echo "[render] pacing secs hook=$HOOK_SEC body=$BODY_SEC cta=$CTA_SEC dur=$DUR" >&2
 echo "[render] pacing profile category=$CATEGORY cta_profile=$CTA_PROFILE cta_min=$CTA_MIN cta_max=$CTA_MAX" >&2
 
 FONT="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-COMMON="fontfile=${FONT}:fontcolor=white:line_spacing=12:fix_bounds=1:box=1:boxcolor=black@0.72:boxborderw=22:borderw=2:bordercolor=black@0.95:shadowcolor=black@0.9:shadowx=2:shadowy=2"
+TEXT_STYLE="${BIZZAL_TEXT_STYLE:-default}"
+BOX_ALPHA="0.72"
+BOX_BORDER_W="22"
+BORDER_W="2"
+BORDER_ALPHA="0.95"
+SHADOW_ALPHA="0.9"
+SHADOW_X="2"
+SHADOW_Y="2"
+
+case "$TEXT_STYLE" in
+  bg_safe|bg-safe|background_safe|background-safe)
+    BOX_ALPHA="0.84"
+    BOX_BORDER_W="28"
+    BORDER_W="3"
+    BORDER_ALPHA="0.98"
+    SHADOW_ALPHA="0.98"
+    SHADOW_X="3"
+    SHADOW_Y="3"
+    ;;
+esac
+
+COMMON="fontfile=${FONT}:fontcolor=white:line_spacing=12:text_align=center:fix_bounds=1:box=1:boxcolor=black@${BOX_ALPHA}:boxborderw=${BOX_BORDER_W}:borderw=${BORDER_W}:bordercolor=black@${BORDER_ALPHA}:shadowcolor=black@${SHADOW_ALPHA}:shadowx=${SHADOW_X}:shadowy=${SHADOW_Y}"
 XPOS="x=(w-text_w)/2"
 
 HOOK_FILE="$PAGEDIR/hook.txt"
@@ -150,17 +170,52 @@ BODY1_FILE="$PAGEDIR/body1.txt"
 BODY2_FILE="$PAGEDIR/body2.txt"
 CTA_FILE="$PAGEDIR/cta.txt"
 
-# If body2 doesn't exist, just reuse body1 (so screen 2 isn't blank).
-if [[ ! -f "$BODY2_FILE" ]]; then
-  cp -f "$BODY1_FILE" "$BODY2_FILE"
+BODY2_EXISTS=0
+if [[ -f "$BODY2_FILE" ]] && [[ -s "$BODY2_FILE" ]]; then
+  BODY2_EXISTS=1
 fi
 
-VF="\
-drawtext=${COMMON}:textfile=${HOOK_FILE}:fontsize=64:${XPOS}:y=120:enable='between(t,0,${HOOK_END})',\
-drawtext=${COMMON}:textfile=${BODY1_FILE}:fontsize=46:${XPOS}:y=340:enable='between(t,0,${HOOK_END})',\
-drawtext=${COMMON}:textfile=${BODY2_FILE}:fontsize=48:${XPOS}:y=260:enable='between(t,${HOOK_END},${BODY_END})',\
-drawtext=${COMMON}:textfile=${CTA_FILE}:fontsize=52:${XPOS}:y=420:enable='between(t,${BODY_END},${DUR})'\
-"
+BODY1_WORDS="$(count_words "$BODY1_FILE")"
+BODY2_WORDS="$(count_words "$BODY2_FILE")"
+
+if (( BODY2_EXISTS == 1 )); then
+  BODY1_MIN=5
+  BODY2_MIN=5
+  BODY_PAGES_WORDS=$(( BODY1_WORDS + BODY2_WORDS ))
+  BODY1_SEC=$(( BODY_SEC * BODY1_WORDS / BODY_PAGES_WORDS ))
+  BODY2_SEC=$(( BODY_SEC - BODY1_SEC ))
+
+  if (( BODY1_SEC < BODY1_MIN )); then
+    BODY1_SEC="$BODY1_MIN"
+    BODY2_SEC=$(( BODY_SEC - BODY1_SEC ))
+  fi
+  if (( BODY2_SEC < BODY2_MIN )); then
+    BODY2_SEC="$BODY2_MIN"
+    BODY1_SEC=$(( BODY_SEC - BODY2_SEC ))
+  fi
+
+  if (( BODY1_SEC < BODY1_MIN )); then
+    BODY1_SEC="$BODY1_MIN"
+    BODY2_SEC=$(( BODY_SEC - BODY1_SEC ))
+  fi
+else
+  BODY1_SEC="$BODY_SEC"
+  BODY2_SEC=0
+fi
+
+BODY1_END=$(( HOOK_END + BODY1_SEC ))
+BODY_END=$(( BODY1_END + BODY2_SEC ))
+
+echo "[render] body pages exists2=$BODY2_EXISTS body1_words=$BODY1_WORDS body2_words=$BODY2_WORDS" >&2
+echo "[render] body pages secs body1=$BODY1_SEC body2=$BODY2_SEC" >&2
+echo "[render] text style name=$TEXT_STYLE box_alpha=$BOX_ALPHA box_borderw=$BOX_BORDER_W borderw=$BORDER_W" >&2
+
+VF="drawtext=${COMMON}:textfile=${HOOK_FILE}:fontsize=66:${XPOS}:y=(h-text_h)/2:enable='between(t,0,${HOOK_END})',"
+VF+="drawtext=${COMMON}:textfile=${BODY1_FILE}:fontsize=44:${XPOS}:y=(h-text_h)/2:enable='between(t,${HOOK_END},${BODY1_END})',"
+if (( BODY2_EXISTS == 1 )); then
+  VF+="drawtext=${COMMON}:textfile=${BODY2_FILE}:fontsize=44:${XPOS}:y=(h-text_h)/2:enable='between(t,${BODY1_END},${BODY_END})',"
+fi
+VF+="drawtext=${COMMON}:textfile=${CTA_FILE}:fontsize=50:${XPOS}:y=(h-text_h)/2:enable='between(t,${BODY_END},${DUR})'"
 
 ffmpeg -y -hide_banner -loglevel error \
   -f lavfi -i "color=c=black:s=1080x1920:d=${DUR}:r=30" \
