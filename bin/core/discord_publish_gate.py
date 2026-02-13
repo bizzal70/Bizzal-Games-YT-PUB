@@ -65,8 +65,16 @@ def webhook_post_json(url: str, payload: dict, wait: bool = False) -> dict:
         headers={"Content-Type": "application/json", "User-Agent": "BizzalPublishGate/1.0"},
         method="POST",
     )
-    with request.urlopen(req, timeout=30) as resp:
-        raw = resp.read().decode("utf-8")
+    try:
+        with request.urlopen(req, timeout=30) as resp:
+            raw = resp.read().decode("utf-8")
+    except error.HTTPError as exc:
+        body = ""
+        try:
+            body = exc.read().decode("utf-8", errors="replace")
+        except Exception:
+            body = ""
+        raise RuntimeError(f"discord webhook rejected: http={exc.code} body={body or '(empty)'}")
     if not raw.strip():
         return {}
     try:
@@ -105,6 +113,17 @@ def parse_approval_command(content: str) -> tuple[str, str] | None:
     return None
 
 
+def looks_like_placeholder_webhook(url: str) -> bool:
+    u = (url or "").strip()
+    if not u:
+        return True
+    if "..." in u or "YOUR_" in u.upper() or "REPLACE" in u.upper():
+        return True
+    if "discord.com/api/webhooks/" not in u:
+        return True
+    return False
+
+
 def run_publish_command(repo_root: str, day: str) -> tuple[int, str]:
     cmd_env = os.getenv("BIZZAL_PUBLISH_CMD", "").strip()
     if cmd_env:
@@ -122,6 +141,9 @@ def run_publish_command(repo_root: str, day: str) -> tuple[int, str]:
 def request_mode(repo_root: str, day: str, state_path: str, webhook_url: str, force: bool) -> int:
     if not webhook_url:
         print("ERROR: missing BIZZAL_DISCORD_WEBHOOK_URL", file=sys.stderr)
+        return 2
+    if looks_like_placeholder_webhook(webhook_url):
+        print("ERROR: BIZZAL_DISCORD_WEBHOOK_URL looks invalid/placeholder; set a real Discord webhook URL", file=sys.stderr)
         return 2
 
     atom_path, atom = atom_for_day(repo_root, day)
@@ -167,7 +189,11 @@ def request_mode(repo_root: str, day: str, state_path: str, webhook_url: str, fo
         ],
     }
 
-    response = webhook_post_json(webhook_url, payload, wait=True)
+    try:
+        response = webhook_post_json(webhook_url, payload, wait=True)
+    except Exception as exc:
+        print(f"ERROR: failed to send approval request webhook: {exc}", file=sys.stderr)
+        return 4
     msg_id = str(response.get("id") or "")
 
     approvals[day] = {

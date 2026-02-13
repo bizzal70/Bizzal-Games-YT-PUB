@@ -42,7 +42,9 @@ echo "[run_daily_diag] require_pdf_flavor=${BIZZAL_REQUIRE_PDF_FLAVOR}"
 
 if [[ "${BIZZAL_REQUIRE_DISCORD_APPROVAL:-0}" == "1" ]]; then
   if [[ -x "$REPO/bin/core/discord_publish_gate.py" ]]; then
-    "$REPO/bin/core/discord_publish_gate.py" request --day "$DAY" 2>&1 | tee -a "$LOG_FILE"
+    if ! "$REPO/bin/core/discord_publish_gate.py" request --day "$DAY" 2>&1 | tee -a "$LOG_FILE"; then
+      echo "[run_daily_diag] WARN: Discord approval request failed; keeping run successful" | tee -a "$LOG_FILE"
+    fi
   else
     echo "[run_daily_diag] WARN: discord_publish_gate.py missing; cannot request approval" | tee -a "$LOG_FILE"
   fi
