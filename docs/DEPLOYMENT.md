@@ -386,6 +386,26 @@ If TTS fails (missing key/API error), render falls back to text-only MP4 and log
 ## Optional: AI Background Music (Replicate)
 `bin/render/render_atom.sh` can generate tone/topic-aware background music and mix it under narration.
 
+## Optional: AI Background Imagery (Replicate)
+`bin/render/render_atom.sh` can generate a tone/topic-aware background image from the daily atom and use it behind on-screen text.
+
+Environment flags:
+- `BIZZAL_ENABLE_BG_IMAGE=1` enables AI background image generation.
+- `REPLICATE_API_TOKEN` required for Replicate calls.
+- Optional: `BIZZAL_REPLICATE_IMAGE_MODEL` (default: `black-forest-labs/flux-schnell`; script auto-falls back across known image slugs).
+- Optional: `BIZZAL_BG_IMAGE_ASPECT_RATIO` (default `9:16`).
+- Optional: `BIZZAL_BG_IMAGE_FORMAT` (default `png`).
+- Optional post-processing tone controls:
+	- `BIZZAL_BG_IMAGE_BRIGHTNESS` (default `-0.10`)
+	- `BIZZAL_BG_IMAGE_SATURATION` (default `0.90`)
+	- `BIZZAL_BG_IMAGE_CONTRAST` (default `1.02`)
+
+Outputs when enabled:
+- `data/renders/by_day/YYYY-MM-DD.bg.png`
+- `data/renders/latest/latest.bg.png`
+
+If image generation fails, render falls back gracefully to solid background and still produces MP4 output.
+
 House preset (one command):
 
 ```bash
@@ -398,7 +418,7 @@ Optional specific day:
 bin/render/run_house_render.sh 2026-02-13
 ```
 
-This wrapper applies your production defaults (cinematic audio profile, TTS+music on, tuned ducking/tone, and music fade-out tail) and then runs `render_atom.sh`.
+This wrapper applies your production defaults (AI background image + cinematic audio profile, TTS+music on, tuned ducking/tone, and music fade-out tail) and then runs `render_atom.sh`.
 
 House preset timing defaults:
 - `BIZZAL_INTRO_PAD_SEC=2`

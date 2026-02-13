@@ -11,6 +11,8 @@ VOICE_WAV="$REPO_ROOT/data/renders/by_day/${DAY}.voice.wav"
 LATEST_VOICE_WAV="$REPO_ROOT/data/renders/latest/latest.voice.wav"
 MUSIC_WAV="$REPO_ROOT/data/renders/by_day/${DAY}.music.wav"
 LATEST_MUSIC_WAV="$REPO_ROOT/data/renders/latest/latest.music.wav"
+BG_IMAGE="$REPO_ROOT/data/renders/by_day/${DAY}.bg.png"
+LATEST_BG_IMAGE="$REPO_ROOT/data/renders/latest/latest.bg.png"
 TMPDIR="$REPO_ROOT/data/renders/tmp/${DAY}"
 VIDEO_ONLY="$TMPDIR/video_only.mp4"
 
@@ -19,6 +21,7 @@ mkdir -p "$(dirname "$OUT")" "$(dirname "$LATEST")" "$TMPDIR"
 TTS_ENABLED="${BIZZAL_ENABLE_TTS:-0}"
 TTS_TIMING_MODE="${BIZZAL_TTS_TIMING_MODE:-per_screen}"
 MUSIC_ENABLED="${BIZZAL_ENABLE_BG_MUSIC:-0}"
+BG_IMAGE_ENABLED="${BIZZAL_ENABLE_BG_IMAGE:-0}"
 PAGE_XFADE_SEC="${BIZZAL_PAGE_XFADE_SEC:-0.15}"
 CTA_FINAL_HOLD_SEC="${BIZZAL_CTA_FINAL_HOLD_SEC:-0.30}"
 AUDIO_PROFILE="${BIZZAL_AUDIO_PROFILE:-default}"
@@ -43,6 +46,22 @@ trap cleanup EXIT
 if [[ ! -f "$ATOM" ]]; then
   echo "[render] missing validated atom: $ATOM" >&2
   exit 1
+fi
+
+BG_IMAGE_OK=0
+if [[ "$BG_IMAGE_ENABLED" == "1" ]]; then
+  if [[ -x "$REPO_ROOT/bin/render/synthesize_bg_image_replicate.py" ]]; then
+    if "$REPO_ROOT/bin/render/synthesize_bg_image_replicate.py" --atom "$ATOM" --out "$BG_IMAGE"; then
+      BG_IMAGE_OK=1
+      cp -f "$BG_IMAGE" "$LATEST_BG_IMAGE"
+      echo "[render] bg image enabled source=replicate" >&2
+      echo "[render] wrote $BG_IMAGE" >&2
+    else
+      echo "[render] bg image synth failed; continuing with solid background" >&2
+    fi
+  else
+    echo "[render] bg image synth script missing; continuing with solid background" >&2
+  fi
 fi
 
 HOOK_TXT="$TMPDIR/hook.txt"
@@ -474,11 +493,24 @@ VF+="drawtext=${COMMON}:textfile=${CTA_FILE}:fontsize=50:${XPOS}:y=(h-text_h)/2:
 
 COLOR_DUR="$CTA_END"
 
-ffmpeg -y -hide_banner -loglevel error \
-  -f lavfi -i "color=c=black:s=1080x1920:d=${COLOR_DUR}:r=30" \
-  -vf "$VF" \
-  -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
-  "$VIDEO_ONLY"
+if (( BG_IMAGE_OK == 1 )); then
+  BG_BRIGHTNESS="${BIZZAL_BG_IMAGE_BRIGHTNESS:--0.10}"
+  BG_SATURATION="${BIZZAL_BG_IMAGE_SATURATION:-0.90}"
+  BG_CONTRAST="${BIZZAL_BG_IMAGE_CONTRAST:-1.02}"
+  BG_BASE_VF="scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,eq=brightness=${BG_BRIGHTNESS}:saturation=${BG_SATURATION}:contrast=${BG_CONTRAST}"
+  ffmpeg -y -hide_banner -loglevel error \
+    -loop 1 -i "$BG_IMAGE" \
+    -t "$COLOR_DUR" \
+    -vf "${BG_BASE_VF},${VF}" \
+    -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
+    "$VIDEO_ONLY"
+else
+  ffmpeg -y -hide_banner -loglevel error \
+    -f lavfi -i "color=c=black:s=1080x1920:d=${COLOR_DUR}:r=30" \
+    -vf "$VF" \
+    -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
+    "$VIDEO_ONLY"
+fi
 
 if [[ "$INTRO_PAD_SEC" != "0" ]]; then
   INTRO_VIDEO="$TMPDIR/video_intro.mp4"
