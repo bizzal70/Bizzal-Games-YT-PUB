@@ -53,7 +53,10 @@ def resolve_speed(speed_raw: str) -> float:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Synthesize narration audio from a validated atom script.")
-    parser.add_argument("--atom", required=True, help="Path to validated atom JSON")
+    source = parser.add_mutually_exclusive_group(required=True)
+    source.add_argument("--atom", help="Path to validated atom JSON")
+    source.add_argument("--text", help="Direct narration text")
+    source.add_argument("--text-file", help="Path to text file to narrate")
     parser.add_argument("--out", required=True, help="Output WAV path")
     parser.add_argument("--voice", default="", help="Optional explicit TTS voice override")
     parser.add_argument("--speed", default=os.getenv("BIZZAL_TTS_SPEED", "1.0"), help="TTS speaking speed (0.25-4.0)")
@@ -62,15 +65,22 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="Print resolved payload details without calling API")
     args = parser.parse_args()
 
-    with open(args.atom, "r", encoding="utf-8") as handle:
-        atom = json.load(handle)
+    atom = None
+    if args.atom:
+        with open(args.atom, "r", encoding="utf-8") as handle:
+            atom = json.load(handle)
+        narration = build_narration(atom)
+    elif args.text is not None:
+        narration = clean_text(args.text)
+    else:
+        with open(args.text_file, "r", encoding="utf-8") as handle:
+            narration = clean_text(handle.read())
 
-    narration = build_narration(atom)
     if not narration:
         print("[tts] ERROR: narration text is empty", file=sys.stderr)
         return 2
 
-    voice = resolve_voice(atom, args.voice)
+    voice = resolve_voice(atom or {}, args.voice)
     speed = resolve_speed(args.speed)
     api_key = os.getenv("OPENAI_API_KEY") or os.getenv("BIZZAL_OPENAI_API_KEY")
 
