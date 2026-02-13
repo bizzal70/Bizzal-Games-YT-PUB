@@ -203,6 +203,34 @@ Suggested cron notifications on Umbrel (Discord):
 30 6 1 * * cd /home/umbrel/Bizzal_Games_Pub && . /home/umbrel/Bizzal_Games_Pub/.venv/bin/activate && export BIZZAL_DISCORD_WEBHOOK_URL='https://discord.com/api/webhooks/...' && bin/core/pipeline_health_discord.py --month "$(date -d 'last month' +\%Y-\%m)" --only-on-change >> /home/umbrel/Bizzal_Games_Pub/logs/cron_pipeline_health_discord.log 2>&1
 ```
 
+## Ops Backup (Cron + Alert Config)
+Create a disaster-recovery snapshot of current crontab and alert env configs (secrets redacted):
+
+```bash
+bin/core/backup_ops_config.sh
+```
+
+Output folder pattern:
+- `docs/ops_backups/YYYYMMDDTHHMMSSZ/`
+
+Contents:
+- `crontab.txt`
+- `env.discord_health.redacted` (if present)
+- `env.health_mail.redacted` (if present)
+- `README.txt` (restore notes + git SHA)
+
+Optional custom output directory:
+
+```bash
+bin/core/backup_ops_config.sh --out-dir docs/ops_backups
+```
+
+Restore cron from a snapshot:
+
+```bash
+crontab docs/ops_backups/YYYYMMDDTHHMMSSZ/crontab.txt
+```
+
 If render/upload scripts are present and executable, `run_daily.sh` will invoke them automatically.
 
 ## Operational Notes
