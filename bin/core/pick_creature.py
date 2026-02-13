@@ -8,6 +8,8 @@ except ImportError:
     print("ERROR: Missing PyYAML. Install with: python3 -m pip install --user pyyaml", file=sys.stderr)
     sys.exit(2)
 
+from reference_paths import resolve_active_srd_path
+
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 ATOM_PATH = os.path.join(REPO_ROOT, "data", "atoms", "incoming", datetime.now().strftime("%Y-%m-%d") + ".json")
 REF_CFG  = os.path.join(REPO_ROOT, "config", "reference_sources.yaml")
@@ -33,8 +35,10 @@ def main():
         print(f"ERROR: pick_creature only supports monster_tactic/encounter_seed, got {cat}", file=sys.stderr)
         sys.exit(3)
 
-    cfg = load_yaml(REF_CFG) or {}
-    active_dir = cfg.get("active_srd_path")
+    active_dir, cfg = resolve_active_srd_path(REPO_ROOT, REF_CFG)
+    if not active_dir or not os.path.isdir(active_dir):
+        print(f"ERROR: Bad active_srd_path in {REF_CFG}: {active_dir}", file=sys.stderr)
+        sys.exit(2)
     creatures_file = (cfg.get("sources", {}).get("creatures") or {}).get("file", "Creature.json")
     path = os.path.join(active_dir, creatures_file)
 

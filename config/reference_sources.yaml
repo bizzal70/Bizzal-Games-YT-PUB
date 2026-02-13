@@ -1,5 +1,5 @@
 # Canonical reference sources for WotC SRD 2024 (Django fixture JSON)
-active_srd_path: /home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD
+active_srd_path: reference/srd5.1
 
 sources:
   creatures:

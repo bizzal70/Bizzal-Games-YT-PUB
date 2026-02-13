@@ -10,6 +10,8 @@ except ImportError:
     print("ERROR: Missing PyYAML. Install with: python3 -m pip install --user pyyaml", file=sys.stderr)
     sys.exit(2)
 
+from reference_paths import resolve_active_srd_path
+
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 ATOM_PATH = os.path.join(REPO_ROOT, "data", "atoms", "incoming", datetime.now().strftime("%Y-%m-%d") + ".json")
 REF_CFG = os.path.join(REPO_ROOT, "config", "reference_sources.yaml")
@@ -40,8 +42,10 @@ def main():
     category = atom.get("category")
     picks = atom.get("picks") or {}
 
-    cfg = load_yaml(REF_CFG) or {}
-    active_dir = cfg.get("active_srd_path")
+    active_dir, cfg = resolve_active_srd_path(REPO_ROOT, REF_CFG)
+    if not active_dir or not os.path.isdir(active_dir):
+        print(f"ERROR: Bad active_srd_path in {REF_CFG}: {active_dir}", file=sys.stderr)
+        sys.exit(2)
     sources = cfg.get("sources", {})
 
     # Determine which pick we’re resolving

@@ -63,9 +63,25 @@ def pick_voice_lines(style_cfg, voice_name, category, name):
     cta  = ctas[(h // 7) % len(ctas)]
     return hook, cta
 
+def canonical_category(category: str) -> str:
+    aliases = {
+        "gm_tip": "rules_ruling",
+        "roleplaying_tip": "character_micro_tip",
+        "character_class_spotlight": "character_micro_tip",
+        "class_spotlight": "character_micro_tip",
+        "dungeoneering_encounter": "encounter_seed",
+        "overworld_encounter": "encounter_seed",
+    }
+    return aliases.get((category or "").strip().lower(), (category or "").strip().lower())
+
 # ---------------- Item scripts ----------------
 
 def build_item_body(angle: str, fields: dict):
+    angle = {
+        "best_user": "clever_use",
+        "dm_counterplay": "drawback_watchout",
+    }.get((angle or "").strip().lower(), (angle or "").strip().lower())
+
     desc = (fields.get("desc") or "").strip()
     stats = fmt_stats_item(fields)
 
@@ -92,7 +108,11 @@ def build_item_body(angle: str, fields: dict):
         if stats: bits.append(stats)
         return " ".join(bits)
 
-    raise ValueError(f"Unsupported item angle: {angle}")
+    bits = []
+    if desc: bits.append(desc)
+    if stats: bits.append(stats)
+    bits.append("Use this when the party can solve positioning before they solve damage.")
+    return " ".join(bits)
 
 # ---------------- Monster scripts ----------------
 def has_trait(traits: list, needle: str) -> bool:
@@ -115,9 +135,55 @@ def tactic_nugget(angle: str, traits: list) -> str:
     return ""
 
 
-def short(s: str, n=160):
+def short(s: str, n=160, add_ellipsis=True):
     s = re.sub(r"\s+", " ", (s or "").strip())
-    return (s[:n].rstrip() + "…") if len(s) > n else s
+    if len(s) <= n:
+        return s
+
+    window = s[: n + 1]
+
+    # Prefer ending on a full thought when possible.
+    sentence_break = max(window.rfind(". "), window.rfind("! "), window.rfind("? "))
+    if sentence_break >= int(n * 0.6):
+        return window[: sentence_break + 1].strip()
+
+    clause_break = max(window.rfind("; "), window.rfind(": "), window.rfind(", "))
+    if clause_break >= int(n * 0.7):
+        out = window[:clause_break].strip().rstrip(",;:")
+        return (out + "…") if add_ellipsis else (out + ".")
+
+    cut = window.rfind(" ")
+    if cut <= 0:
+        cut = n
+
+    trimmed = window[:cut].strip().rstrip(",;:-")
+    trailing_words = r"(of|and|or|to|with|for|at|in|on|by|from|the|a|an|is|are|was|were|be)"
+    while True:
+        updated = re.sub(rf"\b{trailing_words}$", "", trimmed, flags=re.IGNORECASE).rstrip()
+        if updated == trimmed:
+            break
+        trimmed = updated
+    if trimmed:
+        return (trimmed + "…") if add_ellipsis else (trimmed + ".")
+    fallback = s[:n].rstrip().rstrip(",;:-")
+    return (fallback + "…") if add_ellipsis else (fallback + ".")
+
+def clean_script_text(s: str) -> str:
+    txt = re.sub(r"\s+", " ", (s or "").strip())
+    if not txt:
+        return ""
+
+    txt = txt.replace("…", ".")
+    txt = txt.replace("*", "")
+    txt = re.sub(r"\s+([,.;:!?])", r"\1", txt)
+    txt = re.sub(r"([,.;:!?])([^\s])", r"\1 \2", txt)
+    txt = re.sub(r"\.{2,}", ".", txt)
+    txt = re.sub(r"\s+", " ", txt).strip()
+
+    if txt and txt[-1] not in ".!?":
+        txt += "."
+
+    return txt
 
 def sstr(v) -> str:
     # safe string for fields that might be int/float/None/list
@@ -173,6 +239,13 @@ def pick_actions(actions: list, k=2):
     return good[:k]
 
 def build_monster_body(angle: str, fields: dict, traits: list, actions: list, attacks: list):
+    angle = {
+        "how_to_counter": "counterplay",
+        "terrain_synergy": "how_it_wins",
+        "party_level_scaling": "how_it_wins",
+        "roleplay_hook": "common_mistake",
+    }.get((angle or "").strip().lower(), (angle or "").strip().lower())
+
     name = fields.get("name", "This creature")
     anchor = creature_anchor(fields)
     trait = pick_notable_trait(traits)
@@ -180,12 +253,10 @@ def build_monster_body(angle: str, fields: dict, traits: list, actions: list, at
 
     trait_line = ""
     if trait:
-        trait_line = f"Notable trait: {trait.get('name')}. {short(trait.get('desc'), 120)}"
+        trait_line = f"Notable trait: {trait.get('name')}. {short(trait.get('desc'), 120, add_ellipsis=False)}"
 
-    action_lines = []
-    for a in acts:
-        action_lines.append(f"{a.get('name')}: {short(a.get('desc'), 140)}")
-    action_blob = " ".join(action_lines) if action_lines else ""
+    action_names = [a.get("name") for a in acts if (a.get("name") or "").strip()]
+    action_blob = ", ".join(action_names) if action_names else ""
 
     nug = tactic_nugget(angle, traits)
 
@@ -194,7 +265,7 @@ def build_monster_body(angle: str, fields: dict, traits: list, actions: list, at
         if anchor:
             bits.append(anchor + ".")
         if action_blob:
-            bits.append("Key moves: " + action_blob)
+            bits.append("Key moves: " + action_blob + ".")
         if trait_line:
             bits.append(trait_line)
         if nug:
@@ -207,7 +278,7 @@ def build_monster_body(angle: str, fields: dict, traits: list, actions: list, at
         if anchor:
             bits.append(anchor + ".")
         if action_blob:
-            bits.append("What actually hurts: " + action_blob)
+            bits.append("What actually hurts: " + action_blob + ".")
         if trait_line:
             bits.append(trait_line)
         if nug:
@@ -220,7 +291,7 @@ def build_monster_body(angle: str, fields: dict, traits: list, actions: list, at
         if anchor:
             bits.append(anchor + ".")
         if action_blob:
-            bits.append("Watch for: " + action_blob)
+            bits.append("Watch for: " + action_blob + ".")
         if nug:
             bits.append(nug)
         bits.append("Use terrain, spacing, and focus-fire to remove its turns from the board.")
@@ -228,7 +299,15 @@ def build_monster_body(angle: str, fields: dict, traits: list, actions: list, at
             bits.append("Also: " + trait_line)
         return " ".join(bits)
 
-    raise ValueError(f"Unsupported monster angle: {angle}")
+    bits = [f"{name} is dangerous when it gets its preferred position."]
+    if anchor:
+        bits.append(anchor + ".")
+    if trait_line:
+        bits.append(trait_line)
+    if action_blob:
+        bits.append("Watch for: " + action_blob + ".")
+    bits.append("Run it with intent and force the table to answer its pressure.")
+    return " ".join(bits)
 
 
 # ---------------- Spell scripts ----------------
@@ -258,7 +337,10 @@ def spell_anchor(fields: dict):
     dur_txt = dur.strip()
     if conc and "concentration" not in dur_txt.lower():
         if dur_txt:
-            dur_txt = f"Concentration, up to {dur_txt}"
+            if dur_txt.lower().startswith("up to "):
+                dur_txt = f"Concentration, {dur_txt}"
+            else:
+                dur_txt = f"Concentration, up to {dur_txt}"
         else:
             dur_txt = "Concentration"
 
@@ -268,7 +350,18 @@ def spell_anchor(fields: dict):
     else:
         try:
             il = int(lvl)
-            lvl_txt = "Cantrip" if il == 0 else f"{il}th-level"
+            if il == 0:
+                lvl_txt = "Cantrip"
+            else:
+                suffix = "th"
+                if il % 100 not in (11, 12, 13):
+                    if il % 10 == 1:
+                        suffix = "st"
+                    elif il % 10 == 2:
+                        suffix = "nd"
+                    elif il % 10 == 3:
+                        suffix = "rd"
+                lvl_txt = f"{il}{suffix}-level"
         except Exception:
             lvl_txt = str(lvl)
 
@@ -313,8 +406,14 @@ def spell_nuggets(angle: str, fields: dict):
     return nuggets[:2]
 
 def build_spell_body(angle: str, fields: dict):
+    angle = {
+        "combo_pairing": "best_moment",
+        "upcast_tip": "best_moment",
+        "dm_counterplay": "dm_twist",
+    }.get((angle or "").strip().lower(), (angle or "").strip().lower())
+
     name = fields.get("name", "This spell")
-    desc = short(fields.get("desc") or "", 220)
+    desc = short(fields.get("desc") or "", 220, add_ellipsis=False)
     anchor = spell_anchor(fields)
     nugs = dedupe_prefixed_lines(spell_nuggets(angle, fields))
 
@@ -342,7 +441,99 @@ def build_spell_body(angle: str, fields: dict):
         bits.append("Reward clever casting with information, access, or advantage—not just a reroll.")
         return " ".join(bits)
 
-    raise ValueError(f"Unsupported spell angle: {angle}")
+    bits = [f"{name} is strongest when cast to change the encounter state, not just to roll damage."]
+    if anchor: bits.append(anchor + ".")
+    if desc: bits.append(desc)
+    bits += nugs
+    bits.append("Choose timing and target first, then spend the slot.")
+    return " ".join(bits)
+
+def build_rule_body(angle: str, fields: dict):
+    name = fields.get("name") or "Rule"
+    desc = short(fields.get("desc") or fields.get("text") or fields.get("content") or "", 220, add_ellipsis=False)
+    angle = (angle or "").strip().lower()
+
+    if angle == "common_table_mistake":
+        lead = f"Common table mistake around {name}: speed over clarity."
+    elif angle == "fast_ruling":
+        lead = f"Fast ruling for {name}: decide intent, then resolve with one clear call."
+    elif angle == "edge_case":
+        lead = f"Edge case for {name}: check order of operations before adjudicating."
+    elif angle == "dm_fairness_tip":
+        lead = f"DM fairness tip with {name}: be consistent across allies and enemies."
+    elif angle == "player_tip":
+        lead = f"Player tip for {name}: state your plan and timing before rolling."
+    elif angle == "myth_vs_rule":
+        lead = f"Myth vs rule: {name}."
+    elif angle == "why_people_get_it_wrong":
+        lead = f"Why people get {name} wrong: shorthand becomes house rule over time."
+    elif angle == "quick_example":
+        lead = f"Quick example for {name}: call the trigger, then apply the effect once."
+    elif angle == "dm_callout":
+        lead = f"DM callout on {name}: telegraph the ruling once, then stick to it."
+    else:
+        lead = f"Rules note: {name}."
+
+    bits = [lead]
+    if desc:
+        bits.append(desc)
+    bits.append("Clear rulings now save argument time later.")
+    return " ".join(bits)
+
+def build_class_body(angle: str, fields: dict):
+    name = fields.get("name") or "This class"
+    desc = short(fields.get("desc") or fields.get("description") or "", 220, add_ellipsis=False)
+    angle = (angle or "").strip().lower()
+
+    if angle == "level_1_choice":
+        lead = f"Level 1 choice for {name}: pick a play pattern you can execute every fight."
+    elif angle == "party_role":
+        lead = f"Party role for {name}: define what you solve before initiative starts."
+    elif angle == "survivability":
+        lead = f"Survivability with {name}: position first, then pressure."
+    elif angle == "exploration_edge":
+        lead = f"Exploration edge for {name}: look for non-combat value every scene."
+    elif angle == "table_etiquette":
+        lead = f"Table tip for {name}: declare intent early so teammates can combo around you."
+    else:
+        lead = f"Character tip: {name}."
+
+    bits = [lead]
+    if desc:
+        bits.append(desc)
+    bits.append("Strong turns come from repeatable decisions, not lucky spikes.")
+    return " ".join(bits)
+
+def build_encounter_body(angle: str, fields: dict, traits: list, actions: list):
+    name = fields.get("name") or "This encounter anchor"
+    anchor = creature_anchor(fields)
+    angle = (angle or "").strip().lower()
+
+    if angle == "three_beats":
+        lead = f"Three-beat encounter seed: reveal {name}, escalate pressure, then force a hard choice."
+    elif angle == "twist":
+        lead = f"Twist for a {name} encounter: change the objective mid-scene, not just the hit points."
+    elif angle == "terrain_feature":
+        lead = f"Terrain feature seed with {name}: make the map itself a problem to solve."
+    elif angle == "time_pressure":
+        lead = f"Time pressure seed for {name}: each round lost should cost position, resources, or civilians."
+    elif angle == "moral_choice":
+        lead = f"Moral-choice seed with {name}: success should ask what the party is willing to sacrifice."
+    else:
+        lead = f"Encounter seed using {name}: set stakes before the first roll."
+
+    bits = [lead]
+    if anchor:
+        bits.append(anchor + ".")
+    nug = tactic_nugget("how_it_wins", traits)
+    if nug:
+        bits.append(nug)
+    if actions:
+        action_names = [a.get("name") for a in actions if (a.get("name") or "").strip()]
+        if action_names:
+            bits.append("Signature pressure: " + ", ".join(action_names[:2]) + ".")
+    bits.append("Give players one clear clue and one costly decision.")
+    return " ".join(bits)
 
 def main():
     atom = load_json(ATOM_PATH)
@@ -352,7 +543,7 @@ def main():
 
     fact = atom.get("fact") or {}
     style = atom.get("style") or {}
-    category = atom.get("category")
+    category = canonical_category(atom.get("category"))
     angle = atom.get("angle")
 
     if not fact:
@@ -384,9 +575,27 @@ def main():
         body = build_spell_body(angle, fields)
         script["hook"], script["body"], script["cta"] = hook, body, cta
 
+    elif category == "encounter_seed" and kind == "creature":
+        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
+        body = build_encounter_body(angle, fields, fact.get("traits") or [], fact.get("actions") or [])
+        script["hook"], script["body"], script["cta"] = hook, body, cta
+
+    elif category in ("rules_ruling", "rules_myth") and kind == "rule":
+        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
+        body = build_rule_body(angle, fields)
+        script["hook"], script["body"], script["cta"] = hook, body, cta
+
+    elif category == "character_micro_tip" and kind == "class":
+        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
+        body = build_class_body(angle, fields)
+        script["hook"], script["body"], script["cta"] = hook, body, cta
+
     else:
         print(f"ERROR: Unsupported category/kind: {category}/{kind}", file=sys.stderr)
         sys.exit(4)
+
+    for key in ("hook", "body", "cta"):
+        script[key] = clean_script_text(script.get(key, ""))
 
     full_text = f"{script.get('hook','').strip()}\n{script.get('body','').strip()}\n{script.get('cta','').strip()}\n"
     atom["script_id"] = sha256_text(full_text)

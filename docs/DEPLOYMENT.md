@@ -19,7 +19,30 @@ Run from Umbrel shell in repo root:
 ```bash
 git pull --rebase
 python3 -m pip install --user pyyaml
+export BIZZAL_ACTIVE_SRD_PATH=/home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD
 bin/core/run_daily.sh
+```
+
+## Reference Corpus Alignment (Umbrel-local)
+- The production SRD JSON corpus can remain local on Umbrel and outside Git.
+- Pipeline scripts resolve sources in this order:
+	1) `BIZZAL_ACTIVE_SRD_PATH` (or `BG_ACTIVE_SRD_PATH`)
+	2) `config/reference_sources.yaml` `active_srd_path`
+	3) repo fallback `reference/srd5.1`
+
+If you want a local dev mirror from Umbrel:
+
+```bash
+rsync -av --delete \
+	umbrel@192.168.68.128:/home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD/ \
+	reference/srd5.1/
+```
+
+Then verify:
+
+```bash
+bin/core/inventory_active_srd.py
+ls -la data/reference_inventory/
 ```
 
 ## Verification Checklist

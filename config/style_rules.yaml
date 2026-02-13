@@ -78,7 +78,130 @@ category_rules:
     - best_moment
     - common_misplay
     - dm_twist
+    - combo_pairing
+    - upcast_tip
+    - dm_counterplay
     voices:
     - friendly_vet
     - rules_lawyer
     - gritty_dm
+  item_spotlight:
+    angles:
+    - best_user
+    - clever_use
+    - drawback_watchout
+    - dm_counterplay
+    - story_hook
+    voices:
+    - friendly_vet
+    - rules_lawyer
+    - gritty_dm
+  encounter_seed:
+    angles:
+    - three_beats
+    - twist
+    - terrain_feature
+    - time_pressure
+    - moral_choice
+    voices:
+    - gritty_dm
+    - friendly_vet
+    - rules_lawyer
+  rules_ruling:
+    angles:
+    - common_table_mistake
+    - fast_ruling
+    - edge_case
+    - dm_fairness_tip
+    - player_tip
+    voices:
+    - rules_lawyer
+    - friendly_vet
+    - gritty_dm
+  rules_myth:
+    angles:
+    - myth_vs_rule
+    - why_people_get_it_wrong
+    - quick_example
+    - dm_callout
+    voices:
+    - rules_lawyer
+    - friendly_vet
+    - gritty_dm
+  character_micro_tip:
+    angles:
+    - level_1_choice
+    - party_role
+    - survivability
+    - exploration_edge
+    - table_etiquette
+    voices:
+    - friendly_vet
+    - gritty_dm
+    - rules_lawyer
+  gm_tip:
+    angles:
+    - common_table_mistake
+    - fast_ruling
+    - edge_case
+    - dm_fairness_tip
+    - player_tip
+    voices:
+    - rules_lawyer
+    - friendly_vet
+    - gritty_dm
+  roleplaying_tip:
+    angles:
+    - level_1_choice
+    - party_role
+    - survivability
+    - exploration_edge
+    - table_etiquette
+    voices:
+    - friendly_vet
+    - gritty_dm
+    - rules_lawyer
+  character_class_spotlight:
+    angles:
+    - level_1_choice
+    - party_role
+    - survivability
+    - exploration_edge
+    - table_etiquette
+    voices:
+    - friendly_vet
+    - gritty_dm
+    - rules_lawyer
+  class_spotlight:
+    angles:
+    - level_1_choice
+    - party_role
+    - survivability
+    - exploration_edge
+    - table_etiquette
+    voices:
+    - friendly_vet
+    - gritty_dm
+    - rules_lawyer
+  dungeoneering_encounter:
+    angles:
+    - three_beats
+    - twist
+    - terrain_feature
+    - time_pressure
+    - moral_choice
+    voices:
+    - gritty_dm
+    - friendly_vet
+    - rules_lawyer
+  overworld_encounter:
+    angles:
+    - three_beats
+    - twist
+    - terrain_feature
+    - time_pressure
+    - moral_choice
+    voices:
+    - gritty_dm
+    - friendly_vet
+    - rules_lawyer

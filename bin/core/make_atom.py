@@ -2,6 +2,11 @@
 import json, os, sys, subprocess, hashlib, random
 from datetime import datetime, UTC
 
+try:
+    import yaml
+except ImportError:
+    yaml = None
+
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 
 CONFIG_DIR   = os.path.join(REPO_ROOT, "config")
@@ -12,6 +17,8 @@ FAILED_DIR   = os.path.join(DATA_DIR, "atoms", "failed")
 
 TOPIC_SPINE  = os.path.join(CONFIG_DIR, "topic_spine.yaml")
 SCHEMA_MIN   = os.path.join(CONFIG_DIR, "atom_schema_min.json")
+
+DOW_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 
 DAY = datetime.now().strftime("%Y-%m-%d")
 ATOM_PATH = os.path.join(INCOMING_DIR, f"{DAY}.json")
@@ -53,81 +60,59 @@ def ensure_dirs():
 
 # ---------- topic spine parsing ----------
 
-def parse_topic_spine_categories():
-    """
-    Try YAML (PyYAML) if available, else fallback to a simple parser:
-    expects something like:
-      schedule:
-        - category: item_spotlight
-          weight: 3
-        - category: monster_tactic
-          weight: 2
-    """
-    if not os.path.exists(TOPIC_SPINE):
-        # Safe default if file missing
-        return [("item_spotlight", 1), ("monster_tactic", 1), ("spell_use_case", 1), ("rule_clarification", 1)]
-
-    # Try PyYAML first
+def load_topic_spine():
+    if not os.path.exists(TOPIC_SPINE) or yaml is None:
+        return {}
     try:
-        import yaml  # type: ignore
-        obj = yaml.safe_load(open(TOPIC_SPINE, "r", encoding="utf-8"))
-        # Accept either top-level list or schedule key
-        rows = obj.get("schedule", obj) if isinstance(obj, dict) else obj
-        out = []
-        if isinstance(rows, list):
-            for r in rows:
-                if not isinstance(r, dict):
-                    continue
-                cat = r.get("category")
-                w = r.get("weight", 1)
-                if cat:
-                    out.append((str(cat), int(w)))
-        if out:
-            return out
+        with open(TOPIC_SPINE, "r", encoding="utf-8") as f:
+            return yaml.safe_load(f) or {}
     except Exception:
-        pass
+        return {}
 
-    # Fallback: very small “good enough” parser for category/weight pairs
-    out = []
-    cat = None
-    w = 1
-    for line in open(TOPIC_SPINE, "r", encoding="utf-8"):
-        s = line.strip()
-        if not s or s.startswith("#"):
-            continue
-        if s.startswith("category:"):
-            cat = s.split(":", 1)[1].strip().strip("'\"")
-        elif s.startswith("weight:"):
-            try:
-                w = int(s.split(":", 1)[1].strip())
-            except Exception:
-                w = 1
-        # If we have a cat, emit when we hit next "-" or end-ish; easiest: emit when both seen
-        if cat is not None and "weight:" in s:
-            out.append((cat, w))
-            cat, w = None, 1
-
-    if out:
-        return out
-
-    # Last resort
-    return [("item_spotlight", 1), ("monster_tactic", 1), ("spell_use_case", 1), ("rule_clarification", 1)]
-
-def pick_category_for_day(day_str: str):
-    cats = parse_topic_spine_categories()
-    # deterministic seed per day
-    seed = int(sha256_text("topic|" + day_str)[:8], 16)
-    rng = random.Random(seed)
-
-    # weighted pick
-    total = sum(max(1, w) for _, w in cats)
+def weighted_choice(weights: dict, seed_key: str):
+    items = [(k, int(v)) for k, v in (weights or {}).items() if int(v) > 0]
+    if not items:
+        return None
+    total = sum(v for _, v in items)
+    rng = random.Random(int(sha256_text(seed_key)[:8], 16))
     roll = rng.randint(1, total)
     acc = 0
-    for cat, w in cats:
-        acc += max(1, w)
+    for k, w in items:
+        acc += w
         if roll <= acc:
-            return cat
-    return cats[0][0]
+            return k
+    return items[0][0]
+
+def pick_category_and_angle_for_day(day_str: str):
+    spine = load_topic_spine()
+
+    # Preferred model: weekly_spine + category_weights.<category>.angles
+    wk = spine.get("weekly_spine") if isinstance(spine, dict) else {}
+    cw = spine.get("category_weights") if isinstance(spine, dict) else {}
+
+    if isinstance(wk, dict) and wk:
+        dow = DOW_KEYS[datetime.now().weekday()]
+        category = wk.get(dow)
+        if category:
+            angle_weights = ((cw.get(category) or {}).get("angles") or {}) if isinstance(cw, dict) else {}
+            angle = weighted_choice(angle_weights, f"angle|{day_str}|{category}") if angle_weights else None
+            return category, angle
+
+    # Legacy fallback: schedule list
+    schedule = spine.get("schedule") if isinstance(spine, dict) else None
+    if isinstance(schedule, list) and schedule:
+        weights = {}
+        for row in schedule:
+            if not isinstance(row, dict):
+                continue
+            cat = row.get("category")
+            if not cat:
+                continue
+            weights[str(cat)] = int(row.get("weight", 1))
+        category = weighted_choice(weights, f"topic|{day_str}") if weights else None
+        return category, None
+
+    return "monster_tactic", None
 
 # ---------- atom creation / validation ----------
 
@@ -228,16 +213,13 @@ def main():
     if not load_schema_min_ok():
         print("[make_atom] WARNING: config/atom_schema_min.json not found; continuing with minimal validation", file=sys.stderr)
 
-    # Pick category deterministically from topic spine (unless already set)
-    if not atom.get("category"):
-        atom["category"] = pick_category_for_day(DAY)
-
-    # If angle missing, set a deterministic default by category
-    if not atom.get("angle"):
-        # common set used in your scripts
-        angles = ["best_moment", "common_misplay", "dm_twist", "how_it_wins", "counterplay", "story_hook"]
-        seed = int(sha256_text("angle|" + DAY + "|" + atom["category"])[:8], 16)
-        atom["angle"] = random.Random(seed).choice(angles)
+    # Category/angle come from topic spine weekly schedule + weighted angles.
+    picked_category, picked_angle = pick_category_and_angle_for_day(DAY)
+    atom["category"] = picked_category or atom.get("category") or "monster_tactic"
+    if picked_angle:
+        atom["angle"] = picked_angle
+    elif not atom.get("angle"):
+        atom["angle"] = "how_it_wins"
 
     # Always wipe picks + script/fact if rerunning (prevents stale data)
     clear_irrelevant_picks(atom)
@@ -246,11 +228,14 @@ def main():
     atom["script_id"] = None
     atomic_write_json(ATOM_PATH, atom)
 
-    # Run picker(s)
-    for picker in pickers_for_category(atom["category"]):
-        if not has_exec(picker):
-            die(f"[make_atom] missing picker executable: {picker} (chmod +x? file exists?)")
-        run([os.path.join(REPO_ROOT, picker)])
+    # Fill picks (preferred broad-category picker), fallback to legacy per-category pickers.
+    if has_exec("bin/core/fill_picks.py"):
+        run([os.path.join(REPO_ROOT, "bin/core/fill_picks.py")])
+    else:
+        for picker in pickers_for_category(atom["category"]):
+            if not has_exec(picker):
+                die(f"[make_atom] missing picker executable: {picker} (chmod +x? file exists?)")
+            run([os.path.join(REPO_ROOT, picker)])
 
     # Attach fact, pick style, write script
     for step in ["bin/core/attach_fact.py", "bin/core/pick_style.py", "bin/core/write_script_from_fact.py"]:

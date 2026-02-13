@@ -11,6 +11,8 @@ except ImportError:
     print("ERROR: Missing PyYAML. Install with: python3 -m pip install --user pyyaml", file=sys.stderr)
     sys.exit(2)
 
+from reference_paths import resolve_active_srd_path
+
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 ATOM_DIR = os.path.join(REPO_ROOT, "data", "atoms", "incoming")
 REF_CFG = os.path.join(REPO_ROOT, "config", "reference_sources.yaml")
@@ -65,6 +67,17 @@ def ensure_pick(picks: dict, key: str, value):
         if picks.get(key) is None:
             picks[key] = value
 
+def canonical_category(category: str) -> str:
+    aliases = {
+        "gm_tip": "rules_ruling",
+        "roleplaying_tip": "character_micro_tip",
+        "character_class_spotlight": "character_micro_tip",
+        "class_spotlight": "character_micro_tip",
+        "dungeoneering_encounter": "encounter_seed",
+        "overworld_encounter": "encounter_seed",
+    }
+    return aliases.get((category or "").strip().lower(), (category or "").strip().lower())
+
 def main():
     random.seed()
 
@@ -74,13 +87,12 @@ def main():
         sys.exit(3)
 
     atom = load_json(atom_path)
-    category = atom.get("category")
+    category = canonical_category(atom.get("category"))
     if not category:
         print("ERROR: Atom missing category", file=sys.stderr)
         sys.exit(4)
 
-    cfg = load_yaml(REF_CFG) or {}
-    active_dir = cfg.get("active_srd_path")
+    active_dir, cfg = resolve_active_srd_path(REPO_ROOT, REF_CFG)
     if not active_dir or not os.path.isdir(active_dir):
         print(f"ERROR: Bad active_srd_path in {REF_CFG}: {active_dir}", file=sys.stderr)
         sys.exit(5)

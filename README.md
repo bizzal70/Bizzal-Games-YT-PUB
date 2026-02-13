@@ -23,6 +23,20 @@ This repo tracks source + templates only.
 Runtime outputs and reference corpuses are intentionally not committed:
 - data/, runtime/, logs/, tmp/, reference/open5e/, reference/srd5.1/
 
+## Reference data (Umbrel vs GitHub)
+
+The full SRD JSON corpus can stay local-only on Umbrel and does not need to be committed.
+
+- Default lookup path is `reference/srd5.1` (repo-relative).
+- You can override at runtime with `BIZZAL_ACTIVE_SRD_PATH` (or `BG_ACTIVE_SRD_PATH`).
+
+Example (Umbrel):
+
+```bash
+export BIZZAL_ACTIVE_SRD_PATH=/home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD
+bin/core/run_daily.sh
+```
+
 ## Structure
 - bin/        core/render/upload/utils scripts
 - config/     templates + configuration

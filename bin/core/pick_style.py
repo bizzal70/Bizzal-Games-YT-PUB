@@ -72,7 +72,11 @@ def main():
         opts = [o for o in options if o != avoid_value]
         return random.choice(opts) if opts else random.choice(options)
 
-    angle = choose_avoid(angles, prev.get("angle"))
+    chosen_angle = atom.get("angle")
+    if chosen_angle in angles:
+        angle = chosen_angle
+    else:
+        angle = choose_avoid(angles, prev.get("angle"))
     voice = choose_avoid(voices, prev.get("voice"))
     tone  = random.choice(tones)
 

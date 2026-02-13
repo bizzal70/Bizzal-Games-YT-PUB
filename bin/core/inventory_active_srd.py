@@ -5,9 +5,11 @@ import hashlib
 from datetime import datetime, timezone
 from collections import Counter, defaultdict
 
-ACTIVE_SRD = "/home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD"
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 OUT_DIR = os.path.join(REPO_ROOT, "data", "reference_inventory")
+REF_CFG = os.path.join(REPO_ROOT, "config", "reference_sources.yaml")
+
+from reference_paths import resolve_active_srd_path
 
 def sha256_file(path: str) -> str:
     h = hashlib.sha256()
@@ -23,10 +25,14 @@ def load_json(path: str):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
 
-    files = sorted([f for f in os.listdir(ACTIVE_SRD) if f.endswith(".json")])
+    active_srd, _cfg = resolve_active_srd_path(REPO_ROOT, REF_CFG)
+    if not active_srd or not os.path.isdir(active_srd):
+        raise SystemExit(f"ERROR: Active SRD path not found: {active_srd}")
+
+    files = sorted([f for f in os.listdir(active_srd) if f.endswith(".json")])
     inventory = {
         "generated_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "active_srd_path": os.path.realpath(ACTIVE_SRD),
+        "active_srd_path": os.path.realpath(active_srd),
         "file_count": len(files),
         "files": {}
     }
@@ -42,7 +48,7 @@ def main():
     manifest_lines = []
 
     for fname in files:
-        path = os.path.join(ACTIVE_SRD, fname)
+        path = os.path.join(active_srd, fname)
         st = os.stat(path)
         size = st.st_size
         sha = sha256_file(path)
