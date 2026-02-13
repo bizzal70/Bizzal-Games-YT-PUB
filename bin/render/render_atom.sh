@@ -56,6 +56,26 @@ CTA_MIN=5
 CTA_MAX=10
 BODY_MIN=8
 
+CATEGORY="$(jq -r '.category // ""' "$ATOM" | tr '[:upper:]' '[:lower:]')"
+CTA_PROFILE="default"
+case "$CATEGORY" in
+  encounter_seed|monster_tactic)
+    CTA_MIN=6
+    CTA_MAX=11
+    CTA_PROFILE="combat_weighted"
+    ;;
+  rules_ruling|rules_myth)
+    CTA_MIN=4
+    CTA_MAX=8
+    CTA_PROFILE="rules_compact"
+    ;;
+  spell_use_case|item_spotlight|character_micro_tip)
+    CTA_MIN=5
+    CTA_MAX=9
+    CTA_PROFILE="utility_balanced"
+    ;;
+esac
+
 count_words() {
   local f="$1"
   if [[ ! -f "$f" ]]; then
@@ -119,6 +139,7 @@ BODY_END=$(( HOOK_SEC + BODY_SEC ))
 
 echo "[render] pacing words hook=$HOOK_WORDS body=$BODY_WORDS cta=$CTA_WORDS total=$TOTAL_WORDS" >&2
 echo "[render] pacing secs hook=$HOOK_SEC body=$BODY_SEC cta=$CTA_SEC dur=$DUR" >&2
+echo "[render] pacing profile category=$CATEGORY cta_profile=$CTA_PROFILE cta_min=$CTA_MIN cta_max=$CTA_MAX" >&2
 
 FONT="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 COMMON="fontfile=${FONT}:fontcolor=white:line_spacing=12:fix_bounds=1:box=1:boxcolor=black@0.72:boxborderw=22:borderw=2:bordercolor=black@0.95:shadowcolor=black@0.9:shadowx=2:shadowy=2"

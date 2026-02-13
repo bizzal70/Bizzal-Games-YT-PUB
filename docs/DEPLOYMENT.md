@@ -294,6 +294,10 @@ If render/upload scripts are present and executable, `run_daily.sh` will invoke 
 
 Render pacing notes:
 - `bin/render/render_atom.sh` now uses dynamic timing for hook/body/cta based on word counts (instead of fixed 10/10/10).
+- CTA timing is category-aware:
+	- `encounter_seed`, `monster_tactic` → slightly longer CTA window.
+	- `rules_ruling`, `rules_myth` → compact CTA window.
+	- `spell_use_case`, `item_spotlight`, `character_micro_tip` → balanced CTA window.
 - Optional override: `BIZZAL_SHORTS_DURATION` (default `30`).
 
 Example:
