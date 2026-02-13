@@ -21,6 +21,7 @@ TTS_TIMING_MODE="${BIZZAL_TTS_TIMING_MODE:-per_screen}"
 MUSIC_ENABLED="${BIZZAL_ENABLE_BG_MUSIC:-0}"
 PAGE_XFADE_SEC="${BIZZAL_PAGE_XFADE_SEC:-0.15}"
 CTA_FINAL_HOLD_SEC="${BIZZAL_CTA_FINAL_HOLD_SEC:-0.30}"
+AUDIO_PROFILE="${BIZZAL_AUDIO_PROFILE:-default}"
 PREVIEW_HOST="${BIZZAL_PREVIEW_HOST:-192.168.68.128}"
 PREVIEW_PORT="${BIZZAL_PREVIEW_PORT:-8766}"
 ECHO_PREVIEW_URL="${BIZZAL_ECHO_PREVIEW_URL:-1}"
@@ -545,11 +546,34 @@ PY
   if (( MUSIC_OK == 1 )); then
     VIDEO_MUX_SEC="$(probe_duration "$MUX_VIDEO")"
     MUSIC_LOOP="$TMPDIR/music_loop.wav"
-    BG_TONE_LOWCUT_HZ="${BIZZAL_BG_TONE_LOWCUT_HZ:-45}"
-    BG_TONE_HIGHCUT_HZ="${BIZZAL_BG_TONE_HIGHCUT_HZ:-14500}"
-    BG_TONE_WARMTH_DB="${BIZZAL_BG_TONE_WARMTH_DB:-2.5}"
-    BG_TONE_PRESENCE_DB="${BIZZAL_BG_TONE_PRESENCE_DB:--2.0}"
-    BG_MONO_WIDEN_MS="${BIZZAL_BG_MONO_WIDEN_MS:-14}"
+    BG_GAIN_DEFAULT="0.42"
+    DUCK_THRESHOLD_DEFAULT="0.10"
+    DUCK_RATIO_DEFAULT="2.0"
+    DUCK_ATTACK_DEFAULT="25"
+    DUCK_RELEASE_DEFAULT="550"
+    BG_TONE_LOWCUT_DEFAULT="45"
+    BG_TONE_HIGHCUT_DEFAULT="14500"
+    BG_TONE_WARMTH_DEFAULT="2.5"
+    BG_TONE_PRESENCE_DEFAULT="-2.0"
+    BG_MONO_WIDEN_DEFAULT="14"
+    if [[ "$AUDIO_PROFILE" == "cinematic" ]]; then
+      BG_GAIN_DEFAULT="0.56"
+      DUCK_THRESHOLD_DEFAULT="0.12"
+      DUCK_RATIO_DEFAULT="1.5"
+      DUCK_ATTACK_DEFAULT="35"
+      DUCK_RELEASE_DEFAULT="780"
+      BG_TONE_LOWCUT_DEFAULT="38"
+      BG_TONE_HIGHCUT_DEFAULT="15500"
+      BG_TONE_WARMTH_DEFAULT="3.4"
+      BG_TONE_PRESENCE_DEFAULT="-3.0"
+      BG_MONO_WIDEN_DEFAULT="18"
+    fi
+
+    BG_TONE_LOWCUT_HZ="${BIZZAL_BG_TONE_LOWCUT_HZ:-$BG_TONE_LOWCUT_DEFAULT}"
+    BG_TONE_HIGHCUT_HZ="${BIZZAL_BG_TONE_HIGHCUT_HZ:-$BG_TONE_HIGHCUT_DEFAULT}"
+    BG_TONE_WARMTH_DB="${BIZZAL_BG_TONE_WARMTH_DB:-$BG_TONE_WARMTH_DEFAULT}"
+    BG_TONE_PRESENCE_DB="${BIZZAL_BG_TONE_PRESENCE_DB:-$BG_TONE_PRESENCE_DEFAULT}"
+    BG_MONO_WIDEN_MS="${BIZZAL_BG_MONO_WIDEN_MS:-$BG_MONO_WIDEN_DEFAULT}"
     MUSIC_CHANNELS="$(ffprobe -v error -select_streams a:0 -show_entries stream=channels -of default=nw=1:nk=1 "$MUSIC_WAV" 2>/dev/null || echo 2)"
     MUSIC_PRE_AF="aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,highpass=f=${BG_TONE_LOWCUT_HZ},lowpass=f=${BG_TONE_HIGHCUT_HZ},equalizer=f=180:t=q:w=1.0:g=${BG_TONE_WARMTH_DB},equalizer=f=3600:t=q:w=1.2:g=${BG_TONE_PRESENCE_DB},alimiter=limit=0.98"
     if [[ -n "$MUSIC_CHANNELS" ]] && (( MUSIC_CHANNELS <= 1 )); then
@@ -563,17 +587,21 @@ PY
       -c:a pcm_s16le \
       "$MUSIC_LOOP"
 
-    BG_GAIN="${BIZZAL_BG_MUSIC_GAIN:-0.42}"
-    DUCK_THRESHOLD="${BIZZAL_BG_DUCK_THRESHOLD:-0.10}"
-    DUCK_RATIO="${BIZZAL_BG_DUCK_RATIO:-2.0}"
-    DUCK_ATTACK="${BIZZAL_BG_DUCK_ATTACK_MS:-25}"
-    DUCK_RELEASE="${BIZZAL_BG_DUCK_RELEASE_MS:-550}"
+    BG_GAIN="${BIZZAL_BG_MUSIC_GAIN:-$BG_GAIN_DEFAULT}"
+    DUCK_THRESHOLD="${BIZZAL_BG_DUCK_THRESHOLD:-$DUCK_THRESHOLD_DEFAULT}"
+    DUCK_RATIO="${BIZZAL_BG_DUCK_RATIO:-$DUCK_RATIO_DEFAULT}"
+    DUCK_ATTACK="${BIZZAL_BG_DUCK_ATTACK_MS:-$DUCK_ATTACK_DEFAULT}"
+    DUCK_RELEASE="${BIZZAL_BG_DUCK_RELEASE_MS:-$DUCK_RELEASE_DEFAULT}"
+    POST_MIX_AF="alimiter=limit=0.97"
+    if [[ "${BIZZAL_FINAL_LOUDNORM:-1}" == "1" ]]; then
+      POST_MIX_AF="${POST_MIX_AF},loudnorm=I=-16:LRA=9:TP=-1.5"
+    fi
     MIXED_AUDIO="$TMPDIR/mixed_with_music.wav"
 
     ffmpeg -y -hide_banner -loglevel error \
       -i "$AUDIO_MUX" \
       -i "$MUSIC_LOOP" \
-      -filter_complex "[0:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo[vo];[1:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,volume=${BG_GAIN}[bg];[bg][vo]sidechaincompress=threshold=${DUCK_THRESHOLD}:ratio=${DUCK_RATIO}:attack=${DUCK_ATTACK}:release=${DUCK_RELEASE}[duck];[vo][duck]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.97[aout]" \
+      -filter_complex "[0:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo[vo];[1:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,volume=${BG_GAIN}[bg];[bg][vo]sidechaincompress=threshold=${DUCK_THRESHOLD}:ratio=${DUCK_RATIO}:attack=${DUCK_ATTACK}:release=${DUCK_RELEASE}[duck];[vo][duck]amix=inputs=2:duration=first:normalize=0,${POST_MIX_AF}[aout]" \
       -map "[aout]" -c:a pcm_s16le \
       "$MIXED_AUDIO"
 
@@ -604,14 +632,33 @@ else
   if (( MUSIC_OK == 1 )); then
     VIDEO_MUX_SEC="$(probe_duration "$MUX_VIDEO")"
     MUSIC_LOOP="$TMPDIR/music_loop_nomix.wav"
-    BG_GAIN="${BIZZAL_BG_MUSIC_GAIN_NO_VO:-0.32}"
-    BG_TONE_LOWCUT_HZ="${BIZZAL_BG_TONE_LOWCUT_HZ:-45}"
-    BG_TONE_HIGHCUT_HZ="${BIZZAL_BG_TONE_HIGHCUT_HZ:-14500}"
-    BG_TONE_WARMTH_DB="${BIZZAL_BG_TONE_WARMTH_DB:-2.5}"
-    BG_TONE_PRESENCE_DB="${BIZZAL_BG_TONE_PRESENCE_DB:--2.0}"
-    BG_MONO_WIDEN_MS="${BIZZAL_BG_MONO_WIDEN_MS:-14}"
+    BG_GAIN_NO_VO_DEFAULT="0.32"
+    BG_TONE_LOWCUT_DEFAULT="45"
+    BG_TONE_HIGHCUT_DEFAULT="14500"
+    BG_TONE_WARMTH_DEFAULT="2.5"
+    BG_TONE_PRESENCE_DEFAULT="-2.0"
+    BG_MONO_WIDEN_DEFAULT="14"
+    if [[ "$AUDIO_PROFILE" == "cinematic" ]]; then
+      BG_GAIN_NO_VO_DEFAULT="0.44"
+      BG_TONE_LOWCUT_DEFAULT="38"
+      BG_TONE_HIGHCUT_DEFAULT="15500"
+      BG_TONE_WARMTH_DEFAULT="3.4"
+      BG_TONE_PRESENCE_DEFAULT="-3.0"
+      BG_MONO_WIDEN_DEFAULT="18"
+    fi
+
+    BG_GAIN="${BIZZAL_BG_MUSIC_GAIN_NO_VO:-$BG_GAIN_NO_VO_DEFAULT}"
+    BG_TONE_LOWCUT_HZ="${BIZZAL_BG_TONE_LOWCUT_HZ:-$BG_TONE_LOWCUT_DEFAULT}"
+    BG_TONE_HIGHCUT_HZ="${BIZZAL_BG_TONE_HIGHCUT_HZ:-$BG_TONE_HIGHCUT_DEFAULT}"
+    BG_TONE_WARMTH_DB="${BIZZAL_BG_TONE_WARMTH_DB:-$BG_TONE_WARMTH_DEFAULT}"
+    BG_TONE_PRESENCE_DB="${BIZZAL_BG_TONE_PRESENCE_DB:-$BG_TONE_PRESENCE_DEFAULT}"
+    BG_MONO_WIDEN_MS="${BIZZAL_BG_MONO_WIDEN_MS:-$BG_MONO_WIDEN_DEFAULT}"
     MUSIC_CHANNELS="$(ffprobe -v error -select_streams a:0 -show_entries stream=channels -of default=nw=1:nk=1 "$MUSIC_WAV" 2>/dev/null || echo 2)"
-    MUSIC_NO_VO_AF="aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,highpass=f=${BG_TONE_LOWCUT_HZ},lowpass=f=${BG_TONE_HIGHCUT_HZ},equalizer=f=180:t=q:w=1.0:g=${BG_TONE_WARMTH_DB},equalizer=f=3600:t=q:w=1.2:g=${BG_TONE_PRESENCE_DB},volume=${BG_GAIN},alimiter=limit=0.97"
+    NO_VO_POST_AF="alimiter=limit=0.97"
+    if [[ "${BIZZAL_FINAL_LOUDNORM:-1}" == "1" ]]; then
+      NO_VO_POST_AF="${NO_VO_POST_AF},loudnorm=I=-16:LRA=9:TP=-1.5"
+    fi
+    MUSIC_NO_VO_AF="aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,highpass=f=${BG_TONE_LOWCUT_HZ},lowpass=f=${BG_TONE_HIGHCUT_HZ},equalizer=f=180:t=q:w=1.0:g=${BG_TONE_WARMTH_DB},equalizer=f=3600:t=q:w=1.2:g=${BG_TONE_PRESENCE_DB},volume=${BG_GAIN},${NO_VO_POST_AF}"
     if [[ -n "$MUSIC_CHANNELS" ]] && (( MUSIC_CHANNELS <= 1 )); then
       MUSIC_NO_VO_AF="pan=stereo|c0=c0|c1=c0,adelay=0|${BG_MONO_WIDEN_MS},highpass=f=${BG_TONE_LOWCUT_HZ},lowpass=f=${BG_TONE_HIGHCUT_HZ},equalizer=f=180:t=q:w=1.0:g=${BG_TONE_WARMTH_DB},equalizer=f=3600:t=q:w=1.2:g=${BG_TONE_PRESENCE_DB},volume=${BG_GAIN},alimiter=limit=0.97"
       echo "[render] bg music source was mono; applied stereo widen delay=${BG_MONO_WIDEN_MS}ms" >&2

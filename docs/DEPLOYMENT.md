@@ -393,6 +393,8 @@ Environment flags:
 - Optional: `BIZZAL_REPLICATE_MUSIC_VERSION` (pin if model-level calls are restricted on your account).
 - Optional: `BIZZAL_BG_MUSIC_SECONDS` (default uses current render duration).
 - Optional: `BIZZAL_BG_MUSIC_INCLUDE_DURATION=1` (off by default; enables `duration/seconds` input fields for models that require them).
+- Optional: `BIZZAL_AUDIO_PROFILE=cinematic` (warmer/wider defaults and gentler ducking).
+- Optional: `BIZZAL_FINAL_LOUDNORM=1` (default on; normalizes final loudness for more consistent playback).
 - Optional: `BIZZAL_BG_MUSIC_GAIN` (default `0.42`, when TTS is present).
 - Optional: `BIZZAL_BG_MUSIC_GAIN_NO_VO` (default `0.32`, when no TTS voice track).
 - Optional ducking controls:
@@ -416,6 +418,7 @@ Example:
 ```bash
 export REPLICATE_API_TOKEN='YOUR_REPLICATE_TOKEN'
 export BIZZAL_ENABLE_BG_MUSIC=1
+export BIZZAL_AUDIO_PROFILE=cinematic
 export BIZZAL_BG_MUSIC_GAIN=0.50
 export BIZZAL_BG_DUCK_RATIO=1.8
 BIZZAL_TEXT_STYLE=bg_safe bin/render/render_atom.sh 2026-02-13
