@@ -47,7 +47,7 @@ def fmt_stats_item(fields: dict):
     if category: stats.append(f"Category: {category}")
     return " | ".join(stats) if stats else ""
 
-def pick_voice_lines(style_cfg, voice_name, category, name):
+def pick_voice_lines(style_cfg, voice_name, category, name, angle="", day=""):
     voices = (style_cfg.get("voices") or {})
     voice = voices.get(voice_name) or voices.get("friendly_vet") or {}
 
@@ -58,8 +58,8 @@ def pick_voice_lines(style_cfg, voice_name, category, name):
     hooks = (voice.get(hk_key) or None) or (voice.get("hooks") or ["{name}."])
     ctas  = (voice.get(ct_key) or None) or (voice.get("ctas")  or ["Use it wisely."])
 
-    # deterministic pick per voice+category+name
-    h = int(hashlib.sha256(f"{voice_name}|{category}|{name}".encode("utf-8")).hexdigest(), 16)
+    # deterministic pick per day+voice+category+angle+name (varies across days/topics)
+    h = int(hashlib.sha256(f"{day}|{voice_name}|{category}|{angle}|{name}".encode("utf-8")).hexdigest(), 16)
     hook = hooks[h % len(hooks)].format(name=name)
     cta  = ctas[(h // 7) % len(ctas)]
     return hook, cta
@@ -216,6 +216,60 @@ def env_true(name: str, default: bool = False) -> bool:
     return raw.strip().lower() in {"1", "true", "yes", "y", "on"}
 
 
+def split_sentences(text: str) -> list:
+    txt = re.sub(r"\s+", " ", (text or "").strip())
+    if not txt:
+        return []
+    parts = re.split(r"(?<=[.!?])\s+", txt)
+    return [p.strip() for p in parts if p.strip()]
+
+
+def maybe_pdf_flavor_snippet(atom: dict, fact: dict) -> str:
+    if not env_true("BIZZAL_ENABLE_PDF_FLAVOR", False):
+        return ""
+
+    source = atom.get("source") or {}
+    pdf_path = source.get("srd_pdf_path") or os.getenv("BIZZAL_SRD_PDF_PATH") or os.getenv("BG_SRD_PDF_PATH")
+    if not pdf_path or not os.path.exists(pdf_path):
+        return ""
+
+    name = (fact.get("name") or (fact.get("fields") or {}).get("name") or "").strip()
+    if not name:
+        return ""
+
+    try:
+        from pypdf import PdfReader  # optional dependency
+    except Exception:
+        return ""
+
+    needle = name.lower()
+    try:
+        reader = PdfReader(pdf_path)
+        for page in reader.pages[:220]:
+            txt = (page.extract_text() or "").strip()
+            if not txt:
+                continue
+            low = txt.lower()
+            idx = low.find(needle)
+            if idx < 0:
+                continue
+
+            start = max(0, idx - 320)
+            end = min(len(txt), idx + 520)
+            window = txt[start:end]
+            sents = split_sentences(window)
+            for s in sents:
+                if needle in s.lower():
+                    return short(clean_script_text(s), 180, add_ellipsis=False)
+            if sents:
+                return short(clean_script_text(sents[0]), 180, add_ellipsis=False)
+            return short(clean_script_text(window), 180, add_ellipsis=False)
+    except Exception:
+        return ""
+
+    return ""
+
+
 def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> str:
     current_cta = (script.get("cta") or "").strip()
     if not current_cta:
@@ -250,6 +304,9 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
         "kind": kind,
         "fact_name": name,
         "voice": voice,
+        "persona": style.get("persona") or "table_coach",
+        "tone": style.get("tone") or "neutral",
+        "pdf_flavor_snippet": maybe_pdf_flavor_snippet(atom, fact),
         "hook": script.get("hook", ""),
         "body": script.get("body", ""),
         "current_cta": current_cta,
@@ -344,6 +401,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
         "voice": style.get("voice") or "friendly_vet",
         "persona": style.get("persona") or "table_coach",
         "tone": style.get("tone") or "neutral",
+        "pdf_flavor_snippet": maybe_pdf_flavor_snippet(atom, fact),
         "locked_tokens": locked_tokens(script, fact),
         "input": {
             "hook": script.get("hook", ""),
@@ -961,33 +1019,35 @@ def main():
     atom["script"] = {}
     script = atom["script"]
 
+    day = atom.get("day") or datetime.now().strftime("%Y-%m-%d")
+
     if category == "item_spotlight" and kind == "item":
-        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
+        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name, angle=angle or "", day=day)
         body = build_item_body(angle, fields)
         script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
 
     elif category == "monster_tactic" and kind == "creature":
-        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
+        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name, angle=angle or "", day=day)
         body = build_monster_body(angle, fields, fact.get("traits") or [], fact.get("actions") or [], fact.get("attacks") or [])
         script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
 
     elif category == "spell_use_case" and kind == "spell":
-        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
+        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name, angle=angle or "", day=day)
         body = build_spell_body(angle, fields)
         script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
 
     elif category == "encounter_seed" and kind == "creature":
-        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
+        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name, angle=angle or "", day=day)
         body = build_encounter_body(angle, fields, fact.get("traits") or [], fact.get("actions") or [])
         script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
 
     elif category in ("rules_ruling", "rules_myth") and kind == "rule":
-        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
+        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name, angle=angle or "", day=day)
         body = build_rule_body(angle, fields)
         script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
 
     elif category == "character_micro_tip" and kind == "class":
-        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
+        hook, cta = pick_voice_lines(style_cfg, voice_name, category, name, angle=angle or "", day=day)
         body = build_class_body(angle, fields)
         script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
 

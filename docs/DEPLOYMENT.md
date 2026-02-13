@@ -271,8 +271,15 @@ Enable on Umbrel shell before running daily pipeline:
 ```bash
 export BIZZAL_ENABLE_AI=1
 export BIZZAL_ENABLE_AI_SCRIPT=1
+export BIZZAL_ENABLE_PDF_FLAVOR=1
 export OPENAI_API_KEY='YOUR_OPENAI_API_KEY'
 export BIZZAL_OPENAI_MODEL='gpt-4o-mini'
+```
+
+For PDF flavor extraction, install optional dependency:
+
+```bash
+python3 -m pip install pypdf
 ```
 
 Optional overrides:
