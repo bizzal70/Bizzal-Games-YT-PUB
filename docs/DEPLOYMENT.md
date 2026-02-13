@@ -89,6 +89,16 @@ Outputs:
 
 These are designed for downstream voice/image reconciliation and monthly compilation workflows.
 
+Generate a zine-friendly content + asset pack from the manifest:
+
+```bash
+bin/core/monthly_export_pack.py --month 2026-02
+```
+
+Outputs:
+- `data/archive/monthly/YYYY-MM/zine_pack/content.md`
+- `data/archive/monthly/YYYY-MM/zine_pack/assets.csv`
+
 ## Verification Checklist
 ```bash
 git status -sb
