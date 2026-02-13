@@ -169,9 +169,9 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
         ctx = creature_context(name, fields)
         if a == "moral_choice":
             return deterministic_pick([
-                f"DMs: stage it in {ctx['arena']} and force this choice by round 2: {ctx['choice']}.",
-                f"DMs: frame the scene in {ctx['arena']} and push a values decision fast: {ctx['choice']}.",
-                f"DMs: put this in {ctx['arena']} and make the party pick which loss they can live with.",
+                f"DMs: by round 2, force this call—protect people now or finish the objective before the cost spikes.",
+                f"DMs: make the table choose fast: secure the objective, or spend turns protecting who gets caught in the fallout.",
+                f"DMs: present two valid wins, then require a sacrifice—save everyone or end the threat quickly, not both.",
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "time_pressure":
             return deterministic_pick([
@@ -395,6 +395,10 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
             "No markdown, no bullets, no quotes.",
         ],
     }
+
+    if canonical_category(category) == "encounter_seed" and (angle or "").strip().lower() == "moral_choice":
+        prompt["requirements"].append("Moral-choice CTA must express a protect-vs-objective tradeoff.")
+        prompt["requirements"].append("Do not mention terrain features or map-control phrasing.")
 
     payload = {
         "model": model,
@@ -1327,6 +1331,81 @@ def enforce_encounter_hook_guard(atom: dict, fact: dict, script: dict, day: str 
 
     return script
 
+def build_encounter_cta(angle: str, fields: dict, day: str = "") -> str:
+    name = fields.get("name") or "this encounter"
+    a = (angle or "").strip().lower()
+    ctx = creature_context(name, fields)
+    pressure = ctx.get("pressure") or "position and action economy"
+
+    if a == "moral_choice":
+        return deterministic_pick([
+            f"DMs: by round 2, force a hard choice—protect people now or secure the objective before losses escalate.",
+            f"DMs: make them choose what they can live with: save everyone at higher risk, or end the threat before collateral climbs.",
+            f"DMs: write two good outcomes and require one sacrifice; this scene should not allow a clean, total win.",
+        ], f"cta_guard|{day}|encounter_seed|{a}|{name}")
+
+    if a == "time_pressure":
+        return deterministic_pick([
+            f"DMs: keep a visible timer and make each delay worsen {pressure}.",
+            f"DMs: charge interest every round so indecision costs more than bad rolls.",
+            f"DMs: announce the clock up front, then make every late turn materially worse.",
+        ], f"cta_guard|{day}|encounter_seed|{a}|{name}")
+
+    if a == "terrain_feature":
+        return deterministic_pick([
+            "DMs: tie success to one terrain control point and make ignoring it immediately costly.",
+            "DMs: make map control the objective so movement choices matter every round.",
+            "DMs: pick one terrain feature that decides tempo if either side controls it.",
+        ], f"cta_guard|{day}|encounter_seed|{a}|{name}")
+
+    if a == "twist":
+        return deterministic_pick([
+            "DMs: flip the objective once they commit, then reward fast adaptation.",
+            "DMs: change the win condition at midpoint so the first plan cannot finish cleanly.",
+            "DMs: reveal a midpoint twist that shifts priorities instead of just adding HP.",
+        ], f"cta_guard|{day}|encounter_seed|{a}|{name}")
+
+    return deterministic_pick([
+        "DMs: telegraph stakes early, then force one costly decision before round 3.",
+        "DMs: show consequence first and make commitment expensive.",
+        "DMs: set clear stakes and make delay hurt quickly.",
+    ], f"cta_guard|{day}|encounter_seed|{a}|{name}")
+
+def should_force_encounter_cta(cta: str, angle: str) -> bool:
+    t = (cta or "").strip().lower()
+    a = (angle or "").strip().lower()
+    if not t:
+        return True
+
+    if is_generic_cta(t):
+        return True
+
+    if a == "moral_choice":
+        terrain_leaks = ["terrain", "map feature", "control point", "chokepoint", "hazardous terrain"]
+        if any(tok in t for tok in terrain_leaks):
+            return True
+
+        required_tradeoff = ["objective", "protect", "save", "sacrifice", "cost", "loss"]
+        if not any(tok in t for tok in required_tradeoff):
+            return True
+
+    return False
+
+def enforce_encounter_cta_guard(atom: dict, fact: dict, script: dict, day: str = "") -> dict:
+    category = canonical_category(atom.get("category"))
+    kind = (fact.get("kind") or "").strip().lower()
+    angle = atom.get("angle") or ""
+
+    if category != "encounter_seed" or kind != "creature":
+        return script
+
+    if should_force_encounter_cta(script.get("cta", ""), angle):
+        fields = fact.get("fields") or {}
+        script["cta"] = clean_script_text(build_encounter_cta(angle, fields, day=day))
+        ai_diag("Encounter CTA replaced by category hard-guard")
+
+    return script
+
 def main():
     atom = load_json(ATOM_PATH)
 
@@ -1397,6 +1476,7 @@ def main():
     script["cta"] = maybe_ai_polish_cta(atom, fact, style, script)
     script["cta"] = clean_script_text(script.get("cta", ""))
     script = enforce_encounter_hook_guard(atom, fact, script, day=day)
+    script = enforce_encounter_cta_guard(atom, fact, script, day=day)
 
     full_text = f"{script.get('hook','').strip()}\n{script.get('body','').strip()}\n{script.get('cta','').strip()}\n"
     atom["script_id"] = sha256_text(full_text)
