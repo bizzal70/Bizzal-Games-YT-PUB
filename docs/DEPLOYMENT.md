@@ -164,6 +164,30 @@ Suggested cron notifications on Umbrel:
 30 6 1 * * cd /home/umbrel/Bizzal_Games_Pub && . /home/umbrel/Bizzal_Games_Pub/.venv/bin/activate && export BIZZAL_SMTP_HOST=smtp.gmail.com && export BIZZAL_SMTP_PORT=587 && export BIZZAL_SMTP_USER=bizzalgames70@gmail.com && export BIZZAL_SMTP_PASS='YOUR_APP_PASSWORD' && export BIZZAL_SMTP_STARTTLS=1 && export BIZZAL_SMTP_SSL=0 && export BIZZAL_ALERT_EMAIL_TO=bizzalgames70@gmail.com && export BIZZAL_ALERT_EMAIL_FROM=bizzalgames70@gmail.com && bin/core/pipeline_health_email.py --month "$(date -d 'last month' +\%Y-\%m)" >> /home/umbrel/Bizzal_Games_Pub/logs/cron_pipeline_health_email.log 2>&1
 ```
 
+Discord webhook RED/GREEN health status (free alternative):
+
+```bash
+export BIZZAL_DISCORD_WEBHOOK_URL='https://discord.com/api/webhooks/...'
+
+bin/core/pipeline_health_discord.py --month 2026-02
+```
+
+Dry run (prints webhook payload only):
+
+```bash
+bin/core/pipeline_health_discord.py --month 2026-02 --dry-run
+```
+
+Suggested cron notifications on Umbrel (Discord):
+
+```bash
+# daily status notification after daily pipeline
+20 9 * * * cd /home/umbrel/Bizzal_Games_Pub && . /home/umbrel/Bizzal_Games_Pub/.venv/bin/activate && export BIZZAL_DISCORD_WEBHOOK_URL='https://discord.com/api/webhooks/...' && bin/core/pipeline_health_discord.py >> /home/umbrel/Bizzal_Games_Pub/logs/cron_pipeline_health_discord.log 2>&1
+
+# monthly status notification after monthly release
+30 6 1 * * cd /home/umbrel/Bizzal_Games_Pub && . /home/umbrel/Bizzal_Games_Pub/.venv/bin/activate && export BIZZAL_DISCORD_WEBHOOK_URL='https://discord.com/api/webhooks/...' && bin/core/pipeline_health_discord.py --month "$(date -d 'last month' +\%Y-\%m)" >> /home/umbrel/Bizzal_Games_Pub/logs/cron_pipeline_health_discord.log 2>&1
+```
+
 If render/upload scripts are present and executable, `run_daily.sh` will invoke them automatically.
 
 ## Operational Notes
