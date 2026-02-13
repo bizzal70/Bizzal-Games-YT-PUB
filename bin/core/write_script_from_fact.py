@@ -1250,6 +1250,83 @@ def build_encounter_body(angle: str, fields: dict, traits: list, actions: list, 
     ], f"enc|{day}|{name}|{angle}|close"))
     return " ".join(bits)
 
+def build_encounter_hook(angle: str, fields: dict, day: str = "") -> str:
+    name = fields.get("name") or "This encounter"
+    a = (angle or "").strip().lower()
+    ctx = creature_context(name, fields)
+    arena = ctx.get("arena") or "a scene where positioning and pressure matter"
+    choice = ctx.get("choice") or "which cost they can live with"
+    pressure = ctx.get("pressure") or "the action economy"
+
+    if a == "moral_choice":
+        return deterministic_pick([
+            f"Run {name} as a moral-choice encounter: they can protect everyone, or finish the objective before the cost spikes.",
+            f"Use {name} as a values test: give the table two wins, then make them choose which one they can actually keep.",
+            f"Open a {name} scene with stakes on both sides, then force a choice that costs something either way.",
+        ], f"hook|{day}|encounter_seed|{a}|{name}")
+
+    if a == "time_pressure":
+        return deterministic_pick([
+            f"Put {name} in {arena} and start a visible clock—every delay should make {pressure} worse.",
+            f"Frame a {name} encounter with a timer so the party must trade certainty for speed.",
+            f"Run {name} with a hard clock and consequences each round; indecision should hurt more than damage.",
+        ], f"hook|{day}|encounter_seed|{a}|{name}")
+
+    if a == "terrain_feature":
+        return deterministic_pick([
+            f"Build this {name} encounter around terrain that changes decisions, not just movement.",
+            f"Anchor {name} in {arena} so map control decides the fight before raw DPR does.",
+            f"Run {name} where terrain creates risk every turn and rewards smart positioning.",
+        ], f"hook|{day}|encounter_seed|{a}|{name}")
+
+    return deterministic_pick([
+        f"Use {name} as an encounter seed with clear stakes and one hard decision about {choice}.",
+        f"Open with stakes, then let {name} pressure the table into a costly decision.",
+        f"Frame {name} as a scene where priorities collide and every win has a price.",
+    ], f"hook|{day}|encounter_seed|{a}|{name}")
+
+def should_force_encounter_hook(hook: str, angle: str) -> bool:
+    t = (hook or "").strip().lower()
+    if not t:
+        return True
+
+    if is_generic_hook(t):
+        return True
+
+    gear_leaks = [
+        "gear", "loadout", "equipment", "inventory", "shopping", "price tag", "kit",
+    ]
+    if any(tok in t for tok in gear_leaks):
+        return True
+
+    encounter_signals = [
+        "encounter", "scene", "stakes", "objective", "pressure", "clock", "choice", "cost",
+    ]
+    if not any(tok in t for tok in encounter_signals):
+        return True
+
+    if (angle or "").strip().lower() == "moral_choice":
+        moral_signals = ["choice", "cost", "sacrifice", "values", "save", "protect"]
+        if not any(tok in t for tok in moral_signals):
+            return True
+
+    return False
+
+def enforce_encounter_hook_guard(atom: dict, fact: dict, script: dict, day: str = "") -> dict:
+    category = canonical_category(atom.get("category"))
+    kind = (fact.get("kind") or "").strip().lower()
+    angle = atom.get("angle") or ""
+
+    if category != "encounter_seed" or kind != "creature":
+        return script
+
+    if should_force_encounter_hook(script.get("hook", ""), angle):
+        fields = fact.get("fields") or {}
+        script["hook"] = clean_script_text(build_encounter_hook(angle, fields, day=day))
+        ai_diag("Encounter hook replaced by category hard-guard")
+
+    return script
+
 def main():
     atom = load_json(ATOM_PATH)
 
@@ -1319,6 +1396,7 @@ def main():
 
     script["cta"] = maybe_ai_polish_cta(atom, fact, style, script)
     script["cta"] = clean_script_text(script.get("cta", ""))
+    script = enforce_encounter_hook_guard(atom, fact, script, day=day)
 
     full_text = f"{script.get('hook','').strip()}\n{script.get('body','').strip()}\n{script.get('cta','').strip()}\n"
     atom["script_id"] = sha256_text(full_text)

@@ -28,6 +28,39 @@ def load_yaml(p):
     with open(p, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
+def parse_cr(value) -> float:
+    if value is None:
+        return 0.0
+    s = str(value).strip().lower()
+    if not s:
+        return 0.0
+    try:
+        if "/" in s:
+            a, b = s.split("/", 1)
+            return float(a) / float(b)
+        return float(s)
+    except Exception:
+        return 0.0
+
+def weak_moral_choice_candidate(rec: dict) -> bool:
+    fields = (rec or {}).get("fields") or {}
+    name = str(fields.get("name") or "").strip().lower()
+    ctype = str(fields.get("type") or fields.get("creature_type") or "").strip().lower()
+    cr = parse_cr(fields.get("challenge_rating") or fields.get("cr"))
+
+    mundane_mount_tokens = (
+        "riding horse", "draft horse", "pony", "mule", "donkey", "camel", "ox", "goat", "mastiff"
+    )
+    high_fantasy_exceptions = ("nightmare", "pegasus", "unicorn")
+
+    if any(tok in name for tok in mundane_mount_tokens) and not any(tok in name for tok in high_fantasy_exceptions):
+        return True
+    if ctype in ("beast", "animal") and cr <= 0.25:
+        return True
+    if cr == 0.0:
+        return True
+    return False
+
 def main():
     atom = load_json(ATOM_PATH)
     cat = atom.get("category")
@@ -44,6 +77,15 @@ def main():
 
     records = load_json(path)
     pks = [r.get("pk") for r in records if isinstance(r, dict) and r.get("pk") is not None]
+
+    angle = (atom.get("angle") or "").strip().lower()
+    if cat == "encounter_seed" and angle == "moral_choice":
+        filtered = [
+            r.get("pk") for r in records
+            if isinstance(r, dict) and r.get("pk") is not None and not weak_moral_choice_candidate(r)
+        ]
+        if filtered:
+            pks = filtered
 
     day = datetime.now().strftime("%Y-%m-%d")
     random.seed(f"{day}|{cat}|creature")

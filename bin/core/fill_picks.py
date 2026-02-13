@@ -58,6 +58,80 @@ def pick_pk(active_dir: str, filename: str) -> int:
         sys.exit(11)
     return random.choice(pks)
 
+def parse_cr(value) -> float:
+    if value is None:
+        return 0.0
+    s = str(value).strip().lower()
+    if not s:
+        return 0.0
+    try:
+        if "/" in s:
+            a, b = s.split("/", 1)
+            return float(a) / float(b)
+        return float(s)
+    except Exception:
+        return 0.0
+
+def creature_is_weak_moral_choice_candidate(rec: dict) -> bool:
+    fields = (rec or {}).get("fields") or {}
+    name = str(fields.get("name") or "").strip().lower()
+    ctype = str(fields.get("type") or fields.get("creature_type") or "").strip().lower()
+    cr = parse_cr(fields.get("challenge_rating") or fields.get("cr"))
+
+    if not name:
+        return False
+
+    mundane_mount_tokens = (
+        "riding horse", "draft horse", "pony", "mule", "donkey", "camel", "ox", "goat", "mastiff"
+    )
+    high_fantasy_exceptions = ("nightmare", "pegasus", "unicorn")
+
+    if any(tok in name for tok in mundane_mount_tokens) and not any(tok in name for tok in high_fantasy_exceptions):
+        return True
+
+    if ctype in ("beast", "animal") and cr <= 0.25:
+        return True
+
+    if cr == 0.0:
+        return True
+
+    return False
+
+def pick_creature_pk(active_dir: str, filename: str, category: str, angle: str) -> int:
+    path = os.path.join(active_dir, filename)
+    if not os.path.exists(path):
+        print(f"ERROR: Missing source file: {path}", file=sys.stderr)
+        sys.exit(10)
+
+    records = load_json(path)
+    if not isinstance(records, list):
+        print(f"ERROR: Creature source is not a list: {path}", file=sys.stderr)
+        sys.exit(11)
+
+    all_pks = []
+    filtered_pks = []
+    cat = (category or "").strip().lower()
+    ang = (angle or "").strip().lower()
+
+    for rec in records:
+        if not isinstance(rec, dict) or rec.get("pk") is None:
+            continue
+        pk = rec["pk"]
+        all_pks.append(pk)
+
+        if cat == "encounter_seed" and ang == "moral_choice" and creature_is_weak_moral_choice_candidate(rec):
+            continue
+        filtered_pks.append(pk)
+
+    if not filtered_pks:
+        filtered_pks = all_pks
+
+    if not filtered_pks:
+        print(f"ERROR: No creature pk records found in: {path}", file=sys.stderr)
+        sys.exit(12)
+
+    return random.choice(filtered_pks)
+
 def ensure_pick(picks: dict, key: str, value):
     # For creature_pk (0 means unset); for others None means unset
     if key == "creature_pk":
@@ -88,6 +162,7 @@ def main():
 
     atom = load_json(atom_path)
     category = canonical_category(atom.get("category"))
+    angle = (atom.get("angle") or "").strip().lower()
     if not category:
         print("ERROR: Atom missing category", file=sys.stderr)
         sys.exit(4)
@@ -111,7 +186,7 @@ def main():
 
     # Fill required picks per category (v1)
     if category == "monster_tactic":
-        ensure_pick(picks, "creature_pk", pick_pk(active_dir, creature_file))
+        ensure_pick(picks, "creature_pk", pick_creature_pk(active_dir, creature_file, category, angle))
 
     elif category == "spell_use_case":
         ensure_pick(picks, "spell_pk", pick_pk(active_dir, spell_file))
@@ -124,7 +199,7 @@ def main():
 
     elif category == "encounter_seed":
         # anchor on a creature; later we can add optional rule_pk, environment, etc.
-        ensure_pick(picks, "creature_pk", pick_pk(active_dir, creature_file))
+        ensure_pick(picks, "creature_pk", pick_creature_pk(active_dir, creature_file, category, angle))
 
     elif category == "character_micro_tip":
         ensure_pick(picks, "class_pk", pick_pk(active_dir, class_file))
