@@ -356,6 +356,7 @@ Environment flags:
 - `BIZZAL_ENABLE_TTS=1` enables TTS synthesis/mux during render.
 - `OPENAI_API_KEY` (or `BIZZAL_OPENAI_API_KEY`) must be set to a valid key.
 - Optional: `BIZZAL_TTS_MODEL` (default: `gpt-4o-mini-tts`).
+- Optional: `BIZZAL_TTS_SPEED` speaking pace (default: `1.0`, valid range `0.25-4.0`).
 - Optional: `BIZZAL_OPENAI_TTS_ENDPOINT` (default: `https://api.openai.com/v1/audio/speech`).
 
 Outputs when enabled:
@@ -367,8 +368,14 @@ Example:
 ```bash
 export OPENAI_API_KEY='YOUR_OPENAI_API_KEY'
 export BIZZAL_ENABLE_TTS=1
+export BIZZAL_TTS_SPEED=0.92
 BIZZAL_TEXT_STYLE=bg_safe bin/render/render_atom.sh 2026-02-13
 ```
+
+Speed tips:
+- `0.88-0.95` = calmer / more deliberate narration
+- `1.00` = neutral default
+- `1.05-1.15` = snappier pacing
 
 If TTS fails (missing key/API error), render falls back to text-only MP4 and logs the reason.
 

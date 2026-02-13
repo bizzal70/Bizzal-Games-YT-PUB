@@ -39,11 +39,24 @@ def resolve_voice(atom: dict, voice_override: str) -> str:
     return (voiceover.get("tts_voice_id") or "alloy").strip() or "alloy"
 
 
+def resolve_speed(speed_raw: str) -> float:
+    try:
+        speed = float((speed_raw or "1.0").strip())
+    except Exception:
+        speed = 1.0
+    if speed < 0.25:
+        speed = 0.25
+    if speed > 4.0:
+        speed = 4.0
+    return speed
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Synthesize narration audio from a validated atom script.")
     parser.add_argument("--atom", required=True, help="Path to validated atom JSON")
     parser.add_argument("--out", required=True, help="Output WAV path")
     parser.add_argument("--voice", default="", help="Optional explicit TTS voice override")
+    parser.add_argument("--speed", default=os.getenv("BIZZAL_TTS_SPEED", "1.0"), help="TTS speaking speed (0.25-4.0)")
     parser.add_argument("--model", default=os.getenv("BIZZAL_TTS_MODEL", "gpt-4o-mini-tts"), help="OpenAI TTS model")
     parser.add_argument("--endpoint", default=os.getenv("BIZZAL_OPENAI_TTS_ENDPOINT", "https://api.openai.com/v1/audio/speech"), help="OpenAI TTS endpoint")
     parser.add_argument("--dry-run", action="store_true", help="Print resolved payload details without calling API")
@@ -58,10 +71,11 @@ def main() -> int:
         return 2
 
     voice = resolve_voice(atom, args.voice)
+    speed = resolve_speed(args.speed)
     api_key = os.getenv("OPENAI_API_KEY") or os.getenv("BIZZAL_OPENAI_API_KEY")
 
     if args.dry_run:
-        print(f"[tts] dry-run model={args.model} voice={voice} chars={len(narration)}")
+        print(f"[tts] dry-run model={args.model} voice={voice} speed={speed:.2f} chars={len(narration)}")
         print(f"[tts] out={args.out}")
         return 0
 
@@ -72,6 +86,7 @@ def main() -> int:
     payload = {
         "model": args.model,
         "voice": voice,
+        "speed": speed,
         "input": narration,
         "response_format": "wav",
         "format": "wav",
@@ -106,7 +121,7 @@ def main() -> int:
     with open(args.out, "wb") as handle:
         handle.write(audio)
 
-    print(f"[tts] wrote {args.out} voice={voice} chars={len(narration)}")
+    print(f"[tts] wrote {args.out} voice={voice} speed={speed:.2f} chars={len(narration)}")
     return 0
 
 
