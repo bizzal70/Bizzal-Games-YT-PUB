@@ -13,9 +13,11 @@ data/www/
 # large/replaceable assets (optional; you can choose to keep these in git later)
 data/assets/
 
-# reference corpuses (keep attribution/licenses if you want)
-reference/open5e/
-reference/srd5.1/
+# reference corpuses
+# keep canonical committed corpuses in git under:
+# - reference/open5e/
+# - reference/srd/
+# keep generated pointers/snapshots out of git:
 reference/active
 reference/snapshots/
 

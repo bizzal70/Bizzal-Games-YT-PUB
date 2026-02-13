@@ -76,6 +76,41 @@ export BIZZAL_SRD_PDF_PATH=/home/umbrel/umbrel/data/reference/srd/SRD_CC_v5.2.1.
 
 - Generated atoms carry `source.srd_pdf_path` metadata so later AI stages can consume the same canonical PDF source.
 
+## Commit SRD JSON + PDF to GitHub (LFS)
+If you want the full SRD corpus available directly in this repo for development/testing, use Git LFS and commit the canonical datasets under `reference/`.
+
+Required layout in repo:
+- `reference/open5e/` → SRD JSON fixture files
+- `reference/srd/` → SRD PDF(s), including `SRD_CC_v5.2.1.pdf`
+
+One-time setup:
+
+```bash
+git lfs install
+git lfs track "reference/open5e/**/*.json" "reference/srd/**/*.pdf"
+git add .gitattributes
+```
+
+Umbrel copy/paste import + push (adjust source paths if needed):
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+git pull --ff-only
+mkdir -p reference/open5e reference/srd
+rsync -av --delete /home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD/ reference/open5e/
+cp -f /home/umbrel/umbrel/data/reference/srd/SRD_CC_v5.2.1.pdf reference/srd/SRD_CC_v5.2.1.pdf
+git add .gitattributes .gitignore reference/open5e reference/srd docs/DEPLOYMENT.md
+git commit -m "Vendor SRD JSON and PDF into reference/ with LFS"
+git push
+```
+
+After this, set runtime path to the committed corpus if desired:
+
+```bash
+export BIZZAL_ACTIVE_SRD_PATH=/home/umbrel/Bizzal_Games_Pub/reference/open5e
+export BIZZAL_SRD_PDF_PATH=/home/umbrel/Bizzal_Games_Pub/reference/srd/SRD_CC_v5.2.1.pdf
+```
+
 ## Monthly Zine Export Manifest
 Generate a month-level manifest keyed by canonical content/segment IDs:
 
