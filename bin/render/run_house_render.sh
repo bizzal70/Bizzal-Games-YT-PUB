@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DAY="${1:-$(date +%F)}"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+
+# House preset defaults (override any of these via environment if desired).
+export BIZZAL_TEXT_STYLE="${BIZZAL_TEXT_STYLE:-bg_safe}"
+export BIZZAL_ENABLE_TTS="${BIZZAL_ENABLE_TTS:-1}"
+export BIZZAL_ENABLE_BG_MUSIC="${BIZZAL_ENABLE_BG_MUSIC:-1}"
+export BIZZAL_AUDIO_PROFILE="${BIZZAL_AUDIO_PROFILE:-cinematic}"
+export BIZZAL_BG_MUSIC_TAIL_SEC="${BIZZAL_BG_MUSIC_TAIL_SEC:-3}"
+
+# Keep optional manual tuning available while providing stable house defaults.
+export BIZZAL_BG_MUSIC_GAIN="${BIZZAL_BG_MUSIC_GAIN:-0.58}"
+export BIZZAL_BG_DUCK_THRESHOLD="${BIZZAL_BG_DUCK_THRESHOLD:-0.12}"
+export BIZZAL_BG_DUCK_RATIO="${BIZZAL_BG_DUCK_RATIO:-1.6}"
+export BIZZAL_BG_DUCK_ATTACK_MS="${BIZZAL_BG_DUCK_ATTACK_MS:-30}"
+export BIZZAL_BG_DUCK_RELEASE_MS="${BIZZAL_BG_DUCK_RELEASE_MS:-700}"
+export BIZZAL_BG_TONE_WARMTH_DB="${BIZZAL_BG_TONE_WARMTH_DB:-3.2}"
+export BIZZAL_BG_TONE_PRESENCE_DB="${BIZZAL_BG_TONE_PRESENCE_DB:--2.8}"
+export BIZZAL_BG_MONO_WIDEN_MS="${BIZZAL_BG_MONO_WIDEN_MS:-16}"
+export BIZZAL_FINAL_LOUDNORM="${BIZZAL_FINAL_LOUDNORM:-1}"
+
+echo "[house] day=$DAY text_style=$BIZZAL_TEXT_STYLE tts=$BIZZAL_ENABLE_TTS music=$BIZZAL_ENABLE_BG_MUSIC profile=$BIZZAL_AUDIO_PROFILE" >&2
+
+"$REPO_ROOT/bin/render/render_atom.sh" "$DAY"

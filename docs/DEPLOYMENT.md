@@ -386,6 +386,20 @@ If TTS fails (missing key/API error), render falls back to text-only MP4 and log
 ## Optional: AI Background Music (Replicate)
 `bin/render/render_atom.sh` can generate tone/topic-aware background music and mix it under narration.
 
+House preset (one command):
+
+```bash
+bin/render/run_house_render.sh
+```
+
+Optional specific day:
+
+```bash
+bin/render/run_house_render.sh 2026-02-13
+```
+
+This wrapper applies your production defaults (cinematic audio profile, TTS+music on, tuned ducking/tone, and music fade-out tail) and then runs `render_atom.sh`.
+
 Environment flags:
 - `BIZZAL_ENABLE_BG_MUSIC=1` enables music generation and mixing.
 - `REPLICATE_API_TOKEN` required for Replicate calls.
