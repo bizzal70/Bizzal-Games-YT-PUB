@@ -26,6 +26,7 @@ BG_MUSIC_TAIL_SEC="${BIZZAL_BG_MUSIC_TAIL_SEC:-3}"
 INTRO_PAD_SEC="${BIZZAL_INTRO_PAD_SEC:-0}"
 INTRO_FADE_SEC="${BIZZAL_INTRO_FADE_SEC:-0}"
 END_BLACK_PAD_SEC="${BIZZAL_END_BLACK_PAD_SEC:-0}"
+END_FADE_SEC="${BIZZAL_END_FADE_SEC:-0}"
 PREVIEW_HOST="${BIZZAL_PREVIEW_HOST:-192.168.68.128}"
 PREVIEW_PORT="${BIZZAL_PREVIEW_PORT:-8766}"
 ECHO_PREVIEW_URL="${BIZZAL_ECHO_PREVIEW_URL:-1}"
@@ -668,12 +669,24 @@ PY
     echo "[render] outro tail applied seconds=${TAIL_SEC} fade=black+music" >&2
   fi
 
-  if [[ "$END_BLACK_PAD_SEC" != "0" ]]; then
+  OUTRO_FADE_APPLY_SEC="$END_FADE_SEC"
+  OUTRO_BLACK_HOLD_SEC="$END_BLACK_PAD_SEC"
+  if [[ "$OUTRO_FADE_APPLY_SEC" == "0" && "$OUTRO_BLACK_HOLD_SEC" != "0" ]]; then
+    OUTRO_FADE_APPLY_SEC="$OUTRO_BLACK_HOLD_SEC"
+    OUTRO_BLACK_HOLD_SEC="0"
+  fi
+  OUTRO_TOTAL_SEC="$(float_add "$OUTRO_FADE_APPLY_SEC" "$OUTRO_BLACK_HOLD_SEC")"
+
+  if [[ "$OUTRO_TOTAL_SEC" != "0" && "$OUTRO_TOTAL_SEC" != "0.000" ]]; then
     VIDEO_OUTRO="$TMPDIR/video_outro.mp4"
     VIDEO_NOW_SEC="$(probe_duration "$MUX_VIDEO")"
+    OUTRO_VF="tpad=stop_mode=clone:stop_duration=${OUTRO_TOTAL_SEC}"
+    if [[ "$OUTRO_FADE_APPLY_SEC" != "0" ]]; then
+      OUTRO_VF+=",fade=t=out:st=${VIDEO_NOW_SEC}:d=${OUTRO_FADE_APPLY_SEC}:color=black"
+    fi
     ffmpeg -y -hide_banner -loglevel error \
       -i "$MUX_VIDEO" \
-      -vf "tpad=stop_mode=clone:stop_duration=${END_BLACK_PAD_SEC},fade=t=out:st=${VIDEO_NOW_SEC}:d=${END_BLACK_PAD_SEC}:color=black" \
+      -vf "$OUTRO_VF" \
       -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
       "$VIDEO_OUTRO"
     MUX_VIDEO="$VIDEO_OUTRO"
@@ -681,11 +694,11 @@ PY
     AUDIO_PADDED_OUTRO="$TMPDIR/audio_outro.wav"
     ffmpeg -y -hide_banner -loglevel error \
       -i "$FINAL_AUDIO" \
-      -af "apad=pad_dur=${END_BLACK_PAD_SEC}" \
+      -af "apad=pad_dur=${OUTRO_TOTAL_SEC}" \
       -c:a pcm_s16le \
       "$AUDIO_PADDED_OUTRO"
     FINAL_AUDIO="$AUDIO_PADDED_OUTRO"
-    echo "[render] outro black pad seconds=${END_BLACK_PAD_SEC}" >&2
+    echo "[render] outro close applied fade_sec=${OUTRO_FADE_APPLY_SEC} black_hold_sec=${OUTRO_BLACK_HOLD_SEC}" >&2
   fi
 
   if [[ "$INTRO_PAD_SEC" != "0" ]]; then

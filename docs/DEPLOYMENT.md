@@ -403,6 +403,7 @@ This wrapper applies your production defaults (cinematic audio profile, TTS+musi
 House preset timing defaults:
 - `BIZZAL_INTRO_PAD_SEC=2`
 - `BIZZAL_INTRO_FADE_SEC=2`
+- `BIZZAL_END_FADE_SEC=2`
 - `BIZZAL_END_BLACK_PAD_SEC=2`
 
 Environment flags:
@@ -415,7 +416,8 @@ Environment flags:
 - Optional: `BIZZAL_BG_MUSIC_TAIL_SEC` (default `3`; extends outro with music-only fade while screen fades to black).
 - Optional: `BIZZAL_INTRO_PAD_SEC` (default `0` in base renderer; prepends black before content starts).
 - Optional: `BIZZAL_INTRO_FADE_SEC` (default `0`; fades from black into content after intro pad).
-- Optional: `BIZZAL_END_BLACK_PAD_SEC` (default `0`; adds post-content fade-to-black pad).
+- Optional: `BIZZAL_END_FADE_SEC` (default `0`; fade-out duration at close).
+- Optional: `BIZZAL_END_BLACK_PAD_SEC` (default `0`; hold-on-black duration after fade-out).
 - Optional: `BIZZAL_AUDIO_PROFILE=cinematic` (warmer/wider defaults and gentler ducking).
 - Optional: `BIZZAL_FINAL_LOUDNORM=1` (default on; normalizes final loudness for more consistent playback).
 - Optional: `BIZZAL_BG_MUSIC_GAIN` (default `0.42`, when TTS is present).
