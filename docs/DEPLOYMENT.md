@@ -237,6 +237,24 @@ Suggested weekly backup cron on Umbrel (Sunday 07:15 UTC):
 15 7 * * 0 cd /home/umbrel/Bizzal_Games_Pub && . /home/umbrel/Bizzal_Games_Pub/.venv/bin/activate && bin/core/backup_ops_config.sh >> /home/umbrel/Bizzal_Games_Pub/logs/cron_ops_backup.log 2>&1
 ```
 
+Prune old backup snapshots (keep latest 12):
+
+```bash
+bin/core/prune_ops_backups.sh --keep 12
+```
+
+Dry run preview:
+
+```bash
+bin/core/prune_ops_backups.sh --keep 12 --dry-run
+```
+
+Suggested monthly cleanup cron on Umbrel (day 1 at 07:25 UTC):
+
+```bash
+25 7 1 * * cd /home/umbrel/Bizzal_Games_Pub && . /home/umbrel/Bizzal_Games_Pub/.venv/bin/activate && bin/core/prune_ops_backups.sh --keep 12 >> /home/umbrel/Bizzal_Games_Pub/logs/cron_ops_backup.log 2>&1
+```
+
 If render/upload scripts are present and executable, `run_daily.sh` will invoke them automatically.
 
 ## Operational Notes
