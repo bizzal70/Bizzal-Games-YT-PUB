@@ -16,6 +16,8 @@ mkdir -p "$(dirname "$OUT")" "$(dirname "$LATEST")" "$TMPDIR"
 
 TTS_ENABLED="${BIZZAL_ENABLE_TTS:-0}"
 TTS_TIMING_MODE="${BIZZAL_TTS_TIMING_MODE:-per_screen}"
+PAGE_XFADE_SEC="${BIZZAL_PAGE_XFADE_SEC:-0.15}"
+CTA_FINAL_HOLD_SEC="${BIZZAL_CTA_FINAL_HOLD_SEC:-0.30}"
 
 cleanup() {
   if [[ "${DEBUG_RENDER:-0}" == "1" ]]; then
@@ -131,6 +133,33 @@ clamp_int() {
 probe_duration() {
   local f="$1"
   ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 "$f" 2>/dev/null || echo 0
+}
+
+float_sub() {
+  python3 - <<'PY' "$1" "$2"
+import sys
+a = float(sys.argv[1])
+b = float(sys.argv[2])
+print(f"{a-b:.3f}")
+PY
+}
+
+float_add() {
+  python3 - <<'PY' "$1" "$2"
+import sys
+a = float(sys.argv[1])
+b = float(sys.argv[2])
+print(f"{a+b:.3f}")
+PY
+}
+
+float_max() {
+  python3 - <<'PY' "$1" "$2"
+import sys
+a = float(sys.argv[1])
+b = float(sys.argv[2])
+print(f"{max(a,b):.3f}")
+PY
 }
 
 HOOK_WORDS="$(count_words "$HOOK_TXT")"
@@ -403,13 +432,23 @@ PAGE_START="$HOOK_END"
 for ((i=1; i<=BODY_PAGE_COUNT; i++)); do
   PAGE_END="${BODY_ENDS[$((i-1))]}"
   PAGE_FILE="$PAGEDIR/body${i}.txt"
-  VF+="drawtext=${COMMON}:textfile=${PAGE_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:y=(h-text_h)/2:enable='between(t,${PAGE_START},${PAGE_END})',"
+  if (( BODY_PAGE_COUNT > 1 )); then
+    FADE_IN_START="$(float_max 0 "$(float_sub "$PAGE_START" "$PAGE_XFADE_SEC")")"
+    FADE_OUT_START="$(float_sub "$PAGE_END" "$PAGE_XFADE_SEC")"
+    BODY_ALPHA="if(lt(t\,${FADE_IN_START})\,0\,if(lt(t\,${PAGE_START})\,(t-${FADE_IN_START})/${PAGE_XFADE_SEC}\,if(lt(t\,${FADE_OUT_START})\,1\,if(lt(t\,${PAGE_END})\,(${PAGE_END}-t)/${PAGE_XFADE_SEC}\,0))))"
+    VF+="drawtext=${COMMON}:textfile=${PAGE_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:y=(h-text_h)/2:alpha='${BODY_ALPHA}':enable='between(t,${FADE_IN_START},${PAGE_END})',"
+  else
+    VF+="drawtext=${COMMON}:textfile=${PAGE_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:y=(h-text_h)/2:enable='between(t,${PAGE_START},${PAGE_END})',"
+  fi
   PAGE_START="$PAGE_END"
 done
-VF+="drawtext=${COMMON}:textfile=${CTA_FILE}:fontsize=50:${XPOS}:y=(h-text_h)/2:enable='between(t,${BODY_END},${DUR})'"
+CTA_END="$(float_add "$DUR" "$CTA_FINAL_HOLD_SEC")"
+VF+="drawtext=${COMMON}:textfile=${CTA_FILE}:fontsize=50:${XPOS}:y=(h-text_h)/2:enable='between(t,${BODY_END},${CTA_END})'"
+
+COLOR_DUR="$CTA_END"
 
 ffmpeg -y -hide_banner -loglevel error \
-  -f lavfi -i "color=c=black:s=1080x1920:d=${DUR}:r=30" \
+  -f lavfi -i "color=c=black:s=1080x1920:d=${COLOR_DUR}:r=30" \
   -vf "$VF" \
   -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
   "$VIDEO_ONLY"
@@ -460,9 +499,30 @@ PY
     echo "[render] video padded by ${PAD_SEC}s to match tts audio (${AUDIO_SEC}s)" >&2
   fi
 
+  if [[ "$CTA_FINAL_HOLD_SEC" != "0" ]]; then
+    HOLD_VIDEO="$TMPDIR/video_hold.mp4"
+    ffmpeg -y -hide_banner -loglevel error \
+      -i "$MUX_VIDEO" \
+      -vf "tpad=stop_mode=clone:stop_duration=${CTA_FINAL_HOLD_SEC}" \
+      -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
+      "$HOLD_VIDEO"
+    MUX_VIDEO="$HOLD_VIDEO"
+  fi
+
+  AUDIO_MUX="$VOICE_WAV"
+  if [[ "$CTA_FINAL_HOLD_SEC" != "0" ]]; then
+    AUDIO_HOLD="$TMPDIR/voice_hold.wav"
+    ffmpeg -y -hide_banner -loglevel error \
+      -i "$VOICE_WAV" \
+      -af "apad=pad_dur=${CTA_FINAL_HOLD_SEC}" \
+      -c:a pcm_s16le \
+      "$AUDIO_HOLD"
+    AUDIO_MUX="$AUDIO_HOLD"
+  fi
+
   ffmpeg -y -hide_banner -loglevel error \
     -i "$MUX_VIDEO" \
-    -i "$VOICE_WAV" \
+    -i "$AUDIO_MUX" \
     -c:v copy -c:a aac -b:a 192k -shortest -movflags +faststart \
     "$OUT"
   cp -f "$VOICE_WAV" "$LATEST_VOICE_WAV"

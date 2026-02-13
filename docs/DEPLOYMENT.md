@@ -336,6 +336,8 @@ Render pacing notes:
 	- `BIZZAL_BODY_MAX_PAGES` (default `3`) caps body page count for readability.
 	- `BIZZAL_BODY_LAST_MIN_WORDS` (default `5`) merges tiny final orphan page into previous page.
 	- `BIZZAL_BODY_PAGE_MIN_SEC` (default `4`) minimum seconds shown per body page.
+	- `BIZZAL_PAGE_XFADE_SEC` (default `0.15`) subtle crossfade between body pages.
+	- `BIZZAL_CTA_FINAL_HOLD_SEC` (default `0.30`) extra final CTA hold at end of render.
 
 Example:
 
