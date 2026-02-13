@@ -22,6 +22,8 @@ TTS_ENABLED="${BIZZAL_ENABLE_TTS:-0}"
 TTS_TIMING_MODE="${BIZZAL_TTS_TIMING_MODE:-per_screen}"
 MUSIC_ENABLED="${BIZZAL_ENABLE_BG_MUSIC:-0}"
 BG_IMAGE_ENABLED="${BIZZAL_ENABLE_BG_IMAGE:-0}"
+BG_IMAGE_MODE="${BIZZAL_BG_IMAGE_MODE:-single}"
+BG_IMAGE_XFADE_SEC="${BIZZAL_BG_IMAGE_XFADE_SEC:-0.40}"
 PAGE_XFADE_SEC="${BIZZAL_PAGE_XFADE_SEC:-0.15}"
 CTA_FINAL_HOLD_SEC="${BIZZAL_CTA_FINAL_HOLD_SEC:-0.30}"
 AUDIO_PROFILE="${BIZZAL_AUDIO_PROFILE:-default}"
@@ -49,20 +51,9 @@ if [[ ! -f "$ATOM" ]]; then
 fi
 
 BG_IMAGE_OK=0
-if [[ "$BG_IMAGE_ENABLED" == "1" ]]; then
-  if [[ -x "$REPO_ROOT/bin/render/synthesize_bg_image_replicate.py" ]]; then
-    if "$REPO_ROOT/bin/render/synthesize_bg_image_replicate.py" --atom "$ATOM" --out "$BG_IMAGE"; then
-      BG_IMAGE_OK=1
-      cp -f "$BG_IMAGE" "$LATEST_BG_IMAGE"
-      echo "[render] bg image enabled source=replicate" >&2
-      echo "[render] wrote $BG_IMAGE" >&2
-    else
-      echo "[render] bg image synth failed; continuing with solid background" >&2
-    fi
-  else
-    echo "[render] bg image synth script missing; continuing with solid background" >&2
-  fi
-fi
+BG_IMAGE_MODE_USED="none"
+SCREEN_BG_FILES=()
+SCREEN_BG_SECS=()
 
 HOOK_TXT="$TMPDIR/hook.txt"
 BODY_TXT="$TMPDIR/body.txt"
@@ -453,6 +444,72 @@ PY
   fi
 fi
 
+if [[ "$BG_IMAGE_ENABLED" == "1" ]]; then
+  if [[ -x "$REPO_ROOT/bin/render/synthesize_bg_image_replicate.py" ]]; then
+    if [[ "$BG_IMAGE_MODE" == "per_screen" ]]; then
+      BG_FAIL=0
+      SCREEN_BG_FILES=()
+      SCREEN_BG_SECS=()
+
+      HOOK_BG_IMAGE="$TMPDIR/bg_hook.png"
+      if "$REPO_ROOT/bin/render/synthesize_bg_image_replicate.py" --atom "$ATOM" --out "$HOOK_BG_IMAGE" --section hook --text-file "$HOOK_FILE"; then
+        SCREEN_BG_FILES+=("$HOOK_BG_IMAGE")
+        SCREEN_BG_SECS+=("$HOOK_SEC")
+      else
+        BG_FAIL=1
+      fi
+
+      if (( BG_FAIL == 0 )); then
+        for ((i=1; i<=BODY_PAGE_COUNT; i++)); do
+          PAGE_FILE="$PAGEDIR/body${i}.txt"
+          BODY_BG_IMAGE="$TMPDIR/bg_body${i}.png"
+          if "$REPO_ROOT/bin/render/synthesize_bg_image_replicate.py" --atom "$ATOM" --out "$BODY_BG_IMAGE" --section body --text-file "$PAGE_FILE"; then
+            SCREEN_BG_FILES+=("$BODY_BG_IMAGE")
+            SCREEN_BG_SECS+=("${BODY_SECS[$((i-1))]}")
+          else
+            BG_FAIL=1
+            break
+          fi
+        done
+      fi
+
+      if (( BG_FAIL == 0 )); then
+        CTA_BG_IMAGE="$TMPDIR/bg_cta.png"
+        CTA_VIS_SEC="$(float_add "$CTA_SEC" "$CTA_FINAL_HOLD_SEC")"
+        if "$REPO_ROOT/bin/render/synthesize_bg_image_replicate.py" --atom "$ATOM" --out "$CTA_BG_IMAGE" --section cta --text-file "$CTA_FILE"; then
+          SCREEN_BG_FILES+=("$CTA_BG_IMAGE")
+          SCREEN_BG_SECS+=("$CTA_VIS_SEC")
+        else
+          BG_FAIL=1
+        fi
+      fi
+
+      if (( BG_FAIL == 0 )) && (( ${#SCREEN_BG_FILES[@]} >= 2 )); then
+        BG_IMAGE_OK=1
+        BG_IMAGE_MODE_USED="per_screen"
+        cp -f "${SCREEN_BG_FILES[0]}" "$LATEST_BG_IMAGE"
+        echo "[render] bg image enabled source=replicate mode=per_screen count=${#SCREEN_BG_FILES[@]}" >&2
+      else
+        echo "[render] bg per-screen synth failed; falling back to single image" >&2
+      fi
+    fi
+
+    if (( BG_IMAGE_OK == 0 )); then
+      if "$REPO_ROOT/bin/render/synthesize_bg_image_replicate.py" --atom "$ATOM" --out "$BG_IMAGE"; then
+        BG_IMAGE_OK=1
+        BG_IMAGE_MODE_USED="single"
+        cp -f "$BG_IMAGE" "$LATEST_BG_IMAGE"
+        echo "[render] bg image enabled source=replicate mode=single" >&2
+        echo "[render] wrote $BG_IMAGE" >&2
+      else
+        echo "[render] bg image synth failed; continuing with solid background" >&2
+      fi
+    fi
+  else
+    echo "[render] bg image synth script missing; continuing with solid background" >&2
+  fi
+fi
+
 MUSIC_OK=0
 if [[ "$MUSIC_ENABLED" == "1" ]]; then
   MUSIC_SECONDS="${BIZZAL_BG_MUSIC_SECONDS:-$DUR}"
@@ -498,10 +555,50 @@ if (( BG_IMAGE_OK == 1 )); then
   BG_SATURATION="${BIZZAL_BG_IMAGE_SATURATION:-0.90}"
   BG_CONTRAST="${BIZZAL_BG_IMAGE_CONTRAST:-1.02}"
   BG_BASE_VF="scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,eq=brightness=${BG_BRIGHTNESS}:saturation=${BG_SATURATION}:contrast=${BG_CONTRAST}"
+  BG_BASE_VIDEO="$TMPDIR/bg_base.mp4"
+
+  if [[ "$BG_IMAGE_MODE_USED" == "per_screen" ]] && (( ${#SCREEN_BG_FILES[@]} >= 2 )); then
+    BG_FILTER=""
+    BG_CMD=(ffmpeg -y -hide_banner -loglevel error)
+    BG_COUNT="${#SCREEN_BG_FILES[@]}"
+    LAST_IDX=$(( BG_COUNT - 1 ))
+
+    for ((i=0; i<BG_COUNT; i++)); do
+      SEG_DUR="${SCREEN_BG_SECS[$i]}"
+      INPUT_DUR="$SEG_DUR"
+      if (( i < LAST_IDX )); then
+        INPUT_DUR="$(float_add "$SEG_DUR" "$BG_IMAGE_XFADE_SEC")"
+      fi
+      BG_CMD+=( -loop 1 -t "$INPUT_DUR" -i "${SCREEN_BG_FILES[$i]}" )
+      BG_FILTER+="[$i:v]${BG_BASE_VF},format=yuv420p[bg${i}];"
+    done
+
+    RAW_CUM="${SCREEN_BG_SECS[0]}"
+    PREV_LABEL="bg0"
+    for ((i=1; i<BG_COUNT; i++)); do
+      OFFSET="$(float_max 0 "$(float_sub "$RAW_CUM" "$BG_IMAGE_XFADE_SEC")")"
+      OUT_LABEL="bgm${i}"
+      BG_FILTER+="[${PREV_LABEL}][bg${i}]xfade=transition=fade:duration=${BG_IMAGE_XFADE_SEC}:offset=${OFFSET}[${OUT_LABEL}];"
+      PREV_LABEL="$OUT_LABEL"
+      RAW_CUM="$(float_add "$RAW_CUM" "${SCREEN_BG_SECS[$i]}")"
+    done
+    BG_FILTER+="[${PREV_LABEL}]trim=duration=${COLOR_DUR},setpts=PTS-STARTPTS[vout]"
+
+    BG_CMD+=( -filter_complex "$BG_FILTER" -map "[vout]" -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart "$BG_BASE_VIDEO" )
+    "${BG_CMD[@]}"
+    echo "[render] bg transitions mode=per_screen xfade_sec=${BG_IMAGE_XFADE_SEC}" >&2
+  else
+    ffmpeg -y -hide_banner -loglevel error \
+      -loop 1 -i "$BG_IMAGE" \
+      -t "$COLOR_DUR" \
+      -vf "$BG_BASE_VF" \
+      -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
+      "$BG_BASE_VIDEO"
+  fi
+
   ffmpeg -y -hide_banner -loglevel error \
-    -loop 1 -i "$BG_IMAGE" \
-    -t "$COLOR_DUR" \
-    -vf "${BG_BASE_VF},${VF}" \
+    -i "$BG_BASE_VIDEO" \
+    -vf "$VF" \
     -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
     "$VIDEO_ONLY"
 else

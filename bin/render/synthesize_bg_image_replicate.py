@@ -59,6 +59,25 @@ def build_prompt(atom: dict) -> str:
     return "; ".join(parts)
 
 
+def build_section_prompt(base_prompt: str, section: str, section_text: str) -> str:
+    section_key = clean(section or "").lower()
+    section_line = clean(section_text or "")
+    if len(section_line) > 220:
+        section_line = section_line[:220].rsplit(" ", 1)[0] + "..."
+
+    section_map = {
+        "hook": "opening beat, immediate visual hook, dramatic composition",
+        "body": "main tactical scene with clear spatial storytelling",
+        "cta": "closing beat, resolved composition, dramatic aftermath",
+    }
+    section_desc = section_map.get(section_key, "cohesive scene continuation")
+
+    parts = [base_prompt, f"screen phase: {section_desc}"]
+    if section_line:
+        parts.append(f"visual cue from script: {section_line}")
+    return "; ".join(parts)
+
+
 def http_json(method: str, url: str, token: str, payload=None, timeout=90):
     data = None
     headers = {
@@ -134,6 +153,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Generate AI background image via Replicate")
     parser.add_argument("--atom", required=True, help="Validated atom JSON path")
     parser.add_argument("--out", required=True, help="Output image path")
+    parser.add_argument("--section", default="", help="Optional screen section label (hook/body/cta)")
+    parser.add_argument("--text-file", default="", help="Optional section script text path for prompt cue")
     parser.add_argument("--dry-run", action="store_true", help="Print chosen prompt and payloads")
     args = parser.parse_args()
 
@@ -146,6 +167,15 @@ def main() -> int:
         atom = json.load(handle)
 
     prompt = build_prompt(atom)
+    if args.section or args.text_file:
+        section_text = ""
+        if args.text_file:
+            try:
+                with open(args.text_file, "r", encoding="utf-8") as handle:
+                    section_text = handle.read()
+            except Exception:
+                section_text = ""
+        prompt = build_section_prompt(prompt, args.section, section_text)
     aspect_ratio = os.getenv("BIZZAL_BG_IMAGE_ASPECT_RATIO", "9:16").strip() or "9:16"
     output_format = os.getenv("BIZZAL_BG_IMAGE_FORMAT", "png").strip() or "png"
 

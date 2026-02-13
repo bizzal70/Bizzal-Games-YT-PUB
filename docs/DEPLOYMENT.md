@@ -392,6 +392,8 @@ If TTS fails (missing key/API error), render falls back to text-only MP4 and log
 Environment flags:
 - `BIZZAL_ENABLE_BG_IMAGE=1` enables AI background image generation.
 - `REPLICATE_API_TOKEN` required for Replicate calls.
+- Optional: `BIZZAL_BG_IMAGE_MODE` (`single` default in base renderer, `per_screen` to generate hook/body/cta images and transition between them).
+- Optional: `BIZZAL_BG_IMAGE_XFADE_SEC` crossfade duration between per-screen images (default `0.40` in base renderer).
 - Optional: `BIZZAL_REPLICATE_IMAGE_MODEL` (default: `black-forest-labs/flux-schnell`; script auto-falls back across known image slugs).
 - Optional: `BIZZAL_BG_IMAGE_ASPECT_RATIO` (default `9:16`).
 - Optional: `BIZZAL_BG_IMAGE_FORMAT` (default `png`).
@@ -418,7 +420,7 @@ Optional specific day:
 bin/render/run_house_render.sh 2026-02-13
 ```
 
-This wrapper applies your production defaults (AI background image + cinematic audio profile, TTS+music on, tuned ducking/tone, and music fade-out tail) and then runs `render_atom.sh`.
+This wrapper applies your production defaults (per-screen AI background images + smooth image transitions, cinematic audio profile, TTS+music on, tuned ducking/tone, and music fade-out tail) and then runs `render_atom.sh`.
 
 House preset timing defaults:
 - `BIZZAL_INTRO_PAD_SEC=2`
