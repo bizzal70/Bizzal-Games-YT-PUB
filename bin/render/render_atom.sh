@@ -548,17 +548,17 @@ PY
       -c:a pcm_s16le \
       "$MUSIC_LOOP"
 
-    BG_GAIN="${BIZZAL_BG_MUSIC_GAIN:-0.20}"
-    DUCK_THRESHOLD="${BIZZAL_BG_DUCK_THRESHOLD:-0.02}"
-    DUCK_RATIO="${BIZZAL_BG_DUCK_RATIO:-10}"
-    DUCK_ATTACK="${BIZZAL_BG_DUCK_ATTACK_MS:-20}"
-    DUCK_RELEASE="${BIZZAL_BG_DUCK_RELEASE_MS:-260}"
+    BG_GAIN="${BIZZAL_BG_MUSIC_GAIN:-0.42}"
+    DUCK_THRESHOLD="${BIZZAL_BG_DUCK_THRESHOLD:-0.10}"
+    DUCK_RATIO="${BIZZAL_BG_DUCK_RATIO:-2.0}"
+    DUCK_ATTACK="${BIZZAL_BG_DUCK_ATTACK_MS:-25}"
+    DUCK_RELEASE="${BIZZAL_BG_DUCK_RELEASE_MS:-550}"
     MIXED_AUDIO="$TMPDIR/mixed_with_music.wav"
 
     ffmpeg -y -hide_banner -loglevel error \
       -i "$AUDIO_MUX" \
       -i "$MUSIC_LOOP" \
-      -filter_complex "[1:a]volume=${BG_GAIN}[bg];[bg][0:a]sidechaincompress=threshold=${DUCK_THRESHOLD}:ratio=${DUCK_RATIO}:attack=${DUCK_ATTACK}:release=${DUCK_RELEASE}[duck];[0:a][duck]amix=inputs=2:duration=first:normalize=0[aout]" \
+      -filter_complex "[0:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo[vo];[1:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,volume=${BG_GAIN}[bg];[bg][vo]sidechaincompress=threshold=${DUCK_THRESHOLD}:ratio=${DUCK_RATIO}:attack=${DUCK_ATTACK}:release=${DUCK_RELEASE}[duck];[vo][duck]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.97[aout]" \
       -map "[aout]" -c:a pcm_s16le \
       "$MIXED_AUDIO"
 
@@ -570,7 +570,7 @@ PY
   ffmpeg -y -hide_banner -loglevel error \
     -i "$MUX_VIDEO" \
     -i "$FINAL_AUDIO" \
-    -c:v copy -c:a aac -b:a 192k -shortest -movflags +faststart \
+    -c:v copy -c:a aac -b:a 192k -ac 2 -ar 48000 -shortest -movflags +faststart \
     "$OUT"
   cp -f "$VOICE_WAV" "$LATEST_VOICE_WAV"
   echo "[render] wrote $VOICE_WAV" >&2
@@ -589,17 +589,17 @@ else
   if (( MUSIC_OK == 1 )); then
     VIDEO_MUX_SEC="$(probe_duration "$MUX_VIDEO")"
     MUSIC_LOOP="$TMPDIR/music_loop_nomix.wav"
-    BG_GAIN="${BIZZAL_BG_MUSIC_GAIN_NO_VO:-0.24}"
+    BG_GAIN="${BIZZAL_BG_MUSIC_GAIN_NO_VO:-0.32}"
     ffmpeg -y -hide_banner -loglevel error \
       -stream_loop -1 -i "$MUSIC_WAV" \
       -t "$VIDEO_MUX_SEC" \
-      -af "volume=${BG_GAIN}" \
+      -af "aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,volume=${BG_GAIN},alimiter=limit=0.97" \
       -c:a pcm_s16le \
       "$MUSIC_LOOP"
     ffmpeg -y -hide_banner -loglevel error \
       -i "$MUX_VIDEO" \
       -i "$MUSIC_LOOP" \
-      -c:v copy -c:a aac -b:a 192k -shortest -movflags +faststart \
+      -c:v copy -c:a aac -b:a 192k -ac 2 -ar 48000 -shortest -movflags +faststart \
       "$OUT"
     cp -f "$MUSIC_WAV" "$LATEST_MUSIC_WAV"
     echo "[render] wrote $MUSIC_WAV" >&2
