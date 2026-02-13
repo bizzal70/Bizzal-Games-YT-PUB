@@ -277,8 +277,38 @@ if [[ "$TTS_ENABLED" == "1" ]]; then
 fi
 
 if (( TTS_OK == 1 )); then
+  VIDEO_PADDED="$TMPDIR/video_padded.mp4"
+  MUX_VIDEO="$VIDEO_ONLY"
+
+  VIDEO_SEC="$(ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 "$VIDEO_ONLY" 2>/dev/null || echo 0)"
+  AUDIO_SEC="$(ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 "$VOICE_WAV" 2>/dev/null || echo 0)"
+  PAD_SEC="$(python3 - <<'PY' "$VIDEO_SEC" "$AUDIO_SEC"
+import sys
+try:
+    v = float(sys.argv[1])
+except Exception:
+    v = 0.0
+try:
+    a = float(sys.argv[2])
+except Exception:
+    a = 0.0
+pad = (a + 0.15) - v
+print(f"{pad:.3f}" if pad > 0 else "0")
+PY
+  )"
+
+  if [[ "$PAD_SEC" != "0" ]]; then
+    ffmpeg -y -hide_banner -loglevel error \
+      -i "$VIDEO_ONLY" \
+      -vf "tpad=stop_mode=clone:stop_duration=${PAD_SEC}" \
+      -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
+      "$VIDEO_PADDED"
+    MUX_VIDEO="$VIDEO_PADDED"
+    echo "[render] video padded by ${PAD_SEC}s to match tts audio (${AUDIO_SEC}s)" >&2
+  fi
+
   ffmpeg -y -hide_banner -loglevel error \
-    -i "$VIDEO_ONLY" \
+    -i "$MUX_VIDEO" \
     -i "$VOICE_WAV" \
     -c:v copy -c:a aac -b:a 192k -shortest -movflags +faststart \
     "$OUT"
