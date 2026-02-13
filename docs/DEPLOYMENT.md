@@ -260,6 +260,18 @@ If render/upload scripts are present and executable, `run_daily.sh` will invoke 
 ## Optional: AI Script Smoothing (OpenAI)
 `write_script_from_fact.py` can optionally polish language with OpenAI while keeping deterministic fallback templates.
 
+One-command diagnostic daily run (loads `.env.ai`, enables AI/debug flags, writes `/tmp` log):
+
+```bash
+bin/core/run_daily_diag.sh
+```
+
+Optional log dir override:
+
+```bash
+BIZZAL_DAILY_LOG_DIR=/home/umbrel/Bizzal_Games_Pub/logs bin/core/run_daily_diag.sh
+```
+
 Current behavior:
 - `BIZZAL_ENABLE_AI=1` enables CTA-only polishing.
 - `BIZZAL_ENABLE_AI_SCRIPT=1` enables Hook+Body+CTA polishing (recommended for more personal tone).
