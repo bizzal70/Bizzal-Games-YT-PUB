@@ -404,6 +404,10 @@ Persona/tone/voiceover routing:
 - `pick_style.py` assigns `style.persona`, `style.tone`, and `style.voiceover` (`voice_pack_id`, `tts_voice_id`).
 - `content.asset_contract` carries `voice_pack_id` and `tts_voice_id` for future TTS voice selection.
 
+Low-DC humor lane (optional):
+- `BIZZAL_ENABLE_LOW_DC_HUMOR=1` (default) adds playful framing for low-threat creature picks, low-level/low-DC spells, and mundane items.
+- It keeps tactical guidance but shifts tone so weaker picks feel intentional, not awkward.
+
 ## Operational Notes
 - Keep production changes pull-only from GitHub (avoid ad-hoc manual edits on server)
 - Prefer tagged releases for rollback points

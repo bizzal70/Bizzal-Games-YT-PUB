@@ -292,6 +292,128 @@ def split_sentences(text: str) -> list:
     return [p.strip() for p in parts if p.strip()]
 
 
+def low_dc_humor_enabled() -> bool:
+    return env_true("BIZZAL_ENABLE_LOW_DC_HUMOR", True)
+
+
+def parse_number(value, default: float = 0.0) -> float:
+    if value is None:
+        return default
+    s = str(value).strip().lower()
+    if not s:
+        return default
+    try:
+        if "/" in s:
+            a, b = s.split("/", 1)
+            return float(a) / float(b)
+        return float(s)
+    except Exception:
+        m = re.search(r"\d+(?:\.\d+)?", s)
+        if not m:
+            return default
+        try:
+            return float(m.group(0))
+        except Exception:
+            return default
+
+
+def extract_dc_values(text: str) -> list:
+    t = sstr(text)
+    if not t:
+        return []
+    vals = []
+    for m in re.finditer(r"\b(?:dc|difficulty class)\s*(\d{1,2})\b", t, flags=re.IGNORECASE):
+        try:
+            vals.append(int(m.group(1)))
+        except Exception:
+            pass
+    return vals
+
+
+def low_dc_profile(fact: dict) -> tuple[bool, str]:
+    kind = (fact.get("kind") or "").strip().lower()
+    fields = fact.get("fields") or {}
+
+    if kind == "creature":
+        cr = parse_number(fields.get("challenge_rating") or fields.get("cr"), default=0.0)
+        hp = parse_number(fields.get("hit_points"), default=0.0)
+        ac = parse_number(fields.get("armor_class"), default=0.0)
+        if cr <= 0.25 or hp <= 12 or ac <= 11:
+            return True, "low-threat creature profile"
+        return False, ""
+
+    if kind == "spell":
+        lvl = parse_number(fields.get("level"), default=9.0)
+        desc = sstr(fields.get("desc") or fields.get("text"))
+        dcs = extract_dc_values(desc)
+        if lvl <= 1:
+            return True, "low-level spell profile"
+        if dcs and min(dcs) <= 12:
+            return True, "low-DC spell profile"
+        return False, ""
+
+    if kind == "item":
+        cost = parse_number(fields.get("cost"), default=999.0)
+        cat = sstr(fields.get("category")).lower()
+        if cost <= 5 or "adventuring gear" in cat:
+            return True, "mundane item profile"
+        return False, ""
+
+    return False, ""
+
+
+def apply_low_dc_humor_lane(atom: dict, fact: dict, script: dict, day: str = "") -> dict:
+    if not low_dc_humor_enabled():
+        return script
+
+    is_low, reason = low_dc_profile(fact)
+    if not is_low:
+        return script
+
+    category = canonical_category(atom.get("category"))
+    angle = (atom.get("angle") or "").strip().lower()
+    name = fact.get("name") or (fact.get("fields") or {}).get("name") or "This pick"
+
+    if category == "monster_tactic":
+        script["hook"] = deterministic_pick([
+            f"Yes, {name} looks harmless—until the table underestimates it and gives it free turns.",
+            f"{name} is the classic 'easy fight' that gets weird fast if players autopilot.",
+            f"Low-threat on paper, high-chaos at the table: {name}.",
+        ], f"humor|{day}|{category}|{angle}|{name}|hook")
+        script["cta"] = deterministic_pick([
+            "DMs: run it with a wink, then punish lazy positioning once so the lesson lands.",
+            "Players: laugh first, then respect turn economy before this joke encounter snowballs.",
+            "Treat it as comic relief with tactical teeth, not a throwaway speed bump.",
+        ], f"humor|{day}|{category}|{angle}|{name}|cta")
+
+    elif category == "encounter_seed" and angle != "moral_choice":
+        script["hook"] = deterministic_pick([
+            f"{name} is perfect for a playful encounter that can still punish bad habits.",
+            f"Use {name} as 'comic relief' that quietly pressures the party's decisions.",
+            f"Light tone, real consequences: build the scene around {name} and table overconfidence.",
+        ], f"humor|{day}|{category}|{angle}|{name}|hook")
+
+    elif category == "spell_use_case":
+        script["hook"] = deterministic_pick([
+            f"{name} looks low-stakes until smart timing makes it absurdly useful.",
+            f"{name} is the spell people joke about—right before it saves a turn cycle.",
+            f"Cheap-looking spell, expensive mistakes if you ignore timing: {name}.",
+        ], f"humor|{day}|{category}|{angle}|{name}|hook")
+
+    elif category == "item_spotlight":
+        script["hook"] = deterministic_pick([
+            f"{name}: humble gear with main-character energy when the table gets creative.",
+            f"Nobody flexes {name}—until it solves the problem your magic couldn't.",
+            f"Low-cost item, high-chaos potential: {name}.",
+        ], f"humor|{day}|{category}|{angle}|{name}|hook")
+
+    for key in ("hook", "body", "cta"):
+        script[key] = clean_script_text(script.get(key, ""))
+
+    ai_diag(f"Low-DC humor lane applied for '{name}' ({reason})")
+    return script
+
+
 def pdf_flavor_required() -> bool:
     return env_true("BIZZAL_REQUIRE_PDF_FLAVOR", False)
 
@@ -1561,6 +1683,7 @@ def main():
     script["cta"] = clean_script_text(script.get("cta", ""))
     script = enforce_encounter_hook_guard(atom, fact, script, day=day)
     script = enforce_encounter_cta_guard(atom, fact, script, day=day)
+    script = apply_low_dc_humor_lane(atom, fact, script, day=day)
 
     full_text = f"{script.get('hook','').strip()}\n{script.get('body','').strip()}\n{script.get('cta','').strip()}\n"
     atom["script_id"] = sha256_text(full_text)
