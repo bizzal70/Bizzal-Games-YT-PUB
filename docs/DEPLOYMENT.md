@@ -358,6 +358,7 @@ Environment flags:
 - Optional: `BIZZAL_TTS_MODEL` (default: `gpt-4o-mini-tts`).
 - Optional: `BIZZAL_TTS_SPEED` speaking pace (default: `1.0`, valid range `0.25-4.0`).
 - Optional: `BIZZAL_TTS_TIMING_MODE` (`per_screen` default, `off` to disable per-screen timing sync).
+- Optional: `BIZZAL_TTS_BODY_PAGE_MIN_SEC` minimum body page hold in per-screen sync mode (default: `5`).
 - Optional: `BIZZAL_OPENAI_TTS_ENDPOINT` (default: `https://api.openai.com/v1/audio/speech`).
 
 Outputs when enabled:

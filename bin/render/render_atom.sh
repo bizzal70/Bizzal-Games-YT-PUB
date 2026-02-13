@@ -326,37 +326,80 @@ if [[ "$TTS_ENABLED" == "1" && "$TTS_TIMING_MODE" == "per_screen" && -x "$REPO_R
       SEG_DURS+=("$(probe_duration "$wav")")
     done
 
-    TIMING_LINES="$(python3 - <<'PY' "$DUR" "${SEG_DURS[*]}"
+    TTS_BODY_PAGE_MIN_SEC="${BIZZAL_TTS_BODY_PAGE_MIN_SEC:-5}"
+
+    TIMING_LINES="$(python3 - <<'PY' "$DUR" "${SEG_DURS[*]}" "$TTS_BODY_PAGE_MIN_SEC"
 import math, sys
 base_target = int(float(sys.argv[1]))
 durs = [float(x) for x in sys.argv[2].split() if x.strip()]
+  requested_body_min = max(1, int(float(sys.argv[3])))
 if not durs:
     print(base_target)
     print("")
     raise SystemExit(0)
 total = sum(durs)
 target = max(base_target, int(math.ceil(total)))
+  body_count = max(0, len(durs) - 2)
+
+  body_min = requested_body_min
+  while body_count > 0 and (2 + body_count * body_min) > target and body_min > 1:
+    body_min -= 1
+
+  mins = [1 for _ in durs]
+  for i in range(1, 1 + body_count):
+    mins[i] = body_min
+
 if total <= 0:
-    secs = [max(1, target // len(durs)) for _ in durs]
+    secs = [max(mins[i], target // len(durs)) for i in range(len(durs))]
 else:
-    secs = [max(1, int(round(target * (d / total)))) for d in durs]
-delta = target - sum(secs)
-if delta > 0:
-    i = 0
-    while delta > 0:
+    secs = [max(mins[i], int(round(target * (d / total)))) for i, d in enumerate(durs)]
+
+  target = max(target, sum(mins))
+
+  def rebalance_to_target(secs, mins, target):
+    delta = target - sum(secs)
+    if delta > 0:
+      i = 0
+      while delta > 0:
         secs[i % len(secs)] += 1
         i += 1
         delta -= 1
-elif delta < 0:
-    i = 0
-    while delta < 0:
-        idx = i % len(secs)
-        if secs[idx] > 1:
+    elif delta < 0:
+      i = 0
+      while delta < 0:
+        order = sorted(range(len(secs)), key=lambda k: (secs[k] - mins[k], secs[k]), reverse=True)
+        moved = False
+        for idx in order:
+          if secs[idx] > mins[idx]:
             secs[idx] -= 1
             delta += 1
-        i += 1
-        if i > 10000:
+            moved = True
             break
+        i += 1
+        if not moved or i > 10000:
+          break
+
+  rebalance_to_target(secs, mins, target)
+
+  for idx in range(len(secs)):
+    if secs[idx] < mins[idx]:
+      need = mins[idx] - secs[idx]
+      while need > 0:
+        order = sorted(range(len(secs)), key=lambda k: (secs[k] - mins[k], secs[k]), reverse=True)
+        moved = False
+        for donor in order:
+          if donor == idx:
+            continue
+          if secs[donor] > mins[donor]:
+            secs[donor] -= 1
+            secs[idx] += 1
+            need -= 1
+            moved = True
+            break
+        if not moved:
+          break
+
+  rebalance_to_target(secs, mins, target)
 print(target)
 print(" ".join(str(x) for x in secs))
 PY
@@ -392,7 +435,7 @@ PY
     done
     if ffmpeg -y -hide_banner -loglevel error -f concat -safe 0 -i "$CONCAT_LIST" -c:a pcm_s16le "$VOICE_WAV"; then
       PREBUILT_TTS=1
-      echo "[render] tts timing mode=per_screen durations=${SEG_DURS[*]} screen_secs=${SCREEN_SECS[*]} dur=$DUR" >&2
+      echo "[render] tts timing mode=per_screen body_min_sec=$TTS_BODY_PAGE_MIN_SEC durations=${SEG_DURS[*]} screen_secs=${SCREEN_SECS[*]} dur=$DUR" >&2
     fi
   else
     echo "[render] per-screen tts timing failed; using word-based screen timing" >&2
