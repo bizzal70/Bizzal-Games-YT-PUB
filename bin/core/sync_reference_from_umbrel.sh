@@ -29,7 +29,14 @@ rsync -av --delete \
 ln -sfn "$SNAP_DIR" "$ACTIVE_LINK"
 
 # Backward-compatible mirror for older defaults/tools.
-rsync -a --delete "$ACTIVE_LINK/" "$LEGACY_MIRROR_DIR/"
+if [[ -L "$LEGACY_MIRROR_DIR" ]]; then
+  LEGACY_TARGET="$(readlink -f "$LEGACY_MIRROR_DIR" || true)"
+  echo "[sync_ref] NOTE: legacy mirror path is a symlink: $LEGACY_MIRROR_DIR -> $LEGACY_TARGET"
+  echo "[sync_ref] NOTE: skipping destructive legacy mirror rsync to avoid mutating external path"
+  echo "[sync_ref] NOTE: using reference/active as canonical dataset"
+else
+  rsync -a --delete "$ACTIVE_LINK/" "$LEGACY_MIRROR_DIR/"
+fi
 
 echo "[sync_ref] building inventory..."
 python3 "$REPO_ROOT/bin/core/inventory_active_srd.py"
