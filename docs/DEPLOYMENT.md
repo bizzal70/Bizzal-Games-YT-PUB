@@ -394,6 +394,9 @@ Environment flags:
 - `REPLICATE_API_TOKEN` required for Replicate calls.
 - Optional: `BIZZAL_BG_IMAGE_MODE` (`single` default in base renderer, `per_screen` to generate hook/body/cta images and transition between them).
 - Optional: `BIZZAL_BG_IMAGE_XFADE_SEC` crossfade duration between per-screen images (default `0.40` in base renderer).
+- Optional: `BIZZAL_BG_IMAGE_MOTION=1` enables subtle cinematic pan drift on background images.
+- Optional: `BIZZAL_BG_IMAGE_MOTION_PIXELS` drift amplitude in pixels (default `26` in base renderer).
+- Optional: `BIZZAL_BG_IMAGE_MOTION_SPEED` drift speed (default `0.22` in base renderer).
 - Optional: `BIZZAL_REPLICATE_IMAGE_MODEL` (default: `black-forest-labs/flux-schnell`; script auto-falls back across known image slugs).
 - Optional: `BIZZAL_BG_IMAGE_ASPECT_RATIO` (default `9:16`).
 - Optional: `BIZZAL_BG_IMAGE_FORMAT` (default `png`).

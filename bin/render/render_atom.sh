@@ -554,6 +554,9 @@ if (( BG_IMAGE_OK == 1 )); then
   BG_BRIGHTNESS="${BIZZAL_BG_IMAGE_BRIGHTNESS:--0.10}"
   BG_SATURATION="${BIZZAL_BG_IMAGE_SATURATION:-0.90}"
   BG_CONTRAST="${BIZZAL_BG_IMAGE_CONTRAST:-1.02}"
+  BG_IMAGE_MOTION="${BIZZAL_BG_IMAGE_MOTION:-1}"
+  BG_IMAGE_MOTION_PIXELS="${BIZZAL_BG_IMAGE_MOTION_PIXELS:-26}"
+  BG_IMAGE_MOTION_SPEED="${BIZZAL_BG_IMAGE_MOTION_SPEED:-0.22}"
   BG_BASE_VF="scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,eq=brightness=${BG_BRIGHTNESS}:saturation=${BG_SATURATION}:contrast=${BG_CONTRAST}"
   BG_BASE_VIDEO="$TMPDIR/bg_base.mp4"
 
@@ -570,7 +573,17 @@ if (( BG_IMAGE_OK == 1 )); then
         INPUT_DUR="$(float_add "$SEG_DUR" "$BG_IMAGE_XFADE_SEC")"
       fi
       BG_CMD+=( -loop 1 -t "$INPUT_DUR" -i "${SCREEN_BG_FILES[$i]}" )
-      BG_FILTER+="[$i:v]${BG_BASE_VF},format=yuv420p[bg${i}];"
+      if [[ "$BG_IMAGE_MOTION" == "1" ]]; then
+        PHASE="$(python3 - <<'PY' "$i"
+import sys
+idx = int(sys.argv[1])
+print(f"{idx * 1.37:.3f}")
+PY
+)"
+        BG_FILTER+="[$i:v]scale=1200:2134:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-1080)/2+${BG_IMAGE_MOTION_PIXELS}*sin(${BG_IMAGE_MOTION_SPEED}*t+${PHASE})':y='(ih-1920)/2+${BG_IMAGE_MOTION_PIXELS}*cos(${BG_IMAGE_MOTION_SPEED}*t+${PHASE})',eq=brightness=${BG_BRIGHTNESS}:saturation=${BG_SATURATION}:contrast=${BG_CONTRAST},format=yuv420p[bg${i}];"
+      else
+        BG_FILTER+="[$i:v]${BG_BASE_VF},format=yuv420p[bg${i}];"
+      fi
     done
 
     RAW_CUM="${SCREEN_BG_SECS[0]}"
@@ -588,12 +601,21 @@ if (( BG_IMAGE_OK == 1 )); then
     "${BG_CMD[@]}"
     echo "[render] bg transitions mode=per_screen xfade_sec=${BG_IMAGE_XFADE_SEC}" >&2
   else
-    ffmpeg -y -hide_banner -loglevel error \
-      -loop 1 -i "$BG_IMAGE" \
-      -t "$COLOR_DUR" \
-      -vf "$BG_BASE_VF" \
-      -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
-      "$BG_BASE_VIDEO"
+    if [[ "$BG_IMAGE_MOTION" == "1" ]]; then
+      ffmpeg -y -hide_banner -loglevel error \
+        -loop 1 -i "$BG_IMAGE" \
+        -t "$COLOR_DUR" \
+        -vf "scale=1200:2134:force_original_aspect_ratio=increase,crop=1080:1920:x='(iw-1080)/2+${BG_IMAGE_MOTION_PIXELS}*sin(${BG_IMAGE_MOTION_SPEED}*t)':y='(ih-1920)/2+${BG_IMAGE_MOTION_PIXELS}*cos(${BG_IMAGE_MOTION_SPEED}*t)',eq=brightness=${BG_BRIGHTNESS}:saturation=${BG_SATURATION}:contrast=${BG_CONTRAST}" \
+        -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
+        "$BG_BASE_VIDEO"
+    else
+      ffmpeg -y -hide_banner -loglevel error \
+        -loop 1 -i "$BG_IMAGE" \
+        -t "$COLOR_DUR" \
+        -vf "$BG_BASE_VF" \
+        -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
+        "$BG_BASE_VIDEO"
+    fi
   fi
 
   ffmpeg -y -hide_banner -loglevel error \
