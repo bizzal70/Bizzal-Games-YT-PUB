@@ -186,7 +186,8 @@ def request_mode(repo_root: str, day: str, state_path: str, webhook_url: str, fo
         "content": (
             f"Daily draft ready for approval on `{day}`\n"
             f"Reply with: `approve {day}` or `approve {content_id}`\n"
-            f"Reject with: `reject {day}`"
+            f"Reject with: `reject {day}`\n"
+            "(Post directly in this channel; reply/thread not required.)"
         ),
         "embeds": [
             {
@@ -194,6 +195,16 @@ def request_mode(repo_root: str, day: str, state_path: str, webhook_url: str, fo
                 "description": f"`{category}` • `{angle}` • `{content_id}`",
                 "color": 0x5865F2,
                 "fields": [
+                    {
+                        "name": "Expected Responses",
+                        "value": (
+                            f"`approve {day}`\n"
+                            f"`approve {content_id}`\n"
+                            f"`reject {day}`\n"
+                            f"`reject {content_id}`"
+                        ),
+                        "inline": False,
+                    },
                     {"name": "Hook", "value": hook or "(empty)", "inline": False},
                     {"name": "Body", "value": body or "(empty)", "inline": False},
                     {"name": "CTA", "value": cta or "(empty)", "inline": False},
