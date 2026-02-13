@@ -27,6 +27,12 @@ if [[ -x "bin/render/render_latest.sh" ]]; then
 elif [[ -x "bin/core/render_latest.sh" ]]; then
   echo "[run_daily] render_latest..."
   bin/core/render_latest.sh
+elif [[ -x "bin/render/render_atom.sh" ]]; then
+  echo "[run_daily] render_atom.sh..."
+  bin/render/render_atom.sh "$DAY"
+elif [[ -f "bin/render/render_atom.sh" ]]; then
+  echo "[run_daily] render_atom.sh (via bash)..."
+  bash bin/render/render_atom.sh "$DAY"
 elif [[ -x "bin/render/render_atom.py" ]]; then
   echo "[run_daily] render_atom.py..."
   bin/render/render_atom.py "$ATOM_VALID"
