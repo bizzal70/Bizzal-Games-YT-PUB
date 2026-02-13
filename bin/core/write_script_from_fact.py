@@ -490,8 +490,10 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
             return current_cta
 
         if pdf_snippet and not ai_references_pdf_flavor(candidate, pdf_snippet, name):
-            ai_diag("AI CTA polish rejected: missing PDF flavor grounding")
-            return current_cta
+            if pdf_flavor_required():
+                ai_diag("AI CTA polish rejected: missing PDF flavor grounding")
+                return current_cta
+            ai_diag("AI CTA polish warning: weak PDF flavor grounding (best-effort mode)")
 
         if candidate != current_cta:
             ai_diag("AI CTA polish applied")
@@ -627,8 +629,10 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             return script
 
         if pdf_snippet and not ai_references_pdf_flavor(blob, pdf_snippet, fact_name):
-            ai_diag("AI script polish rejected: missing PDF flavor grounding")
-            return script
+            if pdf_flavor_required():
+                ai_diag("AI script polish rejected: missing PDF flavor grounding")
+                return script
+            ai_diag("AI script polish warning: weak PDF flavor grounding (best-effort mode)")
 
         changed = (out.get("hook") != script.get("hook") or out.get("body") != script.get("body") or out.get("cta") != script.get("cta"))
         if changed:
