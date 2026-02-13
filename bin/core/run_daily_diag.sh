@@ -29,13 +29,15 @@ export DEBUG_RENDER="${DEBUG_RENDER:-1}"
 export BIZZAL_AI_DIAG="${BIZZAL_AI_DIAG:-1}"
 export BIZZAL_ENABLE_AI="${BIZZAL_ENABLE_AI:-1}"
 export BIZZAL_ENABLE_AI_SCRIPT="${BIZZAL_ENABLE_AI_SCRIPT:-1}"
+export BIZZAL_ENABLE_PDF_FLAVOR="${BIZZAL_ENABLE_PDF_FLAVOR:-1}"
 
 echo "[run_daily_diag] repo=$REPO"
 echo "[run_daily_diag] day=$DAY"
 echo "[run_daily_diag] log=$LOG_FILE"
+echo "[run_daily_diag] pdf_flavor=${BIZZAL_ENABLE_PDF_FLAVOR}"
 
 "$REPO/bin/core/run_daily.sh" 2>&1 | tee "$LOG_FILE"
 
 echo "[run_daily_diag] --- diagnostics tail ---"
-grep -E "AI script polish|AI CTA polish|Encounter hook replaced|category|angle|name" "$LOG_FILE" | tail -n 40 || true
+grep -E "AI script polish|AI CTA polish|PDF flavor|Encounter hook replaced|Encounter CTA replaced|category|angle|name" "$LOG_FILE" | tail -n 60 || true
 echo "[run_daily_diag] done"

@@ -294,20 +294,24 @@ def split_sentences(text: str) -> list:
 
 def maybe_pdf_flavor_snippet(atom: dict, fact: dict) -> str:
     if not env_true("BIZZAL_ENABLE_PDF_FLAVOR", False):
+        ai_diag("PDF flavor disabled (BIZZAL_ENABLE_PDF_FLAVOR=0)")
         return ""
 
     source = atom.get("source") or {}
     pdf_path = source.get("srd_pdf_path") or os.getenv("BIZZAL_SRD_PDF_PATH") or os.getenv("BG_SRD_PDF_PATH")
     if not pdf_path or not os.path.exists(pdf_path):
+        ai_diag(f"PDF flavor unavailable: missing path '{pdf_path or ''}'")
         return ""
 
     name = (fact.get("name") or (fact.get("fields") or {}).get("name") or "").strip()
     if not name:
+        ai_diag("PDF flavor skipped: missing fact name")
         return ""
 
     try:
         from pypdf import PdfReader  # optional dependency
     except Exception:
+        ai_diag("PDF flavor unavailable: missing pypdf dependency")
         return ""
 
     needle = name.lower()
@@ -328,13 +332,18 @@ def maybe_pdf_flavor_snippet(atom: dict, fact: dict) -> str:
             sents = split_sentences(window)
             for s in sents:
                 if needle in s.lower():
+                    ai_diag(f"PDF flavor snippet used for '{name}'")
                     return short(clean_script_text(s), 180, add_ellipsis=False)
             if sents:
+                ai_diag(f"PDF flavor snippet used for '{name}'")
                 return short(clean_script_text(sents[0]), 180, add_ellipsis=False)
+            ai_diag(f"PDF flavor snippet used for '{name}'")
             return short(clean_script_text(window), 180, add_ellipsis=False)
     except Exception:
+        ai_diag("PDF flavor lookup failed during PDF parsing")
         return ""
 
+    ai_diag(f"PDF flavor snippet not found for '{name}'")
     return ""
 
 
