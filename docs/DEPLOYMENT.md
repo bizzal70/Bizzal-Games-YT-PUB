@@ -331,6 +331,11 @@ Render pacing notes:
 	- `rules_ruling`, `rules_myth` → compact CTA window.
 	- `spell_use_case`, `item_spotlight`, `character_micro_tip` → balanced CTA window.
 - Optional override: `BIZZAL_SHORTS_DURATION` (default `30`).
+- Body text flow controls (to avoid short → wall → short cadence):
+	- `BIZZAL_BODY_MAXLINES` (default `7`) lines per body page before repagination.
+	- `BIZZAL_BODY_MAX_PAGES` (default `3`) caps body page count for readability.
+	- `BIZZAL_BODY_LAST_MIN_WORDS` (default `5`) merges tiny final orphan page into previous page.
+	- `BIZZAL_BODY_PAGE_MIN_SEC` (default `4`) minimum seconds shown per body page.
 
 Example:
 

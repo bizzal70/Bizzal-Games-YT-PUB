@@ -45,9 +45,19 @@ python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$CTA_TXT"  --out "$CTA_TXT"  
 PAGEDIR="$TMPDIR/pages"
 mkdir -p "$PAGEDIR"
 
-# Body becomes up to 2 pages; CTA is its own final page.
-# Tune maxlines down if you want bigger text.
-BODY_PAGES="$(python3 "$REPO_ROOT/bin/render/paginate_lines.py" --infile "$BODY_TXT" --outdir "$PAGEDIR" --prefix body --maxlines 9)"
+# Body can span multiple pages; CTA is its own final page.
+# Tune max lines/page and max page count for smoother reading cadence.
+BODY_MAXLINES="${BIZZAL_BODY_MAXLINES:-7}"
+BODY_MAX_PAGES="${BIZZAL_BODY_MAX_PAGES:-3}"
+BODY_PAGES="$(python3 "$REPO_ROOT/bin/render/paginate_lines.py" --infile "$BODY_TXT" --outdir "$PAGEDIR" --prefix body --maxlines "$BODY_MAXLINES")"
+if (( BODY_PAGES > BODY_MAX_PAGES )); then
+  BODY_LINE_COUNT="$(grep -cve '^[[:space:]]*$' "$BODY_TXT" || true)"
+  if [[ -z "$BODY_LINE_COUNT" || "$BODY_LINE_COUNT" -lt 1 ]]; then
+    BODY_LINE_COUNT=1
+  fi
+  ADJ_MAXLINES=$(( (BODY_LINE_COUNT + BODY_MAX_PAGES - 1) / BODY_MAX_PAGES ))
+  BODY_PAGES="$(python3 "$REPO_ROOT/bin/render/paginate_lines.py" --infile "$BODY_TXT" --outdir "$PAGEDIR" --prefix body --maxlines "$ADJ_MAXLINES")"
+fi
 cp -f "$HOOK_TXT" "$PAGEDIR/hook.txt"
 cp -f "$CTA_TXT"  "$PAGEDIR/cta.txt"
 
@@ -179,81 +189,107 @@ COMMON="fontfile=${FONT}:fontcolor=white:line_spacing=12:text_align=center:fix_b
 XPOS="x=(w-text_w)/2"
 
 HOOK_FILE="$PAGEDIR/hook.txt"
-BODY1_FILE="$PAGEDIR/body1.txt"
-BODY2_FILE="$PAGEDIR/body2.txt"
 CTA_FILE="$PAGEDIR/cta.txt"
 
-BODY2_EXISTS=0
-if [[ -f "$BODY2_FILE" ]] && [[ -s "$BODY2_FILE" ]]; then
-  BODY2_EXISTS=1
-fi
-
-BODY1_WORDS="$(count_words "$BODY1_FILE")"
-BODY2_WORDS="$(count_words "$BODY2_FILE")"
-BODY2_MIN_WORDS="${BIZZAL_BODY2_MIN_WORDS:-5}"
-
-if (( BODY2_EXISTS == 1 && BODY2_WORDS < BODY2_MIN_WORDS )); then
-  BODY2_WORDS_BEFORE="$BODY2_WORDS"
-  MERGED_BODY="$TMPDIR/body_merged.txt"
-  python3 - "$BODY1_FILE" "$BODY2_FILE" "$MERGED_BODY" <<'PY'
+BODY_PAGE_COUNT="$BODY_PAGES"
+BODY_LAST_MIN_WORDS="${BIZZAL_BODY_LAST_MIN_WORDS:-5}"
+if (( BODY_PAGE_COUNT > 1 )); then
+  LAST_FILE="$PAGEDIR/body${BODY_PAGE_COUNT}.txt"
+  PREV_FILE="$PAGEDIR/body$((BODY_PAGE_COUNT - 1)).txt"
+  LAST_WORDS="$(count_words "$LAST_FILE")"
+  if (( LAST_WORDS < BODY_LAST_MIN_WORDS )); then
+    LAST_WORDS_BEFORE="$LAST_WORDS"
+    MERGED_BODY="$TMPDIR/body_merged.txt"
+    python3 - "$PREV_FILE" "$LAST_FILE" "$MERGED_BODY" <<'PY'
 import pathlib, sys
-b1 = pathlib.Path(sys.argv[1]).read_text(encoding="utf-8")
-b2 = pathlib.Path(sys.argv[2]).read_text(encoding="utf-8")
-combined = " ".join((b1 + " " + b2).split())
+p1 = pathlib.Path(sys.argv[1]).read_text(encoding="utf-8")
+p2 = pathlib.Path(sys.argv[2]).read_text(encoding="utf-8")
+combined = " ".join((p1 + " " + p2).split())
 pathlib.Path(sys.argv[3]).write_text(combined + "\n", encoding="utf-8")
 PY
-  python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$MERGED_BODY" --out "$BODY1_FILE" --width "$BODY_WRAP_WIDTH"
-  : > "$BODY2_FILE"
-  BODY2_EXISTS=0
-  BODY1_WORDS="$(count_words "$BODY1_FILE")"
-  BODY2_WORDS=0
-  echo "[render] anti-orphan merged tiny body2 into body1 body2_words_before=$BODY2_WORDS_BEFORE min_words=$BODY2_MIN_WORDS" >&2
+    python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$MERGED_BODY" --out "$PREV_FILE" --width "$BODY_WRAP_WIDTH"
+    : > "$LAST_FILE"
+    BODY_PAGE_COUNT=$(( BODY_PAGE_COUNT - 1 ))
+    echo "[render] anti-orphan merged tiny final body page words_before=$LAST_WORDS_BEFORE min_words=$BODY_LAST_MIN_WORDS" >&2
+  fi
 fi
 
-BODY1_LINES="$(count_nonempty_lines "$BODY1_FILE")"
+BODY_WORDS_LIST=()
+BODY_LINES_MAX=0
+for ((i=1; i<=BODY_PAGE_COUNT; i++)); do
+  PAGE_FILE="$PAGEDIR/body${i}.txt"
+  WORDS_I="$(count_words "$PAGE_FILE")"
+  LINES_I="$(count_nonempty_lines "$PAGE_FILE")"
+  BODY_WORDS_LIST+=("$WORDS_I")
+  if (( LINES_I > BODY_LINES_MAX )); then
+    BODY_LINES_MAX="$LINES_I"
+  fi
+done
+
 BODY_FONT_SIZE=44
-if (( BODY1_LINES >= 10 )); then
+if (( BODY_LINES_MAX >= 10 )); then
   BODY_FONT_SIZE=42
 fi
-
-if (( BODY2_EXISTS == 1 )); then
-  BODY1_MIN=5
-  BODY2_MIN=5
-  BODY_PAGES_WORDS=$(( BODY1_WORDS + BODY2_WORDS ))
-  BODY1_SEC=$(( BODY_SEC * BODY1_WORDS / BODY_PAGES_WORDS ))
-  BODY2_SEC=$(( BODY_SEC - BODY1_SEC ))
-
-  if (( BODY1_SEC < BODY1_MIN )); then
-    BODY1_SEC="$BODY1_MIN"
-    BODY2_SEC=$(( BODY_SEC - BODY1_SEC ))
-  fi
-  if (( BODY2_SEC < BODY2_MIN )); then
-    BODY2_SEC="$BODY2_MIN"
-    BODY1_SEC=$(( BODY_SEC - BODY2_SEC ))
-  fi
-
-  if (( BODY1_SEC < BODY1_MIN )); then
-    BODY1_SEC="$BODY1_MIN"
-    BODY2_SEC=$(( BODY_SEC - BODY1_SEC ))
-  fi
-else
-  BODY1_SEC="$BODY_SEC"
-  BODY2_SEC=0
+if (( BODY_LINES_MAX >= 12 )); then
+  BODY_FONT_SIZE=40
 fi
 
-BODY1_END=$(( HOOK_END + BODY1_SEC ))
-BODY_END=$(( BODY1_END + BODY2_SEC ))
+BODY_PAGE_MIN_SEC="${BIZZAL_BODY_PAGE_MIN_SEC:-4}"
+BODY_SECS_LINE="$(python3 - <<'PY' "$BODY_SEC" "$BODY_PAGE_MIN_SEC" "${BODY_WORDS_LIST[*]}"
+import sys
+body_sec = int(sys.argv[1])
+min_sec = int(sys.argv[2])
+words = [int(x) for x in sys.argv[3].split() if x.strip()]
+if not words:
+    print(body_sec)
+    raise SystemExit(0)
+if len(words) == 1:
+    print(body_sec)
+    raise SystemExit(0)
+total = sum(words) or len(words)
+secs = [max(min_sec, int(round(body_sec * (w / total)))) for w in words]
+delta = body_sec - sum(secs)
+if delta > 0:
+    i = 0
+    while delta > 0:
+        secs[i % len(secs)] += 1
+        i += 1
+        delta -= 1
+elif delta < 0:
+    i = 0
+    while delta < 0:
+        idx = i % len(secs)
+        if secs[idx] > min_sec:
+            secs[idx] -= 1
+            delta += 1
+        i += 1
+        if i > 10000:
+            break
+print(" ".join(str(x) for x in secs))
+PY
+)"
+read -r -a BODY_SECS <<< "$BODY_SECS_LINE"
 
-echo "[render] body pages exists2=$BODY2_EXISTS body1_words=$BODY1_WORDS body2_words=$BODY2_WORDS" >&2
-echo "[render] body pages secs body1=$BODY1_SEC body2=$BODY2_SEC" >&2
-echo "[render] body layout lines_body1=$BODY1_LINES body_font_size=$BODY_FONT_SIZE body2_min_words=$BODY2_MIN_WORDS" >&2
+BODY_END="$HOOK_END"
+BODY_ENDS=()
+for ((i=0; i<${#BODY_SECS[@]}; i++)); do
+  BODY_END=$(( BODY_END + BODY_SECS[i] ))
+  BODY_ENDS+=("$BODY_END")
+done
+
+echo "[render] body pages count=$BODY_PAGE_COUNT words=${BODY_WORDS_LIST[*]}" >&2
+echo "[render] body pages secs ${BODY_SECS[*]}" >&2
+echo "[render] body layout lines_max=$BODY_LINES_MAX body_font_size=$BODY_FONT_SIZE last_min_words=$BODY_LAST_MIN_WORDS" >&2
 echo "[render] text style name=$TEXT_STYLE box_alpha=$BOX_ALPHA box_borderw=$BOX_BORDER_W borderw=$BORDER_W" >&2
 
 VF="drawtext=${COMMON}:textfile=${HOOK_FILE}:fontsize=66:${XPOS}:y=(h-text_h)/2:enable='between(t,0,${HOOK_END})',"
-VF+="drawtext=${COMMON}:textfile=${BODY1_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:y=(h-text_h)/2:enable='between(t,${HOOK_END},${BODY1_END})',"
-if (( BODY2_EXISTS == 1 )); then
-  VF+="drawtext=${COMMON}:textfile=${BODY2_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:y=(h-text_h)/2:enable='between(t,${BODY1_END},${BODY_END})',"
-fi
+PAGE_START="$HOOK_END"
+for ((i=1; i<=BODY_PAGE_COUNT; i++)); do
+  PAGE_END="${BODY_ENDS[$((i-1))]}"
+  PAGE_FILE="$PAGEDIR/body${i}.txt"
+  VF+="drawtext=${COMMON}:textfile=${PAGE_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:y=(h-text_h)/2:enable='between(t,${PAGE_START},${PAGE_END})',"
+  PAGE_START="$PAGE_END"
+done
 VF+="drawtext=${COMMON}:textfile=${CTA_FILE}:fontsize=50:${XPOS}:y=(h-text_h)/2:enable='between(t,${BODY_END},${DUR})'"
 
 ffmpeg -y -hide_banner -loglevel error \
