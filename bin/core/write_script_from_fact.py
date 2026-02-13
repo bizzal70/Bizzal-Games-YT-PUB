@@ -75,10 +75,125 @@ def canonical_category(category: str) -> str:
     return aliases.get((category or "").strip().lower(), (category or "").strip().lower())
 
 
+def canonical_angle(category: str, angle: str) -> str:
+    a = (angle or "").strip().lower()
+    c = (category or "").strip().lower()
+
+    if c == "monster_tactic":
+        return {
+            "how_to_counter": "counterplay",
+            "terrain_synergy": "how_it_wins",
+            "party_level_scaling": "how_it_wins",
+            "roleplay_hook": "common_mistake",
+        }.get(a, a)
+
+    if c == "spell_use_case":
+        return {
+            "combo_pairing": "best_moment",
+            "upcast_tip": "best_moment",
+            "dm_counterplay": "dm_twist",
+        }.get(a, a)
+
+    if c == "item_spotlight":
+        return {
+            "best_user": "clever_use",
+            "dm_counterplay": "drawback_watchout",
+        }.get(a, a)
+
+    return a
+
+
 def slugify(s: str) -> str:
     txt = re.sub(r"[^a-zA-Z0-9]+", "-", (s or "").strip().lower())
     txt = re.sub(r"-+", "-", txt).strip("-")
     return txt or "na"
+
+
+def creature_context(name: str, fields: dict) -> dict:
+    nm = (name or "").lower()
+    ctype = sstr(fields.get("type") or fields.get("creature_type") or "").lower()
+    habitat = sstr(fields.get("environment") or fields.get("habitat") or "").lower()
+
+    if "dragon" in nm or "dragon" in ctype:
+        if "bronze" in nm:
+            return {
+                "arena": "coastline, harbor, or storm-wrecked ruins",
+                "choice": "protect lives now or secure the objective before it escapes",
+                "pressure": "terrain hazards and line-of-sight",
+            }
+        if "brass" in nm:
+            return {
+                "arena": "desert roads, ruins, or caravan routes",
+                "choice": "take the safe route or risk a faster, costlier path",
+                "pressure": "resources and conversation leverage",
+            }
+        return {
+            "arena": "a place where mobility and range matter",
+            "choice": "save people now or finish the threat fast",
+            "pressure": "positioning and action economy",
+        }
+
+    if any(x in habitat for x in ("coast", "sea", "ocean", "shore", "swamp", "water")):
+        return {
+            "arena": "terrain with water lanes and chokepoints",
+            "choice": "hold formation or split to secure objectives",
+            "pressure": "movement and visibility",
+        }
+
+    return {
+        "arena": "terrain with one strong feature",
+        "choice": "save resources now or spend big to control tempo",
+        "pressure": "positioning and objective pressure",
+    }
+
+
+def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields: dict, default_cta: str) -> str:
+    c = canonical_category(category)
+    a = canonical_angle(c, angle)
+    fallback = (default_cta or "DMs: run it with intent and reward smart play.").strip()
+
+    if c == "encounter_seed" and kind == "creature":
+        ctx = creature_context(name, fields)
+        if a == "moral_choice":
+            return f"DMs: set it in {ctx['arena']} and force a real choice: {ctx['choice']}."
+        if a == "time_pressure":
+            return f"DMs: add a visible countdown and make every round lost increase {ctx['pressure']}."
+        if a == "terrain_feature":
+            return f"DMs: make one map feature the center of play—if they ignore it, they lose tempo."
+        if a == "twist":
+            return "DMs: flip the objective at midpoint so their first plan is no longer enough."
+        return "DMs: telegraph stakes early, then make the decision cost visible."
+
+    if c == "monster_tactic" and kind == "creature":
+        if a == "counterplay":
+            return "Players: deny its preferred fight shape first, then focus fire." 
+        if a == "common_mistake":
+            return "DMs: punish lazy positioning once, then let the table adapt."
+        return "DMs: run its game plan on purpose; players, answer with movement and target priority."
+
+    if c == "spell_use_case" and kind == "spell":
+        if a == "best_moment":
+            return "Players: cast when it changes the objective, not when it only adds numbers."
+        if a == "common_misplay":
+            return "Table tip: call timing and target before you spend the slot."
+        if a == "dm_twist":
+            return "DMs: reward smart casting with meaningful scene consequences."
+        return "Use spell timing as a decision tool, not just a damage button."
+
+    if c == "item_spotlight" and kind == "item":
+        if a == "story_hook":
+            return "DMs: tie the item to a concrete objective so utility beats raw DPR."
+        if a == "drawback_watchout":
+            return "Players: declare setup and anchor points before the roll."
+        return "Players: prep the environment first, then let the item do work."
+
+    if c in ("rules_ruling", "rules_myth"):
+        return "Table rule: make one clear call, apply it consistently, and move on."
+
+    if c == "character_micro_tip":
+        return "Pick one repeatable decision pattern and run it every session until it is automatic."
+
+    return fallback
 
 
 def build_content_contract(atom: dict, script_id: str, script: dict, fact: dict, style: dict):
@@ -629,32 +744,32 @@ def main():
     if category == "item_spotlight" and kind == "item":
         hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
         body = build_item_body(angle, fields)
-        script["hook"], script["body"], script["cta"] = hook, body, cta
+        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
 
     elif category == "monster_tactic" and kind == "creature":
         hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
         body = build_monster_body(angle, fields, fact.get("traits") or [], fact.get("actions") or [], fact.get("attacks") or [])
-        script["hook"], script["body"], script["cta"] = hook, body, cta
+        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
 
     elif category == "spell_use_case" and kind == "spell":
         hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
         body = build_spell_body(angle, fields)
-        script["hook"], script["body"], script["cta"] = hook, body, cta
+        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
 
     elif category == "encounter_seed" and kind == "creature":
         hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
         body = build_encounter_body(angle, fields, fact.get("traits") or [], fact.get("actions") or [])
-        script["hook"], script["body"], script["cta"] = hook, body, cta
+        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
 
     elif category in ("rules_ruling", "rules_myth") and kind == "rule":
         hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
         body = build_rule_body(angle, fields)
-        script["hook"], script["body"], script["cta"] = hook, body, cta
+        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
 
     elif category == "character_micro_tip" and kind == "class":
         hook, cta = pick_voice_lines(style_cfg, voice_name, category, name)
         body = build_class_body(angle, fields)
-        script["hook"], script["body"], script["cta"] = hook, body, cta
+        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
 
     else:
         print(f"ERROR: Unsupported category/kind: {category}/{kind}", file=sys.stderr)
