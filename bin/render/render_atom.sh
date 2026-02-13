@@ -9,6 +9,8 @@ OUT="$REPO_ROOT/data/renders/by_day/${DAY}.mp4"
 LATEST="$REPO_ROOT/data/renders/latest/latest.mp4"
 VOICE_WAV="$REPO_ROOT/data/renders/by_day/${DAY}.voice.wav"
 LATEST_VOICE_WAV="$REPO_ROOT/data/renders/latest/latest.voice.wav"
+MUSIC_WAV="$REPO_ROOT/data/renders/by_day/${DAY}.music.wav"
+LATEST_MUSIC_WAV="$REPO_ROOT/data/renders/latest/latest.music.wav"
 TMPDIR="$REPO_ROOT/data/renders/tmp/${DAY}"
 VIDEO_ONLY="$TMPDIR/video_only.mp4"
 
@@ -16,6 +18,7 @@ mkdir -p "$(dirname "$OUT")" "$(dirname "$LATEST")" "$TMPDIR"
 
 TTS_ENABLED="${BIZZAL_ENABLE_TTS:-0}"
 TTS_TIMING_MODE="${BIZZAL_TTS_TIMING_MODE:-per_screen}"
+MUSIC_ENABLED="${BIZZAL_ENABLE_BG_MUSIC:-0}"
 PAGE_XFADE_SEC="${BIZZAL_PAGE_XFADE_SEC:-0.15}"
 CTA_FINAL_HOLD_SEC="${BIZZAL_CTA_FINAL_HOLD_SEC:-0.30}"
 
@@ -422,6 +425,21 @@ PY
   fi
 fi
 
+MUSIC_OK=0
+if [[ "$MUSIC_ENABLED" == "1" ]]; then
+  MUSIC_SECONDS="${BIZZAL_BG_MUSIC_SECONDS:-$DUR}"
+  if [[ -x "$REPO_ROOT/bin/render/synthesize_music_replicate.py" ]]; then
+    if "$REPO_ROOT/bin/render/synthesize_music_replicate.py" --atom "$ATOM" --out "$MUSIC_WAV" --duration "$MUSIC_SECONDS"; then
+      MUSIC_OK=1
+      echo "[render] music enabled source=replicate seconds=$MUSIC_SECONDS" >&2
+    else
+      echo "[render] music synth failed; continuing without bg music" >&2
+    fi
+  else
+    echo "[render] music synth script missing; continuing without bg music" >&2
+  fi
+fi
+
 echo "[render] body pages count=$BODY_PAGE_COUNT words=${BODY_WORDS_LIST[*]}" >&2
 echo "[render] body pages secs ${BODY_SECS[*]}" >&2
 echo "[render] body layout lines_max=$BODY_LINES_MAX body_font_size=$BODY_FONT_SIZE last_min_words=$BODY_LAST_MIN_WORDS" >&2
@@ -520,15 +538,74 @@ PY
     AUDIO_MUX="$AUDIO_HOLD"
   fi
 
+  FINAL_AUDIO="$AUDIO_MUX"
+  if (( MUSIC_OK == 1 )); then
+    VIDEO_MUX_SEC="$(probe_duration "$MUX_VIDEO")"
+    MUSIC_LOOP="$TMPDIR/music_loop.wav"
+    ffmpeg -y -hide_banner -loglevel error \
+      -stream_loop -1 -i "$MUSIC_WAV" \
+      -t "$VIDEO_MUX_SEC" \
+      -c:a pcm_s16le \
+      "$MUSIC_LOOP"
+
+    BG_GAIN="${BIZZAL_BG_MUSIC_GAIN:-0.20}"
+    DUCK_THRESHOLD="${BIZZAL_BG_DUCK_THRESHOLD:-0.02}"
+    DUCK_RATIO="${BIZZAL_BG_DUCK_RATIO:-10}"
+    DUCK_ATTACK="${BIZZAL_BG_DUCK_ATTACK_MS:-20}"
+    DUCK_RELEASE="${BIZZAL_BG_DUCK_RELEASE_MS:-260}"
+    MIXED_AUDIO="$TMPDIR/mixed_with_music.wav"
+
+    ffmpeg -y -hide_banner -loglevel error \
+      -i "$AUDIO_MUX" \
+      -i "$MUSIC_LOOP" \
+      -filter_complex "[1:a]volume=${BG_GAIN}[bg];[bg][0:a]sidechaincompress=threshold=${DUCK_THRESHOLD}:ratio=${DUCK_RATIO}:attack=${DUCK_ATTACK}:release=${DUCK_RELEASE}[duck];[0:a][duck]amix=inputs=2:duration=first:normalize=0[aout]" \
+      -map "[aout]" -c:a pcm_s16le \
+      "$MIXED_AUDIO"
+
+    FINAL_AUDIO="$MIXED_AUDIO"
+    cp -f "$MUSIC_WAV" "$LATEST_MUSIC_WAV"
+    echo "[render] wrote $MUSIC_WAV" >&2
+  fi
+
   ffmpeg -y -hide_banner -loglevel error \
     -i "$MUX_VIDEO" \
-    -i "$AUDIO_MUX" \
+    -i "$FINAL_AUDIO" \
     -c:v copy -c:a aac -b:a 192k -shortest -movflags +faststart \
     "$OUT"
   cp -f "$VOICE_WAV" "$LATEST_VOICE_WAV"
   echo "[render] wrote $VOICE_WAV" >&2
 else
-  cp -f "$VIDEO_ONLY" "$OUT"
+  MUX_VIDEO="$VIDEO_ONLY"
+  if [[ "$CTA_FINAL_HOLD_SEC" != "0" ]]; then
+    HOLD_VIDEO="$TMPDIR/video_hold_nomusic.mp4"
+    ffmpeg -y -hide_banner -loglevel error \
+      -i "$VIDEO_ONLY" \
+      -vf "tpad=stop_mode=clone:stop_duration=${CTA_FINAL_HOLD_SEC}" \
+      -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
+      "$HOLD_VIDEO"
+    MUX_VIDEO="$HOLD_VIDEO"
+  fi
+
+  if (( MUSIC_OK == 1 )); then
+    VIDEO_MUX_SEC="$(probe_duration "$MUX_VIDEO")"
+    MUSIC_LOOP="$TMPDIR/music_loop_nomix.wav"
+    BG_GAIN="${BIZZAL_BG_MUSIC_GAIN_NO_VO:-0.24}"
+    ffmpeg -y -hide_banner -loglevel error \
+      -stream_loop -1 -i "$MUSIC_WAV" \
+      -t "$VIDEO_MUX_SEC" \
+      -af "volume=${BG_GAIN}" \
+      -c:a pcm_s16le \
+      "$MUSIC_LOOP"
+    ffmpeg -y -hide_banner -loglevel error \
+      -i "$MUX_VIDEO" \
+      -i "$MUSIC_LOOP" \
+      -c:v copy -c:a aac -b:a 192k -shortest -movflags +faststart \
+      "$OUT"
+    cp -f "$MUSIC_WAV" "$LATEST_MUSIC_WAV"
+    echo "[render] wrote $MUSIC_WAV" >&2
+  else
+    cp -f "$MUX_VIDEO" "$OUT"
+  fi
 fi
 
 cp -f "$OUT" "$LATEST"

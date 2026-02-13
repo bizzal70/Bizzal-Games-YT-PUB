@@ -383,6 +383,39 @@ Speed tips:
 
 If TTS fails (missing key/API error), render falls back to text-only MP4 and logs the reason.
 
+## Optional: AI Background Music (Replicate)
+`bin/render/render_atom.sh` can generate tone/topic-aware background music and mix it under narration.
+
+Environment flags:
+- `BIZZAL_ENABLE_BG_MUSIC=1` enables music generation and mixing.
+- `REPLICATE_API_TOKEN` required for Replicate calls.
+- Optional: `BIZZAL_REPLICATE_MUSIC_MODEL` (default: `meta/musicgen`).
+- Optional: `BIZZAL_REPLICATE_MUSIC_VERSION` (if you want a pinned model version ID).
+- Optional: `BIZZAL_BG_MUSIC_SECONDS` (default uses current render duration).
+- Optional: `BIZZAL_BG_MUSIC_GAIN` (default `0.20`, when TTS is present).
+- Optional: `BIZZAL_BG_MUSIC_GAIN_NO_VO` (default `0.24`, when no TTS voice track).
+- Optional ducking controls:
+	- `BIZZAL_BG_DUCK_THRESHOLD` (default `0.02`)
+	- `BIZZAL_BG_DUCK_RATIO` (default `10`)
+	- `BIZZAL_BG_DUCK_ATTACK_MS` (default `20`)
+	- `BIZZAL_BG_DUCK_RELEASE_MS` (default `260`)
+
+Outputs when enabled:
+- `data/renders/by_day/YYYY-MM-DD.music.wav`
+- `data/renders/latest/latest.music.wav`
+
+Example:
+
+```bash
+export REPLICATE_API_TOKEN='YOUR_REPLICATE_TOKEN'
+export BIZZAL_ENABLE_BG_MUSIC=1
+export BIZZAL_BG_MUSIC_GAIN=0.18
+export BIZZAL_BG_DUCK_RATIO=12
+BIZZAL_TEXT_STYLE=bg_safe bin/render/render_atom.sh 2026-02-13
+```
+
+If music generation fails, render falls back gracefully and still produces MP4 output.
+
 ## Optional: AI Script Smoothing (OpenAI)
 `write_script_from_fact.py` can optionally polish language with OpenAI while keeping deterministic fallback templates.
 
