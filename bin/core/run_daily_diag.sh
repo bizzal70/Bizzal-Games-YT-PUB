@@ -40,6 +40,14 @@ echo "[run_daily_diag] require_pdf_flavor=${BIZZAL_REQUIRE_PDF_FLAVOR}"
 
 "$REPO/bin/core/run_daily.sh" 2>&1 | tee "$LOG_FILE"
 
+if [[ "${BIZZAL_REQUIRE_DISCORD_APPROVAL:-0}" == "1" ]]; then
+  if [[ -x "$REPO/bin/core/discord_publish_gate.py" ]]; then
+    "$REPO/bin/core/discord_publish_gate.py" request --day "$DAY" 2>&1 | tee -a "$LOG_FILE"
+  else
+    echo "[run_daily_diag] WARN: discord_publish_gate.py missing; cannot request approval" | tee -a "$LOG_FILE"
+  fi
+fi
+
 echo "[run_daily_diag] --- diagnostics tail ---"
 grep -E "AI script polish|AI CTA polish|PDF flavor|Encounter hook replaced|Encounter CTA replaced|category|angle|name" "$LOG_FILE" | tail -n 60 || true
 echo "[run_daily_diag] done"

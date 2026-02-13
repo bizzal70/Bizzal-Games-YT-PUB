@@ -52,6 +52,8 @@ awk -v begin="$BEGIN_MARK" -v end="$END_MARK" '
   echo "0 9 * * * cd $REPO_ROOT && bin/core/run_daily_diag_cron.sh"
   echo "# Weekly log pruning (Sunday 09:20 UTC)"
   echo "20 9 * * 0 cd $REPO_ROOT && bin/core/prune_daily_diag_logs.sh --keep-days 30"
+  echo "# Discord approval processing (every 5 minutes)"
+  echo "*/5 * * * * cd $REPO_ROOT && bin/core/discord_publish_gate.py check --publish >> $REPO_ROOT/logs/cron_discord_publish_gate.log 2>&1"
   echo "# Monthly release bundle for previous month (1st, 06:10 UTC)"
   echo "10 6 1 * * cd $REPO_ROOT && bin/core/monthly_release_cron.sh \"\$(date -d 'last month' +\\%Y-\\%m)\""
   echo "$END_MARK"

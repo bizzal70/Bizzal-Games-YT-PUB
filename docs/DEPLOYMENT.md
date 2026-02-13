@@ -228,6 +228,37 @@ bin/core/pipeline_health_discord.py --month 2026-02 --only-on-change --force-sen
 State is stored at:
 - `data/archive/health/discord_state.json`
 
+## Discord Approval Gate (Reply `approve` to publish)
+You can require daily Discord approval before publish/upload.
+
+Environment variables:
+
+```bash
+export BIZZAL_REQUIRE_DISCORD_APPROVAL=1
+export BIZZAL_DISCORD_WEBHOOK_URL='https://discord.com/api/webhooks/...'
+export BIZZAL_DISCORD_BOT_TOKEN='YOUR_DISCORD_BOT_TOKEN'
+export BIZZAL_DISCORD_CHANNEL_ID='YOUR_CHANNEL_ID'
+export BIZZAL_DISCORD_APPROVER_USER_IDS='123456789012345678,234567890123456789'
+```
+
+Flow:
+- Daily run posts the generated script to Discord with instructions.
+- Approver replies in channel: `approve YYYY-MM-DD` (or `approve <content_id>`).
+- Approval processor publishes automatically.
+
+Manual commands:
+
+```bash
+# send approval request for today
+bin/core/discord_publish_gate.py request --day "$(date +%F)"
+
+# process approvals and publish if approved
+bin/core/discord_publish_gate.py check --publish
+```
+
+State file:
+- `data/archive/approvals/discord_publish_gate.json`
+
 Suggested cron notifications on Umbrel (Discord):
 
 ```bash

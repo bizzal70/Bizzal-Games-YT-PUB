@@ -42,8 +42,12 @@ fi
 
 # 3) Upload (optional): only run if a known upload script exists
 if [[ -x "bin/upload/upload_youtube.py" ]]; then
-  echo "[run_daily] upload_youtube..."
-  bin/upload/upload_youtube.py
+  if [[ "${BIZZAL_REQUIRE_DISCORD_APPROVAL:-0}" == "1" ]]; then
+    echo "[run_daily] upload gated: awaiting Discord approval (BIZZAL_REQUIRE_DISCORD_APPROVAL=1)"
+  else
+    echo "[run_daily] upload_youtube..."
+    bin/upload/upload_youtube.py
+  fi
 else
   echo "[run_daily] NOTE: no upload script found yet."
 fi
