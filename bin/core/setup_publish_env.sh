@@ -43,6 +43,13 @@ prompt_value() {
 }
 
 prompt_value BIZZAL_DISCORD_WEBHOOK_URL "Discord webhook URL"
+if [[ -n "${BIZZAL_DISCORD_WEBHOOK_URL:-}" && ${#BIZZAL_DISCORD_WEBHOOK_URL} -ge 2 ]]; then
+  first="${BIZZAL_DISCORD_WEBHOOK_URL:0:1}"
+  last="${BIZZAL_DISCORD_WEBHOOK_URL: -1}"
+  if [[ "$first" == "$last" && ( "$first" == "'" || "$first" == '"' ) ]]; then
+    BIZZAL_DISCORD_WEBHOOK_URL="${BIZZAL_DISCORD_WEBHOOK_URL:1:${#BIZZAL_DISCORD_WEBHOOK_URL}-2}"
+  fi
+fi
 prompt_value BIZZAL_DISCORD_BOT_TOKEN "Discord bot token" 1
 prompt_value BIZZAL_DISCORD_CHANNEL_ID "Discord channel ID"
 prompt_value BIZZAL_DISCORD_APPROVER_USER_IDS "Approver user ID(s), comma-separated"

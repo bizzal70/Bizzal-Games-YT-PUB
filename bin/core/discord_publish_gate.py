@@ -113,18 +113,25 @@ def parse_approval_command(content: str) -> tuple[str, str] | None:
     return None
 
 
-def looks_like_placeholder_webhook(url: str) -> bool:
+def normalize_webhook_url(url: str) -> str:
     u = (url or "").strip()
+    if len(u) >= 2 and ((u[0] == u[-1]) and u[0] in {"'", '"'}):
+        u = u[1:-1].strip()
+
+    u = u.replace("https://discordapp.com/", "https://discord.com/")
+    u = u.replace("http://discordapp.com/", "https://discord.com/")
+    return u
+
+
+def looks_like_placeholder_webhook(url: str) -> bool:
+    u = normalize_webhook_url(url)
     if not u:
         return True
     if "..." in u or "YOUR_" in u.upper() or "REPLACE" in u.upper():
         return True
 
-    normalized = u.replace("https://discordapp.com/", "https://discord.com/")
-    normalized = normalized.replace("http://discordapp.com/", "https://discord.com/")
-
     try:
-        parsed = parse.urlparse(normalized)
+        parsed = parse.urlparse(u)
     except Exception:
         return True
 
@@ -153,6 +160,7 @@ def run_publish_command(repo_root: str, day: str) -> tuple[int, str]:
 
 
 def request_mode(repo_root: str, day: str, state_path: str, webhook_url: str, force: bool) -> int:
+    webhook_url = normalize_webhook_url(webhook_url)
     if not webhook_url:
         print("ERROR: missing BIZZAL_DISCORD_WEBHOOK_URL", file=sys.stderr)
         return 2
@@ -400,7 +408,7 @@ def main() -> int:
     if not os.path.isabs(state_file):
         state_file = os.path.join(repo_root, state_file)
 
-    webhook_url = (os.getenv("BIZZAL_DISCORD_WEBHOOK_URL") or "").strip()
+    webhook_url = normalize_webhook_url((os.getenv("BIZZAL_DISCORD_WEBHOOK_URL") or "").strip())
 
     if args.cmd == "request":
         return request_mode(repo_root, args.day.strip(), state_file, webhook_url, args.force)
