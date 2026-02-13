@@ -91,6 +91,15 @@ count_words() {
   fi
 }
 
+count_nonempty_lines() {
+  local f="$1"
+  if [[ ! -f "$f" ]]; then
+    echo 0
+    return
+  fi
+  grep -cve '^[[:space:]]*$' "$f" || true
+}
+
 clamp_int() {
   local val="$1" min="$2" max="$3"
   if (( val < min )); then
@@ -177,6 +186,29 @@ fi
 
 BODY1_WORDS="$(count_words "$BODY1_FILE")"
 BODY2_WORDS="$(count_words "$BODY2_FILE")"
+BODY2_MIN_WORDS="${BIZZAL_BODY2_MIN_WORDS:-5}"
+
+if (( BODY2_EXISTS == 1 && BODY2_WORDS < BODY2_MIN_WORDS )); then
+  BODY2_WORDS_BEFORE="$BODY2_WORDS"
+  MERGED_BODY="$TMPDIR/body_merged.txt"
+  {
+    cat "$BODY1_FILE"
+    echo
+    cat "$BODY2_FILE"
+  } > "$MERGED_BODY"
+  mv -f "$MERGED_BODY" "$BODY1_FILE"
+  : > "$BODY2_FILE"
+  BODY2_EXISTS=0
+  BODY1_WORDS="$(count_words "$BODY1_FILE")"
+  BODY2_WORDS=0
+  echo "[render] anti-orphan merged tiny body2 into body1 body2_words_before=$BODY2_WORDS_BEFORE min_words=$BODY2_MIN_WORDS" >&2
+fi
+
+BODY1_LINES="$(count_nonempty_lines "$BODY1_FILE")"
+BODY_FONT_SIZE=44
+if (( BODY1_LINES >= 10 )); then
+  BODY_FONT_SIZE=42
+fi
 
 if (( BODY2_EXISTS == 1 )); then
   BODY1_MIN=5
@@ -208,12 +240,13 @@ BODY_END=$(( BODY1_END + BODY2_SEC ))
 
 echo "[render] body pages exists2=$BODY2_EXISTS body1_words=$BODY1_WORDS body2_words=$BODY2_WORDS" >&2
 echo "[render] body pages secs body1=$BODY1_SEC body2=$BODY2_SEC" >&2
+echo "[render] body layout lines_body1=$BODY1_LINES body_font_size=$BODY_FONT_SIZE body2_min_words=$BODY2_MIN_WORDS" >&2
 echo "[render] text style name=$TEXT_STYLE box_alpha=$BOX_ALPHA box_borderw=$BOX_BORDER_W borderw=$BORDER_W" >&2
 
 VF="drawtext=${COMMON}:textfile=${HOOK_FILE}:fontsize=66:${XPOS}:y=(h-text_h)/2:enable='between(t,0,${HOOK_END})',"
-VF+="drawtext=${COMMON}:textfile=${BODY1_FILE}:fontsize=44:${XPOS}:y=(h-text_h)/2:enable='between(t,${HOOK_END},${BODY1_END})',"
+VF+="drawtext=${COMMON}:textfile=${BODY1_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:y=(h-text_h)/2:enable='between(t,${HOOK_END},${BODY1_END})',"
 if (( BODY2_EXISTS == 1 )); then
-  VF+="drawtext=${COMMON}:textfile=${BODY2_FILE}:fontsize=44:${XPOS}:y=(h-text_h)/2:enable='between(t,${BODY1_END},${BODY_END})',"
+  VF+="drawtext=${COMMON}:textfile=${BODY2_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:y=(h-text_h)/2:enable='between(t,${BODY1_END},${BODY_END})',"
 fi
 VF+="drawtext=${COMMON}:textfile=${CTA_FILE}:fontsize=50:${XPOS}:y=(h-text_h)/2:enable='between(t,${BODY_END},${DUR})'"
 
