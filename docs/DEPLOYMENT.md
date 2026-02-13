@@ -381,6 +381,10 @@ PDF flavor strict mode:
 - In strict mode, if no snippet is found (or PDF/pypdf is unavailable), AI polishing is skipped and deterministic script text is kept.
 - Check logs for `PDF flavor snippet used ...` and `missing PDF flavor grounding` diagnostics.
 
+Numeric lock mode:
+- Recommended default: `BIZZAL_REQUIRE_NUMERIC_LOCK=0` (best-effort). Missing numeric tokens in AI rewrites are allowed with a warning.
+- Optional strict mode: `BIZZAL_REQUIRE_NUMERIC_LOCK=1` rejects AI script rewrites that drop locked numeric tokens.
+
 Persona/tone/voiceover routing:
 - Category personas and tones are configured in `config/style_rules.yaml`.
 - `pick_style.py` assigns `style.persona`, `style.tone`, and `style.voiceover` (`voice_pack_id`, `tts_voice_id`).

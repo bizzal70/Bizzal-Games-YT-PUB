@@ -296,6 +296,14 @@ def pdf_flavor_required() -> bool:
     return env_true("BIZZAL_REQUIRE_PDF_FLAVOR", False)
 
 
+def numeric_lock_required() -> bool:
+    return env_true("BIZZAL_REQUIRE_NUMERIC_LOCK", False)
+
+
+def is_numeric_token(token: str) -> bool:
+    return bool(re.fullmatch(r"\d+(?:\.\d+)?", (token or "").strip()))
+
+
 def pdf_flavor_keywords(snippet: str, fact_name: str) -> set:
     txt = (snippet or "").lower()
     name_tokens = set(re.findall(r"[a-z]{3,}", (fact_name or "").lower()))
@@ -619,10 +627,20 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             ai_diag("AI script CTA reverted by anti-generic gate")
 
         blob = f"{out['hook']} {out['body']} {out['cta']}"
+        skipped_numeric_locks = []
         for token in locked_tokens(script, fact):
             if token and token not in blob:
+                if is_numeric_token(token) and not numeric_lock_required():
+                    skipped_numeric_locks.append(token)
+                    continue
                 ai_diag(f"AI script polish rejected: missing locked token '{token}'")
                 return script
+
+        if skipped_numeric_locks:
+            ai_diag(
+                "AI script polish warning: missing numeric tokens allowed in best-effort mode: "
+                + ", ".join(sorted(set(skipped_numeric_locks)))
+            )
 
         if not out["hook"] or not out["body"] or not out["cta"]:
             ai_diag("AI script polish rejected: blank segment")
