@@ -41,6 +41,9 @@ def main():
     cfg = load_yaml(CFG_PATH) or {}
     defaults = cfg.get("defaults") or {}
     cat_rules = (cfg.get("category_rules") or {})
+    persona_by_category = cfg.get("persona_by_category") or {}
+    tones_by_category = cfg.get("tones_by_category") or {}
+    voiceover_by_tone = cfg.get("voiceover_by_tone") or {}
 
     atom = load_json(ATOM_PATH)
     category = atom.get("category")
@@ -55,7 +58,13 @@ def main():
     rules = cat_rules[category]
     angles = list(rules.get("angles") or [])
     voices = list(rules.get("voices") or [])
-    tones  = list((defaults.get("tones") or ["neutral"]))
+    category_tones = tones_by_category.get(category)
+    if isinstance(category_tones, list) and category_tones:
+        tones = list(category_tones)
+    elif isinstance(category_tones, str) and category_tones.strip():
+        tones = [category_tones.strip()]
+    else:
+        tones = list((defaults.get("tones") or ["neutral"]))
 
     if not angles or not voices:
         print(f"ERROR: style_rules missing angles/voices for {category}", file=sys.stderr)
@@ -79,6 +88,14 @@ def main():
         angle = choose_avoid(angles, prev.get("angle"))
     voice = choose_avoid(voices, prev.get("voice"))
     tone  = random.choice(tones)
+    persona = persona_by_category.get(category) or defaults.get("persona_default") or "table_coach"
+
+    voiceover = defaults.get("voiceover_default") or {}
+    tone_vo = voiceover_by_tone.get(tone) if isinstance(voiceover_by_tone, dict) else None
+    if isinstance(tone_vo, dict):
+        merged = dict(voiceover)
+        merged.update(tone_vo)
+        voiceover = merged
 
     spice_rate = float(defaults.get("spice_rate", 0.0))
     spice_pool = ["dry_humor", "grim", "practical", "punchy"]
@@ -91,6 +108,11 @@ def main():
     atom["style"] = {
         "voice": voice,
         "tone": tone,
+        "persona": persona,
+        "voiceover": {
+            "voice_pack_id": voiceover.get("voice_pack_id") or f"voice-{voice}",
+            "tts_voice_id": voiceover.get("tts_voice_id") or "alloy",
+        },
         "spice": spice,
         "length": defaults.get("length", "shorts"),
         "seed": f"{day}|{category}"
@@ -100,7 +122,7 @@ def main():
 
     # update history
     hist.setdefault(day, {})
-    hist[day][category] = {"angle": angle, "voice": voice, "tone": tone, "spice": spice}
+    hist[day][category] = {"angle": angle, "voice": voice, "tone": tone, "persona": persona, "spice": spice}
     atomic_write_json(HIST_PATH, hist)
 
     print(ATOM_PATH)

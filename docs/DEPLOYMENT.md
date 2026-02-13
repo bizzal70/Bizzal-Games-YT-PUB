@@ -257,13 +257,20 @@ Suggested monthly cleanup cron on Umbrel (day 1 at 07:25 UTC):
 
 If render/upload scripts are present and executable, `run_daily.sh` will invoke them automatically.
 
-## Optional: AI CTA Smoothing (OpenAI)
-`write_script_from_fact.py` can optionally polish only the CTA line with OpenAI while keeping deterministic fallback templates.
+## Optional: AI Script Smoothing (OpenAI)
+`write_script_from_fact.py` can optionally polish language with OpenAI while keeping deterministic fallback templates.
+
+Current behavior:
+- `BIZZAL_ENABLE_AI=1` enables CTA-only polishing.
+- `BIZZAL_ENABLE_AI_SCRIPT=1` enables Hook+Body+CTA polishing (recommended for more personal tone).
+- If API is unavailable, generation falls back to deterministic templates automatically.
+- `source.srd_pdf_path` is recorded in atoms for provenance, but no direct PDF text retrieval stage is active yet.
 
 Enable on Umbrel shell before running daily pipeline:
 
 ```bash
 export BIZZAL_ENABLE_AI=1
+export BIZZAL_ENABLE_AI_SCRIPT=1
 export OPENAI_API_KEY='YOUR_OPENAI_API_KEY'
 export BIZZAL_OPENAI_MODEL='gpt-4o-mini'
 ```
@@ -276,6 +283,11 @@ export BIZZAL_OPENAI_ENDPOINT='https://api.openai.com/v1/chat/completions'
 ```
 
 If API is unavailable or disabled, pipeline falls back to deterministic CTA templates automatically.
+
+Persona/tone/voiceover routing:
+- Category personas and tones are configured in `config/style_rules.yaml`.
+- `pick_style.py` assigns `style.persona`, `style.tone`, and `style.voiceover` (`voice_pack_id`, `tts_voice_id`).
+- `content.asset_contract` carries `voice_pack_id` and `tts_voice_id` for future TTS voice selection.
 
 ## Operational Notes
 - Keep production changes pull-only from GitHub (avoid ad-hoc manual edits on server)

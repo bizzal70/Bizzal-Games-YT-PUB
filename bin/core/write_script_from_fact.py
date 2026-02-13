@@ -312,6 +312,107 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
         return current_cta
 
 
+def locked_tokens(script: dict, fact: dict) -> list:
+    tokens = set()
+    name = (fact.get("name") or (fact.get("fields") or {}).get("name") or "").strip()
+    if name:
+        tokens.add(name)
+
+    for text in [script.get("hook", ""), script.get("body", ""), script.get("cta", "")]:
+        for n in re.findall(r"\b\d+(?:\.\d+)?\b", text or ""):
+            tokens.add(n)
+    return sorted(tokens)
+
+
+def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) -> dict:
+    if not env_true("BIZZAL_ENABLE_AI_SCRIPT", False):
+        return script
+
+    api_key = os.getenv("OPENAI_API_KEY") or os.getenv("BIZZAL_OPENAI_API_KEY")
+    if not api_key:
+        return script
+
+    model = os.getenv("BIZZAL_OPENAI_MODEL", "gpt-4o-mini")
+    endpoint = os.getenv("BIZZAL_OPENAI_ENDPOINT", "https://api.openai.com/v1/chat/completions")
+
+    prompt = {
+        "task": "Rewrite hook/body/cta to sound more personal while preserving factual integrity.",
+        "category": atom.get("category") or "",
+        "angle": atom.get("angle") or "",
+        "fact_name": fact.get("name") or (fact.get("fields") or {}).get("name") or "",
+        "kind": fact.get("kind") or "",
+        "voice": style.get("voice") or "friendly_vet",
+        "persona": style.get("persona") or "table_coach",
+        "tone": style.get("tone") or "neutral",
+        "locked_tokens": locked_tokens(script, fact),
+        "input": {
+            "hook": script.get("hook", ""),
+            "body": script.get("body", ""),
+            "cta": script.get("cta", ""),
+        },
+        "rules": [
+            "Return strict JSON object with keys: hook, body, cta.",
+            "Do not invent new stats, rules, or proper nouns.",
+            "Keep all numeric facts and fact_name intact.",
+            "Hook: one sentence. Body: 2-4 sentences. CTA: one sentence.",
+            "No markdown.",
+        ],
+    }
+
+    payload = {
+        "model": model,
+        "temperature": 0.4,
+        "response_format": {"type": "json_object"},
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an RPG script editor improving tone while preserving factual correctness.",
+            },
+            {
+                "role": "user",
+                "content": json.dumps(prompt, ensure_ascii=False),
+            },
+        ],
+    }
+
+    req = request.Request(
+        endpoint,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+
+    try:
+        with request.urlopen(req, timeout=35) as resp:
+            raw = resp.read().decode("utf-8")
+        data = json.loads(raw)
+        content = (((data.get("choices") or [{}])[0].get("message") or {}).get("content") or "{}")
+        obj = json.loads(content)
+
+        out = {
+            "hook": clean_script_text(obj.get("hook") or script.get("hook", "")),
+            "body": clean_script_text(obj.get("body") or script.get("body", "")),
+            "cta": clean_script_text(obj.get("cta") or script.get("cta", "")),
+        }
+
+        blob = f"{out['hook']} {out['body']} {out['cta']}"
+        for token in locked_tokens(script, fact):
+            if token and token not in blob:
+                return script
+
+        if not out["hook"] or not out["body"] or not out["cta"]:
+            return script
+
+        return out
+    except Exception as exc:
+        if env_true("DEBUG_RENDER", False):
+            print(f"[write_script_from_fact] AI script polish skipped: {exc}", file=sys.stderr)
+        return script
+
+
 def build_content_contract(atom: dict, script_id: str, script: dict, fact: dict, style: dict):
     day = atom.get("day") or datetime.now().strftime("%Y-%m-%d")
     month_id = day[:7]
@@ -355,6 +456,8 @@ def build_content_contract(atom: dict, script_id: str, script: dict, fact: dict,
         slugify(str(fact.get("document") or "")),
     })
 
+    voiceover = style.get("voiceover") or {}
+
     return {
         "content_id": content_id,
         "episode_id": episode_id,
@@ -363,7 +466,8 @@ def build_content_contract(atom: dict, script_id: str, script: dict, fact: dict,
         "canonical_hash": canonical_hash,
         "script_id": script_id,
         "asset_contract": {
-            "voice_pack_id": f"voice-{voice}",
+            "voice_pack_id": voiceover.get("voice_pack_id") or f"voice-{voice}",
+            "tts_voice_id": voiceover.get("tts_voice_id") or "alloy",
             "visual_pack_id": f"visual-{category}",
             "timeline_id": f"timeline-{sha256_text(content_id + '|timeline')[:10]}",
         },
@@ -893,6 +997,9 @@ def main():
 
     for key in ("hook", "body", "cta"):
         script[key] = clean_script_text(script.get(key, ""))
+
+    script = maybe_ai_polish_script(atom, fact, style, script)
+    atom["script"] = script
 
     script["cta"] = maybe_ai_polish_cta(atom, fact, style, script)
     script["cta"] = clean_script_text(script.get("cta", ""))

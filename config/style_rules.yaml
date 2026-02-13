@@ -5,6 +5,71 @@ defaults:
   - neutral
   - gritty
   - heroic
+  persona_default: table_coach
+  voiceover_default:
+    voice_pack_id: voice-friendly-vet
+    tts_voice_id: alloy
+
+persona_by_category:
+  monster_tactic: tactical_analyst
+  spell_use_case: clever_table_vet
+  item_spotlight: clever_table_vet
+  encounter_seed: dm_story_coach
+  rules_ruling: rules_referee
+  rules_myth: rules_referee
+  character_micro_tip: class_mentor
+  gm_tip: rules_referee
+  roleplaying_tip: class_mentor
+  character_class_spotlight: class_mentor
+  class_spotlight: class_mentor
+  dungeoneering_encounter: dm_story_coach
+  overworld_encounter: dm_story_coach
+
+tones_by_category:
+  monster_tactic:
+  - gritty
+  - neutral
+  spell_use_case:
+  - neutral
+  - heroic
+  item_spotlight:
+  - neutral
+  - heroic
+  encounter_seed:
+  - gritty
+  - heroic
+  rules_ruling:
+  - neutral
+  rules_myth:
+  - neutral
+  character_micro_tip:
+  - heroic
+  - neutral
+
+voiceover_by_tone:
+  neutral:
+    voice_pack_id: voice-friendly-vet
+    tts_voice_id: alloy
+  gritty:
+    voice_pack_id: voice-gritty-dm
+    tts_voice_id: onyx
+  heroic:
+    voice_pack_id: voice-class-mentor
+    tts_voice_id: nova
+
+persona_profiles:
+  dm_story_coach:
+    one_liner: Clear, dramatic, and practical DM guidance with concrete stakes.
+  rules_referee:
+    one_liner: Crisp, fair, and consistent rules adjudication voice.
+  class_mentor:
+    one_liner: Encouraging, role-aware class coaching focused on better decisions.
+  tactical_analyst:
+    one_liner: Serious threat-first tactical framing with minimal fluff.
+  clever_table_vet:
+    one_liner: Practical table wisdom with a bit of personality and momentum.
+  table_coach:
+    one_liner: Friendly veteran table coach balancing clarity and fun.
 voices:
   friendly_vet:
     hooks:
