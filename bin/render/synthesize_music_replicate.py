@@ -114,7 +114,7 @@ def main() -> int:
         atom = json.load(handle)
 
     prompt = build_prompt(atom)
-    model = os.getenv("BIZZAL_REPLICATE_MUSIC_MODEL", "riffusion/riffusion")
+    model = os.getenv("BIZZAL_REPLICATE_MUSIC_MODEL", "lucataco/musicgen")
     version = os.getenv("BIZZAL_REPLICATE_MUSIC_VERSION", "").strip()
     timeout_sec = int(os.getenv("BIZZAL_REPLICATE_MUSIC_TIMEOUT_SEC", "300"))
 
@@ -130,59 +130,106 @@ def main() -> int:
     body = {
         "input": input_payload,
     }
-    create_url = "https://api.replicate.com/v1/predictions"
-    if version:
-        body["version"] = version
-    else:
-        parts = [p for p in (model or "").split("/") if p]
+
+    model_candidates = [
+        m.strip()
+        for m in (
+            os.getenv("BIZZAL_REPLICATE_MUSIC_MODEL", model),
+            "lucataco/musicgen",
+            "facebookresearch/musicgen",
+            "riffusion/riffusion",
+        )
+        if (m or "").strip()
+    ]
+    deduped_models = []
+    for slug in model_candidates:
+        if slug not in deduped_models:
+            deduped_models.append(slug)
+
+    def build_create_url(model_slug: str) -> str:
+        parts = [p for p in (model_slug or "").split("/") if p]
         if len(parts) != 2:
-            print(f"[music] ERROR: invalid BIZZAL_REPLICATE_MUSIC_MODEL={model} (expected owner/name)", file=sys.stderr)
-            return 12
+            raise ValueError(f"invalid BIZZAL_REPLICATE_MUSIC_MODEL={model_slug} (expected owner/name)")
         owner, name = parts
-        create_url = f"https://api.replicate.com/v1/models/{owner}/{name}/predictions"
+        return f"https://api.replicate.com/v1/models/{owner}/{name}/predictions"
 
     if args.dry_run:
         print(json.dumps({"model": model, "version": version or None, "body": body}, indent=2, ensure_ascii=False))
         return 0
 
     pred = None
+    used_model = model
     create_attempts = int(os.getenv("BIZZAL_REPLICATE_CREATE_ATTEMPTS", "3"))
-    for attempt in range(1, max(1, create_attempts) + 1):
-        try:
-            pred = http_json("POST", create_url, token, body, timeout=90)
-            break
-        except error.HTTPError as exc:
-            detail = exc.read().decode("utf-8", errors="ignore")
-            if exc.code == 429 and attempt < max(1, create_attempts):
-                wait_sec = 12
-                try:
-                    parsed = json.loads(detail)
-                    wait_sec = int(parsed.get("retry_after") or wait_sec)
-                except Exception:
-                    pass
-                wait_sec = max(3, min(60, wait_sec))
-                print(f"[music] rate-limited (429); retrying in {wait_sec}s (attempt {attempt}/{create_attempts})", file=sys.stderr)
-                time.sleep(wait_sec)
+
+    if version:
+        create_url = "https://api.replicate.com/v1/predictions"
+        body_with_version = dict(body)
+        body_with_version["version"] = version
+        for attempt in range(1, max(1, create_attempts) + 1):
+            try:
+                pred = http_json("POST", create_url, token, body_with_version, timeout=90)
+                break
+            except error.HTTPError as exc:
+                detail = exc.read().decode("utf-8", errors="ignore")
+                if exc.code == 429 and attempt < max(1, create_attempts):
+                    wait_sec = 12
+                    try:
+                        parsed = json.loads(detail)
+                        wait_sec = int(parsed.get("retry_after") or wait_sec)
+                    except Exception:
+                        pass
+                    wait_sec = max(3, min(60, wait_sec))
+                    print(f"[music] rate-limited (429); retrying in {wait_sec}s (attempt {attempt}/{create_attempts})", file=sys.stderr)
+                    time.sleep(wait_sec)
+                    continue
+                print(f"[music] ERROR: create prediction HTTP {exc.code}: {detail}", file=sys.stderr)
+                return 3
+            except Exception as exc:
+                print(f"[music] ERROR: create prediction failed: {exc}", file=sys.stderr)
+                return 4
+    else:
+        for candidate in deduped_models:
+            used_model = candidate
+            try:
+                create_url = build_create_url(candidate)
+            except ValueError as exc:
+                print(f"[music] skip model={candidate}: {exc}", file=sys.stderr)
                 continue
-            if exc.code == 403:
-                print(
-                    "[music] ERROR: Replicate returned 403 (forbidden). "
-                    "This is usually account/model access or billing permissions.",
-                    file=sys.stderr,
-                )
-            print(f"[music] ERROR: create prediction HTTP {exc.code}: {detail}", file=sys.stderr)
-            if not version:
-                print(
-                    "[music] hint: optionally set BIZZAL_REPLICATE_MUSIC_VERSION to a known accessible version id.",
-                    file=sys.stderr,
-                )
-            return 3
-        except Exception as exc:
-            print(f"[music] ERROR: create prediction failed: {exc}", file=sys.stderr)
-            return 4
+
+            for attempt in range(1, max(1, create_attempts) + 1):
+                try:
+                    pred = http_json("POST", create_url, token, body, timeout=90)
+                    break
+                except error.HTTPError as exc:
+                    detail = exc.read().decode("utf-8", errors="ignore")
+                    if exc.code == 429 and attempt < max(1, create_attempts):
+                        wait_sec = 12
+                        try:
+                            parsed = json.loads(detail)
+                            wait_sec = int(parsed.get("retry_after") or wait_sec)
+                        except Exception:
+                            pass
+                        wait_sec = max(3, min(60, wait_sec))
+                        print(f"[music] rate-limited (429) model={candidate}; retrying in {wait_sec}s (attempt {attempt}/{create_attempts})", file=sys.stderr)
+                        time.sleep(wait_sec)
+                        continue
+                    if exc.code in {403, 404}:
+                        print(f"[music] skip model={candidate} HTTP {exc.code}", file=sys.stderr)
+                        pred = None
+                        break
+                    print(f"[music] ERROR: create prediction model={candidate} HTTP {exc.code}: {detail}", file=sys.stderr)
+                    return 3
+                except Exception as exc:
+                    print(f"[music] ERROR: create prediction model={candidate} failed: {exc}", file=sys.stderr)
+                    return 4
+            if pred is not None:
+                break
 
     if pred is None:
-        print("[music] ERROR: create prediction did not return a response", file=sys.stderr)
+        if version:
+            print("[music] ERROR: create prediction did not return a response", file=sys.stderr)
+        else:
+            print("[music] ERROR: no accessible music model succeeded; set BIZZAL_REPLICATE_MUSIC_MODEL to a known-allowed slug", file=sys.stderr)
         return 4
 
     pred_id = pred.get("id")
@@ -223,7 +270,7 @@ def main() -> int:
         print(f"[music] ERROR: download failed: {exc}", file=sys.stderr)
         return 10
 
-    print(f"[music] wrote {args.out} model={model} status={status}")
+    print(f"[music] wrote {args.out} model={used_model} status={status}")
     return 0
 
 
