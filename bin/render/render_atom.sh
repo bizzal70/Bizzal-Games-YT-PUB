@@ -246,6 +246,8 @@ esac
 
 COMMON="fontfile=${FONT}:fontcolor=white:line_spacing=12:text_align=center:fix_bounds=1:box=1:boxcolor=black@${BOX_ALPHA}:boxborderw=${BOX_BORDER_W}:borderw=${BORDER_W}:bordercolor=black@${BORDER_ALPHA}:shadowcolor=black@${SHADOW_ALPHA}:shadowx=${SHADOW_X}:shadowy=${SHADOW_Y}"
 XPOS="x=(w-text_w)/2"
+TEXT_BOTTOM_PAD="${BIZZAL_TEXT_BOTTOM_PAD:-250}"
+YPOS="y=max(80\,h-text_h-${TEXT_BOTTOM_PAD})"
 
 HOOK_FILE="$PAGEDIR/hook.txt"
 CTA_FILE="$PAGEDIR/cta.txt"
@@ -530,7 +532,7 @@ echo "[render] body pages secs ${BODY_SECS[*]}" >&2
 echo "[render] body layout lines_max=$BODY_LINES_MAX body_font_size=$BODY_FONT_SIZE last_min_words=$BODY_LAST_MIN_WORDS" >&2
 echo "[render] text style name=$TEXT_STYLE box_alpha=$BOX_ALPHA box_borderw=$BOX_BORDER_W borderw=$BORDER_W" >&2
 
-VF="drawtext=${COMMON}:textfile=${HOOK_FILE}:fontsize=66:${XPOS}:y=(h-text_h)/2:enable='between(t,0,${HOOK_END})',"
+VF="drawtext=${COMMON}:textfile=${HOOK_FILE}:fontsize=66:${XPOS}:${YPOS}:enable='between(t,0,${HOOK_END})',"
 PAGE_START="$HOOK_END"
 for ((i=1; i<=BODY_PAGE_COUNT; i++)); do
   PAGE_END="${BODY_ENDS[$((i-1))]}"
@@ -539,14 +541,14 @@ for ((i=1; i<=BODY_PAGE_COUNT; i++)); do
     FADE_IN_START="$(float_max 0 "$(float_sub "$PAGE_START" "$PAGE_XFADE_SEC")")"
     FADE_OUT_START="$(float_sub "$PAGE_END" "$PAGE_XFADE_SEC")"
     BODY_ALPHA="if(lt(t\,${FADE_IN_START})\,0\,if(lt(t\,${PAGE_START})\,(t-${FADE_IN_START})/${PAGE_XFADE_SEC}\,if(lt(t\,${FADE_OUT_START})\,1\,if(lt(t\,${PAGE_END})\,(${PAGE_END}-t)/${PAGE_XFADE_SEC}\,0))))"
-    VF+="drawtext=${COMMON}:textfile=${PAGE_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:y=(h-text_h)/2:alpha='${BODY_ALPHA}':enable='between(t,${FADE_IN_START},${PAGE_END})',"
+    VF+="drawtext=${COMMON}:textfile=${PAGE_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:${YPOS}:alpha='${BODY_ALPHA}':enable='between(t,${FADE_IN_START},${PAGE_END})',"
   else
-    VF+="drawtext=${COMMON}:textfile=${PAGE_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:y=(h-text_h)/2:enable='between(t,${PAGE_START},${PAGE_END})',"
+    VF+="drawtext=${COMMON}:textfile=${PAGE_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:${YPOS}:enable='between(t,${PAGE_START},${PAGE_END})',"
   fi
   PAGE_START="$PAGE_END"
 done
 CTA_END="$(float_add "$DUR" "$CTA_FINAL_HOLD_SEC")"
-VF+="drawtext=${COMMON}:textfile=${CTA_FILE}:fontsize=50:${XPOS}:y=(h-text_h)/2:enable='between(t,${BODY_END},${CTA_END})'"
+VF+="drawtext=${COMMON}:textfile=${CTA_FILE}:fontsize=50:${XPOS}:${YPOS}:enable='between(t,${BODY_END},${CTA_END})'"
 
 COLOR_DUR="$CTA_END"
 
