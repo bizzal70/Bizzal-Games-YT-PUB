@@ -18,7 +18,7 @@ export BIZZAL_AUDIO_PROFILE="${BIZZAL_AUDIO_PROFILE:-cinematic}"
 export BIZZAL_BG_MUSIC_TAIL_SEC="${BIZZAL_BG_MUSIC_TAIL_SEC:-3}"
 export BIZZAL_INTRO_PAD_SEC="${BIZZAL_INTRO_PAD_SEC:-2}"
 export BIZZAL_INTRO_FADE_SEC="${BIZZAL_INTRO_FADE_SEC:-2}"
-export BIZZAL_END_FADE_SEC="${BIZZAL_END_FADE_SEC:-2}"
+export BIZZAL_END_FADE_SEC="${BIZZAL_END_FADE_SEC:-4}"
 export BIZZAL_END_BLACK_PAD_SEC="${BIZZAL_END_BLACK_PAD_SEC:-2}"
 
 # Keep optional manual tuning available while providing stable house defaults.

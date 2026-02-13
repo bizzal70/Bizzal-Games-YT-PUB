@@ -428,7 +428,7 @@ This wrapper applies your production defaults (per-screen AI background images +
 House preset timing defaults:
 - `BIZZAL_INTRO_PAD_SEC=2`
 - `BIZZAL_INTRO_FADE_SEC=2`
-- `BIZZAL_END_FADE_SEC=2`
+- `BIZZAL_END_FADE_SEC=4`
 - `BIZZAL_END_BLACK_PAD_SEC=2`
 
 Environment flags:
