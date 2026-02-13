@@ -160,7 +160,7 @@ def creature_context(name: str, fields: dict) -> dict:
     }
 
 
-def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields: dict, default_cta: str) -> str:
+def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields: dict, default_cta: str, day: str = "") -> str:
     c = canonical_category(category)
     a = canonical_angle(c, angle)
     fallback = (default_cta or "DMs: run it with intent and reward smart play.").strip()
@@ -168,43 +168,111 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
     if c == "encounter_seed" and kind == "creature":
         ctx = creature_context(name, fields)
         if a == "moral_choice":
-            return f"DMs: stage it in {ctx['arena']} and force this choice by round 2: {ctx['choice']}."
+            return deterministic_pick([
+                f"DMs: stage it in {ctx['arena']} and force this choice by round 2: {ctx['choice']}.",
+                f"DMs: frame the scene in {ctx['arena']} and push a values decision fast: {ctx['choice']}.",
+                f"DMs: put this in {ctx['arena']} and make the party pick which loss they can live with.",
+            ], f"cta|{day}|{c}|{a}|{name}")
         if a == "time_pressure":
-            return f"DMs: put a visible countdown on the table; every lost round should escalate {ctx['pressure']}."
+            return deterministic_pick([
+                f"DMs: put a visible countdown on the table; every lost round should escalate {ctx['pressure']}.",
+                f"DMs: show the timer up front, then make delay increase {ctx['pressure']} each round.",
+                f"DMs: make the clock explicit and charge interest every turn through {ctx['pressure']}.",
+            ], f"cta|{day}|{c}|{a}|{name}")
         if a == "terrain_feature":
-            return "DMs: pick one map feature as the win condition; if they ignore it, they lose tempo immediately."
+            return deterministic_pick([
+                "DMs: pick one map feature as the win condition; if they ignore it, they lose tempo immediately.",
+                "DMs: make one terrain control point decide the flow of the fight.",
+                "DMs: tie success to one terrain feature the party must contest early.",
+            ], f"cta|{day}|{c}|{a}|{name}")
         if a == "twist":
-            return "DMs: flip the objective at midpoint and make the first plan insufficient without punishing creativity."
-        return "DMs: telegraph stakes in the first beat, then make the cost of delay obvious."
+            return deterministic_pick([
+                "DMs: flip the objective at midpoint and make the first plan insufficient without punishing creativity.",
+                "DMs: pivot the win condition once they commit, then reward adaptation.",
+                "DMs: spring a midpoint objective shift that changes priorities, not just difficulty.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        return deterministic_pick([
+            "DMs: telegraph stakes in the first beat, then make the cost of delay obvious.",
+            "DMs: show consequence first, then force commitment.",
+            "DMs: put stakes on screen early so every choice has weight.",
+        ], f"cta|{day}|{c}|{a}|{name}")
 
     if c == "monster_tactic" and kind == "creature":
         if a == "counterplay":
-            return "Players: deny its preferred fight shape first, then focus fire." 
+            return deterministic_pick([
+                "Players: deny its preferred fight shape first, then focus fire.",
+                "Players: break its setup turn, then collapse one target together.",
+                "Players: win position first; damage second.",
+            ], f"cta|{day}|{c}|{a}|{name}")
         if a == "common_mistake":
-            return "DMs: punish lazy positioning once, then let the table adapt."
-        return "DMs: run its game plan on purpose; players, answer with movement and target priority."
+            return deterministic_pick([
+                "DMs: punish lazy positioning once, then let the table adapt.",
+                "DMs: let one positional mistake hurt so the lesson sticks.",
+                "DMs: enforce one clear consequence, then reward cleaner play.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        return deterministic_pick([
+            "DMs: run its game plan on purpose; players, answer with movement and target priority.",
+            "Run the statblock like a plan, then make the table solve it.",
+            "Treat it like a tactical puzzle, not a sack of hit points.",
+        ], f"cta|{day}|{c}|{a}|{name}")
 
     if c == "spell_use_case" and kind == "spell":
         if a == "best_moment":
-            return "Players: cast when it changes the objective, not when it only adds numbers."
+            return deterministic_pick([
+                "Players: cast when it changes the objective, not when it only adds numbers.",
+                "Players: spend the slot when it flips tempo, not just when damage looks pretty.",
+                "Players: treat this as a scene tool first and a damage tool second.",
+            ], f"cta|{day}|{c}|{a}|{name}")
         if a == "common_misplay":
-            return "Table tip: call timing and target before you spend the slot."
+            return deterministic_pick([
+                "Table tip: call timing and target before you spend the slot.",
+                "Call your target and intent first; casting gets cleaner fast.",
+                "Declare the plan before the spell so the table can play around it.",
+            ], f"cta|{day}|{c}|{a}|{name}")
         if a == "dm_twist":
-            return "DMs: reward smart casting with meaningful scene consequences."
-        return "Use spell timing as a decision tool, not just a damage button."
+            return deterministic_pick([
+                "DMs: reward smart casting with meaningful scene consequences.",
+                "DMs: let clever spell use change stakes, not just hit points.",
+                "DMs: pay off good casting choices with tactical or narrative advantage.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        return deterministic_pick([
+            "Use spell timing as a decision tool, not just a damage button.",
+            "Make timing your first decision; damage is the second.",
+            "Pick the moment first, then pick the slot.",
+        ], f"cta|{day}|{c}|{a}|{name}")
 
     if c == "item_spotlight" and kind == "item":
         if a == "story_hook":
-            return "DMs: tie the item to a concrete objective so utility beats raw DPR."
+            return deterministic_pick([
+                "DMs: tie the item to a concrete objective so utility beats raw DPR.",
+                "DMs: make this item matter by attaching it to a mission-critical obstacle.",
+                "DMs: put this tool between the party and progress, not just treasure.",
+            ], f"cta|{day}|{c}|{a}|{name}")
         if a == "drawback_watchout":
-            return "Players: declare setup and anchor points before the roll."
-        return "Players: prep the environment first, then let the item do work."
+            return deterministic_pick([
+                "Players: declare setup and anchor points before the roll.",
+                "Players: call your setup details first so the item can actually shine.",
+                "Players: solve placement before outcome.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        return deterministic_pick([
+            "Players: prep the environment first, then let the item do work.",
+            "Players: use positioning to make this item worth more than raw damage.",
+            "Players: set the scene, then cash in the tool.",
+        ], f"cta|{day}|{c}|{a}|{name}")
 
     if c in ("rules_ruling", "rules_myth"):
-        return "Table rule: make one clear call, apply it consistently, and move on."
+        return deterministic_pick([
+            "Table rule: make one clear call, apply it consistently, and move on.",
+            "Rule flow: decide once, explain briefly, keep the game moving.",
+            "Consistency beats complexity—pick the ruling and stick to it.",
+        ], f"cta|{day}|{c}|{a}|{name}")
 
     if c == "character_micro_tip":
-        return "Pick one repeatable decision pattern and run it every session until it is automatic."
+        return deterministic_pick([
+            "Pick one repeatable decision pattern and run it every session until it is automatic.",
+            "Choose one class habit and execute it every fight until it becomes muscle memory.",
+            "Build consistency first; big highlight turns will follow.",
+        ], f"cta|{day}|{c}|{a}|{name}")
 
     return fallback
 
@@ -280,6 +348,13 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
 
     api_key = os.getenv("OPENAI_API_KEY") or os.getenv("BIZZAL_OPENAI_API_KEY")
     if not api_key:
+        if ai_diag_enabled():
+            print("[write_script_from_fact] AI CTA polish disabled: missing OPENAI_API_KEY", file=sys.stderr)
+        return current_cta
+
+    if looks_like_placeholder_key(api_key):
+        if ai_diag_enabled():
+            print("[write_script_from_fact] AI CTA polish disabled: placeholder API key detected", file=sys.stderr)
         return current_cta
 
     model = os.getenv("BIZZAL_OPENAI_MODEL", "gpt-4o-mini")
@@ -387,6 +462,13 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
 
     api_key = os.getenv("OPENAI_API_KEY") or os.getenv("BIZZAL_OPENAI_API_KEY")
     if not api_key:
+        if ai_diag_enabled():
+            print("[write_script_from_fact] AI script polish disabled: missing OPENAI_API_KEY", file=sys.stderr)
+        return script
+
+    if looks_like_placeholder_key(api_key):
+        if ai_diag_enabled():
+            print("[write_script_from_fact] AI script polish disabled: placeholder API key detected", file=sys.stderr)
         return script
 
     model = os.getenv("BIZZAL_OPENAI_MODEL", "gpt-4o-mini")
@@ -627,6 +709,27 @@ def short(s: str, n=160, add_ellipsis=True):
     fallback = s[:n].rstrip().rstrip(",;:-")
     return (fallback + "…") if add_ellipsis else (fallback + ".")
 
+
+def deterministic_pick(options, seed_key: str):
+    opts = [o for o in (options or []) if str(o).strip()]
+    if not opts:
+        return ""
+    h = int(hashlib.sha256(seed_key.encode("utf-8")).hexdigest(), 16)
+    return opts[h % len(opts)]
+
+
+def ai_diag_enabled() -> bool:
+    return env_true("DEBUG_RENDER", False) or env_true("BIZZAL_AI_DIAG", False)
+
+
+def looks_like_placeholder_key(api_key: str) -> bool:
+    k = (api_key or "").strip()
+    if not k:
+        return True
+    markers = ["YOUR_OPENAI_API_KEY", "REPLACE_ME", "PASTE", "sk-xxxxx"]
+    upper = k.upper()
+    return any(m in upper for m in markers)
+
 def clean_script_text(s: str) -> str:
     txt = re.sub(r"\s+", " ", (s or "").strip())
     if not txt:
@@ -697,7 +800,7 @@ def pick_actions(actions: list, k=2):
     good = [a for a in (actions or []) if (a.get("name") or "").strip() and (a.get("desc") or "").strip()]
     return good[:k]
 
-def build_monster_body(angle: str, fields: dict, traits: list, actions: list, attacks: list):
+def build_monster_body(angle: str, fields: dict, traits: list, actions: list, attacks: list, day: str = ""):
     angle = {
         "how_to_counter": "counterplay",
         "terrain_synergy": "how_it_wins",
@@ -720,7 +823,17 @@ def build_monster_body(angle: str, fields: dict, traits: list, actions: list, at
     nug = tactic_nugget(angle, traits)
 
     if angle == "how_it_wins":
-        bits = [f"{name} wins by doing its simple job ruthlessly."]
+        lead = deterministic_pick([
+            f"{name} wins by doing its simple job ruthlessly.",
+            f"{name} is scary when you let it run its plan for two rounds.",
+            f"Against {name}, the fight swings when its first pressure cycle lands.",
+        ], f"mon|{day}|{name}|{angle}|lead")
+        close = deterministic_pick([
+            "Play it fast: force one bad choice, then punish it.",
+            "Run it with intent: one mistake from the party should cost real position.",
+            "Push tempo early and make the table solve pressure, not just HP.",
+        ], f"mon|{day}|{name}|{angle}|close")
+        bits = [lead]
         if anchor:
             bits.append(anchor + ".")
         if action_blob:
@@ -729,11 +842,21 @@ def build_monster_body(angle: str, fields: dict, traits: list, actions: list, at
             bits.append(trait_line)
         if nug:
             bits.append(nug)
-        bits.append("Play it fast: force one bad choice, then punish it.")
+        bits.append(close)
         return " ".join(bits)
 
     if angle == "common_mistake":
-        bits = [f"Common mistake vs {name}: treating it like ‘just flavor.’"]
+        lead = deterministic_pick([
+            f"Common mistake vs {name}: treating it like ‘just flavor.’",
+            f"Most tables misplay {name} by giving it free setup.",
+            f"The usual error against {name} is fighting on its terms.",
+        ], f"mon|{day}|{name}|{angle}|lead")
+        close = deterministic_pick([
+            "If the party ignores positioning, this thing gets free value.",
+            "If they cluster or drift, it cashes in immediately.",
+            "One lazy turn gives it momentum that costs resources to recover.",
+        ], f"mon|{day}|{name}|{angle}|close")
+        bits = [lead]
         if anchor:
             bits.append(anchor + ".")
         if action_blob:
@@ -742,18 +865,28 @@ def build_monster_body(angle: str, fields: dict, traits: list, actions: list, at
             bits.append(trait_line)
         if nug:
             bits.append(nug)
-        bits.append("If the party ignores positioning, this thing gets free value.")
+        bits.append(close)
         return " ".join(bits)
 
     if angle == "counterplay":
-        bits = [f"Counterplay for {name}: deny its preferred fight."]
+        lead = deterministic_pick([
+            f"Counterplay for {name}: deny its preferred fight.",
+            f"Best answer to {name}: break the shape of the fight it wants.",
+            f"Versus {name}, play denial first and damage second.",
+        ], f"mon|{day}|{name}|{angle}|lead")
+        close = deterministic_pick([
+            "Use terrain, spacing, and focus-fire to remove its turns from the board.",
+            "Control lanes, isolate targets, and collapse one threat at a time.",
+            "Win the map first; the hit points follow.",
+        ], f"mon|{day}|{name}|{angle}|close")
+        bits = [lead]
         if anchor:
             bits.append(anchor + ".")
         if action_blob:
             bits.append("Watch for: " + action_blob + ".")
         if nug:
             bits.append(nug)
-        bits.append("Use terrain, spacing, and focus-fire to remove its turns from the board.")
+        bits.append(close)
         if trait_line:
             bits.append("Also: " + trait_line)
         return " ".join(bits)
@@ -963,23 +1096,47 @@ def build_class_body(angle: str, fields: dict):
     bits.append("Strong turns come from repeatable decisions, not lucky spikes.")
     return " ".join(bits)
 
-def build_encounter_body(angle: str, fields: dict, traits: list, actions: list):
+def build_encounter_body(angle: str, fields: dict, traits: list, actions: list, day: str = ""):
     name = fields.get("name") or "This encounter anchor"
     anchor = creature_anchor(fields)
     angle = (angle or "").strip().lower()
 
     if angle == "three_beats":
-        lead = f"Three-beat encounter seed: reveal {name}, escalate pressure, then force a hard choice."
+        lead = deterministic_pick([
+            f"Three-beat encounter seed: reveal {name}, escalate pressure, then force a hard choice.",
+            f"Run this in three beats with {name}: warning, pressure spike, irreversible decision.",
+            f"Build a three-step scene around {name}: clue, escalation, consequence.",
+        ], f"enc|{day}|{name}|{angle}|lead")
     elif angle == "twist":
-        lead = f"Twist for a {name} encounter: change the objective mid-scene, not just the hit points."
+        lead = deterministic_pick([
+            f"Twist for a {name} encounter: change the objective mid-scene, not just the hit points.",
+            f"Encounter twist with {name}: the win condition shifts once the party commits.",
+            f"Use {name} for a midpoint twist that rewrites priorities, not stats.",
+        ], f"enc|{day}|{name}|{angle}|lead")
     elif angle == "terrain_feature":
-        lead = f"Terrain feature seed with {name}: make the map itself a problem to solve."
+        lead = deterministic_pick([
+            f"Terrain feature seed with {name}: make the map itself a problem to solve.",
+            f"Map-first encounter with {name}: terrain should matter every round.",
+            f"Anchor this {name} scene on one terrain feature the party cannot ignore.",
+        ], f"enc|{day}|{name}|{angle}|lead")
     elif angle == "time_pressure":
-        lead = f"Time pressure seed for {name}: each round lost should cost position, resources, or civilians."
+        lead = deterministic_pick([
+            f"Time pressure seed for {name}: each round lost should cost position, resources, or civilians.",
+            f"Against {name}, put a clock on the scene and charge interest every round.",
+            f"Use {name} with a visible timer so indecision becomes the real damage source.",
+        ], f"enc|{day}|{name}|{angle}|lead")
     elif angle == "moral_choice":
-        lead = f"Moral-choice seed with {name}: success should ask what the party is willing to sacrifice."
+        lead = deterministic_pick([
+            f"Moral-choice seed with {name}: success should ask what the party is willing to sacrifice.",
+            f"Frame {name} as a values test: they can save everything, or they can win cleanly—not both.",
+            f"Use {name} to force a moral fork where every path has a cost.",
+        ], f"enc|{day}|{name}|{angle}|lead")
     else:
-        lead = f"Encounter seed using {name}: set stakes before the first roll."
+        lead = deterministic_pick([
+            f"Encounter seed using {name}: set stakes before the first roll.",
+            f"Build this {name} scene around stakes the party can name in one sentence.",
+            f"Open with stakes, then let {name} test the table's priorities.",
+        ], f"enc|{day}|{name}|{angle}|lead")
 
     bits = [lead]
     if anchor:
@@ -991,7 +1148,11 @@ def build_encounter_body(angle: str, fields: dict, traits: list, actions: list):
         action_names = [a.get("name") for a in actions if (a.get("name") or "").strip()]
         if action_names:
             bits.append("Signature pressure: " + ", ".join(action_names[:2]) + ".")
-    bits.append("Give players one clear clue and one costly decision.")
+    bits.append(deterministic_pick([
+        "Give players one clear clue and one costly decision.",
+        "Telegraph one danger, then make the next choice expensive.",
+        "Show the consequence early so their decision actually matters.",
+    ], f"enc|{day}|{name}|{angle}|close"))
     return " ".join(bits)
 
 def main():
@@ -1024,32 +1185,32 @@ def main():
     if category == "item_spotlight" and kind == "item":
         hook, cta = pick_voice_lines(style_cfg, voice_name, category, name, angle=angle or "", day=day)
         body = build_item_body(angle, fields)
-        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
+        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta, day=day)
 
     elif category == "monster_tactic" and kind == "creature":
         hook, cta = pick_voice_lines(style_cfg, voice_name, category, name, angle=angle or "", day=day)
-        body = build_monster_body(angle, fields, fact.get("traits") or [], fact.get("actions") or [], fact.get("attacks") or [])
-        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
+        body = build_monster_body(angle, fields, fact.get("traits") or [], fact.get("actions") or [], fact.get("attacks") or [], day=day)
+        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta, day=day)
 
     elif category == "spell_use_case" and kind == "spell":
         hook, cta = pick_voice_lines(style_cfg, voice_name, category, name, angle=angle or "", day=day)
         body = build_spell_body(angle, fields)
-        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
+        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta, day=day)
 
     elif category == "encounter_seed" and kind == "creature":
         hook, cta = pick_voice_lines(style_cfg, voice_name, category, name, angle=angle or "", day=day)
-        body = build_encounter_body(angle, fields, fact.get("traits") or [], fact.get("actions") or [])
-        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
+        body = build_encounter_body(angle, fields, fact.get("traits") or [], fact.get("actions") or [], day=day)
+        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta, day=day)
 
     elif category in ("rules_ruling", "rules_myth") and kind == "rule":
         hook, cta = pick_voice_lines(style_cfg, voice_name, category, name, angle=angle or "", day=day)
         body = build_rule_body(angle, fields)
-        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
+        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta, day=day)
 
     elif category == "character_micro_tip" and kind == "class":
         hook, cta = pick_voice_lines(style_cfg, voice_name, category, name, angle=angle or "", day=day)
         body = build_class_body(angle, fields)
-        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta)
+        script["hook"], script["body"], script["cta"] = hook, body, build_contextual_cta(category, angle, kind, name, fields, cta, day=day)
 
     else:
         print(f"ERROR: Unsupported category/kind: {category}/{kind}", file=sys.stderr)
