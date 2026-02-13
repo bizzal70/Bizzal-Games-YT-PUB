@@ -250,8 +250,48 @@ bin/core/setup_publish_env.sh
 Flow:
 - Daily run posts the generated script to Discord with instructions.
 - Approver replies in channel: `approve YYYY-MM-DD` (or `approve <content_id>`).
+- Shortcut supported: if only one pending item, reply with `Approved` (or `Rejected`).
 - Approval processor publishes automatically.
 - Discord posts confirmation updates: approval accepted, publish started, and publish complete/failed.
+
+### YouTube Auto-Publish Adapter (recommended)
+Uploader scripts:
+- `bin/upload/upload_youtube.py`
+- `bin/upload/publish_latest_youtube.sh`
+
+One-time package install on Umbrel:
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+. .venv/bin/activate
+python3 -m pip install -r requirements.txt
+```
+
+One-time YouTube OAuth setup:
+
+```bash
+mkdir -p ~/.config/bizzal
+# place your Google OAuth client JSON here:
+# ~/.config/bizzal/youtube_client_secrets.json
+```
+
+Optional uploader env:
+
+```bash
+export BIZZAL_YT_CLIENT_SECRETS=~/.config/bizzal/youtube_client_secrets.json
+export BIZZAL_YT_TOKEN_FILE=~/.config/bizzal/youtube_token.json
+export BIZZAL_YT_PRIVACY=private
+export BIZZAL_YT_CATEGORY_ID=20
+export BIZZAL_YT_OAUTH_MODE=console
+```
+
+Set publish command to stable wrapper:
+
+```bash
+export BIZZAL_PUBLISH_CMD=/home/umbrel/Bizzal_Games_Pub/bin/upload/publish_latest_youtube.sh
+```
+
+First run will prompt OAuth and store refresh token; later runs publish directly.
 
 Manual commands:
 

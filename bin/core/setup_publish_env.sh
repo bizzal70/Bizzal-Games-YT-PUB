@@ -3,6 +3,8 @@ set -euo pipefail
 
 ENV_FILE="${HOME}/.config/bizzal.env"
 BASHRC_FILE="${HOME}/.bashrc"
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+DEFAULT_PUBLISH_CMD="$REPO_ROOT/bin/upload/publish_latest_youtube.sh"
 
 mkdir -p "$(dirname "$ENV_FILE")"
 
@@ -53,6 +55,9 @@ fi
 prompt_value BIZZAL_DISCORD_BOT_TOKEN "Discord bot token" 1
 prompt_value BIZZAL_DISCORD_CHANNEL_ID "Discord channel ID"
 prompt_value BIZZAL_DISCORD_APPROVER_USER_IDS "Approver user ID(s), comma-separated"
+if [[ -z "${BIZZAL_PUBLISH_CMD:-}" && -x "$DEFAULT_PUBLISH_CMD" ]]; then
+  BIZZAL_PUBLISH_CMD="$DEFAULT_PUBLISH_CMD"
+fi
 prompt_value BIZZAL_PUBLISH_CMD "Publish command (exact upload command)"
 
 required=(

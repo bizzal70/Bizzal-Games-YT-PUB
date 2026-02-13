@@ -104,12 +104,20 @@ def discord_get_messages(bot_token: str, channel_id: str, limit: int = 50) -> li
 def parse_approval_command(content: str) -> tuple[str, str] | None:
     txt = (content or "").strip().lower()
     parts = txt.split()
-    if len(parts) < 2:
+    if not parts:
         return None
     cmd = parts[0]
-    arg = parts[1]
-    if cmd in {"approve", "reject"}:
-        return cmd, arg
+    cmd_alias = {
+        "approve": "approve",
+        "approved": "approve",
+        "reject": "reject",
+        "rejected": "reject",
+    }.get(cmd)
+    if not cmd_alias:
+        return None
+    arg = parts[1] if len(parts) >= 2 else ""
+    if cmd_alias in {"approve", "reject"}:
+        return cmd_alias, arg
     return None
 
 
@@ -280,13 +288,21 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
         if not parsed:
             continue
         cmd, arg = parsed
+        arg = (arg or "").strip().lower()
 
-        for day in list(pending_days):
+        target_days = list(pending_days)
+        if not arg:
+            if len(pending_days) == 1:
+                target_days = [pending_days[0]]
+            else:
+                continue
+
+        for day in target_days:
             entry = approvals.get(day) or {}
             if entry.get("status") != "pending":
                 continue
             content_id = str(entry.get("content_id") or "")
-            if arg not in {day.lower(), content_id.lower()}:
+            if arg and arg not in {day.lower(), content_id.lower()}:
                 continue
 
             if cmd == "reject":
