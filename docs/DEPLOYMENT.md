@@ -245,6 +245,7 @@ Flow:
 - Daily run posts the generated script to Discord with instructions.
 - Approver replies in channel: `approve YYYY-MM-DD` (or `approve <content_id>`).
 - Approval processor publishes automatically.
+- Discord posts confirmation updates: approval accepted, publish started, and publish complete/failed.
 
 Manual commands:
 

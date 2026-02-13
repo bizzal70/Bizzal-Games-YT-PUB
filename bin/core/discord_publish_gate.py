@@ -268,27 +268,23 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                 approvals[day] = entry
                 changed = True
                 print(f"[discord_publish_gate] rejected day={day} by={uid}")
+                if webhook_url:
+                    try:
+                        webhook_post_json(
+                            webhook_url,
+                            {
+                                "username": "Bizzal Publish Gate",
+                                "content": f"🛑 Rejected `{day}` (`{content_id}`) by <@{uid}>.",
+                            },
+                            wait=False,
+                        )
+                    except Exception:
+                        pass
                 continue
 
             entry["status"] = "approved"
             entry["decision_utc"] = now_utc()
             entry["decision_by"] = uid
-
-            if publish:
-                rc, output = run_publish_command(repo_root, day)
-                entry["publish_rc"] = rc
-                entry["publish_output"] = short(output, 800)
-                if rc == 0:
-                    entry["status"] = "published"
-                    print(f"[discord_publish_gate] approved+pushed day={day} by={uid}")
-                else:
-                    entry["status"] = "approved_publish_failed"
-                    print(f"[discord_publish_gate] approved but publish failed day={day} rc={rc}")
-            else:
-                print(f"[discord_publish_gate] approved day={day} by={uid}")
-
-            approvals[day] = entry
-            changed = True
 
             if webhook_url:
                 try:
@@ -296,12 +292,77 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                         webhook_url,
                         {
                             "username": "Bizzal Publish Gate",
-                            "content": f"Decision recorded for `{day}`: `{approvals[day].get('status')}`",
+                            "content": f"✅ Approval accepted for `{day}` (`{content_id}`) by <@{uid}>.",
                         },
                         wait=False,
                     )
                 except Exception:
                     pass
+
+            if publish:
+                if webhook_url:
+                    try:
+                        webhook_post_json(
+                            webhook_url,
+                            {
+                                "username": "Bizzal Publish Gate",
+                                "content": f"🚀 Publish started for `{day}` (`{content_id}`).",
+                            },
+                            wait=False,
+                        )
+                    except Exception:
+                        pass
+
+                rc, output = run_publish_command(repo_root, day)
+                entry["publish_rc"] = rc
+                entry["publish_output"] = short(output, 800)
+                if rc == 0:
+                    entry["status"] = "published"
+                    print(f"[discord_publish_gate] approved+pushed day={day} by={uid}")
+                    if webhook_url:
+                        try:
+                            webhook_post_json(
+                                webhook_url,
+                                {
+                                    "username": "Bizzal Publish Gate",
+                                    "content": f"🎉 Publish complete for `{day}` (`{content_id}`).",
+                                },
+                                wait=False,
+                            )
+                        except Exception:
+                            pass
+                else:
+                    entry["status"] = "approved_publish_failed"
+                    print(f"[discord_publish_gate] approved but publish failed day={day} rc={rc}")
+                    if webhook_url:
+                        try:
+                            webhook_post_json(
+                                webhook_url,
+                                {
+                                    "username": "Bizzal Publish Gate",
+                                    "content": f"❌ Publish failed for `{day}` (`{content_id}`), rc={rc}. Check logs.",
+                                },
+                                wait=False,
+                            )
+                        except Exception:
+                            pass
+            else:
+                print(f"[discord_publish_gate] approved day={day} by={uid}")
+                if webhook_url:
+                    try:
+                        webhook_post_json(
+                            webhook_url,
+                            {
+                                "username": "Bizzal Publish Gate",
+                                "content": f"ℹ️ `{day}` approved and queued; publish runner not executed in this check.",
+                            },
+                            wait=False,
+                        )
+                    except Exception:
+                        pass
+
+            approvals[day] = entry
+            changed = True
 
     if changed:
         state["approvals"] = approvals
