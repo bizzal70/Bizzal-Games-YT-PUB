@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import csv
+import hashlib
 import json
 import os
 from datetime import datetime
@@ -24,6 +25,28 @@ def parse_args():
 
 def manifest_path_for_month(month: str) -> str:
     return os.path.join(MONTHLY_ROOT, month, "manifest.json")
+
+
+def segment_record(entry: dict, segment_name: str, raw_segment):
+    if isinstance(raw_segment, dict):
+        return {
+            "segment_id": raw_segment.get("segment_id"),
+            "voice_track_id": raw_segment.get("voice_track_id"),
+            "visual_asset_id": raw_segment.get("visual_asset_id"),
+        }
+
+    # Legacy manifests store segment IDs as plain strings.
+    if isinstance(raw_segment, str) and raw_segment.strip():
+        segment_id = raw_segment.strip()
+    else:
+        content_id = entry.get("content_id") or "unknown"
+        segment_id = f"seg-{segment_name}-{hashlib.sha256((content_id + '|' + segment_name).encode('utf-8')).hexdigest()[:10]}"
+
+    return {
+        "segment_id": segment_id,
+        "voice_track_id": f"vox-{segment_name}-{hashlib.sha256((segment_id + '|voice').encode('utf-8')).hexdigest()[:10]}",
+        "visual_asset_id": f"img-{segment_name}-{hashlib.sha256((segment_id + '|visual').encode('utf-8')).hexdigest()[:10]}",
+    }
 
 
 def write_content_md(out_path: str, manifest: dict):
@@ -80,7 +103,7 @@ def write_assets_csv(out_path: str, manifest: dict):
         for entry in manifest.get("entries", []):
             segments = entry.get("segments") or {}
             for segment_name in ("hook", "body", "cta"):
-                seg = segments.get(segment_name) or {}
+                seg = segment_record(entry, segment_name, segments.get(segment_name))
                 writer.writerow(
                     {
                         "month": manifest.get("month"),
