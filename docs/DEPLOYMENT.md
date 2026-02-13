@@ -76,6 +76,19 @@ export BIZZAL_SRD_PDF_PATH=/home/umbrel/umbrel/data/reference/srd/SRD_CC_v5.2.1.
 
 - Generated atoms carry `source.srd_pdf_path` metadata so later AI stages can consume the same canonical PDF source.
 
+## Monthly Zine Export Manifest
+Generate a month-level manifest keyed by canonical content/segment IDs:
+
+```bash
+bin/core/monthly_export_manifest.py --month 2026-02
+```
+
+Outputs:
+- `data/archive/monthly/YYYY-MM/manifest.json`
+- `data/archive/monthly/YYYY-MM/manifest.md`
+
+These are designed for downstream voice/image reconciliation and monthly compilation workflows.
+
 ## Verification Checklist
 ```bash
 git status -sb
