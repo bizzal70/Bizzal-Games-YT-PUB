@@ -22,6 +22,7 @@ MUSIC_ENABLED="${BIZZAL_ENABLE_BG_MUSIC:-0}"
 PAGE_XFADE_SEC="${BIZZAL_PAGE_XFADE_SEC:-0.15}"
 CTA_FINAL_HOLD_SEC="${BIZZAL_CTA_FINAL_HOLD_SEC:-0.30}"
 AUDIO_PROFILE="${BIZZAL_AUDIO_PROFILE:-default}"
+BG_MUSIC_TAIL_SEC="${BIZZAL_BG_MUSIC_TAIL_SEC:-3}"
 PREVIEW_HOST="${BIZZAL_PREVIEW_HOST:-192.168.68.128}"
 PREVIEW_PORT="${BIZZAL_PREVIEW_PORT:-8766}"
 ECHO_PREVIEW_URL="${BIZZAL_ECHO_PREVIEW_URL:-1}"
@@ -543,6 +544,7 @@ PY
   fi
 
   FINAL_AUDIO="$AUDIO_MUX"
+  BG_GAIN_USED=""
   if (( MUSIC_OK == 1 )); then
     VIDEO_MUX_SEC="$(probe_duration "$MUX_VIDEO")"
     MUSIC_LOOP="$TMPDIR/music_loop.wav"
@@ -588,6 +590,7 @@ PY
       "$MUSIC_LOOP"
 
     BG_GAIN="${BIZZAL_BG_MUSIC_GAIN:-$BG_GAIN_DEFAULT}"
+    BG_GAIN_USED="$BG_GAIN"
     DUCK_THRESHOLD="${BIZZAL_BG_DUCK_THRESHOLD:-$DUCK_THRESHOLD_DEFAULT}"
     DUCK_RATIO="${BIZZAL_BG_DUCK_RATIO:-$DUCK_RATIO_DEFAULT}"
     DUCK_ATTACK="${BIZZAL_BG_DUCK_ATTACK_MS:-$DUCK_ATTACK_DEFAULT}"
@@ -608,6 +611,42 @@ PY
     FINAL_AUDIO="$MIXED_AUDIO"
     cp -f "$MUSIC_WAV" "$LATEST_MUSIC_WAV"
     echo "[render] wrote $MUSIC_WAV" >&2
+  fi
+
+  if (( MUSIC_OK == 1 )) && [[ "$BG_MUSIC_TAIL_SEC" != "0" ]]; then
+    TAIL_SEC="$BG_MUSIC_TAIL_SEC"
+
+    VIDEO_TAIL_OUT="$TMPDIR/video_tail_fade.mp4"
+    VIDEO_NOW_SEC="$(probe_duration "$MUX_VIDEO")"
+    ffmpeg -y -hide_banner -loglevel error \
+      -i "$MUX_VIDEO" \
+      -vf "tpad=stop_mode=clone:stop_duration=${TAIL_SEC},fade=t=out:st=${VIDEO_NOW_SEC}:d=${TAIL_SEC}:color=black" \
+      -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
+      "$VIDEO_TAIL_OUT"
+    MUX_VIDEO="$VIDEO_TAIL_OUT"
+
+    MUSIC_TAIL_SEG="$TMPDIR/music_tail_seg.wav"
+    MUSIC_TAIL_GAIN="${BG_GAIN_USED:-${BIZZAL_BG_MUSIC_GAIN:-0.42}}"
+    ffmpeg -y -hide_banner -loglevel error \
+      -stream_loop -1 -i "$MUSIC_WAV" \
+      -t "$TAIL_SEC" \
+      -af "aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,volume=${MUSIC_TAIL_GAIN},afade=t=in:st=0:d=0.12,afade=t=out:st=0:d=${TAIL_SEC},alimiter=limit=0.97" \
+      -c:a pcm_s16le \
+      "$MUSIC_TAIL_SEG"
+
+    AUDIO_CONCAT_LIST="$TMPDIR/audio_tail_concat.txt"
+    : > "$AUDIO_CONCAT_LIST"
+    echo "file $FINAL_AUDIO" >> "$AUDIO_CONCAT_LIST"
+    echo "file $MUSIC_TAIL_SEG" >> "$AUDIO_CONCAT_LIST"
+
+    FINAL_WITH_TAIL="$TMPDIR/final_audio_with_tail.wav"
+    ffmpeg -y -hide_banner -loglevel error \
+      -f concat -safe 0 -i "$AUDIO_CONCAT_LIST" \
+      -c:a pcm_s16le \
+      "$FINAL_WITH_TAIL"
+    FINAL_AUDIO="$FINAL_WITH_TAIL"
+
+    echo "[render] outro tail applied seconds=${TAIL_SEC} fade=black+music" >&2
   fi
 
   ffmpeg -y -hide_banner -loglevel error \

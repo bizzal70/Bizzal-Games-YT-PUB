@@ -393,6 +393,7 @@ Environment flags:
 - Optional: `BIZZAL_REPLICATE_MUSIC_VERSION` (pin if model-level calls are restricted on your account).
 - Optional: `BIZZAL_BG_MUSIC_SECONDS` (default uses current render duration).
 - Optional: `BIZZAL_BG_MUSIC_INCLUDE_DURATION=1` (off by default; enables `duration/seconds` input fields for models that require them).
+- Optional: `BIZZAL_BG_MUSIC_TAIL_SEC` (default `3`; extends outro with music-only fade while screen fades to black).
 - Optional: `BIZZAL_AUDIO_PROFILE=cinematic` (warmer/wider defaults and gentler ducking).
 - Optional: `BIZZAL_FINAL_LOUDNORM=1` (default on; normalizes final loudness for more consistent playback).
 - Optional: `BIZZAL_BG_MUSIC_GAIN` (default `0.42`, when TTS is present).
