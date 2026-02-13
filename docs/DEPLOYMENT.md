@@ -400,6 +400,11 @@ bin/render/run_house_render.sh 2026-02-13
 
 This wrapper applies your production defaults (cinematic audio profile, TTS+music on, tuned ducking/tone, and music fade-out tail) and then runs `render_atom.sh`.
 
+House preset timing defaults:
+- `BIZZAL_INTRO_PAD_SEC=2`
+- `BIZZAL_INTRO_FADE_SEC=2`
+- `BIZZAL_END_BLACK_PAD_SEC=2`
+
 Environment flags:
 - `BIZZAL_ENABLE_BG_MUSIC=1` enables music generation and mixing.
 - `REPLICATE_API_TOKEN` required for Replicate calls.
@@ -408,6 +413,9 @@ Environment flags:
 - Optional: `BIZZAL_BG_MUSIC_SECONDS` (default uses current render duration).
 - Optional: `BIZZAL_BG_MUSIC_INCLUDE_DURATION=1` (off by default; enables `duration/seconds` input fields for models that require them).
 - Optional: `BIZZAL_BG_MUSIC_TAIL_SEC` (default `3`; extends outro with music-only fade while screen fades to black).
+- Optional: `BIZZAL_INTRO_PAD_SEC` (default `0` in base renderer; prepends black before content starts).
+- Optional: `BIZZAL_INTRO_FADE_SEC` (default `0`; fades from black into content after intro pad).
+- Optional: `BIZZAL_END_BLACK_PAD_SEC` (default `0`; adds post-content fade-to-black pad).
 - Optional: `BIZZAL_AUDIO_PROFILE=cinematic` (warmer/wider defaults and gentler ducking).
 - Optional: `BIZZAL_FINAL_LOUDNORM=1` (default on; normalizes final loudness for more consistent playback).
 - Optional: `BIZZAL_BG_MUSIC_GAIN` (default `0.42`, when TTS is present).
