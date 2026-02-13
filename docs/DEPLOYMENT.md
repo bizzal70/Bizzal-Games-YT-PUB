@@ -365,10 +365,11 @@ Optional cron log dir override:
 BIZZAL_DAILY_CRON_LOG_DIR=/home/umbrel/Bizzal_Games_Pub/logs bin/core/run_daily_diag_cron.sh
 ```
 
-Suggested daily cron on Umbrel (09:00 UTC):
+Suggested daily cron on Umbrel (8:00 PM Mountain):
 
 ```bash
-0 9 * * * cd /home/umbrel/Bizzal_Games_Pub && bin/core/run_daily_diag_cron.sh
+CRON_TZ=America/Denver
+0 20 * * * cd /home/umbrel/Bizzal_Games_Pub && bin/core/run_daily_diag_cron.sh
 ```
 
 One-command cron automation installer (idempotent):
@@ -396,9 +397,25 @@ bin/core/uninstall_cron_automation.sh --dry-run
 ```
 
 This installs/updates one managed cron block with:
-- daily `run_daily_diag_cron.sh` (09:00 UTC)
-- weekly `prune_daily_diag_logs.sh --keep-days 30` (Sunday 09:20 UTC)
-- monthly `monthly_release_cron.sh "$(date -d 'last month' +%Y-%m)"` (1st at 06:10 UTC)
+- `CRON_TZ=America/Denver` local-time scheduling
+- daily `run_daily_diag_cron.sh` (8:00 PM Mountain)
+- weekly `prune_daily_diag_logs.sh --keep-days 30` (Sunday 8:20 PM Mountain)
+- monthly `monthly_release_cron.sh "$(date -d 'last month' +%Y-%m)"` (1st at 8:10 PM Mountain)
+
+Optional schedule overrides (before running installer):
+
+```bash
+export BIZZAL_AUTOMATION_CRON_TZ=America/Denver
+export BIZZAL_AUTOMATION_DAILY_HOUR=20
+export BIZZAL_AUTOMATION_DAILY_MIN=0
+export BIZZAL_AUTOMATION_WEEKLY_DAY=0
+export BIZZAL_AUTOMATION_WEEKLY_HOUR=20
+export BIZZAL_AUTOMATION_WEEKLY_MIN=20
+export BIZZAL_AUTOMATION_MONTHLY_DAY=1
+export BIZZAL_AUTOMATION_MONTHLY_HOUR=20
+export BIZZAL_AUTOMATION_MONTHLY_MIN=10
+bin/core/install_cron_automation.sh
+```
 
 Prune old daily diagnostic logs (default keep: 30 days):
 
@@ -412,10 +429,11 @@ Dry run preview:
 bin/core/prune_daily_diag_logs.sh --keep-days 30 --dry-run
 ```
 
-Suggested weekly prune cron on Umbrel (Sunday 09:20 UTC):
+Suggested weekly prune cron on Umbrel (Sunday 8:20 PM Mountain):
 
 ```bash
-20 9 * * 0 cd /home/umbrel/Bizzal_Games_Pub && bin/core/prune_daily_diag_logs.sh --keep-days 30
+CRON_TZ=America/Denver
+20 20 * * 0 cd /home/umbrel/Bizzal_Games_Pub && bin/core/prune_daily_diag_logs.sh --keep-days 30
 ```
 
 Current behavior:
