@@ -24,3 +24,8 @@ __pycache__/
 *.pyc
 .venv/
 .vscode/
+
+# local secrets
+.env.ai
+.env.discord_health
+.env.health_mail
