@@ -351,6 +351,18 @@ Dry-run preview:
 bin/core/install_cron_automation.sh --dry-run
 ```
 
+Remove the managed automation cron block:
+
+```bash
+bin/core/uninstall_cron_automation.sh
+```
+
+Uninstall dry-run preview:
+
+```bash
+bin/core/uninstall_cron_automation.sh --dry-run
+```
+
 This installs/updates one managed cron block with:
 - daily `run_daily_diag_cron.sh` (09:00 UTC)
 - weekly `prune_daily_diag_logs.sh --keep-days 30` (Sunday 09:20 UTC)
