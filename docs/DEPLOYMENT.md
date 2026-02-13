@@ -241,6 +241,12 @@ export BIZZAL_DISCORD_CHANNEL_ID='YOUR_CHANNEL_ID'
 export BIZZAL_DISCORD_APPROVER_USER_IDS='123456789012345678,234567890123456789'
 ```
 
+Interactive setup (prompts for each value and persists to `~/.config/bizzal.env`):
+
+```bash
+bin/core/setup_publish_env.sh
+```
+
 Flow:
 - Daily run posts the generated script to Discord with instructions.
 - Approver replies in channel: `approve YYYY-MM-DD` (or `approve <content_id>`).
