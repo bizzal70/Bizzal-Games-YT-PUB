@@ -16,6 +16,8 @@ data/assets/
 # reference corpuses (keep attribution/licenses if you want)
 reference/open5e/
 reference/srd5.1/
+reference/active
+reference/snapshots/
 
 # misc
 __pycache__/

@@ -7,6 +7,8 @@ try:
 except ImportError:
     yaml = None
 
+from reference_paths import resolve_active_srd_path, resolve_srd_pdf_path
+
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 
 CONFIG_DIR   = os.path.join(REPO_ROOT, "config")
@@ -17,6 +19,7 @@ FAILED_DIR   = os.path.join(DATA_DIR, "atoms", "failed")
 
 TOPIC_SPINE  = os.path.join(CONFIG_DIR, "topic_spine.yaml")
 SCHEMA_MIN   = os.path.join(CONFIG_DIR, "atom_schema_min.json")
+REF_CFG      = os.path.join(CONFIG_DIR, "reference_sources.yaml")
 
 DOW_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 
@@ -226,6 +229,13 @@ def main():
     atom["fact"] = {}
     atom["script"] = {}
     atom["script_id"] = None
+
+    active_srd_path, _ = resolve_active_srd_path(REPO_ROOT, REF_CFG)
+    srd_pdf_path, _ = resolve_srd_pdf_path(REPO_ROOT, REF_CFG)
+    atom.setdefault("source", {})
+    atom["source"]["active_srd_path"] = active_srd_path
+    atom["source"]["srd_pdf_path"] = srd_pdf_path
+
     atomic_write_json(ATOM_PATH, atom)
 
     # Fill picks (preferred broad-category picker), fallback to legacy per-category pickers.

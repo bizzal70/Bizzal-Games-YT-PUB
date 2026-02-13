@@ -28,7 +28,8 @@ bin/core/run_daily.sh
 - Pipeline scripts resolve sources in this order:
 	1) `BIZZAL_ACTIVE_SRD_PATH` (or `BG_ACTIVE_SRD_PATH`)
 	2) `config/reference_sources.yaml` `active_srd_path`
-	3) repo fallback `reference/srd5.1`
+	3) repo fallback `reference/active`
+	4) legacy fallback `reference/srd5.1`
 
 If you want a local dev mirror from Umbrel:
 
@@ -38,12 +39,42 @@ rsync -av --delete \
 	reference/srd5.1/
 ```
 
+Or use the helper script from repo root (recommended):
+
+```bash
+bin/core/sync_reference_from_umbrel.sh
+```
+
+Optional explicit args:
+
+```bash
+bin/core/sync_reference_from_umbrel.sh 192.168.68.128 umbrel /home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD
+```
+
+For the Open5e v2 WotC SRD 2024 path:
+
+```bash
+bin/core/sync_reference_from_umbrel.sh 192.168.68.128 umbrel /home/umbrel/umbrel/data/reference/open5e/open5e-api/data/v2/wizards-of-the-coast/srd-2024
+```
+
+The script creates a timestamped snapshot under `reference/snapshots/`, updates `reference/active` to the latest snapshot, and mirrors to `reference/srd5.1` for backward compatibility.
+
 Then verify:
 
 ```bash
 bin/core/inventory_active_srd.py
 ls -la data/reference_inventory/
 ```
+
+## SRD PDF for AI Flavor/Context
+- `config/reference_sources.yaml` includes `srd_pdf_path` for SRD narrative/context retrieval.
+- Override via env if needed:
+
+```bash
+export BIZZAL_SRD_PDF_PATH=/home/umbrel/umbrel/data/reference/srd/SRD_CC_v5.2.1.pdf
+```
+
+- Generated atoms carry `source.srd_pdf_path` metadata so later AI stages can consume the same canonical PDF source.
 
 ## Verification Checklist
 ```bash

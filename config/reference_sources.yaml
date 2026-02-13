@@ -1,5 +1,6 @@
 # Canonical reference sources for WotC SRD 2024 (Django fixture JSON)
-active_srd_path: reference/srd5.1
+active_srd_path: reference/active
+srd_pdf_path: reference/srd/SRD_CC_v5.2.1.pdf
 
 sources:
   creatures:

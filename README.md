@@ -37,6 +37,14 @@ export BIZZAL_ACTIVE_SRD_PATH=/home/umbrel/umbrel/data/reference/open5e/ACTIVE_W
 bin/core/run_daily.sh
 ```
 
+For local testing with the same corpus, sync it from Umbrel into this workspace:
+
+```bash
+bin/core/sync_reference_from_umbrel.sh
+```
+
+This creates a timestamped snapshot under `reference/snapshots/`, updates `reference/active`, mirrors `reference/srd5.1/` (legacy compatibility), and regenerates reference inventory artifacts.
+
 ## Structure
 - bin/        core/render/upload/utils scripts
 - config/     templates + configuration
