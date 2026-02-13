@@ -6,6 +6,7 @@ import socket
 import subprocess
 import sys
 from datetime import datetime, timezone
+from urllib import error
 from urllib import request
 
 
@@ -77,15 +78,52 @@ def build_payload(host: str, month_label: str, health_rc: int, health: dict, hea
 
 
 def post_webhook(webhook_url: str, payload: dict):
+    webhook_url = webhook_url.replace("https://discordapp.com/", "https://discord.com/")
     data = json.dumps(payload).encode("utf-8")
     req = request.Request(
         webhook_url,
         data=data,
-        headers={"Content-Type": "application/json"},
+        headers={
+            "Content-Type": "application/json",
+            "User-Agent": "BizzalPipelineBot/1.0 (+https://github.com/bizzal70/Bizzal-Games-YT-PUB)",
+        },
         method="POST",
     )
-    with request.urlopen(req, timeout=30) as resp:
-        _ = resp.read()
+    try:
+        with request.urlopen(req, timeout=30) as resp:
+            _ = resp.read()
+        return
+    except error.HTTPError as exc:
+        if exc.code not in {401, 403}:
+            raise
+
+    curl_cmd = [
+        "curl",
+        "-sS",
+        "-o",
+        "/tmp/bizzal_discord_webhook_resp.txt",
+        "-w",
+        "%{http_code}",
+        "-X",
+        "POST",
+        webhook_url,
+        "-H",
+        "Content-Type: application/json",
+        "--data-binary",
+        json.dumps(payload),
+    ]
+    proc = subprocess.run(curl_cmd, capture_output=True, text=True)
+    status = (proc.stdout or "").strip()
+    if status.startswith("2"):
+        return
+
+    body = ""
+    try:
+        with open("/tmp/bizzal_discord_webhook_resp.txt", "r", encoding="utf-8") as f:
+            body = f.read().strip()
+    except OSError:
+        body = ""
+    raise RuntimeError(f"discord webhook rejected: http={status or 'unknown'} body={body or '(empty)'}")
 
 
 def main() -> int:
