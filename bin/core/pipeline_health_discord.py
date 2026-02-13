@@ -84,6 +84,27 @@ def build_payload(host: str, month_label: str, health_rc: int, health: dict, hea
     }
 
 
+def suggested_next_command(repo_root: str, month_label: str, health: dict) -> str:
+    daily = str(health.get("daily", "")).upper()
+    monthly = str(health.get("monthly", "")).upper()
+    daily_detail = str(health.get("daily_detail", ""))
+    monthly_detail = str(health.get("monthly_detail", ""))
+
+    if daily == "RED" and daily_detail in {"missing_log", "missing"}:
+        return (
+            f"cd {repo_root} && . {repo_root}/.venv/bin/activate && "
+            "export BIZZAL_ACTIVE_SRD_PATH=/home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD && "
+            f"{repo_root}/bin/core/run_daily.sh >> {repo_root}/logs/cron_run_daily.log 2>&1"
+        )
+
+    if monthly == "RED" and monthly_detail in {"missing_log", "missing"}:
+        if month_label == "latest":
+            return f"cd {repo_root} && {repo_root}/bin/core/monthly_release_cron.sh"
+        return f"cd {repo_root} && {repo_root}/bin/core/monthly_release_cron.sh {month_label}"
+
+    return f"cd {repo_root} && tail -n 80 logs/cron_pipeline_health_discord.log && tail -n 80 logs/cron_run_daily.log"
+
+
 def post_webhook(webhook_url: str, payload: dict):
     webhook_url = webhook_url.replace("https://discordapp.com/", "https://discord.com/")
     data = json.dumps(payload).encode("utf-8")
@@ -172,6 +193,8 @@ def main() -> int:
     health_rc, health_output, health = run_health_check(repo_root, month)
     host = socket.gethostname()
     payload = build_payload(host, month_label, health_rc, health, health_output)
+    next_cmd = suggested_next_command(repo_root, month_label, health)
+    payload["embeds"][0]["fields"].append({"name": "Suggested Next Command", "value": f"```bash\n{next_cmd}\n```", "inline": False})
     overall = (health.get("overall") or "RED").upper()
     signature = "|".join([
         overall,
