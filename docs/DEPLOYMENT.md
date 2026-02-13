@@ -124,6 +124,13 @@ Example crontab (run at 06:10 UTC on the 1st of each month for previous month):
 ```bash
 git status -sb
 ls -la data/atoms/validated/
+bin/core/pipeline_health_check.sh
+```
+
+Optional month-specific check:
+
+```bash
+bin/core/pipeline_health_check.sh --month 2026-02
 ```
 
 If render/upload scripts are present and executable, `run_daily.sh` will invoke them automatically.
