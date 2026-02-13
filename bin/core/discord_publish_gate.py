@@ -119,8 +119,22 @@ def looks_like_placeholder_webhook(url: str) -> bool:
         return True
     if "..." in u or "YOUR_" in u.upper() or "REPLACE" in u.upper():
         return True
-    if "discord.com/api/webhooks/" not in u:
+
+    normalized = u.replace("https://discordapp.com/", "https://discord.com/")
+    normalized = normalized.replace("http://discordapp.com/", "https://discord.com/")
+
+    try:
+        parsed = parse.urlparse(normalized)
+    except Exception:
         return True
+
+    if parsed.scheme != "https":
+        return True
+    if not parsed.netloc.endswith("discord.com"):
+        return True
+    if "/api/webhooks/" not in (parsed.path or ""):
+        return True
+
     return False
 
 
