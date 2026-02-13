@@ -339,6 +339,23 @@ Suggested daily cron on Umbrel (09:00 UTC):
 0 9 * * * cd /home/umbrel/Bizzal_Games_Pub && bin/core/run_daily_diag_cron.sh
 ```
 
+One-command cron automation installer (idempotent):
+
+```bash
+bin/core/install_cron_automation.sh
+```
+
+Dry-run preview:
+
+```bash
+bin/core/install_cron_automation.sh --dry-run
+```
+
+This installs/updates one managed cron block with:
+- daily `run_daily_diag_cron.sh` (09:00 UTC)
+- weekly `prune_daily_diag_logs.sh --keep-days 30` (Sunday 09:20 UTC)
+- monthly `monthly_release_cron.sh "$(date -d 'last month' +%Y-%m)"` (1st at 06:10 UTC)
+
 Prune old daily diagnostic logs (default keep: 30 days):
 
 ```bash
