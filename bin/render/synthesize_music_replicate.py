@@ -55,6 +55,20 @@ def http_json(method: str, url: str, token: str, payload=None, timeout=90):
     return json.loads(raw)
 
 
+def resolve_model_version(token: str, model_slug: str, timeout=60) -> str:
+    parts = [p for p in (model_slug or "").split("/") if p]
+    if len(parts) != 2:
+        raise ValueError(f"model slug must be owner/name, got: {model_slug}")
+    owner, name = parts
+    url = f"https://api.replicate.com/v1/models/{owner}/{name}"
+    data = http_json("GET", url, token, None, timeout=timeout)
+    latest = data.get("latest_version") or {}
+    version_id = latest.get("id")
+    if not version_id:
+        raise RuntimeError(f"latest_version.id missing for model {model_slug}")
+    return str(version_id)
+
+
 def download_file(url: str, out_path: str, timeout=180):
     req = request.Request(url, method="GET")
     with request.urlopen(req, timeout=timeout) as resp:
@@ -104,6 +118,13 @@ def main() -> int:
     version = os.getenv("BIZZAL_REPLICATE_MUSIC_VERSION", "").strip()
     timeout_sec = int(os.getenv("BIZZAL_REPLICATE_MUSIC_TIMEOUT_SEC", "300"))
 
+    if not version:
+        try:
+            version = resolve_model_version(token, model)
+        except Exception as exc:
+            print(f"[music] ERROR: could not resolve latest version for model={model}: {exc}", file=sys.stderr)
+            return 11
+
     input_payload = {
         "prompt": prompt,
         "duration": args.duration,
@@ -114,12 +135,9 @@ def main() -> int:
     input_payload.setdefault("output_format", "wav")
 
     body = {
+        "version": version,
         "input": input_payload,
     }
-    if version:
-        body["version"] = version
-    else:
-        body["model"] = model
 
     if args.dry_run:
         print(json.dumps({"model": model, "version": version or None, "body": body}, indent=2, ensure_ascii=False))
