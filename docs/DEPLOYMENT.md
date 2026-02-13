@@ -390,7 +390,7 @@ Environment flags:
 - `BIZZAL_ENABLE_BG_MUSIC=1` enables music generation and mixing.
 - `REPLICATE_API_TOKEN` required for Replicate calls.
 - Optional: `BIZZAL_REPLICATE_MUSIC_MODEL` (default: `meta/musicgen`).
-- Optional: `BIZZAL_REPLICATE_MUSIC_VERSION` (if you want a pinned model version ID).
+- Optional: `BIZZAL_REPLICATE_MUSIC_VERSION` (pin if model-level calls are restricted on your account).
 - Optional: `BIZZAL_BG_MUSIC_SECONDS` (default uses current render duration).
 - Optional: `BIZZAL_BG_MUSIC_GAIN` (default `0.20`, when TTS is present).
 - Optional: `BIZZAL_BG_MUSIC_GAIN_NO_VO` (default `0.24`, when no TTS voice track).
@@ -415,6 +415,25 @@ BIZZAL_TEXT_STYLE=bg_safe bin/render/render_atom.sh 2026-02-13
 ```
 
 If music generation fails, render falls back gracefully and still produces MP4 output.
+
+Replicate 403 quick triage:
+
+```bash
+# 1) token sanity
+curl -sS -H "Authorization: Token $REPLICATE_API_TOKEN" https://api.replicate.com/v1/account | head
+
+# 2) prediction endpoint permission check (422 means endpoint is reachable/auth works)
+curl -sS -o /tmp/replicate_pred_probe.json -w "HTTP %{http_code}\n" \
+	-H "Authorization: Token $REPLICATE_API_TOKEN" \
+	-H "Content-Type: application/json" \
+	-d '{"version":"0000000000000000000000000000000000000000000000000000000000000000","input":{"prompt":"probe"}}' \
+	https://api.replicate.com/v1/predictions
+cat /tmp/replicate_pred_probe.json
+```
+
+Interpretation:
+- `HTTP 422` = auth/path is okay; pick a model/version your account can run.
+- `HTTP 403` = account/model permission or billing restriction; update Replicate plan/permissions first.
 
 ## Optional: AI Script Smoothing (OpenAI)
 `write_script_from_fact.py` can optionally polish language with OpenAI while keeping deterministic fallback templates.

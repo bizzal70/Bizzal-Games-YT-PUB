@@ -118,13 +118,6 @@ def main() -> int:
     version = os.getenv("BIZZAL_REPLICATE_MUSIC_VERSION", "").strip()
     timeout_sec = int(os.getenv("BIZZAL_REPLICATE_MUSIC_TIMEOUT_SEC", "300"))
 
-    if not version:
-        try:
-            version = resolve_model_version(token, model)
-        except Exception as exc:
-            print(f"[music] ERROR: could not resolve latest version for model={model}: {exc}", file=sys.stderr)
-            return 11
-
     input_payload = {
         "prompt": prompt,
         "duration": args.duration,
@@ -135,9 +128,12 @@ def main() -> int:
     input_payload.setdefault("output_format", "wav")
 
     body = {
-        "version": version,
         "input": input_payload,
     }
+    if version:
+        body["version"] = version
+    else:
+        body["model"] = model
 
     if args.dry_run:
         print(json.dumps({"model": model, "version": version or None, "body": body}, indent=2, ensure_ascii=False))
@@ -147,7 +143,18 @@ def main() -> int:
         pred = http_json("POST", "https://api.replicate.com/v1/predictions", token, body, timeout=90)
     except error.HTTPError as exc:
         detail = exc.read().decode("utf-8", errors="ignore")
+        if exc.code == 403:
+            print(
+                "[music] ERROR: Replicate returned 403 (forbidden). "
+                "This is usually account/model access or billing permissions.",
+                file=sys.stderr,
+            )
         print(f"[music] ERROR: create prediction HTTP {exc.code}: {detail}", file=sys.stderr)
+        if not version:
+            print(
+                "[music] hint: optionally set BIZZAL_REPLICATE_MUSIC_VERSION to a known accessible version id.",
+                file=sys.stderr,
+            )
         return 3
     except Exception as exc:
         print(f"[music] ERROR: create prediction failed: {exc}", file=sys.stderr)
