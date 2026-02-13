@@ -392,6 +392,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
             "Avoid generic phrasing like 'drop one in the dungeon'.",
             "Use practical table-facing language, not theatrical narration.",
             "Keep it concise: 12-24 words.",
+            "Avoid phrases like 'create a tense environment' and 'challenge players to decide'.",
             "No markdown, no bullets, no quotes.",
         ],
     }
@@ -497,6 +498,9 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             "Keep all numeric facts and fact_name intact.",
             "Hook: one sentence. Body: 2-4 sentences. CTA: one sentence.",
             "Prefer concise DM coaching language over theatrical fantasy narration.",
+            "Avoid generic opening phrases like 'Explore the moral dilemma' or 'Shine a light on'.",
+            "Avoid soft filler like 'in your next session'.",
+            "Make language concrete and table-actionable.",
             "No markdown.",
         ],
     }
@@ -539,6 +543,11 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             "body": clean_ai_style_text(obj.get("body") or script.get("body", ""), segment="body"),
             "cta": clean_ai_style_text(obj.get("cta") or script.get("cta", ""), segment="cta"),
         }
+
+        if is_generic_hook(out.get("hook", "")):
+            out["hook"] = clean_ai_style_text(script.get("hook", ""), segment="hook")
+        if is_generic_cta(out.get("cta", "")):
+            out["cta"] = clean_ai_style_text(script.get("cta", ""), segment="cta")
 
         blob = f"{out['hook']} {out['body']} {out['cta']}"
         for token in locked_tokens(script, fact):
@@ -791,6 +800,30 @@ def clean_ai_style_text(s: str, segment: str = "body") -> str:
             txt = trimmed.rstrip().rstrip(",;:-") + "."
 
     return clean_script_text(txt)
+
+
+def is_generic_hook(text: str) -> bool:
+    t = (text or "").strip().lower()
+    bad = [
+        "explore the moral dilemma",
+        "gather 'round",
+        "gather round",
+        "delve into",
+        "haunting world",
+        "shine a light on",
+    ]
+    return any(b in t for b in bad)
+
+
+def is_generic_cta(text: str) -> bool:
+    t = (text or "").strip().lower()
+    bad = [
+        "create a tense environment",
+        "challenge players to decide",
+        "weigh their choices",
+        "in your next session",
+    ]
+    return any(b in t for b in bad)
 
 def sstr(v) -> str:
     # safe string for fields that might be int/float/None/list
