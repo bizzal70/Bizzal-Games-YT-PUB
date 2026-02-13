@@ -182,6 +182,7 @@ def main() -> int:
     parser.add_argument("--month", default=os.getenv("BIZZAL_HEALTH_MONTH", ""), help="Optional month filter (YYYY-MM)")
     parser.add_argument("--webhook-url", default=os.getenv("BIZZAL_DISCORD_WEBHOOK_URL", ""))
     parser.add_argument("--only-on-change", action="store_true", default=parse_bool_env("BIZZAL_DISCORD_ONLY_ON_CHANGE", False), help="Send only when health signature changes")
+    parser.add_argument("--force-send", action="store_true", help="Send notification even if unchanged (overrides --only-on-change)")
     parser.add_argument("--state-file", default=os.getenv("BIZZAL_DISCORD_STATE_FILE", "data/archive/health/discord_state.json"), help="State file path for --only-on-change mode")
     parser.add_argument("--dry-run", action="store_true", help="Print payload without sending")
     args = parser.parse_args()
@@ -216,14 +217,14 @@ def main() -> int:
 
     if args.dry_run:
         print(json.dumps(payload, indent=2))
-        print(f"[pipeline_health_discord] only_on_change={args.only_on_change} changed={changed} state_key={state_key}")
+        print(f"[pipeline_health_discord] only_on_change={args.only_on_change} force_send={args.force_send} changed={changed} state_key={state_key}")
         return 0 if overall == "GREEN" else 1
 
     if not webhook_url:
         print("ERROR: missing webhook URL (set BIZZAL_DISCORD_WEBHOOK_URL or use --webhook-url)", file=sys.stderr)
         return 2
 
-    if args.only_on_change and not changed:
+    if args.only_on_change and not args.force_send and not changed:
         print(f"[pipeline_health_discord] skipped unchanged overall={overall} month={month_label} state_key={state_key}")
         return 0 if overall == "GREEN" else 1
 

@@ -184,6 +184,12 @@ Reduce noise by sending only when status changes:
 bin/core/pipeline_health_discord.py --month 2026-02 --only-on-change
 ```
 
+Force a notification even if status is unchanged:
+
+```bash
+bin/core/pipeline_health_discord.py --month 2026-02 --only-on-change --force-send
+```
+
 State is stored at:
 - `data/archive/health/discord_state.json`
 
