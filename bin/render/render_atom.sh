@@ -35,7 +35,8 @@ jq -r '.script.cta  // ""' "$ATOM" > "$CTA_TXT"
 
 # Wrap first, then paginate by line-count so nothing can overflow the frame.
 python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$HOOK_TXT" --out "$HOOK_TXT" --width 30
-python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$BODY_TXT" --out "$BODY_TXT" --width 42
+BODY_WRAP_WIDTH=42
+python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$BODY_TXT" --out "$BODY_TXT" --width "$BODY_WRAP_WIDTH"
 python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$CTA_TXT"  --out "$CTA_TXT"  --width 40
 
 PAGEDIR="$TMPDIR/pages"
@@ -191,12 +192,14 @@ BODY2_MIN_WORDS="${BIZZAL_BODY2_MIN_WORDS:-5}"
 if (( BODY2_EXISTS == 1 && BODY2_WORDS < BODY2_MIN_WORDS )); then
   BODY2_WORDS_BEFORE="$BODY2_WORDS"
   MERGED_BODY="$TMPDIR/body_merged.txt"
-  {
-    cat "$BODY1_FILE"
-    echo
-    cat "$BODY2_FILE"
-  } > "$MERGED_BODY"
-  mv -f "$MERGED_BODY" "$BODY1_FILE"
+  python3 - "$BODY1_FILE" "$BODY2_FILE" "$MERGED_BODY" <<'PY'
+import pathlib, sys
+b1 = pathlib.Path(sys.argv[1]).read_text(encoding="utf-8")
+b2 = pathlib.Path(sys.argv[2]).read_text(encoding="utf-8")
+combined = " ".join((b1 + " " + b2).split())
+pathlib.Path(sys.argv[3]).write_text(combined + "\n", encoding="utf-8")
+PY
+  python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$MERGED_BODY" --out "$BODY1_FILE" --width "$BODY_WRAP_WIDTH"
   : > "$BODY2_FILE"
   BODY2_EXISTS=0
   BODY1_WORDS="$(count_words "$BODY1_FILE")"
