@@ -74,6 +74,72 @@ def canonical_category(category: str) -> str:
     }
     return aliases.get((category or "").strip().lower(), (category or "").strip().lower())
 
+
+def slugify(s: str) -> str:
+    txt = re.sub(r"[^a-zA-Z0-9]+", "-", (s or "").strip().lower())
+    txt = re.sub(r"-+", "-", txt).strip("-")
+    return txt or "na"
+
+
+def build_content_contract(atom: dict, script_id: str, script: dict, fact: dict, style: dict):
+    day = atom.get("day") or datetime.now().strftime("%Y-%m-%d")
+    month_id = day[:7]
+    category = slugify(atom.get("category") or "")
+    angle = slugify(atom.get("angle") or "")
+    voice = slugify(style.get("voice") or "friendly_vet")
+    tone = slugify(style.get("tone") or "neutral")
+
+    kind = slugify(fact.get("kind") or "unknown")
+    fact_pk = slugify(str(fact.get("pk") or fact.get("name") or "unknown"))
+    canonical_base = f"{day}-{category}-{kind}-{fact_pk}"
+    canonical_hash = sha256_text(canonical_base + "|" + script_id)
+    short_hash = canonical_hash[:12]
+
+    content_id = f"bgp-{canonical_base}-{short_hash}"
+    episode_id = f"ep-{day}-{category}-{short_hash}"
+    month_bundle_id = f"zine-{month_id}-{sha256_text(month_id)[:8]}"
+
+    segments = {}
+    for key in ("hook", "body", "cta"):
+        segment_id = f"seg-{key}-{sha256_text(content_id + '|' + key)[:10]}"
+        voice_track_id = f"vox-{key}-{sha256_text(segment_id + '|voice')[:10]}"
+        visual_asset_id = f"img-{key}-{sha256_text(segment_id + '|visual')[:10]}"
+        segments[key] = {
+            "segment_id": segment_id,
+            "order": {"hook": 1, "body": 2, "cta": 3}[key],
+            "text": script.get(key, ""),
+            "voice_track_id": voice_track_id,
+            "visual_asset_id": visual_asset_id,
+        }
+
+    tags = sorted({
+        "content_press",
+        "shorts",
+        month_id,
+        category,
+        angle,
+        kind,
+        voice,
+        tone,
+        slugify(str(fact.get("document") or "")),
+    })
+
+    return {
+        "content_id": content_id,
+        "episode_id": episode_id,
+        "month_id": month_id,
+        "month_bundle_id": month_bundle_id,
+        "canonical_hash": canonical_hash,
+        "script_id": script_id,
+        "asset_contract": {
+            "voice_pack_id": f"voice-{voice}",
+            "visual_pack_id": f"visual-{category}",
+            "timeline_id": f"timeline-{sha256_text(content_id + '|timeline')[:10]}",
+        },
+        "segments": segments,
+        "tags": tags,
+    }
+
 # ---------------- Item scripts ----------------
 
 def build_item_body(angle: str, fields: dict):
@@ -599,6 +665,7 @@ def main():
 
     full_text = f"{script.get('hook','').strip()}\n{script.get('body','').strip()}\n{script.get('cta','').strip()}\n"
     atom["script_id"] = sha256_text(full_text)
+    atom["content"] = build_content_contract(atom, atom["script_id"], script, fact, style)
 
     atomic_write_json(ATOM_PATH, atom)
     print(ATOM_PATH)

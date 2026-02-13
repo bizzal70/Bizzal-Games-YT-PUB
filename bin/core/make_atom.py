@@ -148,7 +148,7 @@ def clear_irrelevant_picks(atom: dict):
 
 def minimal_validate(atom: dict):
     # Minimal “shape” validation (keeps you from shipping junk)
-    required_top = ["day", "created_at", "category", "angle", "style", "picks", "fact", "script", "script_id"]
+    required_top = ["day", "created_at", "category", "angle", "style", "picks", "fact", "script", "script_id", "content"]
     for k in required_top:
         if k not in atom:
             return False, f"missing key: {k}"
@@ -159,6 +159,8 @@ def minimal_validate(atom: dict):
         return False, "fact not dict"
     if not isinstance(atom["script"], dict):
         return False, "script not dict"
+    if not isinstance(atom["content"], dict):
+        return False, "content not dict"
 
     for k in ["hook", "body", "cta"]:
         if k not in atom["script"] or not str(atom["script"].get(k, "")).strip():
@@ -170,6 +172,26 @@ def minimal_validate(atom: dict):
     expect = sha256_text(packed)
     if atom.get("script_id") != expect:
         return False, "script_id does not match script content"
+
+    content_required = ["content_id", "episode_id", "month_id", "month_bundle_id", "canonical_hash", "script_id", "asset_contract", "segments", "tags"]
+    for k in content_required:
+        if k not in atom["content"]:
+            return False, f"content missing key: {k}"
+
+    if atom["content"].get("script_id") != atom.get("script_id"):
+        return False, "content.script_id does not match script_id"
+
+    segments = atom["content"].get("segments") or {}
+    for k in ["hook", "body", "cta"]:
+        seg = segments.get(k)
+        if not isinstance(seg, dict):
+            return False, f"content.segments missing: {k}"
+        if not str(seg.get("segment_id", "")).strip():
+            return False, f"segment missing segment_id: {k}"
+        if not str(seg.get("voice_track_id", "")).strip():
+            return False, f"segment missing voice_track_id: {k}"
+        if not str(seg.get("visual_asset_id", "")).strip():
+            return False, f"segment missing visual_asset_id: {k}"
 
     return True, "ok"
 
@@ -229,6 +251,7 @@ def main():
     atom["fact"] = {}
     atom["script"] = {}
     atom["script_id"] = None
+    atom["content"] = {}
 
     active_srd_path, _ = resolve_active_srd_path(REPO_ROOT, REF_CFG)
     srd_pdf_path, _ = resolve_srd_pdf_path(REPO_ROOT, REF_CFG)

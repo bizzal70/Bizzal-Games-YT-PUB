@@ -26,5 +26,48 @@
     "body": "",
     "cta": ""
   },
-  "script_id": ""
+  "script_id": "",
+  "content": {
+    "content_id": "bgp-YYYY-MM-DD-category-kind-pk-abcdef123456",
+    "episode_id": "ep-YYYY-MM-DD-category-abcdef123456",
+    "month_id": "YYYY-MM",
+    "month_bundle_id": "zine-YYYY-MM-abcdef12",
+    "canonical_hash": "sha256",
+    "script_id": "sha256",
+    "asset_contract": {
+      "voice_pack_id": "voice-friendly-vet",
+      "visual_pack_id": "visual-monster-tactic",
+      "timeline_id": "timeline-abcdef1234"
+    },
+    "segments": {
+      "hook": {
+        "segment_id": "seg-hook-abcdef1234",
+        "order": 1,
+        "text": "",
+        "voice_track_id": "vox-hook-abcdef1234",
+        "visual_asset_id": "img-hook-abcdef1234"
+      },
+      "body": {
+        "segment_id": "seg-body-abcdef1234",
+        "order": 2,
+        "text": "",
+        "voice_track_id": "vox-body-abcdef1234",
+        "visual_asset_id": "img-body-abcdef1234"
+      },
+      "cta": {
+        "segment_id": "seg-cta-abcdef1234",
+        "order": 3,
+        "text": "",
+        "voice_track_id": "vox-cta-abcdef1234",
+        "visual_asset_id": "img-cta-abcdef1234"
+      }
+    },
+    "tags": [
+      "content_press",
+      "shorts",
+      "YYYY-MM",
+      "category",
+      "angle"
+    ]
+  }
 }
