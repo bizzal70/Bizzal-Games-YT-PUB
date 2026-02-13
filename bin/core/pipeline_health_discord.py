@@ -10,6 +10,13 @@ from urllib import error
 from urllib import request
 
 
+def parse_bool_env(name: str, default: bool) -> bool:
+    raw = os.getenv(name)
+    if raw is None:
+        return default
+    return raw.strip().lower() in {"1", "true", "yes", "y", "on"}
+
+
 def parse_health_line(output: str) -> dict:
     line = ""
     for candidate in output.strip().splitlines():
@@ -126,11 +133,35 @@ def post_webhook(webhook_url: str, payload: dict):
     raise RuntimeError(f"discord webhook rejected: http={status or 'unknown'} body={body or '(empty)'}")
 
 
+def load_state(path: str) -> dict:
+    if not os.path.isfile(path):
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            obj = json.load(f)
+            if isinstance(obj, dict):
+                return obj
+    except Exception:
+        pass
+    return {}
+
+
+def save_state(path: str, obj: dict):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(obj, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+    os.replace(tmp, path)
+
+
 def main() -> int:
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
     parser = argparse.ArgumentParser(description="Send RED/GREEN pipeline health notification to Discord webhook.")
     parser.add_argument("--month", default=os.getenv("BIZZAL_HEALTH_MONTH", ""), help="Optional month filter (YYYY-MM)")
     parser.add_argument("--webhook-url", default=os.getenv("BIZZAL_DISCORD_WEBHOOK_URL", ""))
+    parser.add_argument("--only-on-change", action="store_true", default=parse_bool_env("BIZZAL_DISCORD_ONLY_ON_CHANGE", False), help="Send only when health signature changes")
+    parser.add_argument("--state-file", default=os.getenv("BIZZAL_DISCORD_STATE_FILE", "data/archive/health/discord_state.json"), help="State file path for --only-on-change mode")
     parser.add_argument("--dry-run", action="store_true", help="Print payload without sending")
     args = parser.parse_args()
 
@@ -141,14 +172,37 @@ def main() -> int:
     health_rc, health_output, health = run_health_check(repo_root, month)
     host = socket.gethostname()
     payload = build_payload(host, month_label, health_rc, health, health_output)
+    overall = (health.get("overall") or "RED").upper()
+    signature = "|".join([
+        overall,
+        str(health.get("daily", "unknown")),
+        str(health.get("monthly", "unknown")),
+        str(health.get("daily_detail", "")),
+        str(health.get("monthly_detail", "")),
+    ])
+
+    state_file = args.state_file
+    if not os.path.isabs(state_file):
+        state_file = os.path.join(repo_root, state_file)
+
+    state_key = f"{host}:{month_label}"
+    state = load_state(state_file)
+    current = state.get(state_key, {}) if isinstance(state.get(state_key, {}), dict) else {}
+    previous_sig = str(current.get("signature", ""))
+    changed = signature != previous_sig
 
     if args.dry_run:
         print(json.dumps(payload, indent=2))
-        return 0 if (health.get("overall") or "RED").upper() == "GREEN" else 1
+        print(f"[pipeline_health_discord] only_on_change={args.only_on_change} changed={changed} state_key={state_key}")
+        return 0 if overall == "GREEN" else 1
 
     if not webhook_url:
         print("ERROR: missing webhook URL (set BIZZAL_DISCORD_WEBHOOK_URL or use --webhook-url)", file=sys.stderr)
         return 2
+
+    if args.only_on_change and not changed:
+        print(f"[pipeline_health_discord] skipped unchanged overall={overall} month={month_label} state_key={state_key}")
+        return 0 if overall == "GREEN" else 1
 
     try:
         post_webhook(webhook_url, payload)
@@ -156,8 +210,16 @@ def main() -> int:
         print(f"ERROR: webhook post failed: {exc}", file=sys.stderr)
         return 3
 
-    overall = (health.get("overall") or "RED").upper()
-    print(f"[pipeline_health_discord] sent overall={overall} month={month_label}")
+    state[state_key] = {
+        "signature": signature,
+        "overall": overall,
+        "updated_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "month": month_label,
+        "host": host,
+    }
+    save_state(state_file, state)
+
+    print(f"[pipeline_health_discord] sent overall={overall} month={month_label} state_key={state_key}")
     return 0 if overall == "GREEN" else 1
 
 
