@@ -105,6 +105,21 @@ Run the full monthly release bundle (manifest + zine pack + checks) in one comma
 bin/core/monthly_release_bundle.sh 2026-02
 ```
 
+For cron-safe monthly execution with timestamped logs:
+
+```bash
+bin/core/monthly_release_cron.sh 2026-02
+```
+
+This writes run logs to:
+- `data/archive/monthly/YYYY-MM/logs/monthly_release_*.log`
+
+Example crontab (run at 06:10 UTC on the 1st of each month for previous month):
+
+```bash
+10 6 1 * * cd /home/umbrel/Bizzal_Games_Pub && bin/core/monthly_release_cron.sh "$(date -d 'last month' +\%Y-\%m)"
+```
+
 ## Verification Checklist
 ```bash
 git status -sb
