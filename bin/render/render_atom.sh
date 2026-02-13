@@ -545,9 +545,21 @@ PY
   if (( MUSIC_OK == 1 )); then
     VIDEO_MUX_SEC="$(probe_duration "$MUX_VIDEO")"
     MUSIC_LOOP="$TMPDIR/music_loop.wav"
+    BG_TONE_LOWCUT_HZ="${BIZZAL_BG_TONE_LOWCUT_HZ:-45}"
+    BG_TONE_HIGHCUT_HZ="${BIZZAL_BG_TONE_HIGHCUT_HZ:-14500}"
+    BG_TONE_WARMTH_DB="${BIZZAL_BG_TONE_WARMTH_DB:-2.5}"
+    BG_TONE_PRESENCE_DB="${BIZZAL_BG_TONE_PRESENCE_DB:--2.0}"
+    BG_MONO_WIDEN_MS="${BIZZAL_BG_MONO_WIDEN_MS:-14}"
+    MUSIC_CHANNELS="$(ffprobe -v error -select_streams a:0 -show_entries stream=channels -of default=nw=1:nk=1 "$MUSIC_WAV" 2>/dev/null || echo 2)"
+    MUSIC_PRE_AF="aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,highpass=f=${BG_TONE_LOWCUT_HZ},lowpass=f=${BG_TONE_HIGHCUT_HZ},equalizer=f=180:t=q:w=1.0:g=${BG_TONE_WARMTH_DB},equalizer=f=3600:t=q:w=1.2:g=${BG_TONE_PRESENCE_DB},alimiter=limit=0.98"
+    if [[ -n "$MUSIC_CHANNELS" ]] && (( MUSIC_CHANNELS <= 1 )); then
+      MUSIC_PRE_AF="pan=stereo|c0=c0|c1=c0,adelay=0|${BG_MONO_WIDEN_MS},highpass=f=${BG_TONE_LOWCUT_HZ},lowpass=f=${BG_TONE_HIGHCUT_HZ},equalizer=f=180:t=q:w=1.0:g=${BG_TONE_WARMTH_DB},equalizer=f=3600:t=q:w=1.2:g=${BG_TONE_PRESENCE_DB},alimiter=limit=0.98"
+      echo "[render] bg music source was mono; applied stereo widen delay=${BG_MONO_WIDEN_MS}ms" >&2
+    fi
     ffmpeg -y -hide_banner -loglevel error \
       -stream_loop -1 -i "$MUSIC_WAV" \
       -t "$VIDEO_MUX_SEC" \
+      -af "$MUSIC_PRE_AF" \
       -c:a pcm_s16le \
       "$MUSIC_LOOP"
 
@@ -593,10 +605,21 @@ else
     VIDEO_MUX_SEC="$(probe_duration "$MUX_VIDEO")"
     MUSIC_LOOP="$TMPDIR/music_loop_nomix.wav"
     BG_GAIN="${BIZZAL_BG_MUSIC_GAIN_NO_VO:-0.32}"
+    BG_TONE_LOWCUT_HZ="${BIZZAL_BG_TONE_LOWCUT_HZ:-45}"
+    BG_TONE_HIGHCUT_HZ="${BIZZAL_BG_TONE_HIGHCUT_HZ:-14500}"
+    BG_TONE_WARMTH_DB="${BIZZAL_BG_TONE_WARMTH_DB:-2.5}"
+    BG_TONE_PRESENCE_DB="${BIZZAL_BG_TONE_PRESENCE_DB:--2.0}"
+    BG_MONO_WIDEN_MS="${BIZZAL_BG_MONO_WIDEN_MS:-14}"
+    MUSIC_CHANNELS="$(ffprobe -v error -select_streams a:0 -show_entries stream=channels -of default=nw=1:nk=1 "$MUSIC_WAV" 2>/dev/null || echo 2)"
+    MUSIC_NO_VO_AF="aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,highpass=f=${BG_TONE_LOWCUT_HZ},lowpass=f=${BG_TONE_HIGHCUT_HZ},equalizer=f=180:t=q:w=1.0:g=${BG_TONE_WARMTH_DB},equalizer=f=3600:t=q:w=1.2:g=${BG_TONE_PRESENCE_DB},volume=${BG_GAIN},alimiter=limit=0.97"
+    if [[ -n "$MUSIC_CHANNELS" ]] && (( MUSIC_CHANNELS <= 1 )); then
+      MUSIC_NO_VO_AF="pan=stereo|c0=c0|c1=c0,adelay=0|${BG_MONO_WIDEN_MS},highpass=f=${BG_TONE_LOWCUT_HZ},lowpass=f=${BG_TONE_HIGHCUT_HZ},equalizer=f=180:t=q:w=1.0:g=${BG_TONE_WARMTH_DB},equalizer=f=3600:t=q:w=1.2:g=${BG_TONE_PRESENCE_DB},volume=${BG_GAIN},alimiter=limit=0.97"
+      echo "[render] bg music source was mono; applied stereo widen delay=${BG_MONO_WIDEN_MS}ms" >&2
+    fi
     ffmpeg -y -hide_banner -loglevel error \
       -stream_loop -1 -i "$MUSIC_WAV" \
       -t "$VIDEO_MUX_SEC" \
-      -af "aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,volume=${BG_GAIN},alimiter=limit=0.97" \
+      -af "$MUSIC_NO_VO_AF" \
       -c:a pcm_s16le \
       "$MUSIC_LOOP"
     ffmpeg -y -hide_banner -loglevel error \

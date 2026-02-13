@@ -400,6 +400,12 @@ Environment flags:
 	- `BIZZAL_BG_DUCK_RATIO` (default `2.0`)
 	- `BIZZAL_BG_DUCK_ATTACK_MS` (default `25`)
 	- `BIZZAL_BG_DUCK_RELEASE_MS` (default `550`)
+- Optional music tone/widening controls:
+	- `BIZZAL_BG_TONE_LOWCUT_HZ` (default `45`)
+	- `BIZZAL_BG_TONE_HIGHCUT_HZ` (default `14500`)
+	- `BIZZAL_BG_TONE_WARMTH_DB` (default `2.5`)
+	- `BIZZAL_BG_TONE_PRESENCE_DB` (default `-2.0`)
+	- `BIZZAL_BG_MONO_WIDEN_MS` (default `14`, used when source music is mono)
 
 Outputs when enabled:
 - `data/renders/by_day/YYYY-MM-DD.music.wav`
