@@ -406,6 +406,8 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
     if pdf_flavor_required() and not pdf_snippet:
         ai_diag("AI CTA polish skipped: PDF flavor required but no snippet found")
         return current_cta
+    if not pdf_flavor_required() and not pdf_snippet:
+        ai_diag("AI CTA polish continuing without PDF flavor snippet (best-effort mode)")
 
     prefix = "DMs"
     m = re.match(r"^\s*([A-Za-z ]{2,20}):", current_cta)
@@ -535,6 +537,8 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
     if pdf_flavor_required() and not pdf_snippet:
         ai_diag("AI script polish skipped: PDF flavor required but no snippet found")
         return script
+    if not pdf_flavor_required() and not pdf_snippet:
+        ai_diag("AI script polish continuing without PDF flavor snippet (best-effort mode)")
 
     prompt = {
         "task": "Rewrite hook/body/cta to sound more personal while preserving factual integrity.",

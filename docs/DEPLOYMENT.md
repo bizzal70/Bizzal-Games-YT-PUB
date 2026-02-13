@@ -355,7 +355,7 @@ Enable on Umbrel shell before running daily pipeline:
 export BIZZAL_ENABLE_AI=1
 export BIZZAL_ENABLE_AI_SCRIPT=1
 export BIZZAL_ENABLE_PDF_FLAVOR=1
-export BIZZAL_REQUIRE_PDF_FLAVOR=1
+export BIZZAL_REQUIRE_PDF_FLAVOR=0
 export OPENAI_API_KEY='YOUR_OPENAI_API_KEY'
 export BIZZAL_OPENAI_MODEL='gpt-4o-mini'
 ```
@@ -376,8 +376,9 @@ export BIZZAL_OPENAI_ENDPOINT='https://api.openai.com/v1/chat/completions'
 If API is unavailable or disabled, pipeline falls back to deterministic CTA templates automatically.
 
 PDF flavor strict mode:
+- Recommended default: `BIZZAL_REQUIRE_PDF_FLAVOR=0` (best-effort). AI polishing still runs even when no PDF snippet is found.
 - `BIZZAL_REQUIRE_PDF_FLAVOR=1` forces AI polishing to use a found PDF snippet for the current fact.
-- If no snippet is found (or PDF/pypdf is unavailable), AI polishing is skipped and deterministic script text is kept.
+- In strict mode, if no snippet is found (or PDF/pypdf is unavailable), AI polishing is skipped and deterministic script text is kept.
 - Check logs for `PDF flavor snippet used ...` and `missing PDF flavor grounding` diagnostics.
 
 Persona/tone/voiceover routing:
