@@ -21,6 +21,9 @@ TTS_TIMING_MODE="${BIZZAL_TTS_TIMING_MODE:-per_screen}"
 MUSIC_ENABLED="${BIZZAL_ENABLE_BG_MUSIC:-0}"
 PAGE_XFADE_SEC="${BIZZAL_PAGE_XFADE_SEC:-0.15}"
 CTA_FINAL_HOLD_SEC="${BIZZAL_CTA_FINAL_HOLD_SEC:-0.30}"
+PREVIEW_HOST="${BIZZAL_PREVIEW_HOST:-192.168.68.128}"
+PREVIEW_PORT="${BIZZAL_PREVIEW_PORT:-8766}"
+ECHO_PREVIEW_URL="${BIZZAL_ECHO_PREVIEW_URL:-1}"
 
 cleanup() {
   if [[ "${DEBUG_RENDER:-0}" == "1" ]]; then
@@ -611,3 +614,7 @@ fi
 cp -f "$OUT" "$LATEST"
 echo "[render] wrote $OUT" >&2
 echo "[render] updated $LATEST" >&2
+if [[ "$ECHO_PREVIEW_URL" == "1" ]]; then
+  echo "[render] preview latest: http://${PREVIEW_HOST}:${PREVIEW_PORT}/data/renders/latest/latest.mp4" >&2
+  echo "[render] preview day:    http://${PREVIEW_HOST}:${PREVIEW_PORT}/data/renders/by_day/${DAY}.mp4" >&2
+fi

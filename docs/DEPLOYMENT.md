@@ -417,6 +417,11 @@ BIZZAL_TEXT_STYLE=bg_safe bin/render/render_atom.sh 2026-02-13
 
 If music generation fails, render falls back gracefully and still produces MP4 output.
 
+Render preview link echo (enabled by default):
+- `BIZZAL_ECHO_PREVIEW_URL=1` prints direct test links after each render.
+- `BIZZAL_PREVIEW_HOST` sets the host/IP in printed links (default `192.168.68.128`).
+- `BIZZAL_PREVIEW_PORT` sets the port in printed links (default `8766`).
+
 Replicate 403 quick triage:
 
 ```bash
