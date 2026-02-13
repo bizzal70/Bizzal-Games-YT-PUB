@@ -292,6 +292,34 @@ def split_sentences(text: str) -> list:
     return [p.strip() for p in parts if p.strip()]
 
 
+def pdf_flavor_required() -> bool:
+    return env_true("BIZZAL_REQUIRE_PDF_FLAVOR", False)
+
+
+def pdf_flavor_keywords(snippet: str, fact_name: str) -> set:
+    txt = (snippet or "").lower()
+    name_tokens = set(re.findall(r"[a-z]{3,}", (fact_name or "").lower()))
+    stop = {
+        "the", "and", "with", "from", "that", "this", "when", "your", "into", "have", "will",
+        "they", "their", "them", "than", "then", "where", "which", "while", "about", "after",
+        "before", "under", "over", "against", "within", "without", "each", "other", "during",
+        "creature", "target", "spell", "item", "class", "monster", "damage", "attack", "action",
+        "minute", "round", "feet", "foot", "level", "range", "duration", "concentration",
+    }
+    words = set(re.findall(r"[a-z]{5,}", txt))
+    return {w for w in words if w not in stop and w not in name_tokens}
+
+
+def ai_references_pdf_flavor(text: str, snippet: str, fact_name: str) -> bool:
+    if not snippet:
+        return True
+    keys = pdf_flavor_keywords(snippet, fact_name)
+    if not keys:
+        return True
+    low = (text or "").lower()
+    return any(k in low for k in keys)
+
+
 def maybe_pdf_flavor_snippet(atom: dict, fact: dict) -> str:
     if not env_true("BIZZAL_ENABLE_PDF_FLAVOR", False):
         ai_diag("PDF flavor disabled (BIZZAL_ENABLE_PDF_FLAVOR=0)")
@@ -373,6 +401,11 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
     name = fact.get("name") or (fact.get("fields") or {}).get("name") or "This"
     voice = style.get("voice") or "friendly_vet"
     kind = fact.get("kind") or "unknown"
+    pdf_snippet = maybe_pdf_flavor_snippet(atom, fact)
+
+    if pdf_flavor_required() and not pdf_snippet:
+        ai_diag("AI CTA polish skipped: PDF flavor required but no snippet found")
+        return current_cta
 
     prefix = "DMs"
     m = re.match(r"^\s*([A-Za-z ]{2,20}):", current_cta)
@@ -389,7 +422,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
         "voice": voice,
         "persona": style.get("persona") or "table_coach",
         "tone": style.get("tone") or "neutral",
-        "pdf_flavor_snippet": maybe_pdf_flavor_snippet(atom, fact),
+        "pdf_flavor_snippet": pdf_snippet,
         "hook": script.get("hook", ""),
         "body": script.get("body", ""),
         "current_cta": current_cta,
@@ -401,6 +434,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
             "Use practical table-facing language, not theatrical narration.",
             "Keep it concise: 12-24 words.",
             "Avoid phrases like 'create a tense environment' and 'challenge players to decide'.",
+            "When pdf_flavor_snippet is provided, include at least one concrete detail from it.",
             "No markdown, no bullets, no quotes.",
         ],
     }
@@ -453,6 +487,10 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
             ai_diag("AI CTA polish too short; kept deterministic CTA")
             return current_cta
 
+        if pdf_snippet and not ai_references_pdf_flavor(candidate, pdf_snippet, name):
+            ai_diag("AI CTA polish rejected: missing PDF flavor grounding")
+            return current_cta
+
         if candidate != current_cta:
             ai_diag("AI CTA polish applied")
         else:
@@ -491,17 +529,23 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
 
     model = os.getenv("BIZZAL_OPENAI_MODEL", "gpt-4o-mini")
     endpoint = os.getenv("BIZZAL_OPENAI_ENDPOINT", "https://api.openai.com/v1/chat/completions")
+    fact_name = fact.get("name") or (fact.get("fields") or {}).get("name") or ""
+    pdf_snippet = maybe_pdf_flavor_snippet(atom, fact)
+
+    if pdf_flavor_required() and not pdf_snippet:
+        ai_diag("AI script polish skipped: PDF flavor required but no snippet found")
+        return script
 
     prompt = {
         "task": "Rewrite hook/body/cta to sound more personal while preserving factual integrity.",
         "category": atom.get("category") or "",
         "angle": atom.get("angle") or "",
-        "fact_name": fact.get("name") or (fact.get("fields") or {}).get("name") or "",
+        "fact_name": fact_name,
         "kind": fact.get("kind") or "",
         "voice": style.get("voice") or "friendly_vet",
         "persona": style.get("persona") or "table_coach",
         "tone": style.get("tone") or "neutral",
-        "pdf_flavor_snippet": maybe_pdf_flavor_snippet(atom, fact),
+        "pdf_flavor_snippet": pdf_snippet,
         "locked_tokens": locked_tokens(script, fact),
         "input": {
             "hook": script.get("hook", ""),
@@ -517,6 +561,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             "Avoid generic opening phrases like 'Explore the moral dilemma' or 'Shine a light on'.",
             "Avoid soft filler like 'in your next session'.",
             "Make language concrete and table-actionable.",
+            "When pdf_flavor_snippet is provided, include at least one concrete detail from it.",
             "No markdown.",
         ],
     }
@@ -575,6 +620,10 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
 
         if not out["hook"] or not out["body"] or not out["cta"]:
             ai_diag("AI script polish rejected: blank segment")
+            return script
+
+        if pdf_snippet and not ai_references_pdf_flavor(blob, pdf_snippet, fact_name):
+            ai_diag("AI script polish rejected: missing PDF flavor grounding")
             return script
 
         changed = (out.get("hook") != script.get("hook") or out.get("body") != script.get("body") or out.get("cta") != script.get("cta"))

@@ -30,11 +30,13 @@ export BIZZAL_AI_DIAG="${BIZZAL_AI_DIAG:-1}"
 export BIZZAL_ENABLE_AI="${BIZZAL_ENABLE_AI:-1}"
 export BIZZAL_ENABLE_AI_SCRIPT="${BIZZAL_ENABLE_AI_SCRIPT:-1}"
 export BIZZAL_ENABLE_PDF_FLAVOR="${BIZZAL_ENABLE_PDF_FLAVOR:-1}"
+export BIZZAL_REQUIRE_PDF_FLAVOR="${BIZZAL_REQUIRE_PDF_FLAVOR:-1}"
 
 echo "[run_daily_diag] repo=$REPO"
 echo "[run_daily_diag] day=$DAY"
 echo "[run_daily_diag] log=$LOG_FILE"
 echo "[run_daily_diag] pdf_flavor=${BIZZAL_ENABLE_PDF_FLAVOR}"
+echo "[run_daily_diag] require_pdf_flavor=${BIZZAL_REQUIRE_PDF_FLAVOR}"
 
 "$REPO/bin/core/run_daily.sh" 2>&1 | tee "$LOG_FILE"
 
