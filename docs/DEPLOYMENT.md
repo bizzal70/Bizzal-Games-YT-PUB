@@ -338,6 +338,12 @@ Example:
 BIZZAL_SHORTS_DURATION=30 bin/render/render_atom.sh 2026-02-13
 ```
 
+Tone/flavor-aware TTS voice selection:
+- `bin/core/pick_style.py` now selects `style.voiceover.tts_voice_id` from config using tone + style voice.
+- Configure tone-level pools in `config/style_rules.yaml` under `voiceover_by_tone.<tone>.tts_voice_ids`.
+- Optionally override by style voice under `voiceover_by_voice.<voice>.tts_voice_ids`.
+- Selection is deterministic per `day|category|tone|voice`, so reruns stay stable while still varying across script flavors.
+
 ## Optional: AI Script Smoothing (OpenAI)
 `write_script_from_fact.py` can optionally polish language with OpenAI while keeping deterministic fallback templates.
 

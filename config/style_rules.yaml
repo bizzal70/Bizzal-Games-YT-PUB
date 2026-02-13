@@ -49,13 +49,33 @@ tones_by_category:
 voiceover_by_tone:
   neutral:
     voice_pack_id: voice-friendly-vet
-    tts_voice_id: alloy
+    tts_voice_ids:
+    - alloy
+    - ash
   gritty:
     voice_pack_id: voice-gritty-dm
-    tts_voice_id: onyx
+    tts_voice_ids:
+    - onyx
+    - echo
   heroic:
     voice_pack_id: voice-class-mentor
-    tts_voice_id: nova
+    tts_voice_ids:
+    - nova
+    - fable
+
+voiceover_by_voice:
+  friendly_vet:
+    tts_voice_ids:
+    - alloy
+    - ash
+  gritty_dm:
+    tts_voice_ids:
+    - onyx
+    - echo
+  rules_lawyer:
+    tts_voice_ids:
+    - sage
+    - ash
 
 persona_profiles:
   dm_story_coach:

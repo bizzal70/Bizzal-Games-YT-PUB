@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import json, os, random, sys
+import hashlib, json, os, random, sys
 from datetime import datetime, timedelta
 
 try:
@@ -33,6 +33,25 @@ def load_history():
         return {}
     return load_json(HIST_PATH)
 
+
+def pick_tts_voice(day: str, category: str, tone: str, style_voice: str, voiceover_cfg: dict, defaults: dict) -> str:
+    base_default = ((defaults.get("voiceover_default") or {}).get("tts_voice_id") or "alloy")
+
+    pool = voiceover_cfg.get("tts_voice_ids")
+    if isinstance(pool, list):
+        clean = [str(v).strip() for v in pool if str(v).strip()]
+        if clean:
+            seed = f"tts|{day}|{category}|{tone}|{style_voice}"
+            digest = hashlib.sha256(seed.encode("utf-8")).hexdigest()
+            idx = int(digest[:8], 16) % len(clean)
+            return clean[idx]
+
+    direct = str(voiceover_cfg.get("tts_voice_id") or "").strip()
+    if direct:
+        return direct
+
+    return base_default
+
 def main():
     if not os.path.exists(ATOM_PATH):
         print(f"ERROR: Atom not found: {ATOM_PATH}", file=sys.stderr)
@@ -44,6 +63,7 @@ def main():
     persona_by_category = cfg.get("persona_by_category") or {}
     tones_by_category = cfg.get("tones_by_category") or {}
     voiceover_by_tone = cfg.get("voiceover_by_tone") or {}
+    voiceover_by_voice = cfg.get("voiceover_by_voice") or {}
 
     atom = load_json(ATOM_PATH)
     category = atom.get("category")
@@ -97,6 +117,14 @@ def main():
         merged.update(tone_vo)
         voiceover = merged
 
+    voice_vo = voiceover_by_voice.get(voice) if isinstance(voiceover_by_voice, dict) else None
+    if isinstance(voice_vo, dict):
+        merged = dict(voiceover)
+        merged.update(voice_vo)
+        voiceover = merged
+
+    chosen_tts_voice = pick_tts_voice(day, category, tone, voice, voiceover, defaults)
+
     spice_rate = float(defaults.get("spice_rate", 0.0))
     spice_pool = ["dry_humor", "grim", "practical", "punchy"]
     spice = []
@@ -111,7 +139,7 @@ def main():
         "persona": persona,
         "voiceover": {
             "voice_pack_id": voiceover.get("voice_pack_id") or f"voice-{voice}",
-            "tts_voice_id": voiceover.get("tts_voice_id") or "alloy",
+            "tts_voice_id": chosen_tts_voice,
         },
         "spice": spice,
         "length": defaults.get("length", "shorts"),
