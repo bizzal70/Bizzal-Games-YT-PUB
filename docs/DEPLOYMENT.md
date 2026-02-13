@@ -231,6 +231,12 @@ Restore cron from a snapshot:
 crontab docs/ops_backups/YYYYMMDDTHHMMSSZ/crontab.txt
 ```
 
+Suggested weekly backup cron on Umbrel (Sunday 07:15 UTC):
+
+```bash
+15 7 * * 0 cd /home/umbrel/Bizzal_Games_Pub && . /home/umbrel/Bizzal_Games_Pub/.venv/bin/activate && bin/core/backup_ops_config.sh >> /home/umbrel/Bizzal_Games_Pub/logs/cron_ops_backup.log 2>&1
+```
+
 If render/upload scripts are present and executable, `run_daily.sh` will invoke them automatically.
 
 ## Operational Notes
