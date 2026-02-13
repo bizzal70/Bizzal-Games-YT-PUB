@@ -148,7 +148,10 @@ def looks_like_placeholder_webhook(url: str) -> bool:
 def run_publish_command(repo_root: str, day: str) -> tuple[int, str]:
     cmd_env = os.getenv("BIZZAL_PUBLISH_CMD", "").strip()
     if cmd_env:
-        cmd = shlex.split(cmd_env)
+        try:
+            cmd = shlex.split(cmd_env)
+        except ValueError as exc:
+            return 13, f"invalid BIZZAL_PUBLISH_CMD quoting: {exc}"
     elif os.path.exists(os.path.join(repo_root, "bin", "upload", "upload_youtube.py")):
         cmd = [os.path.join(repo_root, "bin", "upload", "upload_youtube.py")]
     else:
