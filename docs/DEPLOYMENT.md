@@ -272,6 +272,24 @@ Optional log dir override:
 BIZZAL_DAILY_LOG_DIR=/home/umbrel/Bizzal_Games_Pub/logs bin/core/run_daily_diag.sh
 ```
 
+Cron-safe diagnostic wrapper (timestamped logs, preserves exit code):
+
+```bash
+bin/core/run_daily_diag_cron.sh
+```
+
+Optional cron log dir override:
+
+```bash
+BIZZAL_DAILY_CRON_LOG_DIR=/home/umbrel/Bizzal_Games_Pub/logs bin/core/run_daily_diag_cron.sh
+```
+
+Suggested daily cron on Umbrel (09:00 UTC):
+
+```bash
+0 9 * * * cd /home/umbrel/Bizzal_Games_Pub && bin/core/run_daily_diag_cron.sh
+```
+
 Current behavior:
 - `BIZZAL_ENABLE_AI=1` enables CTA-only polishing.
 - `BIZZAL_ENABLE_AI_SCRIPT=1` enables Hook+Body+CTA polishing (recommended for more personal tone).
