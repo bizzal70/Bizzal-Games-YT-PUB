@@ -24,6 +24,8 @@ reference/snapshots/
 # misc
 __pycache__/
 *.pyc
+*.bak
+*.BAK*
 .venv/
 .vscode/
 
