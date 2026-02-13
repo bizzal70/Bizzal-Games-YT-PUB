@@ -99,6 +99,12 @@ Outputs:
 - `data/archive/monthly/YYYY-MM/zine_pack/content.md`
 - `data/archive/monthly/YYYY-MM/zine_pack/assets.csv`
 
+Run the full monthly release bundle (manifest + zine pack + checks) in one command:
+
+```bash
+bin/core/monthly_release_bundle.sh 2026-02
+```
+
 ## Verification Checklist
 ```bash
 git status -sb

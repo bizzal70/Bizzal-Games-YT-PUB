@@ -55,7 +55,15 @@ def build_markdown(manifest: dict) -> str:
         lines.append(f"- Angle: `{entry.get('angle')}`")
         lines.append(f"- Voice: `{entry.get('voice')}`")
         lines.append(f"- Script ID: `{entry.get('script_id')}`")
-        lines.append(f"- Segment IDs: hook `{entry['segments'].get('hook')}`, body `{entry['segments'].get('body')}`, cta `{entry['segments'].get('cta')}`")
+        hook_seg = (entry.get("segments") or {}).get("hook") or {}
+        body_seg = (entry.get("segments") or {}).get("body") or {}
+        cta_seg = (entry.get("segments") or {}).get("cta") or {}
+        lines.append(
+            "- Segment IDs: "
+            f"hook `{hook_seg.get('segment_id')}`, "
+            f"body `{body_seg.get('segment_id')}`, "
+            f"cta `{cta_seg.get('segment_id')}`"
+        )
         lines.append("")
 
     return "\n".join(lines).rstrip() + "\n"
@@ -89,9 +97,21 @@ def derive_content_fallback(atom: dict) -> dict:
         "month_bundle_id": f"zine-{month_id}-{sha256_text(month_id)[:8]}",
         "script_id": script_id,
         "segments": {
-            "hook": {"segment_id": f"seg-hook-{sha256_text(content_id + '|hook')[:10]}"},
-            "body": {"segment_id": f"seg-body-{sha256_text(content_id + '|body')[:10]}"},
-            "cta": {"segment_id": f"seg-cta-{sha256_text(content_id + '|cta')[:10]}"},
+            "hook": {
+                "segment_id": f"seg-hook-{sha256_text(content_id + '|hook')[:10]}",
+                "voice_track_id": f"vox-hook-{sha256_text(content_id + '|hook|voice')[:10]}",
+                "visual_asset_id": f"img-hook-{sha256_text(content_id + '|hook|visual')[:10]}",
+            },
+            "body": {
+                "segment_id": f"seg-body-{sha256_text(content_id + '|body')[:10]}",
+                "voice_track_id": f"vox-body-{sha256_text(content_id + '|body|voice')[:10]}",
+                "visual_asset_id": f"img-body-{sha256_text(content_id + '|body|visual')[:10]}",
+            },
+            "cta": {
+                "segment_id": f"seg-cta-{sha256_text(content_id + '|cta')[:10]}",
+                "voice_track_id": f"vox-cta-{sha256_text(content_id + '|cta|voice')[:10]}",
+                "visual_asset_id": f"img-cta-{sha256_text(content_id + '|cta|visual')[:10]}",
+            },
         },
         "tags": sorted({month_id, category, angle, kind, slugify(style.get("voice") or "friendly-vet"), "content_press", "shorts"}),
     }
@@ -137,9 +157,21 @@ def main():
             "body": script.get("body", ""),
             "cta": script.get("cta", ""),
             "segments": {
-                "hook": (segments.get("hook") or {}).get("segment_id"),
-                "body": (segments.get("body") or {}).get("segment_id"),
-                "cta": (segments.get("cta") or {}).get("segment_id"),
+                "hook": {
+                    "segment_id": (segments.get("hook") or {}).get("segment_id"),
+                    "voice_track_id": (segments.get("hook") or {}).get("voice_track_id"),
+                    "visual_asset_id": (segments.get("hook") or {}).get("visual_asset_id"),
+                },
+                "body": {
+                    "segment_id": (segments.get("body") or {}).get("segment_id"),
+                    "voice_track_id": (segments.get("body") or {}).get("voice_track_id"),
+                    "visual_asset_id": (segments.get("body") or {}).get("visual_asset_id"),
+                },
+                "cta": {
+                    "segment_id": (segments.get("cta") or {}).get("segment_id"),
+                    "voice_track_id": (segments.get("cta") or {}).get("voice_track_id"),
+                    "visual_asset_id": (segments.get("cta") or {}).get("visual_asset_id"),
+                },
             },
             "tags": content.get("tags") or [],
         })
