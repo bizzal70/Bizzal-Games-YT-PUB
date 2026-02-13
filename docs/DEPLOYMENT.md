@@ -257,6 +257,26 @@ Suggested monthly cleanup cron on Umbrel (day 1 at 07:25 UTC):
 
 If render/upload scripts are present and executable, `run_daily.sh` will invoke them automatically.
 
+## Optional: AI CTA Smoothing (OpenAI)
+`write_script_from_fact.py` can optionally polish only the CTA line with OpenAI while keeping deterministic fallback templates.
+
+Enable on Umbrel shell before running daily pipeline:
+
+```bash
+export BIZZAL_ENABLE_AI=1
+export OPENAI_API_KEY='YOUR_OPENAI_API_KEY'
+export BIZZAL_OPENAI_MODEL='gpt-4o-mini'
+```
+
+Optional overrides:
+
+```bash
+export BIZZAL_OPENAI_API_KEY='YOUR_OPENAI_API_KEY'
+export BIZZAL_OPENAI_ENDPOINT='https://api.openai.com/v1/chat/completions'
+```
+
+If API is unavailable or disabled, pipeline falls back to deterministic CTA templates automatically.
+
 ## Operational Notes
 - Keep production changes pull-only from GitHub (avoid ad-hoc manual edits on server)
 - Prefer tagged releases for rollback points

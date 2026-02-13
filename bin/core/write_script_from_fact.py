@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import hashlib, json, os, sys, re
 from datetime import datetime
+from urllib import request, error
 
 try:
     import yaml
@@ -113,6 +114,11 @@ def creature_context(name: str, fields: dict) -> dict:
     nm = (name or "").lower()
     ctype = sstr(fields.get("type") or fields.get("creature_type") or "").lower()
     habitat = sstr(fields.get("environment") or fields.get("habitat") or "").lower()
+    speed = sstr(fields.get("speed") or fields.get("swim") or "").lower()
+
+    aquatic_name_markers = (
+        "merfolk", "sahuagin", "triton", "sea", "reef", "shark", "eel", "kraken", "water"
+    )
 
     if "dragon" in nm or "dragon" in ctype:
         if "bronze" in nm:
@@ -140,6 +146,13 @@ def creature_context(name: str, fields: dict) -> dict:
             "pressure": "movement and visibility",
         }
 
+    if any(x in nm for x in aquatic_name_markers) or "swim" in speed:
+        return {
+            "arena": "flooded lanes, docks, or half-submerged ruins",
+            "choice": "hold dry ground or overextend to secure the objective",
+            "pressure": "mobility and line control",
+        }
+
     return {
         "arena": "terrain with one strong feature",
         "choice": "save resources now or spend big to control tempo",
@@ -155,14 +168,14 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
     if c == "encounter_seed" and kind == "creature":
         ctx = creature_context(name, fields)
         if a == "moral_choice":
-            return f"DMs: set it in {ctx['arena']} and force a real choice: {ctx['choice']}."
+            return f"DMs: stage it in {ctx['arena']} and force this choice by round 2: {ctx['choice']}."
         if a == "time_pressure":
-            return f"DMs: add a visible countdown and make every round lost increase {ctx['pressure']}."
+            return f"DMs: put a visible countdown on the table; every lost round should escalate {ctx['pressure']}."
         if a == "terrain_feature":
-            return f"DMs: make one map feature the center of play—if they ignore it, they lose tempo."
+            return "DMs: pick one map feature as the win condition; if they ignore it, they lose tempo immediately."
         if a == "twist":
-            return "DMs: flip the objective at midpoint so their first plan is no longer enough."
-        return "DMs: telegraph stakes early, then make the decision cost visible."
+            return "DMs: flip the objective at midpoint and make the first plan insufficient without punishing creativity."
+        return "DMs: telegraph stakes in the first beat, then make the cost of delay obvious."
 
     if c == "monster_tactic" and kind == "creature":
         if a == "counterplay":
@@ -194,6 +207,109 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
         return "Pick one repeatable decision pattern and run it every session until it is automatic."
 
     return fallback
+
+
+def env_true(name: str, default: bool = False) -> bool:
+    raw = os.getenv(name)
+    if raw is None:
+        return default
+    return raw.strip().lower() in {"1", "true", "yes", "y", "on"}
+
+
+def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> str:
+    current_cta = (script.get("cta") or "").strip()
+    if not current_cta:
+        return current_cta
+
+    if not env_true("BIZZAL_ENABLE_AI", False):
+        return current_cta
+
+    api_key = os.getenv("OPENAI_API_KEY") or os.getenv("BIZZAL_OPENAI_API_KEY")
+    if not api_key:
+        return current_cta
+
+    model = os.getenv("BIZZAL_OPENAI_MODEL", "gpt-4o-mini")
+    endpoint = os.getenv("BIZZAL_OPENAI_ENDPOINT", "https://api.openai.com/v1/chat/completions")
+
+    category = atom.get("category") or ""
+    angle = atom.get("angle") or ""
+    name = fact.get("name") or (fact.get("fields") or {}).get("name") or "This"
+    voice = style.get("voice") or "friendly_vet"
+    kind = fact.get("kind") or "unknown"
+
+    prefix = "DMs"
+    m = re.match(r"^\s*([A-Za-z ]{2,20}):", current_cta)
+    if m:
+        maybe_prefix = m.group(1).strip()
+        if maybe_prefix:
+            prefix = maybe_prefix
+
+    prompt = {
+        "category": category,
+        "angle": angle,
+        "kind": kind,
+        "fact_name": name,
+        "voice": voice,
+        "hook": script.get("hook", ""),
+        "body": script.get("body", ""),
+        "current_cta": current_cta,
+        "requirements": [
+            "Return exactly one CTA sentence.",
+            f"Start with '{prefix}:'.",
+            "Match the hook/body tactical intent and creature/spell/item context.",
+            "Avoid generic phrasing like 'drop one in the dungeon'.",
+            "Keep it concise: 12-24 words.",
+            "No markdown, no bullets, no quotes.",
+        ],
+    }
+
+    payload = {
+        "model": model,
+        "temperature": 0,
+        "messages": [
+            {
+                "role": "system",
+                "content": "You rewrite RPG short-form CTA lines to be natural, specific, and aligned with tactical context.",
+            },
+            {
+                "role": "user",
+                "content": json.dumps(prompt, ensure_ascii=False),
+            },
+        ],
+    }
+
+    req = request.Request(
+        endpoint,
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+
+    try:
+        with request.urlopen(req, timeout=25) as resp:
+            raw = resp.read().decode("utf-8")
+        data = json.loads(raw)
+        candidate = (((data.get("choices") or [{}])[0].get("message") or {}).get("content") or "").strip()
+        candidate = clean_script_text(candidate)
+        candidate = short(candidate, 180, add_ellipsis=False)
+
+        if not candidate:
+            return current_cta
+
+        if not re.match(r"^[A-Za-z ]{2,20}:", candidate):
+            candidate = f"{prefix}: {candidate}"
+
+        if len(candidate.split()) < 5:
+            return current_cta
+
+        return candidate
+    except Exception as exc:
+        if env_true("DEBUG_RENDER", False):
+            print(f"[write_script_from_fact] AI CTA polish skipped: {exc}", file=sys.stderr)
+        return current_cta
 
 
 def build_content_contract(atom: dict, script_id: str, script: dict, fact: dict, style: dict):
@@ -777,6 +893,9 @@ def main():
 
     for key in ("hook", "body", "cta"):
         script[key] = clean_script_text(script.get(key, ""))
+
+    script["cta"] = maybe_ai_polish_cta(atom, fact, style, script)
+    script["cta"] = clean_script_text(script.get("cta", ""))
 
     full_text = f"{script.get('hook','').strip()}\n{script.get('body','').strip()}\n{script.get('cta','').strip()}\n"
     atom["script_id"] = sha256_text(full_text)
