@@ -130,17 +130,23 @@ def main() -> int:
     body = {
         "input": input_payload,
     }
+    create_url = "https://api.replicate.com/v1/predictions"
     if version:
         body["version"] = version
     else:
-        body["model"] = model
+        parts = [p for p in (model or "").split("/") if p]
+        if len(parts) != 2:
+            print(f"[music] ERROR: invalid BIZZAL_REPLICATE_MUSIC_MODEL={model} (expected owner/name)", file=sys.stderr)
+            return 12
+        owner, name = parts
+        create_url = f"https://api.replicate.com/v1/models/{owner}/{name}/predictions"
 
     if args.dry_run:
         print(json.dumps({"model": model, "version": version or None, "body": body}, indent=2, ensure_ascii=False))
         return 0
 
     try:
-        pred = http_json("POST", "https://api.replicate.com/v1/predictions", token, body, timeout=90)
+        pred = http_json("POST", create_url, token, body, timeout=90)
     except error.HTTPError as exc:
         detail = exc.read().decode("utf-8", errors="ignore")
         if exc.code == 403:
