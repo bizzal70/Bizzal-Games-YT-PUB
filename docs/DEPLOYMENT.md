@@ -357,6 +357,7 @@ Environment flags:
 - `OPENAI_API_KEY` (or `BIZZAL_OPENAI_API_KEY`) must be set to a valid key.
 - Optional: `BIZZAL_TTS_MODEL` (default: `gpt-4o-mini-tts`).
 - Optional: `BIZZAL_TTS_SPEED` speaking pace (default: `1.0`, valid range `0.25-4.0`).
+- Optional: `BIZZAL_TTS_TIMING_MODE` (`per_screen` default, `off` to disable per-screen timing sync).
 - Optional: `BIZZAL_OPENAI_TTS_ENDPOINT` (default: `https://api.openai.com/v1/audio/speech`).
 
 Outputs when enabled:

@@ -14,6 +14,9 @@ VIDEO_ONLY="$TMPDIR/video_only.mp4"
 
 mkdir -p "$(dirname "$OUT")" "$(dirname "$LATEST")" "$TMPDIR"
 
+TTS_ENABLED="${BIZZAL_ENABLE_TTS:-0}"
+TTS_TIMING_MODE="${BIZZAL_TTS_TIMING_MODE:-per_screen}"
+
 cleanup() {
   if [[ "${DEBUG_RENDER:-0}" == "1" ]]; then
     echo "[render] DEBUG_RENDER=1 keeping tmpdir=$TMPDIR" >&2
@@ -123,6 +126,11 @@ clamp_int() {
   else
     echo "$val"
   fi
+}
+
+probe_duration() {
+  local f="$1"
+  ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 "$f" 2>/dev/null || echo 0
 }
 
 HOOK_WORDS="$(count_words "$HOOK_TXT")"
@@ -277,6 +285,120 @@ for ((i=0; i<${#BODY_SECS[@]}; i++)); do
   BODY_ENDS+=("$BODY_END")
 done
 
+PREBUILT_TTS=0
+if [[ "$TTS_ENABLED" == "1" && "$TTS_TIMING_MODE" == "per_screen" && -x "$REPO_ROOT/bin/render/synthesize_tts.py" ]]; then
+  TTS_SEGDIR="$TMPDIR/tts_segments"
+  mkdir -p "$TTS_SEGDIR"
+
+  SEG_FAIL=0
+  TTS_SEG_FILES=()
+
+  HOOK_SEG_WAV="$TTS_SEGDIR/01_hook.wav"
+  if "$REPO_ROOT/bin/render/synthesize_tts.py" --text-file "$HOOK_FILE" --out "$HOOK_SEG_WAV"; then
+    TTS_SEG_FILES+=("$HOOK_SEG_WAV")
+  else
+    SEG_FAIL=1
+  fi
+
+  for ((i=1; i<=BODY_PAGE_COUNT; i++)); do
+    PAGE_FILE="$PAGEDIR/body${i}.txt"
+    PAGE_SEG_WAV="$TTS_SEGDIR/$(printf '%02d' $((i+1)))_body${i}.wav"
+    if "$REPO_ROOT/bin/render/synthesize_tts.py" --text-file "$PAGE_FILE" --out "$PAGE_SEG_WAV"; then
+      TTS_SEG_FILES+=("$PAGE_SEG_WAV")
+    else
+      SEG_FAIL=1
+      break
+    fi
+  done
+
+  CTA_SEG_WAV="$TTS_SEGDIR/99_cta.wav"
+  if (( SEG_FAIL == 0 )); then
+    if "$REPO_ROOT/bin/render/synthesize_tts.py" --text-file "$CTA_FILE" --out "$CTA_SEG_WAV"; then
+      TTS_SEG_FILES+=("$CTA_SEG_WAV")
+    else
+      SEG_FAIL=1
+    fi
+  fi
+
+  if (( SEG_FAIL == 0 )); then
+    SEG_DURS=()
+    for wav in "${TTS_SEG_FILES[@]}"; do
+      SEG_DURS+=("$(probe_duration "$wav")")
+    done
+
+    TIMING_LINES="$(python3 - <<'PY' "$DUR" "${SEG_DURS[*]}"
+import math, sys
+base_target = int(float(sys.argv[1]))
+durs = [float(x) for x in sys.argv[2].split() if x.strip()]
+if not durs:
+    print(base_target)
+    print("")
+    raise SystemExit(0)
+total = sum(durs)
+target = max(base_target, int(math.ceil(total)))
+if total <= 0:
+    secs = [max(1, target // len(durs)) for _ in durs]
+else:
+    secs = [max(1, int(round(target * (d / total)))) for d in durs]
+delta = target - sum(secs)
+if delta > 0:
+    i = 0
+    while delta > 0:
+        secs[i % len(secs)] += 1
+        i += 1
+        delta -= 1
+elif delta < 0:
+    i = 0
+    while delta < 0:
+        idx = i % len(secs)
+        if secs[idx] > 1:
+            secs[idx] -= 1
+            delta += 1
+        i += 1
+        if i > 10000:
+            break
+print(target)
+print(" ".join(str(x) for x in secs))
+PY
+    )"
+
+    DUR_FROM_TTS="$(echo "$TIMING_LINES" | sed -n '1p')"
+    SECS_FROM_TTS="$(echo "$TIMING_LINES" | sed -n '2p')"
+    if [[ -n "$DUR_FROM_TTS" && -n "$SECS_FROM_TTS" ]]; then
+      read -r -a SCREEN_SECS <<< "$SECS_FROM_TTS"
+      if (( ${#SCREEN_SECS[@]} == BODY_PAGE_COUNT + 2 )); then
+        DUR="$DUR_FROM_TTS"
+        HOOK_SEC="${SCREEN_SECS[0]}"
+        CTA_SEC="${SCREEN_SECS[$(( ${#SCREEN_SECS[@]} - 1 ))]}"
+        BODY_SECS=()
+        for ((i=0; i<BODY_PAGE_COUNT; i++)); do
+          BODY_SECS+=("${SCREEN_SECS[$((i+1))]}")
+        done
+
+        HOOK_END="$HOOK_SEC"
+        BODY_END="$HOOK_END"
+        BODY_ENDS=()
+        for ((i=0; i<${#BODY_SECS[@]}; i++)); do
+          BODY_END=$(( BODY_END + BODY_SECS[i] ))
+          BODY_ENDS+=("$BODY_END")
+        done
+      fi
+    fi
+
+    CONCAT_LIST="$TTS_SEGDIR/segments.txt"
+    : > "$CONCAT_LIST"
+    for wav in "${TTS_SEG_FILES[@]}"; do
+      echo "file $wav" >> "$CONCAT_LIST"
+    done
+    if ffmpeg -y -hide_banner -loglevel error -f concat -safe 0 -i "$CONCAT_LIST" -c:a pcm_s16le "$VOICE_WAV"; then
+      PREBUILT_TTS=1
+      echo "[render] tts timing mode=per_screen durations=${SEG_DURS[*]} screen_secs=${SCREEN_SECS[*]} dur=$DUR" >&2
+    fi
+  else
+    echo "[render] per-screen tts timing failed; using word-based screen timing" >&2
+  fi
+fi
+
 echo "[render] body pages count=$BODY_PAGE_COUNT words=${BODY_WORDS_LIST[*]}" >&2
 echo "[render] body pages secs ${BODY_SECS[*]}" >&2
 echo "[render] body layout lines_max=$BODY_LINES_MAX body_font_size=$BODY_FONT_SIZE last_min_words=$BODY_LAST_MIN_WORDS" >&2
@@ -298,10 +420,11 @@ ffmpeg -y -hide_banner -loglevel error \
   -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
   "$VIDEO_ONLY"
 
-TTS_ENABLED="${BIZZAL_ENABLE_TTS:-0}"
 TTS_OK=0
 if [[ "$TTS_ENABLED" == "1" ]]; then
-  if [[ -x "$REPO_ROOT/bin/render/synthesize_tts.py" ]]; then
+  if (( PREBUILT_TTS == 1 )) && [[ -f "$VOICE_WAV" ]]; then
+    TTS_OK=1
+  elif [[ -x "$REPO_ROOT/bin/render/synthesize_tts.py" ]]; then
     if "$REPO_ROOT/bin/render/synthesize_tts.py" --atom "$ATOM" --out "$VOICE_WAV"; then
       TTS_OK=1
     else
