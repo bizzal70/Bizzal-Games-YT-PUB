@@ -389,9 +389,10 @@ If TTS fails (missing key/API error), render falls back to text-only MP4 and log
 Environment flags:
 - `BIZZAL_ENABLE_BG_MUSIC=1` enables music generation and mixing.
 - `REPLICATE_API_TOKEN` required for Replicate calls.
-- Optional: `BIZZAL_REPLICATE_MUSIC_MODEL` (default: `lucataco/musicgen`; script auto-falls back across known music slugs if one is unavailable).
+- Optional: `BIZZAL_REPLICATE_MUSIC_MODEL` (default: `stability-ai/stable-audio-2.5`; script auto-falls back across known music slugs if one is unavailable).
 - Optional: `BIZZAL_REPLICATE_MUSIC_VERSION` (pin if model-level calls are restricted on your account).
 - Optional: `BIZZAL_BG_MUSIC_SECONDS` (default uses current render duration).
+- Optional: `BIZZAL_BG_MUSIC_INCLUDE_DURATION=1` (off by default; enables `duration/seconds` input fields for models that require them).
 - Optional: `BIZZAL_BG_MUSIC_GAIN` (default `0.20`, when TTS is present).
 - Optional: `BIZZAL_BG_MUSIC_GAIN_NO_VO` (default `0.24`, when no TTS voice track).
 - Optional ducking controls:

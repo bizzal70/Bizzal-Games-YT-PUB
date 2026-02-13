@@ -114,18 +114,17 @@ def main() -> int:
         atom = json.load(handle)
 
     prompt = build_prompt(atom)
-    model = os.getenv("BIZZAL_REPLICATE_MUSIC_MODEL", "lucataco/musicgen")
+    model = os.getenv("BIZZAL_REPLICATE_MUSIC_MODEL", "stability-ai/stable-audio-2.5")
     version = os.getenv("BIZZAL_REPLICATE_MUSIC_VERSION", "").strip()
     timeout_sec = int(os.getenv("BIZZAL_REPLICATE_MUSIC_TIMEOUT_SEC", "300"))
 
     input_payload = {
         "prompt": prompt,
-        "duration": args.duration,
     }
-
-    # Compatibility hints for common music models.
-    input_payload.setdefault("seconds", args.duration)
-    input_payload.setdefault("output_format", "wav")
+    include_duration = os.getenv("BIZZAL_BG_MUSIC_INCLUDE_DURATION", "0").strip() in {"1", "true", "yes", "on"}
+    if include_duration:
+        input_payload["duration"] = args.duration
+        input_payload["seconds"] = args.duration
 
     body = {
         "input": input_payload,
@@ -135,9 +134,10 @@ def main() -> int:
         m.strip()
         for m in (
             os.getenv("BIZZAL_REPLICATE_MUSIC_MODEL", model),
+            "stability-ai/stable-audio-2.5",
+            "minimax/music-1.5",
+            "elevenlabs/music",
             "lucataco/musicgen",
-            "facebookresearch/musicgen",
-            "riffusion/riffusion",
         )
         if (m or "").strip()
     ]
@@ -213,8 +213,11 @@ def main() -> int:
                         print(f"[music] rate-limited (429) model={candidate}; retrying in {wait_sec}s (attempt {attempt}/{create_attempts})", file=sys.stderr)
                         time.sleep(wait_sec)
                         continue
-                    if exc.code in {403, 404}:
-                        print(f"[music] skip model={candidate} HTTP {exc.code}", file=sys.stderr)
+                    if exc.code in {403, 404, 422}:
+                        if exc.code == 422:
+                            print(f"[music] skip model={candidate} HTTP 422 (input schema mismatch)", file=sys.stderr)
+                        else:
+                            print(f"[music] skip model={candidate} HTTP {exc.code}", file=sys.stderr)
                         pred = None
                         break
                     print(f"[music] ERROR: create prediction model={candidate} HTTP {exc.code}: {detail}", file=sys.stderr)
