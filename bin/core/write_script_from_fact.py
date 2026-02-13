@@ -390,6 +390,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
             f"Start with '{prefix}:'.",
             "Match the hook/body tactical intent and creature/spell/item context.",
             "Avoid generic phrasing like 'drop one in the dungeon'.",
+            "Use practical table-facing language, not theatrical narration.",
             "Keep it concise: 12-24 words.",
             "No markdown, no bullets, no quotes.",
         ],
@@ -425,7 +426,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
             raw = resp.read().decode("utf-8")
         data = json.loads(raw)
         candidate = (((data.get("choices") or [{}])[0].get("message") or {}).get("content") or "").strip()
-        candidate = clean_script_text(candidate)
+        candidate = clean_ai_style_text(candidate, segment="cta")
         candidate = short(candidate, 180, add_ellipsis=False)
 
         if not candidate:
@@ -439,7 +440,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
 
         return candidate
     except Exception as exc:
-        if env_true("DEBUG_RENDER", False):
+        if ai_diag_enabled():
             print(f"[write_script_from_fact] AI CTA polish skipped: {exc}", file=sys.stderr)
         return current_cta
 
@@ -495,6 +496,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             "Do not invent new stats, rules, or proper nouns.",
             "Keep all numeric facts and fact_name intact.",
             "Hook: one sentence. Body: 2-4 sentences. CTA: one sentence.",
+            "Prefer concise DM coaching language over theatrical fantasy narration.",
             "No markdown.",
         ],
     }
@@ -533,9 +535,9 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
         obj = json.loads(content)
 
         out = {
-            "hook": clean_script_text(obj.get("hook") or script.get("hook", "")),
-            "body": clean_script_text(obj.get("body") or script.get("body", "")),
-            "cta": clean_script_text(obj.get("cta") or script.get("cta", "")),
+            "hook": clean_ai_style_text(obj.get("hook") or script.get("hook", ""), segment="hook"),
+            "body": clean_ai_style_text(obj.get("body") or script.get("body", ""), segment="body"),
+            "cta": clean_ai_style_text(obj.get("cta") or script.get("cta", ""), segment="cta"),
         }
 
         blob = f"{out['hook']} {out['body']} {out['cta']}"
@@ -548,7 +550,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
 
         return out
     except Exception as exc:
-        if env_true("DEBUG_RENDER", False):
+        if ai_diag_enabled():
             print(f"[write_script_from_fact] AI script polish skipped: {exc}", file=sys.stderr)
         return script
 
@@ -746,6 +748,49 @@ def clean_script_text(s: str) -> str:
         txt += "."
 
     return txt
+
+
+def clean_ai_style_text(s: str, segment: str = "body") -> str:
+    txt = clean_script_text(s)
+    if not txt:
+        return txt
+
+    replacements = {
+        "Gather 'round, adventurers": "Table setup",
+        "Gather round, adventurers": "Table setup",
+        "haunting world": "encounter",
+        "delve into": "run",
+    }
+    for old, new in replacements.items():
+        txt = txt.replace(old, new)
+
+    txt = txt.replace("Dungeon Masters:", "DMs:")
+    txt = txt.replace("Player Characters:", "Players:")
+
+    txt = re.sub(
+        r"Table setup[—-]let's run the encounter of the ([A-Za-z][A-Za-z\- ]+)\.",
+        r"Table setup: \1 encounter.",
+        txt,
+        flags=re.IGNORECASE,
+    )
+
+    # Fix dangling possessives like "against the Zombie's."
+    txt = re.sub(r"([A-Za-z])'s\.$", r"\1.", txt)
+
+    if segment == "hook":
+        parts = split_sentences(txt)
+        if parts:
+            txt = parts[0]
+        txt = short(txt, 110, add_ellipsis=False)
+    elif segment == "cta":
+        if len(txt) > 190:
+            trimmed = txt[:190]
+            cut = trimmed.rfind(" ")
+            if cut > 0:
+                trimmed = trimmed[:cut]
+            txt = trimmed.rstrip().rstrip(",;:-") + "."
+
+    return clean_script_text(txt)
 
 def sstr(v) -> str:
     # safe string for fields that might be int/float/None/list
