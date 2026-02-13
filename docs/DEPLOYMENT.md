@@ -389,7 +389,7 @@ If TTS fails (missing key/API error), render falls back to text-only MP4 and log
 Environment flags:
 - `BIZZAL_ENABLE_BG_MUSIC=1` enables music generation and mixing.
 - `REPLICATE_API_TOKEN` required for Replicate calls.
-- Optional: `BIZZAL_REPLICATE_MUSIC_MODEL` (default: `meta/musicgen`).
+- Optional: `BIZZAL_REPLICATE_MUSIC_MODEL` (default: `riffusion/riffusion`).
 - Optional: `BIZZAL_REPLICATE_MUSIC_VERSION` (pin if model-level calls are restricted on your account).
 - Optional: `BIZZAL_BG_MUSIC_SECONDS` (default uses current render duration).
 - Optional: `BIZZAL_BG_MUSIC_GAIN` (default `0.20`, when TTS is present).

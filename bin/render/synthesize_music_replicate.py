@@ -114,7 +114,7 @@ def main() -> int:
         atom = json.load(handle)
 
     prompt = build_prompt(atom)
-    model = os.getenv("BIZZAL_REPLICATE_MUSIC_MODEL", "meta/musicgen")
+    model = os.getenv("BIZZAL_REPLICATE_MUSIC_MODEL", "riffusion/riffusion")
     version = os.getenv("BIZZAL_REPLICATE_MUSIC_VERSION", "").strip()
     timeout_sec = int(os.getenv("BIZZAL_REPLICATE_MUSIC_TIMEOUT_SEC", "300"))
 
@@ -145,25 +145,44 @@ def main() -> int:
         print(json.dumps({"model": model, "version": version or None, "body": body}, indent=2, ensure_ascii=False))
         return 0
 
-    try:
-        pred = http_json("POST", create_url, token, body, timeout=90)
-    except error.HTTPError as exc:
-        detail = exc.read().decode("utf-8", errors="ignore")
-        if exc.code == 403:
-            print(
-                "[music] ERROR: Replicate returned 403 (forbidden). "
-                "This is usually account/model access or billing permissions.",
-                file=sys.stderr,
-            )
-        print(f"[music] ERROR: create prediction HTTP {exc.code}: {detail}", file=sys.stderr)
-        if not version:
-            print(
-                "[music] hint: optionally set BIZZAL_REPLICATE_MUSIC_VERSION to a known accessible version id.",
-                file=sys.stderr,
-            )
-        return 3
-    except Exception as exc:
-        print(f"[music] ERROR: create prediction failed: {exc}", file=sys.stderr)
+    pred = None
+    create_attempts = int(os.getenv("BIZZAL_REPLICATE_CREATE_ATTEMPTS", "3"))
+    for attempt in range(1, max(1, create_attempts) + 1):
+        try:
+            pred = http_json("POST", create_url, token, body, timeout=90)
+            break
+        except error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="ignore")
+            if exc.code == 429 and attempt < max(1, create_attempts):
+                wait_sec = 12
+                try:
+                    parsed = json.loads(detail)
+                    wait_sec = int(parsed.get("retry_after") or wait_sec)
+                except Exception:
+                    pass
+                wait_sec = max(3, min(60, wait_sec))
+                print(f"[music] rate-limited (429); retrying in {wait_sec}s (attempt {attempt}/{create_attempts})", file=sys.stderr)
+                time.sleep(wait_sec)
+                continue
+            if exc.code == 403:
+                print(
+                    "[music] ERROR: Replicate returned 403 (forbidden). "
+                    "This is usually account/model access or billing permissions.",
+                    file=sys.stderr,
+                )
+            print(f"[music] ERROR: create prediction HTTP {exc.code}: {detail}", file=sys.stderr)
+            if not version:
+                print(
+                    "[music] hint: optionally set BIZZAL_REPLICATE_MUSIC_VERSION to a known accessible version id.",
+                    file=sys.stderr,
+                )
+            return 3
+        except Exception as exc:
+            print(f"[music] ERROR: create prediction failed: {exc}", file=sys.stderr)
+            return 4
+
+    if pred is None:
+        print("[music] ERROR: create prediction did not return a response", file=sys.stderr)
         return 4
 
     pred_id = pred.get("id")
