@@ -344,17 +344,16 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
         return current_cta
 
     if not env_true("BIZZAL_ENABLE_AI", False):
+        ai_diag("AI CTA polish off (BIZZAL_ENABLE_AI=0)")
         return current_cta
 
     api_key = os.getenv("OPENAI_API_KEY") or os.getenv("BIZZAL_OPENAI_API_KEY")
     if not api_key:
-        if ai_diag_enabled():
-            print("[write_script_from_fact] AI CTA polish disabled: missing OPENAI_API_KEY", file=sys.stderr)
+        ai_diag("AI CTA polish disabled: missing OPENAI_API_KEY")
         return current_cta
 
     if looks_like_placeholder_key(api_key):
-        if ai_diag_enabled():
-            print("[write_script_from_fact] AI CTA polish disabled: placeholder API key detected", file=sys.stderr)
+        ai_diag("AI CTA polish disabled: placeholder API key detected")
         return current_cta
 
     model = os.getenv("BIZZAL_OPENAI_MODEL", "gpt-4o-mini")
@@ -431,18 +430,23 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
         candidate = short(candidate, 180, add_ellipsis=False)
 
         if not candidate:
+            ai_diag("AI CTA polish returned empty; kept deterministic CTA")
             return current_cta
 
         if not re.match(r"^[A-Za-z ]{2,20}:", candidate):
             candidate = f"{prefix}: {candidate}"
 
         if len(candidate.split()) < 5:
+            ai_diag("AI CTA polish too short; kept deterministic CTA")
             return current_cta
 
+        if candidate != current_cta:
+            ai_diag("AI CTA polish applied")
+        else:
+            ai_diag("AI CTA polish produced equivalent CTA")
         return candidate
     except Exception as exc:
-        if ai_diag_enabled():
-            print(f"[write_script_from_fact] AI CTA polish skipped: {exc}", file=sys.stderr)
+        ai_diag(f"AI CTA polish skipped: {exc}")
         return current_cta
 
 
@@ -460,17 +464,16 @@ def locked_tokens(script: dict, fact: dict) -> list:
 
 def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) -> dict:
     if not env_true("BIZZAL_ENABLE_AI_SCRIPT", False):
+        ai_diag("AI script polish off (BIZZAL_ENABLE_AI_SCRIPT=0)")
         return script
 
     api_key = os.getenv("OPENAI_API_KEY") or os.getenv("BIZZAL_OPENAI_API_KEY")
     if not api_key:
-        if ai_diag_enabled():
-            print("[write_script_from_fact] AI script polish disabled: missing OPENAI_API_KEY", file=sys.stderr)
+        ai_diag("AI script polish disabled: missing OPENAI_API_KEY")
         return script
 
     if looks_like_placeholder_key(api_key):
-        if ai_diag_enabled():
-            print("[write_script_from_fact] AI script polish disabled: placeholder API key detected", file=sys.stderr)
+        ai_diag("AI script polish disabled: placeholder API key detected")
         return script
 
     model = os.getenv("BIZZAL_OPENAI_MODEL", "gpt-4o-mini")
@@ -546,21 +549,30 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
 
         if is_generic_hook(out.get("hook", "")):
             out["hook"] = clean_ai_style_text(script.get("hook", ""), segment="hook")
+            ai_diag("AI script hook reverted by anti-generic gate")
         if is_generic_cta(out.get("cta", "")):
             out["cta"] = clean_ai_style_text(script.get("cta", ""), segment="cta")
+            ai_diag("AI script CTA reverted by anti-generic gate")
 
         blob = f"{out['hook']} {out['body']} {out['cta']}"
         for token in locked_tokens(script, fact):
             if token and token not in blob:
+                ai_diag(f"AI script polish rejected: missing locked token '{token}'")
                 return script
 
         if not out["hook"] or not out["body"] or not out["cta"]:
+            ai_diag("AI script polish rejected: blank segment")
             return script
+
+        changed = (out.get("hook") != script.get("hook") or out.get("body") != script.get("body") or out.get("cta") != script.get("cta"))
+        if changed:
+            ai_diag("AI script polish applied")
+        else:
+            ai_diag("AI script polish produced equivalent script")
 
         return out
     except Exception as exc:
-        if ai_diag_enabled():
-            print(f"[write_script_from_fact] AI script polish skipped: {exc}", file=sys.stderr)
+        ai_diag(f"AI script polish skipped: {exc}")
         return script
 
 
@@ -740,6 +752,11 @@ def looks_like_placeholder_key(api_key: str) -> bool:
     markers = ["YOUR_OPENAI_API_KEY", "REPLACE_ME", "PASTE", "sk-xxxxx"]
     upper = k.upper()
     return any(m in upper for m in markers)
+
+
+def ai_diag(msg: str):
+    if ai_diag_enabled():
+        print(f"[write_script_from_fact] {msg}", file=sys.stderr)
 
 def clean_script_text(s: str) -> str:
     txt = re.sub(r"\s+", " ", (s or "").strip())
