@@ -7,7 +7,10 @@ REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 ATOM="$REPO_ROOT/data/atoms/validated/${DAY}.json"
 OUT="$REPO_ROOT/data/renders/by_day/${DAY}.mp4"
 LATEST="$REPO_ROOT/data/renders/latest/latest.mp4"
+VOICE_WAV="$REPO_ROOT/data/renders/by_day/${DAY}.voice.wav"
+LATEST_VOICE_WAV="$REPO_ROOT/data/renders/latest/latest.voice.wav"
 TMPDIR="$REPO_ROOT/data/renders/tmp/${DAY}"
+VIDEO_ONLY="$TMPDIR/video_only.mp4"
 
 mkdir -p "$(dirname "$OUT")" "$(dirname "$LATEST")" "$TMPDIR"
 
@@ -257,7 +260,33 @@ ffmpeg -y -hide_banner -loglevel error \
   -f lavfi -i "color=c=black:s=1080x1920:d=${DUR}:r=30" \
   -vf "$VF" \
   -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
-  "$OUT"
+  "$VIDEO_ONLY"
+
+TTS_ENABLED="${BIZZAL_ENABLE_TTS:-0}"
+TTS_OK=0
+if [[ "$TTS_ENABLED" == "1" ]]; then
+  if [[ -x "$REPO_ROOT/bin/render/synthesize_tts.py" ]]; then
+    if "$REPO_ROOT/bin/render/synthesize_tts.py" --atom "$ATOM" --out "$VOICE_WAV"; then
+      TTS_OK=1
+    else
+      echo "[render] tts synth failed; continuing with text-only video" >&2
+    fi
+  else
+    echo "[render] tts synth script missing; continuing with text-only video" >&2
+  fi
+fi
+
+if (( TTS_OK == 1 )); then
+  ffmpeg -y -hide_banner -loglevel error \
+    -i "$VIDEO_ONLY" \
+    -i "$VOICE_WAV" \
+    -c:v copy -c:a aac -b:a 192k -shortest -movflags +faststart \
+    "$OUT"
+  cp -f "$VOICE_WAV" "$LATEST_VOICE_WAV"
+  echo "[render] wrote $VOICE_WAV" >&2
+else
+  cp -f "$VIDEO_ONLY" "$OUT"
+fi
 
 cp -f "$OUT" "$LATEST"
 echo "[render] wrote $OUT" >&2

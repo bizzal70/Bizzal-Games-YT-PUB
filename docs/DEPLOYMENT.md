@@ -344,6 +344,29 @@ Tone/flavor-aware TTS voice selection:
 - Optionally override by style voice under `voiceover_by_voice.<voice>.tts_voice_ids`.
 - Selection is deterministic per `day|category|tone|voice`, so reruns stay stable while still varying across script flavors.
 
+## Optional: TTS Narration in Render Output
+`bin/render/render_atom.sh` can now synthesize narration and mux it into the final MP4.
+
+Environment flags:
+- `BIZZAL_ENABLE_TTS=1` enables TTS synthesis/mux during render.
+- `OPENAI_API_KEY` (or `BIZZAL_OPENAI_API_KEY`) must be set to a valid key.
+- Optional: `BIZZAL_TTS_MODEL` (default: `gpt-4o-mini-tts`).
+- Optional: `BIZZAL_OPENAI_TTS_ENDPOINT` (default: `https://api.openai.com/v1/audio/speech`).
+
+Outputs when enabled:
+- `data/renders/by_day/YYYY-MM-DD.voice.wav`
+- `data/renders/latest/latest.voice.wav`
+
+Example:
+
+```bash
+export OPENAI_API_KEY='YOUR_OPENAI_API_KEY'
+export BIZZAL_ENABLE_TTS=1
+BIZZAL_TEXT_STYLE=bg_safe bin/render/render_atom.sh 2026-02-13
+```
+
+If TTS fails (missing key/API error), render falls back to text-only MP4 and logs the reason.
+
 ## Optional: AI Script Smoothing (OpenAI)
 `write_script_from_fact.py` can optionally polish language with OpenAI while keeping deterministic fallback templates.
 
