@@ -47,8 +47,78 @@ BODY_PAGES="$(python3 "$REPO_ROOT/bin/render/paginate_lines.py" --infile "$BODY_
 cp -f "$HOOK_TXT" "$PAGEDIR/hook.txt"
 cp -f "$CTA_TXT"  "$PAGEDIR/cta.txt"
 
-# We'll do: 0-10 hook+body1, 10-20 body2 (if present), 20-30 cta
-DUR=30
+# Dynamic segment pacing (defaults tuned for 30s Shorts).
+# Hook + body page 1 share segment 1, body page 2 is segment 2, CTA is segment 3.
+DUR="${BIZZAL_SHORTS_DURATION:-30}"
+HOOK_MIN=6
+HOOK_MAX=12
+CTA_MIN=5
+CTA_MAX=10
+BODY_MIN=8
+
+count_words() {
+  local f="$1"
+  if [[ ! -f "$f" ]]; then
+    echo 1
+    return
+  fi
+  local n
+  n="$(tr -s '[:space:]' ' ' < "$f" | wc -w | tr -d ' ')"
+  if [[ -z "$n" || "$n" -lt 1 ]]; then
+    echo 1
+  else
+    echo "$n"
+  fi
+}
+
+clamp_int() {
+  local val="$1" min="$2" max="$3"
+  if (( val < min )); then
+    echo "$min"
+  elif (( val > max )); then
+    echo "$max"
+  else
+    echo "$val"
+  fi
+}
+
+HOOK_WORDS="$(count_words "$HOOK_TXT")"
+BODY_WORDS="$(count_words "$BODY_TXT")"
+CTA_WORDS="$(count_words "$CTA_TXT")"
+TOTAL_WORDS=$(( HOOK_WORDS + BODY_WORDS + CTA_WORDS ))
+
+HOOK_SEC=$(( DUR * HOOK_WORDS / TOTAL_WORDS ))
+CTA_SEC=$(( DUR * CTA_WORDS / TOTAL_WORDS ))
+
+HOOK_SEC="$(clamp_int "$HOOK_SEC" "$HOOK_MIN" "$HOOK_MAX")"
+CTA_SEC="$(clamp_int "$CTA_SEC" "$CTA_MIN" "$CTA_MAX")"
+BODY_SEC=$(( DUR - HOOK_SEC - CTA_SEC ))
+
+# Ensure body has enough time; borrow from hook/cta while preserving mins.
+if (( BODY_SEC < BODY_MIN )); then
+  NEED=$(( BODY_MIN - BODY_SEC ))
+
+  HOOK_SPARE=$(( HOOK_SEC - HOOK_MIN ))
+  if (( HOOK_SPARE > 0 )); then
+    TAKE=$(( NEED < HOOK_SPARE ? NEED : HOOK_SPARE ))
+    HOOK_SEC=$(( HOOK_SEC - TAKE ))
+    BODY_SEC=$(( BODY_SEC + TAKE ))
+    NEED=$(( NEED - TAKE ))
+  fi
+
+  CTA_SPARE=$(( CTA_SEC - CTA_MIN ))
+  if (( NEED > 0 && CTA_SPARE > 0 )); then
+    TAKE=$(( NEED < CTA_SPARE ? NEED : CTA_SPARE ))
+    CTA_SEC=$(( CTA_SEC - TAKE ))
+    BODY_SEC=$(( BODY_SEC + TAKE ))
+  fi
+fi
+
+HOOK_END="$HOOK_SEC"
+BODY_END=$(( HOOK_SEC + BODY_SEC ))
+
+echo "[render] pacing words hook=$HOOK_WORDS body=$BODY_WORDS cta=$CTA_WORDS total=$TOTAL_WORDS" >&2
+echo "[render] pacing secs hook=$HOOK_SEC body=$BODY_SEC cta=$CTA_SEC dur=$DUR" >&2
 
 FONT="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 COMMON="fontfile=${FONT}:fontcolor=white:line_spacing=12:fix_bounds=1:box=1:boxcolor=black@0.72:boxborderw=22:borderw=2:bordercolor=black@0.95:shadowcolor=black@0.9:shadowx=2:shadowy=2"
@@ -65,10 +135,10 @@ if [[ ! -f "$BODY2_FILE" ]]; then
 fi
 
 VF="\
-drawtext=${COMMON}:textfile=${HOOK_FILE}:fontsize=64:${XPOS}:y=120:enable='between(t,0,10)',\
-drawtext=${COMMON}:textfile=${BODY1_FILE}:fontsize=46:${XPOS}:y=340:enable='between(t,0,10)',\
-drawtext=${COMMON}:textfile=${BODY2_FILE}:fontsize=48:${XPOS}:y=260:enable='between(t,10,20)',\
-drawtext=${COMMON}:textfile=${CTA_FILE}:fontsize=52:${XPOS}:y=420:enable='between(t,20,30)'\
+drawtext=${COMMON}:textfile=${HOOK_FILE}:fontsize=64:${XPOS}:y=120:enable='between(t,0,${HOOK_END})',\
+drawtext=${COMMON}:textfile=${BODY1_FILE}:fontsize=46:${XPOS}:y=340:enable='between(t,0,${HOOK_END})',\
+drawtext=${COMMON}:textfile=${BODY2_FILE}:fontsize=48:${XPOS}:y=260:enable='between(t,${HOOK_END},${BODY_END})',\
+drawtext=${COMMON}:textfile=${CTA_FILE}:fontsize=52:${XPOS}:y=420:enable='between(t,${BODY_END},${DUR})'\
 "
 
 ffmpeg -y -hide_banner -loglevel error \

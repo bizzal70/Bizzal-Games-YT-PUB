@@ -292,6 +292,16 @@ Suggested monthly cleanup cron on Umbrel (day 1 at 07:25 UTC):
 
 If render/upload scripts are present and executable, `run_daily.sh` will invoke them automatically.
 
+Render pacing notes:
+- `bin/render/render_atom.sh` now uses dynamic timing for hook/body/cta based on word counts (instead of fixed 10/10/10).
+- Optional override: `BIZZAL_SHORTS_DURATION` (default `30`).
+
+Example:
+
+```bash
+BIZZAL_SHORTS_DURATION=30 bin/render/render_atom.sh 2026-02-13
+```
+
 ## Optional: AI Script Smoothing (OpenAI)
 `write_script_from_fact.py` can optionally polish language with OpenAI while keeping deterministic fallback templates.
 
