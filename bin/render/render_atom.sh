@@ -844,13 +844,36 @@ PY
       "$VIDEO_OUTRO"
     MUX_VIDEO="$VIDEO_OUTRO"
 
-    AUDIO_PADDED_OUTRO="$TMPDIR/audio_outro.wav"
-    ffmpeg -y -hide_banner -loglevel error \
-      -i "$FINAL_AUDIO" \
-      -af "apad=pad_dur=${OUTRO_TOTAL_SEC}" \
-      -c:a pcm_s16le \
-      "$AUDIO_PADDED_OUTRO"
-    FINAL_AUDIO="$AUDIO_PADDED_OUTRO"
+    if (( MUSIC_OK == 1 )); then
+      MUSIC_OUTRO_SEG="$TMPDIR/music_outro_seg.wav"
+      MUSIC_OUTRO_GAIN="${BG_GAIN_USED:-${BIZZAL_BG_MUSIC_GAIN:-0.42}}"
+      ffmpeg -y -hide_banner -loglevel error \
+        -stream_loop -1 -i "$MUSIC_WAV" \
+        -t "$OUTRO_TOTAL_SEC" \
+        -af "aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,volume=${MUSIC_OUTRO_GAIN},afade=t=in:st=0:d=0.12,afade=t=out:st=0:d=${OUTRO_TOTAL_SEC},alimiter=limit=0.97" \
+        -c:a pcm_s16le \
+        "$MUSIC_OUTRO_SEG"
+
+      AUDIO_OUTRO_LIST="$TMPDIR/audio_outro_concat.txt"
+      : > "$AUDIO_OUTRO_LIST"
+      echo "file $FINAL_AUDIO" >> "$AUDIO_OUTRO_LIST"
+      echo "file $MUSIC_OUTRO_SEG" >> "$AUDIO_OUTRO_LIST"
+
+      AUDIO_WITH_OUTRO="$TMPDIR/audio_outro_with_music.wav"
+      ffmpeg -y -hide_banner -loglevel error \
+        -f concat -safe 0 -i "$AUDIO_OUTRO_LIST" \
+        -c:a pcm_s16le \
+        "$AUDIO_WITH_OUTRO"
+      FINAL_AUDIO="$AUDIO_WITH_OUTRO"
+    else
+      AUDIO_PADDED_OUTRO="$TMPDIR/audio_outro.wav"
+      ffmpeg -y -hide_banner -loglevel error \
+        -i "$FINAL_AUDIO" \
+        -af "apad=pad_dur=${OUTRO_TOTAL_SEC}" \
+        -c:a pcm_s16le \
+        "$AUDIO_PADDED_OUTRO"
+      FINAL_AUDIO="$AUDIO_PADDED_OUTRO"
+    fi
     echo "[render] outro close applied fade_sec=${OUTRO_FADE_APPLY_SEC} black_hold_sec=${OUTRO_BLACK_HOLD_SEC}" >&2
   fi
 
