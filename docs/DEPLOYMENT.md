@@ -290,6 +290,24 @@ Suggested daily cron on Umbrel (09:00 UTC):
 0 9 * * * cd /home/umbrel/Bizzal_Games_Pub && bin/core/run_daily_diag_cron.sh
 ```
 
+Prune old daily diagnostic logs (default keep: 30 days):
+
+```bash
+bin/core/prune_daily_diag_logs.sh
+```
+
+Dry run preview:
+
+```bash
+bin/core/prune_daily_diag_logs.sh --keep-days 30 --dry-run
+```
+
+Suggested weekly prune cron on Umbrel (Sunday 09:20 UTC):
+
+```bash
+20 9 * * 0 cd /home/umbrel/Bizzal_Games_Pub && bin/core/prune_daily_diag_logs.sh --keep-days 30
+```
+
 Current behavior:
 - `BIZZAL_ENABLE_AI=1` enables CTA-only polishing.
 - `BIZZAL_ENABLE_AI_SCRIPT=1` enables Hook+Body+CTA polishing (recommended for more personal tone).
