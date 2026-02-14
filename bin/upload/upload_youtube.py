@@ -70,11 +70,32 @@ def get_youtube_service(client_secrets: Path, token_file: Path):
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            if not client_secrets.is_file():
-                raise FileNotFoundError(
-                    f"YouTube client secrets not found: {client_secrets}. Download OAuth client JSON from Google Cloud Console."
-                )
-            flow = InstalledAppFlow.from_client_secrets_file(str(client_secrets), scopes)
+            flow = None
+            if client_secrets.is_file():
+                flow = InstalledAppFlow.from_client_secrets_file(str(client_secrets), scopes)
+            else:
+                client_id = (os.getenv("BIZZAL_YT_CLIENT_ID") or "").strip()
+                client_secret = (os.getenv("BIZZAL_YT_CLIENT_SECRET") or "").strip()
+                if client_id and client_secret:
+                    client_config = {
+                        "installed": {
+                            "client_id": client_id,
+                            "client_secret": client_secret,
+                            "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+                            "token_uri": "https://oauth2.googleapis.com/token",
+                            "redirect_uris": [
+                                "http://localhost",
+                                "http://localhost:8080/",
+                                "urn:ietf:wg:oauth:2.0:oob",
+                            ],
+                        }
+                    }
+                    flow = InstalledAppFlow.from_client_config(client_config, scopes)
+                else:
+                    raise FileNotFoundError(
+                        f"YouTube client secrets not found: {client_secrets}. Set file OR env vars BIZZAL_YT_CLIENT_ID and BIZZAL_YT_CLIENT_SECRET."
+                    )
+
             oauth_mode = (os.getenv("BIZZAL_YT_OAUTH_MODE") or "console").strip().lower()
             if oauth_mode == "local":
                 creds = flow.run_local_server(port=0)

@@ -275,6 +275,15 @@ mkdir -p ~/.config/bizzal
 # ~/.config/bizzal/youtube_client_secrets.json
 ```
 
+If Google Cloud no longer allows downloading client secret JSON, set these instead:
+
+```bash
+export BIZZAL_YT_CLIENT_ID='YOUR_OAUTH_CLIENT_ID.apps.googleusercontent.com'
+export BIZZAL_YT_CLIENT_SECRET='YOUR_OAUTH_CLIENT_SECRET'
+```
+
+The uploader supports either the JSON file or these env vars.
+
 Optional uploader env:
 
 ```bash
