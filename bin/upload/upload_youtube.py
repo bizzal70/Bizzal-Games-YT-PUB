@@ -100,7 +100,21 @@ def get_youtube_service(client_secrets: Path, token_file: Path):
             if oauth_mode == "local":
                 creds = flow.run_local_server(port=0)
             else:
-                creds = flow.run_console()
+                if hasattr(flow, "run_console"):
+                    creds = flow.run_console()
+                else:
+                    auth_url, _ = flow.authorization_url(
+                        access_type="offline",
+                        include_granted_scopes="true",
+                        prompt="consent",
+                    )
+                    print("Open this URL in a browser and complete authorization:")
+                    print(auth_url)
+                    code = input("Paste the authorization code here: ").strip()
+                    if not code:
+                        raise RuntimeError("No authorization code provided")
+                    flow.fetch_token(code=code)
+                    creds = flow.credentials
 
         token_file.parent.mkdir(parents=True, exist_ok=True)
         token_file.write_text(creds.to_json(), encoding="utf-8")
