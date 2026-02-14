@@ -9,10 +9,20 @@ except ImportError:
     sys.exit(2)
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-ATOM_PATH = os.path.join(REPO_ROOT, "data", "atoms", "incoming", datetime.now().strftime("%Y-%m-%d") + ".json")
 CFG_PATH  = os.path.join(REPO_ROOT, "config", "style_rules.yaml")
 STATE_DIR = os.path.join(REPO_ROOT, "runtime", "state")
 HIST_PATH = os.path.join(STATE_DIR, "style_history.json")
+
+
+def resolve_day() -> str:
+    day = (os.getenv("BIZZAL_DAY") or "").strip()
+    if day:
+        return day
+    return datetime.now().strftime("%Y-%m-%d")
+
+
+def atom_path(day: str) -> str:
+    return os.path.join(REPO_ROOT, "data", "atoms", "incoming", day + ".json")
 
 def load_json(p):
     with open(p, "r", encoding="utf-8") as f:
@@ -53,8 +63,11 @@ def pick_tts_voice(day: str, category: str, tone: str, style_voice: str, voiceov
     return base_default
 
 def main():
-    if not os.path.exists(ATOM_PATH):
-        print(f"ERROR: Atom not found: {ATOM_PATH}", file=sys.stderr)
+    day = resolve_day()
+    path = atom_path(day)
+
+    if not os.path.exists(path):
+        print(f"ERROR: Atom not found: {path}", file=sys.stderr)
         sys.exit(3)
 
     cfg = load_yaml(CFG_PATH) or {}
@@ -65,14 +78,13 @@ def main():
     voiceover_by_tone = cfg.get("voiceover_by_tone") or {}
     voiceover_by_voice = cfg.get("voiceover_by_voice") or {}
 
-    atom = load_json(ATOM_PATH)
+    atom = load_json(path)
     category = atom.get("category")
     if category not in cat_rules:
         print(f"ERROR: No style rules for category: {category}", file=sys.stderr)
         sys.exit(4)
 
     # Deterministic seed per day+category
-    day = datetime.now().strftime("%Y-%m-%d")
     random.seed(f"{day}|{category}")
 
     rules = cat_rules[category]
@@ -94,7 +106,7 @@ def main():
     hist = load_history()
 
     # yesterday’s style (if present)
-    yday = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+    yday = (datetime.strptime(day, "%Y-%m-%d") - timedelta(days=1)).strftime("%Y-%m-%d")
     prev = (hist.get(yday) or {}).get(category) or {}
 
     def choose_avoid(options, avoid_value):
@@ -146,14 +158,14 @@ def main():
         "seed": f"{day}|{category}"
     }
 
-    atomic_write_json(ATOM_PATH, atom)
+    atomic_write_json(path, atom)
 
     # update history
     hist.setdefault(day, {})
     hist[day][category] = {"angle": angle, "voice": voice, "tone": tone, "persona": persona, "spice": spice}
     atomic_write_json(HIST_PATH, hist)
 
-    print(ATOM_PATH)
+    print(path)
 
 if __name__ == "__main__":
     main()

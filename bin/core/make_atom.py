@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import json, os, sys, subprocess, hashlib, random
 from datetime import datetime, UTC
 
@@ -23,8 +24,19 @@ REF_CFG      = os.path.join(CONFIG_DIR, "reference_sources.yaml")
 
 DOW_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 
-DAY = datetime.now().strftime("%Y-%m-%d")
-ATOM_PATH = os.path.join(INCOMING_DIR, f"{DAY}.json")
+def resolve_day(explicit_day: str | None = None) -> str:
+    day = (explicit_day or os.getenv("BIZZAL_DAY") or "").strip()
+    if day:
+        try:
+            datetime.strptime(day, "%Y-%m-%d")
+            return day
+        except ValueError:
+            die(f"[make_atom] invalid day format: {day} (expected YYYY-MM-DD)")
+    return datetime.now().strftime("%Y-%m-%d")
+
+
+def atom_path_for_day(day: str) -> str:
+    return os.path.join(INCOMING_DIR, f"{day}.json")
 
 def die(msg: str, code: int = 1):
     print(msg, file=sys.stderr)
@@ -48,7 +60,8 @@ def run(cmd, check=True):
     # cmd can be list or string
     if isinstance(cmd, str):
         cmd = cmd.split()
-    r = subprocess.run(cmd, cwd=REPO_ROOT)
+    env = os.environ.copy()
+    r = subprocess.run(cmd, cwd=REPO_ROOT, env=env)
     if check and r.returncode != 0:
         die(f"[make_atom] command failed ({r.returncode}): {' '.join(cmd)}")
     return r.returncode
@@ -94,7 +107,10 @@ def pick_category_and_angle_for_day(day_str: str):
     cw = spine.get("category_weights") if isinstance(spine, dict) else {}
 
     if isinstance(wk, dict) and wk:
-        dow = DOW_KEYS[datetime.now().weekday()]
+        try:
+            dow = DOW_KEYS[datetime.strptime(day_str, "%Y-%m-%d").weekday()]
+        except ValueError:
+            dow = DOW_KEYS[datetime.now().weekday()]
         category = wk.get(dow)
         if category:
             angle_weights = ((cw.get(category) or {}).get("angles") or {}) if isinstance(cw, dict) else {}
@@ -225,21 +241,29 @@ def safe_move(src, dst_dir):
     return dst
 
 def main():
+    ap = argparse.ArgumentParser(description="Create and validate daily atom")
+    ap.add_argument("--day", default="", help="Target day YYYY-MM-DD (default: BIZZAL_DAY or today)")
+    args = ap.parse_args()
+
+    day = resolve_day(args.day)
+    atom_path = atom_path_for_day(day)
+    os.environ["BIZZAL_DAY"] = day
+
     ensure_dirs()
 
     # Create or load today's atom
-    if os.path.exists(ATOM_PATH):
-        atom = load_json(ATOM_PATH)
+    if os.path.exists(atom_path):
+        atom = load_json(atom_path)
     else:
-        atom = new_atom(DAY)
-        atomic_write_json(ATOM_PATH, atom)
+        atom = new_atom(day)
+        atomic_write_json(atom_path, atom)
 
     # Ensure baseline schema file exists (optional but recommended)
     if not load_schema_min_ok():
         print("[make_atom] WARNING: config/atom_schema_min.json not found; continuing with minimal validation", file=sys.stderr)
 
     # Category/angle come from topic spine weekly schedule + weighted angles.
-    picked_category, picked_angle = pick_category_and_angle_for_day(DAY)
+    picked_category, picked_angle = pick_category_and_angle_for_day(day)
     atom["category"] = picked_category or atom.get("category") or "monster_tactic"
     if picked_angle:
         atom["angle"] = picked_angle
@@ -259,7 +283,7 @@ def main():
     atom["source"]["active_srd_path"] = active_srd_path
     atom["source"]["srd_pdf_path"] = srd_pdf_path
 
-    atomic_write_json(ATOM_PATH, atom)
+    atomic_write_json(atom_path, atom)
 
     # Fill picks (preferred broad-category picker), fallback to legacy per-category pickers.
     if has_exec("bin/core/fill_picks.py"):
@@ -277,10 +301,10 @@ def main():
         run([os.path.join(REPO_ROOT, step)])
 
     # Validate and route atom
-    atom = load_json(ATOM_PATH)
+    atom = load_json(atom_path)
     ok, msg = minimal_validate(atom)
     if ok:
-        dst = safe_move(ATOM_PATH, VALID_DIR)
+        dst = safe_move(atom_path, VALID_DIR)
         print(dst)
         return
 
@@ -290,8 +314,8 @@ def main():
         "at": datetime.now(UTC).isoformat(timespec="seconds").replace("+00:00","Z"),
         "error": msg
     })
-    atomic_write_json(ATOM_PATH, atom)
-    dst = safe_move(ATOM_PATH, FAILED_DIR)
+    atomic_write_json(atom_path, atom)
+    dst = safe_move(atom_path, FAILED_DIR)
     die(f"[make_atom] validation failed: {msg}\nMoved to: {dst}", 2)
 
 if __name__ == "__main__":

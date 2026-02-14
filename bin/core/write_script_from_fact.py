@@ -10,8 +10,12 @@ except ImportError:
     sys.exit(2)
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-ATOM_PATH = os.path.join(REPO_ROOT, "data", "atoms", "incoming", datetime.now().strftime("%Y-%m-%d") + ".json")
 STYLE_CFG = os.path.join(REPO_ROOT, "config", "style_rules.yaml")
+
+
+def atom_path() -> str:
+    day = (os.getenv("BIZZAL_DAY") or "").strip() or datetime.now().strftime("%Y-%m-%d")
+    return os.path.join(REPO_ROOT, "data", "atoms", "incoming", day + ".json")
 
 def load_json(p):
     with open(p, "r", encoding="utf-8") as f:
@@ -1613,7 +1617,8 @@ def enforce_encounter_cta_guard(atom: dict, fact: dict, script: dict, day: str =
     return script
 
 def main():
-    atom = load_json(ATOM_PATH)
+    path = atom_path()
+    atom = load_json(path)
 
     # Always reset script so we never show stale content if generation fails
     atom["script"] = {}
@@ -1689,8 +1694,8 @@ def main():
     atom["script_id"] = sha256_text(full_text)
     atom["content"] = build_content_contract(atom, atom["script_id"], script, fact, style)
 
-    atomic_write_json(ATOM_PATH, atom)
-    print(ATOM_PATH)
+    atomic_write_json(path, atom)
+    print(path)
 
 if __name__ == "__main__":
     main()

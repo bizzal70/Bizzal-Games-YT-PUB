@@ -11,8 +11,12 @@ except ImportError:
 from reference_paths import resolve_active_srd_path
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-ATOM_PATH = os.path.join(REPO_ROOT, "data", "atoms", "incoming", datetime.now().strftime("%Y-%m-%d") + ".json")
 REF_CFG  = os.path.join(REPO_ROOT, "config", "reference_sources.yaml")
+
+
+def atom_path() -> str:
+    day = (os.getenv("BIZZAL_DAY") or "").strip() or datetime.now().strftime("%Y-%m-%d")
+    return os.path.join(REPO_ROOT, "data", "atoms", "incoming", day + ".json")
 
 def load_json(p):
     with open(p, "r", encoding="utf-8") as f:
@@ -61,7 +65,8 @@ def canonical_category(category: str) -> str:
     return aliases.get((category or "").strip().lower(), (category or "").strip().lower())
 
 def main():
-    atom = load_json(ATOM_PATH)
+    path = atom_path()
+    atom = load_json(path)
     category = canonical_category(atom.get("category"))
     picks = atom.get("picks") or {}
 
@@ -161,8 +166,8 @@ def main():
             fact["spell_lists"] = [x.get("fields") or {} for x in sl]
 
     atom["fact"] = fact
-    atomic_write_json(ATOM_PATH, atom)
-    print(ATOM_PATH)
+    atomic_write_json(path, atom)
+    print(path)
 
 if __name__ == "__main__":
     main()

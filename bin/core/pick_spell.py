@@ -11,8 +11,15 @@ except ImportError:
 from reference_paths import resolve_active_srd_path
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-ATOM_PATH = os.path.join(REPO_ROOT, "data", "atoms", "incoming", datetime.now().strftime("%Y-%m-%d") + ".json")
 REF_CFG  = os.path.join(REPO_ROOT, "config", "reference_sources.yaml")
+
+
+def resolve_day() -> str:
+    return (os.getenv("BIZZAL_DAY") or "").strip() or datetime.now().strftime("%Y-%m-%d")
+
+
+def atom_path(day: str) -> str:
+    return os.path.join(REPO_ROOT, "data", "atoms", "incoming", day + ".json")
 
 def load_json(p):
     with open(p, "r", encoding="utf-8") as f:
@@ -29,7 +36,9 @@ def load_yaml(p):
         return yaml.safe_load(f)
 
 def main():
-    atom = load_json(ATOM_PATH)
+    day = resolve_day()
+    path = atom_path(day)
+    atom = load_json(path)
     cat = atom.get("category")
     if cat != "spell_use_case":
         print(f"ERROR: pick_spell only supports spell_use_case, got {cat}", file=sys.stderr)
@@ -45,14 +54,13 @@ def main():
     records = load_json(path)
     pks = [r.get("pk") for r in records if isinstance(r, dict) and r.get("pk") is not None]
 
-    day = datetime.now().strftime("%Y-%m-%d")
     random.seed(f"{day}|{cat}|spell")
     pk = random.choice(pks)
 
     atom.setdefault("picks", {})
     atom["picks"]["spell_pk"] = pk
-    atomic_write_json(ATOM_PATH, atom)
-    print(ATOM_PATH)
+    atomic_write_json(path, atom)
+    print(path)
 
 if __name__ == "__main__":
     main()
