@@ -60,7 +60,10 @@ def get_youtube_service(client_secrets: Path, token_file: Path):
             "Missing YouTube dependencies. Install: python3 -m pip install --user google-api-python-client google-auth-oauthlib google-auth-httplib2"
         ) from exc
 
-    scopes = ["https://www.googleapis.com/auth/youtube.upload"]
+    scopes = [
+        "https://www.googleapis.com/auth/youtube.upload",
+        "https://www.googleapis.com/auth/youtube.readonly",
+    ]
     creds = None
 
     if token_file.is_file():
