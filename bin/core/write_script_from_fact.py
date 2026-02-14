@@ -246,6 +246,18 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
         ], f"cta|{day}|{c}|{a}|{name}")
 
     if c == "item_spotlight" and kind == "item":
+        if a == "clever_use":
+            return deterministic_pick([
+                "Players: pick one obstacle this session and solve it with the item before combat even starts.",
+                "Players: call your setup first, then use the item to bend the scene in your favor.",
+                "Players: treat this as a positioning tool—make the map easier before the dice get loud.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "best_user":
+            return deterministic_pick([
+                "Table tip: hand this to the teammate who can turn one action into team-wide advantage.",
+                "Players: put this item on the character who creates windows for everyone else, not just personal damage.",
+                "Assign this tool to the party role that already controls tempo and watch its value spike.",
+            ], f"cta|{day}|{c}|{a}|{name}")
         if a == "story_hook":
             return deterministic_pick([
                 "DMs: tie the item to a concrete objective so utility beats raw DPR.",
@@ -265,6 +277,60 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
         ], f"cta|{day}|{c}|{a}|{name}")
 
     if c in ("rules_ruling", "rules_myth"):
+        if a == "common_table_mistake":
+            return deterministic_pick([
+                "DMs: name the mistake once, apply the correction immediately, and move on with momentum.",
+                "Table fix: call the common error cleanly, then reinforce the right habit on the next similar roll.",
+                "Make the correction brief and consistent so the ruling becomes table muscle memory.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "fast_ruling":
+            return deterministic_pick([
+                "DMs: resolve in one sentence, one ruling, one consequence—then keep initiative moving.",
+                "Use a fast ruling pattern: intent, trigger, outcome, done.",
+                "Keep the call short and decisive so pace stays high and trust stays intact.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "edge_case":
+            return deterministic_pick([
+                "DMs: for edge cases, state order of operations first, then apply effects in that order every time.",
+                "When the rule gets weird, lock sequence first so everyone can predict the result.",
+                "Table policy: define timing order once for this edge case and reuse it consistently.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "dm_fairness_tip":
+            return deterministic_pick([
+                "DMs: apply this call the same way for monsters and players, especially when it hurts.",
+                "Fairness check: if enemies get it, PCs get it too—and vice versa.",
+                "Use symmetry as your guardrail: same trigger, same ruling, no favorites.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "player_tip":
+            return deterministic_pick([
+                "Players: declare intent and timing before rolling so rulings land in your favor more often.",
+                "Players: call your exact trigger and sequence up front to avoid retroactive confusion.",
+                "Lead with clarity: what you do, when you do it, and what outcome you want.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "myth_vs_rule":
+            return deterministic_pick([
+                "Table myth check: say the myth out loud, then run the text as written for one full session.",
+                "DMs: separate habit from rule and make the correction visible at the table.",
+                "Use this as a reset moment—replace folklore rulings with consistent text-driven calls.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "why_people_get_it_wrong":
+            return deterministic_pick([
+                "DMs: highlight the exact phrase people skip, then reframe it in plain table language.",
+                "Turn confusion into clarity: quote the key line, then show one practical example.",
+                "Fix the recurring misread by teaching the trigger, not just the result.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "quick_example":
+            return deterministic_pick([
+                "Run one 20-second example at the table, then use that as precedent for the rest of the night.",
+                "Teach this with a tiny live example once, then stop debating and play.",
+                "Use one quick scenario to anchor the ruling so everyone can reference it later.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "dm_callout":
+            return deterministic_pick([
+                "DMs: telegraph the ruling before it matters so players can plan around it fairly.",
+                "Call this out early, then enforce it consistently when stakes rise.",
+                "Front-load the ruling, not the surprise—players should lose to decisions, not ambiguity.",
+            ], f"cta|{day}|{c}|{a}|{name}")
         return deterministic_pick([
             "Table rule: make one clear call, apply it consistently, and move on.",
             "Rule flow: decide once, explain briefly, keep the game moving.",
@@ -272,6 +338,36 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
         ], f"cta|{day}|{c}|{a}|{name}")
 
     if c == "character_micro_tip":
+        if a == "level_1_choice":
+            return deterministic_pick([
+                "Players: choose the level-one option you can execute every combat without overthinking.",
+                "Lock your first-level game plan now so your turns stay sharp when the table gets noisy.",
+                "Pick a level-one pattern that survives bad luck and still helps the party.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "party_role":
+            return deterministic_pick([
+                "Players: define your party job in one sentence and make your next three choices reinforce it.",
+                "State your role clearly so teammates can build turns around your strengths.",
+                "Own one role first; versatility is stronger after your core job is reliable.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "survivability":
+            return deterministic_pick([
+                "Players: protect your position first—dead DPR is still zero DPR.",
+                "Take one safer square this round and buy yourself three better rounds later.",
+                "Build survivability into your default turn so pressure doesn’t break your plan.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "exploration_edge":
+            return deterministic_pick([
+                "Players: use your class feature to solve one exploration problem before initiative ever starts.",
+                "Call one non-combat use each session and turn your class kit into time savings.",
+                "Find one exploration edge your class owns and make it part of party planning.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "table_etiquette":
+            return deterministic_pick([
+                "Players: announce intent early so your teammates can stack stronger turns with you.",
+                "Table habit: state your plan before rolling and invite one teammate combo.",
+                "Make your turns readable—clear intent creates cleaner teamwork.",
+            ], f"cta|{day}|{c}|{a}|{name}")
         if a == "early_power_spike":
             return deterministic_pick([
                 "Players: plan your first real power spike two sessions ahead, then build your choices so that turn lands clean and loud.",
