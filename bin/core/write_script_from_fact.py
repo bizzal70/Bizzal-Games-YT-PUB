@@ -272,6 +272,36 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
         ], f"cta|{day}|{c}|{a}|{name}")
 
     if c == "character_micro_tip":
+        if a == "early_power_spike":
+            return deterministic_pick([
+                "Players: plan your first real power spike two sessions ahead, then build your choices so that turn lands clean and loud.",
+                "Players: call your early spike level now, then make every feat, spell, and tactic feed that moment.",
+                "Players: map your first breakout level and protect that timing—don’t spend tomorrow’s win on today’s panic.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "subclass_identity":
+            return deterministic_pick([
+                "Players: pick one subclass identity and commit hard enough that the table can feel your job in one round.",
+                "Players: let your subclass answer a clear problem every fight instead of being a little bit of everything.",
+                "Players: choose the subclass lane that matches your table role, then stop buying features that dilute it.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "resource_breakpoint":
+            return deterministic_pick([
+                "Players: decide your spend line before initiative—what gets used every fight and what stays loaded for boss pressure.",
+                "Players: set a resource budget now so your class feels reliable in room one and dangerous in room four.",
+                "Players: pre-commit your high-value resources to clear trigger moments, not vibes.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "party_role_pivot":
+            return deterministic_pick([
+                "Players: name your pivot turn out loud so the party knows when you switch from setup to finisher.",
+                "Players: practice one clean role pivot this week—open as support, close as pressure when the board tips.",
+                "Players: call the pivot early and coordinate it, so your class changes tempo instead of chasing it.",
+            ], f"cta|{day}|{c}|{a}|{name}")
+        if a == "progression_trap":
+            return deterministic_pick([
+                "Players: skip one flashy trap pick and invest in the feature that makes your next ten sessions smoother.",
+                "Players: if a choice delays your core engine, park it for later and keep your progression clean now.",
+                "Players: protect your build path—fun options are great, but dead levels are expensive.",
+            ], f"cta|{day}|{c}|{a}|{name}")
         return deterministic_pick([
             "Pick one repeatable decision pattern and run it every session until it is automatic.",
             "Choose one class habit and execute it every fight until it becomes muscle memory.",
