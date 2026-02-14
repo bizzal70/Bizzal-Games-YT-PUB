@@ -14,6 +14,21 @@ def now_utc() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+def parse_utc_timestamp(value: str) -> datetime | None:
+    txt = (value or "").strip()
+    if not txt:
+        return None
+    try:
+        if txt.endswith("Z"):
+            txt = txt[:-1] + "+00:00"
+        dt = datetime.fromisoformat(txt)
+        if dt.tzinfo is None:
+            return dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except Exception:
+        return None
+
+
 def load_json(path: str) -> dict:
     if not os.path.isfile(path):
         return {}
@@ -340,6 +355,11 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                 continue
             content_id = str(entry.get("content_id") or "")
             if arg and arg not in {day.lower(), content_id.lower()}:
+                continue
+
+            request_ts = parse_utc_timestamp(str(entry.get("requested_utc") or ""))
+            msg_ts = parse_utc_timestamp(str(msg.get("timestamp") or ""))
+            if request_ts and msg_ts and msg_ts < request_ts:
                 continue
 
             if cmd == "reject":
