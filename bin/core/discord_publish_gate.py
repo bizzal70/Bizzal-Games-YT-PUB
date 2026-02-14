@@ -185,7 +185,9 @@ def run_publish_command(repo_root: str, day: str) -> tuple[int, str]:
         return 10, "no publish command available"
 
     try:
-        proc = subprocess.run(cmd, cwd=repo_root, capture_output=True, text=True)
+        env = os.environ.copy()
+        env["BIZZAL_DAY"] = day
+        proc = subprocess.run(cmd, cwd=repo_root, capture_output=True, text=True, env=env)
     except FileNotFoundError as exc:
         return 11, f"publish command executable not found: {exc}"
     except Exception as exc:
