@@ -45,6 +45,9 @@ tones_by_category:
   character_micro_tip:
   - heroic
   - neutral
+  class_spotlight:
+  - heroic
+  - neutral
 
 voiceover_by_tone:
   neutral:
