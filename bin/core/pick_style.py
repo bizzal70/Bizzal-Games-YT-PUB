@@ -44,6 +44,24 @@ def load_history():
     return load_json(HIST_PATH)
 
 
+def recent_tones_for_category(hist: dict, category: str, day: str, lookback_days: int) -> list[str]:
+    if lookback_days <= 0:
+        return []
+    try:
+        cur = datetime.strptime(day, "%Y-%m-%d")
+    except ValueError:
+        return []
+
+    tones: list[str] = []
+    for i in range(1, lookback_days + 1):
+        d = (cur - timedelta(days=i)).strftime("%Y-%m-%d")
+        entry = (hist.get(d) or {}).get(category) or {}
+        tone = str(entry.get("tone") or "").strip()
+        if tone:
+            tones.append(tone)
+    return tones
+
+
 def pick_tts_voice(day: str, category: str, tone: str, style_voice: str, voiceover_cfg: dict, defaults: dict) -> str:
     base_default = ((defaults.get("voiceover_default") or {}).get("tts_voice_id") or "alloy")
 
@@ -105,6 +123,11 @@ def main():
     os.makedirs(STATE_DIR, exist_ok=True)
     hist = load_history()
 
+    try:
+        tone_lookback_days = int((os.getenv("BIZZAL_TONE_VARIETY_LOOKBACK_DAYS") or "5").strip())
+    except ValueError:
+        tone_lookback_days = 5
+
     # yesterday’s style (if present)
     yday = (datetime.strptime(day, "%Y-%m-%d") - timedelta(days=1)).strftime("%Y-%m-%d")
     prev = (hist.get(yday) or {}).get(category) or {}
@@ -113,13 +136,19 @@ def main():
         opts = [o for o in options if o != avoid_value]
         return random.choice(opts) if opts else random.choice(options)
 
+    def choose_avoid_many(options, avoid_values):
+        avoid = set(v for v in avoid_values if v)
+        opts = [o for o in options if o not in avoid]
+        return random.choice(opts) if opts else random.choice(options)
+
     chosen_angle = atom.get("angle")
     if chosen_angle in angles:
         angle = chosen_angle
     else:
         angle = choose_avoid(angles, prev.get("angle"))
     voice = choose_avoid(voices, prev.get("voice"))
-    tone  = random.choice(tones)
+    recent_tones = recent_tones_for_category(hist, category, day, tone_lookback_days)
+    tone = choose_avoid_many(tones, recent_tones)
     persona = persona_by_category.get(category) or defaults.get("persona_default") or "table_coach"
 
     voiceover = defaults.get("voiceover_default") or {}

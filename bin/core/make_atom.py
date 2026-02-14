@@ -53,6 +53,55 @@ def load_json(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
+
+def validated_atom_paths() -> list[str]:
+    if not os.path.isdir(VALID_DIR):
+        return []
+    out = []
+    for name in os.listdir(VALID_DIR):
+        if not name.endswith(".json"):
+            continue
+        out.append(os.path.join(VALID_DIR, name))
+    return sorted(out)
+
+
+def recent_values(key: str, lookback_days: int) -> list[str]:
+    if lookback_days <= 0:
+        return []
+    vals: list[str] = []
+    for path in reversed(validated_atom_paths()):
+        try:
+            atom = load_json(path)
+        except Exception:
+            continue
+        value = str(atom.get(key) or "").strip().lower()
+        if not value:
+            continue
+        vals.append(value)
+        if len(vals) >= lookback_days:
+            break
+    return vals
+
+
+def choose_varied_weighted(weights: dict, seed_key: str, recent: list[str]) -> str | None:
+    items = [(str(k), int(v)) for k, v in (weights or {}).items() if int(v) > 0]
+    if not items:
+        return None
+
+    recent_set = set(recent)
+    filtered = [(k, w) for k, w in items if str(k).lower() not in recent_set]
+    pool = filtered if filtered else items
+
+    total = sum(v for _, v in pool)
+    rng = random.Random(int(sha256_text(seed_key)[:8], 16))
+    roll = rng.randint(1, total)
+    acc = 0
+    for k, w in pool:
+        acc += w
+        if roll <= acc:
+            return k
+    return pool[0][0]
+
 def sha256_text(s: str) -> str:
     return hashlib.sha256(s.encode("utf-8")).hexdigest()
 
@@ -101,6 +150,16 @@ def weighted_choice(weights: dict, seed_key: str):
 
 def pick_category_and_angle_for_day(day_str: str):
     spine = load_topic_spine()
+    try:
+        category_lookback = int((os.getenv("BIZZAL_CATEGORY_VARIETY_LOOKBACK_DAYS") or "7").strip())
+    except ValueError:
+        category_lookback = 7
+    try:
+        angle_lookback = int((os.getenv("BIZZAL_ANGLE_VARIETY_LOOKBACK_DAYS") or "7").strip())
+    except ValueError:
+        angle_lookback = 7
+    recent_categories = recent_values("category", category_lookback)
+    recent_angles = recent_values("angle", angle_lookback)
 
     # Preferred model: weekly_spine + category_weights.<category>.angles
     wk = spine.get("weekly_spine") if isinstance(spine, dict) else {}
@@ -114,7 +173,11 @@ def pick_category_and_angle_for_day(day_str: str):
         category = wk.get(dow)
         if category:
             angle_weights = ((cw.get(category) or {}).get("angles") or {}) if isinstance(cw, dict) else {}
-            angle = weighted_choice(angle_weights, f"angle|{day_str}|{category}") if angle_weights else None
+            angle = choose_varied_weighted(
+                angle_weights,
+                f"angle|{day_str}|{category}",
+                recent_angles,
+            ) if angle_weights else None
             return category, angle
 
     # Legacy fallback: schedule list
@@ -128,8 +191,14 @@ def pick_category_and_angle_for_day(day_str: str):
             if not cat:
                 continue
             weights[str(cat)] = int(row.get("weight", 1))
-        category = weighted_choice(weights, f"topic|{day_str}") if weights else None
-        return category, None
+        category = choose_varied_weighted(weights, f"topic|{day_str}", recent_categories) if weights else None
+        angle_weights = ((cw.get(category) or {}).get("angles") or {}) if isinstance(cw, dict) and category else {}
+        angle = choose_varied_weighted(
+            angle_weights,
+            f"angle|{day_str}|{category}",
+            recent_angles,
+        ) if angle_weights else None
+        return category, angle
 
     return "monster_tactic", None
 
