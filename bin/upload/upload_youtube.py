@@ -103,6 +103,7 @@ def get_youtube_service(client_secrets: Path, token_file: Path):
                 if hasattr(flow, "run_console"):
                     creds = flow.run_console()
                 else:
+                    flow.redirect_uri = "urn:ietf:wg:oauth:2.0:oob"
                     auth_url, _ = flow.authorization_url(
                         access_type="offline",
                         include_granted_scopes="true",
