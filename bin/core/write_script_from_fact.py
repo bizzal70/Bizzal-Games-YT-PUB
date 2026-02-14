@@ -1386,7 +1386,17 @@ def build_class_body(angle: str, fields: dict):
     desc = short(fields.get("desc") or fields.get("description") or "", 220, add_ellipsis=False)
     angle = (angle or "").strip().lower()
 
-    if angle == "level_1_choice":
+    if angle == "early_power_spike":
+        lead = f"Power spike for {name}: identify the first level where your turn quality jumps and plan around that window."
+    elif angle == "subclass_identity":
+        lead = f"Subclass identity for {name}: choose features that reinforce one job instead of splitting your build in three directions."
+    elif angle == "resource_breakpoint":
+        lead = f"Resource breakpoint for {name}: know what you can spend every fight vs what must be saved for boss pressure."
+    elif angle == "party_role_pivot":
+        lead = f"Role pivot for {name}: decide when to switch from setup to closer so the party doesn’t over-invest in one lane."
+    elif angle == "progression_trap":
+        lead = f"Progression trap for {name}: avoid flashy picks that delay your core engine by multiple levels."
+    elif angle == "level_1_choice":
         lead = f"Level 1 choice for {name}: pick a play pattern you can execute every fight."
     elif angle == "party_role":
         lead = f"Party role for {name}: define what you solve before initiative starts."

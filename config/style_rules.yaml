@@ -262,11 +262,11 @@ category_rules:
     - rules_lawyer
   class_spotlight:
     angles:
-    - level_1_choice
-    - party_role
-    - survivability
-    - exploration_edge
-    - table_etiquette
+    - early_power_spike
+    - subclass_identity
+    - resource_breakpoint
+    - party_role_pivot
+    - progression_trap
     voices:
     - friendly_vet
     - gritty_dm
