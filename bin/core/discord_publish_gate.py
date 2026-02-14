@@ -43,6 +43,25 @@ def atom_for_day(repo_root: str, day: str) -> tuple[str, dict]:
     return path, obj
 
 
+def latest_validated_day(repo_root: str) -> str | None:
+    validated_dir = os.path.join(repo_root, "data", "atoms", "validated")
+    if not os.path.isdir(validated_dir):
+        return None
+    days: list[str] = []
+    for name in os.listdir(validated_dir):
+        if not name.endswith(".json"):
+            continue
+        day = name[:-5]
+        try:
+            datetime.strptime(day, "%Y-%m-%d")
+        except ValueError:
+            continue
+        days.append(day)
+    if not days:
+        return None
+    return sorted(days)[-1]
+
+
 def short(text: str, n: int) -> str:
     t = " ".join((text or "").split())
     if len(t) <= n:
@@ -185,7 +204,23 @@ def request_mode(repo_root: str, day: str, state_path: str, webhook_url: str, fo
         print("ERROR: BIZZAL_DISCORD_WEBHOOK_URL looks invalid/placeholder; set a real Discord webhook URL", file=sys.stderr)
         return 2
 
-    atom_path, atom = atom_for_day(repo_root, day)
+    requested_day = day
+    try:
+        atom_path, atom = atom_for_day(repo_root, day)
+    except FileNotFoundError:
+        fallback_day = latest_validated_day(repo_root)
+        if not fallback_day:
+            print(
+                f"ERROR: validated atom missing for requested day {requested_day}, and no fallback atom exists",
+                file=sys.stderr,
+            )
+            return 3
+        day = fallback_day
+        atom_path, atom = atom_for_day(repo_root, day)
+        print(
+            f"[discord_publish_gate] requested day={requested_day} missing; using latest validated day={day}",
+            file=sys.stderr,
+        )
     content = atom.get("content") or {}
     script = atom.get("script") or {}
     content_id = str(content.get("content_id") or "")
