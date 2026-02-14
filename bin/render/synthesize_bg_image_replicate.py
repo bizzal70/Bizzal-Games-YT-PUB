@@ -2,6 +2,8 @@
 import argparse
 import json
 import os
+import re
+import subprocess
 import sys
 import time
 from urllib import request, error
@@ -149,6 +151,118 @@ def post_prediction(token: str, model_slug: str, payload: dict, attempts: int):
     return None, (0, "exhausted retries")
 
 
+def tokenize_ocr_text(raw: str) -> list[str]:
+    tokens = re.findall(r"[A-Za-z][A-Za-z0-9]{1,}", raw or "")
+    cleaned = []
+    for tok in tokens:
+        t = tok.strip().lower()
+        if len(t) < 2:
+            continue
+        cleaned.append(t)
+    return cleaned
+
+
+def detect_visible_text(path: str) -> tuple[bool, list[str], str]:
+    """
+    Returns:
+      (has_text, tokens, status)
+      status in {"ok", "no_tesseract", "ocr_error"}
+    """
+    if (os.getenv("BIZZAL_BG_IMAGE_OCR_ENABLED", "1").strip().lower() not in {"1", "true", "yes", "on"}):
+        return False, [], "ok"
+
+    psm = (os.getenv("BIZZAL_BG_IMAGE_OCR_PSM", "11").strip() or "11")
+    language = (os.getenv("BIZZAL_BG_IMAGE_OCR_LANG", "eng").strip() or "eng")
+    min_tokens = int(os.getenv("BIZZAL_BG_IMAGE_OCR_MIN_TOKENS", "2"))
+
+    try:
+        proc = subprocess.run(
+            ["tesseract", path, "stdout", "--psm", psm, "-l", language],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+    except FileNotFoundError:
+        return False, [], "no_tesseract"
+    except Exception:
+        return False, [], "ocr_error"
+
+    if proc.returncode != 0:
+        return False, [], "ocr_error"
+
+    tokens = tokenize_ocr_text(proc.stdout)
+    return (len(tokens) >= max(1, min_tokens)), tokens, "ok"
+
+
+def enrich_prompt(base_prompt: str, attempt_index: int) -> str:
+    anti_text = (
+        "absolutely no readable text anywhere, no letters, no numbers, "
+        "no words, no typography, no runes, no signage, no UI"
+    )
+    attempt_flavors = [
+        "clean cinematic composition",
+        "organic environmental details only",
+        "painterly matte-art style, no glyph-like marks",
+        "natural textures without symbols",
+        "film still composition with clear non-text surfaces",
+    ]
+    flavor = attempt_flavors[attempt_index % len(attempt_flavors)]
+    return f"{base_prompt}; {anti_text}; variation: {flavor}"
+
+
+def create_prediction(token: str, deduped_models: list[str], payload_variants: list[dict], attempts: int):
+    pred = None
+    used_model = ""
+    for model_slug in deduped_models:
+        used_model = model_slug
+        for payload in payload_variants:
+            pred, err = post_prediction(token, model_slug, payload, attempts)
+            if pred is not None:
+                return pred, used_model, None
+            if not err:
+                continue
+            code, detail = err
+            if code in {403, 404, 422}:
+                if code == 422:
+                    print(f"[bgimg] skip payload model={model_slug} HTTP 422", file=sys.stderr)
+                else:
+                    print(f"[bgimg] skip model={model_slug} HTTP {code}", file=sys.stderr)
+                    break
+                continue
+            return None, used_model, f"create prediction model={model_slug} HTTP {code}: {detail}"
+    return None, used_model, None
+
+
+def wait_for_prediction(token: str, pred: dict, timeout_sec: int):
+    pred_id = pred.get("id")
+    if not pred_id:
+        return None, "prediction id missing"
+
+    started = time.time()
+    url = f"https://api.replicate.com/v1/predictions/{pred_id}"
+    status = pred.get("status")
+    while status not in {"succeeded", "failed", "canceled"}:
+        if time.time() - started > timeout_sec:
+            return None, "prediction timed out"
+        time.sleep(2.0)
+        try:
+            pred = http_json("GET", url, token, None, timeout=60)
+            status = pred.get("status")
+        except Exception as exc:
+            return None, f"polling failed: {exc}"
+
+    if status != "succeeded":
+        err = pred.get("error")
+        if err:
+            return None, f"prediction status={status} details={err}"
+        return None, f"prediction status={status}"
+
+    out_url = extract_output_url(pred)
+    if not out_url:
+        return None, "no output URL in prediction"
+    return out_url, None
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Generate AI background image via Replicate")
     parser.add_argument("--atom", required=True, help="Validated atom JSON path")
@@ -205,75 +319,72 @@ def main() -> int:
         return 0
 
     attempts = int(os.getenv("BIZZAL_REPLICATE_IMAGE_CREATE_ATTEMPTS", "3"))
-    pred = None
-    used_model = ""
-
-    for model_slug in deduped_models:
-        used_model = model_slug
-        for payload in payload_variants:
-            pred, err = post_prediction(token, model_slug, payload, attempts)
-            if pred is not None:
-                break
-            if not err:
-                continue
-            code, detail = err
-            if code in {403, 404, 422}:
-                if code == 422:
-                    print(f"[bgimg] skip payload model={model_slug} HTTP 422", file=sys.stderr)
-                else:
-                    print(f"[bgimg] skip model={model_slug} HTTP {code}", file=sys.stderr)
-                    break
-                continue
-            print(f"[bgimg] ERROR: create prediction model={model_slug} HTTP {code}: {detail}", file=sys.stderr)
-            return 3
-        if pred is not None:
-            break
-
-    if pred is None:
-        print("[bgimg] ERROR: no accessible image model/payload combination succeeded", file=sys.stderr)
-        return 4
-
-    pred_id = pred.get("id")
-    if not pred_id:
-        print("[bgimg] ERROR: prediction id missing", file=sys.stderr)
-        return 5
-
     timeout_sec = int(os.getenv("BIZZAL_REPLICATE_IMAGE_TIMEOUT_SEC", "300"))
-    started = time.time()
-    url = f"https://api.replicate.com/v1/predictions/{pred_id}"
-    status = pred.get("status")
-    while status not in {"succeeded", "failed", "canceled"}:
-        if time.time() - started > timeout_sec:
-            print("[bgimg] ERROR: prediction timed out", file=sys.stderr)
+    candidate_attempts = int(os.getenv("BIZZAL_BG_IMAGE_CANDIDATE_ATTEMPTS", "4"))
+    ocr_unavailable_warned = False
+
+    for candidate_idx in range(max(1, candidate_attempts)):
+        candidate_prompt = enrich_prompt(prompt, candidate_idx)
+        payload_variants = [
+            {"input": {"prompt": candidate_prompt, "aspect_ratio": aspect_ratio, "output_format": output_format, "num_outputs": 1}},
+            {"input": {"prompt": candidate_prompt, "aspect_ratio": aspect_ratio}},
+            {"input": {"prompt": candidate_prompt}},
+        ]
+
+        pred, used_model, create_err = create_prediction(token, deduped_models, payload_variants, attempts)
+        if pred is None:
+            if create_err:
+                print(f"[bgimg] ERROR: {create_err}", file=sys.stderr)
+                return 3
+            print("[bgimg] ERROR: no accessible image model/payload combination succeeded", file=sys.stderr)
+            return 4
+
+        out_url, wait_err = wait_for_prediction(token, pred, timeout_sec)
+        if wait_err:
+            print(f"[bgimg] ERROR: {wait_err}", file=sys.stderr)
             return 6
-        time.sleep(2.0)
+
         try:
-            pred = http_json("GET", url, token, None, timeout=60)
-            status = pred.get("status")
+            tmp_out = args.out if candidate_idx == candidate_attempts - 1 else f"{args.out}.candidate{candidate_idx}.tmp"
+            download_file(out_url, tmp_out, timeout=240)
         except Exception as exc:
-            print(f"[bgimg] ERROR: polling failed: {exc}", file=sys.stderr)
-            return 7
+            print(f"[bgimg] ERROR: download failed: {exc}", file=sys.stderr)
+            return 10
 
-    if status != "succeeded":
-        print(f"[bgimg] ERROR: prediction status={status}", file=sys.stderr)
-        err = pred.get("error")
-        if err:
-            print(f"[bgimg] details: {err}", file=sys.stderr)
-        return 8
+        has_text, tokens, status = detect_visible_text(tmp_out)
+        if status == "no_tesseract" and not ocr_unavailable_warned:
+            print("[bgimg] WARN: tesseract not installed; cannot OCR-reject text artifacts", file=sys.stderr)
+            ocr_unavailable_warned = True
+        elif status == "ocr_error":
+            print("[bgimg] WARN: OCR failed; accepting image without text gate", file=sys.stderr)
 
-    out_url = extract_output_url(pred)
-    if not out_url:
-        print("[bgimg] ERROR: no output URL in prediction", file=sys.stderr)
-        return 9
+        if has_text and candidate_idx < candidate_attempts - 1:
+            preview = ",".join(tokens[:6]) if tokens else "n/a"
+            print(
+                f"[bgimg] reject candidate={candidate_idx + 1}/{candidate_attempts} detected_text_tokens={preview}; regenerating",
+                file=sys.stderr,
+            )
+            try:
+                os.remove(tmp_out)
+            except Exception:
+                pass
+            continue
 
-    try:
-        download_file(out_url, args.out, timeout=240)
-    except Exception as exc:
-        print(f"[bgimg] ERROR: download failed: {exc}", file=sys.stderr)
-        return 10
+        if tmp_out != args.out:
+            os.replace(tmp_out, args.out)
 
-    print(f"[bgimg] wrote {args.out} model={used_model} status={status}")
-    return 0
+        if has_text:
+            preview = ",".join(tokens[:6]) if tokens else "n/a"
+            print(
+                f"[bgimg] WARN: accepted final candidate with detected text tokens={preview}",
+                file=sys.stderr,
+            )
+
+        print(f"[bgimg] wrote {args.out} model={used_model} status=succeeded candidate={candidate_idx + 1}")
+        return 0
+
+    print("[bgimg] ERROR: exhausted candidate generation attempts", file=sys.stderr)
+    return 11
 
 
 if __name__ == "__main__":
