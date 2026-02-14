@@ -640,7 +640,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
     if not current_cta:
         return current_cta
 
-    if not env_true("BIZZAL_ENABLE_AI", False):
+    if not env_true("BIZZAL_ENABLE_AI", True):
         ai_diag("AI CTA polish off (BIZZAL_ENABLE_AI=0)")
         return current_cta
 
@@ -778,7 +778,7 @@ def locked_tokens(script: dict, fact: dict) -> list:
 
 
 def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) -> dict:
-    if not env_true("BIZZAL_ENABLE_AI_SCRIPT", False):
+    if not env_true("BIZZAL_ENABLE_AI_SCRIPT", True):
         ai_diag("AI script polish off (BIZZAL_ENABLE_AI_SCRIPT=0)")
         return script
 
