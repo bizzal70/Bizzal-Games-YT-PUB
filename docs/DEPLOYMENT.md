@@ -312,6 +312,17 @@ Set publish command to stable wrapper:
 export BIZZAL_PUBLISH_CMD=/home/umbrel/Bizzal_Games_Pub/bin/upload/publish_latest_youtube.sh
 ```
 
+Duplicate publish protection:
+- `upload_youtube.py` now computes a publish fingerprint (atom content + script + day + rendered video hash)
+- Fingerprints are recorded at `data/archive/publish/published_registry.json`
+- Duplicate content is blocked by default to prevent reusing old assets/scripts accidentally
+
+Optional override (not recommended unless intentional):
+
+```bash
+export BIZZAL_ALLOW_DUPLICATE_PUBLISH=1
+```
+
 First run will prompt OAuth and store refresh token; later runs publish directly.
 
 Manual commands:

@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 import argparse
+import hashlib
 import json
 import os
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -15,6 +17,87 @@ def load_atom(repo_root: Path, day: str) -> dict:
     if not atom_path.is_file():
         raise FileNotFoundError(f"validated atom missing: {atom_path}")
     return json.loads(atom_path.read_text(encoding="utf-8"))
+
+
+def utc_now() -> str:
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        while True:
+            chunk = f.read(1024 * 1024)
+            if not chunk:
+                break
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def publish_registry_path(repo_root: Path) -> Path:
+    val = (os.getenv("BIZZAL_PUBLISH_REGISTRY") or "data/archive/publish/published_registry.json").strip()
+    p = Path(val).expanduser()
+    if not p.is_absolute():
+        p = repo_root / p
+    return p
+
+
+def load_registry(path: Path) -> dict:
+    if not path.is_file():
+        return {"items": []}
+    try:
+        obj = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(obj, dict) and isinstance(obj.get("items"), list):
+            return obj
+    except Exception:
+        pass
+    return {"items": []}
+
+
+def save_registry(path: Path, obj: dict):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(obj, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    tmp.replace(path)
+
+
+def build_publish_fingerprint(atom: dict, day: str, video_path: Path, video_sha256: str) -> dict:
+    content = atom.get("content") or {}
+    script = atom.get("script") or {}
+    fact = atom.get("fact") or {}
+    fingerprint = {
+        "day": day,
+        "category": atom.get("category") or "",
+        "angle": atom.get("angle") or "",
+        "content_id": content.get("content_id") or "",
+        "canonical_hash": content.get("canonical_hash") or "",
+        "script_id": atom.get("script_id") or content.get("script_id") or "",
+        "fact_kind": fact.get("kind") or "",
+        "fact_pk": fact.get("pk"),
+        "fact_name": (fact.get("name") or "").strip(),
+        "hook": (script.get("hook") or "").strip(),
+        "body": (script.get("body") or "").strip(),
+        "cta": (script.get("cta") or "").strip(),
+        "video_path": str(video_path),
+        "video_sha256": video_sha256,
+    }
+    packed = json.dumps(fingerprint, sort_keys=True, ensure_ascii=False)
+    fingerprint_hash = hashlib.sha256(packed.encode("utf-8")).hexdigest()
+    return {
+        "hash": fingerprint_hash,
+        "fingerprint": fingerprint,
+    }
+
+
+def duplicate_publish(registry: dict, publish_hash: str, content_id: str) -> dict | None:
+    for item in registry.get("items") or []:
+        if not isinstance(item, dict):
+            continue
+        if item.get("publish_hash") == publish_hash:
+            return item
+        if content_id and item.get("content_id") == content_id:
+            return item
+    return None
 
 
 def build_title(atom: dict, day: str) -> str:
@@ -179,6 +262,26 @@ def main() -> int:
         eprint(f"ERROR: unable to load atom for day {day}: {exc}")
         return 3
 
+    video_sha = sha256_file(video_path)
+    fp = build_publish_fingerprint(atom, day, video_path, video_sha)
+    publish_hash = fp["hash"]
+    fingerprint = fp["fingerprint"]
+    content_id = str(((atom.get("content") or {}).get("content_id") or "")).strip()
+
+    registry_file = publish_registry_path(repo_root)
+    registry = load_registry(registry_file)
+    allow_duplicate = (os.getenv("BIZZAL_ALLOW_DUPLICATE_PUBLISH") or "0").strip().lower() in {"1", "true", "yes", "y", "on"}
+    prior = duplicate_publish(registry, publish_hash, content_id)
+    if prior and not allow_duplicate:
+        prior_vid = str(prior.get("youtube_video_id") or "")
+        prior_url = f"https://www.youtube.com/watch?v={prior_vid}" if prior_vid else "(unknown)"
+        eprint(
+            "ERROR: duplicate publish blocked. "
+            f"day={day} content_id={content_id or '(none)'} hash={publish_hash[:16]} prior_video={prior_url}"
+        )
+        eprint("Set BIZZAL_ALLOW_DUPLICATE_PUBLISH=1 to override intentionally.")
+        return 6
+
     title = build_title(atom, day)
     description = build_description(atom, day)
     privacy = (os.getenv("BIZZAL_YT_PRIVACY") or "private").strip().lower()
@@ -203,6 +306,23 @@ def main() -> int:
 
     print(f"[upload_youtube] uploaded id={vid} privacy={privacy} file={video_path}")
     print(f"https://www.youtube.com/watch?v={vid}")
+
+    registry.setdefault("items", [])
+    registry["items"].append(
+        {
+            "published_utc": utc_now(),
+            "day": day,
+            "content_id": content_id,
+            "publish_hash": publish_hash,
+            "youtube_video_id": vid,
+            "youtube_url": f"https://www.youtube.com/watch?v={vid}",
+            "video_sha256": video_sha,
+            "video_path": str(video_path),
+            "fingerprint": fingerprint,
+        }
+    )
+    save_registry(registry_file, registry)
+    print(f"[upload_youtube] registry={registry_file} hash={publish_hash[:16]}")
     return 0
 
 
