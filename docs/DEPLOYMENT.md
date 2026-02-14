@@ -247,6 +247,18 @@ Interactive setup (prompts for each value and persists to `~/.config/bizzal.env`
 bin/core/setup_publish_env.sh
 ```
 
+One-command key validation (masked output):
+
+```bash
+bin/core/keys_health_check.sh
+```
+
+Probe external auth endpoints (OpenAI/Replicate/Discord + YouTube file checks):
+
+```bash
+bin/core/keys_health_check.sh --probe
+```
+
 Flow:
 - Daily run posts the generated script to Discord with instructions.
 - Approver replies in channel: `approve YYYY-MM-DD` (or `approve <content_id>`).
