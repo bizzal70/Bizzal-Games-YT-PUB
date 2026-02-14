@@ -129,8 +129,16 @@ def discord_get_messages(bot_token: str, channel_id: str, limit: int = 50) -> li
         },
         method="GET",
     )
-    with request.urlopen(req, timeout=30) as resp:
-        raw = resp.read().decode("utf-8")
+    try:
+        with request.urlopen(req, timeout=30) as resp:
+            raw = resp.read().decode("utf-8")
+    except error.HTTPError as exc:
+        body = ""
+        try:
+            body = exc.read().decode("utf-8", errors="replace")
+        except Exception:
+            body = ""
+        raise RuntimeError(f"discord get messages rejected: http={exc.code} body={body or '(empty)'}")
     obj = json.loads(raw)
     return obj if isinstance(obj, list) else []
 
@@ -163,6 +171,14 @@ def normalize_webhook_url(url: str) -> str:
     u = u.replace("https://discordapp.com/", "https://discord.com/")
     u = u.replace("http://discordapp.com/", "https://discord.com/")
     return u
+
+
+def normalize_discord_id(value: str) -> str:
+    txt = (value or "").strip()
+    if len(txt) >= 2 and ((txt[0] == txt[-1]) and txt[0] in {"'", '"'}):
+        txt = txt[1:-1].strip()
+    txt = txt.replace("<", "").replace(">", "").replace("#", "").replace("@", "").replace("&", "")
+    return "".join(ch for ch in txt if ch.isdigit())
 
 
 def looks_like_placeholder_webhook(url: str) -> bool:
@@ -496,9 +512,9 @@ def main() -> int:
         return request_mode(repo_root, args.day.strip(), state_file, webhook_url, args.force)
 
     bot_token = (os.getenv("BIZZAL_DISCORD_BOT_TOKEN") or "").strip()
-    channel_id = (os.getenv("BIZZAL_DISCORD_CHANNEL_ID") or "").strip()
+    channel_id = normalize_discord_id((os.getenv("BIZZAL_DISCORD_CHANNEL_ID") or "").strip())
     approved = (os.getenv("BIZZAL_DISCORD_APPROVER_USER_IDS") or "").strip()
-    approve_users = {x.strip() for x in approved.split(",") if x.strip()}
+    approve_users = {normalize_discord_id(x.strip()) for x in approved.split(",") if normalize_discord_id(x.strip())}
     return check_mode(repo_root, state_file, bot_token, channel_id, approve_users, webhook_url, args.publish)
 
 
