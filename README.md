@@ -51,6 +51,9 @@ This creates a timestamped snapshot under `reference/snapshots/`, updates `refer
 - services/   systemd/nginx/docker helpers
 - docs/       documentation
 
+## Promotion workflow
+- Use the dev→GitHub→Umbrel promotion process in [docs/PROMOTION_RUNBOOK.md](docs/PROMOTION_RUNBOOK.md).
+
 ## Quickstart
 
 From the repo root:
@@ -78,6 +81,33 @@ Useful checks:
 git status -sb
 ls -la data/atoms/validated/
 ```
+
+## On-call quick commands
+
+Primary runbook:
+- docs/DEPLOYMENT.md (Incident-Proof Publish Runbook section)
+
+Use these on Umbrel:
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+bash bin/core/preflight_prod_env.sh
+bin/core/discord_publish_gate.py request --day "$(date +%F)"
+# In Discord approval channel: approve YYYY-MM-DD
+bin/core/discord_publish_gate.py check --publish
+```
+
+Fast status check:
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+jq '.approvals | to_entries[] | {day:.key,status:.value.status,content_id:.value.content_id}' data/archive/approvals/discord_publish_gate.json | tail -n 20
+```
+
+Status meanings:
+- `pending` → waiting for a valid Discord approver message after request timestamp.
+- `published` → approval accepted and publish completed successfully.
+- `approved_publish_failed` → approval accepted but publish failed (most commonly duplicate block `publish_rc=6`).
 
 ## Git sync workflow
 

@@ -1,5 +1,7 @@
 # Deployment Guide (Umbrel)
 
+Primary promotion policy: follow [docs/PROMOTION_RUNBOOK.md](docs/PROMOTION_RUNBOOK.md) for all code changes (dev first, then GitHub, then Umbrel pull).
+
 ## Production Target
 - Host: 192.168.68.128
 - Platform: Umbrel Home Server
@@ -253,6 +255,21 @@ One-command key validation (masked output):
 bin/core/keys_health_check.sh
 ```
 
+Production preflight (fails non-zero if required publish/approval env is missing):
+
+```bash
+bin/core/preflight_prod_env.sh
+```
+
+If `~/.config/bizzal.env` is immutable and updates fail (`Operation not permitted`), unlock/edit/relock:
+
+```bash
+sudo chattr -i ~/.config/bizzal.env
+bin/core/setup_publish_env.sh
+grep -q '^export BIZZAL_REQUIRE_DISCORD_APPROVAL=' ~/.config/bizzal.env || echo "export BIZZAL_REQUIRE_DISCORD_APPROVAL='1'" >> ~/.config/bizzal.env
+sudo chattr +i ~/.config/bizzal.env
+```
+
 Probe external auth endpoints (OpenAI/Replicate/Discord + YouTube file checks):
 
 ```bash
@@ -313,14 +330,69 @@ export BIZZAL_PUBLISH_CMD=/home/umbrel/Bizzal_Games_Pub/bin/upload/publish_lates
 ```
 
 Duplicate publish protection:
-- `upload_youtube.py` now computes a publish fingerprint (atom content + script + day + rendered video hash)
+- `upload_youtube.py` computes a publish fingerprint (atom content + script + day + rendered video hash)
 - Fingerprints are recorded at `data/archive/publish/published_registry.json`
-- Duplicate content is blocked by default to prevent reusing old assets/scripts accidentally
+- Duplicate content is always blocked (no override) to prevent accidental re-publish of the same asset/script
 
-Optional override (not recommended unless intentional):
+### Incident-Proof Publish Runbook (Umbrel)
+
+Use this as the canonical operator flow for daily publishing.
+
+Daily publish flow:
 
 ```bash
-export BIZZAL_ALLOW_DUPLICATE_PUBLISH=1
+cd /home/umbrel/Bizzal_Games_Pub
+bin/core/preflight_prod_env.sh
+bin/core/discord_publish_gate.py request --day "$(date +%F)"
+# Approver posts in Discord channel: approve YYYY-MM-DD
+bin/core/discord_publish_gate.py check --publish
+```
+
+Expected outcomes:
+- `published` → success
+- `approved_publish_failed` with `publish_rc=6` → duplicate blocked (expected safety)
+- `pending` → no valid approval message seen yet
+
+Fast status check:
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+jq '.approvals | to_entries[] | {day:.key,status:.value.status,content_id:.value.content_id}' data/archive/approvals/discord_publish_gate.json | tail -n 20
+```
+
+If approval appears ignored (stuck pending):
+- Re-post a **new** Discord message after the latest request timestamp:
+	- `approve YYYY-MM-DD` or `approve <content_id>`
+- Then run:
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+bin/core/discord_publish_gate.py check --publish
+```
+
+If env file update fails with `Operation not permitted`:
+
+```bash
+sudo chattr -i ~/.config/bizzal.env
+sudo sed -i '/^BIZZAL_REQUIRE_DISCORD_APPROVAL=/d' ~/.config/bizzal.env
+echo 'BIZZAL_REQUIRE_DISCORD_APPROVAL=1' | sudo tee -a ~/.config/bizzal.env >/dev/null
+```
+
+Must-pass hardening checks:
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+bash bin/core/preflight_prod_env.sh
+grep -n 'publish blocked; Discord approval required' bin/upload/upload_youtube.py
+grep -n 'Duplicate override is disabled by policy' bin/upload/upload_youtube.py
+grep -n 'upload deferred: use Discord publish gate check --publish' bin/core/run_daily.sh
+```
+
+Weekly approval-state cleanup (already cron-safe):
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+bin/core/prune_approval_state.sh 30
 ```
 
 First run will prompt OAuth and store refresh token; later runs publish directly.
