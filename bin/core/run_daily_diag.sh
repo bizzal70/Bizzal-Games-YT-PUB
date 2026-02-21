@@ -8,6 +8,14 @@ LOG_DIR="${BIZZAL_DAILY_LOG_DIR:-/tmp}"
 DAY="$(date +%F)"
 LOG_FILE="${LOG_DIR%/}/bizzal_daily_${DAY}.log"
 
+if [[ "${BIZZAL_PREVENT_SAME_DAY_RERUN:-1}" == "1" && -f "$LOG_FILE" ]]; then
+  if grep -q "\[run_daily\] DONE" "$LOG_FILE"; then
+    echo "[run_daily_diag] SKIP: successful run already exists for day=$DAY log=$LOG_FILE"
+    echo "[run_daily_diag] Set BIZZAL_PREVENT_SAME_DAY_RERUN=0 only when you intentionally want a rerun."
+    exit 0
+  fi
+fi
+
 mkdir -p "$LOG_DIR"
 
 # Activate venv if available
