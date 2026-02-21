@@ -52,4 +52,23 @@ fi
 
 echo "[run_daily_diag] --- diagnostics tail ---"
 grep -E "AI script polish|AI CTA polish|PDF flavor|Encounter hook replaced|Encounter CTA replaced|category|angle|name" "$LOG_FILE" | tail -n 60 || true
+
+SANITY_NOTIFY_DISCORD="${BIZZAL_DAILY_SANITY_NOTIFY_DISCORD:-1}"
+SANITY_STRICT="${BIZZAL_DAILY_SANITY_STRICT:-0}"
+SANITY_ARGS=(--day "$DAY" --log "$LOG_FILE")
+if [[ "$SANITY_NOTIFY_DISCORD" == "1" ]]; then
+  SANITY_ARGS+=(--notify-discord)
+fi
+if [[ "$SANITY_STRICT" == "1" ]]; then
+  SANITY_ARGS+=(--strict)
+fi
+
+if [[ -x "$REPO/bin/core/daily_run_sanity.py" ]]; then
+  if ! "$REPO/bin/core/daily_run_sanity.py" "${SANITY_ARGS[@]}" 2>&1 | tee -a "$LOG_FILE"; then
+    echo "[run_daily_diag] WARN: daily sanity check returned non-zero" | tee -a "$LOG_FILE"
+  fi
+else
+  echo "[run_daily_diag] WARN: daily_run_sanity.py missing; skipped" | tee -a "$LOG_FILE"
+fi
+
 echo "[run_daily_diag] done"
