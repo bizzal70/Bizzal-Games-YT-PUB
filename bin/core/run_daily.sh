@@ -27,6 +27,9 @@ if [[ -x "bin/render/render_latest.sh" ]]; then
 elif [[ -x "bin/core/render_latest.sh" ]]; then
   echo "[run_daily] render_latest..."
   bin/core/render_latest.sh
+elif [[ -x "bin/render/run_house_render.sh" ]]; then
+  echo "[run_daily] run_house_render.sh..."
+  bin/render/run_house_render.sh "$DAY"
 elif [[ -x "bin/render/render_atom.sh" ]]; then
   echo "[run_daily] render_atom.sh..."
   bin/render/render_atom.sh "$DAY"

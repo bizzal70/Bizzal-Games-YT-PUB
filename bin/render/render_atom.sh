@@ -489,8 +489,10 @@ if [[ "$BG_IMAGE_ENABLED" == "1" ]]; then
       if (( BG_FAIL == 0 )) && (( ${#SCREEN_BG_FILES[@]} >= 2 )); then
         BG_IMAGE_OK=1
         BG_IMAGE_MODE_USED="per_screen"
+        cp -f "${SCREEN_BG_FILES[0]}" "$BG_IMAGE"
         cp -f "${SCREEN_BG_FILES[0]}" "$LATEST_BG_IMAGE"
         echo "[render] bg image enabled source=replicate mode=per_screen count=${#SCREEN_BG_FILES[@]}" >&2
+        echo "[render] wrote $BG_IMAGE" >&2
       else
         echo "[render] bg per-screen synth failed; falling back to single image" >&2
       fi

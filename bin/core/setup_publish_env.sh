@@ -76,6 +76,15 @@ fi
 if [[ -z "${BIZZAL_ENABLE_AI_SCRIPT:-}" ]]; then
   BIZZAL_ENABLE_AI_SCRIPT="1"
 fi
+if [[ -z "${BIZZAL_ENABLE_TTS:-}" ]]; then
+  BIZZAL_ENABLE_TTS="1"
+fi
+if [[ -z "${BIZZAL_ENABLE_BG_MUSIC:-}" ]]; then
+  BIZZAL_ENABLE_BG_MUSIC="1"
+fi
+if [[ -z "${BIZZAL_ENABLE_BG_IMAGE:-}" ]]; then
+  BIZZAL_ENABLE_BG_IMAGE="1"
+fi
 
 prompt_value BIZZAL_YT_CLIENT_SECRETS "YouTube client secrets path"
 prompt_value BIZZAL_YT_TOKEN_FILE "YouTube token file path"
@@ -145,11 +154,14 @@ export BIZZAL_YT_TOKEN_FILE='$(escape_sq "${BIZZAL_YT_TOKEN_FILE}")'
 export BIZZAL_YT_OAUTH_MODE='$(escape_sq "${BIZZAL_YT_OAUTH_MODE}")'
 export BIZZAL_ENABLE_AI='$(escape_sq "${BIZZAL_ENABLE_AI}")'
 export BIZZAL_ENABLE_AI_SCRIPT='$(escape_sq "${BIZZAL_ENABLE_AI_SCRIPT}")'
+export BIZZAL_ENABLE_TTS='$(escape_sq "${BIZZAL_ENABLE_TTS}")'
+export BIZZAL_ENABLE_BG_MUSIC='$(escape_sq "${BIZZAL_ENABLE_BG_MUSIC}")'
+export BIZZAL_ENABLE_BG_IMAGE='$(escape_sq "${BIZZAL_ENABLE_BG_IMAGE}")'
 export BIZZAL_PUBLISH_CMD='$(escape_sq "${BIZZAL_PUBLISH_CMD}")'
 $MANAGED_END
 EOF
 
-mv "$tmp_file" "$ENV_FILE"
+command mv -f "$tmp_file" "$ENV_FILE"
 chmod 600 "$ENV_FILE"
 
 if ! grep -q 'source ~/.config/bizzal.env' "$BASHRC_FILE" 2>/dev/null; then
@@ -171,6 +183,9 @@ done
 
 echo "OK  BIZZAL_ENABLE_AI=${BIZZAL_ENABLE_AI}"
 echo "OK  BIZZAL_ENABLE_AI_SCRIPT=${BIZZAL_ENABLE_AI_SCRIPT}"
+echo "OK  BIZZAL_ENABLE_TTS=${BIZZAL_ENABLE_TTS}"
+echo "OK  BIZZAL_ENABLE_BG_MUSIC=${BIZZAL_ENABLE_BG_MUSIC}"
+echo "OK  BIZZAL_ENABLE_BG_IMAGE=${BIZZAL_ENABLE_BG_IMAGE}"
 
 echo
 echo "Next steps:"
