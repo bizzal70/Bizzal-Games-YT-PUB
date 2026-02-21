@@ -228,6 +228,59 @@ def run_publish_command(repo_root: str, day: str) -> tuple[int, str]:
     return proc.returncode, out
 
 
+def publish_registry_path(repo_root: str) -> str:
+    path = (os.getenv("BIZZAL_PUBLISH_REGISTRY") or "data/archive/publish/published_registry.json").strip()
+    if os.path.isabs(path):
+        return path
+    return os.path.join(repo_root, path)
+
+
+def load_publish_registry(repo_root: str) -> dict:
+    path = publish_registry_path(repo_root)
+    if not os.path.isfile(path):
+        return {"items": []}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            obj = json.load(f)
+            if isinstance(obj, dict) and isinstance(obj.get("items"), list):
+                return obj
+    except Exception:
+        pass
+    return {"items": []}
+
+
+def find_published_item(registry: dict, day: str, content_id: str) -> dict | None:
+    items = registry.get("items") or []
+    for item in reversed(items):
+        if not isinstance(item, dict):
+            continue
+        item_cid = str(item.get("content_id") or "")
+        if content_id and item_cid == content_id:
+            return item
+        item_day = str(item.get("day") or "")
+        if day and item_day == day and not content_id:
+            return item
+    return None
+
+
+def published_item_url(item: dict) -> str:
+    url = str(item.get("youtube_url") or "").strip()
+    if url:
+        return url
+    vid = str(item.get("youtube_video_id") or "").strip()
+    if vid:
+        return f"https://www.youtube.com/watch?v={vid}"
+    return ""
+
+
+def extract_youtube_url(text: str) -> str:
+    for line in (text or "").splitlines():
+        txt = line.strip()
+        if txt.startswith("https://www.youtube.com/watch?v="):
+            return txt
+    return ""
+
+
 def request_mode(repo_root: str, day: str, state_path: str, webhook_url: str, force: bool) -> int:
     webhook_url = normalize_webhook_url(webhook_url)
     if not webhook_url:
@@ -257,6 +310,8 @@ def request_mode(repo_root: str, day: str, state_path: str, webhook_url: str, fo
     content = atom.get("content") or {}
     script = atom.get("script") or {}
     content_id = str(content.get("content_id") or "")
+    category = atom.get("category") or ""
+    angle = atom.get("angle") or ""
     if not content_id:
         print(f"ERROR: content_id missing in {atom_path}", file=sys.stderr)
         return 3
@@ -268,8 +323,40 @@ def request_mode(repo_root: str, day: str, state_path: str, webhook_url: str, fo
         print(f"[discord_publish_gate] request exists day={day} status={existing.get('status')} content_id={content_id}")
         return 0
 
-    category = atom.get("category") or ""
-    angle = atom.get("angle") or ""
+    prior = find_published_item(load_publish_registry(repo_root), day, content_id)
+    if prior and not force:
+        prior_url = published_item_url(prior)
+        approvals[day] = {
+            "day": day,
+            "content_id": content_id,
+            "category": category,
+            "angle": angle,
+            "status": "published",
+            "requested_utc": now_utc(),
+            "decision_utc": str(prior.get("published_utc") or now_utc()),
+            "decision_by": "system",
+            "publish_rc": 0,
+            "publish_output": f"already published; skipped approval request url={prior_url or '(unknown)'}",
+            "youtube_url": prior_url,
+        }
+        save_json(state_path, state)
+        print(f"[discord_publish_gate] already published day={day} content_id={content_id} url={prior_url or 'na'}")
+        if webhook_url:
+            try:
+                msg = f"ℹ️ Already published for `{day}` (`{content_id}`); skipping approval request."
+                if prior_url:
+                    msg += f"\n🔗 {prior_url}"
+                webhook_post_json(
+                    webhook_url,
+                    {
+                        "username": "Bizzal Publish Gate",
+                        "content": msg,
+                    },
+                    wait=False,
+                )
+            except Exception:
+                pass
+        return 0
     hook = short(script.get("hook") or "", 220)
     body = short(script.get("body") or "", 340)
     cta = short(script.get("cta") or "", 180)
@@ -417,6 +504,40 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                     pass
 
             if publish:
+                approvals[day] = entry
+                state["approvals"] = approvals
+                save_json(state_path, state)
+
+                prior = find_published_item(load_publish_registry(repo_root), day, content_id)
+                if prior:
+                    prior_url = published_item_url(prior)
+                    entry["status"] = "published"
+                    entry["publish_rc"] = 0
+                    entry["publish_output"] = f"already published; skipped upload url={prior_url or '(unknown)'}"
+                    if prior_url:
+                        entry["youtube_url"] = prior_url
+                    approvals[day] = entry
+                    state["approvals"] = approvals
+                    save_json(state_path, state)
+                    changed = True
+                    print(f"[discord_publish_gate] already published day={day}; skipped upload")
+                    if webhook_url:
+                        try:
+                            msg = f"ℹ️ Already published for `{day}` (`{content_id}`); skipping upload."
+                            if prior_url:
+                                msg += f"\n🔗 {prior_url}"
+                            webhook_post_json(
+                                webhook_url,
+                                {
+                                    "username": "Bizzal Publish Gate",
+                                    "content": msg,
+                                },
+                                wait=False,
+                            )
+                        except Exception:
+                            pass
+                    continue
+
                 if webhook_url:
                     try:
                         webhook_post_json(
@@ -433,16 +554,22 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                 rc, output = run_publish_command(repo_root, day)
                 entry["publish_rc"] = rc
                 entry["publish_output"] = short(output, 800)
+                youtube_url = extract_youtube_url(output)
                 if rc == 0:
                     entry["status"] = "published"
+                    if youtube_url:
+                        entry["youtube_url"] = youtube_url
                     print(f"[discord_publish_gate] approved+pushed day={day} by={uid}")
                     if webhook_url:
                         try:
+                            msg = f"🎉 Publish complete for `{day}` (`{content_id}`)."
+                            if youtube_url:
+                                msg += f"\n🔗 {youtube_url}"
                             webhook_post_json(
                                 webhook_url,
                                 {
                                     "username": "Bizzal Publish Gate",
-                                    "content": f"🎉 Publish complete for `{day}` (`{content_id}`).",
+                                    "content": msg,
                                 },
                                 wait=False,
                             )
@@ -453,11 +580,14 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                     print(f"[discord_publish_gate] approved but publish failed day={day} rc={rc}")
                     if webhook_url:
                         try:
+                            msg = f"❌ Publish failed for `{day}` (`{content_id}`), rc={rc}. Check logs."
+                            if youtube_url:
+                                msg += f"\n🔗 Related video: {youtube_url}"
                             webhook_post_json(
                                 webhook_url,
                                 {
                                     "username": "Bizzal Publish Gate",
-                                    "content": f"❌ Publish failed for `{day}` (`{content_id}`), rc={rc}. Check logs.",
+                                    "content": msg,
                                 },
                                 wait=False,
                             )

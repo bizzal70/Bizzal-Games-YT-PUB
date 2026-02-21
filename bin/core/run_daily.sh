@@ -40,16 +40,9 @@ else
   echo "[run_daily] NOTE: no render script found yet. Atom is validated and ready."
 fi
 
-# 3) Upload (optional): only run if a known upload script exists
-if [[ -x "bin/upload/upload_youtube.py" ]]; then
-  if [[ "${BIZZAL_REQUIRE_DISCORD_APPROVAL:-0}" == "1" ]]; then
-    echo "[run_daily] upload gated: awaiting Discord approval (BIZZAL_REQUIRE_DISCORD_APPROVAL=1)"
-  else
-    echo "[run_daily] upload_youtube..."
-    bin/upload/upload_youtube.py
-  fi
-else
-  echo "[run_daily] NOTE: no upload script found yet."
-fi
+# 3) Upload is intentionally disabled here.
+# Publishing must run through bin/core/discord_publish_gate.py check --publish
+# so approved state is captured and enforced.
+echo "[run_daily] upload deferred: use Discord publish gate check --publish"
 
 echo "[run_daily] DONE"

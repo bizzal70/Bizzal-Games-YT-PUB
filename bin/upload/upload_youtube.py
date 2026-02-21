@@ -42,6 +42,14 @@ def publish_registry_path(repo_root: Path) -> Path:
     return p
 
 
+def approval_state_path(repo_root: Path) -> Path:
+    val = (os.getenv("BIZZAL_DISCORD_APPROVAL_STATE") or "data/archive/approvals/discord_publish_gate.json").strip()
+    p = Path(val).expanduser()
+    if not p.is_absolute():
+        p = repo_root / p
+    return p
+
+
 def load_registry(path: Path) -> dict:
     if not path.is_file():
         return {"items": []}
@@ -52,6 +60,16 @@ def load_registry(path: Path) -> dict:
     except Exception:
         pass
     return {"items": []}
+
+
+def load_approval_state(path: Path) -> dict:
+    if not path.is_file():
+        return {}
+    try:
+        obj = json.loads(path.read_text(encoding="utf-8"))
+        return obj if isinstance(obj, dict) else {}
+    except Exception:
+        return {}
 
 
 def save_registry(path: Path, obj: dict):
@@ -268,18 +286,35 @@ def main() -> int:
     fingerprint = fp["fingerprint"]
     content_id = str(((atom.get("content") or {}).get("content_id") or "")).strip()
 
+    approval_file = approval_state_path(repo_root)
+    approval_state = load_approval_state(approval_file)
+    approval_entry = ((approval_state.get("approvals") or {}).get(day) or {}) if isinstance(approval_state, dict) else {}
+    approval_status = str(approval_entry.get("status") or "").strip().lower()
+    approval_content_id = str(approval_entry.get("content_id") or "").strip()
+    if approval_status not in {"approved", "published"}:
+        eprint(
+            "ERROR: publish blocked; Discord approval required. "
+            f"day={day} status={approval_status or '(missing)'} state_file={approval_file}"
+        )
+        return 7
+    if content_id and approval_content_id and approval_content_id != content_id:
+        eprint(
+            "ERROR: publish blocked; approval content mismatch. "
+            f"day={day} approved_content_id={approval_content_id} atom_content_id={content_id}"
+        )
+        return 8
+
     registry_file = publish_registry_path(repo_root)
     registry = load_registry(registry_file)
-    allow_duplicate = (os.getenv("BIZZAL_ALLOW_DUPLICATE_PUBLISH") or "0").strip().lower() in {"1", "true", "yes", "y", "on"}
     prior = duplicate_publish(registry, publish_hash, content_id)
-    if prior and not allow_duplicate:
+    if prior:
         prior_vid = str(prior.get("youtube_video_id") or "")
         prior_url = f"https://www.youtube.com/watch?v={prior_vid}" if prior_vid else "(unknown)"
         eprint(
             "ERROR: duplicate publish blocked. "
             f"day={day} content_id={content_id or '(none)'} hash={publish_hash[:16]} prior_video={prior_url}"
         )
-        eprint("Set BIZZAL_ALLOW_DUPLICATE_PUBLISH=1 to override intentionally.")
+        eprint("Duplicate override is disabled by policy.")
         return 6
 
     title = build_title(atom, day)

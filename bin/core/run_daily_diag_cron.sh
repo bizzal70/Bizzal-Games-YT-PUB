@@ -17,10 +17,29 @@ if [[ -f "$REPO_ROOT/.venv/bin/activate" ]]; then
   . "$REPO_ROOT/.venv/bin/activate"
 fi
 
+ENV_FILE="${BIZZAL_ENV_FILE:-$HOME/.config/bizzal.env}"
+if [[ -f "$ENV_FILE" ]]; then
+  set -a
+  # shellcheck disable=SC1090
+  . "$ENV_FILE"
+  set +a
+fi
+
 {
   echo "[run_daily_diag_cron] start_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
   echo "[run_daily_diag_cron] repo=$REPO_ROOT"
   echo "[run_daily_diag_cron] log_file=$LOG_FILE"
+  echo "[run_daily_diag_cron] env_file=$ENV_FILE"
+
+  if [[ -x "$REPO_ROOT/bin/core/preflight_prod_env.sh" ]]; then
+    if ! "$REPO_ROOT/bin/core/preflight_prod_env.sh"; then
+      echo "[run_daily_diag_cron] status=failure preflight_env"
+      echo "[run_daily_diag_cron] end_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+      exit 2
+    fi
+  else
+    echo "[run_daily_diag_cron] WARN: preflight_prod_env.sh missing; skipping env preflight"
+  fi
 
   if BIZZAL_DAILY_LOG_DIR="$LOG_DIR" "$REPO_ROOT/bin/core/run_daily_diag.sh"; then
     echo "[run_daily_diag_cron] status=success"
