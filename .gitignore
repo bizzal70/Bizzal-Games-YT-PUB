@@ -28,6 +28,7 @@ __pycache__/
 *.BAK*
 .venv/
 .vscode/
+docs/ops_backups/
 
 # local secrets
 .env.ai
