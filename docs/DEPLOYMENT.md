@@ -136,6 +136,24 @@ Outputs:
 - `data/archive/monthly/YYYY-MM/zine_pack/content.md`
 - `data/archive/monthly/YYYY-MM/zine_pack/assets.csv`
 
+Generate a long-form monthly video by concatenating available daily renders:
+
+```bash
+bin/core/monthly_concat_video.sh 2026-02
+```
+
+By default, this includes only days with Discord approval state `approved` or `published`
+from `data/archive/approvals/discord_publish_gate.json` so long-form content follows
+the same approval gate as daily publish. To disable this filter for a one-off rebuild:
+
+```bash
+BIZZAL_MONTHLY_REQUIRE_DISCORD_APPROVAL=0 bin/core/monthly_concat_video.sh 2026-02
+```
+
+Outputs:
+- `data/archive/monthly/YYYY-MM/monthly_longform_YYYY-MM.mp4`
+- `data/archive/monthly/YYYY-MM/monthly_longform_YYYY-MM.json`
+
 Run the full monthly release bundle (manifest + zine pack + checks) in one command:
 
 ```bash
@@ -147,6 +165,29 @@ For cron-safe monthly execution with timestamped logs:
 ```bash
 bin/core/monthly_release_cron.sh 2026-02
 ```
+
+Request Discord approval for monthly longform (same gate pattern as daily):
+
+```bash
+bin/core/monthly_publish_gate.py request --month 2026-02
+```
+
+Process Discord approvals and publish monthly longform when approved:
+
+```bash
+bin/core/monthly_publish_gate.py check --publish
+```
+
+Monthly private uploader (called by monthly gate check when approved):
+
+```bash
+bin/upload/upload_youtube_monthly.py --month 2026-02
+```
+
+Notes:
+- Monthly uploader defaults to `private` privacy (`BIZZAL_YT_MONTHLY_PRIVACY` or `BIZZAL_YT_PRIVACY`).
+- Monthly gate state file defaults to `data/archive/approvals/discord_monthly_publish_gate.json`.
+- Monthly publish registry defaults to `data/archive/publish/published_monthly_registry.json`.
 
 This writes run logs to:
 - `data/archive/monthly/YYYY-MM/logs/monthly_release_*.log`
