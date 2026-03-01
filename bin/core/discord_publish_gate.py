@@ -95,6 +95,23 @@ def short(text: str, n: int) -> str:
     return cut + "…"
 
 
+def chain_tag() -> str:
+    explicit = (os.getenv("BIZZAL_DISCORD_CHAIN_TAG") or os.getenv("BIZZAL_CHAIN_TAG") or "").strip()
+    if explicit:
+        return explicit
+
+    label = (os.getenv("BIZZAL_CHAIN_LABEL") or "").strip().lower()
+    if label in {"shadowdark", "sd"}:
+        return "Shadowdark"
+    if label in {"dnd", "d&d", "srd", "5e"}:
+        return "D&D"
+    return "D&D"
+
+
+def gate_username() -> str:
+    return f"Bizzal Publish Gate • {chain_tag()}"
+
+
 def webhook_post_json(url: str, payload: dict, wait: bool = False) -> dict:
     if wait:
         sep = "&" if "?" in url else "?"
@@ -356,7 +373,7 @@ def request_mode(repo_root: str, day: str, state_path: str, webhook_url: str, fo
                 webhook_post_json(
                     webhook_url,
                     {
-                        "username": "Bizzal Publish Gate",
+                        "username": gate_username(),
                         "content": msg,
                     },
                     wait=False,
@@ -369,7 +386,7 @@ def request_mode(repo_root: str, day: str, state_path: str, webhook_url: str, fo
     cta = short(script.get("cta") or "", 180)
 
     payload = {
-        "username": "Bizzal Publish Gate",
+        "username": gate_username(),
         "content": (
             f"Daily draft ready for approval on `{day}`\n"
             f"Reply with: `approve {day}` or `approve {content_id}`\n"
@@ -484,7 +501,7 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                         webhook_post_json(
                             webhook_url,
                             {
-                                "username": "Bizzal Publish Gate",
+                                "username": gate_username(),
                                 "content": f"🛑 Rejected `{day}` (`{content_id}`) by <@{uid}>.",
                             },
                             wait=False,
@@ -502,7 +519,7 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                     webhook_post_json(
                         webhook_url,
                         {
-                            "username": "Bizzal Publish Gate",
+                            "username": gate_username(),
                             "content": f"✅ Approval accepted for `{day}` (`{content_id}`) by <@{uid}>.",
                         },
                         wait=False,
@@ -536,7 +553,7 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                             webhook_post_json(
                                 webhook_url,
                                 {
-                                    "username": "Bizzal Publish Gate",
+                                    "username": gate_username(),
                                     "content": msg,
                                 },
                                 wait=False,
@@ -550,7 +567,7 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                         webhook_post_json(
                             webhook_url,
                             {
-                                "username": "Bizzal Publish Gate",
+                                "username": gate_username(),
                                 "content": f"🚀 Publish started for `{day}` (`{content_id}`).",
                             },
                             wait=False,
@@ -575,7 +592,7 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                             webhook_post_json(
                                 webhook_url,
                                 {
-                                    "username": "Bizzal Publish Gate",
+                                    "username": gate_username(),
                                     "content": msg,
                                 },
                                 wait=False,
@@ -593,7 +610,7 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                             webhook_post_json(
                                 webhook_url,
                                 {
-                                    "username": "Bizzal Publish Gate",
+                                    "username": gate_username(),
                                     "content": msg,
                                 },
                                 wait=False,
@@ -607,7 +624,7 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                         webhook_post_json(
                             webhook_url,
                             {
-                                "username": "Bizzal Publish Gate",
+                                "username": gate_username(),
                                 "content": f"ℹ️ `{day}` approved and queued; publish runner not executed in this check.",
                             },
                             wait=False,

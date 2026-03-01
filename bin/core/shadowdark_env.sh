@@ -4,6 +4,7 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
 export BIZZAL_CHAIN_LABEL="shadowdark"
+export BIZZAL_CHAIN_TAG="Shadowdark"
 export BIZZAL_REFERENCE_SOURCES_PATH="${BIZZAL_SD_REFERENCE_SOURCES_PATH:-config/reference_sources_shadowdark.yaml}"
 export BIZZAL_TOPIC_SPINE_PATH="${BIZZAL_SD_TOPIC_SPINE_PATH:-config/topic_spine_shadowdark.yaml}"
 export BIZZAL_STYLE_RULES_PATH="${BIZZAL_SD_STYLE_RULES_PATH:-config/style_rules_shadowdark.yaml}"
