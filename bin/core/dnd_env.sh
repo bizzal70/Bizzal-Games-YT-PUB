@@ -12,8 +12,8 @@ export BIZZAL_TOPIC_SPINE_PATH="${BIZZAL_DND_TOPIC_SPINE_PATH:-config/topic_spin
 export BIZZAL_STYLE_RULES_PATH="${BIZZAL_DND_STYLE_RULES_PATH:-config/style_rules.yaml}"
 export BIZZAL_STYLE_HISTORY_PATH="${BIZZAL_DND_STYLE_HISTORY_PATH:-runtime/state/style_history_dnd.json}"
 
-export BIZZAL_ACTIVE_SRD_PATH="${BIZZAL_DND_ACTIVE_SRD_PATH:-${BIZZAL_ACTIVE_SRD_PATH:-reference/active}}"
-export BIZZAL_SRD_PDF_PATH="${BIZZAL_DND_SRD_PDF_PATH:-${BIZZAL_SRD_PDF_PATH:-reference/srd/SRD_CC_v5.2.1.pdf}}"
+export BIZZAL_ACTIVE_SRD_PATH="${BIZZAL_DND_ACTIVE_SRD_PATH:-reference/active}"
+export BIZZAL_SRD_PDF_PATH="${BIZZAL_DND_SRD_PDF_PATH:-reference/srd/SRD_CC_v5.2.1.pdf}"
 
 export BIZZAL_ATOM_INCOMING_DIR="${BIZZAL_DND_ATOM_INCOMING_DIR:-data/atoms/incoming}"
 export BIZZAL_ATOM_VALIDATED_DIR="${BIZZAL_DND_ATOM_VALIDATED_DIR:-data/atoms/validated}"

@@ -53,10 +53,11 @@ trap 'rm -f "$TMP_CURR" "$TMP_NEXT"' EXIT
 
 crontab -l > "$TMP_CURR" 2>/dev/null || true
 
-awk -v begin="$BEGIN_MARK" -v end="$END_MARK" '
-  $0 == begin {skip=1; next}
-  $0 == end {skip=0; next}
-  !skip {print}
+awk '
+  BEGIN { skip=0 }
+  /^[[:space:]]*# BEGIN BIZZAL_AUTOMATION[[:space:]]*\r?$/ { skip=1; next }
+  /^[[:space:]]*# END BIZZAL_AUTOMATION[[:space:]]*\r?$/ { skip=0; next }
+  !skip { print }
 ' "$TMP_CURR" > "$TMP_NEXT"
 
 {
