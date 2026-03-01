@@ -12,6 +12,11 @@ def eprint(msg: str):
     print(msg, file=sys.stderr)
 
 
+def is_oauth_invalid_grant_error(exc: Exception) -> bool:
+    txt = str(exc).lower()
+    return "invalid_grant" in txt or "token has been expired or revoked" in txt
+
+
 def load_atom(repo_root: Path, day: str) -> dict:
     atom_path = repo_root / "data" / "atoms" / "validated" / f"{day}.json"
     if not atom_path.is_file():
@@ -331,6 +336,12 @@ def main() -> int:
         youtube = get_youtube_service(client_secrets, token_file)
         response = upload_video(youtube, video_path, title, description, privacy, category_id)
     except Exception as exc:
+        if is_oauth_invalid_grant_error(exc):
+            eprint(
+                "ERROR: upload auth failed (invalid_grant: token expired or revoked). "
+                f"Re-auth required for token file: {token_file}"
+            )
+            return 9
         eprint(f"ERROR: upload failed: {exc}")
         return 4
 
