@@ -131,7 +131,9 @@ def build_title(atom: dict, day: str) -> str:
     fact = atom.get("fact") or {}
     name = (fact.get("name") or "Daily RPG Tip").strip()
     category = (atom.get("category") or "rpg_short").replace("_", " ").title()
-    title = f"{name} • {category} #dnd #ttrpg #shorts"
+    profile = content_profile(atom)
+    hashline = "#shadowdark #osr #shorts" if profile == "shadowdark" else "#dnd #ttrpg #shorts"
+    title = f"{name} • {category} {hashline}"
     return title[:100]
 
 
@@ -142,6 +144,8 @@ def build_description(atom: dict, day: str) -> str:
     cta = (script.get("cta") or "").strip()
     category = (atom.get("category") or "").strip()
     angle = (atom.get("angle") or "").strip()
+    profile = content_profile(atom)
+    hashtags = "#shadowdark #osr #ttrpg #shorts" if profile == "shadowdark" else "#dnd #dnd5e #ttrpg #shorts"
     lines = [
         f"Daily RPG Short • {day}",
         "",
@@ -154,9 +158,33 @@ def build_description(atom: dict, day: str) -> str:
         f"category: {category}",
         f"angle: {angle}",
         "",
-        "#dnd #dnd5e #ttrpg #shorts",
+        hashtags,
     ]
     return "\n".join(x for x in lines if x is not None)[:5000]
+
+
+def content_profile(atom: dict) -> str:
+    label = (os.getenv("BIZZAL_CHAIN_LABEL") or "").strip().lower()
+    if label in {"shadowdark", "sd"}:
+        return "shadowdark"
+
+    source = atom.get("source") or {}
+    active_srd_path = str(source.get("active_srd_path") or "").lower()
+    if "shadowdark" in active_srd_path:
+        return "shadowdark"
+
+    fact = atom.get("fact") or {}
+    document = str(fact.get("document") or "").lower()
+    if "shadowdark" in document:
+        return "shadowdark"
+
+    return "dnd"
+
+
+def youtube_tags_for_profile(profile: str) -> list[str]:
+    if profile == "shadowdark":
+        return ["shadowdark", "osr", "ttrpg", "shorts", "dungeon", "rpg"]
+    return ["dnd", "dnd5e", "ttrpg", "shorts"]
 
 
 def get_youtube_service(client_secrets: Path, token_file: Path):
@@ -236,7 +264,15 @@ def get_youtube_service(client_secrets: Path, token_file: Path):
     return build("youtube", "v3", credentials=creds)
 
 
-def upload_video(youtube, video_path: Path, title: str, description: str, privacy: str, category_id: str):
+def upload_video(
+    youtube,
+    video_path: Path,
+    title: str,
+    description: str,
+    privacy: str,
+    category_id: str,
+    tags: list[str],
+):
     from googleapiclient.http import MediaFileUpload
 
     body = {
@@ -244,7 +280,7 @@ def upload_video(youtube, video_path: Path, title: str, description: str, privac
             "title": title,
             "description": description,
             "categoryId": category_id,
-            "tags": ["dnd", "ttrpg", "shorts", "dnd5e"],
+            "tags": tags,
         },
         "status": {
             "privacyStatus": privacy,
@@ -342,7 +378,16 @@ def main() -> int:
 
     try:
         youtube = get_youtube_service(client_secrets, token_file)
-        response = upload_video(youtube, video_path, title, description, privacy, category_id)
+        profile = content_profile(atom)
+        response = upload_video(
+            youtube,
+            video_path,
+            title,
+            description,
+            privacy,
+            category_id,
+            youtube_tags_for_profile(profile),
+        )
     except Exception as exc:
         if is_oauth_invalid_grant_error(exc):
             eprint(

@@ -37,6 +37,10 @@ export BIZZAL_ENABLE_PDF_FLAVOR="${BIZZAL_SD_ENABLE_PDF_FLAVOR:-1}"
 # Voice variety defaults for Shadowdark TTS.
 export BIZZAL_TTS_VOICE_VARIETY_LOOKBACK_DAYS="${BIZZAL_SD_TTS_VOICE_VARIETY_LOOKBACK_DAYS:-7}"
 
+# Shadowdark thematic defaults for generative media prompts.
+export BIZZAL_BG_IMAGE_PROMPT_PREFIX="${BIZZAL_SD_BG_IMAGE_PROMPT_PREFIX:-shadowdark aesthetic, dangerous dungeon crawl, torchlight and deep shadow, gritty old-school fantasy}"
+export BIZZAL_MUSIC_PROMPT_PREFIX="${BIZZAL_SD_MUSIC_PROMPT_PREFIX:-shadowdark tone, tense dungeon exploration, low-magic peril, restrained ominous ambience}"
+
 mkdir -p \
   "$REPO_ROOT/$BIZZAL_ATOM_INCOMING_DIR" \
   "$REPO_ROOT/$BIZZAL_ATOM_VALIDATED_DIR" \

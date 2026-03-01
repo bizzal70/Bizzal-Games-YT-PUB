@@ -11,6 +11,24 @@ def clean(value: str) -> str:
     return " ".join((value or "").strip().split())
 
 
+def content_profile(atom: dict) -> str:
+    label = clean(os.getenv("BIZZAL_CHAIN_LABEL") or "").lower()
+    if label in {"shadowdark", "sd"}:
+        return "shadowdark"
+
+    source = atom.get("source") or {}
+    active_srd_path = clean(source.get("active_srd_path") or "").lower()
+    if "shadowdark" in active_srd_path:
+        return "shadowdark"
+
+    fact = atom.get("fact") or {}
+    document = clean(fact.get("document") or "").lower()
+    if "shadowdark" in document:
+        return "shadowdark"
+
+    return "dnd"
+
+
 def build_prompt(atom: dict) -> str:
     category = clean(atom.get("category") or "")
     angle = clean(atom.get("angle") or "")
@@ -22,20 +40,37 @@ def build_prompt(atom: dict) -> str:
     tone_map = {
         "gritty": "dark tactical fantasy underscore, tense, low percussion",
         "heroic": "uplifting fantasy adventure underscore, cinematic but light",
+        "ominous": "ominous dark-fantasy underscore, sparse ritual percussion, low drones, anxious strings",
         "neutral": "clean tabletop fantasy underscore, subtle and steady",
     }
     tone_desc = tone_map.get(tone, tone_map["neutral"])
+    profile = content_profile(atom)
+    chain_prefix = clean(os.getenv("BIZZAL_MUSIC_PROMPT_PREFIX") or "")
+    chain_suffix = clean(os.getenv("BIZZAL_MUSIC_PROMPT_SUFFIX") or "")
 
-    parts = [
-        tone_desc,
-        "instrumental only, no vocals",
-        "loop-friendly, non-distracting, creator-safe background music",
-        f"theme: {category}",
-    ]
+    parts = []
+    if chain_prefix:
+        parts.append(chain_prefix)
+    if profile == "shadowdark":
+        parts.append(
+            "old-school dark fantasy dungeon ambience, torchlit tension, sparse arrangement, bleak but focused mood"
+        )
+    parts.extend(
+        [
+            tone_desc,
+            "instrumental only, no vocals",
+            "loop-friendly, non-distracting, creator-safe background music",
+            f"theme: {category}",
+        ]
+    )
     if angle:
         parts.append(f"angle: {angle}")
     if name:
         parts.append(f"subject: {name}")
+    if profile == "shadowdark":
+        parts.append("avoid triumphant heroic swells; prefer suspense, restraint, and dungeon pressure")
+    if chain_suffix:
+        parts.append(chain_suffix)
 
     return "; ".join(parts)
 

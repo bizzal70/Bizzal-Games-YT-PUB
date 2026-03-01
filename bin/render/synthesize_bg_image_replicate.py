@@ -13,6 +13,24 @@ def clean(value: str) -> str:
     return " ".join((value or "").strip().split())
 
 
+def content_profile(atom: dict) -> str:
+    label = clean(os.getenv("BIZZAL_CHAIN_LABEL") or "").lower()
+    if label in {"shadowdark", "sd"}:
+        return "shadowdark"
+
+    source = atom.get("source") or {}
+    active_srd_path = clean(source.get("active_srd_path") or "").lower()
+    if "shadowdark" in active_srd_path:
+        return "shadowdark"
+
+    fact = atom.get("fact") or {}
+    document = clean(fact.get("document") or "").lower()
+    if "shadowdark" in document:
+        return "shadowdark"
+
+    return "dnd"
+
+
 def build_prompt(atom: dict) -> str:
     category = clean(atom.get("category") or "")
     angle = clean(atom.get("angle") or "")
@@ -25,6 +43,7 @@ def build_prompt(atom: dict) -> str:
     tone_map = {
         "gritty": "dark gritty fantasy art, moody contrast, weathered textures, cinematic shadows",
         "heroic": "epic heroic fantasy art, cinematic composition, dramatic rim lighting, high grandeur",
+        "ominous": "ominous dark fantasy art, torchlit gloom, high tension atmosphere, severe shadows",
         "neutral": "clean detailed fantasy art, balanced lighting, rich environment detail",
     }
     category_map = {
@@ -39,12 +58,25 @@ def build_prompt(atom: dict) -> str:
 
     tone_desc = tone_map.get(tone, tone_map["neutral"])
     scene_desc = category_map.get(category, "a cinematic fantasy tabletop-inspired scene")
+    profile = content_profile(atom)
+    chain_prefix = clean(os.getenv("BIZZAL_BG_IMAGE_PROMPT_PREFIX") or "")
+    chain_suffix = clean(os.getenv("BIZZAL_BG_IMAGE_PROMPT_SUFFIX") or "")
 
     parts = [
         "vertical 9:16 background image for short-form video",
+    ]
+    if chain_prefix:
+        parts.append(chain_prefix)
+    if profile == "shadowdark":
+        parts.append(
+            "old-school dark fantasy, torchlit dungeon mood, low-magic peril, claustrophobic ruins, grim practical adventuring tone"
+        )
+    parts.extend(
+        [
         tone_desc,
         scene_desc,
-    ]
+        ]
+    )
     if name:
         label = kind or "subject"
         parts.append(f"focus on {label}: {name}")
@@ -58,6 +90,10 @@ def build_prompt(atom: dict) -> str:
             "no modern city, no firearms, no sci-fi tech",
         ]
     )
+    if profile == "shadowdark":
+        parts.append("avoid glossy high-fantasy sheen; emphasize darkness, stone, torch smoke, worn materials")
+    if chain_suffix:
+        parts.append(chain_suffix)
     return "; ".join(parts)
 
 
