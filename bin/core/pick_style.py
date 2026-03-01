@@ -75,17 +75,46 @@ def recent_tones_for_category(hist: dict, category: str, day: str, lookback_days
     return tones
 
 
-def pick_tts_voice(day: str, category: str, tone: str, style_voice: str, voiceover_cfg: dict, defaults: dict) -> str:
+def recent_tts_voices_for_category(hist: dict, category: str, day: str, lookback_days: int) -> list[str]:
+    if lookback_days <= 0:
+        return []
+    try:
+        cur = datetime.strptime(day, "%Y-%m-%d")
+    except ValueError:
+        return []
+
+    voices: list[str] = []
+    for i in range(1, lookback_days + 1):
+        d = (cur - timedelta(days=i)).strftime("%Y-%m-%d")
+        entry = (hist.get(d) or {}).get(category) or {}
+        tts_voice = str(entry.get("tts_voice_id") or "").strip()
+        if tts_voice:
+            voices.append(tts_voice)
+    return voices
+
+
+def pick_tts_voice(
+    day: str,
+    category: str,
+    tone: str,
+    style_voice: str,
+    voiceover_cfg: dict,
+    defaults: dict,
+    recent_tts_voices: list[str],
+) -> str:
     base_default = ((defaults.get("voiceover_default") or {}).get("tts_voice_id") or "alloy")
 
     pool = voiceover_cfg.get("tts_voice_ids")
     if isinstance(pool, list):
         clean = [str(v).strip() for v in pool if str(v).strip()]
         if clean:
+            avoid = {v for v in recent_tts_voices if v}
+            varied = [v for v in clean if v not in avoid]
+            candidates = varied if varied else clean
             seed = f"tts|{day}|{category}|{tone}|{style_voice}"
             digest = hashlib.sha256(seed.encode("utf-8")).hexdigest()
-            idx = int(digest[:8], 16) % len(clean)
-            return clean[idx]
+            idx = int(digest[:8], 16) % len(candidates)
+            return candidates[idx]
 
     direct = str(voiceover_cfg.get("tts_voice_id") or "").strip()
     if direct:
@@ -140,6 +169,10 @@ def main():
         tone_lookback_days = int((os.getenv("BIZZAL_TONE_VARIETY_LOOKBACK_DAYS") or "5").strip())
     except ValueError:
         tone_lookback_days = 5
+    try:
+        tts_voice_lookback_days = int((os.getenv("BIZZAL_TTS_VOICE_VARIETY_LOOKBACK_DAYS") or "5").strip())
+    except ValueError:
+        tts_voice_lookback_days = 5
 
     # yesterday’s style (if present)
     yday = (datetime.strptime(day, "%Y-%m-%d") - timedelta(days=1)).strftime("%Y-%m-%d")
@@ -177,7 +210,8 @@ def main():
         merged.update(voice_vo)
         voiceover = merged
 
-    chosen_tts_voice = pick_tts_voice(day, category, tone, voice, voiceover, defaults)
+    recent_tts_voices = recent_tts_voices_for_category(hist, category, day, tts_voice_lookback_days)
+    chosen_tts_voice = pick_tts_voice(day, category, tone, voice, voiceover, defaults, recent_tts_voices)
 
     spice_rate = float(defaults.get("spice_rate", 0.0))
     spice_pool = ["dry_humor", "grim", "practical", "punchy"]
@@ -204,7 +238,14 @@ def main():
 
     # update history
     hist.setdefault(day, {})
-    hist[day][category] = {"angle": angle, "voice": voice, "tone": tone, "persona": persona, "spice": spice}
+    hist[day][category] = {
+        "angle": angle,
+        "voice": voice,
+        "tone": tone,
+        "persona": persona,
+        "spice": spice,
+        "tts_voice_id": chosen_tts_voice,
+    }
     atomic_write_json(HIST_PATH, hist)
 
     print(path)
