@@ -29,12 +29,24 @@ def file_ok(path: Path) -> tuple[bool, int]:
     return size > 0, size
 
 
+def resolve_repo_path(repo_root: Path, raw: str, default_rel: str) -> Path:
+    val = (raw or "").strip() or default_rel
+    p = Path(val).expanduser()
+    if not p.is_absolute():
+        p = repo_root / p
+    return p
+
+
 def has_marker(log_text: str, marker: str) -> bool:
     return marker in log_text
 
 
 def parse_approval_status(repo_root: Path, day: str) -> tuple[str, str]:
-    state_path = repo_root / "data" / "archive" / "approvals" / "discord_publish_gate.json"
+    state_path = resolve_repo_path(
+        repo_root,
+        os.getenv("BIZZAL_DISCORD_APPROVAL_STATE", ""),
+        "data/archive/approvals/discord_publish_gate.json",
+    )
     if not state_path.is_file():
         return "missing_state", ""
     try:
@@ -52,7 +64,11 @@ def parse_approval_status(repo_root: Path, day: str) -> tuple[str, str]:
 
 def build_report(repo_root: Path, day: str, log_path: Path) -> dict:
     log_text = read_text(log_path)
-    artifacts_dir = repo_root / "data" / "renders" / "by_day"
+    artifacts_dir = resolve_repo_path(
+        repo_root,
+        os.getenv("BIZZAL_RENDERS_BY_DAY_DIR", ""),
+        "data/renders/by_day",
+    )
 
     mp4 = artifacts_dir / f"{day}.mp4"
     voice = artifacts_dir / f"{day}.voice.wav"
