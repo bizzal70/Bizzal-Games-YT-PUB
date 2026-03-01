@@ -321,16 +321,54 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                 approvals[month] = entry
                 changed = True
                 print(f"[monthly_publish_gate] rejected month={month} by={uid}")
+                if webhook_url:
+                    try:
+                        webhook_post_json(
+                            webhook_url,
+                            {
+                                "username": gate_username(),
+                                "content": f"🛑 Monthly rejected `{month}` by <@{uid}>.",
+                            },
+                            wait=False,
+                        )
+                    except Exception:
+                        pass
                 continue
 
             entry["status"] = "approved"
             entry["decision_utc"] = now_utc()
             entry["decision_by"] = uid
 
+            if webhook_url:
+                try:
+                    webhook_post_json(
+                        webhook_url,
+                        {
+                            "username": gate_username(),
+                            "content": f"✅ Monthly approval accepted for `{month}` by <@{uid}>.",
+                        },
+                        wait=False,
+                    )
+                except Exception:
+                    pass
+
             if publish:
                 approvals[month] = entry
                 state["approvals"] = approvals
                 save_json(state_path, state)
+
+                if webhook_url:
+                    try:
+                        webhook_post_json(
+                            webhook_url,
+                            {
+                                "username": gate_username(),
+                                "content": f"🚀 Monthly publish started for `{month}`.",
+                            },
+                            wait=False,
+                        )
+                    except Exception:
+                        pass
 
                 rc, output = run_monthly_publish_command(repo_root, month)
                 entry["publish_rc"] = rc
@@ -341,11 +379,53 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                     if youtube_url:
                         entry["youtube_url"] = youtube_url
                     print(f"[monthly_publish_gate] approved+published month={month} by={uid}")
+                    if webhook_url:
+                        try:
+                            msg = f"🎉 Monthly publish complete for `{month}`."
+                            if youtube_url:
+                                msg += f"\n🔗 {youtube_url}"
+                            webhook_post_json(
+                                webhook_url,
+                                {
+                                    "username": gate_username(),
+                                    "content": msg,
+                                },
+                                wait=False,
+                            )
+                        except Exception:
+                            pass
                 else:
                     entry["status"] = "approved_publish_failed"
                     print(f"[monthly_publish_gate] approved but publish failed month={month} rc={rc}")
+                    if webhook_url:
+                        try:
+                            msg = f"❌ Monthly publish failed for `{month}`, rc={rc}. Check logs."
+                            if youtube_url:
+                                msg += f"\n🔗 Related video: {youtube_url}"
+                            webhook_post_json(
+                                webhook_url,
+                                {
+                                    "username": gate_username(),
+                                    "content": msg,
+                                },
+                                wait=False,
+                            )
+                        except Exception:
+                            pass
             else:
                 print(f"[monthly_publish_gate] approved month={month} by={uid}")
+                if webhook_url:
+                    try:
+                        webhook_post_json(
+                            webhook_url,
+                            {
+                                "username": gate_username(),
+                                "content": f"ℹ️ Monthly `{month}` approved and queued; publish runner not executed in this check.",
+                            },
+                            wait=False,
+                        )
+                    except Exception:
+                        pass
 
             approvals[month] = entry
             changed = True
