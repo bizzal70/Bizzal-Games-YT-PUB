@@ -158,6 +158,23 @@ def short(text: str, n: int) -> str:
     return t if len(t) <= n else t[: n - 1] + "…"
 
 
+def chain_tag() -> str:
+    explicit = (os.getenv("BIZZAL_DISCORD_CHAIN_TAG") or os.getenv("BIZZAL_CHAIN_TAG") or "").strip()
+    if explicit:
+        return explicit
+
+    label = (os.getenv("BIZZAL_CHAIN_LABEL") or "").strip().lower()
+    if label in {"shadowdark", "sd"}:
+        return "Shadowdark"
+    if label in {"dnd", "d&d", "srd", "5e"}:
+        return "D&D"
+    return "D&D"
+
+
+def gate_username() -> str:
+    return f"Bizzal Monthly Gate • {chain_tag()}"
+
+
 def run_monthly_publish_command(repo_root: str, month: str):
     cmd_env = os.getenv("BIZZAL_MONTHLY_PUBLISH_CMD", "").strip()
     if cmd_env:
@@ -216,7 +233,7 @@ def request_mode(repo_root: str, month: str, state_path: str, webhook_url: str, 
         return 0
 
     payload = {
-        "username": "Bizzal Monthly Gate",
+        "username": gate_username(),
         "content": (
             f"Monthly longform ready for approval: `{month}`\n"
             f"Reply with: `approve {month}` or `reject {month}`"
