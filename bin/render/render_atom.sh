@@ -995,6 +995,10 @@ cp -f "$OUT" "$LATEST"
 echo "[render] wrote $OUT" >&2
 echo "[render] updated $LATEST" >&2
 if [[ "$ECHO_PREVIEW_URL" == "1" ]]; then
-  echo "[render] preview latest: http://${PREVIEW_HOST}:${PREVIEW_PORT}/data/renders/latest/latest.mp4" >&2
-  echo "[render] preview day:    http://${PREVIEW_HOST}:${PREVIEW_PORT}/data/renders/by_day/${DAY}.mp4" >&2
+  PREVIEW_LATEST_PATH="/$RENDER_LATEST_DIR/latest.mp4"
+  PREVIEW_DAY_PATH="/$RENDER_BY_DAY_DIR/${DAY}.mp4"
+  PREVIEW_LATEST_PATH="${PREVIEW_LATEST_PATH/#\/\//\/}"
+  PREVIEW_DAY_PATH="${PREVIEW_DAY_PATH/#\/\//\/}"
+  echo "[render] preview latest: http://${PREVIEW_HOST}:${PREVIEW_PORT}${PREVIEW_LATEST_PATH}" >&2
+  echo "[render] preview day:    http://${PREVIEW_HOST}:${PREVIEW_PORT}${PREVIEW_DAY_PATH}" >&2
 fi
