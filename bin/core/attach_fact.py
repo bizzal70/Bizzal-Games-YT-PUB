@@ -11,12 +11,23 @@ except ImportError:
 from reference_paths import resolve_active_srd_path
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-REF_CFG  = os.path.join(REPO_ROOT, "config", "reference_sources.yaml")
+REF_CFG  = os.getenv("BIZZAL_REFERENCE_SOURCES_PATH", "").strip() or os.path.join(REPO_ROOT, "config", "reference_sources.yaml")
+if not os.path.isabs(REF_CFG):
+    REF_CFG = os.path.join(REPO_ROOT, REF_CFG)
+
+
+def resolve_incoming_dir() -> str:
+    val = (os.getenv("BIZZAL_ATOM_INCOMING_DIR") or "").strip()
+    if not val:
+        return os.path.join(REPO_ROOT, "data", "atoms", "incoming")
+    if os.path.isabs(val):
+        return val
+    return os.path.join(REPO_ROOT, val)
 
 
 def atom_path() -> str:
     day = (os.getenv("BIZZAL_DAY") or "").strip() or datetime.now().strftime("%Y-%m-%d")
-    return os.path.join(REPO_ROOT, "data", "atoms", "incoming", day + ".json")
+    return os.path.join(resolve_incoming_dir(), day + ".json")
 
 def load_json(p):
     with open(p, "r", encoding="utf-8") as f:

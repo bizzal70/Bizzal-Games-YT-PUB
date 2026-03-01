@@ -9,9 +9,22 @@ except ImportError:
     sys.exit(2)
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-CFG_PATH  = os.path.join(REPO_ROOT, "config", "style_rules.yaml")
+CFG_PATH  = (os.getenv("BIZZAL_STYLE_RULES_PATH") or "").strip() or os.path.join(REPO_ROOT, "config", "style_rules.yaml")
+if not os.path.isabs(CFG_PATH):
+    CFG_PATH = os.path.join(REPO_ROOT, CFG_PATH)
 STATE_DIR = os.path.join(REPO_ROOT, "runtime", "state")
-HIST_PATH = os.path.join(STATE_DIR, "style_history.json")
+HIST_PATH = (os.getenv("BIZZAL_STYLE_HISTORY_PATH") or "").strip() or os.path.join(STATE_DIR, "style_history.json")
+if not os.path.isabs(HIST_PATH):
+    HIST_PATH = os.path.join(REPO_ROOT, HIST_PATH)
+
+
+def resolve_incoming_dir() -> str:
+    val = (os.getenv("BIZZAL_ATOM_INCOMING_DIR") or "").strip()
+    if not val:
+        return os.path.join(REPO_ROOT, "data", "atoms", "incoming")
+    if os.path.isabs(val):
+        return val
+    return os.path.join(REPO_ROOT, val)
 
 
 def resolve_day() -> str:
@@ -22,7 +35,7 @@ def resolve_day() -> str:
 
 
 def atom_path(day: str) -> str:
-    return os.path.join(REPO_ROOT, "data", "atoms", "incoming", day + ".json")
+    return os.path.join(resolve_incoming_dir(), day + ".json")
 
 def load_json(p):
     with open(p, "r", encoding="utf-8") as f:

@@ -1,0 +1,27 @@
+# Shadowdark reference source config
+# NOTE: The active data directory should contain fixture-style JSON files
+# compatible with the existing pick/fact scripts.
+active_srd_path: reference/shadowdark/active
+srd_pdf_path: reference/shadowdark/source_pdfs/Shadowdark_RPG_-_V4-8.pdf
+
+sources:
+  creatures:
+    file: Creature.json
+    joins:
+      actions: CreatureAction.json
+      attacks: CreatureActionAttack.json
+      traits: CreatureTrait.json
+
+  spells:
+    file: Spell.json
+    joins:
+      casting_options: SpellCastingOption.json
+
+  items:
+    file: Item.json
+
+  classes:
+    file: CharacterClass.json
+
+  rules:
+    file: Rule.json

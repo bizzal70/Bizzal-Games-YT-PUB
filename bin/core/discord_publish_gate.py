@@ -49,8 +49,15 @@ def save_json(path: str, obj: dict):
     os.replace(tmp, path)
 
 
+def validated_atom_dir(repo_root: str) -> str:
+    raw = (os.getenv("BIZZAL_ATOM_VALIDATED_DIR") or "data/atoms/validated").strip()
+    if os.path.isabs(raw):
+        return raw
+    return os.path.join(repo_root, raw)
+
+
 def atom_for_day(repo_root: str, day: str) -> tuple[str, dict]:
-    path = os.path.join(repo_root, "data", "atoms", "validated", f"{day}.json")
+    path = os.path.join(validated_atom_dir(repo_root), f"{day}.json")
     if not os.path.isfile(path):
         raise FileNotFoundError(f"validated atom missing: {path}")
     with open(path, "r", encoding="utf-8") as f:
@@ -59,7 +66,7 @@ def atom_for_day(repo_root: str, day: str) -> tuple[str, dict]:
 
 
 def latest_validated_day(repo_root: str) -> str | None:
-    validated_dir = os.path.join(repo_root, "data", "atoms", "validated")
+    validated_dir = validated_atom_dir(repo_root)
     if not os.path.isdir(validated_dir):
         return None
     days: list[str] = []

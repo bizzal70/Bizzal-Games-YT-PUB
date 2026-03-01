@@ -15,6 +15,8 @@ WEEKLY_MIN="${BIZZAL_AUTOMATION_WEEKLY_MIN:-20}"
 MONTHLY_DAY="${BIZZAL_AUTOMATION_MONTHLY_DAY:-1}"
 MONTHLY_HOUR="${BIZZAL_AUTOMATION_MONTHLY_HOUR:-20}"
 MONTHLY_MIN="${BIZZAL_AUTOMATION_MONTHLY_MIN:-10}"
+CHAIN_MODE="${BIZZAL_AUTOMATION_CHAIN_MODE:-single}"
+SHADOWDARK_OFFSET_MIN="${BIZZAL_AUTOMATION_SHADOWDARK_OFFSET_MIN:-30}"
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -62,12 +64,23 @@ awk -v begin="$BEGIN_MARK" -v end="$END_MARK" '
   echo "# Local-time automation timezone"
   echo "CRON_TZ=$CRON_TZ_NAME"
   echo "BIZZAL_ENV_FILE=$HOME/.config/bizzal.env"
-  echo "# Daily content pipeline with diagnostics"
-  echo "$DAILY_MIN $DAILY_HOUR * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/run_daily_diag_cron.sh"
+  echo "# Daily content pipeline with diagnostics (mode: $CHAIN_MODE)"
+  if [[ "$CHAIN_MODE" == "dual" ]]; then
+    echo "$DAILY_MIN $DAILY_HOUR * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/run_daily_diag_cron.sh"
+    echo "$SHADOWDARK_OFFSET_MIN $DAILY_HOUR * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/run_daily_diag_shadowdark_cron.sh"
+  elif [[ "$CHAIN_MODE" == "alternating" ]]; then
+    echo "$DAILY_MIN $DAILY_HOUR * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/run_daily_diag_alternating_cron.sh"
+  else
+    echo "$DAILY_MIN $DAILY_HOUR * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/run_daily_diag_cron.sh"
+  fi
   echo "# Weekly log pruning"
   echo "$WEEKLY_MIN $WEEKLY_HOUR * * $WEEKLY_DAY cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/prune_daily_diag_logs.sh --keep-days 30"
   echo "# Discord approval processing (every 5 minutes)"
   echo "*/5 * * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/discord_publish_gate.py check --publish >> $REPO_ROOT/logs/cron_discord_publish_gate.log 2>&1"
+  if [[ "$CHAIN_MODE" == "dual" || "$CHAIN_MODE" == "alternating" ]]; then
+    echo "# Shadowdark Discord approval processing (every 5 minutes)"
+    echo "*/5 * * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/discord_publish_gate_shadowdark.sh check --publish >> $REPO_ROOT/logs/cron_discord_publish_gate_shadowdark.log 2>&1"
+  fi
   echo "# Monthly longform approval processing (every 5 minutes)"
   echo "*/5 * * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/monthly_publish_gate.py check --publish >> $REPO_ROOT/logs/cron_monthly_publish_gate.log 2>&1"
   echo "# Monthly release bundle for previous month"

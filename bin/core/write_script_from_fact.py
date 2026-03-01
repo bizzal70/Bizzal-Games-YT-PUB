@@ -10,12 +10,23 @@ except ImportError:
     sys.exit(2)
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-STYLE_CFG = os.path.join(REPO_ROOT, "config", "style_rules.yaml")
+STYLE_CFG = (os.getenv("BIZZAL_STYLE_RULES_PATH") or "").strip() or os.path.join(REPO_ROOT, "config", "style_rules.yaml")
+if not os.path.isabs(STYLE_CFG):
+    STYLE_CFG = os.path.join(REPO_ROOT, STYLE_CFG)
+
+
+def resolve_incoming_dir() -> str:
+    val = (os.getenv("BIZZAL_ATOM_INCOMING_DIR") or "").strip()
+    if not val:
+        return os.path.join(REPO_ROOT, "data", "atoms", "incoming")
+    if os.path.isabs(val):
+        return val
+    return os.path.join(REPO_ROOT, val)
 
 
 def atom_path() -> str:
     day = (os.getenv("BIZZAL_DAY") or "").strip() or datetime.now().strftime("%Y-%m-%d")
-    return os.path.join(REPO_ROOT, "data", "atoms", "incoming", day + ".json")
+    return os.path.join(resolve_incoming_dir(), day + ".json")
 
 def load_json(p):
     with open(p, "r", encoding="utf-8") as f:

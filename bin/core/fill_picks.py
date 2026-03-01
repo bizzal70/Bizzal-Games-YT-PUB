@@ -14,9 +14,22 @@ except ImportError:
 from reference_paths import resolve_active_srd_path
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-ATOM_DIR = os.path.join(REPO_ROOT, "data", "atoms", "incoming")
-REF_CFG = os.path.join(REPO_ROOT, "config", "reference_sources.yaml")
-VALIDATED_DIR = os.path.join(REPO_ROOT, "data", "atoms", "validated")
+
+
+def resolve_repo_path(raw: str, default_abs: str) -> str:
+    value = (raw or "").strip()
+    if not value:
+        return default_abs
+    if os.path.isabs(value):
+        return value
+    return os.path.join(REPO_ROOT, value)
+
+
+ATOM_DIR = resolve_repo_path(os.getenv("BIZZAL_ATOM_INCOMING_DIR", ""), os.path.join(REPO_ROOT, "data", "atoms", "incoming"))
+REF_CFG = os.getenv("BIZZAL_REFERENCE_SOURCES_PATH", "").strip() or os.path.join(REPO_ROOT, "config", "reference_sources.yaml")
+if not os.path.isabs(REF_CFG):
+    REF_CFG = os.path.join(REPO_ROOT, REF_CFG)
+VALIDATED_DIR = resolve_repo_path(os.getenv("BIZZAL_ATOM_VALIDATED_DIR", ""), os.path.join(REPO_ROOT, "data", "atoms", "validated"))
 
 def load_json(path: str):
     with open(path, "r", encoding="utf-8") as f:

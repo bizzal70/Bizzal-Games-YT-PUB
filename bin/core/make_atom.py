@@ -14,13 +14,24 @@ REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 
 CONFIG_DIR   = os.path.join(REPO_ROOT, "config")
 DATA_DIR     = os.path.join(REPO_ROOT, "data")
-INCOMING_DIR = os.path.join(DATA_DIR, "atoms", "incoming")
-VALID_DIR    = os.path.join(DATA_DIR, "atoms", "validated")
-FAILED_DIR   = os.path.join(DATA_DIR, "atoms", "failed")
 
-TOPIC_SPINE  = os.path.join(CONFIG_DIR, "topic_spine.yaml")
-SCHEMA_MIN   = os.path.join(CONFIG_DIR, "atom_schema_min.json")
-REF_CFG      = os.path.join(CONFIG_DIR, "reference_sources.yaml")
+def resolve_repo_path(raw: str, default_abs: str) -> str:
+    value = (raw or "").strip()
+    if not value:
+        return default_abs
+    if os.path.isabs(value):
+        return value
+    return os.path.join(REPO_ROOT, value)
+
+
+INCOMING_DIR = resolve_repo_path(os.getenv("BIZZAL_ATOM_INCOMING_DIR", ""), os.path.join(DATA_DIR, "atoms", "incoming"))
+VALID_DIR    = resolve_repo_path(os.getenv("BIZZAL_ATOM_VALIDATED_DIR", ""), os.path.join(DATA_DIR, "atoms", "validated"))
+FAILED_DIR   = resolve_repo_path(os.getenv("BIZZAL_ATOM_FAILED_DIR", ""), os.path.join(DATA_DIR, "atoms", "failed"))
+
+
+TOPIC_SPINE  = resolve_repo_path(os.getenv("BIZZAL_TOPIC_SPINE_PATH", ""), os.path.join(CONFIG_DIR, "topic_spine.yaml"))
+SCHEMA_MIN   = resolve_repo_path(os.getenv("BIZZAL_ATOM_SCHEMA_MIN_PATH", ""), os.path.join(CONFIG_DIR, "atom_schema_min.json"))
+REF_CFG      = resolve_repo_path(os.getenv("BIZZAL_REFERENCE_SOURCES_PATH", ""), os.path.join(CONFIG_DIR, "reference_sources.yaml"))
 
 DOW_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 

@@ -5,7 +5,12 @@ REPO="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO"
 
 DAY="$(date +%F)"
-ATOM_VALID="data/atoms/validated/${DAY}.json"
+ATOM_VALID_DIR="${BIZZAL_ATOM_VALIDATED_DIR:-data/atoms/validated}"
+if [[ "$ATOM_VALID_DIR" = /* ]]; then
+  ATOM_VALID="$ATOM_VALID_DIR/${DAY}.json"
+else
+  ATOM_VALID="$REPO/$ATOM_VALID_DIR/${DAY}.json"
+fi
 
 echo "[run_daily] DAY=$DAY"
 echo "[run_daily] repo=$REPO"

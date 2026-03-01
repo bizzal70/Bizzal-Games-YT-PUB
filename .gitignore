@@ -6,8 +6,10 @@ tmp/
 # generated and archival outputs
 data/archive/
 data/atoms/
+data/atoms_shadowdark/
 data/manifests/
 data/renders/
+data/renders_shadowdark/
 data/www/
 
 # large/replaceable assets (optional; you can choose to keep these in git later)
@@ -20,6 +22,7 @@ data/assets/
 # keep generated pointers/snapshots out of git:
 reference/active
 reference/snapshots/
+reference/shadowdark/source_pdfs/*.pdf
 
 # misc
 __pycache__/
@@ -34,3 +37,6 @@ docs/ops_backups/
 .env.ai
 .env.discord_health
 .env.health_mail
+
+# windows ADS metadata copied as files under WSL
+*:Zone.Identifier

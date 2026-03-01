@@ -4,16 +4,46 @@ set -euo pipefail
 DAY="${1:-$(date +%F)}"
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
-ATOM="$REPO_ROOT/data/atoms/validated/${DAY}.json"
-OUT="$REPO_ROOT/data/renders/by_day/${DAY}.mp4"
-LATEST="$REPO_ROOT/data/renders/latest/latest.mp4"
-VOICE_WAV="$REPO_ROOT/data/renders/by_day/${DAY}.voice.wav"
-LATEST_VOICE_WAV="$REPO_ROOT/data/renders/latest/latest.voice.wav"
-MUSIC_WAV="$REPO_ROOT/data/renders/by_day/${DAY}.music.wav"
-LATEST_MUSIC_WAV="$REPO_ROOT/data/renders/latest/latest.music.wav"
-BG_IMAGE="$REPO_ROOT/data/renders/by_day/${DAY}.bg.png"
-LATEST_BG_IMAGE="$REPO_ROOT/data/renders/latest/latest.bg.png"
-TMPDIR="$REPO_ROOT/data/renders/tmp/${DAY}"
+ATOM_VALIDATED_DIR="${BIZZAL_ATOM_VALIDATED_DIR:-data/atoms/validated}"
+RENDER_BY_DAY_DIR="${BIZZAL_RENDERS_BY_DAY_DIR:-data/renders/by_day}"
+RENDER_LATEST_DIR="${BIZZAL_RENDERS_LATEST_DIR:-data/renders/latest}"
+RENDER_TMP_DIR="${BIZZAL_RENDERS_TMP_DIR:-data/renders/tmp}"
+
+if [[ "$ATOM_VALIDATED_DIR" = /* ]]; then
+  ATOM="$ATOM_VALIDATED_DIR/${DAY}.json"
+else
+  ATOM="$REPO_ROOT/$ATOM_VALIDATED_DIR/${DAY}.json"
+fi
+
+if [[ "$RENDER_BY_DAY_DIR" = /* ]]; then
+  OUT="$RENDER_BY_DAY_DIR/${DAY}.mp4"
+  VOICE_WAV="$RENDER_BY_DAY_DIR/${DAY}.voice.wav"
+  MUSIC_WAV="$RENDER_BY_DAY_DIR/${DAY}.music.wav"
+  BG_IMAGE="$RENDER_BY_DAY_DIR/${DAY}.bg.png"
+else
+  OUT="$REPO_ROOT/$RENDER_BY_DAY_DIR/${DAY}.mp4"
+  VOICE_WAV="$REPO_ROOT/$RENDER_BY_DAY_DIR/${DAY}.voice.wav"
+  MUSIC_WAV="$REPO_ROOT/$RENDER_BY_DAY_DIR/${DAY}.music.wav"
+  BG_IMAGE="$REPO_ROOT/$RENDER_BY_DAY_DIR/${DAY}.bg.png"
+fi
+
+if [[ "$RENDER_LATEST_DIR" = /* ]]; then
+  LATEST="$RENDER_LATEST_DIR/latest.mp4"
+  LATEST_VOICE_WAV="$RENDER_LATEST_DIR/latest.voice.wav"
+  LATEST_MUSIC_WAV="$RENDER_LATEST_DIR/latest.music.wav"
+  LATEST_BG_IMAGE="$RENDER_LATEST_DIR/latest.bg.png"
+else
+  LATEST="$REPO_ROOT/$RENDER_LATEST_DIR/latest.mp4"
+  LATEST_VOICE_WAV="$REPO_ROOT/$RENDER_LATEST_DIR/latest.voice.wav"
+  LATEST_MUSIC_WAV="$REPO_ROOT/$RENDER_LATEST_DIR/latest.music.wav"
+  LATEST_BG_IMAGE="$REPO_ROOT/$RENDER_LATEST_DIR/latest.bg.png"
+fi
+
+if [[ "$RENDER_TMP_DIR" = /* ]]; then
+  TMPDIR="$RENDER_TMP_DIR/${DAY}"
+else
+  TMPDIR="$REPO_ROOT/$RENDER_TMP_DIR/${DAY}"
+fi
 VIDEO_ONLY="$TMPDIR/video_only.mp4"
 
 mkdir -p "$(dirname "$OUT")" "$(dirname "$LATEST")" "$TMPDIR"

@@ -18,7 +18,11 @@ def is_oauth_invalid_grant_error(exc: Exception) -> bool:
 
 
 def load_atom(repo_root: Path, day: str) -> dict:
-    atom_path = repo_root / "data" / "atoms" / "validated" / f"{day}.json"
+    validated_dir_raw = (os.getenv("BIZZAL_ATOM_VALIDATED_DIR") or "data/atoms/validated").strip()
+    validated_dir = Path(validated_dir_raw).expanduser()
+    if not validated_dir.is_absolute():
+        validated_dir = repo_root / validated_dir
+    atom_path = validated_dir / f"{day}.json"
     if not atom_path.is_file():
         raise FileNotFoundError(f"validated atom missing: {atom_path}")
     return json.loads(atom_path.read_text(encoding="utf-8"))
@@ -274,7 +278,11 @@ def main() -> int:
 
         day = datetime.utcnow().strftime("%Y-%m-%d")
 
-    video_path = Path(args.video).expanduser() if args.video else (repo_root / "data" / "renders" / "latest" / "latest.mp4")
+    default_video = (os.getenv("BIZZAL_LATEST_VIDEO_PATH") or "data/renders/latest/latest.mp4").strip()
+    default_video_path = Path(default_video).expanduser()
+    if not default_video_path.is_absolute():
+        default_video_path = repo_root / default_video_path
+    video_path = Path(args.video).expanduser() if args.video else default_video_path
     if not video_path.is_file():
         eprint(f"ERROR: video not found: {video_path}")
         return 2
