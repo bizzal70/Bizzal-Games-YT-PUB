@@ -9,5 +9,5 @@ DAY_NUM="$(date +%d)"
 if (( 10#$DAY_NUM % 2 == 0 )); then
   exec "$REPO_ROOT/bin/core/run_daily_diag_shadowdark_cron.sh"
 else
-  exec "$REPO_ROOT/bin/core/run_daily_diag_cron.sh"
+  exec "$REPO_ROOT/bin/core/run_daily_diag_dnd_cron.sh"
 fi
