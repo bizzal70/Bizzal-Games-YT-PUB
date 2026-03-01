@@ -24,6 +24,7 @@ export BIZZAL_LATEST_VIDEO_PATH="${BIZZAL_SD_LATEST_VIDEO_PATH:-data/renders_sha
 
 export BIZZAL_DISCORD_APPROVAL_STATE="${BIZZAL_SD_DISCORD_APPROVAL_STATE:-data/archive/approvals/discord_publish_gate_shadowdark.json}"
 export BIZZAL_PUBLISH_REGISTRY="${BIZZAL_SD_PUBLISH_REGISTRY:-data/archive/publish/published_registry_shadowdark.json}"
+export BIZZAL_PUBLISH_CMD="${BIZZAL_SD_PUBLISH_CMD:-$REPO_ROOT/bin/upload/upload_youtube.py}"
 
 mkdir -p \
   "$REPO_ROOT/$BIZZAL_ATOM_INCOMING_DIR" \
