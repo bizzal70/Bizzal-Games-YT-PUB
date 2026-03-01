@@ -37,6 +37,29 @@ This project now supports a parallel Shadowdark daily chain in the same reposito
 - Source PDFs: `reference/shadowdark/source_pdfs`
 - Active JSON dataset: `reference/shadowdark/active`
 
+## Bootstrap JSON fixtures from PDFs
+
+Run this once on dev or prod after PDFs are placed in `reference/shadowdark/source_pdfs`:
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+source .venv/bin/activate
+python3 -m pip install pypdf
+bin/core/bootstrap_shadowdark_fixtures.sh
+```
+
+The bootstrap writes starter fixture files required by the runtime pipeline:
+
+- `CharacterClass.json`
+- `Spell.json`
+- `Item.json`
+- `Creature.json`
+- `Rule.json`
+- plus empty join files (`CreatureAction*`, `CreatureTrait`, `SpellCastingOption`)
+
+Note: This is a starter bootstrap. Improve/replace generated fixture content as your
+curated Shadowdark dataset matures.
+
 ## Install cron on prod
 
 ```bash
