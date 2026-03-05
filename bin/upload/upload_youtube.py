@@ -69,6 +69,14 @@ def default_video_path_for_day(repo_root: Path, day: str) -> Path:
     if day_video.is_file():
         return day_video
 
+    today = datetime.utcnow().strftime("%Y-%m-%d")
+    allow_latest_fallback = (os.getenv("BIZZAL_UPLOAD_ALLOW_LATEST_FALLBACK") or "0").strip() == "1"
+    if day != today and not allow_latest_fallback:
+        raise FileNotFoundError(
+            f"day-specific video missing for historical publish: {day_video}. "
+            "Refusing fallback to latest.mp4; set BIZZAL_UPLOAD_ALLOW_LATEST_FALLBACK=1 to override."
+        )
+
     latest_raw = (os.getenv("BIZZAL_LATEST_VIDEO_PATH") or "data/renders/latest/latest.mp4").strip()
     latest_path = Path(latest_raw).expanduser()
     if not latest_path.is_absolute():
@@ -331,7 +339,11 @@ def main() -> int:
 
         day = datetime.utcnow().strftime("%Y-%m-%d")
 
-    default_video_path = default_video_path_for_day(repo_root, day)
+    try:
+        default_video_path = default_video_path_for_day(repo_root, day)
+    except FileNotFoundError as exc:
+        eprint(f"ERROR: {exc}")
+        return 2
     video_path = Path(args.video).expanduser() if args.video else default_video_path
     if not video_path.is_file():
         eprint(f"ERROR: video not found: {video_path}")
