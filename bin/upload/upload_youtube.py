@@ -59,6 +59,23 @@ def approval_state_path(repo_root: Path) -> Path:
     return p
 
 
+def default_video_path_for_day(repo_root: Path, day: str) -> Path:
+    by_day_dir_raw = (os.getenv("BIZZAL_RENDERS_BY_DAY_DIR") or "data/renders/by_day").strip()
+    by_day_dir = Path(by_day_dir_raw).expanduser()
+    if not by_day_dir.is_absolute():
+        by_day_dir = repo_root / by_day_dir
+
+    day_video = by_day_dir / f"{day}.mp4"
+    if day_video.is_file():
+        return day_video
+
+    latest_raw = (os.getenv("BIZZAL_LATEST_VIDEO_PATH") or "data/renders/latest/latest.mp4").strip()
+    latest_path = Path(latest_raw).expanduser()
+    if not latest_path.is_absolute():
+        latest_path = repo_root / latest_path
+    return latest_path
+
+
 def load_registry(path: Path) -> dict:
     if not path.is_file():
         return {"items": []}
@@ -314,10 +331,7 @@ def main() -> int:
 
         day = datetime.utcnow().strftime("%Y-%m-%d")
 
-    default_video = (os.getenv("BIZZAL_LATEST_VIDEO_PATH") or "data/renders/latest/latest.mp4").strip()
-    default_video_path = Path(default_video).expanduser()
-    if not default_video_path.is_absolute():
-        default_video_path = repo_root / default_video_path
+    default_video_path = default_video_path_for_day(repo_root, day)
     video_path = Path(args.video).expanduser() if args.video else default_video_path
     if not video_path.is_file():
         eprint(f"ERROR: video not found: {video_path}")
