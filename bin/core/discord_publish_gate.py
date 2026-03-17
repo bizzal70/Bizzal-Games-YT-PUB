@@ -675,6 +675,13 @@ def retry_mode(repo_root: str, day: str, state_path: str, webhook_url: str) -> i
         )
         return 3
 
+    # The uploader enforces that the approval state is currently approved/published.
+    # Move failed approvals back to approved before retrying the publish command.
+    entry["status"] = "approved"
+    approvals[day] = entry
+    state["approvals"] = approvals
+    save_json(state_path, state)
+
     entry = publish_approved_entry(repo_root, day, entry, webhook_url)
     approvals[day] = entry
     state["approvals"] = approvals
