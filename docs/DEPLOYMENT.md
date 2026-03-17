@@ -364,6 +364,14 @@ export BIZZAL_YT_CATEGORY_ID=20
 export BIZZAL_YT_OAUTH_MODE=console
 ```
 
+Refresh or repair the YouTube token without attempting an upload:
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+. .venv/bin/activate
+bin/upload/upload_youtube.py --refresh-auth-only
+```
+
 Set publish command to stable wrapper:
 
 ```bash
@@ -392,6 +400,7 @@ bin/core/discord_publish_gate.py check --publish
 Expected outcomes:
 - `published` → success
 - `approved_publish_failed` with `publish_rc=6` → duplicate blocked (expected safety)
+- `approved_publish_failed` with `publish_rc=9` → YouTube token expired or revoked; refresh auth, then retry publish
 - `pending` → no valid approval message seen yet
 
 Fast status check:
@@ -409,6 +418,13 @@ If approval appears ignored (stuck pending):
 ```bash
 cd /home/umbrel/Bizzal_Games_Pub
 bin/core/discord_publish_gate.py check --publish
+```
+
+If approval already succeeded but publish failed and you fixed the cause, retry without re-requesting approval:
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+bin/core/discord_publish_gate.py retry --day YYYY-MM-DD
 ```
 
 If env file update fails with `Operation not permitted`:

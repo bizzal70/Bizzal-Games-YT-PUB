@@ -107,7 +107,26 @@ jq '.approvals | to_entries[] | {day:.key,status:.value.status,content_id:.value
 Status meanings:
 - `pending` → waiting for a valid Discord approver message after request timestamp.
 - `published` → approval accepted and publish completed successfully.
-- `approved_publish_failed` → approval accepted but publish failed (most commonly duplicate block `publish_rc=6`).
+- `approved_publish_failed` → approval accepted but publish failed.
+
+Common recovery paths:
+- `publish_rc=6` → duplicate blocked by policy.
+- `publish_rc=9` → YouTube token expired or revoked; refresh auth, then retry publish.
+
+Umbrel auth refresh without uploading:
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+. .venv/bin/activate
+bin/upload/upload_youtube.py --refresh-auth-only
+```
+
+Retry a previously approved day after fixing the root cause:
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+bin/core/discord_publish_gate.py retry --day YYYY-MM-DD
+```
 
 ## Git sync workflow
 

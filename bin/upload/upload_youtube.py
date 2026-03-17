@@ -17,6 +17,12 @@ def is_oauth_invalid_grant_error(exc: Exception) -> bool:
     return "invalid_grant" in txt or "token has been expired or revoked" in txt
 
 
+def youtube_auth_paths() -> tuple[Path, Path]:
+    client_secrets = Path((os.getenv("BIZZAL_YT_CLIENT_SECRETS") or "~/.config/bizzal/youtube_client_secrets.json")).expanduser()
+    token_file = Path((os.getenv("BIZZAL_YT_TOKEN_FILE") or "~/.config/bizzal/youtube_token.json")).expanduser()
+    return client_secrets, token_file
+
+
 def load_atom(repo_root: Path, day: str) -> dict:
     validated_dir_raw = (os.getenv("BIZZAL_ATOM_VALIDATED_DIR") or "data/atoms/validated").strip()
     validated_dir = Path(validated_dir_raw).expanduser()
@@ -330,9 +336,27 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Upload latest rendered short to YouTube")
     parser.add_argument("--day", default=os.getenv("BIZZAL_DAY", ""), help="Day YYYY-MM-DD (default: today inferred by render path)")
     parser.add_argument("--video", default="", help="Video path (default: data/renders/latest/latest.mp4)")
+    parser.add_argument("--refresh-auth-only", action="store_true", help="Refresh or create the YouTube OAuth token without uploading")
     args = parser.parse_args()
 
     repo_root = Path(__file__).resolve().parents[2]
+    client_secrets, token_file = youtube_auth_paths()
+
+    if args.refresh_auth_only:
+        try:
+            get_youtube_service(client_secrets, token_file)
+        except Exception as exc:
+            if is_oauth_invalid_grant_error(exc):
+                eprint(
+                    "ERROR: upload auth failed (invalid_grant: token expired or revoked). "
+                    f"Re-auth required for token file: {token_file}"
+                )
+                return 9
+            eprint(f"ERROR: auth refresh failed: {exc}")
+            return 4
+        print(f"[upload_youtube] auth ok token={token_file}")
+        return 0
+
     day = args.day.strip()
     if not day:
         from datetime import datetime
@@ -398,9 +422,6 @@ def main() -> int:
     if privacy not in {"private", "unlisted", "public"}:
         privacy = "private"
     category_id = (os.getenv("BIZZAL_YT_CATEGORY_ID") or "20").strip()  # Gaming
-
-    client_secrets = Path((os.getenv("BIZZAL_YT_CLIENT_SECRETS") or "~/.config/bizzal/youtube_client_secrets.json")).expanduser()
-    token_file = Path((os.getenv("BIZZAL_YT_TOKEN_FILE") or "~/.config/bizzal/youtube_token.json")).expanduser()
 
     try:
         youtube = get_youtube_service(client_secrets, token_file)

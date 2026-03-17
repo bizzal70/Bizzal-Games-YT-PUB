@@ -305,6 +305,105 @@ def extract_youtube_url(text: str) -> str:
     return ""
 
 
+def first_output_line(text: str) -> str:
+    for line in (text or "").splitlines():
+        txt = line.strip()
+        if txt:
+            return txt
+    return ""
+
+
+def publish_approved_entry(repo_root: str, day: str, entry: dict, webhook_url: str) -> dict:
+    content_id = str(entry.get("content_id") or "")
+
+    prior = find_published_item(load_publish_registry(repo_root), day, content_id)
+    if prior:
+        prior_url = published_item_url(prior)
+        entry["status"] = "published"
+        entry["publish_rc"] = 0
+        entry["publish_output"] = f"already published; skipped upload url={prior_url or '(unknown)'}"
+        if prior_url:
+            entry["youtube_url"] = prior_url
+        print(f"[discord_publish_gate] already published day={day}; skipped upload")
+        if webhook_url:
+            try:
+                msg = f"ℹ️ Already published for `{day}` (`{content_id}`); skipping upload."
+                if prior_url:
+                    msg += f"\n🔗 {prior_url}"
+                webhook_post_json(
+                    webhook_url,
+                    {
+                        "username": gate_username(),
+                        "content": msg,
+                    },
+                    wait=False,
+                )
+            except Exception:
+                pass
+        return entry
+
+    if webhook_url:
+        try:
+            webhook_post_json(
+                webhook_url,
+                {
+                    "username": gate_username(),
+                    "content": f"🚀 Publish started for `{day}` (`{content_id}`).",
+                },
+                wait=False,
+            )
+        except Exception:
+            pass
+
+    rc, output = run_publish_command(repo_root, day)
+    entry["publish_rc"] = rc
+    entry["publish_output"] = short(output, 800)
+    youtube_url = extract_youtube_url(output)
+    if rc == 0:
+        entry["status"] = "published"
+        if youtube_url:
+            entry["youtube_url"] = youtube_url
+        print(f"[discord_publish_gate] approved+pushed day={day}")
+        if webhook_url:
+            try:
+                msg = f"🎉 Publish complete for `{day}` (`{content_id}`)."
+                if youtube_url:
+                    msg += f"\n🔗 {youtube_url}"
+                webhook_post_json(
+                    webhook_url,
+                    {
+                        "username": gate_username(),
+                        "content": msg,
+                    },
+                    wait=False,
+                )
+            except Exception:
+                pass
+        return entry
+
+    entry["status"] = "approved_publish_failed"
+    print(f"[discord_publish_gate] approved but publish failed day={day} rc={rc}")
+    if webhook_url:
+        try:
+            msg = f"❌ Publish failed for `{day}` (`{content_id}`), rc={rc}."
+            failure_line = first_output_line(output)
+            if failure_line:
+                msg += f"\n{short(failure_line, 240)}"
+            if youtube_url:
+                msg += f"\n🔗 Related video: {youtube_url}"
+            webhook_post_json(
+                webhook_url,
+                {
+                    "username": gate_username(),
+                    "content": msg,
+                },
+                wait=False,
+            )
+        except Exception:
+            pass
+    return entry
+
+
 def request_mode(repo_root: str, day: str, state_path: str, webhook_url: str, force: bool) -> int:
     webhook_url = normalize_webhook_url(webhook_url)
     if not webhook_url:
@@ -532,91 +631,7 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                 state["approvals"] = approvals
                 save_json(state_path, state)
 
-                prior = find_published_item(load_publish_registry(repo_root), day, content_id)
-                if prior:
-                    prior_url = published_item_url(prior)
-                    entry["status"] = "published"
-                    entry["publish_rc"] = 0
-                    entry["publish_output"] = f"already published; skipped upload url={prior_url or '(unknown)'}"
-                    if prior_url:
-                        entry["youtube_url"] = prior_url
-                    approvals[day] = entry
-                    state["approvals"] = approvals
-                    save_json(state_path, state)
-                    changed = True
-                    print(f"[discord_publish_gate] already published day={day}; skipped upload")
-                    if webhook_url:
-                        try:
-                            msg = f"ℹ️ Already published for `{day}` (`{content_id}`); skipping upload."
-                            if prior_url:
-                                msg += f"\n🔗 {prior_url}"
-                            webhook_post_json(
-                                webhook_url,
-                                {
-                                    "username": gate_username(),
-                                    "content": msg,
-                                },
-                                wait=False,
-                            )
-                        except Exception:
-                            pass
-                    continue
-
-                if webhook_url:
-                    try:
-                        webhook_post_json(
-                            webhook_url,
-                            {
-                                "username": gate_username(),
-                                "content": f"🚀 Publish started for `{day}` (`{content_id}`).",
-                            },
-                            wait=False,
-                        )
-                    except Exception:
-                        pass
-
-                rc, output = run_publish_command(repo_root, day)
-                entry["publish_rc"] = rc
-                entry["publish_output"] = short(output, 800)
-                youtube_url = extract_youtube_url(output)
-                if rc == 0:
-                    entry["status"] = "published"
-                    if youtube_url:
-                        entry["youtube_url"] = youtube_url
-                    print(f"[discord_publish_gate] approved+pushed day={day} by={uid}")
-                    if webhook_url:
-                        try:
-                            msg = f"🎉 Publish complete for `{day}` (`{content_id}`)."
-                            if youtube_url:
-                                msg += f"\n🔗 {youtube_url}"
-                            webhook_post_json(
-                                webhook_url,
-                                {
-                                    "username": gate_username(),
-                                    "content": msg,
-                                },
-                                wait=False,
-                            )
-                        except Exception:
-                            pass
-                else:
-                    entry["status"] = "approved_publish_failed"
-                    print(f"[discord_publish_gate] approved but publish failed day={day} rc={rc}")
-                    if webhook_url:
-                        try:
-                            msg = f"❌ Publish failed for `{day}` (`{content_id}`), rc={rc}. Check logs."
-                            if youtube_url:
-                                msg += f"\n🔗 Related video: {youtube_url}"
-                            webhook_post_json(
-                                webhook_url,
-                                {
-                                    "username": gate_username(),
-                                    "content": msg,
-                                },
-                                wait=False,
-                            )
-                        except Exception:
-                            pass
+                entry = publish_approved_entry(repo_root, day, entry, webhook_url)
             else:
                 print(f"[discord_publish_gate] approved day={day} by={uid}")
                 if webhook_url:
@@ -641,6 +656,32 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
     return 0
 
 
+def retry_mode(repo_root: str, day: str, state_path: str, webhook_url: str) -> int:
+    state = load_json(state_path)
+    approvals = state.get("approvals") or {}
+    entry = approvals.get(day)
+    if not isinstance(entry, dict):
+        print(f"ERROR: no approval entry found for day={day}", file=sys.stderr)
+        return 2
+
+    status = str(entry.get("status") or "").strip().lower()
+    if status == "published":
+        print(f"[discord_publish_gate] already published day={day}")
+        return 0
+    if status not in {"approved", "approved_publish_failed"}:
+        print(
+            f"ERROR: cannot retry day={day} from status={status or '(missing)'}; needs approved or approved_publish_failed",
+            file=sys.stderr,
+        )
+        return 3
+
+    entry = publish_approved_entry(repo_root, day, entry, webhook_url)
+    approvals[day] = entry
+    state["approvals"] = approvals
+    save_json(state_path, state)
+    return 0 if str(entry.get("status") or "") == "published" else int(entry.get("publish_rc") or 1)
+
+
 def main() -> int:
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 
@@ -654,6 +695,9 @@ def main() -> int:
     chk = sub.add_parser("check", help="Check Discord replies and apply approvals")
     chk.add_argument("--publish", action="store_true", help="Run publish command when approved")
 
+    retry = sub.add_parser("retry", help="Retry publish for an already approved day without re-requesting approval")
+    retry.add_argument("--day", default=datetime.now().strftime("%Y-%m-%d"))
+
     args = parser.parse_args()
 
     state_file = os.getenv("BIZZAL_DISCORD_APPROVAL_STATE", "data/archive/approvals/discord_publish_gate.json")
@@ -664,6 +708,8 @@ def main() -> int:
 
     if args.cmd == "request":
         return request_mode(repo_root, args.day.strip(), state_file, webhook_url, args.force)
+    if args.cmd == "retry":
+        return retry_mode(repo_root, args.day.strip(), state_file, webhook_url)
 
     bot_token = (os.getenv("BIZZAL_DISCORD_BOT_TOKEN") or "").strip()
     channel_id = normalize_discord_id((os.getenv("BIZZAL_DISCORD_CHANNEL_ID") or "").strip())
