@@ -61,6 +61,10 @@ def fixture_pks(records):
     return out
 
 
+def normalize_name(value) -> str:
+    return str(value or "").strip().lower()
+
+
 def validated_atom_paths() -> list[str]:
     if not os.path.isdir(VALIDATED_DIR):
         return []
@@ -104,6 +108,46 @@ def recent_used_pks(pick_key: str, current_day: str, lookback_days: int) -> set:
     return used
 
 
+def recent_used_fact_names(current_day: str, lookback_days: int, categories: set[str]) -> set[str]:
+    if lookback_days <= 0:
+        return set()
+
+    paths = validated_atom_paths()
+    if not paths:
+        return set()
+
+    used = set()
+    count = 0
+    canonical_categories = {canonical_category(c) for c in categories}
+    for path in reversed(paths):
+        try:
+            atom = load_json(path)
+        except Exception:
+            continue
+
+        day = str(atom.get("day") or "").strip()
+        if day == current_day:
+            continue
+
+        category = canonical_category(atom.get("category") or "")
+        if category not in canonical_categories:
+            count += 1
+            if count >= lookback_days:
+                break
+            continue
+
+        fact = atom.get("fact") or {}
+        name = normalize_name(fact.get("name"))
+        if name:
+            used.add(name)
+
+        count += 1
+        if count >= lookback_days:
+            break
+
+    return used
+
+
 def choose_pk_with_variety(candidates: list, avoid: set):
     if not candidates:
         return None
@@ -111,17 +155,50 @@ def choose_pk_with_variety(candidates: list, avoid: set):
     pool = filtered if filtered else candidates
     return random.choice(pool)
 
-def pick_pk(active_dir: str, filename: str, avoid: set | None = None) -> int:
+
+def pick_candidate_pk(candidates: list[tuple[int, str]], avoid_pks: set | None = None, avoid_names: set | None = None):
+    if not candidates:
+        return None
+
+    avoid_pks = avoid_pks or set()
+    avoid_names = avoid_names or set()
+
+    primary = [
+        (pk, name)
+        for pk, name in candidates
+        if pk not in avoid_pks and normalize_name(name) not in avoid_names
+    ]
+    if primary:
+        return random.choice(primary)[0]
+
+    secondary = [(pk, name) for pk, name in candidates if pk not in avoid_pks]
+    if secondary:
+        return random.choice(secondary)[0]
+
+    return random.choice(candidates)[0]
+
+def pick_pk(active_dir: str, filename: str, avoid: set | None = None, avoid_names: set | None = None) -> int:
     path = os.path.join(active_dir, filename)
     if not os.path.exists(path):
         print(f"ERROR: Missing source file: {path}", file=sys.stderr)
         sys.exit(10)
     records = load_json(path)
-    pks = fixture_pks(records)
-    if not pks:
+    candidates = []
+    if isinstance(records, list):
+        for rec in records:
+            if not isinstance(rec, dict):
+                continue
+            pk = rec.get("pk")
+            if pk is None:
+                continue
+            fields = rec.get("fields") or {}
+            candidates.append((pk, str(fields.get("name") or "")))
+
+    if not candidates:
         print(f"ERROR: No pk records found in: {path}", file=sys.stderr)
         sys.exit(11)
-    pick = choose_pk_with_variety(pks, avoid or set())
+
+    pick = pick_candidate_pk(candidates, avoid or set(), avoid_names or set())
     if pick is None:
         print(f"ERROR: Unable to choose pk from: {path}", file=sys.stderr)
         sys.exit(12)
@@ -166,7 +243,14 @@ def creature_is_weak_moral_choice_candidate(rec: dict) -> bool:
 
     return False
 
-def pick_creature_pk(active_dir: str, filename: str, category: str, angle: str, avoid: set | None = None) -> int:
+def pick_creature_pk(
+    active_dir: str,
+    filename: str,
+    category: str,
+    angle: str,
+    avoid: set | None = None,
+    avoid_names: set | None = None,
+) -> int:
     path = os.path.join(active_dir, filename)
     if not os.path.exists(path):
         print(f"ERROR: Missing source file: {path}", file=sys.stderr)
@@ -177,8 +261,8 @@ def pick_creature_pk(active_dir: str, filename: str, category: str, angle: str, 
         print(f"ERROR: Creature source is not a list: {path}", file=sys.stderr)
         sys.exit(11)
 
-    all_pks = []
-    filtered_pks = []
+    all_candidates: list[tuple[int, str]] = []
+    filtered_candidates: list[tuple[int, str]] = []
     cat = (category or "").strip().lower()
     ang = (angle or "").strip().lower()
 
@@ -186,20 +270,21 @@ def pick_creature_pk(active_dir: str, filename: str, category: str, angle: str, 
         if not isinstance(rec, dict) or rec.get("pk") is None:
             continue
         pk = rec["pk"]
-        all_pks.append(pk)
+        name = str(((rec.get("fields") or {}).get("name") or ""))
+        all_candidates.append((pk, name))
 
         if cat == "encounter_seed" and ang == "moral_choice" and creature_is_weak_moral_choice_candidate(rec):
             continue
-        filtered_pks.append(pk)
+        filtered_candidates.append((pk, name))
 
-    if not filtered_pks:
-        filtered_pks = all_pks
+    if not filtered_candidates:
+        filtered_candidates = all_candidates
 
-    if not filtered_pks:
+    if not filtered_candidates:
         print(f"ERROR: No creature pk records found in: {path}", file=sys.stderr)
         sys.exit(12)
 
-    pick = choose_pk_with_variety(filtered_pks, avoid or set())
+    pick = pick_candidate_pk(filtered_candidates, avoid or set(), avoid_names or set())
     if pick is None:
         print(f"ERROR: Unable to choose creature pk from: {path}", file=sys.stderr)
         sys.exit(13)
@@ -248,6 +333,13 @@ def main():
     if lookback_days < 0:
         lookback_days = 0
 
+    try:
+        name_lookback_days = int((os.getenv("BIZZAL_VARIETY_NAME_LOOKBACK_DAYS") or str(lookback_days)).strip())
+    except ValueError:
+        name_lookback_days = lookback_days
+    if name_lookback_days < 0:
+        name_lookback_days = 0
+
     active_dir, cfg = resolve_active_srd_path(REPO_ROOT, REF_CFG)
     if not active_dir or not os.path.isdir(active_dir):
         print(f"ERROR: Bad active_srd_path in {REF_CFG}: {active_dir}", file=sys.stderr)
@@ -271,25 +363,39 @@ def main():
     avoid_rule = recent_used_pks("rule_pk", day, lookback_days)
     avoid_class = recent_used_pks("class_pk", day, lookback_days)
 
+    avoid_creature_names = recent_used_fact_names(day, name_lookback_days, {"monster_tactic", "encounter_seed"})
+    avoid_spell_names = recent_used_fact_names(day, name_lookback_days, {"spell_use_case"})
+    avoid_item_names = recent_used_fact_names(day, name_lookback_days, {"item_spotlight"})
+    avoid_rule_names = recent_used_fact_names(day, name_lookback_days, {"rules_ruling", "rules_myth"})
+    avoid_class_names = recent_used_fact_names(day, name_lookback_days, {"character_micro_tip"})
+
     # Fill required picks per category (v1)
     if category == "monster_tactic":
-        ensure_pick(picks, "creature_pk", pick_creature_pk(active_dir, creature_file, category, angle, avoid_creature))
+        ensure_pick(
+            picks,
+            "creature_pk",
+            pick_creature_pk(active_dir, creature_file, category, angle, avoid_creature, avoid_creature_names),
+        )
 
     elif category == "spell_use_case":
-        ensure_pick(picks, "spell_pk", pick_pk(active_dir, spell_file, avoid_spell))
+        ensure_pick(picks, "spell_pk", pick_pk(active_dir, spell_file, avoid_spell, avoid_spell_names))
 
     elif category == "item_spotlight":
-        ensure_pick(picks, "item_pk", pick_pk(active_dir, item_file, avoid_item))
+        ensure_pick(picks, "item_pk", pick_pk(active_dir, item_file, avoid_item, avoid_item_names))
 
     elif category in ("rules_ruling", "rules_myth"):
-        ensure_pick(picks, "rule_pk", pick_pk(active_dir, rule_file, avoid_rule))
+        ensure_pick(picks, "rule_pk", pick_pk(active_dir, rule_file, avoid_rule, avoid_rule_names))
 
     elif category == "encounter_seed":
         # anchor on a creature; later we can add optional rule_pk, environment, etc.
-        ensure_pick(picks, "creature_pk", pick_creature_pk(active_dir, creature_file, category, angle, avoid_creature))
+        ensure_pick(
+            picks,
+            "creature_pk",
+            pick_creature_pk(active_dir, creature_file, category, angle, avoid_creature, avoid_creature_names),
+        )
 
     elif category == "character_micro_tip":
-        ensure_pick(picks, "class_pk", pick_pk(active_dir, class_file, avoid_class))
+        ensure_pick(picks, "class_pk", pick_pk(active_dir, class_file, avoid_class, avoid_class_names))
 
     else:
         print(f"ERROR: Unknown category '{category}'", file=sys.stderr)
