@@ -427,6 +427,20 @@ cd /home/umbrel/Bizzal_Games_Pub
 bin/core/discord_publish_gate.py retry --day YYYY-MM-DD
 ```
 
+Recover a recent backlog across both chains:
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+bin/core/recover_recent_publish_backlog.sh --days 10
+```
+
+This retries any day already in `approved` or `approved_publish_failed` state. To also post Discord approval requests for historical validated days that have no approval entry yet:
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+bin/core/recover_recent_publish_backlog.sh --days 10 --request-missing
+```
+
 If env file update fails with `Operation not permitted`:
 
 ```bash
