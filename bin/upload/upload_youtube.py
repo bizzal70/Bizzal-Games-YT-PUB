@@ -17,6 +17,11 @@ def is_oauth_invalid_grant_error(exc: Exception) -> bool:
     return "invalid_grant" in txt or "token has been expired or revoked" in txt
 
 
+def is_upload_limit_exceeded_error(exc: Exception) -> bool:
+    txt = str(exc).lower()
+    return "uploadlimitexceeded" in txt or "exceeded the number of videos they may upload" in txt
+
+
 def youtube_auth_paths() -> tuple[Path, Path]:
     client_secrets = Path((os.getenv("BIZZAL_YT_CLIENT_SECRETS") or "~/.config/bizzal/youtube_client_secrets.json")).expanduser()
     token_file = Path((os.getenv("BIZZAL_YT_TOKEN_FILE") or "~/.config/bizzal/youtube_token.json")).expanduser()
@@ -442,6 +447,13 @@ def main() -> int:
                 f"Re-auth required for token file: {token_file}"
             )
             return 9
+        if is_upload_limit_exceeded_error(exc):
+            eprint(
+                "ERROR: upload blocked (upload limit exceeded). "
+                "Pause retries and resume after the YouTube account/channel upload window resets."
+            )
+            eprint(f"DETAIL: {exc}")
+            return 14
         eprint(f"ERROR: upload failed: {exc}")
         return 4
 

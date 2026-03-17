@@ -557,6 +557,7 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
         return 3
 
     changed = False
+    upload_limit_exceeded = False
     for msg in messages:
         author = msg.get("author") or {}
         uid = str(author.get("id") or "")
@@ -632,6 +633,8 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
                 save_json(state_path, state)
 
                 entry = publish_approved_entry(repo_root, day, entry, webhook_url)
+                if int(entry.get("publish_rc") or 0) == 14:
+                    upload_limit_exceeded = True
             else:
                 print(f"[discord_publish_gate] approved day={day} by={uid}")
                 if webhook_url:
@@ -650,9 +653,18 @@ def check_mode(repo_root: str, state_path: str, bot_token: str, channel_id: str,
             approvals[day] = entry
             changed = True
 
+            if upload_limit_exceeded:
+                print("[discord_publish_gate] upload limit exceeded; stopping further publish attempts in this run")
+                break
+
+        if upload_limit_exceeded:
+            break
+
     if changed:
         state["approvals"] = approvals
         save_json(state_path, state)
+    if upload_limit_exceeded:
+        return 14
     return 0
 
 
