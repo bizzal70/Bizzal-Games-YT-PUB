@@ -22,6 +22,11 @@ def is_upload_limit_exceeded_error(exc: Exception) -> bool:
     return "uploadlimitexceeded" in txt or "exceeded the number of videos they may upload" in txt
 
 
+def oauth_noninteractive_mode() -> bool:
+    raw = (os.getenv("BIZZAL_YT_NONINTERACTIVE") or os.getenv("BIZZAL_YT_AUTH_NONINTERACTIVE") or "").strip().lower()
+    return raw in {"1", "true", "yes", "on"}
+
+
 def youtube_auth_paths() -> tuple[Path, Path]:
     client_secrets = Path((os.getenv("BIZZAL_YT_CLIENT_SECRETS") or "~/.config/bizzal/youtube_client_secrets.json")).expanduser()
     token_file = Path((os.getenv("BIZZAL_YT_TOKEN_FILE") or "~/.config/bizzal/youtube_token.json")).expanduser()
@@ -247,6 +252,11 @@ def get_youtube_service(client_secrets: Path, token_file: Path):
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
+            if oauth_noninteractive_mode():
+                raise RuntimeError(
+                    "YouTube OAuth requires interactive re-auth, but non-interactive mode is enabled. "
+                    "Run bin/upload/upload_youtube.py --refresh-auth-only in an interactive shell to repair auth."
+                )
             flow = None
             if client_secrets.is_file():
                 flow = InstalledAppFlow.from_client_secrets_file(str(client_secrets), scopes)

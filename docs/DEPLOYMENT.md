@@ -397,6 +397,14 @@ bin/core/discord_publish_gate.py request --day "$(date +%F)"
 bin/core/discord_publish_gate.py check --publish
 ```
 
+`preflight_prod_env.sh` now includes a non-interactive YouTube auth probe. If token refresh is revoked, it fails early with `YOUTUBE_AUTH=INVALID_GRANT` so publish does not enter repeated `rc=9` loops.
+
+Optional bypass (not recommended except break-glass):
+
+```bash
+export BIZZAL_PREFLIGHT_CHECK_YOUTUBE_AUTH=0
+```
+
 Expected outcomes:
 - `published` → success
 - `approved_publish_failed` with `publish_rc=6` → duplicate blocked (expected safety)

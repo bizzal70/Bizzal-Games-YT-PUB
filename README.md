@@ -121,6 +121,13 @@ cd /home/umbrel/Bizzal_Games_Pub
 bin/upload/upload_youtube.py --refresh-auth-only
 ```
 
+Non-interactive auth probe (safe for cron/preflight):
+
+```bash
+cd /home/umbrel/Bizzal_Games_Pub
+BIZZAL_YT_NONINTERACTIVE=1 bin/upload/upload_youtube.py --refresh-auth-only
+```
+
 Retry a previously approved day after fixing the root cause:
 
 ```bash
@@ -138,6 +145,15 @@ git pull --rebase
 git add .
 git commit -m "describe your change"
 git push
+```
+
+Dev/Prod sync check (run from dev machine with SSH access):
+
+```bash
+cd /home/bizzal/Bizzal_Games_Pub
+echo "DEV  $(git rev-parse HEAD)"
+echo "ORIGIN $(git rev-parse origin/main)"
+ssh umbrel@192.168.68.128 'cd /home/umbrel/Bizzal_Games_Pub && echo "PROD $(git rev-parse HEAD)" && git status -sb | head -n 1'
 ```
 
 If you only changed one file, prefer adding it explicitly:

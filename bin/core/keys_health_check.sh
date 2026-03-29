@@ -107,3 +107,32 @@ if [[ -n "${BIZZAL_YT_CLIENT_SECRETS:-}" && -f "${BIZZAL_YT_CLIENT_SECRETS}" ]];
 else
   echo "YOUTUBE_CLIENT_FILE_PROBE=FAIL"
 fi
+
+if [[ -x "$(pwd)/bin/upload/upload_youtube.py" || -f "$(pwd)/bin/upload/upload_youtube.py" ]]; then
+  YT_UPLOAD_SCRIPT="$(pwd)/bin/upload/upload_youtube.py"
+  if [[ -x "$YT_UPLOAD_SCRIPT" ]]; then
+    YT_CMD=("$YT_UPLOAD_SCRIPT" --refresh-auth-only)
+  elif [[ -x "$(pwd)/.venv/bin/python" ]]; then
+    YT_CMD=("$(pwd)/.venv/bin/python" "$YT_UPLOAD_SCRIPT" --refresh-auth-only)
+  else
+    YT_CMD=(python3 "$YT_UPLOAD_SCRIPT" --refresh-auth-only)
+  fi
+
+  set +e
+  YT_OUT="$(BIZZAL_YT_NONINTERACTIVE=1 "${YT_CMD[@]}" 2>&1)"
+  YT_RC=$?
+  set -e
+  if [[ "$YT_RC" -eq 0 ]]; then
+    echo "YOUTUBE_AUTH_PROBE=OK"
+  elif [[ "$YT_RC" -eq 9 ]]; then
+    echo "YOUTUBE_AUTH_PROBE=INVALID_GRANT"
+  else
+    echo "YOUTUBE_AUTH_PROBE=FAIL(rc=${YT_RC})"
+  fi
+  first_line="$(printf '%s\n' "$YT_OUT" | sed -n '1p')"
+  if [[ -n "$first_line" ]]; then
+    echo "YOUTUBE_AUTH_PROBE_DETAIL=$first_line"
+  fi
+else
+  echo "YOUTUBE_AUTH_PROBE=SKIP(upload_script_missing)"
+fi

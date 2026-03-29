@@ -51,6 +51,43 @@ else
   missing=1
 fi
 
+if [[ "${BIZZAL_PREFLIGHT_CHECK_YOUTUBE_AUTH:-1}" == "1" ]]; then
+  upload_script="$REPO_ROOT/bin/upload/upload_youtube.py"
+  if [[ -x "$upload_script" ]]; then
+    auth_probe_cmd=("$upload_script" --refresh-auth-only)
+  elif [[ -f "$REPO_ROOT/.venv/bin/python" && -f "$upload_script" ]]; then
+    auth_probe_cmd=("$REPO_ROOT/.venv/bin/python" "$upload_script" --refresh-auth-only)
+  elif [[ -f "$upload_script" ]]; then
+    auth_probe_cmd=(python3 "$upload_script" --refresh-auth-only)
+  else
+    auth_probe_cmd=()
+  fi
+
+  if [[ "${#auth_probe_cmd[@]}" -gt 0 ]]; then
+    auth_probe_output=""
+    set +e
+    auth_probe_output="$(BIZZAL_YT_NONINTERACTIVE=1 "${auth_probe_cmd[@]}" 2>&1)"
+    auth_probe_rc=$?
+    set -e
+    if [[ "$auth_probe_rc" -eq 0 ]]; then
+      echo "YOUTUBE_AUTH=OK"
+    elif [[ "$auth_probe_rc" -eq 9 ]]; then
+      echo "YOUTUBE_AUTH=INVALID_GRANT"
+      echo "$auth_probe_output"
+      missing=1
+    else
+      echo "YOUTUBE_AUTH=FAIL(rc=${auth_probe_rc})"
+      echo "$auth_probe_output"
+      missing=1
+    fi
+  else
+    echo "YOUTUBE_AUTH=SKIP(upload_script_missing)"
+    missing=1
+  fi
+else
+  echo "YOUTUBE_AUTH=SKIP(disabled_by_env)"
+fi
+
 if [[ "$missing" -eq 1 ]]; then
   echo "[preflight_prod_env] FAIL: missing/invalid required environment values"
   exit 2
