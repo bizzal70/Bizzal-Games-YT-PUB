@@ -76,6 +76,8 @@ awk '
   fi
   echo "# Weekly log pruning"
   echo "$WEEKLY_MIN $WEEKLY_HOUR * * $WEEKLY_DAY cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/prune_daily_diag_logs.sh --keep-days 30"
+  echo "# Weekly YouTube auth probe with Discord alert on failures"
+  echo "$WEEKLY_MIN $WEEKLY_HOUR * * $WEEKLY_DAY cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/youtube_auth_probe_discord.py >> $REPO_ROOT/logs/cron_youtube_auth_probe.log 2>&1"
   echo "# Discord approval processing (every 5 minutes)"
   echo "*/5 * * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/discord_publish_gate_dnd.sh check --publish >> $REPO_ROOT/logs/cron_discord_publish_gate.log 2>&1"
   if [[ "$CHAIN_MODE" == "dual" || "$CHAIN_MODE" == "alternating" ]]; then
