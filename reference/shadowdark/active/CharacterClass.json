@@ -1,0 +1,34 @@
+[
+  {
+    "model": "reference.characterclass",
+    "pk": 1,
+    "fields": {
+      "name": "Fighter",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.characterclass",
+    "pk": 2,
+    "fields": {
+      "name": "Priest",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.characterclass",
+    "pk": 3,
+    "fields": {
+      "name": "Thief",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.characterclass",
+    "pk": 4,
+    "fields": {
+      "name": "Wizard",
+      "document": "shadowdark-v4.8"
+    }
+  }
+]

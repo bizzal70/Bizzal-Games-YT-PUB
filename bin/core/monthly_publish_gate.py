@@ -205,7 +205,11 @@ def extract_youtube_url(text: str) -> str:
 
 
 def monthly_longform_exists(repo_root: str, month: str) -> bool:
-    path = os.path.join(repo_root, "data", "archive", "monthly", month, f"monthly_longform_{month}.mp4")
+    monthly_root = (os.getenv("BIZZAL_MONTHLY_ROOT") or "data/archive/monthly").strip()
+    if os.path.isabs(monthly_root):
+        path = os.path.join(monthly_root, month, f"monthly_longform_{month}.mp4")
+    else:
+        path = os.path.join(repo_root, monthly_root, month, f"monthly_longform_{month}.mp4")
     return os.path.isfile(path)
 
 

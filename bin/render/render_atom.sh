@@ -806,12 +806,12 @@ PY
     fi
     MIXED_AUDIO="$TMPDIR/mixed_with_music.wav"
 
-    ffmpeg -y -hide_banner -loglevel error \
-      -i "$AUDIO_MUX" \
-      -i "$MUSIC_LOOP" \
-      -filter_complex "[0:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo[vo];[1:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,volume=${BG_GAIN}[bg];[bg][vo]sidechaincompress=threshold=${DUCK_THRESHOLD}:ratio=${DUCK_RATIO}:attack=${DUCK_ATTACK}:release=${DUCK_RELEASE}[duck];[vo][duck]amix=inputs=2:duration=first:normalize=0,${POST_MIX_AF}[aout]" \
-      -map "[aout]" -c:a pcm_s16le \
-      "$MIXED_AUDIO"
+      ffmpeg -y -hide_banner -loglevel error \
+        -i "$AUDIO_MUX" \
+        -i "$MUSIC_LOOP" \
+        -filter_complex "[0:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,asplit=2[vo_sc][vo_mix];[1:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,volume=${BG_GAIN}[bg];[bg][vo_sc]sidechaincompress=threshold=${DUCK_THRESHOLD}:ratio=${DUCK_RATIO}:attack=${DUCK_ATTACK}:release=${DUCK_RELEASE}[duck];[vo_mix][duck]amix=inputs=2:duration=first:normalize=0,${POST_MIX_AF}[aout]" \
+        -map "[aout]" -c:a pcm_s16le \
+        "$MIXED_AUDIO"
 
     FINAL_AUDIO="$MIXED_AUDIO"
     cp -f "$MUSIC_WAV" "$LATEST_MUSIC_WAV"

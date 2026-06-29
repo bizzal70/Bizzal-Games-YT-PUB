@@ -32,7 +32,11 @@ def utc_now() -> str:
 
 
 def monthly_video_path(repo_root: Path, month: str) -> Path:
-    return repo_root / "data" / "archive" / "monthly" / month / f"monthly_longform_{month}.mp4"
+    raw = (os.getenv("BIZZAL_MONTHLY_ROOT") or "data/archive/monthly").strip()
+    monthly_root = Path(raw).expanduser()
+    if not monthly_root.is_absolute():
+        monthly_root = repo_root / monthly_root
+    return monthly_root / month / f"monthly_longform_{month}.mp4"
 
 
 def sha256_file(path: Path) -> str:

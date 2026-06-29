@@ -7,6 +7,7 @@ cd "$REPO_ROOT" || exit 1
 DAILY_LOG="logs/cron_run_daily.log"
 MONTHLY_ROOT="data/archive/monthly"
 MONTH_FILTER=""
+DAILY_MARKER="\[run_daily\] DONE"
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -32,8 +33,23 @@ daily_detail="missing"
 monthly_detail="missing"
 
 # Daily health
+# Fall back to current cron log conventions when legacy log is absent.
+if [[ ! -f "$DAILY_LOG" && "$DAILY_LOG" == "logs/cron_run_daily.log" ]]; then
+  latest_diag="$(find logs -maxdepth 1 -type f -name 'daily_diag_*.log' -printf '%T@ %p\n' 2>/dev/null | sort -nr | head -n1 | cut -d' ' -f2-)"
+  if [[ -n "$latest_diag" && -f "$latest_diag" ]]; then
+    DAILY_LOG="$latest_diag"
+    DAILY_MARKER="\[run_daily_diag.*_cron\] status=success"
+  else
+    latest_daily="$(find logs -maxdepth 1 -type f -name 'bizzal_daily_*.log' -printf '%T@ %p\n' 2>/dev/null | sort -nr | head -n1 | cut -d' ' -f2-)"
+    if [[ -n "$latest_daily" && -f "$latest_daily" ]]; then
+      DAILY_LOG="$latest_daily"
+      DAILY_MARKER="\[run_daily\] DONE"
+    fi
+  fi
+fi
+
 if [[ -f "$DAILY_LOG" ]]; then
-  if tail -n 400 "$DAILY_LOG" | grep -q "\[run_daily\] DONE"; then
+  if tail -n 400 "$DAILY_LOG" | grep -q "$DAILY_MARKER"; then
     daily_status="GREEN"
     daily_detail="ok"
   else

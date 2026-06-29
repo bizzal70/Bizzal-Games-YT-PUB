@@ -53,10 +53,10 @@ fi
 
 if [[ "${BIZZAL_PREFLIGHT_CHECK_YOUTUBE_AUTH:-1}" == "1" ]]; then
   upload_script="$REPO_ROOT/bin/upload/upload_youtube.py"
-  if [[ -x "$upload_script" ]]; then
-    auth_probe_cmd=("$upload_script" --refresh-auth-only)
-  elif [[ -f "$REPO_ROOT/.venv/bin/python" && -f "$upload_script" ]]; then
+  if [[ -f "$REPO_ROOT/.venv/bin/python" && -f "$upload_script" ]]; then
     auth_probe_cmd=("$REPO_ROOT/.venv/bin/python" "$upload_script" --refresh-auth-only)
+  elif [[ -x "$upload_script" ]]; then
+    auth_probe_cmd=("$upload_script" --refresh-auth-only)
   elif [[ -f "$upload_script" ]]; then
     auth_probe_cmd=(python3 "$upload_script" --refresh-auth-only)
   else

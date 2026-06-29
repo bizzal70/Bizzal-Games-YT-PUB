@@ -1,0 +1,58 @@
+[
+  {
+    "model": "reference.item",
+    "pk": 1,
+    "fields": {
+      "name": "Torch",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.item",
+    "pk": 2,
+    "fields": {
+      "name": "Lantern",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.item",
+    "pk": 3,
+    "fields": {
+      "name": "Rope",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.item",
+    "pk": 4,
+    "fields": {
+      "name": "Rations",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.item",
+    "pk": 5,
+    "fields": {
+      "name": "Iron Spikes",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.item",
+    "pk": 6,
+    "fields": {
+      "name": "Crowbar",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.item",
+    "pk": 7,
+    "fields": {
+      "name": "Grappling Hook",
+      "document": "shadowdark-v4.8"
+    }
+  }
+]

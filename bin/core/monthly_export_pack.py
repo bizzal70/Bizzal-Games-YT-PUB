@@ -8,7 +8,13 @@ from datetime import datetime
 
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-MONTHLY_ROOT = os.path.join(REPO_ROOT, "data", "archive", "monthly")
+
+
+def monthly_root() -> str:
+    raw = (os.getenv("BIZZAL_MONTHLY_ROOT") or "data/archive/monthly").strip()
+    if os.path.isabs(raw):
+        return raw
+    return os.path.join(REPO_ROOT, raw)
 
 
 def load_json(path: str):
@@ -24,7 +30,7 @@ def parse_args():
 
 
 def manifest_path_for_month(month: str) -> str:
-    return os.path.join(MONTHLY_ROOT, month, "manifest.json")
+    return os.path.join(monthly_root(), month, "manifest.json")
 
 
 def segment_record(entry: dict, segment_name: str, raw_segment):
@@ -131,7 +137,7 @@ def main():
         raise SystemExit(f"ERROR: manifest not found: {manifest_path}")
 
     manifest = load_json(manifest_path)
-    out_dir = os.path.join(MONTHLY_ROOT, month, "zine_pack")
+    out_dir = os.path.join(monthly_root(), month, "zine_pack")
     os.makedirs(out_dir, exist_ok=True)
 
     content_md = os.path.join(out_dir, "content.md")

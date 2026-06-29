@@ -1,0 +1,18 @@
+[
+  {
+    "model": "reference.rule",
+    "pk": 1,
+    "fields": {
+      "name": "Advantage and Disadvantage",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.rule",
+    "pk": 2,
+    "fields": {
+      "name": "Death Timer",
+      "document": "shadowdark-v4.8"
+    }
+  }
+]

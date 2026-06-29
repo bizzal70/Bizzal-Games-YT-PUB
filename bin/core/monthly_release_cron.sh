@@ -7,7 +7,8 @@ REPO_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO_ROOT" || exit 1
 
 MONTH="${1:-$(date +%Y-%m)}"
-LOG_DIR="data/archive/monthly/${MONTH}/logs"
+MONTHLY_ROOT="${BIZZAL_MONTHLY_ROOT:-data/archive/monthly}"
+LOG_DIR="${MONTHLY_ROOT%/}/${MONTH}/logs"
 mkdir -p "$LOG_DIR"
 
 RUN_TS="$(date -u +%Y%m%dT%H%M%SZ)"

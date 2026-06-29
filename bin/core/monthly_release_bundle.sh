@@ -5,7 +5,8 @@ REPO_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$REPO_ROOT"
 
 MONTH="${1:-$(date +%Y-%m)}"
-OUT_DIR="data/archive/monthly/${MONTH}"
+MONTHLY_ROOT="${BIZZAL_MONTHLY_ROOT:-data/archive/monthly}"
+OUT_DIR="${MONTHLY_ROOT%/}/${MONTH}"
 
 echo "[monthly_release] month=${MONTH}"
 echo "[monthly_release] repo=${REPO_ROOT}"

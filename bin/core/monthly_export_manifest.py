@@ -6,8 +6,15 @@ from datetime import datetime, timezone
 
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-VALIDATED_DIR = os.path.join(REPO_ROOT, "data", "atoms", "validated")
-OUT_ROOT = os.path.join(REPO_ROOT, "data", "archive", "monthly")
+
+
+def resolve_repo_path(path_text: str) -> str:
+    p = (path_text or "").strip()
+    if not p:
+        return REPO_ROOT
+    if os.path.isabs(p):
+        return p
+    return os.path.join(REPO_ROOT, p)
 
 
 def sha256_text(s: str) -> str:
@@ -120,21 +127,23 @@ def derive_content_fallback(atom: dict) -> dict:
 def main():
     args = parse_args()
     month = args.month
+    validated_dir = resolve_repo_path(os.getenv("BIZZAL_ATOM_VALIDATED_DIR") or "data/atoms/validated")
+    out_root = resolve_repo_path(os.getenv("BIZZAL_MONTHLY_ROOT") or "data/archive/monthly")
 
     if len(month) != 7 or month[4] != "-":
         raise SystemExit("ERROR: --month must be YYYY-MM")
 
-    if not os.path.isdir(VALIDATED_DIR):
-        raise SystemExit(f"ERROR: missing validated dir: {VALIDATED_DIR}")
+    if not os.path.isdir(validated_dir):
+        raise SystemExit(f"ERROR: missing validated dir: {validated_dir}")
 
     entries = []
-    for fname in sorted(os.listdir(VALIDATED_DIR)):
+    for fname in sorted(os.listdir(validated_dir)):
         if not fname.endswith(".json"):
             continue
         if not fname.startswith(month + "-"):
             continue
 
-        atom = load_json(os.path.join(VALIDATED_DIR, fname))
+        atom = load_json(os.path.join(validated_dir, fname))
         content = atom.get("content") or {}
         if not content.get("content_id"):
             content = derive_content_fallback(atom)
@@ -187,7 +196,7 @@ def main():
         "entries": entries,
     }
 
-    out_dir = os.path.join(OUT_ROOT, month)
+    out_dir = os.path.join(out_root, month)
     os.makedirs(out_dir, exist_ok=True)
 
     json_out = os.path.join(out_dir, "manifest.json")

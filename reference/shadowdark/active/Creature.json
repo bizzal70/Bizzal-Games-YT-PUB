@@ -1,0 +1,58 @@
+[
+  {
+    "model": "reference.creature",
+    "pk": 1,
+    "fields": {
+      "name": "Goblin",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.creature",
+    "pk": 2,
+    "fields": {
+      "name": "Orc",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.creature",
+    "pk": 3,
+    "fields": {
+      "name": "Skeleton",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.creature",
+    "pk": 4,
+    "fields": {
+      "name": "Wolf",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.creature",
+    "pk": 5,
+    "fields": {
+      "name": "Zombie",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.creature",
+    "pk": 6,
+    "fields": {
+      "name": "Bandit",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.creature",
+    "pk": 7,
+    "fields": {
+      "name": "Cultist",
+      "document": "shadowdark-v4.8"
+    }
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "model": "reference.spell",
+    "pk": 1,
+    "fields": {
+      "name": "Light",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.spell",
+    "pk": 2,
+    "fields": {
+      "name": "Sleep",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.spell",
+    "pk": 3,
+    "fields": {
+      "name": "Magic Missile",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.spell",
+    "pk": 4,
+    "fields": {
+      "name": "Shield",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.spell",
+    "pk": 5,
+    "fields": {
+      "name": "Charm Person",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.spell",
+    "pk": 6,
+    "fields": {
+      "name": "Detect Magic",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.spell",
+    "pk": 7,
+    "fields": {
+      "name": "Knock",
+      "document": "shadowdark-v4.8"
+    }
+  },
+  {
+    "model": "reference.spell",
+    "pk": 8,
+    "fields": {
+      "name": "Invisibility",
+      "document": "shadowdark-v4.8"
+    }
+  }
+]
