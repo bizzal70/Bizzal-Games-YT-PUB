@@ -52,3 +52,7 @@ Monthly paths are keyed by the bare `system_id`, not `path_suffix` (this matches
 ## Connection
 
 Set `BIZZAL_DB_URL` (see `.env.example`) to your Supabase Postgres connection string. The pipeline scripts connect directly via `psycopg`; no REST API key is needed (and the tables have Row Level Security enabled, so the public REST API can't read this data even if the project's anon key leaks).
+
+## Schema changes and the GitHub integration
+
+This repo is connected to the Supabase project via its GitHub integration, but auto-deploy-on-merge is intentionally off for now -- see [supabase/README.md](../supabase/README.md) for why, and how schema changes should be made (by hand in the SQL Editor, then committed as a new file under `supabase/migrations/`) until the Supabase CLI is set up locally to make auto-deploy safe.
