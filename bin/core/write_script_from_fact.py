@@ -3,16 +3,14 @@ import hashlib, json, os, sys, re
 from datetime import datetime
 from urllib import request, error
 
-try:
-    import yaml
-except ImportError:
-    print("ERROR: Missing PyYAML. Install with: python3 -m pip install --user pyyaml", file=sys.stderr)
+import system_config
+
+SYSTEM_ID = os.environ.get("BIZZAL_SYSTEM_ID", "").strip()
+if not SYSTEM_ID:
+    print("ERROR: BIZZAL_SYSTEM_ID is not set. Run via bin/core/system_env.sh <system_id>.", file=sys.stderr)
     sys.exit(2)
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-STYLE_CFG = (os.getenv("BIZZAL_STYLE_RULES_PATH") or "").strip() or os.path.join(REPO_ROOT, "config", "style_rules.yaml")
-if not os.path.isabs(STYLE_CFG):
-    STYLE_CFG = os.path.join(REPO_ROOT, STYLE_CFG)
 
 
 def resolve_incoming_dir() -> str:
@@ -32,9 +30,8 @@ def load_json(p):
     with open(p, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def load_yaml(p):
-    with open(p, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
+def load_yaml(_p=None):
+    return system_config.load_style_rules(SYSTEM_ID)
 
 def atomic_write_json(p, obj):
     tmp = p + ".tmp"
@@ -1779,7 +1776,7 @@ def main():
         print("ERROR: atom.fact missing. Run: ./bin/core/attach_fact.py", file=sys.stderr)
         sys.exit(3)
 
-    style_cfg = load_yaml(STYLE_CFG) or {}
+    style_cfg = load_yaml() or {}
     voice_name = style.get("voice", "friendly_vet")
 
     kind = fact.get("kind")

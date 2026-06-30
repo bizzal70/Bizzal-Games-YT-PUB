@@ -11,7 +11,7 @@ fi
 
 DAYS=10
 REQUEST_MISSING=0
-CHAIN_MODE="both"
+CHAIN_MODE="all"
 
 while [[ $# -gt 0 ]]; do
 	case "$1" in
@@ -28,7 +28,7 @@ while [[ $# -gt 0 ]]; do
 			shift 2
 			;;
 		*)
-			echo "usage: bin/core/recover_recent_publish_backlog.sh [--days N] [--request-missing] [--chain dnd|shadowdark|both]" >&2
+			echo "usage: bin/core/recover_recent_publish_backlog.sh [--days N] [--request-missing] [--chain <system_id>|all]" >&2
 			exit 2
 			;;
 	esac
@@ -39,9 +39,17 @@ if ! [[ "$DAYS" =~ ^[0-9]+$ ]] || [[ "$DAYS" -lt 1 ]]; then
 	exit 2
 fi
 
-if [[ "$CHAIN_MODE" != "dnd" && "$CHAIN_MODE" != "shadowdark" && "$CHAIN_MODE" != "both" ]]; then
-	echo "ERROR: --chain must be one of dnd, shadowdark, both" >&2
-	exit 2
+if [[ "$CHAIN_MODE" == "all" ]]; then
+	mapfile -t CHAIN_SYSTEMS < <(python3 - <<'PYEOF'
+import sys
+sys.path.insert(0, "bin/core")
+import system_config
+for sid in system_config.list_active_system_ids():
+    print(sid)
+PYEOF
+	)
+else
+	CHAIN_SYSTEMS=("$CHAIN_MODE")
 fi
 
 resolve_path() {
@@ -71,15 +79,14 @@ has_validated_atom() {
 
 run_chain() {
 	local label="$1"
-	local env_script="$2"
-	local gate_wrapper="$3"
 	local retried=0
 	local requested=0
 	local pending=0
 	local missing=0
 
-	# shellcheck disable=SC1090
-	source "$env_script"
+	# shellcheck disable=SC1091
+	source "$REPO_ROOT/bin/core/system_env.sh" "$label"
+	local gate_wrapper=("$REPO_ROOT/bin/core/discord_publish_gate_for_system.sh" "$label")
 
 	local state_file
 	state_file="$(resolve_path "$BIZZAL_DISCORD_APPROVAL_STATE")"
@@ -100,7 +107,7 @@ run_chain() {
 				;;
 			approved|approved_publish_failed)
 				echo "[recover_backlog] $label $day status=$status retry"
-				"$gate_wrapper" retry --day "$day"
+				"${gate_wrapper[@]}" retry --day "$day"
 				retried=$((retried + 1))
 				;;
 			pending)
@@ -114,7 +121,7 @@ run_chain() {
 				if has_validated_atom "$validated_dir" "$day"; then
 					if [[ "$REQUEST_MISSING" == "1" ]]; then
 						echo "[recover_backlog] $label $day status=missing request"
-						"$gate_wrapper" request --day "$day"
+						"${gate_wrapper[@]}" request --day "$day"
 						requested=$((requested + 1))
 					else
 						echo "[recover_backlog] $label $day status=missing validated_atom_present request_missing_disabled"
@@ -133,10 +140,6 @@ run_chain() {
 	echo "[recover_backlog] chain=$label retried=$retried requested=$requested pending=$pending missing=$missing"
 }
 
-if [[ "$CHAIN_MODE" == "dnd" || "$CHAIN_MODE" == "both" ]]; then
-	run_chain "dnd" "$REPO_ROOT/bin/core/dnd_env.sh" "$REPO_ROOT/bin/core/discord_publish_gate_dnd.sh"
-fi
-
-if [[ "$CHAIN_MODE" == "shadowdark" || "$CHAIN_MODE" == "both" ]]; then
-	run_chain "shadowdark" "$REPO_ROOT/bin/core/shadowdark_env.sh" "$REPO_ROOT/bin/core/discord_publish_gate_shadowdark.sh"
-fi
+for sid in "${CHAIN_SYSTEMS[@]}"; do
+	run_chain "$sid"
+done

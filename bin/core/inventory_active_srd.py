@@ -5,9 +5,16 @@ import hashlib
 from datetime import datetime, timezone
 from collections import Counter, defaultdict
 
+import sys
+
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 OUT_DIR = os.path.join(REPO_ROOT, "data", "reference_inventory")
-REF_CFG = os.path.join(REPO_ROOT, "config", "reference_sources.yaml")
+REF_CFG = ""  # vestigial: config now comes from the DB via BIZZAL_SYSTEM_ID
+
+SYSTEM_ID = os.environ.get("BIZZAL_SYSTEM_ID", "").strip()
+if not SYSTEM_ID:
+    print("ERROR: BIZZAL_SYSTEM_ID is not set. Run via bin/core/system_env.sh <system_id>.", file=sys.stderr)
+    sys.exit(2)
 
 from reference_paths import resolve_active_srd_path
 

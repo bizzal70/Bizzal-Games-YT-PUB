@@ -4,28 +4,23 @@ import os
 import sys
 from datetime import datetime
 
-try:
-    import yaml
-except ImportError:
-    print("ERROR: Missing PyYAML. Install with: python3 -m pip install --user pyyaml", file=sys.stderr)
-    sys.exit(2)
-
 from reference_paths import resolve_active_srd_path
+
+SYSTEM_ID = os.environ.get("BIZZAL_SYSTEM_ID", "").strip()
+if not SYSTEM_ID:
+    print("ERROR: BIZZAL_SYSTEM_ID is not set. Run via bin/core/system_env.sh <system_id>.", file=sys.stderr)
+    sys.exit(2)
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 ATOM_INCOMING_DIR = (os.getenv("BIZZAL_ATOM_INCOMING_DIR") or "").strip() or os.path.join(REPO_ROOT, "data", "atoms", "incoming")
 if not os.path.isabs(ATOM_INCOMING_DIR):
     ATOM_INCOMING_DIR = os.path.join(REPO_ROOT, ATOM_INCOMING_DIR)
 ATOM_PATH = os.path.join(ATOM_INCOMING_DIR, datetime.now().strftime("%Y-%m-%d") + ".json")
-REF_CFG = os.path.join(REPO_ROOT, "config", "reference_sources.yaml")
+REF_CFG = ""  # vestigial: config now comes from the DB via BIZZAL_SYSTEM_ID
 
 def load_json(path: str):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
-
-def load_yaml(path: str):
-    with open(path, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
 
 def index_by_pk(records):
     idx = {}

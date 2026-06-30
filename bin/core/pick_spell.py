@@ -2,18 +2,15 @@
 import json, os, random, sys
 from datetime import datetime
 
-try:
-    import yaml
-except ImportError:
-    print("ERROR: Missing PyYAML. Install with: python3 -m pip install --user pyyaml", file=sys.stderr)
-    sys.exit(2)
-
 from reference_paths import resolve_active_srd_path
 
+SYSTEM_ID = os.environ.get("BIZZAL_SYSTEM_ID", "").strip()
+if not SYSTEM_ID:
+    print("ERROR: BIZZAL_SYSTEM_ID is not set. Run via bin/core/system_env.sh <system_id>.", file=sys.stderr)
+    sys.exit(2)
+
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-REF_CFG  = os.getenv("BIZZAL_REFERENCE_SOURCES_PATH", "").strip() or os.path.join(REPO_ROOT, "config", "reference_sources.yaml")
-if not os.path.isabs(REF_CFG):
-    REF_CFG = os.path.join(REPO_ROOT, REF_CFG)
+REF_CFG = ""  # vestigial: config now comes from the DB via BIZZAL_SYSTEM_ID
 
 
 def resolve_incoming_dir() -> str:
@@ -41,10 +38,6 @@ def atomic_write_json(p, obj):
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(obj, f, indent=2, ensure_ascii=False); f.write("\n")
     os.replace(tmp, p)
-
-def load_yaml(p):
-    with open(p, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
 
 def main():
     day = resolve_day()

@@ -60,34 +60,57 @@ awk '
   !skip { print }
 ' "$TMP_CURR" > "$TMP_NEXT"
 
+# Active systems, queried from the DB (replaces hardcoded dnd/shadowdark).
+mapfile -t ACTIVE_SYSTEMS < <(cd "$REPO_ROOT" && python3 - <<'PYEOF'
+import sys
+sys.path.insert(0, "bin/core")
+import system_config
+for sid in system_config.list_active_system_ids():
+    print(sid)
+PYEOF
+)
+if [[ ${#ACTIVE_SYSTEMS[@]} -eq 0 ]]; then
+  echo "ERROR: no active rpg_systems rows found in the DB" >&2
+  exit 1
+fi
+PRIMARY_SYSTEM="${ACTIVE_SYSTEMS[0]}"
+
 {
   echo "$BEGIN_MARK"
   echo "# Local-time automation timezone"
   echo "CRON_TZ=$CRON_TZ_NAME"
   echo "BIZZAL_ENV_FILE=$HOME/.config/bizzal.env"
-  echo "# Daily content pipeline with diagnostics (mode: $CHAIN_MODE)"
+  echo "# Daily content pipeline with diagnostics (mode: $CHAIN_MODE, active systems: ${ACTIVE_SYSTEMS[*]})"
   if [[ "$CHAIN_MODE" == "dual" ]]; then
-    echo "$DAILY_MIN $DAILY_HOUR * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/run_daily_diag_dnd_cron.sh"
-    echo "$SHADOWDARK_OFFSET_MIN $DAILY_HOUR * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/run_daily_diag_shadowdark_cron.sh"
+    OFFSET=0
+    for sid in "${ACTIVE_SYSTEMS[@]}"; do
+      echo "$((DAILY_MIN + OFFSET)) $DAILY_HOUR * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/run_daily_diag_for_system.sh $sid"
+      OFFSET=$((OFFSET + SHADOWDARK_OFFSET_MIN))
+    done
   elif [[ "$CHAIN_MODE" == "alternating" ]]; then
     echo "$DAILY_MIN $DAILY_HOUR * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/run_daily_diag_alternating_cron.sh"
   else
-    echo "$DAILY_MIN $DAILY_HOUR * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/run_daily_diag_dnd_cron.sh"
+    echo "$DAILY_MIN $DAILY_HOUR * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/run_daily_diag_for_system.sh $PRIMARY_SYSTEM"
   fi
   echo "# Weekly log pruning"
   echo "$WEEKLY_MIN $WEEKLY_HOUR * * $WEEKLY_DAY cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/prune_daily_diag_logs.sh --keep-days 30"
   echo "# Weekly YouTube auth probe with Discord alert on failures"
   echo "$WEEKLY_MIN $WEEKLY_HOUR * * $WEEKLY_DAY cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/youtube_auth_probe_discord.py >> $REPO_ROOT/logs/cron_youtube_auth_probe.log 2>&1"
-  echo "# Discord approval processing (every 5 minutes)"
-  echo "*/5 * * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/discord_publish_gate_dnd.sh check --publish >> $REPO_ROOT/logs/cron_discord_publish_gate.log 2>&1"
   if [[ "$CHAIN_MODE" == "dual" || "$CHAIN_MODE" == "alternating" ]]; then
-    echo "# Shadowdark Discord approval processing (every 5 minutes)"
-    echo "*/5 * * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/discord_publish_gate_shadowdark.sh check --publish >> $REPO_ROOT/logs/cron_discord_publish_gate_shadowdark.log 2>&1"
+    for sid in "${ACTIVE_SYSTEMS[@]}"; do
+      echo "# $sid Discord approval processing (every 5 minutes)"
+      echo "*/5 * * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/discord_publish_gate_for_system.sh $sid check --publish >> $REPO_ROOT/logs/cron_discord_publish_gate_$sid.log 2>&1"
+    done
+  else
+    echo "# Discord approval processing (every 5 minutes)"
+    echo "*/5 * * * * cd $REPO_ROOT && set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/discord_publish_gate_for_system.sh $PRIMARY_SYSTEM check --publish >> $REPO_ROOT/logs/cron_discord_publish_gate.log 2>&1"
   fi
-  echo "# Monthly longform approval processing (every 5 minutes)"
-  echo "*/5 * * * * cd $REPO_ROOT && [ -f $REPO_ROOT/.venv/bin/activate ] && . $REPO_ROOT/.venv/bin/activate; set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/monthly_publish_gate.py check --publish >> $REPO_ROOT/logs/cron_monthly_publish_gate.log 2>&1"
-  echo "# Monthly release bundle for previous month"
-  echo "$MONTHLY_MIN $MONTHLY_HOUR $MONTHLY_DAY * * cd $REPO_ROOT && [ -f $REPO_ROOT/.venv/bin/activate ] && . $REPO_ROOT/.venv/bin/activate; set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/monthly_release_cron.sh \"\$(date -d 'last month' +\\%Y-\\%m)\" && bin/core/monthly_publish_gate.py request --month \"\$(date -d 'last month' +\\%Y-\\%m)\""
+  for sid in "${ACTIVE_SYSTEMS[@]}"; do
+    echo "# $sid monthly longform approval processing (every 5 minutes)"
+    echo "*/5 * * * * cd $REPO_ROOT && [ -f $REPO_ROOT/.venv/bin/activate ] && . $REPO_ROOT/.venv/bin/activate; set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/monthly_publish_gate_for_system.sh $sid check --publish >> $REPO_ROOT/logs/cron_monthly_publish_gate_$sid.log 2>&1"
+    echo "# $sid monthly release bundle for previous month"
+    echo "$MONTHLY_MIN $MONTHLY_HOUR $MONTHLY_DAY * * cd $REPO_ROOT && [ -f $REPO_ROOT/.venv/bin/activate ] && . $REPO_ROOT/.venv/bin/activate; set -a; [ -f \"\$BIZZAL_ENV_FILE\" ] && . \"\$BIZZAL_ENV_FILE\"; set +a; bin/core/monthly_release_for_system_cron.sh $sid \"\$(date -d 'last month' +\\%Y-\\%m)\" && bin/core/monthly_publish_gate_for_system.sh $sid request --month \"\$(date -d 'last month' +\\%Y-\\%m)\""
+  done
   echo "$END_MARK"
 } >> "$TMP_NEXT"
 

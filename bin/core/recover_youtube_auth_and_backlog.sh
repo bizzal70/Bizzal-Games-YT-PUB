@@ -78,46 +78,41 @@ if [[ "$PREFLIGHT_RC" -ne 0 ]]; then
   exit "$PREFLIGHT_RC"
 fi
 
+mapfile -t RECOVER_SYSTEMS < <(python3 - <<'PYEOF'
+import sys
+sys.path.insert(0, "bin/core")
+import system_config
+for sid in system_config.list_active_system_ids():
+    print(sid)
+PYEOF
+)
+
 echo ""
 echo "================================================================"
-echo " STEP 4: Retry D&D backlog"
+echo " STEP 4: Retry backlog for active systems: ${RECOVER_SYSTEMS[*]}"
 echo "================================================================"
-for DAY in "${RETRY_DAYS[@]}"; do
-  echo "--- D&D retry day=$DAY"
-  set +e
-  bin/core/discord_publish_gate_dnd.sh retry --day "$DAY"
-  echo "  done (rc=$?)"
-  set -e
+for SID in "${RECOVER_SYSTEMS[@]}"; do
+  for DAY in "${RETRY_DAYS[@]}"; do
+    echo "--- $SID retry day=$DAY"
+    set +e
+    bin/core/discord_publish_gate_for_system.sh "$SID" retry --day "$DAY"
+    echo "  done (rc=$?)"
+    set -e
+  done
 done
 
 echo ""
 echo "================================================================"
-echo " STEP 5: Retry Shadowdark backlog"
+echo " STEP 5: Status check"
 echo "================================================================"
-for DAY in "${RETRY_DAYS[@]}"; do
-  echo "--- Shadowdark retry day=$DAY"
-  set +e
-  bin/core/discord_publish_gate_shadowdark.sh retry --day "$DAY"
-  echo "  done (rc=$?)"
-  set -e
+for SID in "${RECOVER_SYSTEMS[@]}"; do
+  echo "--- $SID ---"
+  STATE_FILE="$(source bin/core/system_env.sh "$SID" >/dev/null && echo "$BIZZAL_DISCORD_APPROVAL_STATE")"
+  jq '.approvals | to_entries[]
+    | select(.key >= "2026-03-24")
+    | {day:.key, status:.value.status, rc:.value.publish_rc, url:.value.youtube_url}' \
+    "$STATE_FILE"
 done
-
-echo ""
-echo "================================================================"
-echo " STEP 6: Status check"
-echo "================================================================"
-echo "--- D&D ---"
-jq '.approvals | to_entries[]
-  | select(.key >= "2026-03-24")
-  | {day:.key, status:.value.status, rc:.value.publish_rc, url:.value.youtube_url}' \
-  data/archive/approvals/discord_publish_gate.json
-
-echo ""
-echo "--- Shadowdark ---"
-jq '.approvals | to_entries[]
-  | select(.key >= "2026-03-24")
-  | {day:.key, status:.value.status, rc:.value.publish_rc, url:.value.youtube_url}' \
-  data/archive/approvals/discord_publish_gate_shadowdark.json
 
 echo ""
 echo "================================================================"

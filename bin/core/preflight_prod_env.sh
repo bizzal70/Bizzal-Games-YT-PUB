@@ -34,6 +34,7 @@ if [[ "${BIZZAL_REQUIRE_DISCORD_APPROVAL:-0}" != "1" ]]; then
   missing=1
 fi
 
+print_var_state BIZZAL_DB_URL
 print_var_state BIZZAL_DISCORD_WEBHOOK_URL
 print_var_state BIZZAL_DISCORD_BOT_TOKEN
 print_var_state BIZZAL_DISCORD_CHANNEL_ID

@@ -3,12 +3,12 @@ import argparse
 import json, os, sys, subprocess, hashlib, random
 from datetime import datetime, UTC
 
-try:
-    import yaml
-except ImportError:
-    yaml = None
-
+import system_config
 from reference_paths import resolve_active_srd_path, resolve_srd_pdf_path
+
+SYSTEM_ID = os.environ.get("BIZZAL_SYSTEM_ID", "").strip()
+if not SYSTEM_ID:
+    raise SystemExit("ERROR: BIZZAL_SYSTEM_ID is not set. Run via bin/core/system_env.sh <system_id>.")
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 
@@ -137,11 +137,8 @@ def ensure_dirs():
 # ---------- topic spine parsing ----------
 
 def load_topic_spine():
-    if not os.path.exists(TOPIC_SPINE) or yaml is None:
-        return {}
     try:
-        with open(TOPIC_SPINE, "r", encoding="utf-8") as f:
-            return yaml.safe_load(f) or {}
+        return system_config.load_topic_spine(SYSTEM_ID)
     except Exception:
         return {}
 

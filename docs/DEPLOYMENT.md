@@ -25,7 +25,7 @@ bin/core/run_daily.sh
 - The repo carries its own copy of the SRD JSON corpus under `reference/open5e/` and the SRD PDF under `reference/srd/` — no external host required for normal use.
 - Pipeline scripts resolve sources in this order:
 	1) `BIZZAL_ACTIVE_SRD_PATH` (or `BG_ACTIVE_SRD_PATH`)
-	2) `config/reference_sources.yaml` `active_srd_path`
+	2) the `rpg_systems.active_srd_path` DB column for the current `BIZZAL_SYSTEM_ID` (see [docs/RPG_SYSTEMS.md](RPG_SYSTEMS.md))
 	3) repo fallback `reference/active`
 	4) legacy fallback `reference/srd5.1`
 
@@ -48,7 +48,7 @@ ls -la data/reference_inventory/
 ```
 
 ## SRD PDF for AI Flavor/Context
-- `config/reference_sources.yaml` includes `srd_pdf_path` for SRD narrative/context retrieval.
+- The `rpg_systems.srd_pdf_path` DB column (see [docs/RPG_SYSTEMS.md](RPG_SYSTEMS.md)) holds `srd_pdf_path` for SRD narrative/context retrieval.
 - Defaults to the repo-relative copy (`reference/srd/SRD_CC_v5.2.1.pdf`); override via env if you keep it elsewhere:
 
 ```bash
@@ -527,9 +527,9 @@ BIZZAL_SHORTS_DURATION=30 bin/render/render_atom.sh 2026-02-13
 ```
 
 Tone/flavor-aware TTS voice selection:
-- `bin/core/pick_style.py` now selects `style.voiceover.tts_voice_id` from config using tone + style voice.
-- Configure tone-level pools in `config/style_rules.yaml` under `voiceover_by_tone.<tone>.tts_voice_ids`.
-- Optionally override by style voice under `voiceover_by_voice.<voice>.tts_voice_ids`.
+- `bin/core/pick_style.py` now selects `style.voiceover.tts_voice_id` from the DB-backed config using tone + style voice (see [docs/RPG_SYSTEMS.md](RPG_SYSTEMS.md)).
+- Configure tone-level pools in the `system_tones` table.
+- Optionally override by style voice via `system_voices.tts_voice_ids`.
 - Selection is deterministic per `day|category|tone|voice`, so reruns stay stable while still varying across script flavors.
 
 ## Optional: TTS Narration in Render Output
@@ -825,7 +825,7 @@ Numeric lock mode:
 - Optional strict mode: `BIZZAL_REQUIRE_NUMERIC_LOCK=1` rejects AI script rewrites that drop locked numeric tokens.
 
 Persona/tone/voiceover routing:
-- Category personas and tones are configured in `config/style_rules.yaml`.
+- Category personas and tones are configured in the `system_categories` / `system_tones` DB tables (see [docs/RPG_SYSTEMS.md](RPG_SYSTEMS.md)).
 - `pick_style.py` assigns `style.persona`, `style.tone`, and `style.voiceover` (`voice_pack_id`, `tts_voice_id`).
 - `content.asset_contract` carries `voice_pack_id` and `tts_voice_id` for future TTS voice selection.
 

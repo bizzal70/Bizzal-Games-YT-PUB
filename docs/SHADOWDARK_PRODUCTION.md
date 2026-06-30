@@ -1,28 +1,14 @@
 # Shadowdark Production Chain
 
-This project now supports a parallel Shadowdark daily chain in the same repository.
+This project supports a parallel Shadowdark daily chain alongside D&D 5e, both driven by the generic system scripts described in [docs/RPG_SYSTEMS.md](RPG_SYSTEMS.md). `rpg_systems.id = 'shadowdark'` in the config DB.
 
 ## Key design
 
-- D&D and Shadowdark run side-by-side with separate atom, render, and approval-state paths.
-- Shared core scripts are reused through env overrides.
-- Cron installer supports `single`, `dual`, and `alternating` chain modes.
+- D&D and Shadowdark run side-by-side with separate atom, render, and approval-state paths, derived from `path_suffix` (`''` for `dnd5e`, `'_shadowdark'` for `shadowdark`).
+- Shared core scripts are reused via `bin/core/system_env.sh <system_id>`.
+- Cron installer supports `single`, `dual`, and `alternating` chain modes, iterating over whichever `rpg_systems` rows are `is_active`.
 
-## Shadowdark wrappers
-
-- `bin/core/shadowdark_env.sh`
-- `bin/core/run_daily_diag_shadowdark.sh`
-- `bin/core/run_daily_diag_shadowdark_cron.sh`
-- `bin/core/discord_publish_gate_shadowdark.sh`
-- `bin/core/run_daily_diag_alternating_cron.sh`
-
-## Config files
-
-- `config/reference_sources_shadowdark.yaml`
-- `config/topic_spine_shadowdark.yaml`
-- `config/style_rules_shadowdark.yaml`
-
-## Data paths used by Shadowdark chain
+## Data paths used by the Shadowdark chain
 
 - Incoming atoms: `data/atoms_shadowdark/incoming`
 - Validated atoms: `data/atoms_shadowdark/validated`
@@ -64,7 +50,7 @@ curated Shadowdark dataset matures.
 ```bash
 source .venv/bin/activate
 
-# Run both chains daily (D&D + Shadowdark)
+# Run all active systems daily (e.g. D&D + Shadowdark)
 BIZZAL_AUTOMATION_CHAIN_MODE=dual \
   bin/core/install_cron_automation.sh
 ```
@@ -75,16 +61,16 @@ BIZZAL_AUTOMATION_CHAIN_MODE=dual \
 crontab -l | sed -n '/BEGIN BIZZAL_AUTOMATION/,/END BIZZAL_AUTOMATION/p'
 ```
 
-## Manual shadowdark run
+## Manual Shadowdark run
 
 ```bash
 source .venv/bin/activate
-bin/core/run_daily_diag_shadowdark.sh
+bin/core/run_daily_diag_for_system.sh shadowdark
 ```
 
-## Manual shadowdark publish gate check
+## Manual Shadowdark publish gate check
 
 ```bash
 source .venv/bin/activate
-bin/core/discord_publish_gate_shadowdark.sh check --publish
+bin/core/discord_publish_gate_for_system.sh shadowdark check --publish
 ```

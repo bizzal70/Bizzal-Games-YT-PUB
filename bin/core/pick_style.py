@@ -2,16 +2,14 @@
 import hashlib, json, os, random, sys
 from datetime import datetime, timedelta
 
-try:
-    import yaml
-except ImportError:
-    print("ERROR: Missing PyYAML. Install with: python3 -m pip install --user pyyaml", file=sys.stderr)
+import system_config
+
+SYSTEM_ID = os.environ.get("BIZZAL_SYSTEM_ID", "").strip()
+if not SYSTEM_ID:
+    print("ERROR: BIZZAL_SYSTEM_ID is not set. Run via bin/core/system_env.sh <system_id>.", file=sys.stderr)
     sys.exit(2)
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
-CFG_PATH  = (os.getenv("BIZZAL_STYLE_RULES_PATH") or "").strip() or os.path.join(REPO_ROOT, "config", "style_rules.yaml")
-if not os.path.isabs(CFG_PATH):
-    CFG_PATH = os.path.join(REPO_ROOT, CFG_PATH)
 STATE_DIR = os.path.join(REPO_ROOT, "runtime", "state")
 HIST_PATH = (os.getenv("BIZZAL_STYLE_HISTORY_PATH") or "").strip() or os.path.join(STATE_DIR, "style_history.json")
 if not os.path.isabs(HIST_PATH):
@@ -47,9 +45,8 @@ def atomic_write_json(p, obj):
         json.dump(obj, f, indent=2, ensure_ascii=False); f.write("\n")
     os.replace(tmp, p)
 
-def load_yaml(p):
-    with open(p, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
+def load_yaml(_p=None):
+    return system_config.load_style_rules(SYSTEM_ID)
 
 def load_history():
     if not os.path.exists(HIST_PATH):
@@ -130,7 +127,7 @@ def main():
         print(f"ERROR: Atom not found: {path}", file=sys.stderr)
         sys.exit(3)
 
-    cfg = load_yaml(CFG_PATH) or {}
+    cfg = load_yaml() or {}
     defaults = cfg.get("defaults") or {}
     cat_rules = (cfg.get("category_rules") or {})
     persona_by_category = cfg.get("persona_by_category") or {}

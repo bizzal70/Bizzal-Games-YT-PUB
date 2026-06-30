@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 import os
 
-try:
-    import yaml
-except ImportError:
-    yaml = None
+import system_config
 
 
-def load_reference_config(cfg_path: str) -> dict:
-    if not os.path.exists(cfg_path) or yaml is None:
+def load_reference_config(cfg_path: str = "") -> dict:
+    """cfg_path is accepted for backward-compatible call signatures but
+    ignored -- the reference config now comes from the DB, keyed by
+    BIZZAL_SYSTEM_ID."""
+    system_id = os.environ.get("BIZZAL_SYSTEM_ID", "").strip()
+    if not system_id:
         return {}
     try:
-        with open(cfg_path, "r", encoding="utf-8") as f:
-            return yaml.safe_load(f) or {}
+        return system_config.load_reference_sources(system_id)
     except Exception:
         return {}
 

@@ -5,13 +5,12 @@ import random
 import sys
 from datetime import datetime, timezone
 
-try:
-    import yaml
-except ImportError:
-    print("ERROR: Missing PyYAML. Install with: python3 -m pip install --user pyyaml", file=sys.stderr)
-    sys.exit(2)
-
 from reference_paths import resolve_active_srd_path
+
+SYSTEM_ID = os.environ.get("BIZZAL_SYSTEM_ID", "").strip()
+if not SYSTEM_ID:
+    print("ERROR: BIZZAL_SYSTEM_ID is not set. Run via bin/core/system_env.sh <system_id>.", file=sys.stderr)
+    sys.exit(2)
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 
@@ -34,10 +33,6 @@ VALIDATED_DIR = resolve_repo_path(os.getenv("BIZZAL_ATOM_VALIDATED_DIR", ""), os
 def load_json(path: str):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
-
-def load_yaml(path: str):
-    with open(path, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
 
 def atomic_write_json(path: str, obj: dict):
     tmp = path + ".tmp"
