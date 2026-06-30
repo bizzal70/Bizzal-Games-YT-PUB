@@ -39,10 +39,9 @@ This project now supports a parallel Shadowdark daily chain in the same reposito
 
 ## Bootstrap JSON fixtures from PDFs
 
-Run this once on dev or prod after PDFs are placed in `reference/shadowdark/source_pdfs`:
+Run this once after PDFs are placed in `reference/shadowdark/source_pdfs`:
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 source .venv/bin/activate
 python3 -m pip install pypdf
 bin/core/bootstrap_shadowdark_fixtures.sh
@@ -60,10 +59,9 @@ The bootstrap writes starter fixture files required by the runtime pipeline:
 Note: This is a starter bootstrap. Improve/replace generated fixture content as your
 curated Shadowdark dataset matures.
 
-## Install cron on prod
+## Install cron
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 source .venv/bin/activate
 
 # Run both chains daily (D&D + Shadowdark)
@@ -80,7 +78,6 @@ crontab -l | sed -n '/BEGIN BIZZAL_AUTOMATION/,/END BIZZAL_AUTOMATION/p'
 ## Manual shadowdark run
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 source .venv/bin/activate
 bin/core/run_daily_diag_shadowdark.sh
 ```
@@ -88,7 +85,6 @@ bin/core/run_daily_diag_shadowdark.sh
 ## Manual shadowdark publish gate check
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 source .venv/bin/activate
 bin/core/discord_publish_gate_shadowdark.sh check --publish
 ```

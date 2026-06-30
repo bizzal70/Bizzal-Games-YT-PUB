@@ -1,22 +1,8 @@
-# Promotion Runbook (Dev → GitHub → Umbrel)
+# Change & Release Checklist
 
-## Goal
-Stop production drift by making all code changes in dev first, validating there, then promoting to Umbrel via GitHub only.
+This used to document a dev → GitHub → Umbrel promotion flow across two machines. Now that everything runs on one local machine, there's no separate "promote to prod" step — just commit and you're live. This doc keeps the useful pre-commit checks and rollback/incident steps from that old process.
 
-## Non-Negotiable Rules
-- Do not edit production code files directly on Umbrel except emergency containment.
-- All normal fixes go: dev commit → GitHub → Umbrel pull.
-- Keep secrets only in `/home/umbrel/.config/bizzal.env` (not committed).
-- Keep `/home/umbrel/.config/bizzal.env` immutable (`chattr +i`) after updates.
-
-## 1) Dev Change Workflow
-Run in local dev repo (`/home/bizzal/Bizzal_Games_Pub`):
-
-```bash
-git checkout main
-git pull --ff-only
-# make changes locally
-```
+## 1) Before Committing
 
 Validate syntax and core scripts:
 
@@ -26,7 +12,7 @@ bash -n bin/core/run_daily_diag.sh
 python3 -m py_compile bin/core/discord_publish_gate.py bin/upload/upload_youtube.py
 ```
 
-Run a safe local smoke pass (no prod publish):
+Run a safe local smoke pass (no real publish):
 
 ```bash
 BIZZAL_DAILY_LOG_DIR=/tmp BIZZAL_REQUIRE_DISCORD_APPROVAL=1 bin/core/run_daily_diag.sh
@@ -37,7 +23,7 @@ Review expected behavior in logs:
 - `run_daily_diag.sh` creates a Discord approval request.
 - No direct `upload_youtube.py` invocation from `run_daily.sh`.
 
-## 2) Promote to GitHub
+## 2) Commit and Push
 
 ```bash
 git status -sb
@@ -46,32 +32,9 @@ git commit -m "Describe the fix"
 git push origin main
 ```
 
-## 3) Deploy to Umbrel (Prod)
-Run on Umbrel host in repo (`/home/umbrel/Bizzal_Games_Pub`):
+## 3) Config Guardrails
 
-```bash
-git checkout main
-git fetch origin
-git pull --ff-only origin main
-```
-
-Verify clean working tree after pull:
-
-```bash
-git status -sb
-```
-
-Expected: no local code drift (no modified tracked files).
-
-## 4) Production Config Guardrails
-Keep env in `/home/umbrel/.config/bizzal.env` and lock it:
-
-```bash
-sudo chattr -i /home/umbrel/.config/bizzal.env
-# edit file if needed
-sudo chattr +i /home/umbrel/.config/bizzal.env
-lsattr /home/umbrel/.config/bizzal.env
-```
+Secrets live in your local env file (see `.env.example` / `bin/core/setup_publish_env.sh`), not committed to git.
 
 Minimum expected values:
 - `BIZZAL_REQUIRE_DISCORD_APPROVAL=1`
@@ -87,57 +50,62 @@ Media feature values (if desired in output):
 - `OPENAI_API_KEY`
 - `REPLICATE_API_TOKEN`
 
-## 5) Cron Source of Truth
+## 4) Scheduling Source of Truth
+
 Required jobs:
 - Daily pipeline run.
 - Daily approval request.
 - 5-minute approval check/publish.
 
-Verify jobs:
+On Linux/WSL, verify cron jobs:
 
 ```bash
 crontab -l | grep -n 'run_daily_diag_cron.sh\|discord_publish_gate.py request --day\|discord_publish_gate.py check --publish'
 ```
 
-## 6) Post-Deploy Verification
-Run these on Umbrel after every deploy:
+On native Windows, check the equivalent Windows Task Scheduler entries instead (see `docs/DEPLOYMENT.md`).
+
+## 5) Post-Change Verification
+
+Run these after any change that touches the pipeline scripts:
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 bash bin/core/preflight_prod_env.sh
 bash -n bin/core/run_daily.sh
 bash -n bin/core/run_daily_diag.sh
 python3 -m py_compile bin/core/discord_publish_gate.py bin/upload/upload_youtube.py
 ```
 
-## 7) Incident Protocol (If Prod Misbehaves)
-1. Contain first (disable uploader executable if needed).
+## 6) Incident Protocol (If Something Misbehaves)
+
+1. Contain first (disable the uploader executable if needed).
 2. Capture logs (`daily_diag`, request log, gate log).
-3. Fix in dev only.
+3. Fix the code.
 4. Commit + push.
-5. Pull to Umbrel.
-6. Verify with Post-Deploy Verification checklist.
+5. Verify with the Post-Change Verification checklist above.
 
-Emergency containment command:
-
-```bash
-chmod -x /home/umbrel/Bizzal_Games_Pub/bin/upload/upload_youtube.py
-```
-
-Re-enable only after fix is deployed from GitHub:
+Emergency containment command (Linux/WSL/Git Bash):
 
 ```bash
-chmod +x /home/umbrel/Bizzal_Games_Pub/bin/upload/upload_youtube.py
+chmod -x bin/upload/upload_youtube.py
 ```
 
-## 8) Rollback
+Re-enable once the fix is in:
+
+```bash
+chmod +x bin/upload/upload_youtube.py
+```
+
+(On native Windows without Git Bash, just rename the file temporarily instead.)
+
+## 7) Rollback
+
 Rollback should use Git, not manual script edits:
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 git fetch --all --tags
 git log --oneline -n 20
 git checkout <known-good-commit-or-tag>
 ```
 
-Then run Post-Deploy Verification again.
+Then run Post-Change Verification again.

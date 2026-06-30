@@ -1,6 +1,6 @@
 # ACTIVE_WOTC_SRD Inventory
 - Generated (UTC): 2026-02-12T03:55:12Z
-- Path: `/home/umbrel/umbrel/data/reference/open5e/open5e-api/data/v2/wizards-of-the-coast/srd-2024`
+- Path: `reference/open5e`
 - JSON files: 32
 
 ## AbilityDescription.json

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # recover_youtube_auth_and_backlog.sh
 #
-# Run this on Umbrel to:
+# Run this to:
 #   1. Pull latest code from origin
 #   2. Install/verify Python deps
 #   3. Run preflight (includes YouTube auth probe)

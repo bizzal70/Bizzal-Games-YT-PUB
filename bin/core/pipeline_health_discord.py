@@ -93,7 +93,6 @@ def suggested_next_command(repo_root: str, month_label: str, health: dict) -> st
     if daily == "RED" and daily_detail in {"missing_log", "missing"}:
         return (
             f"cd {repo_root} && . {repo_root}/.venv/bin/activate && "
-            "export BIZZAL_ACTIVE_SRD_PATH=/home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD && "
             f"{repo_root}/bin/core/run_daily.sh >> {repo_root}/logs/cron_run_daily.log 2>&1"
         )
 

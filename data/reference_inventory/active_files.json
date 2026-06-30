@@ -1,6 +1,6 @@
 {
   "generated_utc": "2026-02-12T03:55:12Z",
-  "active_srd_path": "/home/umbrel/umbrel/data/reference/open5e/open5e-api/data/v2/wizards-of-the-coast/srd-2024",
+  "active_srd_path": "reference/open5e",
   "file_count": 32,
   "files": {
     "AbilityDescription.json": {

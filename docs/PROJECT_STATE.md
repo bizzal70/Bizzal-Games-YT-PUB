@@ -11,7 +11,7 @@ Operate a reliable daily RPG Shorts production system with human-in-the-loop app
 - preserve monthly bundle/manifest continuity
 
 ## Current Status (Production-Ready Foundation)
-- Daily weighted generation pipeline is stable on Umbrel
+- Daily weighted generation pipeline is stable, running locally
 - Script quality controls are active:
   - anti-generic gates
   - encounter hook/CTA hard-guards
@@ -53,7 +53,7 @@ Operate a reliable daily RPG Shorts production system with human-in-the-loop app
 2. Finalize publish command adapter (real platform command + failure policy)
 3. Optional: tighten low-stakes pick rules by category while preserving humor lane
 
-## Resume Command (Umbrel)
+## Resume Command
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub && git pull --ff-only && bin/core/run_daily_diag.sh
+git pull --ff-only && bin/core/run_daily_diag.sh
 ```

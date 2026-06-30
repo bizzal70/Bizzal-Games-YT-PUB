@@ -39,3 +39,15 @@ Persist project context in docs files so new sessions can bootstrap quickly.
 **Why**
 - Cross-session model memory is not guaranteed
 - Repo-based memory is explicit and versioned
+
+---
+
+## 2026-06-30 — Retire Umbrel; run single-machine, local-only
+
+**Decision**
+Supersedes the 2026-02-12 "Enforce clean promotion path" entry. Drop the Umbrel home-server hosting and the dev → GitHub → Umbrel promotion flow. The pipeline now runs entirely on one local machine; hardcoded Umbrel paths/IP were scrubbed from scripts and docs in favor of repo-relative paths and `BIZZAL_*` env vars.
+
+**Why**
+- No longer maintaining a separate Umbrel server
+- A single-machine setup makes the promotion/SSH ceremony unnecessary overhead
+- Env-var-driven config is also a prerequisite for a future cloud-based v2 (see `docs/CLOUD_V2_PLAN.md` if present)

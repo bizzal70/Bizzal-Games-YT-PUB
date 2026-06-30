@@ -1,65 +1,44 @@
-# Deployment Guide (Umbrel)
+# Deployment Guide (Local)
 
-Primary promotion policy: follow [docs/PROMOTION_RUNBOOK.md](docs/PROMOTION_RUNBOOK.md) for all code changes (dev first, then GitHub, then Umbrel pull).
+This pipeline runs entirely on a single machine — no remote host, no promotion/SSH step. Code changes go straight from your local clone to GitHub via a normal commit/push.
 
 ## Production Target
-- Host: 192.168.68.128
-- Platform: Umbrel Home Server
-- Source: GitHub (`main` branch)
+- Host: your local machine (laptop)
+- Source: GitHub (`main` branch), cloned locally
 
-## Standard Deploy Flow
-1. Push tested changes from dev machine to GitHub.
-2. SSH into Umbrel host.
-3. Pull latest from `origin/main`.
-4. Ensure dependencies are present.
-5. Run daily pipeline.
-6. Verify logs and outputs.
+## Standard Run Flow
+1. `git pull` to get the latest from `origin/main`.
+2. Ensure dependencies are present (`python3 -m pip install -r requirements.txt`).
+3. Run the daily pipeline.
+4. Verify logs and outputs.
 
 ## Example Commands
-Run from Umbrel shell in repo root:
+Run from the repo root:
 
 ```bash
 git pull --rebase
 python3 -m pip install --user pyyaml
-export BIZZAL_ACTIVE_SRD_PATH=/home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD
 bin/core/run_daily.sh
 ```
 
-## Reference Corpus Alignment (Umbrel-local)
-- The production SRD JSON corpus can remain local on Umbrel and outside Git.
+## Reference Corpus Alignment
+- The repo carries its own copy of the SRD JSON corpus under `reference/open5e/` and the SRD PDF under `reference/srd/` — no external host required for normal use.
 - Pipeline scripts resolve sources in this order:
 	1) `BIZZAL_ACTIVE_SRD_PATH` (or `BG_ACTIVE_SRD_PATH`)
 	2) `config/reference_sources.yaml` `active_srd_path`
 	3) repo fallback `reference/active`
 	4) legacy fallback `reference/srd5.1`
 
-If you want a local dev mirror from Umbrel:
+If you ever want to pull a newer/alternate corpus from a remote host (NAS, second machine, etc.), set the source via env vars and run the optional sync helper:
 
 ```bash
-rsync -av --delete \
-	umbrel@192.168.68.128:/home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD/ \
-	reference/srd5.1/
-```
-
-Or use the helper script from repo root (recommended):
-
-```bash
+export BIZZAL_REFERENCE_SOURCE_HOST=your.host
+export BIZZAL_REFERENCE_SOURCE_USER=youruser
+export BIZZAL_REFERENCE_SOURCE_PATH=/path/to/reference/open5e/ACTIVE_WOTC_SRD
 bin/core/sync_reference_from_umbrel.sh
 ```
 
-Optional explicit args:
-
-```bash
-bin/core/sync_reference_from_umbrel.sh 192.168.68.128 umbrel /home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD
-```
-
-For the Open5e v2 WotC SRD 2024 path:
-
-```bash
-bin/core/sync_reference_from_umbrel.sh 192.168.68.128 umbrel /home/umbrel/umbrel/data/reference/open5e/open5e-api/data/v2/wizards-of-the-coast/srd-2024
-```
-
-The script creates a timestamped snapshot under `reference/snapshots/`, updates `reference/active` to the latest snapshot, and mirrors to `reference/srd5.1` for backward compatibility.
+The script creates a timestamped snapshot under `reference/snapshots/`, updates `reference/active` to the latest snapshot, and mirrors to `reference/srd5.1` for backward compatibility. Without those env vars set, it's a no-op — this step isn't needed for a single-machine setup.
 
 Then verify:
 
@@ -70,47 +49,28 @@ ls -la data/reference_inventory/
 
 ## SRD PDF for AI Flavor/Context
 - `config/reference_sources.yaml` includes `srd_pdf_path` for SRD narrative/context retrieval.
-- Override via env if needed:
+- Defaults to the repo-relative copy (`reference/srd/SRD_CC_v5.2.1.pdf`); override via env if you keep it elsewhere:
 
 ```bash
-export BIZZAL_SRD_PDF_PATH=/home/umbrel/umbrel/data/reference/srd/SRD_CC_v5.2.1.pdf
+export BIZZAL_SRD_PDF_PATH=/path/to/SRD_CC_v5.2.1.pdf
 ```
 
 - Generated atoms carry `source.srd_pdf_path` metadata so later AI stages can consume the same canonical PDF source.
 
-## Commit SRD JSON + PDF to GitHub (LFS)
-If you want the full SRD corpus available directly in this repo for development/testing, use Git LFS and commit the canonical datasets under `reference/`.
-
-Required layout in repo:
+## SRD JSON + PDF in Git (LFS)
+The SRD corpus is committed directly under `reference/`:
 - `reference/open5e/` → SRD JSON fixture files
 - `reference/srd/` → SRD PDF(s), including `SRD_CC_v5.2.1.pdf`
 
-One-time setup:
+If these grow large enough to want Git LFS:
 
 ```bash
 git lfs install
 git lfs track "reference/open5e/**/*.json" "reference/srd/**/*.pdf"
 git add .gitattributes
-```
-
-Umbrel copy/paste import + push (adjust source paths if needed):
-
-```bash
-cd /home/umbrel/Bizzal_Games_Pub
-git pull --ff-only
-mkdir -p reference/open5e reference/srd
-rsync -av --delete /home/umbrel/umbrel/data/reference/open5e/ACTIVE_WOTC_SRD/ reference/open5e/
-cp -f /home/umbrel/umbrel/data/reference/srd/SRD_CC_v5.2.1.pdf reference/srd/SRD_CC_v5.2.1.pdf
-git add .gitattributes .gitignore reference/open5e reference/srd docs/DEPLOYMENT.md
-git commit -m "Vendor SRD JSON and PDF into reference/ with LFS"
+git add reference/open5e reference/srd
+git commit -m "Track SRD JSON and PDF with LFS"
 git push
-```
-
-After this, set runtime path to the committed corpus if desired:
-
-```bash
-export BIZZAL_ACTIVE_SRD_PATH=/home/umbrel/Bizzal_Games_Pub/reference/open5e
-export BIZZAL_SRD_PDF_PATH=/home/umbrel/Bizzal_Games_Pub/reference/srd/SRD_CC_v5.2.1.pdf
 ```
 
 ## Monthly Zine Export Manifest
@@ -195,7 +155,7 @@ This writes run logs to:
 Example crontab (run at 06:10 UTC on the 1st of each month for previous month):
 
 ```bash
-10 6 1 * * cd /home/umbrel/Bizzal_Games_Pub && bin/core/monthly_release_cron.sh "$(date -d 'last month' +\%Y-\%m)"
+10 6 1 * * cd /path/to/Bizzal-Games-YT-PUB && bin/core/monthly_release_cron.sh "$(date -d 'last month' +\%Y-\%m)"
 ```
 
 ## Verification Checklist
@@ -232,14 +192,14 @@ Dry run (no email sent):
 bin/core/pipeline_health_email.py --month 2026-02 --dry-run
 ```
 
-Suggested cron notifications on Umbrel:
+Suggested cron notifications:
 
 ```bash
 # daily status email after daily pipeline
-20 9 * * * cd /home/umbrel/Bizzal_Games_Pub && . /home/umbrel/Bizzal_Games_Pub/.venv/bin/activate && export BIZZAL_SMTP_HOST=smtp.gmail.com && export BIZZAL_SMTP_PORT=587 && export BIZZAL_SMTP_USER=bizzalgames70@gmail.com && export BIZZAL_SMTP_PASS='YOUR_APP_PASSWORD' && export BIZZAL_SMTP_STARTTLS=1 && export BIZZAL_SMTP_SSL=0 && export BIZZAL_ALERT_EMAIL_TO=bizzalgames70@gmail.com && export BIZZAL_ALERT_EMAIL_FROM=bizzalgames70@gmail.com && bin/core/pipeline_health_email.py >> /home/umbrel/Bizzal_Games_Pub/logs/cron_pipeline_health_email.log 2>&1
+20 9 * * * cd /path/to/Bizzal-Games-YT-PUB && . .venv/bin/activate && export BIZZAL_SMTP_HOST=smtp.gmail.com && export BIZZAL_SMTP_PORT=587 && export BIZZAL_SMTP_USER=bizzalgames70@gmail.com && export BIZZAL_SMTP_PASS='YOUR_APP_PASSWORD' && export BIZZAL_SMTP_STARTTLS=1 && export BIZZAL_SMTP_SSL=0 && export BIZZAL_ALERT_EMAIL_TO=bizzalgames70@gmail.com && export BIZZAL_ALERT_EMAIL_FROM=bizzalgames70@gmail.com && bin/core/pipeline_health_email.py >> logs/cron_pipeline_health_email.log 2>&1
 
 # monthly status email after monthly release
-30 6 1 * * cd /home/umbrel/Bizzal_Games_Pub && . /home/umbrel/Bizzal_Games_Pub/.venv/bin/activate && export BIZZAL_SMTP_HOST=smtp.gmail.com && export BIZZAL_SMTP_PORT=587 && export BIZZAL_SMTP_USER=bizzalgames70@gmail.com && export BIZZAL_SMTP_PASS='YOUR_APP_PASSWORD' && export BIZZAL_SMTP_STARTTLS=1 && export BIZZAL_SMTP_SSL=0 && export BIZZAL_ALERT_EMAIL_TO=bizzalgames70@gmail.com && export BIZZAL_ALERT_EMAIL_FROM=bizzalgames70@gmail.com && bin/core/pipeline_health_email.py --month "$(date -d 'last month' +\%Y-\%m)" >> /home/umbrel/Bizzal_Games_Pub/logs/cron_pipeline_health_email.log 2>&1
+30 6 1 * * cd /path/to/Bizzal-Games-YT-PUB && . .venv/bin/activate && export BIZZAL_SMTP_HOST=smtp.gmail.com && export BIZZAL_SMTP_PORT=587 && export BIZZAL_SMTP_USER=bizzalgames70@gmail.com && export BIZZAL_SMTP_PASS='YOUR_APP_PASSWORD' && export BIZZAL_SMTP_STARTTLS=1 && export BIZZAL_SMTP_SSL=0 && export BIZZAL_ALERT_EMAIL_TO=bizzalgames70@gmail.com && export BIZZAL_ALERT_EMAIL_FROM=bizzalgames70@gmail.com && bin/core/pipeline_health_email.py --month "$(date -d 'last month' +\%Y-\%m)" >> logs/cron_pipeline_health_email.log 2>&1
 ```
 
 Discord webhook RED/GREEN health status (free alternative):
@@ -302,7 +262,7 @@ Production preflight (fails non-zero if required publish/approval env is missing
 bin/core/preflight_prod_env.sh
 ```
 
-If `~/.config/bizzal.env` is immutable and updates fail (`Operation not permitted`), unlock/edit/relock:
+On Linux/WSL, if you've made `~/.config/bizzal.env` immutable (`chattr +i`) and updates fail (`Operation not permitted`), unlock/edit/relock:
 
 ```bash
 sudo chattr -i ~/.config/bizzal.env
@@ -310,6 +270,8 @@ bin/core/setup_publish_env.sh
 grep -q '^export BIZZAL_REQUIRE_DISCORD_APPROVAL=' ~/.config/bizzal.env || echo "export BIZZAL_REQUIRE_DISCORD_APPROVAL='1'" >> ~/.config/bizzal.env
 sudo chattr +i ~/.config/bizzal.env
 ```
+
+(`chattr` is an ext-filesystem feature and isn't available on native Windows — it's optional hardening, not required. On Windows, just edit the env file directly.)
 
 Probe external auth endpoints (OpenAI/Replicate/Discord + YouTube file checks):
 
@@ -329,10 +291,9 @@ Uploader scripts:
 - `bin/upload/upload_youtube.py`
 - `bin/upload/publish_latest_youtube.sh`
 
-One-time package install on Umbrel:
+One-time package install:
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 . .venv/bin/activate
 python3 -m pip install -r requirements.txt
 ```
@@ -367,7 +328,6 @@ export BIZZAL_YT_OAUTH_MODE=console
 Refresh or repair the YouTube token without attempting an upload:
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 . .venv/bin/activate
 bin/upload/upload_youtube.py --refresh-auth-only
 ```
@@ -375,7 +335,7 @@ bin/upload/upload_youtube.py --refresh-auth-only
 Set publish command to stable wrapper:
 
 ```bash
-export BIZZAL_PUBLISH_CMD=/home/umbrel/Bizzal_Games_Pub/bin/upload/publish_latest_youtube.sh
+export BIZZAL_PUBLISH_CMD=./bin/upload/publish_latest_youtube.sh
 ```
 
 Duplicate publish protection:
@@ -383,14 +343,13 @@ Duplicate publish protection:
 - Fingerprints are recorded at `data/archive/publish/published_registry.json`
 - Duplicate content is always blocked (no override) to prevent accidental re-publish of the same asset/script
 
-### Incident-Proof Publish Runbook (Umbrel)
+### Incident-Proof Publish Runbook
 
 Use this as the canonical operator flow for daily publishing.
 
 Daily publish flow:
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 bin/core/preflight_prod_env.sh
 bin/core/discord_publish_gate.py request --day "$(date +%F)"
 # Approver posts in Discord channel: approve YYYY-MM-DD
@@ -414,7 +373,6 @@ Expected outcomes:
 Fast status check:
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 jq '.approvals | to_entries[] | {day:.key,status:.value.status,content_id:.value.content_id}' data/archive/approvals/discord_publish_gate.json | tail -n 20
 ```
 
@@ -424,32 +382,28 @@ If approval appears ignored (stuck pending):
 - Then run:
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 bin/core/discord_publish_gate.py check --publish
 ```
 
 If approval already succeeded but publish failed and you fixed the cause, retry without re-requesting approval:
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 bin/core/discord_publish_gate.py retry --day YYYY-MM-DD
 ```
 
 Recover a recent backlog across both chains:
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 bin/core/recover_recent_publish_backlog.sh --days 10
 ```
 
 This retries any day already in `approved` or `approved_publish_failed` state. To also post Discord approval requests for historical validated days that have no approval entry yet:
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 bin/core/recover_recent_publish_backlog.sh --days 10 --request-missing
 ```
 
-If env file update fails with `Operation not permitted`:
+If env file update fails with `Operation not permitted` (Linux/WSL only, immutable-flagged file):
 
 ```bash
 sudo chattr -i ~/.config/bizzal.env
@@ -460,7 +414,6 @@ echo 'BIZZAL_REQUIRE_DISCORD_APPROVAL=1' | sudo tee -a ~/.config/bizzal.env >/de
 Must-pass hardening checks:
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 bash bin/core/preflight_prod_env.sh
 grep -n 'publish blocked; Discord approval required' bin/upload/upload_youtube.py
 grep -n 'Duplicate override is disabled by policy' bin/upload/upload_youtube.py
@@ -470,7 +423,6 @@ grep -n 'upload deferred: use Discord publish gate check --publish' bin/core/run
 Weekly approval-state cleanup (already cron-safe):
 
 ```bash
-cd /home/umbrel/Bizzal_Games_Pub
 bin/core/prune_approval_state.sh 30
 ```
 
@@ -489,14 +441,14 @@ bin/core/discord_publish_gate.py check --publish
 State file:
 - `data/archive/approvals/discord_publish_gate.json`
 
-Suggested cron notifications on Umbrel (Discord):
+Suggested cron notifications (Discord):
 
 ```bash
 # daily status notification after daily pipeline
-20 9 * * * cd /home/umbrel/Bizzal_Games_Pub && . /home/umbrel/Bizzal_Games_Pub/.venv/bin/activate && export BIZZAL_DISCORD_WEBHOOK_URL='https://discord.com/api/webhooks/...' && bin/core/pipeline_health_discord.py --only-on-change >> /home/umbrel/Bizzal_Games_Pub/logs/cron_pipeline_health_discord.log 2>&1
+20 9 * * * cd /path/to/Bizzal-Games-YT-PUB && . .venv/bin/activate && export BIZZAL_DISCORD_WEBHOOK_URL='https://discord.com/api/webhooks/...' && bin/core/pipeline_health_discord.py --only-on-change >> logs/cron_pipeline_health_discord.log 2>&1
 
 # monthly status notification after monthly release
-30 6 1 * * cd /home/umbrel/Bizzal_Games_Pub && . /home/umbrel/Bizzal_Games_Pub/.venv/bin/activate && export BIZZAL_DISCORD_WEBHOOK_URL='https://discord.com/api/webhooks/...' && bin/core/pipeline_health_discord.py --month "$(date -d 'last month' +\%Y-\%m)" --only-on-change >> /home/umbrel/Bizzal_Games_Pub/logs/cron_pipeline_health_discord.log 2>&1
+30 6 1 * * cd /path/to/Bizzal-Games-YT-PUB && . .venv/bin/activate && export BIZZAL_DISCORD_WEBHOOK_URL='https://discord.com/api/webhooks/...' && bin/core/pipeline_health_discord.py --month "$(date -d 'last month' +\%Y-\%m)" --only-on-change >> logs/cron_pipeline_health_discord.log 2>&1
 ```
 
 ## Ops Backup (Cron + Alert Config)
@@ -527,10 +479,10 @@ Restore cron from a snapshot:
 crontab docs/ops_backups/YYYYMMDDTHHMMSSZ/crontab.txt
 ```
 
-Suggested weekly backup cron on Umbrel (Sunday 07:15 UTC):
+Suggested weekly backup cron (Sunday 07:15 UTC):
 
 ```bash
-15 7 * * 0 cd /home/umbrel/Bizzal_Games_Pub && . /home/umbrel/Bizzal_Games_Pub/.venv/bin/activate && bin/core/backup_ops_config.sh >> /home/umbrel/Bizzal_Games_Pub/logs/cron_ops_backup.log 2>&1
+15 7 * * 0 cd /path/to/Bizzal-Games-YT-PUB && . .venv/bin/activate && bin/core/backup_ops_config.sh >> logs/cron_ops_backup.log 2>&1
 ```
 
 Prune old backup snapshots (keep latest 12):
@@ -545,10 +497,10 @@ Dry run preview:
 bin/core/prune_ops_backups.sh --keep 12 --dry-run
 ```
 
-Suggested monthly cleanup cron on Umbrel (day 1 at 07:25 UTC):
+Suggested monthly cleanup cron (day 1 at 07:25 UTC):
 
 ```bash
-25 7 1 * * cd /home/umbrel/Bizzal_Games_Pub && . /home/umbrel/Bizzal_Games_Pub/.venv/bin/activate && bin/core/prune_ops_backups.sh --keep 12 >> /home/umbrel/Bizzal_Games_Pub/logs/cron_ops_backup.log 2>&1
+25 7 1 * * cd /path/to/Bizzal-Games-YT-PUB && . .venv/bin/activate && bin/core/prune_ops_backups.sh --keep 12 >> logs/cron_ops_backup.log 2>&1
 ```
 
 If render/upload scripts are present and executable, `run_daily.sh` will invoke them automatically.
@@ -708,7 +660,7 @@ If music generation fails, render falls back gracefully and still produces MP4 o
 
 Render preview link echo (enabled by default):
 - `BIZZAL_ECHO_PREVIEW_URL=1` prints direct test links after each render.
-- `BIZZAL_PREVIEW_HOST` sets the host/IP in printed links (default `192.168.68.128`).
+- `BIZZAL_PREVIEW_HOST` sets the host/IP in printed links (default `localhost`).
 - `BIZZAL_PREVIEW_PORT` sets the port in printed links (default `8766`).
 
 Replicate 403 quick triage:
@@ -742,7 +694,7 @@ bin/core/run_daily_diag.sh
 Optional log dir override:
 
 ```bash
-BIZZAL_DAILY_LOG_DIR=/home/umbrel/Bizzal_Games_Pub/logs bin/core/run_daily_diag.sh
+BIZZAL_DAILY_LOG_DIR=logs bin/core/run_daily_diag.sh
 ```
 
 Cron-safe diagnostic wrapper (timestamped logs, preserves exit code):
@@ -754,17 +706,19 @@ bin/core/run_daily_diag_cron.sh
 Optional cron log dir override:
 
 ```bash
-BIZZAL_DAILY_CRON_LOG_DIR=/home/umbrel/Bizzal_Games_Pub/logs bin/core/run_daily_diag_cron.sh
+BIZZAL_DAILY_CRON_LOG_DIR=logs bin/core/run_daily_diag_cron.sh
 ```
 
-Suggested daily cron on Umbrel (8:00 PM Mountain):
+> **Windows note:** `crontab` and the installer below require a `cron` daemon, which native Windows doesn't have. Either run these scripts inside WSL (where `crontab` works normally), or schedule `bin/core/run_daily_diag_cron.sh` etc. via **Windows Task Scheduler** instead (`schtasks /create ...` or the Task Scheduler GUI), pointing it at a shell capable of running these `.sh` scripts (Git Bash or WSL).
+
+Suggested daily cron (8:00 PM Mountain):
 
 ```bash
 CRON_TZ=America/Denver
-0 20 * * * cd /home/umbrel/Bizzal_Games_Pub && bin/core/run_daily_diag_cron.sh
+0 20 * * * cd /path/to/Bizzal-Games-YT-PUB && bin/core/run_daily_diag_cron.sh
 ```
 
-One-command cron automation installer (idempotent):
+One-command cron automation installer (idempotent, Linux/WSL only):
 
 ```bash
 bin/core/install_cron_automation.sh
@@ -821,11 +775,11 @@ Dry run preview:
 bin/core/prune_daily_diag_logs.sh --keep-days 30 --dry-run
 ```
 
-Suggested weekly prune cron on Umbrel (Sunday 8:20 PM Mountain):
+Suggested weekly prune cron (Sunday 8:20 PM Mountain):
 
 ```bash
 CRON_TZ=America/Denver
-20 20 * * 0 cd /home/umbrel/Bizzal_Games_Pub && bin/core/prune_daily_diag_logs.sh --keep-days 30
+20 20 * * 0 cd /path/to/Bizzal-Games-YT-PUB && bin/core/prune_daily_diag_logs.sh --keep-days 30
 ```
 
 Current behavior:
@@ -834,7 +788,7 @@ Current behavior:
 - If API is unavailable, generation falls back to deterministic templates automatically.
 - `source.srd_pdf_path` is recorded in atoms for provenance, but no direct PDF text retrieval stage is active yet.
 
-Enable on Umbrel shell before running daily pipeline:
+Enable before running the daily pipeline:
 
 ```bash
 export BIZZAL_ENABLE_AI=1
@@ -880,8 +834,8 @@ Low-DC humor lane (optional):
 - It keeps tactical guidance but shifts tone so weaker picks feel intentional, not awkward.
 
 ## Operational Notes
-- Keep production changes pull-only from GitHub (avoid ad-hoc manual edits on server)
-- Prefer tagged releases for rollback points
+- Commit changes to git regularly so you always have a rollback point
+- Prefer tagged releases for marking known-good states
 - Save service/cron details here once finalized
 
 ## Rollback (Simple)
