@@ -5,9 +5,10 @@ server required. Each day it generates the day's content atom, renders the
 vertical Short, and publishes it to YouTube **straight through** (no Discord
 approval step), then commits its publish-safety state back to the repo.
 
-This repo is **public**, so Actions minutes are free and unlimited. The only
-per-run costs are OpenAI + Replicate API usage (same as the local setup);
-Supabase stays on the free tier.
+This repo is **public**, so Actions minutes are free and unlimited. Supabase is
+on the **Pro** plan (~$25/mo flat: always-on — no idle pausing — plus 100 GB
+Storage and daily backups). The only *variable* costs are OpenAI + Replicate
+API usage per run (same as the local setup).
 
 ## How it works
 
@@ -81,8 +82,9 @@ This writes `~/.config/bizzal/youtube_token.json` (path configurable via
 
 Create a private bucket named `renders` (Dashboard → Storage → New bucket).
 Archival is non-fatal: if the bucket or `SUPABASE_SERVICE_ROLE_KEY` is missing,
-the run still succeeds (publishing already happened). Add a periodic prune to
-stay under the 1 GB free tier.
+the run still succeeds (publishing already happened). On the **Pro** plan you
+have 100 GB of Storage, so there's no urgent need to prune — a periodic
+cleanup is optional housekeeping rather than a quota requirement.
 
 ## Running it
 
