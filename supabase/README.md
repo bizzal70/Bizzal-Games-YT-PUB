@@ -1,23 +1,29 @@
 # supabase/
 
 This project's Supabase GitHub integration is connected to this repo
-(`bizzal70/Bizzal-Games-YT-PUB`, working directory `.`), but **"Deploy to
-production" is intentionally left OFF** in the Supabase dashboard
-(Project Settings -> Integrations -> GitHub Integration).
+(`bizzal70/Bizzal-Games-YT-PUB`, working directory `.`). "Deploy to
+production" is currently OFF in the Supabase dashboard (Project Settings ->
+Integrations -> GitHub Integration), but the migration history has been
+reconciled so it's now safe to turn on whenever you want it.
 
-## Why auto-deploy is off
+## Status: baseline reconciled
 
-Supabase's migration-sync expects the project's applied-migrations history
-to match `supabase/migrations/*.sql` exactly. The schema currently live in
-the DB was applied by hand via the SQL Editor before this folder existed, so
-there's no Supabase CLI on record of what's "already applied." Turning on
-auto-deploy without first reconciling that would make Supabase try to
-re-run `20260630000000_initial_rpg_systems_schema.sql` as a brand-new
-migration against a DB that already has these tables.
+The baseline migration `20260630000000_initial_rpg_systems_schema` has been
+recorded as **applied** in `supabase_migrations.schema_migrations` (the same
+thing `supabase migration repair --status applied 20260630000000` does --
+done via the SQL Editor because this laptop can't reach the DB directly; see
+the IPv6 note below). So Supabase's migration-sync will now *skip* this file
+instead of re-running it, and turning on "Deploy to production" is safe.
 
-The migration file itself is written idempotently (`IF NOT EXISTS`), so
-this would likely just no-op rather than error -- but it's not been
-confirmed against a real CLI flow, so auto-deploy stays off until it has.
+It's left off by default only as a deliberate choice -- flip it on in the
+dashboard (Project Settings -> Integrations -> GitHub) whenever you want
+merges to `main` to auto-apply new migration files.
+
+## Connecting to the DB from a dev machine
+
+The direct host `db.<ref>.supabase.co` is **IPv6-only**. On a machine with
+no IPv6 route it will time out -- use the IPv4 **Session pooler** connection
+string (Dashboard -> Connect) or the dashboard SQL Editor instead.
 
 ## How schema changes ship today
 
@@ -28,21 +34,21 @@ confirmed against a real CLI flow, so auto-deploy stays off until it has.
    Use `YYYYMMDDHHMMSS_description.sql` naming.
 3. Commit it alongside the code change that depends on it.
 
-## Turning on auto-deploy later (optional)
+## If you ever need to re-reconcile (reference)
 
-Once the [Supabase CLI](https://supabase.com/docs/guides/local-development/cli/getting-started)
-is installed locally:
+The baseline is already marked applied. If you ever stand up a fresh copy of
+the DB from `bin/core/db_schema.sql` by hand and need the integration to skip
+the baseline again, mark it applied with the Supabase CLI:
 
 ```bash
 supabase login
 supabase link --project-ref nlywxefvpibkqfctgmty
-supabase migration repair --status applied 20260630000000
+supabase migration repair --status applied 20260630000000 --linked
 ```
 
-That marks the baseline migration as already applied without re-running it.
-After that, flipping "Deploy to production" on in the dashboard is safe --
-future merges to `main` will auto-apply any new files added under
-`supabase/migrations/`.
+(or the equivalent `insert ... into supabase_migrations.schema_migrations`
+via the SQL Editor, which is what was used originally since the direct DB
+host is IPv6-only and unreachable from the dev laptop).
 
 ## Data seeding
 
