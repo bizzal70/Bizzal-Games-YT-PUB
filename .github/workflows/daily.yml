@@ -1,0 +1,135 @@
+name: Daily content pipeline
+
+# Cloud v2: generate -> render -> publish to YouTube, straight through (no
+# Discord approval). See docs/CLOUD_V2.md. Runs on a DST-safe 8am America/Denver
+# schedule, and on-demand via the "Run workflow" button.
+
+on:
+  schedule:
+    # GitHub cron is UTC. 8am Denver is 15:00 UTC during MST and 14:00 UTC
+    # during MDT, so we fire on both hours and let the guard step keep only
+    # the one that is actually 08:00 in America/Denver right now.
+    - cron: "0 14 * * *"
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+    inputs:
+      systems:
+        description: 'Which system(s): "auto" (daily rotation), "all", or a specific id like "dnd5e"'
+        required: false
+        default: "auto"
+      privacy:
+        description: "YouTube privacy for this run: unlisted | private | public"
+        required: false
+        default: "unlisted"
+      dry_run:
+        description: 'Set "true" to generate+render but skip the YouTube upload'
+        required: false
+        default: "false"
+
+# Never let two runs publish at once (would risk a double-upload before the
+# dedup registry is committed back).
+concurrency:
+  group: daily-pipeline
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # to commit the updated safety-state back to the repo
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      TZ: America/Denver
+      # --- config / secrets ---
+      BIZZAL_DB_URL: ${{ secrets.BIZZAL_DB_URL }}
+      BIZZAL_OPENAI_API_KEY: ${{ secrets.BIZZAL_OPENAI_API_KEY }}
+      BIZZAL_REPLICATE_API_TOKEN: ${{ secrets.BIZZAL_REPLICATE_API_TOKEN }}
+      BIZZAL_YT_CLIENT_ID: ${{ secrets.BIZZAL_YT_CLIENT_ID }}
+      BIZZAL_YT_CLIENT_SECRET: ${{ secrets.BIZZAL_YT_CLIENT_SECRET }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      # --- runtime behaviour ---
+      BIZZAL_YT_TOKEN_FILE: ${{ github.workspace }}/.secrets/youtube_token.json
+      BIZZAL_YT_NONINTERACTIVE: "1"
+      BIZZAL_REQUIRE_DISCORD_APPROVAL: "0"
+      BIZZAL_PREVENT_SAME_DAY_RERUN: "1"
+      # AI features on (user decision). Individual systems can still override
+      # via their DB flags; these are the workflow-level defaults.
+      BIZZAL_ENABLE_AI: "1"
+      BIZZAL_ENABLE_AI_SCRIPT: "1"
+      BIZZAL_ENABLE_TTS: "1"
+      BIZZAL_ENABLE_BG_IMAGE: "1"
+      BIZZAL_ENABLE_BG_MUSIC: "1"
+    steps:
+      - name: Checkout (full history for commit-back)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: DST-safe 8am-MT guard (scheduled runs only)
+        id: guard
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "manual run; skipping time guard"
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          hour="$(TZ=America/Denver date +%H)"
+          echo "America/Denver hour=$hour"
+          if [ "$hour" = "08" ]; then
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "not 8am MT; this scheduled trigger is a no-op"
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Python
+        if: steps.guard.outputs.proceed == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg
+        if: steps.guard.outputs.proceed == 'true'
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install Python deps
+        if: steps.guard.outputs.proceed == 'true'
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Materialize YouTube OAuth token
+        if: steps.guard.outputs.proceed == 'true'
+        env:
+          BIZZAL_YT_TOKEN_JSON: ${{ secrets.BIZZAL_YT_TOKEN_JSON }}
+        run: |
+          mkdir -p "$(dirname "$BIZZAL_YT_TOKEN_FILE")"
+          if [ -z "$BIZZAL_YT_TOKEN_JSON" ]; then
+            echo "ERROR: BIZZAL_YT_TOKEN_JSON secret is empty" >&2
+            exit 1
+          fi
+          printf '%s' "$BIZZAL_YT_TOKEN_JSON" > "$BIZZAL_YT_TOKEN_FILE"
+          echo "wrote token file ($(wc -c < "$BIZZAL_YT_TOKEN_FILE") bytes)"
+
+      - name: Run daily pipeline
+        if: steps.guard.outputs.proceed == 'true'
+        env:
+          BIZZAL_CLOUD_SYSTEMS: ${{ github.event.inputs.systems || 'auto' }}
+          BIZZAL_YT_PRIVACY: ${{ github.event.inputs.privacy || 'unlisted' }}
+          # dry_run: generate + render but skip the YouTube upload entirely.
+          BIZZAL_SKIP_PUBLISH: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
+        run: bin/core/run_daily_cloud_cron.sh
+
+      - name: Commit safety-state back to repo
+        if: steps.guard.outputs.proceed == 'true' && always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/state || true
+          if git diff --cached --quiet; then
+            echo "no safety-state changes to commit"
+          else
+            git commit -m "chore(state): update publish registry + history [skip ci]"
+            git push
+          fi

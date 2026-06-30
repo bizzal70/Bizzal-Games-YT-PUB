@@ -1,6 +1,11 @@
 # Deployment Guide (Local)
 
-This pipeline runs entirely on a single machine — no remote host, no promotion/SSH step. Code changes go straight from your local clone to GitHub via a normal commit/push.
+> **The primary way to run this pipeline is now the cloud (GitHub Actions).**
+> See [CLOUD_V2.md](CLOUD_V2.md). This document covers running it locally,
+> which is the fallback / development path and still uses the Discord approval
+> gate.
+
+This (local) path runs entirely on a single machine — no remote host, no promotion/SSH step. Code changes go straight from your local clone to GitHub via a normal commit/push.
 
 ## Production Target
 - Host: your local machine (laptop)

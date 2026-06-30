@@ -12,6 +12,12 @@ data/renders/
 data/renders_shadowdark/
 data/www/
 
+# Cloud pipeline safety-state: small JSON (publish dedup registry, variety
+# history, autopublish record) that GitHub Actions commits back to the repo so
+# it survives ephemeral runners. Tracked on purpose; renders/atoms stay out.
+!data/state/
+!data/state/*.json
+
 # large/replaceable assets (optional; you can choose to keep these in git later)
 data/assets/
 

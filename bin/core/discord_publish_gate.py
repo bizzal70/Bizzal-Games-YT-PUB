@@ -701,6 +701,65 @@ def retry_mode(repo_root: str, day: str, state_path: str, webhook_url: str) -> i
     return 0 if str(entry.get("status") or "") == "published" else int(entry.get("publish_rc") or 1)
 
 
+def autopublish_mode(repo_root: str, day: str, state_path: str, webhook_url: str) -> int:
+    """Publish a day's video directly, with no Discord approval round-trip.
+
+    Used by the cloud (GitHub Actions) daily pipeline, where there is no human
+    approval step. Reuses the same atom lookup as request_mode and the same
+    publish + dedup-registry path as retry_mode (via publish_approved_entry),
+    so double-publishes are still prevented by the publish registry. Discord
+    messaging is suppressed by passing an empty webhook_url.
+    """
+    requested_day = day
+    try:
+        atom_path, atom = atom_for_day(repo_root, day)
+    except FileNotFoundError:
+        fallback_day = latest_validated_day(repo_root)
+        if not fallback_day:
+            print(
+                f"ERROR: validated atom missing for requested day {requested_day}, and no fallback atom exists",
+                file=sys.stderr,
+            )
+            return 3
+        day = fallback_day
+        atom_path, atom = atom_for_day(repo_root, day)
+        print(
+            f"[discord_publish_gate] autopublish: requested day={requested_day} missing; using latest validated day={day}",
+            file=sys.stderr,
+        )
+
+    content = atom.get("content") or {}
+    content_id = str(content.get("content_id") or "")
+    if not content_id:
+        print(f"ERROR: content_id missing in {atom_path}", file=sys.stderr)
+        return 3
+
+    state = load_json(state_path)
+    approvals = state.setdefault("approvals", {})
+    entry = {
+        "day": day,
+        "content_id": content_id,
+        "category": atom.get("category") or "",
+        "angle": atom.get("angle") or "",
+        "status": "approved",
+        "requested_utc": now_utc(),
+        "decision_utc": now_utc(),
+        "decision_by": "autopublish",
+    }
+    approvals[day] = entry
+    save_json(state_path, state)
+
+    entry = publish_approved_entry(repo_root, day, entry, webhook_url)
+    approvals[day] = entry
+    save_json(state_path, state)
+
+    if str(entry.get("status") or "") == "published":
+        print(f"[discord_publish_gate] autopublish complete day={day} content_id={content_id}")
+        return 0
+    print(f"[discord_publish_gate] autopublish FAILED day={day} rc={entry.get('publish_rc')}", file=sys.stderr)
+    return int(entry.get("publish_rc") or 1)
+
+
 def main() -> int:
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 
@@ -717,6 +776,10 @@ def main() -> int:
     retry = sub.add_parser("retry", help="Retry publish for an already approved day without re-requesting approval")
     retry.add_argument("--day", default=datetime.now().strftime("%Y-%m-%d"))
 
+    auto = sub.add_parser("autopublish", help="Publish directly with no Discord approval (cloud daily pipeline)")
+    auto.add_argument("--day", default=datetime.now().strftime("%Y-%m-%d"))
+    auto.add_argument("--notify", action="store_true", help="Also post status to Discord webhook if BIZZAL_DISCORD_WEBHOOK_URL is set")
+
     args = parser.parse_args()
 
     state_file = os.getenv("BIZZAL_DISCORD_APPROVAL_STATE", "data/archive/approvals/discord_publish_gate.json")
@@ -729,6 +792,10 @@ def main() -> int:
         return request_mode(repo_root, args.day.strip(), state_file, webhook_url, args.force)
     if args.cmd == "retry":
         return retry_mode(repo_root, args.day.strip(), state_file, webhook_url)
+    if args.cmd == "autopublish":
+        # No Discord by default; pass the webhook through only with --notify.
+        auto_webhook = webhook_url if args.notify else ""
+        return autopublish_mode(repo_root, args.day.strip(), state_file, auto_webhook)
 
     bot_token = (os.getenv("BIZZAL_DISCORD_BOT_TOKEN") or "").strip()
     channel_id = normalize_discord_id((os.getenv("BIZZAL_DISCORD_CHANNEL_ID") or "").strip())

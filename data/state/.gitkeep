@@ -1,0 +1,4 @@
+# Cloud pipeline safety-state lives here (published_registry_<system>.json,
+# style_history_<system>.json, publish_gate_<system>.json). These are
+# committed back by the GitHub Actions daily workflow so dedup + variety
+# history survive ephemeral runners. See docs/CLOUD_V2.md.
