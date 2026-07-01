@@ -1,0 +1,17 @@
+{
+  "approvals": {
+    "2026-06-30": {
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-rules-ruling-rule-1-592c8b954f8e",
+      "category": "rules_ruling",
+      "angle": "edge_case",
+      "status": "published",
+      "requested_utc": "2026-07-01T05:02:06Z",
+      "decision_utc": "2026-07-01T05:02:06Z",
+      "decision_by": "autopublish",
+      "publish_rc": 0,
+      "publish_output": "[upload_youtube] uploaded id=Jl78kWOXS4A privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4 https://www.youtube.com/watch?v=Jl78kWOXS4A [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_shadowdark.json hash=1c7eb5a7ac779668",
+      "youtube_url": "https://www.youtube.com/watch?v=Jl78kWOXS4A"
+    }
+  }
+}

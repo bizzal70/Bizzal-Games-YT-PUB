@@ -129,6 +129,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
         "video_sha256": "34f6a5655ce6d3372cef91c19b81d52a4a8fe87fa660e498bee327ef162823d6"
       }
+    },
+    {
+      "published_utc": "2026-07-01T04:59:34Z",
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-c2b9a1de4f8d",
+      "publish_hash": "0a8d7cb6147e2cdb4129565c480800b6ebd9c5912c3b88e80f9b6cf0dd698c39",
+      "youtube_video_id": "xgdD8RVAQfc",
+      "youtube_url": "https://www.youtube.com/watch?v=xgdD8RVAQfc",
+      "video_sha256": "772a0ce06bc6501892ea24fc97a8e8b12a57f6bfd248e99e8b44d3381d971030",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+      "fingerprint": {
+        "day": "2026-06-30",
+        "category": "spell_use_case",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-c2b9a1de4f8d",
+        "canonical_hash": "c2b9a1de4f8d02a9abd20bb88e1403c23f39801330441e56783257bfe1cfa48c",
+        "script_id": "36ce5fbb5766633bd67308dbe6ca96a3c169e553a24949d4a61ff2f3d858b636",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_acid-splash",
+        "fact_name": "Acid Splash",
+        "hook": "Acid Splash looks low-stakes until smart timing makes it absurdly useful.",
+        "body": "You're in the thick of it, two goblins squabbling over loot in a cramped alley. You toss Acid Splash right at their feet. They both need to dodge, but one's a nimble rogue and the other's a lumbering brute. Watch as the rogue smirks, only to realize he's about to eat a faceful of acid. Make it hurt - those hit points matter, but so does the chaos of their panic. You reward cleverness, not just damage: maybe the goblin drops the loot or slips into a wall, giving the party an opening. It's about the story, not just the roll.",
+        "cta": "DMs: Use Acid Splash to force goblins into a wall or drop their loot; it's about the chaos, not just the damage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+        "video_sha256": "772a0ce06bc6501892ea24fc97a8e8b12a57f6bfd248e99e8b44d3381d971030"
+      }
     }
   ]
 }

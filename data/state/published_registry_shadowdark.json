@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "published_utc": "2026-07-01T05:02:08Z",
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-rules-ruling-rule-1-592c8b954f8e",
+      "publish_hash": "1c7eb5a7ac77966833a6816d90c590ea150b9aa2e63ed9c55f93b3b9320c92af",
+      "youtube_video_id": "Jl78kWOXS4A",
+      "youtube_url": "https://www.youtube.com/watch?v=Jl78kWOXS4A",
+      "video_sha256": "fcce6596ede119b14b514c1e96525b6ac0770df0ac2c2ed357de24791d619b4e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4",
+      "fingerprint": {
+        "day": "2026-06-30",
+        "category": "rules_ruling",
+        "angle": "edge_case",
+        "content_id": "bgp-2026-06-30-rules-ruling-rule-1-592c8b954f8e",
+        "canonical_hash": "592c8b954f8e0831ef5a536521973c343b4b0307881d21959619903a777ad01f",
+        "script_id": "23c5191ff90b21046b336e0f0257c531db3bdc8ff2e9b07cf40e2f019b93e49a",
+        "fact_kind": "rule",
+        "fact_pk": 1,
+        "fact_name": "Advantage and Disadvantage",
+        "hook": "Advantage and Disadvantage: the devil's in the details.",
+        "body": "You're in a tight spot. The rogue's about to stab the ogre while the bard's trying to charm it. You roll for the stab, but wait - did the bard's spell give the rogue Advantage or not? If you don't have a clear order of operations, you'll spend the next ten minutes arguing about who's rolling what. Decisions made now save headaches later.",
+        "cta": "DMs: Establish a clear order for when Advantage and Disadvantage apply, or you'll waste time debating who gets what bonus.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4",
+        "video_sha256": "fcce6596ede119b14b514c1e96525b6ac0770df0ac2c2ed357de24791d619b4e"
+      }
+    }
+  ]
+}
