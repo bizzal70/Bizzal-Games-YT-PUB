@@ -240,7 +240,7 @@ def clear_irrelevant_picks(atom: dict):
     atom["picks"] = picks
 
 def minimal_validate(atom: dict):
-    # Minimal “shape” validation (keeps you from shipping junk)
+    # Minimal âshapeâ validation (keeps you from shipping junk)
     required_top = ["day", "created_at", "category", "angle", "style", "picks", "fact", "script", "script_id", "content"]
     for k in required_top:
         if k not in atom:
@@ -289,7 +289,7 @@ def minimal_validate(atom: dict):
     return True, "ok"
 
 def load_schema_min_ok():
-    # optional: ensure file exists; we’re not full jsonschema-validating yet
+    # optional: ensure file exists; weâre not full jsonschema-validating yet
     return os.path.exists(SCHEMA_MIN)
 
 # ---------- pipeline orchestration ----------
@@ -346,6 +346,15 @@ def main():
         atom["angle"] = picked_angle
     elif not atom.get("angle"):
         atom["angle"] = "how_it_wins"
+
+    # Test-only override: force category/angle for verification dry-runs.
+    # No-op in production (env unset). Wired to daily.yml category input.
+    _forced_cat = os.environ.get("BIZZAL_FORCE_CATEGORY", "").strip()
+    if _forced_cat:
+        atom["category"] = _forced_cat
+    _forced_angle = os.environ.get("BIZZAL_FORCE_ANGLE", "").strip()
+    if _forced_angle:
+        atom["angle"] = _forced_angle
 
     # Always wipe picks + script/fact if rerunning (prevents stale data)
     clear_irrelevant_picks(atom)
