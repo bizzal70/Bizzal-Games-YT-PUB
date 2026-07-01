@@ -211,7 +211,7 @@ def main():
     chosen_tts_voice = pick_tts_voice(day, category, tone, voice, voiceover, defaults, recent_tts_voices)
 
     spice_rate = float(defaults.get("spice_rate", 0.0))
-    spice_pool = ["dry_humor", "grim", "practical", "punchy"]
+    spice_pool = ["wry", "sardonic", "deadpan", "punchy"]
     spice = []
     if random.random() < spice_rate:
         spice = [random.choice(spice_pool)]
