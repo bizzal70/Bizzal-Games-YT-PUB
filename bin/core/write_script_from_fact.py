@@ -832,6 +832,40 @@ def _first_banned_opener(text: str):
     return None
 
 
+_VAGUE_FILLER_RE = re.compile(
+    r"strategic advantage"
+    r"|powerful (?:tool|option|spell|choice|ability)"
+    r"|game[- ]?changer"
+    r"|invaluable"
+    r"|(?:shouldn.?t|should not|must not) be underestimated"
+    r"|life[- ]?saver"
+    r"|adds depth"
+    r"|influence(?:s|d)? (?:the )?outcomes?"
+    r"|maximiz\w+ (?:its|the|their) [\w\s,]{0,30}?(?:impact|potential|effectiveness|value|advantage)"
+    r"|versatile (?:tool|option|choice|spell)"
+    r"|(?:crucial|useful|handy|great|effective|valuable) in (?:many|various|most|countless|numerous|a variety of) (?:situations|scenarios|cases|encounters)"
+    r"|in (?:many|various|most|countless|numerous|a variety of) (?:situations|scenarios|cases|encounters)"
+    r"|can be (?:a )?(?:powerful|invaluable|crucial|game[- ]?changing)",
+    re.IGNORECASE,
+)
+
+
+def _first_style_violation(text: str):
+    """Return (kind, phrase) for the first opener/filler style problem, else None.
+
+    Two deterministic guards on top of the prompt: (1) templated sentence
+    openers, (2) hollow value-claims with no concrete mechanic. Either one
+    triggers a single corrective regeneration in maybe_ai_polish_script().
+    """
+    opener = _first_banned_opener(text)
+    if opener:
+        return ("banned opener", opener)
+    m = _VAGUE_FILLER_RE.search(str(text or ""))
+    if m:
+        return ("vague filler phrase", m.group(0).strip())
+    return None
+
+
 def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) -> dict:
     if not env_true("BIZZAL_ENABLE_AI_SCRIPT", True):
         ai_diag("AI script polish off (BIZZAL_ENABLE_AI_SCRIPT=0)")
@@ -991,20 +1025,22 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             out["cta"] = clean_ai_style_text(script.get("cta", ""), segment="cta")
             ai_diag("AI script CTA reverted by anti-generic gate")
 
-        # --- Post-generation banned-opener lint (one corrective retry) ---
-        _violation = _first_banned_opener(" ".join([out["hook"], out["body"], out["cta"]]))
+        # --- Post-generation style lint: banned openers + vague filler (one retry) ---
+        _violation = _first_style_violation(" ".join([out["hook"], out["body"], out["cta"]]))
         if _violation:
-            ai_diag(f"AI script lint: banned opener '{_violation}' detected — regenerating once")
+            _kind, _phrase = _violation
+            ai_diag(f"AI script lint: {_kind} '{_phrase}' detected \u2014 regenerating once")
             try:
                 _fix_payload = dict(payload)
                 _fix_payload["messages"] = payload["messages"] + [
                     {"role": "assistant", "content": json.dumps(out, ensure_ascii=False)},
                     {"role": "user", "content": (
-                        "Your previous answer began a sentence with the BANNED phrase "
-                        f"\"{_violation}\". Rewrite hook/body/cta so that NO sentence begins with "
-                        "'Players often', 'The smart play is', 'Smart play involves', or 'The common mistake is'. "
-                        "Keep every specific mechanic and number. Lead each sentence with the mechanic, the "
-                        "number, or the consequence. Return the same strict JSON object (hook, body, cta)."
+                        f"Your previous answer contained a {_kind}: \"{_phrase}\". Rewrite hook/body/cta to remove it. "
+                        "NO sentence may begin with 'Players often', 'The smart play is', 'Smart play involves', or "
+                        "'The common mistake is'. Replace any hollow value-claim (e.g. 'strategic advantage', "
+                        "'powerful tool', 'maximizing its impact', 'in many situations') with a concrete mechanical "
+                        "consequence: a specific number, condition, or outcome. Keep every real mechanic and number. "
+                        "Return the same strict JSON object (hook, body, cta)."
                     )},
                 ]
                 _req2 = request.Request(
@@ -1023,15 +1059,15 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
                     "cta": clean_ai_style_text(_obj2.get("cta") or out["cta"], segment="cta"),
                 }
                 if _fixed["hook"] and _fixed["body"] and _fixed["cta"]:
-                    _still = _first_banned_opener(" ".join([_fixed["hook"], _fixed["body"], _fixed["cta"]]))
+                    _still = _first_style_violation(" ".join([_fixed["hook"], _fixed["body"], _fixed["cta"]]))
                     if _still:
-                        ai_diag(f"AI script lint: opener '{_still}' still present after retry — shipping anyway")
+                        ai_diag(f"AI script lint: {_still[0]} '{_still[1]}' still present after retry \u2014 shipping anyway")
                     else:
-                        ai_diag("AI script lint: banned opener fixed on retry")
+                        ai_diag("AI script lint: style violation fixed on retry")
                     out = _fixed
             except Exception as _exc:
                 ai_diag(f"AI script lint retry skipped: {_exc}")
-        # --- end banned-opener lint ---
+        # --- end style lint ---
 
         blob = f"{out['hook']} {out['body']} {out['cta']}"
         skipped_numeric_locks = []
