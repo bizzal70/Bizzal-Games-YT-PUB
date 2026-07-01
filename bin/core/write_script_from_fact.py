@@ -1140,6 +1140,10 @@ def clean_script_text(s: str) -> str:
     if not txt:
         return ""
 
+    # Normalize Unicode punctuation → plain ASCII (prevents mojibake in DB and TTS)
+    txt = txt.replace("‘", "'").replace("’", "'")
+    txt = txt.replace("“", '"').replace("”", '"')
+    txt = txt.replace("–", "-").replace("—", " - ")
     txt = txt.replace("…", ".")
     txt = txt.replace("*", "")
     txt = re.sub(r"\s+([,.;:!?])", r"\1", txt)
