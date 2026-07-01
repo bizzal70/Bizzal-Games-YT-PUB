@@ -823,19 +823,34 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
         "punchy":   "Be punchy — short sentences, direct hits, no wind-up.",
     }.get(spice_str, "")
 
+    # Extract raw mechanical fields so the AI has actual numbers to reason from,
+    # not just a name. Without this it invents vague generalizations.
+    raw_fields = fact.get("fields") or {}
+    fact_mechanics: dict = {}
+    for key in ("level", "school", "concentration", "duration", "range_text", "range",
+                "casting_time", "ritual", "damage_roll", "damage_types", "saving_throw_ability",
+                "attack_roll", "target_count", "shape_type", "shape_size", "shape_size_unit",
+                "verbal", "somatic", "material", "material_specified", "material_cost",
+                "higher_level", "classes"):
+        val = raw_fields.get(key)
+        if val is not None and val != "" and val != [] and val is not False:
+            fact_mechanics[key] = val
+
     prompt = {
         "task": (
             "Rewrite hook/body/cta as a dry mechanical observation for someone who already read the manual. "
             "No scenes. No characters. No narration. "
-            "State what the mechanic actually does in practice, what players consistently get wrong about it, "
-            "and what smart play looks like — in plain declarative sentences. "
-            "Numbers only if they're the point. Mechanics as the subject, not as flavor."
+            "Use the fact_mechanics fields to make specific, grounded statements — "
+            "exact duration, exact range, concentration requirement, damage dice, saving throw type. "
+            "State what the mechanic actually does that players consistently get wrong, "
+            "and what smart play looks like — in plain declarative sentences."
             + (f" Spice modifier: {spice_instruction}" if spice_instruction else "")
         ),
         "category": atom.get("category") or "",
         "angle": atom.get("angle") or "",
         "fact_name": fact_name,
         "kind": fact.get("kind") or "",
+        "fact_mechanics": fact_mechanics,
         "voice": style.get("voice") or "wry_vet",
         "persona": style.get("persona") or "wry_vet",
         "tone": style.get("tone") or "dry",
@@ -852,7 +867,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             "Do not invent mechanics, stats, or proper nouns that aren't in the input.",
             "fact_name must appear somewhere in the output.",
             "Hook: one dry declarative sentence. The specific thing players get wrong about this mechanic — stated as fact, not question.",
-            "Body: 2-4 sentences. Name the exact mechanical interaction. Name the common mistake. Name what smart play does instead. Every sentence must contain a specific mechanic, number, or condition — no sentence may be vague or general. BAD: 'players often overlook the strategic advantage.' GOOD: 'Aid adds 5 hp to current and maximum — meaning it absorbs damage that would otherwise drop a target, not just pad a health bar that's already full.' Be that specific.",
+            "Body: 2-4 sentences. Draw from fact_mechanics — use the actual duration, range, concentration flag, damage dice, saving throw type, or class list. Name the specific mechanical interaction. Name the common mistake with a concrete example. Name what smart play does instead. BAD: 'players often overlook the strategic advantage.' GOOD: 'Alter Self lasts 1 hour with concentration — most players burn it right before combat and lose it on the first failed Constitution save. The move is casting it at the start of an infiltration, before any rolls happen.' Be that specific.",
             "CTA: one sentence. The exact condition or setup where this mechanic pays off — named precisely.",
             "No vague generalization. 'Players miss the strategic advantage' is forbidden. 'Players cast this before a long rest and waste the 8-hour duration' is correct.",
             "No scenes. No characters in the text ('the rogue', 'the goblin', 'your party', 'an ally'). Mechanics are the subject of every sentence.",
