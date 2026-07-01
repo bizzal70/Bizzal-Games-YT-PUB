@@ -25,6 +25,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4",
         "video_sha256": "fcce6596ede119b14b514c1e96525b6ac0770df0ac2c2ed357de24791d619b4e"
       }
+    },
+    {
+      "published_utc": "2026-07-01T05:18:54Z",
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-rules-ruling-rule-2-8234bd98de79",
+      "publish_hash": "a42feb12bd7fdee218068cfaaf0dc3d9b3793652a6fd945633dfca2aab4bb2f0",
+      "youtube_video_id": "AJMOxiMgCTo",
+      "youtube_url": "https://www.youtube.com/watch?v=AJMOxiMgCTo",
+      "video_sha256": "5aad9c49e0efb580b1b7f0ebc7e2febfcc1a462760b94bd73334fd13453dfcf2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4",
+      "fingerprint": {
+        "day": "2026-06-30",
+        "category": "rules_ruling",
+        "angle": "edge_case",
+        "content_id": "bgp-2026-06-30-rules-ruling-rule-2-8234bd98de79",
+        "canonical_hash": "8234bd98de795ee871b2941dca050af965d8654e5fc47dd57de687626f48bceb",
+        "script_id": "c63feec4f0e66fb76d4517c7ffdad24458161af97063c2b343f2fb3f86171c28",
+        "fact_kind": "rule",
+        "fact_pk": 2,
+        "fact_name": "Death Timer",
+        "hook": "Death Timer mechanics often misapplied lead to confusion.",
+        "body": "The Death Timer dictates the order of effects when a character reaches zero hit points. Players frequently misinterpret when to apply healing or death saving throws, often delaying critical actions. Establish a clear sequence for resolving the Death Timer and stick to it to avoid disputes and ensure consistent gameplay.",
+        "cta": "DMs: Clearly outline the Death Timer sequence before any character hits zero hit points to prevent the usual confusion and delays.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4",
+        "video_sha256": "5aad9c49e0efb580b1b7f0ebc7e2febfcc1a462760b94bd73334fd13453dfcf2"
+      }
     }
   ]
 }

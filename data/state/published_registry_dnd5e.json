@@ -155,6 +155,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
         "video_sha256": "772a0ce06bc6501892ea24fc97a8e8b12a57f6bfd248e99e8b44d3381d971030"
       }
+    },
+    {
+      "published_utc": "2026-07-01T05:15:53Z",
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-aid-664fa364c277",
+      "publish_hash": "92654d6d9d72d06b1d26c2e7373bcd5b4d511e4c3444922e6ffdb363608b8449",
+      "youtube_video_id": "i_wUZWJdYwI",
+      "youtube_url": "https://www.youtube.com/watch?v=i_wUZWJdYwI",
+      "video_sha256": "f64990dcc437377e32e394d9ee18e92f136078c48c93d565fe4b3c17d5b7c796",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+      "fingerprint": {
+        "day": "2026-06-30",
+        "category": "spell_use_case",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-aid-664fa364c277",
+        "canonical_hash": "664fa364c277aac7149695136347aa1db1657efeb7fdc49a10b7d9ee02ae124b",
+        "script_id": "f502e28dec11ba0736bd2d18ac81c4c1d3ea213b7e0b1976012eea3cef34ef4c",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_aid",
+        "fact_name": "Aid",
+        "hook": "Aid increases maximum and current hit points for up to three targets, but players often treat it as a mere.",
+        "body": "The spell grants a flat increase of 5 hit points for the duration, which can be overlooked in favor of offensive spells. Players frequently miss the strategic advantage of using Aid to set up future actions or gain leverage in social situations. Smart play involves leveraging the spell's duration and effects to influence outcomes beyond combat, such as negotiating or exploring dangerous areas.",
+        "cta": "DMs: Use Aid to bolster your allies' hit points and set up future actions; it's not just a temporary boost for the next fight.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+        "video_sha256": "f64990dcc437377e32e394d9ee18e92f136078c48c93d565fe4b3c17d5b7c796"
+      }
     }
   ]
 }
