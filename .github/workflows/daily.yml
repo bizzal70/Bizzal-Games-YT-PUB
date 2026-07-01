@@ -106,7 +106,16 @@ jobs:
 
       - name: Install ffmpeg
         if: steps.guard.outputs.proceed == 'true'
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+        # Retry + hard-timeout each apt call so a transient runner/apt
+        # stall self-heals instead of hanging the whole run for hours.
+        timeout-minutes: 12
+        run: |
+          for i in 1 2 3; do
+            timeout 120 sudo apt-get update -o Acquire::Retries=3 || { echo "apt update timed out (attempt $i)"; sleep 5; continue; }
+            timeout 180 sudo apt-get install -y -o Acquire::Retries=3 ffmpeg && { echo "ffmpeg installed (attempt $i)"; exit 0; }
+            echo "ffmpeg install failed/timed out (attempt $i); retrying in 5s"; sleep 5
+          done
+          echo "ffmpeg install failed after 3 attempts" >&2; exit 1
 
       - name: Install Python deps
         if: steps.guard.outputs.proceed == 'true'
