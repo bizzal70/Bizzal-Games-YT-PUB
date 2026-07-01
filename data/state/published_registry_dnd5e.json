@@ -25,6 +25,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
         "video_sha256": "d989ed87f6fc769f31c25164d9996ead4913e891cdafa506442a680d13c9baa1"
       }
+    },
+    {
+      "published_utc": "2026-07-01T04:07:17Z",
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-6ed5d7d819c5",
+      "publish_hash": "9681bb46d74600ace147aebe815196298dd70ff399c51c5216efe6becfbcf105",
+      "youtube_video_id": "txy115A4zZY",
+      "youtube_url": "https://www.youtube.com/watch?v=txy115A4zZY",
+      "video_sha256": "7d23c9cb96d944ecb94a0097b5ac56ef52b0d6588d1c0fb29d707758d3c2447a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+      "fingerprint": {
+        "day": "2026-06-30",
+        "category": "spell_use_case",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-6ed5d7d819c5",
+        "canonical_hash": "6ed5d7d819c57242a3ec1e0da34e7b25c699b12898b3016cc312e7c4cc354187",
+        "script_id": "2e295044fd46b3c01251729639fae54fa04d4cbff97158abfc6e05d6aa599f23",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_acid-splash",
+        "fact_name": "Acid Splash",
+        "hook": "Acid Splash looks low-stakes until smart timing makes it absurdly useful.",
+        "body": "Acid Splash isn’t just a cantrip; it’s a tactical choice. Range: 60 ft, 5-foot-radius sphere. Creatures in the area need to roll a Dexterity saving throw or take 1d6 Acid damage. Don’t waste it on something that thrives on saves. Use it to extract information or gain an advantage—make the spell matter beyond just numbers.",
+        "cta": "DMs: Use Acid Splash against foes that can’t save, like those caught in your Sleet Storm, to shift the odds in your favor.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+        "video_sha256": "7d23c9cb96d944ecb94a0097b5ac56ef52b0d6588d1c0fb29d707758d3c2447a"
+      }
     }
   ]
 }
