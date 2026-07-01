@@ -1,0 +1,16 @@
+{
+  "approvals": {
+    "2026-06-30": {
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-30f5c2a2be9f",
+      "category": "spell_use_case",
+      "angle": "dm_counterplay",
+      "status": "approved_publish_failed",
+      "requested_utc": "2026-07-01T03:24:39Z",
+      "decision_utc": "2026-07-01T03:24:39Z",
+      "decision_by": "autopublish",
+      "publish_rc": 4,
+      "publish_output": "ERROR: upload failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    }
+  }
+}
