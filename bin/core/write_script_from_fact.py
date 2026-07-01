@@ -181,9 +181,9 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
         ctx = creature_context(name, fields)
         if a == "moral_choice":
             return deterministic_pick([
-                f"DMs: by round 2, force this call—protect people now or finish the objective before the cost spikes.",
+                f"DMs: by round 2, force this callâprotect people now or finish the objective before the cost spikes.",
                 f"DMs: make the table choose fast: secure the objective, or spend turns protecting who gets caught in the fallout.",
-                f"DMs: present two valid wins, then require a sacrifice—save everyone or end the threat quickly, not both.",
+                f"DMs: present two valid wins, then require a sacrificeâsave everyone or end the threat quickly, not both.",
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "time_pressure":
             return deterministic_pick([
@@ -258,7 +258,7 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
             return deterministic_pick([
                 "Players: pick one obstacle this session and solve it with the item before combat even starts.",
                 "Players: call your setup first, then use the item to bend the scene in your favor.",
-                "Players: treat this as a positioning tool—make the map easier before the dice get loud.",
+                "Players: treat this as a positioning toolâmake the map easier before the dice get loud.",
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "best_user":
             return deterministic_pick([
@@ -293,7 +293,7 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "fast_ruling":
             return deterministic_pick([
-                "DMs: resolve in one sentence, one ruling, one consequence—then keep initiative moving.",
+                "DMs: resolve in one sentence, one ruling, one consequenceâthen keep initiative moving.",
                 "Use a fast ruling pattern: intent, trigger, outcome, done.",
                 "Keep the call short and decisive so pace stays high and trust stays intact.",
             ], f"cta|{day}|{c}|{a}|{name}")
@@ -306,7 +306,7 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
         if a == "dm_fairness_tip":
             return deterministic_pick([
                 "DMs: apply this call the same way for monsters and players, especially when it hurts.",
-                "Fairness check: if enemies get it, PCs get it too—and vice versa.",
+                "Fairness check: if enemies get it, PCs get it tooâand vice versa.",
                 "Use symmetry as your guardrail: same trigger, same ruling, no favorites.",
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "player_tip":
@@ -319,7 +319,7 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
             return deterministic_pick([
                 "Table myth check: say the myth out loud, then run the text as written for one full session.",
                 "DMs: separate habit from rule and make the correction visible at the table.",
-                "Use this as a reset moment—replace folklore rulings with consistent text-driven calls.",
+                "Use this as a reset momentâreplace folklore rulings with consistent text-driven calls.",
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "why_people_get_it_wrong":
             return deterministic_pick([
@@ -337,12 +337,12 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
             return deterministic_pick([
                 "DMs: telegraph the ruling before it matters so players can plan around it fairly.",
                 "Call this out early, then enforce it consistently when stakes rise.",
-                "Front-load the ruling, not the surprise—players should lose to decisions, not ambiguity.",
+                "Front-load the ruling, not the surpriseâplayers should lose to decisions, not ambiguity.",
             ], f"cta|{day}|{c}|{a}|{name}")
         return deterministic_pick([
             "Table rule: make one clear call, apply it consistently, and move on.",
             "Rule flow: decide once, explain briefly, keep the game moving.",
-            "Consistency beats complexity—pick the ruling and stick to it.",
+            "Consistency beats complexityâpick the ruling and stick to it.",
         ], f"cta|{day}|{c}|{a}|{name}")
 
     if c == "character_micro_tip":
@@ -360,9 +360,9 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "survivability":
             return deterministic_pick([
-                "Players: protect your position first—dead DPR is still zero DPR.",
+                "Players: protect your position firstâdead DPR is still zero DPR.",
                 "Take one safer square this round and buy yourself three better rounds later.",
-                "Build survivability into your default turn so pressure doesn’t break your plan.",
+                "Build survivability into your default turn so pressure doesnât break your plan.",
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "exploration_edge":
             return deterministic_pick([
@@ -374,13 +374,13 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
             return deterministic_pick([
                 "Players: announce intent early so your teammates can stack stronger turns with you.",
                 "Table habit: state your plan before rolling and invite one teammate combo.",
-                "Make your turns readable—clear intent creates cleaner teamwork.",
+                "Make your turns readableâclear intent creates cleaner teamwork.",
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "early_power_spike":
             return deterministic_pick([
                 "Players: plan your first real power spike two sessions ahead, then build your choices so that turn lands clean and loud.",
                 "Players: call your early spike level now, then make every feat, spell, and tactic feed that moment.",
-                "Players: map your first breakout level and protect that timing—don’t spend tomorrow’s win on today’s panic.",
+                "Players: map your first breakout level and protect that timingâdonât spend tomorrowâs win on todayâs panic.",
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "subclass_identity":
             return deterministic_pick([
@@ -390,21 +390,21 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "resource_breakpoint":
             return deterministic_pick([
-                "Players: decide your spend line before initiative—what gets used every fight and what stays loaded for boss pressure.",
+                "Players: decide your spend line before initiativeâwhat gets used every fight and what stays loaded for boss pressure.",
                 "Players: set a resource budget now so your class feels reliable in room one and dangerous in room four.",
                 "Players: pre-commit your high-value resources to clear trigger moments, not vibes.",
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "party_role_pivot":
             return deterministic_pick([
                 "Players: name your pivot turn out loud so the party knows when you switch from setup to finisher.",
-                "Players: practice one clean role pivot this week—open as support, close as pressure when the board tips.",
+                "Players: practice one clean role pivot this weekâopen as support, close as pressure when the board tips.",
                 "Players: call the pivot early and coordinate it, so your class changes tempo instead of chasing it.",
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "progression_trap":
             return deterministic_pick([
                 "Players: skip one flashy trap pick and invest in the feature that makes your next ten sessions smoother.",
                 "Players: if a choice delays your core engine, park it for later and keep your progression clean now.",
-                "Players: protect your build path—fun options are great, but dead levels are expensive.",
+                "Players: protect your build pathâfun options are great, but dead levels are expensive.",
             ], f"cta|{day}|{c}|{a}|{name}")
         return deterministic_pick([
             "Pick one repeatable decision pattern and run it every session until it is automatic.",
@@ -514,7 +514,7 @@ def apply_low_dc_humor_lane(atom: dict, fact: dict, script: dict, day: str = "")
 
     if category == "monster_tactic":
         script["hook"] = deterministic_pick([
-            f"Yes, {name} looks harmless—until the table underestimates it and gives it free turns.",
+            f"Yes, {name} looks harmlessâuntil the table underestimates it and gives it free turns.",
             f"{name} is the classic 'easy fight' that gets weird fast if players autopilot.",
             f"Low-threat on paper, high-chaos at the table: {name}.",
         ], f"humor|{day}|{category}|{angle}|{name}|hook")
@@ -534,14 +534,14 @@ def apply_low_dc_humor_lane(atom: dict, fact: dict, script: dict, day: str = "")
     elif category == "spell_use_case":
         script["hook"] = deterministic_pick([
             f"{name} looks low-stakes until smart timing makes it absurdly useful.",
-            f"{name} is the spell people joke about—right before it saves a turn cycle.",
+            f"{name} is the spell people joke aboutâright before it saves a turn cycle.",
             f"Cheap-looking spell, expensive mistakes if you ignore timing: {name}.",
         ], f"humor|{day}|{category}|{angle}|{name}|hook")
 
     elif category == "item_spotlight":
         script["hook"] = deterministic_pick([
             f"{name}: humble gear with main-character energy when the table gets creative.",
-            f"Nobody flexes {name}—until it solves the problem your magic couldn't.",
+            f"Nobody flexes {name}âuntil it solves the problem your magic couldn't.",
             f"Low-cost item, high-chaos potential: {name}.",
         ], f"humor|{day}|{category}|{angle}|{name}|hook")
 
@@ -684,7 +684,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
         if maybe_prefix:
             prefix = maybe_prefix
 
-    # Same mechanics extraction as maybe_ai_polish_script — grounds the CTA in real numbers
+    # Same mechanics extraction as maybe_ai_polish_script â grounds the CTA in real numbers
     _cta_strip = {
         "desc", "document", "illustration", "index", "initialHeaderLevel",
         "ruleset", "unit", "weight",
@@ -699,7 +699,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
         if isinstance(_v, bool) and not _v:
             continue
         if isinstance(_v, str) and len(_v) > 300:
-            _v = _v[:300] + "…"
+            _v = _v[:300] + "â¦"
         cta_mechanics[_k] = _v
 
     prompt = {
@@ -718,7 +718,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
         "requirements": [
             "Return exactly one CTA sentence.",
             f"Start with '{prefix}:'.",
-            "Use a specific mechanic, number, or condition from fact_mechanics — not a generic observation.",
+            "Use a specific mechanic, number, or condition from fact_mechanics â not a generic observation.",
             "Match the hook/body tactical intent.",
             "Use practical table-facing language, not theatrical narration.",
             "Keep it concise: 12-24 words.",
@@ -742,7 +742,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
                     "You rewrite RPG short-form CTA lines. "
                     "Voice: dry, world-weary veteran DM who has run this encounter a hundred times. "
                     "No hype, no cheerleading, no pep-talk energy. "
-                    "Authoritative and specific — you call the table's bad habits what they are. "
+                    "Authoritative and specific â you call the table's bad habits what they are. "
                     "One wry sentence that tells them exactly what to do and implies they already know why."
                 ),
             },
@@ -799,7 +799,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
 
 
 def locked_tokens(script: dict, fact: dict) -> list:
-    # Only lock the fact name — numbers are allowed to drop when the AI rewrites
+    # Only lock the fact name â numbers are allowed to drop when the AI rewrites
     # scenario-first. Stat recitation is the problem we're solving, not preserving.
     tokens = set()
     name = (fact.get("name") or (fact.get("fields") or {}).get("name") or "").strip()
@@ -836,10 +836,10 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
     spice = (style.get("spice") or [])
     spice_str = spice[0] if spice else ""
     spice_instruction = {
-        "wry":      "Add a wry edge — one beat of dry irony, like someone who predicted this outcome.",
-        "sardonic": "Go slightly sardonic — a knowing, world-weary detachment. Not mean, just tired.",
-        "deadpan":  "Play it completely deadpan — flat delivery, zero affect, maximum dryness.",
-        "punchy":   "Be punchy — short sentences, direct hits, no wind-up.",
+        "wry":      "Add a wry edge â one beat of dry irony, like someone who predicted this outcome.",
+        "sardonic": "Go slightly sardonic â a knowing, world-weary detachment. Not mean, just tired.",
+        "deadpan":  "Play it completely deadpan â flat delivery, zero affect, maximum dryness.",
+        "punchy":   "Be punchy â short sentences, direct hits, no wind-up.",
     }.get(spice_str, "")
 
     # Extract raw mechanical fields so the AI has actual numbers to reason from,
@@ -865,17 +865,17 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             continue
         # truncate any string value that somehow snuck through and is too long
         if isinstance(val, str) and len(val) > 300:
-            val = val[:300] + "…"
+            val = val[:300] + "â¦"
         fact_mechanics[key] = val
 
     prompt = {
         "task": (
             "Rewrite hook/body/cta as a dry mechanical observation for someone who already read the manual. "
             "No scenes. No characters. No narration. "
-            "Use the fact_mechanics fields to make specific, grounded statements — "
+            "Use the fact_mechanics fields to make specific, grounded statements â "
             "exact duration, exact range, concentration requirement, damage dice, saving throw type. "
             "State what the mechanic actually does that players consistently get wrong, "
-            "and what smart play looks like — in plain declarative sentences."
+            "and what smart play looks like â in plain declarative sentences."
             + (f" Spice modifier: {spice_instruction}" if spice_instruction else "")
         ),
         "category": atom.get("category") or "",
@@ -898,16 +898,16 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             "Return strict JSON object with keys: hook, body, cta.",
             "Do not invent mechanics, stats, or proper nouns that aren't in the input.",
             "fact_name must appear somewhere in the output.",
-            "Hook: one dry declarative sentence. The specific thing players get wrong about this mechanic — stated as fact, not question.",
-            "Body: 2-4 sentences. Draw from fact_mechanics — use the actual duration, range, concentration flag, damage dice, saving throw type, or class list. Name the specific mechanical interaction. Name the common mistake with a concrete example. Name what smart play does instead. BAD: 'players often overlook the strategic advantage.' GOOD: 'Alter Self lasts 1 hour with concentration — most players burn it right before combat and lose it on the first failed Constitution save. The move is casting it at the start of an infiltration, before any rolls happen.' Be that specific.",
-            "CTA: one sentence. The exact condition or setup where this mechanic pays off — named precisely.",
+            "Hook: one dry declarative sentence. The single most surprising mechanical fact here (never open the hook with 'Players often') â stated as fact, not question.",
+            "Body: 2-4 sentences. Draw from fact_mechanics â use the actual duration, range, concentration flag, damage dice, saving throw type, or class list. Name the specific mechanical interaction. Name the common mistake with a concrete example. Then name the better line of play. BANNED OPENERS (never start any sentence with these): 'Players often', 'The smart play is', 'Smart play involves', 'The common mistake is'. Lead with the mechanic, the number, or the consequence, and vary sentence structure across hook/body/cta. BAD: 'players often overlook the strategic advantage.' GOOD: 'Alter Self lasts 1 hour with concentration â most players burn it right before combat and lose it on the first failed Constitution save. The move is casting it at the start of an infiltration, before any rolls happen.' Be that specific.",
+            "CTA: one sentence. The exact condition or setup where this mechanic pays off â named precisely.",
             "No vague generalization. 'Players miss the strategic advantage' is forbidden. 'Players cast this before a long rest and waste the 8-hour duration' is correct.",
             "No scenes. No characters in the text ('the rogue', 'the goblin', 'your party', 'an ally'). Mechanics are the subject of every sentence.",
             "Do NOT recite the description text verbatim or near-verbatim.",
             "No cheerleading: no 'exciting', 'amazing', 'powerful tool', 'let's dive in'.",
             "No soft filler: no 'in your next session', 'consider using', 'feel free to', 'don't forget', 'influence outcomes'.",
             "No theatrical setup: no 'Picture this', 'Who knew', 'Suddenly', 'Watch as', 'It's about the story'.",
-            "When pdf_flavor_snippet is provided, extract a specific mechanical detail from it — not flavor.",
+            "When pdf_flavor_snippet is provided, extract a specific mechanical detail from it â not flavor.",
             "No markdown.",
         ],
     }
@@ -922,7 +922,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
                 "content": (
                     "You are a veteran DM making observations about RPG mechanics. "
                     "Dry, world-weary, slightly sardonic. No scenes, no characters, no narration. "
-                    "You make an observation about how a mechanic actually works at the table — "
+                    "You make an observation about how a mechanic actually works at the table â "
                     "what players consistently get wrong, what the rules mean in practice, "
                     "when it matters and why most people miss it. "
                     "You do not tell stories. You do not set scenes. You do not describe goblins doing things. "
@@ -1081,14 +1081,14 @@ def build_item_body(angle: str, fields: dict):
     if angle == "story_hook":
         bits = []
         if desc: bits.append(desc)
-        bits.append("In play: use it to turn one strong PC into a whole crew—hauling gates, dragging statues, or lifting a buddy out of a pit.")
+        bits.append("In play: use it to turn one strong PC into a whole crewâhauling gates, dragging statues, or lifting a buddy out of a pit.")
         if stats: bits.append(stats)
         return " ".join(bits)
 
     if angle == "clever_use":
         bits = []
         if desc: bits.append(desc)
-        bits.append("Clever uses: lift a portcullis just enough to squeeze under, haul a chest across a trapped hallway from cover, or rig a ‘poor man’s elevator’ in a shaft.")
+        bits.append("Clever uses: lift a portcullis just enough to squeeze under, haul a chest across a trapped hallway from cover, or rig a âpoor manâs elevatorâ in a shaft.")
         bits.append("Rule of thumb: if you can anchor it, you can move it.")
         if stats: bits.append(stats)
         return " ".join(bits)
@@ -1097,7 +1097,7 @@ def build_item_body(angle: str, fields: dict):
         bits = []
         if desc: bits.append(desc)
         bits.append("It needs an anchor point, time to rig, and space to work. In a cramped tunnel or mid-combat? Good luck.")
-        bits.append("DM tip: ask ‘where is it anchored?’ and ‘who is holding tension?’—that’s where the tension lives.")
+        bits.append("DM tip: ask âwhere is it anchored?â and âwho is holding tension?ââthatâs where the tension lives.")
         if stats: bits.append(stats)
         return " ".join(bits)
 
@@ -1116,11 +1116,11 @@ def has_trait(traits: list, needle: str) -> bool:
     return False
 
 def tactic_nugget(angle: str, traits: list) -> str:
-    # Add small, grounded “expert” lines based on well-known trait mechanics.
+    # Add small, grounded âexpertâ lines based on well-known trait mechanics.
     # Keep these short; this is Shorts content.
     if has_trait(traits, "Pack Tactics"):
         if angle == "how_it_wins":
-            return "Pack Tactics means it wants adjacency—swarm one target and farm advantage."
+            return "Pack Tactics means it wants adjacencyâswarm one target and farm advantage."
         if angle == "common_mistake":
             return "Mistake: letting it surround you. Once it has buddies in 5 feet, the hits get sticky."
         if angle == "counterplay":
@@ -1143,7 +1143,7 @@ def short(s: str, n=160, add_ellipsis=True):
     clause_break = max(window.rfind("; "), window.rfind(": "), window.rfind(", "))
     if clause_break >= int(n * 0.7):
         out = window[:clause_break].strip().rstrip(",;:")
-        return (out + "…") if add_ellipsis else (out + ".")
+        return (out + "â¦") if add_ellipsis else (out + ".")
 
     cut = window.rfind(" ")
     if cut <= 0:
@@ -1157,9 +1157,9 @@ def short(s: str, n=160, add_ellipsis=True):
             break
         trimmed = updated
     if trimmed:
-        return (trimmed + "…") if add_ellipsis else (trimmed + ".")
+        return (trimmed + "â¦") if add_ellipsis else (trimmed + ".")
     fallback = s[:n].rstrip().rstrip(",;:-")
-    return (fallback + "…") if add_ellipsis else (fallback + ".")
+    return (fallback + "â¦") if add_ellipsis else (fallback + ".")
 
 
 def deterministic_pick(options, seed_key: str):
@@ -1192,11 +1192,11 @@ def clean_script_text(s: str) -> str:
     if not txt:
         return ""
 
-    # Normalize Unicode punctuation → plain ASCII (prevents mojibake in DB and TTS)
-    txt = txt.replace("‘", "'").replace("’", "'")
-    txt = txt.replace("“", '"').replace("”", '"')
-    txt = txt.replace("–", "-").replace("—", " - ")
-    txt = txt.replace("…", ".")
+    # Normalize Unicode punctuation â plain ASCII (prevents mojibake in DB and TTS)
+    txt = txt.replace("â", "'").replace("â", "'")
+    txt = txt.replace("â", '"').replace("â", '"')
+    txt = txt.replace("â", "-").replace("â", " - ")
+    txt = txt.replace("â¦", ".")
     txt = txt.replace("*", "")
     txt = re.sub(r"\s+([,.;:!?])", r"\1", txt)
     txt = re.sub(r"([,.;:!?])([^\s])", r"\1 \2", txt)
@@ -1238,7 +1238,7 @@ def clean_ai_style_text(s: str, segment: str = "body") -> str:
     txt = txt.replace("Player Characters:", "Players:")
 
     txt = re.sub(
-        r"Table setup[—-]let's run the encounter of the ([A-Za-z][A-Za-z\- ]+)\.",
+        r"Table setup[â-]let's run the encounter of the ([A-Za-z][A-Za-z\- ]+)\.",
         r"Table setup: \1 encounter.",
         txt,
         flags=re.IGNORECASE,
@@ -1399,7 +1399,7 @@ def build_monster_body(angle: str, fields: dict, traits: list, actions: list, at
 
     if angle == "common_mistake":
         lead = deterministic_pick([
-            f"Common mistake vs {name}: treating it like ‘just flavor.’",
+            f"Common mistake vs {name}: treating it like âjust flavor.â",
             f"Most tables misplay {name} by giving it free setup.",
             f"The usual error against {name} is fighting on its terms.",
         ], f"mon|{day}|{name}|{angle}|lead")
@@ -1525,19 +1525,19 @@ def spell_nuggets(angle: str, fields: dict):
 
     if is_concentration(fields):
         if angle == "best_moment":
-            nuggets.append("It’s Concentration—cast it when you can protect it, not when you’re about to get punched in the teeth.")
+            nuggets.append("Itâs Concentrationâcast it when you can protect it, not when youâre about to get punched in the teeth.")
         elif angle == "common_misplay":
-            nuggets.append("Misplay: dropping Concentration immediately. If you can’t keep it up, pick a different spell.")
+            nuggets.append("Misplay: dropping Concentration immediately. If you canât keep it up, pick a different spell.")
         else:
-            nuggets.append("DM twist: pressure Concentration with terrain and threats, not cheap ‘gotcha’ counters.")
+            nuggets.append("DM twist: pressure Concentration with terrain and threats, not cheap âgotchaâ counters.")
 
         # Control-spell table advice (works for banish/maze-style effects)
         if angle == "best_moment":
-            nuggets.append("Best use: swing the action economy—remove the scariest turn, then clean up.")
+            nuggets.append("Best use: swing the action economyâremove the scariest turn, then clean up.")
         elif angle == "common_misplay":
-            nuggets.append("Misplay: spending a high slot to ‘delay’ a fight you could just finish.")
+            nuggets.append("Misplay: spending a high slot to âdelayâ a fight you could just finish.")
         else:
-            nuggets.append("DM twist: have allies react—guard the exit, punish the caster, or change the objective.")
+            nuggets.append("DM twist: have allies reactâguard the exit, punish the caster, or change the objective.")
     if "touch" in rng or "melee" in rng:
         nuggets.append("Delivery matters: plan how you get into touch range without donating HP.")
 
@@ -1545,7 +1545,7 @@ def spell_nuggets(angle: str, fields: dict):
         nuggets.append("Timing tip: this is often better *before* initiative than after.")
 
     if "saving throw" in desc or "save" in desc:
-        nuggets.append("Target smart: don’t throw save-or-suck at the creature that’s built to save.")
+        nuggets.append("Target smart: donât throw save-or-suck at the creature thatâs built to save.")
 
     return nuggets[:2]
 
@@ -1582,7 +1582,7 @@ def build_spell_body(angle: str, fields: dict):
         if anchor: bits.append(anchor + ".")
         if desc: bits.append(desc)
         bits += nugs
-        bits.append("Reward clever casting with information, access, or advantage—not just a reroll.")
+        bits.append("Reward clever casting with information, access, or advantageânot just a reroll.")
         return " ".join(bits)
 
     bits = [f"{name} is strongest when cast to change the encounter state, not just to roll damage."]
@@ -1636,7 +1636,7 @@ def build_class_body(angle: str, fields: dict):
     elif angle == "resource_breakpoint":
         lead = f"Resource breakpoint for {name}: know what you can spend every fight vs what must be saved for boss pressure."
     elif angle == "party_role_pivot":
-        lead = f"Role pivot for {name}: decide when to switch from setup to closer so the party doesn’t over-invest in one lane."
+        lead = f"Role pivot for {name}: decide when to switch from setup to closer so the party doesnât over-invest in one lane."
     elif angle == "progression_trap":
         lead = f"Progression trap for {name}: avoid flashy picks that delay your core engine by multiple levels."
     elif angle == "level_1_choice":
@@ -1690,7 +1690,7 @@ def build_encounter_body(angle: str, fields: dict, traits: list, actions: list, 
     elif angle == "moral_choice":
         lead = deterministic_pick([
             f"Moral-choice seed with {name}: success should ask what the party is willing to sacrifice.",
-            f"Frame {name} as a values test: they can save everything, or they can win cleanly—not both.",
+            f"Frame {name} as a values test: they can save everything, or they can win cleanlyânot both.",
             f"Use {name} to force a moral fork where every path has a cost.",
         ], f"enc|{day}|{name}|{angle}|lead")
     else:
@@ -1734,7 +1734,7 @@ def build_encounter_hook(angle: str, fields: dict, day: str = "") -> str:
 
     if a == "time_pressure":
         return deterministic_pick([
-            f"Put {name} in {arena} and start a visible clock—every delay should make {pressure} worse.",
+            f"Put {name} in {arena} and start a visible clockâevery delay should make {pressure} worse.",
             f"Frame a {name} encounter with a timer so the party must trade certainty for speed.",
             f"Run {name} with a hard clock and consequences each round; indecision should hurt more than damage.",
         ], f"hook|{day}|encounter_seed|{a}|{name}")
@@ -1802,7 +1802,7 @@ def build_encounter_cta(angle: str, fields: dict, day: str = "") -> str:
 
     if a == "moral_choice":
         return deterministic_pick([
-            f"DMs: by round 2, force a hard choice—protect people now or secure the objective before losses escalate.",
+            f"DMs: by round 2, force a hard choiceâprotect people now or secure the objective before losses escalate.",
             f"DMs: make them choose what they can live with: save everyone at higher risk, or end the threat before collateral climbs.",
             f"DMs: write two good outcomes and require one sacrifice; this scene should not allow a clean, total win.",
         ], f"cta_guard|{day}|encounter_seed|{a}|{name}")
