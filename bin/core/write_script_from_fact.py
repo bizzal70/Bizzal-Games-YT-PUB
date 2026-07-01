@@ -858,7 +858,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             "Do NOT recite the description text verbatim or near-verbatim. If your body reads like a rulebook entry, it is wrong.",
             "No cheerleading: no 'exciting', 'amazing', 'powerful tool', 'let's dive in'.",
             "No soft filler: no 'in your next session', 'consider using', 'feel free to', 'don't forget'.",
-            "No theatrical fantasy narration: no 'the darkness beckons', 'adventurers gather'.",
+            "No theatrical flourishes: no 'Picture this', 'Who knew', 'Suddenly', 'oblivious to doom', 'the darkness beckons', 'adventurers gather'. Dry observation, not campfire narration.",
             "When pdf_flavor_snippet is provided, use at least one concrete detail from it — but as a scenario, not a quote.",
             "No markdown.",
         ],
@@ -866,7 +866,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
 
     payload = {
         "model": model,
-        "temperature": 0.65,
+        "temperature": 0.55,
         "response_format": {"type": "json_object"},
         "messages": [
             {
