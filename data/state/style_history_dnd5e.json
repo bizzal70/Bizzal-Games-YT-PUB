@@ -1,0 +1,14 @@
+{
+  "2026-06-30": {
+    "spell_use_case": {
+      "angle": "dm_counterplay",
+      "voice": "gritty_dm",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "onyx"
+    }
+  }
+}
