@@ -161,6 +161,11 @@ def main():
 
     os.makedirs(STATE_DIR, exist_ok=True)
     hist = load_history()
+    try:
+        yesterday = (datetime.strptime(day, "%Y-%m-%d") - timedelta(days=1)).strftime("%Y-%m-%d")
+    except ValueError:
+        yesterday = ""
+    prev = (hist.get(yesterday) or {}).get(category) or {}
 
     try:
         tone_lookback_days = int((os.getenv("BIZZAL_TONE_VARIETY_LOOKBACK_DAYS") or "5").strip())
