@@ -715,7 +715,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
 
     payload = {
         "model": model,
-        "temperature": 0,
+        "temperature": 0.35,
         "messages": [
             {
                 "role": "system",
@@ -816,12 +816,22 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
     if not pdf_flavor_required() and not pdf_snippet:
         ai_diag("AI script polish continuing without PDF flavor snippet (best-effort mode)")
 
+    spice = (style.get("spice") or [])
+    spice_str = spice[0] if spice else ""
+    spice_instruction = {
+        "wry":      "Add a wry edge — one beat of dry irony, like someone who predicted this outcome.",
+        "sardonic": "Go slightly sardonic — a knowing, world-weary detachment. Not mean, just tired.",
+        "deadpan":  "Play it completely deadpan — flat delivery, zero affect, maximum dryness.",
+        "punchy":   "Be punchy — short sentences, direct hits, no wind-up.",
+    }.get(spice_str, "")
+
     prompt = {
         "task": (
             "Rewrite hook/body/cta in the voice of a dry, world-weary veteran DM "
             "who has run this a hundred times and has no patience for hype or hand-holding. "
             "Authoritative, specific, slightly wry. No cheerleading. "
             "Preserve all factual content — just change the tone."
+            + (f" Spice modifier: {spice_instruction}" if spice_instruction else "")
         ),
         "category": atom.get("category") or "",
         "angle": atom.get("angle") or "",
@@ -830,6 +840,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
         "voice": style.get("voice") or "wry_vet",
         "persona": style.get("persona") or "wry_vet",
         "tone": style.get("tone") or "dry",
+        "spice": spice_str,
         "pdf_flavor_snippet": pdf_snippet,
         "locked_tokens": locked_tokens(script, fact),
         "input": {
@@ -854,7 +865,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
 
     payload = {
         "model": model,
-        "temperature": 0.4,
+        "temperature": 0.65,
         "response_format": {"type": "json_object"},
         "messages": [
             {
