@@ -21,6 +21,14 @@
         "punchy"
       ],
       "tts_voice_id": "ash"
+    },
+    "spell_use_case": {
+      "angle": "combo_pairing",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [],
+      "tts_voice_id": "ash"
     }
   }
 }

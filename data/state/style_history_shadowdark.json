@@ -21,6 +21,14 @@
         "deadpan"
       ],
       "tts_voice_id": "onyx"
+    },
+    "spell_use_case": {
+      "angle": "common_misplay",
+      "voice": "strict_referee",
+      "tone": "dry",
+      "persona": "arcane_survival_coach",
+      "spice": [],
+      "tts_voice_id": "coral"
     }
   }
 }
