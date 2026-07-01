@@ -684,11 +684,30 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
         if maybe_prefix:
             prefix = maybe_prefix
 
+    # Same mechanics extraction as maybe_ai_polish_script — grounds the CTA in real numbers
+    _cta_strip = {
+        "desc", "document", "illustration", "index", "initialHeaderLevel",
+        "ruleset", "unit", "weight",
+        "condition_immunities_display", "damage_immunities_display",
+        "damage_resistances_display", "damage_vulnerabilities_display", "languages_desc",
+    }
+    _cta_raw = fact.get("fields") or {}
+    cta_mechanics: dict = {}
+    for _k, _v in _cta_raw.items():
+        if _k in _cta_strip or _v is None or _v == "" or _v == []:
+            continue
+        if isinstance(_v, bool) and not _v:
+            continue
+        if isinstance(_v, str) and len(_v) > 300:
+            _v = _v[:300] + "…"
+        cta_mechanics[_k] = _v
+
     prompt = {
         "category": category,
         "angle": angle,
         "kind": kind,
         "fact_name": name,
+        "fact_mechanics": cta_mechanics,
         "voice": voice,
         "persona": style.get("persona") or "table_coach",
         "tone": style.get("tone") or "neutral",
@@ -699,11 +718,11 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
         "requirements": [
             "Return exactly one CTA sentence.",
             f"Start with '{prefix}:'.",
-            "Match the hook/body tactical intent and creature/spell/item context.",
-            "Avoid generic phrasing like 'drop one in the dungeon'.",
+            "Use a specific mechanic, number, or condition from fact_mechanics — not a generic observation.",
+            "Match the hook/body tactical intent.",
             "Use practical table-facing language, not theatrical narration.",
             "Keep it concise: 12-24 words.",
-            "Avoid phrases like 'create a tense environment' and 'challenge players to decide'.",
+            "No vague phrasing like 'drop one in the dungeon', 'create a tense environment', 'challenge players to decide'.",
             "When pdf_flavor_snippet is provided, include at least one concrete detail from it.",
             "No markdown, no bullets, no quotes.",
         ],
@@ -825,16 +844,29 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
 
     # Extract raw mechanical fields so the AI has actual numbers to reason from,
     # not just a name. Without this it invents vague generalizations.
+    # Strip noise keys that are long prose, URLs, or display-only duplicates.
+    _FIELDS_STRIP = {
+        "desc", "document", "illustration", "index", "initialHeaderLevel",
+        "ruleset", "unit", "weight",
+        # display-only duplicates (the _display suffix variants are prose rewrites)
+        "condition_immunities_display", "damage_immunities_display",
+        "damage_resistances_display", "damage_vulnerabilities_display",
+        "languages_desc",
+    }
     raw_fields = fact.get("fields") or {}
     fact_mechanics: dict = {}
-    for key in ("level", "school", "concentration", "duration", "range_text", "range",
-                "casting_time", "ritual", "damage_roll", "damage_types", "saving_throw_ability",
-                "attack_roll", "target_count", "shape_type", "shape_size", "shape_size_unit",
-                "verbal", "somatic", "material", "material_specified", "material_cost",
-                "higher_level", "classes"):
-        val = raw_fields.get(key)
-        if val is not None and val != "" and val != [] and val is not False:
-            fact_mechanics[key] = val
+    for key, val in raw_fields.items():
+        if key in _FIELDS_STRIP:
+            continue
+        # skip falsy zeros only for booleans; keep numeric zeros (range=0 is meaningful)
+        if val is None or val == "" or val == []:
+            continue
+        if isinstance(val, bool) and not val:
+            continue
+        # truncate any string value that somehow snuck through and is too long
+        if isinstance(val, str) and len(val) > 300:
+            val = val[:300] + "…"
+        fact_mechanics[key] = val
 
     prompt = {
         "task": (
