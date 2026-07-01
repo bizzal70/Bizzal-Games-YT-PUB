@@ -10,5 +10,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-07-01": {
+    "rules_ruling": {
+      "angle": "dm_fairness_tip",
+      "voice": "friendly_vet",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

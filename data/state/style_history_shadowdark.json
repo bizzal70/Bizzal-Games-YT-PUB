@@ -10,5 +10,17 @@
       ],
       "tts_voice_id": "coral"
     }
+  },
+  "2026-07-01": {
+    "item_spotlight": {
+      "angle": "drawback_watchout",
+      "voice": "torchbearer_ref",
+      "tone": "dry",
+      "persona": "dungeon_gear_mentor",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }
