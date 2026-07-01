@@ -14,9 +14,9 @@ on:
   workflow_dispatch:
     inputs:
       systems:
-        description: 'Which system(s): "auto" (daily rotation), "all", or a specific id like "dnd5e"'
+        description: 'Which system(s): "all" (every active system, default), "auto" (one per day rotation), or a specific id like "dnd5e"'
         required: false
-        default: "auto"
+        default: "all"
       privacy:
         description: "YouTube privacy for this run: unlisted | private | public"
         required: false
@@ -62,7 +62,7 @@ jobs:
       BIZZAL_ENABLE_BG_MUSIC: "1"
     steps:
       - name: Checkout (full history for commit-back)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -85,7 +85,7 @@ jobs:
 
       - name: Set up Python
         if: steps.guard.outputs.proceed == 'true'
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -115,7 +115,7 @@ jobs:
       - name: Run daily pipeline
         if: steps.guard.outputs.proceed == 'true'
         env:
-          BIZZAL_CLOUD_SYSTEMS: ${{ github.event.inputs.systems || 'auto' }}
+          BIZZAL_CLOUD_SYSTEMS: ${{ github.event.inputs.systems || 'all' }}
           BIZZAL_YT_PRIVACY: ${{ github.event.inputs.privacy || 'unlisted' }}
           # dry_run: generate + render but skip the YouTube upload entirely.
           BIZZAL_SKIP_PUBLISH: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
