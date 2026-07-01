@@ -2,15 +2,16 @@
   "approvals": {
     "2026-06-30": {
       "day": "2026-06-30",
-      "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-30f5c2a2be9f",
+      "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-c95c4dce1877",
       "category": "spell_use_case",
       "angle": "dm_counterplay",
-      "status": "approved_publish_failed",
-      "requested_utc": "2026-07-01T03:24:39Z",
-      "decision_utc": "2026-07-01T03:24:39Z",
+      "status": "published",
+      "requested_utc": "2026-07-01T03:37:29Z",
+      "decision_utc": "2026-07-01T03:37:29Z",
       "decision_by": "autopublish",
-      "publish_rc": 4,
-      "publish_output": "ERROR: upload failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+      "publish_rc": 0,
+      "publish_output": "[upload_youtube] uploaded id=jqAsmvryWK4 privacy=private file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4 https://www.youtube.com/watch?v=jqAsmvryWK4 [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dnd5e.json hash=8029fdebdec713b4",
+      "youtube_url": "https://www.youtube.com/watch?v=jqAsmvryWK4"
     }
   }
 }

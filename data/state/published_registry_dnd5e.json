@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "published_utc": "2026-07-01T03:37:31Z",
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-c95c4dce1877",
+      "publish_hash": "8029fdebdec713b4476f411f45483cb1650f91154cea1b3415f316b32243bf7c",
+      "youtube_video_id": "jqAsmvryWK4",
+      "youtube_url": "https://www.youtube.com/watch?v=jqAsmvryWK4",
+      "video_sha256": "d989ed87f6fc769f31c25164d9996ead4913e891cdafa506442a680d13c9baa1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+      "fingerprint": {
+        "day": "2026-06-30",
+        "category": "spell_use_case",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-c95c4dce1877",
+        "canonical_hash": "c95c4dce1877d5ebf0e92416bfc7e34a8bc047c89811eaab66eac13984d5d897",
+        "script_id": "8926a3aafb55e0a7e879038605af4f01af64645b95c9409e708c18c02df78f36",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_acid-splash",
+        "fact_name": "Acid Splash",
+        "hook": "Acid Splash looks low-stakes until smart timing makes it absurdly useful.",
+        "body": "This evocation spell lets you create an acidic bubble that detonates in a 5-foot radius. Any creature caught in the blast must make a Dexterity saving throw or suffer 1d6 Acid damage. Be strategic; don't waste it on creatures designed to shrug off saves. Instead, leverage clever casting for tactical advantages—information or access, not just another reroll.",
+        "cta": "DMs: use Acid Splash to target clustered foes, but don’t waste it on creatures that laugh at your Dexterity saves.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+        "video_sha256": "d989ed87f6fc769f31c25164d9996ead4913e891cdafa506442a680d13c9baa1"
+      }
+    }
+  ]
+}
