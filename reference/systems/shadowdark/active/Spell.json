@@ -1605,5 +1605,305 @@
       "effect": "For the duration, faeries/demons/devils can't attack, possess, compel, or beguile you.",
       "document": "cursed-scroll-1"
     }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 108,
+    "fields": {
+      "name": "Cast Out",
+      "tier": 3,
+      "range_text": "Far",
+      "duration": "Focus",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "A seen creature can't come within near of you for the duration (Focus).",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 109,
+    "fields": {
+      "name": "Evoke Rage",
+      "tier": 1,
+      "range_text": "Close",
+      "duration": "1d4 rounds",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "A willing humanoid you touch goes berserk for 1d4 rounds: immune to morale, attacks recklessly.",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 110,
+    "fields": {
+      "name": "Fate",
+      "tier": 2,
+      "range_text": "Near",
+      "duration": "Instant",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "One target takes 1d10 damage and loses any luck tokens it has.",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 111,
+    "fields": {
+      "name": "Chant",
+      "tier": 1,
+      "range_text": "Self",
+      "duration": "Focus",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "See all invisible and hidden things for the duration (Focus).",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 112,
+    "fields": {
+      "name": "Freya'S Omen",
+      "tier": 4,
+      "range_text": "Self",
+      "duration": "1d6 rounds",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "For 1d6 rounds you don't lose a spell on a failed cast; a critical fail still backfires.",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 113,
+    "fields": {
+      "name": "Loki'S Trickery",
+      "tier": 4,
+      "range_text": "Near",
+      "duration": "Instant",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "One creature alters its own beliefs/memories to match your spoken suggestion.",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 114,
+    "fields": {
+      "name": "Odin'S Wisdom",
+      "tier": 4,
+      "range_text": "Self",
+      "duration": "1d6 rounds",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "Add your level as a bonus to WIS and spellcasting checks for 1d6 rounds.",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 115,
+    "fields": {
+      "name": "Hallucinate",
+      "tier": 3,
+      "range_text": "Near",
+      "duration": "Focus",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "A target of your level or less is lost in visions and can't act for the duration (Focus).",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 116,
+    "fields": {
+      "name": "Potion",
+      "tier": 1,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "Bless a drink so it heals whoever imbibes it (once, within 1 day).",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 117,
+    "fields": {
+      "name": "Raven",
+      "tier": 3,
+      "range_text": "Unlimited",
+      "duration": "Instant",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "Send a short spoken message to any named recipient across any distance.",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 118,
+    "fields": {
+      "name": "Read The Runes",
+      "tier": 2,
+      "range_text": "Self",
+      "duration": "Instant",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "Ask the GM one yes/no question, answered truthfully.",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 119,
+    "fields": {
+      "name": "Ragnarok",
+      "tier": 5,
+      "range_text": "Far",
+      "duration": "Instant",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "Divine whether one creature ultimately lives or dies after the final battle.",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 120,
+    "fields": {
+      "name": "Sacrifice",
+      "tier": 2,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "Ritually kill a LV 2+ creature to grant a touched target a bonus to its next check.",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 121,
+    "fields": {
+      "name": "Thor'S Thunder",
+      "tier": 4,
+      "range_text": "Far",
+      "duration": "Instant",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "A lightning bolt strikes one target within Far for 3d6 damage.",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 122,
+    "fields": {
+      "name": "Trance",
+      "tier": 1,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "A touched humanoid (not yourself) gains a luck token.",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 123,
+    "fields": {
+      "name": "Soulbind",
+      "tier": 2,
+      "range_text": "Close",
+      "duration": "Focus",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "A touched creature becomes nearly impervious to all magic for the duration (Focus).",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 124,
+    "fields": {
+      "name": "World Tree",
+      "tier": 5,
+      "range_text": "Close",
+      "duration": "Focus",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "A touched creature can't be reduced below 1 HP for the duration (Focus).",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 125,
+    "fields": {
+      "name": "Valkyrie",
+      "tier": 5,
+      "range_text": "Near",
+      "duration": "10 rounds",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "Summon a valkyrie that fights to aid you for 10 rounds, then returns to Valhalla.",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 126,
+    "fields": {
+      "name": "World Serpent",
+      "tier": 5,
+      "range_text": "Close",
+      "duration": "Focus",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "A touched creature deals x2 damage per attack (x4 on a crit) for the duration (Focus).",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 127,
+    "fields": {
+      "name": "Wolfshape",
+      "tier": 3,
+      "range_text": "Self",
+      "duration": "Focus",
+      "classes": [
+        "Seer"
+      ],
+      "effect": "Transform into a wolf (take its physical stats/attacks); keep your mental stats (Focus).",
+      "document": "cursed-scroll-3"
+    }
   }
 ]
