@@ -106,5 +106,75 @@
       "caster_type": "witch (Charisma, DC 10+tier)",
       "document": "cursed-scroll-1"
     }
+  },
+  {
+    "model": "shadowdark.characterclass",
+    "pk": 8,
+    "fields": {
+      "name": "Desert Rider",
+      "hit_dice": "1d8",
+      "weapons": "Club, dagger, javelin, spear, shortbow",
+      "armor": "Leather armor, shields",
+      "primary_abilities": "Strength",
+      "key_talent": "Charge: 3/day, move near before attacking to deal double melee damage that round. Mount: a loyal camel/horse; while riding, you both gain +AC equal to half your level.",
+      "caster_type": "None",
+      "document": "cursed-scroll-2"
+    }
+  },
+  {
+    "model": "shadowdark.characterclass",
+    "pk": 9,
+    "fields": {
+      "name": "Pit Fighter",
+      "hit_dice": "1d8",
+      "weapons": "All weapons",
+      "armor": "Leather armor, shields",
+      "primary_abilities": "Strength",
+      "key_talent": "Flourish: 3/day heal 1d6 on a melee hit. Last Stand: rise from dying at 1 HP on a natural 18-20. Implacable: advantage on CON to resist injury/poison.",
+      "caster_type": "None",
+      "document": "cursed-scroll-2"
+    }
+  },
+  {
+    "model": "shadowdark.characterclass",
+    "pk": 10,
+    "fields": {
+      "name": "Ras-Godai",
+      "hit_dice": "1d6",
+      "weapons": "Blowgun, dagger, garrote, shortsword",
+      "armor": "Leather armor",
+      "primary_abilities": "Dexterity",
+      "key_talent": "Assassin: advantage to sneak/hide and double damage vs unaware foes. Smoke Step: 3/day teleport near as a free action.",
+      "caster_type": "None (Black Lotus sorcery talents)",
+      "document": "cursed-scroll-2"
+    }
+  },
+  {
+    "model": "shadowdark.characterclass",
+    "pk": 11,
+    "fields": {
+      "name": "Sea Wolf",
+      "hit_dice": "1d8",
+      "weapons": "Dagger, greataxe, spear, longbow",
+      "armor": "Leather armor, shields",
+      "primary_abilities": "Strength",
+      "key_talent": "Old Gods: each rest, align with a god (Odin: regain 1d4 HP per kill; Freya: a daily luck token +1d6; Loki: advantage to lie/sneak/hide). Seafarer: advantage crewing/navigating boats.",
+      "caster_type": "None",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.characterclass",
+    "pk": 12,
+    "fields": {
+      "name": "Seer",
+      "hit_dice": "1d6",
+      "weapons": "Dagger, stave, spear",
+      "armor": "Leather armor",
+      "primary_abilities": "Wisdom",
+      "key_talent": "Destined: using a luck token adds 1d6 to the roll. Omen: 3/day, DC 9 WIS check to gain a luck token.",
+      "caster_type": "seer (Wisdom, DC 10+tier)",
+      "document": "cursed-scroll-3"
+    }
   }
 ]
