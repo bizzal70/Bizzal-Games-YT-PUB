@@ -4,6 +4,11 @@ set -euo pipefail
 DAY="${1:-$(date +%F)}"
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 
+# Allow BIZZAL_REPLICATE_API_TOKEN as an alias for REPLICATE_API_TOKEN
+if [[ -z "${REPLICATE_API_TOKEN:-}" && -n "${BIZZAL_REPLICATE_API_TOKEN:-}" ]]; then
+  export REPLICATE_API_TOKEN="$BIZZAL_REPLICATE_API_TOKEN"
+fi
+
 ATOM_VALIDATED_DIR="${BIZZAL_ATOM_VALIDATED_DIR:-data/atoms/validated}"
 RENDER_BY_DAY_DIR="${BIZZAL_RENDERS_BY_DAY_DIR:-data/renders/by_day}"
 RENDER_LATEST_DIR="${BIZZAL_RENDERS_LATEST_DIR:-data/renders/latest}"
@@ -373,11 +378,22 @@ if [[ "$TTS_ENABLED" == "1" && "$TTS_TIMING_MODE" == "per_screen" && -x "$REPO_R
   TTS_SEGDIR="$TMPDIR/tts_segments"
   mkdir -p "$TTS_SEGDIR"
 
+  # Resolve TTS voice from atom so rotation is honoured on per-segment calls
+  TTS_VOICE="$(python3 -c "
+import json, sys
+try:
+    a = json.load(open('$ATOM'))
+    print((a.get('style') or {}).get('voiceover', {}).get('tts_voice_id') or 'alloy')
+except Exception:
+    print('alloy')
+")"
+  echo "[tts] using voice=$TTS_VOICE"
+
   SEG_FAIL=0
   TTS_SEG_FILES=()
 
   HOOK_SEG_WAV="$TTS_SEGDIR/01_hook.wav"
-  if "$REPO_ROOT/bin/render/synthesize_tts.py" --text-file "$HOOK_FILE" --out "$HOOK_SEG_WAV"; then
+  if "$REPO_ROOT/bin/render/synthesize_tts.py" --text-file "$HOOK_FILE" --out "$HOOK_SEG_WAV" --voice "$TTS_VOICE"; then
     TTS_SEG_FILES+=("$HOOK_SEG_WAV")
   else
     SEG_FAIL=1
@@ -386,7 +402,7 @@ if [[ "$TTS_ENABLED" == "1" && "$TTS_TIMING_MODE" == "per_screen" && -x "$REPO_R
   for ((i=1; i<=BODY_PAGE_COUNT; i++)); do
     PAGE_FILE="$PAGEDIR/body${i}.txt"
     PAGE_SEG_WAV="$TTS_SEGDIR/$(printf '%02d' $((i+1)))_body${i}.wav"
-    if "$REPO_ROOT/bin/render/synthesize_tts.py" --text-file "$PAGE_FILE" --out "$PAGE_SEG_WAV"; then
+    if "$REPO_ROOT/bin/render/synthesize_tts.py" --text-file "$PAGE_FILE" --out "$PAGE_SEG_WAV" --voice "$TTS_VOICE"; then
       TTS_SEG_FILES+=("$PAGE_SEG_WAV")
     else
       SEG_FAIL=1
@@ -396,7 +412,7 @@ if [[ "$TTS_ENABLED" == "1" && "$TTS_TIMING_MODE" == "per_screen" && -x "$REPO_R
 
   CTA_SEG_WAV="$TTS_SEGDIR/99_cta.wav"
   if (( SEG_FAIL == 0 )); then
-    if "$REPO_ROOT/bin/render/synthesize_tts.py" --text-file "$CTA_FILE" --out "$CTA_SEG_WAV"; then
+    if "$REPO_ROOT/bin/render/synthesize_tts.py" --text-file "$CTA_FILE" --out "$CTA_SEG_WAV" --voice "$TTS_VOICE"; then
       TTS_SEG_FILES+=("$CTA_SEG_WAV")
     else
       SEG_FAIL=1
