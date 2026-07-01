@@ -55,6 +55,7 @@ jobs:
       BIZZAL_PREVENT_SAME_DAY_RERUN: "1"
       # AI features on (user decision). Individual systems can still override
       # via their DB flags; these are the workflow-level defaults.
+      BIZZAL_OPENAI_MODEL: "gpt-4o"
       BIZZAL_ENABLE_AI: "1"
       BIZZAL_ENABLE_AI_SCRIPT: "1"
       BIZZAL_ENABLE_TTS: "1"
