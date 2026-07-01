@@ -1,34 +1,68 @@
 [
   {
-    "model": "reference.characterclass",
+    "model": "shadowdark.characterclass",
     "pk": 1,
     "fields": {
       "name": "Fighter",
-      "document": "shadowdark-v4.8"
+      "hit_dice": "1d8",
+      "weapons": "All weapons",
+      "armor": "All armor and shields",
+      "primary_abilities": [
+        "strength"
+      ],
+      "key_talent": "Weapon Mastery",
+      "caster_type": "none",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.characterclass",
+    "model": "shadowdark.characterclass",
     "pk": 2,
     "fields": {
       "name": "Priest",
-      "document": "shadowdark-v4.8"
+      "hit_dice": "1d6",
+      "weapons": "Club, crossbow, dagger, mace, longsword, staff, warhammer",
+      "armor": "All armor and shields",
+      "primary_abilities": [
+        "wisdom"
+      ],
+      "key_talent": "Turn Undead, Deity",
+      "caster_type": "divine",
+      "spell_tiers": 5,
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.characterclass",
+    "model": "shadowdark.characterclass",
     "pk": 3,
     "fields": {
       "name": "Thief",
-      "document": "shadowdark-v4.8"
+      "hit_dice": "1d4",
+      "weapons": "Club, crossbow, dagger, shortbow, shortsword",
+      "armor": "Leather armor, mithral chainmail",
+      "primary_abilities": [
+        "dexterity"
+      ],
+      "key_talent": "Backstab, Thievery",
+      "caster_type": "none",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.characterclass",
+    "model": "shadowdark.characterclass",
     "pk": 4,
     "fields": {
       "name": "Wizard",
-      "document": "shadowdark-v4.8"
+      "hit_dice": "1d4",
+      "weapons": "Dagger, staff",
+      "armor": "None",
+      "primary_abilities": [
+        "intelligence"
+      ],
+      "key_talent": "Spellcasting, Mishap table",
+      "caster_type": "arcane",
+      "spell_tiers": 5,
+      "document": "shadowdark-core"
     }
   }
 ]
