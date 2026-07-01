@@ -719,7 +719,13 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
         "messages": [
             {
                 "role": "system",
-                "content": "You rewrite RPG short-form CTA lines to be natural, specific, and aligned with tactical context.",
+                "content": (
+                    "You rewrite RPG short-form CTA lines. "
+                    "Voice: dry, world-weary veteran DM who has run this encounter a hundred times. "
+                    "No hype, no cheerleading, no pep-talk energy. "
+                    "Authoritative and specific — you call the table's bad habits what they are. "
+                    "One wry sentence that tells them exactly what to do and implies they already know why."
+                ),
             },
             {
                 "role": "user",
@@ -811,14 +817,19 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
         ai_diag("AI script polish continuing without PDF flavor snippet (best-effort mode)")
 
     prompt = {
-        "task": "Rewrite hook/body/cta to sound more personal while preserving factual integrity.",
+        "task": (
+            "Rewrite hook/body/cta in the voice of a dry, world-weary veteran DM "
+            "who has run this a hundred times and has no patience for hype or hand-holding. "
+            "Authoritative, specific, slightly wry. No cheerleading. "
+            "Preserve all factual content — just change the tone."
+        ),
         "category": atom.get("category") or "",
         "angle": atom.get("angle") or "",
         "fact_name": fact_name,
         "kind": fact.get("kind") or "",
-        "voice": style.get("voice") or "friendly_vet",
-        "persona": style.get("persona") or "table_coach",
-        "tone": style.get("tone") or "neutral",
+        "voice": style.get("voice") or "wry_vet",
+        "persona": style.get("persona") or "wry_vet",
+        "tone": style.get("tone") or "dry",
         "pdf_flavor_snippet": pdf_snippet,
         "locked_tokens": locked_tokens(script, fact),
         "input": {
@@ -830,11 +841,12 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             "Return strict JSON object with keys: hook, body, cta.",
             "Do not invent new stats, rules, or proper nouns.",
             "Keep all numeric facts and fact_name intact.",
-            "Hook: one sentence. Body: 2-4 sentences. CTA: one sentence.",
-            "Prefer concise DM coaching language over theatrical fantasy narration.",
-            "Avoid generic opening phrases like 'Explore the moral dilemma' or 'Shine a light on'.",
-            "Avoid soft filler like 'in your next session'.",
-            "Make language concrete and table-actionable.",
+            "Hook: one punchy sentence. Dry observation or wry setup — not a hype opener.",
+            "Body: 2-4 sentences. Specific and tactical. Cut any word that doesn't earn its place.",
+            "CTA: one sentence. Direct, slightly sardonic. Implies the reader already knows why.",
+            "No cheerleading phrases: no 'let's dive in', 'exciting', 'amazing', 'powerful tool'.",
+            "No soft filler: no 'in your next session', 'consider using', 'feel free to'.",
+            "No theatrical fantasy narration: no 'the darkness beckons', 'adventurers gather'.",
             "When pdf_flavor_snippet is provided, include at least one concrete detail from it.",
             "No markdown.",
         ],
@@ -847,7 +859,13 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
         "messages": [
             {
                 "role": "system",
-                "content": "You are an RPG script editor improving tone while preserving factual correctness.",
+                "content": (
+                    "You are a veteran DM who has been running these games for decades. "
+                    "You rewrite RPG short-form scripts in your own voice: dry, world-weary, authoritative. "
+                    "You have no patience for hype, hand-holding, or generic coaching speak. "
+                    "You call things what they are. You assume the reader has been around the table. "
+                    "Preserve every factual detail. Change only the tone."
+                ),
             },
             {
                 "role": "user",
@@ -1134,6 +1152,17 @@ def clean_ai_style_text(s: str, segment: str = "body") -> str:
         "Gather round, adventurers": "Table setup",
         "haunting world": "encounter",
         "delve into": "run",
+        "Let's dive in": "Here it is",
+        "let's dive in": "here it is",
+        "exciting": "useful",
+        "powerful tool": "tool",
+        "amazing": "solid",
+        "don't forget": "remember",
+        "happy adventuring": "",
+        "good luck out there": "",
+        "may your rolls be high": "",
+        "feel free to": "",
+        "consider using": "use",
     }
     for old, new in replacements.items():
         txt = txt.replace(old, new)
@@ -1176,6 +1205,13 @@ def is_generic_hook(text: str) -> bool:
         "delve into",
         "haunting world",
         "shine a light on",
+        "let's dive in",
+        "exciting",
+        "powerful tool",
+        "adventurers gather",
+        "the darkness beckons",
+        "embark on",
+        "unleash the power",
     ]
     return any(b in t for b in bad)
 
@@ -1187,6 +1223,12 @@ def is_generic_cta(text: str) -> bool:
         "challenge players to decide",
         "weigh their choices",
         "in your next session",
+        "consider using",
+        "feel free to",
+        "don't forget to",
+        "happy adventuring",
+        "good luck out there",
+        "may your rolls be high",
     ]
     return any(b in t for b in bad)
 
