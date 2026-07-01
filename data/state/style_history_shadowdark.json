@@ -1,0 +1,14 @@
+{
+  "2026-06-30": {
+    "rules_ruling": {
+      "angle": "edge_case",
+      "voice": "torchbearer_ref",
+      "tone": "neutral",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "ash"
+    }
+  }
+}
