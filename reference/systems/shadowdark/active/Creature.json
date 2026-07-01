@@ -6187,5 +6187,360 @@
       "talents": "Clever. Advantage on checks to do the same action on a consecutive turn. A pale, faceless man with elongated limbs and curved talons that rake the ground. Moves in quick stutters during each eyeblink. AC 17, HP 61, ATK 3 finger needle +9 (2d10) and 1 terrify, MV near (teleport), S +5, D +7, C +3, I +4, W +4, Ch +5, AL C, LV 13 Fearless. Immune to morale checks. Terrify. One target in near DC 15 CHA or paralyzed 1d4 rounds. Waking Nightmare. In place of attacks, all creatures within near DC 15 CHA or flee in a random direction for 1d4 rounds",
       "document": "cursed-scroll-1"
     }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 241,
+    "fields": {
+      "name": "Dust Devil",
+      "lv": 8,
+      "ac": 16,
+      "hp": 36,
+      "attacks": "2 lacerate +5 (2d8)",
+      "movement": "double near",
+      "ability_score_strength": 4,
+      "ability_score_dexterity": 4,
+      "ability_score_constitution": 0,
+      "ability_score_intelligence": -2,
+      "ability_score_wisdom": 0,
+      "ability_score_charisma": -2,
+      "alignment": "C",
+      "talents": "Impervious. Only damaged by magical sources. Fling. In place of attacks, all within close DC",
+      "document": "cursed-scroll-2"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 242,
+    "fields": {
+      "name": "Dunefiend",
+      "lv": 4,
+      "ac": 14,
+      "hp": 20,
+      "attacks": "2 tear +4 (1d8) or 1 howl",
+      "movement": "near",
+      "ability_score_strength": 3,
+      "ability_score_dexterity": 4,
+      "ability_score_constitution": 2,
+      "ability_score_intelligence": 0,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": 0,
+      "alignment": "C",
+      "talents": "Howl. Resting creatures who hear in far DC",
+      "document": "cursed-scroll-2"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 243,
+    "fields": {
+      "name": "Canyon Ape",
+      "lv": 6,
+      "ac": 13,
+      "hp": 29,
+      "attacks": "3 rend +6 (2d6)",
+      "movement": "near (climb)",
+      "ability_score_strength": 4,
+      "ability_score_dexterity": 3,
+      "ability_score_constitution": 2,
+      "ability_score_intelligence": -1,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": -1,
+      "alignment": "N",
+      "talents": "Ambush. Deals double damage against surprised foes. Stalk. ADV on DEX checks while in mountains and canyons",
+      "document": "cursed-scroll-2"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 244,
+    "fields": {
+      "name": "Ras-Godai",
+      "lv": 3,
+      "ac": 13,
+      "hp": 13,
+      "attacks": "1 razor chain (near) +4 (1d6)",
+      "movement": "near (teleport)",
+      "ability_score_strength": 1,
+      "ability_score_dexterity": 2,
+      "ability_score_constitution": 0,
+      "ability_score_intelligence": 0,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": 0,
+      "alignment": "C",
+      "talents": "Assassinate. Deals double damage against unaware foes",
+      "document": "cursed-scroll-2"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 245,
+    "fields": {
+      "name": "Mirage",
+      "lv": 8,
+      "ac": 6,
+      "hp": 32,
+      "attacks": "1 leech",
+      "movement": "near",
+      "ability_score_strength": -4,
+      "ability_score_dexterity": -4,
+      "ability_score_constitution": -4,
+      "ability_score_intelligence": 2,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": 4,
+      "alignment": "C",
+      "talents": "Delude. Has the illusory look and feel of what its viewers expect or want it to be (creature or small location). DC",
+      "document": "cursed-scroll-2"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 246,
+    "fields": {
+      "name": "Hero",
+      "lv": 5,
+      "ac": 16,
+      "hp": 25,
+      "attacks": "3 bastard sword +5 (1d8) or 1 spear (close/near) +5 (1d6)",
+      "movement": "near",
+      "ability_score_strength": 3,
+      "ability_score_dexterity": 1,
+      "ability_score_constitution": 3,
+      "ability_score_intelligence": 0,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": 1,
+      "alignment": "N",
+      "document": "cursed-scroll-2"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 247,
+    "fields": {
+      "name": "Siruul",
+      "lv": 2,
+      "ac": 14,
+      "hp": 9,
+      "attacks": "1 scimitar +3 (1d6) or 1 longbow (far) +3 (1d8)",
+      "movement": "double near (mount)",
+      "ability_score_strength": 0,
+      "ability_score_dexterity": 3,
+      "ability_score_constitution": 0,
+      "ability_score_intelligence": 1,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": 1,
+      "alignment": "N",
+      "talents": "Desert Born. ADV on DEX checks while in the wild desert. Mount. Loyal silver camel that refuses any other rider",
+      "document": "cursed-scroll-2"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 248,
+    "fields": {
+      "name": "Scrag",
+      "lv": 2,
+      "ac": 12,
+      "hp": 11,
+      "attacks": "1 claw +2 (1d6)",
+      "movement": "near (climb)",
+      "ability_score_strength": 2,
+      "ability_score_dexterity": 2,
+      "ability_score_constitution": 2,
+      "ability_score_intelligence": -2,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": -3,
+      "alignment": "N",
+      "talents": "The Scourge writhes and screams in constant pain. Its brass and lapis scales are choked with a sickly, green patina. Blue lightning snaps and coils in the air around it, and thunderclouds follow wherever it flies, but no rain falls from the tormented skies. AC 17, HP 84, ATK 3 rend +10 (2d10) or 1 lightning breath, MV double near (fly), S +6, D +3, C +3, I +4, W +4, Ch +5, AL C, LV",
+      "document": "cursed-scroll-2"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 249,
+    "fields": {
+      "name": "Draugr",
+      "lv": 5,
+      "ac": 16,
+      "hp": 25,
+      "attacks": "2 bastard sword +4 (1d8)",
+      "movement": "near",
+      "ability_score_strength": 3,
+      "ability_score_dexterity": 1,
+      "ability_score_constitution": 3,
+      "ability_score_intelligence": 0,
+      "ability_score_wisdom": 0,
+      "ability_score_charisma": 3,
+      "alignment": "C",
+      "talents": "Greater Undead. Immune to morale checks. Only damaged by silver or magical sources. Death Chill. Checks to stabilize dying creatures within near of the draugr are DC 18. Stone Swim. Draugr can pass through stone as if it were water",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 250,
+    "fields": {
+      "name": "Dverg",
+      "lv": 3,
+      "ac": 13,
+      "hp": 14,
+      "attacks": "1 greataxe +2 (1d10)",
+      "movement": "near",
+      "ability_score_strength": 2,
+      "ability_score_dexterity": 0,
+      "ability_score_constitution": 1,
+      "ability_score_intelligence": 1,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": 0,
+      "alignment": "L",
+      "talents": "Shapeshift. In place of attacks, turn into a small animal, or back into original form",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 251,
+    "fields": {
+      "name": "Nord",
+      "lv": 2,
+      "ac": 15,
+      "hp": 10,
+      "attacks": "1 greataxe +2 (1d8) or 1 shield wall",
+      "movement": "near",
+      "ability_score_strength": 2,
+      "ability_score_dexterity": 0,
+      "ability_score_constitution": 1,
+      "ability_score_intelligence": 0,
+      "ability_score_wisdom": 0,
+      "ability_score_charisma": 0,
+      "alignment": "N",
+      "talents": "Shield Wall. AC becomes 20 for 1 round",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 252,
+    "fields": {
+      "name": "Sea Serpent",
+      "lv": 12,
+      "ac": 14,
+      "hp": 58,
+      "attacks": "3 bite +8 (2d12)",
+      "movement": "double near (swim)",
+      "ability_score_strength": 5,
+      "ability_score_dexterity": 0,
+      "ability_score_constitution": 4,
+      "ability_score_intelligence": -3,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": -3,
+      "alignment": "N",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 253,
+    "fields": {
+      "name": "Sea Nymph",
+      "lv": 3,
+      "ac": 13,
+      "hp": 13,
+      "attacks": "1 slash +2 (1d6) or 1 sing",
+      "movement": "near (swim)",
+      "ability_score_strength": 0,
+      "ability_score_dexterity": 3,
+      "ability_score_constitution": 0,
+      "ability_score_intelligence": 1,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": 2,
+      "alignment": "N",
+      "talents": "Sing. All creatures who hear in double near, DC",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 254,
+    "fields": {
+      "name": "Orca",
+      "lv": 8,
+      "ac": 12,
+      "hp": 39,
+      "attacks": "2 bite +5 (1d10)",
+      "movement": "double near (swim)",
+      "ability_score_strength": 4,
+      "ability_score_dexterity": 0,
+      "ability_score_constitution": 3,
+      "ability_score_intelligence": -2,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": -2,
+      "alignment": "N",
+      "talents": "Pod Hunter. Deals +2 damage when an ally is within near",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 255,
+    "fields": {
+      "name": "Oracle",
+      "lv": 4,
+      "ac": 10,
+      "hp": 19,
+      "attacks": "1 stave +2 (1d4) or 1 spell +3",
+      "movement": "near",
+      "ability_score_strength": 1,
+      "ability_score_dexterity": 0,
+      "ability_score_constitution": 1,
+      "ability_score_intelligence": 0,
+      "ability_score_wisdom": 2,
+      "ability_score_charisma": 1,
+      "alignment": "N",
+      "talents": "Berserk (WIS Spell). DC 13. Focus. All allies within near of oracle deal +1d4 damage on each attack. Fate (WIS Spell). DC 12. One target in near gains or loses a luck token. Mjolnir (WIS Spell). DC 13. Deal 2d6 damage to one target in near. Strike Blind (WIS Spell). DC 11. One target in near stricken blind for 1d4 rounds",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 256,
+    "fields": {
+      "name": "Werebear",
+      "lv": 7,
+      "ac": 11,
+      "hp": 34,
+      "attacks": "2 claw +6 (1d8)",
+      "movement": "near",
+      "ability_score_strength": 4,
+      "ability_score_dexterity": 1,
+      "ability_score_constitution": 3,
+      "ability_score_intelligence": 0,
+      "ability_score_wisdom": 2,
+      "ability_score_charisma": -1,
+      "alignment": "L",
+      "talents": "Impervious. Only damaged by silver or magic sources. Crush. Deals an extra die of damage if it hits the same target with both claws. Lycanthropy. If 15 or more damage from the same werebear, contract lycanthropy",
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 257,
+    "fields": {
+      "name": "Valkyrie",
+      "lv": 14,
+      "ac": 17,
+      "hp": 66,
+      "attacks": "3 blessed spear (near) +9 (3d6)",
+      "movement": "double near (fly)",
+      "ability_score_strength": 4,
+      "ability_score_dexterity": 3,
+      "ability_score_constitution": 3,
+      "ability_score_intelligence": 3,
+      "ability_score_wisdom": 4,
+      "ability_score_charisma": 5,
+      "alignment": "L",
+      "talents": "Impervious. Can only be injured by magical sources. Divine Courage. Immune to morale checks. Hostile spells targeting valkyrie are DC 18 to cast",
+      "document": "cursed-scroll-3"
+    }
   }
 ]
