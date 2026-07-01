@@ -109,8 +109,8 @@ mkdir -p "$PAGEDIR"
 
 # Body can span multiple pages; CTA is its own final page.
 # Tune max lines/page and max page count for smoother reading cadence.
-BODY_MAXLINES="${BIZZAL_BODY_MAXLINES:-7}"
-BODY_MAX_PAGES="${BIZZAL_BODY_MAX_PAGES:-3}"
+BODY_MAXLINES="${BIZZAL_BODY_MAXLINES:-5}"
+BODY_MAX_PAGES="${BIZZAL_BODY_MAX_PAGES:-4}"
 BODY_PAGES="$(python3 "$REPO_ROOT/bin/render/paginate_lines.py" --infile "$BODY_TXT" --outdir "$PAGEDIR" --prefix body --maxlines "$BODY_MAXLINES")"
 if (( BODY_PAGES > BODY_MAX_PAGES )); then
   BODY_LINE_COUNT="$(grep -cve '^[[:space:]]*$' "$BODY_TXT" || true)"
@@ -597,6 +597,12 @@ for ((i=1; i<=BODY_PAGE_COUNT; i++)); do
 done
 CTA_END="$(float_add "$DUR" "$CTA_FINAL_HOLD_SEC")"
 VF+="drawtext=${COMMON}:textfile=${CTA_FILE}:fontsize=50:${XPOS}:${YPOS}:enable='between(t,${BODY_END},${CTA_END})'"
+CHANNEL_WATERMARK="${BIZZAL_CHANNEL_WATERMARK:-}"
+if [[ -n "$CHANNEL_WATERMARK" ]]; then
+  WATERMARK_FILE="$TMPDIR/watermark.txt"
+  printf '%s' "$CHANNEL_WATERMARK" > "$WATERMARK_FILE"
+  VF+=",drawtext=fontfile=${FONT}:textfile=${WATERMARK_FILE}:fontcolor=white@0.85:fontsize=30:x=w-text_w-24:y=24:box=1:boxcolor=black@0.50:boxborderw=10:shadowcolor=black@0.6:shadowx=1:shadowy=1"
+fi
 
 COLOR_DUR="$CTA_END"
 
