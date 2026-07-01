@@ -170,10 +170,26 @@ def main():
         tts_voice_lookback_days = int((os.getenv("BIZZAL_TTS_VOICE_VARIETY_LOOKBACK_DAYS") or "5").strip())
     except ValueError:
         tts_voice_lookback_days = 5
+    try:
+        angle_lookback_days = int((os.getenv("BIZZAL_ANGLE_VARIETY_LOOKBACK_DAYS") or "5").strip())
+    except ValueError:
+        angle_lookback_days = 5
 
-    # yesterday’s style (if present)
-    yday = (datetime.strptime(day, "%Y-%m-%d") - timedelta(days=1)).strftime("%Y-%m-%d")
-    prev = (hist.get(yday) or {}).get(category) or {}
+    def recent_angles_for_category(hist: dict, category: str, day: str, lookback_days: int) -> list:
+        if lookback_days <= 0:
+            return []
+        try:
+            cur = datetime.strptime(day, "%Y-%m-%d")
+        except ValueError:
+            return []
+        angles_seen = []
+        for i in range(1, lookback_days + 1):
+            d = (cur - timedelta(days=i)).strftime("%Y-%m-%d")
+            entry = (hist.get(d) or {}).get(category) or {}
+            a = str(entry.get("angle") or "").strip()
+            if a:
+                angles_seen.append(a)
+        return angles_seen
 
     def choose_avoid(options, avoid_value):
         opts = [o for o in options if o != avoid_value]
@@ -188,7 +204,8 @@ def main():
     if chosen_angle in angles:
         angle = chosen_angle
     else:
-        angle = choose_avoid(angles, prev.get("angle"))
+        recent_angles = recent_angles_for_category(hist, category, day, angle_lookback_days)
+        angle = choose_avoid_many(angles, recent_angles)
     voice = choose_avoid(voices, prev.get("voice"))
     recent_tones = recent_tones_for_category(hist, category, day, tone_lookback_days)
     tone = choose_avoid_many(tones, recent_tones)
