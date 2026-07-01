@@ -1,66 +1,1056 @@
 [
   {
-    "model": "reference.spell",
+    "model": "shadowdark.spell",
     "pk": 1,
     "fields": {
-      "name": "Light",
-      "document": "shadowdark-v4.8"
+      "name": "Acid Arrow",
+      "tier": 2,
+      "range_text": "Far",
+      "duration": "Focus",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You conjure a corrosive bolt that hits one foe, dealing 1d6 damage a round. The bolt remains in the target for as long as you focus.",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.spell",
+    "model": "shadowdark.spell",
     "pk": 2,
     "fields": {
-      "name": "Sleep",
-      "document": "shadowdark-v4.8"
+      "name": "Alarm",
+      "tier": 1,
+      "range_text": "Close",
+      "duration": "1 day",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You touch one object, such as a door threshold, setting a magical alarm on it. If any creature you do not designate while casting the spell touches or crosses past the object, a magical bell sounds in your head.",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.spell",
+    "model": "shadowdark.spell",
     "pk": 3,
     "fields": {
-      "name": "Magic Missile",
-      "document": "shadowdark-v4.8"
+      "name": "Alter Self",
+      "tier": 2,
+      "range_text": "Self",
+      "duration": "5 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You magically change your physical form, gaining one feature that modifies your existing anatomy. For example, you can grow functional gills on your neck or bear claws on your fingers. This spell can’t grow wings or limbs.",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.spell",
+    "model": "shadowdark.spell",
     "pk": 4,
     "fields": {
-      "name": "Shield",
-      "document": "shadowdark-v4.8"
+      "name": "Animate Dead",
+      "tier": 3,
+      "range_text": "Close",
+      "duration": "1 day",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You touch one humanoid’s remains, and it rises as a zombie or skeleton under your control. The remains must have at least three limbs and its head intact. The undead creature acts on your turn. After 1 day, the creature collapses into grave dust. 55",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.spell",
+    "model": "shadowdark.spell",
     "pk": 5,
     "fields": {
-      "name": "Charm Person",
-      "document": "shadowdark-v4.8"
+      "name": "Antimagic Shell",
+      "tier": 5,
+      "range_text": "Self",
+      "duration": "Focus",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "An invisible, near-sized cube of null-magic appears centered on you. Within the cube, no spells can be cast. Magic items and spells have no effect in the zone, and no magic can enter. The cube moves with you. Spells such as dispel magic have no effect on it. Another antimagic shell does not affect this one.",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.spell",
+    "model": "shadowdark.spell",
     "pk": 6,
     "fields": {
-      "name": "Detect Magic",
-      "document": "shadowdark-v4.8"
+      "name": "Arcane Eye",
+      "tier": 4,
+      "range_text": "Near",
+      "duration": "Focus",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You conjure an invisible, grape- sized eye within range. You can see through the eye. It can see in the dark out to near range, fly near on your turn, and squeeze through openings as narrow as a keyhole.",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.spell",
+    "model": "shadowdark.spell",
     "pk": 7,
     "fields": {
-      "name": "Knock",
-      "document": "shadowdark-v4.8"
+      "name": "Augury",
+      "tier": 2,
+      "range_text": "Self",
+      "duration": "Instant",
+      "classes": [
+        "priest"
+      ],
+      "desc": "You interpret the meaning of supernatural portents and omens. Ask the GM one question about a specific course of action. The GM says whether the action will lead to “weal” or “woe.”",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.spell",
+    "model": "shadowdark.spell",
     "pk": 8,
     "fields": {
+      "name": "Bless",
+      "tier": 2,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "priest"
+      ],
+      "desc": "One creature you touch gains a luck token.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 9,
+    "fields": {
+      "name": "Blind/Deafen",
+      "tier": 2,
+      "range_text": "Near",
+      "duration": "Focus",
+      "classes": [
+        "priest"
+      ],
+      "desc": "You utter a divine censure, blinding or deafening one creature you can see in range. The creature has disadvantage on tasks requiring the lost sense. 56",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 10,
+    "fields": {
+      "name": "Burning Hands",
+      "tier": 1,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You spread your fingers with thumbs touching, unleashing a circle of flame that roars out to a close area around where you stand. Creatures within the area of effect take 1d6 damage, and flammable objects catch fire.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 11,
+    "fields": {
+      "name": "Charm Person",
+      "tier": 1,
+      "range_text": "Near",
+      "duration": "1d8 days",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You magically beguile one humanoid of level 2 or less within near range, who regards you as a friend for the duration. The spell ends if you or your allies do anything to hurt it that it notices. The target knows you magically enchanted it after the spell ends.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 12,
+    "fields": {
+      "name": "Cleansing Weapon",
+      "tier": 2,
+      "range_text": "Close",
+      "duration": "5 rounds",
+      "classes": [
+        "priest"
+      ],
+      "desc": "One weapon you touch is wreathed in purifying flames. It deals an additional 1d4 damage (1d6 vs. undead) for the duration.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 13,
+    "fields": {
+      "name": "Cloudkill",
+      "tier": 4,
+      "range_text": "Far",
+      "duration": "5 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "A putrid cloud of yellow poison fills a near-sized cube within range. It spreads around corners. Creatures inside the cloud are blinded and take 2d6 damage at the beginning of their turns. A creature of LV 9 or less that ends its turn fully inside the cloud dies. 57",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 14,
+    "fields": {
+      "name": "Command",
+      "tier": 3,
+      "range_text": "Far",
+      "duration": "Focus",
+      "classes": [
+        "priest"
+      ],
+      "desc": "You issue a verbal command to one creature in range who can understand you. The command must be one word, such as “kneel.” The target obeys the command for as long as you focus. If your command is ever directly harmful to the creature, it may make a Charisma check vs. your last spellcasting check. On a success, the spell ends.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 15,
+    "fields": {
+      "name": "Commune",
+      "tier": 4,
+      "range_text": "Self",
+      "duration": "Instant",
+      "classes": [
+        "priest"
+      ],
+      "desc": "You seek your god's counsel. Ask the GM up to three yes or no questions. The GM truthfully answers \"yes\" or \"no\" to each. If you cast this spell more than once in 24 hours, treat a failed spellcasting check for it as a critical failure instead.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 16,
+    "fields": {
+      "name": "Confusion",
+      "tier": 4,
+      "range_text": "Near",
+      "duration": "Focus",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You mesmerize one creature you can see in range. The target can't take actions, and it moves in a random direction on its turn. If the target is LV 9+, it may make a WIS check vs. your last spellcasting check at the start of its turn to end the spell.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 17,
+    "fields": {
+      "name": "Control Water",
+      "tier": 4,
+      "range_text": "Far",
+      "duration": "Focus",
+      "classes": [
+        "priest",
+        "wizard"
+      ],
+      "desc": "You move and shape water. You can cause a section of water up to 100 feet in width and depth to change shape, defy gravity, or flow in a different direction. 58",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 18,
+    "fields": {
+      "name": "Create Undead",
+      "tier": 5,
+      "range_text": "Close",
+      "duration": "1 day",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You conjure a vengeful undead creature to do your bidding. When you cast this spell, you choose to summon either a wight or wraith. It appears next to you and is under your control. The undead creature acts on your turn. After 1 day, it melts away into smoke.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 19,
+    "fields": {
+      "name": "Cure Wounds",
+      "tier": 1,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "priest"
+      ],
+      "desc": "Your touch restores ebbing life. Roll a number of d6s equal to 1 + half your level (rounded down). One target you touch regains that many hit points.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 20,
+    "fields": {
+      "name": "Detect Magic",
+      "tier": 1,
+      "range_text": "Near",
+      "duration": "Focus",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You can sense the presence of magic within near range for the spell's duration. If you focus for two rounds, you discern its general properties. Full barriers block this spell.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 21,
+    "fields": {
+      "name": "Detect Thoughts",
+      "tier": 2,
+      "range_text": "Near",
+      "duration": "Focus",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You peer into the mind of one creature you can see within range. Each round, you learn the target’s immediate thoughts. On its turn, the target makes a Wisdom check vs. your last spellcasting check. If the target succeeds, it notices your presence in its mind and the spell ends. “Magic is simply the art of doing and undoing. \" -Creeg, human wizard 59",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 22,
+    "fields": {
+      "name": "Dimension Door",
+      "tier": 4,
+      "range_text": "Self",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You teleport yourself and up to one other willing creature within close to any point you can see.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 23,
+    "fields": {
+      "name": "Disintegrate",
+      "tier": 5,
+      "range_text": "Far",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "A green ray shoots from your finger and turns a creature or object into ash. A target creature of LV 5 or less instantly dies. If it is LV 6+, it takes 3d8 damage instead. A non-magical object up to the size of a large tree is destroyed.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 24,
+    "fields": {
+      "name": "Divination",
+      "tier": 4,
+      "range_text": "Self",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You throw the divining bones or peer into the blackness between the stars, seeking a portent. You can ask the GM one yes or no question. The GM truthfully answers \"yes\" or \"no.\" If you cast this spell more than once in 24 hours, treat a failed spellcasting check for it as a critical failure instead.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 25,
+    "fields": {
+      "name": "Divine Vengeance",
+      "tier": 5,
+      "range_text": "Self",
+      "duration": "10 rounds",
+      "classes": [
+        "priest"
+      ],
+      "desc": "You become the divine avatar of your god's wrath, wreathed in holy flames or a black aura of smoldering corruption. For the spell's duration, you can fly a near distance, your weapons are magical, and you have a +4 bonus to your weapon attacks and damage.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 26,
+    "fields": {
+      "name": "Dispel Magic",
+      "tier": 3,
+      "range_text": "Near",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "End one spell that affects one target you can see in range. 60",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 27,
+    "fields": {
+      "name": "Feather Fall",
+      "tier": 1,
+      "range_text": "Self",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You may make an attempt to cast this spell when you fall. Your rate of descent slows so that you land safely on your feet.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 28,
+    "fields": {
+      "name": "Fixed Object",
+      "tier": 2,
+      "range_text": "Close",
+      "duration": "5 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "An object you touch that weighs no more than 5 pounds becomes fixed in its current location. It can support up to 5,000 pounds of weight for the duration of the spell.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 29,
+    "fields": {
+      "name": "Dominion",
+      "tier": 5,
+      "range_text": "Near",
+      "duration": "10 rounds",
+      "classes": [
+        "priest"
+      ],
+      "desc": "Mighty beings come to your aid. The beings must have a combined total of 16 levels or less. Chaotic PCs summon demons/devils, and lawful or neutral PCs summon angels. The beings act of free will to aid you on your turn. After 10 rounds, they return to their realms. You cannot cast this spell again until you complete penance.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 30,
+    "fields": {
+      "name": "Fabricate",
+      "tier": 3,
+      "range_text": "Near",
+      "duration": "10 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "This spell can't target creatures. You turn a tree-sized collection of raw materials into a finished work. For example, you convert a pile of bricks or rocks into a bridge. The finished work converts back to raw materials when the spell ends.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 31,
+    "fields": {
+      "name": "Fireball",
+      "tier": 3,
+      "range_text": "Far",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You hurl a small flame that erupts into a fiery blast. All creatures in a near-sized cube around where the flame lands take 4d6 damage. 61",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 32,
+    "fields": {
+      "name": "Flame Strike",
+      "tier": 4,
+      "range_text": "Far",
+      "duration": "Instant",
+      "classes": [
+        "priest"
+      ],
+      "desc": "You call down a holy pillar of fire, immolating one creature you can see within range. The target takes 2d6 damage.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 33,
+    "fields": {
+      "name": "Floating Disk",
+      "tier": 1,
+      "range_text": "Near",
+      "duration": "10 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You create a floating, circular disk of force with a concave center. It can carry up to 20 gear slots. It hovers at waist level and automatically stays within near of you. It can’t cross over drop- offs or pits taller than a human.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 34,
+    "fields": {
+      "name": "Fly",
+      "tier": 3,
+      "range_text": "Self",
+      "duration": "5 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "Your feet lift from the ground, and you take to the air like a hummingbird. You can fly near for the spell's duration and are able to hover in place.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 35,
+    "fields": {
+      "name": "Gaseous Form",
+      "tier": 3,
+      "range_text": "Self",
+      "duration": "10 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You and your gear turn into a cloud of smoke for the spell's duration. You can fly and pass through any gap that smoke could. You can sense the terrain and any movement around you out to a near distance. You can't cast spells while in this form.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 36,
+    "fields": {
+      "name": "Heal",
+      "tier": 5,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "priest"
+      ],
+      "desc": "One creature you touch is healed to full hit points. You cannot cast this spell again until you complete a rest. 62",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 37,
+    "fields": {
+      "name": "Hold Monster",
+      "tier": 5,
+      "range_text": "Near",
+      "duration": "Focus",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You paralyze one creature you can see within range. If the target is LV 9+, it may make a STR check vs. your last spellcasting check at the start of its turn to end the spell.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 38,
+    "fields": {
+      "name": "Hold Person",
+      "tier": 2,
+      "range_text": "Near",
+      "duration": "Focus",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You magically paralyze one humanoid creature of LV 4 or less you can see within range.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 39,
+    "fields": {
+      "name": "Hold Portal",
+      "tier": 1,
+      "range_text": "Near",
+      "duration": "10 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You magically hold a portal closed for the duration. A creature must make a successful STR check vs. your spellcasting check to open the portal. The knock spell ends this spell.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 40,
+    "fields": {
+      "name": "Holy Weapon",
+      "tier": 1,
+      "range_text": "Close",
+      "duration": "5 rounds",
+      "classes": [
+        "priest"
+      ],
+      "desc": "One weapon you touch is imbued with a sacred blessing. The weapon becomes magical and has +1 to attack and damage rolls for the duration.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 41,
+    "fields": {
+      "name": "Illusion",
+      "tier": 3,
+      "range_text": "Far",
+      "duration": "Focus",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You create a convincing visible and audible illusion that fills up to a near-sized cube in range. The illusion cannot cause harm, but creatures who believe the illusion is real react to it as though it were. A creature who inspects the illusion from afar must pass a Wisdom check vs. your last spellcasting check to perceive the false nature of the illusion. Touching the illusion also reveals its false nature. 63",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 42,
+    "fields": {
       "name": "Invisibility",
-      "document": "shadowdark-v4.8"
+      "tier": 2,
+      "range_text": "Close",
+      "duration": "10 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "A creature you touch becomes invisible for the spell’s duration. The spell ends if the target attacks or casts a spell.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 43,
+    "fields": {
+      "name": "Judgment",
+      "tier": 5,
+      "range_text": "Close",
+      "duration": "5 rounds",
+      "classes": [
+        "priest"
+      ],
+      "desc": "You instantly banish a creature you touch, sending it and all possessions it carries to face the judgment of your god. You can banish an intelligent creature of LV 10 or less. When the creature returns in 5 rounds, it has been healed to full hit points if its deeds pleased your god. It has been reduced to 1 hit point if its deeds angered your god. If your god can't judge its actions, it is unchanged.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 44,
+    "fields": {
+      "name": "Knock",
+      "tier": 2,
+      "range_text": "Near",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "A door, window, gate, chest, or portal you can see within range instantly opens, defeating all mundane locks and barriers. This spell creates a loud knock audible to all within earshot. 64",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 45,
+    "fields": {
+      "name": "Lay To Rest",
+      "tier": 3,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "priest"
+      ],
+      "desc": "You instantly send an undead creature you touch to its final afterlife, destroying it utterly. You can target an undead creature of LV 9 or less.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 46,
+    "fields": {
+      "name": "Levitate",
+      "tier": 2,
+      "range_text": "Self",
+      "duration": "Focus",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You can float a near distance vertically per round on your turn. You can also push against solid objects to move horizontally.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 47,
+    "fields": {
+      "name": "Light",
+      "tier": 1,
+      "range_text": "Close",
+      "duration": "1 hour real time",
+      "classes": [
+        "priest",
+        "wizard"
+      ],
+      "desc": "One object you touch glows with bright, heatless light, illuminating out to a near distance for 1 hour of real time.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 48,
+    "fields": {
+      "name": "Lightning Bolt",
+      "tier": 3,
+      "range_text": "Far",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You shoot a blue-white ray of lightning from your hands, hitting all creatures in a straight line out to a far distance. Creatures struck by the lightning take 3d6 damage.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 49,
+    "fields": {
+      "name": "Mage Armor",
+      "tier": 1,
+      "range_text": "Self",
+      "duration": "10 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "An invisible layer of magical force protects your vitals. Your armor class becomes 14 (18 on a critical spellcasting check) for the spell’s duration. 65",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 50,
+    "fields": {
+      "name": "Magic Circle",
+      "tier": 3,
+      "range_text": "Near",
+      "duration": "Focus",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You conjure a circle of runes out to near-sized cube centered on yourself and name a type of creature (for example, demons). For the spell’s duration, creatures of the chosen type cannot attack or cast a hostile spell on anyone inside the circle. The chosen creatures also can’t possess, compel, or beguile anyone inside the circle.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 51,
+    "fields": {
+      "name": "Magic Missile",
+      "tier": 1,
+      "range_text": "Far",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You have advantage on your check to cast this spell. A glowing bolt of force streaks from your open hand, dealing 1d4 damage to one target.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 52,
+    "fields": {
+      "name": "Mass Cure",
+      "tier": 3,
+      "range_text": "Near",
+      "duration": "Instant",
+      "classes": [
+        "priest"
+      ],
+      "desc": "All allies within near range of you regain 2d6 hit points.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 53,
+    "fields": {
+      "name": "Mirror Image",
+      "tier": 2,
+      "range_text": "Self",
+      "duration": "5 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You create a number of illusory duplicates of yourself equal to half your level rounded down (minimum 1). The duplicates surround you and mimic you. Each time a creature attacks you, the attack misses and causes one of the duplicates to evaporate. If all of the illusions have disappeared, the spell ends.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 54,
+    "fields": {
+      "name": "Misty Step",
+      "tier": 2,
+      "range_text": "Self",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "In a puff of smoke, you teleport a near distance to an area you can see. 66",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 55,
+    "fields": {
+      "name": "Passwall",
+      "tier": 4,
+      "range_text": "Close",
+      "duration": "5 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "A tunnel of your height opens in a barrier you touch and lasts for the duration. The passage can be up to near distance in length and must be in a straight line.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 56,
+    "fields": {
+      "name": "Pillar Of Salt",
+      "tier": 4,
+      "range_text": "Near",
+      "duration": "Focus",
+      "classes": [
+        "priest"
+      ],
+      "desc": "A creature you target turns into a statue made of hardened salt. You can target a creature you can see of LV 5 or less. If you successfully focus on this spell for 3 rounds in a row, the transformation becomes permanent.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 57,
+    "fields": {
+      "name": "Plane Shift",
+      "tier": 5,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "priest",
+        "wizard"
+      ],
+      "desc": "You fold space and time, transporting yourself and all willing creatures within close range to a location on another plane of your choice. Unless you have been to your intended location before, you appear in a random place on the destination plane. 67",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 58,
+    "fields": {
+      "name": "Polymorph",
+      "tier": 4,
+      "range_text": "Close",
+      "duration": "10 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You transform a creature you touch into another natural creature you choose of equal or smaller size. Any gear the target carries melds into its new form. The target gains the creature's physical stats and features, but it retains its non-physical stats and features. If the target goes to 0 hit points, it reverts to its true form at half its prior hit points. You can target any willing creature with this spell, or an unwilling creature whose level is less than or equal to half your level rounded down (min. 1).",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 59,
+    "fields": {
+      "name": "Power Word Kill",
+      "tier": 5,
+      "range_text": "Near",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You utter the Word of Doom. One creature you target of LV 9 or less dies if it hears you. Treat a failed spellcasting check for this spell as a critical failure, and roll the mishap with disadvantage.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 60,
+    "fields": {
+      "name": "Prismatic Orb",
+      "tier": 5,
+      "range_text": "Far",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You send a strobing orb of energy streaking toward a target within range. Choose an energy type from fire, cold, or electricity. The orb deals 3d8 damage and delivers a concussive blast of the chosen energy type. If the energy type is anathema to the target's existence (for example, cold energy against a fire elemental), the orb deals double damage to it instead. 68",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 61,
+    "fields": {
+      "name": "Prophecy",
+      "tier": 5,
+      "range_text": "Self",
+      "duration": "Instant",
+      "classes": [
+        "priest"
+      ],
+      "desc": "You commune directly with your god for guidance. Ask the GM one question. The GM answers the question truthfully using the knowledge your god possesses. Deities are mighty, but not omniscient. You cannot cast this spell again until you complete penance. PROTECTION",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 62,
+    "fields": {
+      "name": "From Evil",
+      "tier": 1,
+      "range_text": "Close",
+      "duration": "Focus",
+      "classes": [
+        "priest",
+        "wizard"
+      ],
+      "desc": "For the spell’s duration, chaotic beings have disadvantage on attack rolls and hostile spellcasting checks against the target. These beings also can’t possess, compel, or beguile it. When cast on an already- possessed target, the possessing entity makes a CHA check vs. the last spellcasting check. On a failure, the entity is expelled. Tier 3, wizard Duration: Focus Range: Close One creature you touch becomes impervious to the wild fury of the elements. Choose fire, cold, or electricity. For the spell's duration, the target is immune to harm from energy of the chosen type. PROTECTION FROM ENERGY 69",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 63,
+    "fields": {
+      "name": "Rebuke Unholy",
+      "tier": 3,
+      "range_text": "Near",
+      "duration": "Instant",
+      "classes": [
+        "priest"
+      ],
+      "desc": "You rebuke creatures who oppose your alignment, forcing them to flee. You must present a holy symbol to cast this spell. If you are lawful or neutral, this spell affects demons, devils, and outsiders. If you are chaotic, this spell affects angels and natural creatures of the wild. Affected creatures within near of you must make a CHA check vs. your spellcasting check. If a creature fails by 10+ points and is equal to or less than your level, it is destroyed. Otherwise, on a fail, it flees from you for 5 rounds.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 64,
+    "fields": {
+      "name": "Regenerate",
+      "tier": 4,
+      "range_text": "Close",
+      "duration": "Focus",
+      "classes": [
+        "priest"
+      ],
+      "desc": "A creature you touch regains 1d4 hit points on your turn for the duration. This spell also regrows lost body parts.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 65,
+    "fields": {
+      "name": "Resilient Sphere",
+      "tier": 4,
+      "range_text": "Close",
+      "duration": "5 rounds",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You conjure a weightless, glassy sphere around you that extends out to close range. For the spell's duration, nothing can pass through or crush the sphere. You can roll the sphere a near distance on your turn.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 66,
+    "fields": {
+      "name": "Restoration",
+      "tier": 3,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "priest"
+      ],
+      "desc": "With the touch of your hands, you expunge curses and illnesses. One curse, illness, or affliction of your choice affecting the target creature ends. 70",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 67,
+    "fields": {
+      "name": "Scrying",
+      "tier": 5,
+      "range_text": "Self",
+      "duration": "Focus",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You look into a crystal ball or reflecting pool, calling up images of a distant place. For the spell's duration, you can see and hear a creature or location you choose that is on the same plane. This spell is DC 18 to cast if you try to scry on a creature or location that is unfamiliar to you. Each round, creatures you view may make a Wisdom check vs. your last spellcasting check. On a success, they become aware of your magical observation.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 68,
+    "fields": {
+      "name": "Sending",
+      "tier": 3,
+      "range_text": "Unlimited",
+      "duration": "Instant",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You send a brief, mental message to any creature with whom you are familiar who is on the same plane.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 69,
+    "fields": {
+      "name": "Shapechange",
+      "tier": 5,
+      "range_text": "Self",
+      "duration": "Focus",
+      "classes": [
+        "wizard"
+      ],
+      "desc": "You transform yourself and any gear you carry into another natural creature you've seen of level 10 or less. You assume the creature's physical stats and features, but you retain your non-physical stats and features (including INT, WIS, and CHA). If you go to 0 HP while under the effects of this spell, you revert to your true form at 1 HP.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 70,
+    "fields": {
+      "name": "Shield Of Faith",
+      "tier": 1,
+      "range_text": "Self",
+      "duration": "5 rounds",
+      "classes": [
+        "priest"
+      ],
+      "desc": "A protective force wrought of your holy conviction surrounds you. You gain a +2 bonus to your armor class for the duration.",
+      "document": "shadowdark-core"
     }
   }
 ]
