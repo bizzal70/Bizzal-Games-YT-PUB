@@ -207,6 +207,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
         "video_sha256": "c50fb0a3895de9cb6330b4a3fb0d7868a49a2ce4d59b6f94f4b73373c419075e"
       }
+    },
+    {
+      "published_utc": "2026-07-01T05:34:31Z",
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-alter-self-36c10ff200d9",
+      "publish_hash": "5415757df9287985c78c13d8ba831062f835638fde0c260fd8f2c97e90359335",
+      "youtube_video_id": "sZO312tGmsY",
+      "youtube_url": "https://www.youtube.com/watch?v=sZO312tGmsY",
+      "video_sha256": "6b89194ea8e2d0576156a37d99dbfcdfa450294e1056de1b8d8c2e847bedce44",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+      "fingerprint": {
+        "day": "2026-06-30",
+        "category": "spell_use_case",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-alter-self-36c10ff200d9",
+        "canonical_hash": "36c10ff200d991bb3f41cd879f67f56ae05c019a39613735d7d899e3f11f9903",
+        "script_id": "1e69b89d83b9b195e478aef20d7488636c6e461e073d6ea9d5129cac1eb789bd",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_alter-self",
+        "fact_name": "Alter Self",
+        "hook": "Players often forget Alter Self requires concentration, making it vulnerable to disruption.",
+        "body": "Alter Self allows you to change your physical form with concentration, but players often ignore how easily concentration can be broken by damage or environmental factors. The common mistake is using Alter Self for combat without accounting for potential concentration checks. Smart play involves using Alter Self for reconnaissance or infiltration, where concentration is less likely to be disrupted, and the benefits of altered appearance or abilities can be fully leveraged.",
+        "cta": "DMs: Remind your players that Alter Self's concentration can be as fragile as a Grease spell on a slick floor.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+        "video_sha256": "6b89194ea8e2d0576156a37d99dbfcdfa450294e1056de1b8d8c2e847bedce44"
+      }
     }
   ]
 }

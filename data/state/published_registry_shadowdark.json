@@ -77,6 +77,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4",
         "video_sha256": "0ff498b2841392df455d051993ce08d430b7cf97b3763c3987c3a673d73ec344"
       }
+    },
+    {
+      "published_utc": "2026-07-01T05:37:13Z",
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-rules-ruling-rule-1-d3843a1943c1",
+      "publish_hash": "ae81f9aa15dbf069ec88991137a0ad44cc756a76481d08091bad53de4753cadf",
+      "youtube_video_id": "qYTVf7MjpgQ",
+      "youtube_url": "https://www.youtube.com/watch?v=qYTVf7MjpgQ",
+      "video_sha256": "c880d67e58adf3f6f7326129690a7b4c35e47e57dd498384078377ce96e9d78b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4",
+      "fingerprint": {
+        "day": "2026-06-30",
+        "category": "rules_ruling",
+        "angle": "edge_case",
+        "content_id": "bgp-2026-06-30-rules-ruling-rule-1-d3843a1943c1",
+        "canonical_hash": "d3843a1943c1cedec241bbf71344edbbd9376fcdbf12995c24f98b9360b7540b",
+        "script_id": "9a69e7039d5f4b8c791c11cb5a8644aa7b1e6c93ff41f5524b601bb63ae4ea1b",
+        "fact_kind": "rule",
+        "fact_pk": 1,
+        "fact_name": "Advantage and Disadvantage",
+        "hook": "Players often misapply Advantage and Disadvantage by not verifying the correct order of operations.",
+        "body": "Advantage and Disadvantage cancel each other out regardless of the number of sources. Players mistakenly stack them. Smart play verifies all conditions before rolling. Check for simultaneous effects that might alter the outcome.",
+        "cta": "DMs: Stop players from stacking Advantage and Disadvantage by confirming all sources before they roll the dice.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4",
+        "video_sha256": "c880d67e58adf3f6f7326129690a7b4c35e47e57dd498384078377ce96e9d78b"
+      }
     }
   ]
 }
