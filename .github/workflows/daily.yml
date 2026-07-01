@@ -132,6 +132,13 @@ jobs:
           BIZZAL_SKIP_PUBLISH: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
         run: bin/core/run_daily_cloud_cron.sh
 
+      - name: Dry-run readout (print generated script)
+        if: steps.guard.outputs.proceed == 'true' && github.event.inputs.dry_run == 'true'
+        run: |
+          for f in data/atoms/validated/*.json; do
+            echo "=== $f ==="
+            python -c "import json,sys; a=json.load(open(sys.argv[1])); s=a['script']; f=a.get('fact',{}); print('FACT:', f.get('name') or f.get('fact_name') or f.get('title')); print('CATEGORY:', a.get('category')); print('HOOK:', s['hook']); print('BODY:', s['body']); print('CTA:', s['cta'])" "$f"
+          done
       - name: Commit safety-state back to repo
         if: steps.guard.outputs.proceed == 'true' && always()
         run: |
