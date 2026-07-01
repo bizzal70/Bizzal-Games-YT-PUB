@@ -5935,5 +5935,257 @@
       ],
       "document": "shadowdark-core"
     }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 229,
+    "fields": {
+      "name": "Bittermold",
+      "lv": 1,
+      "ac": 12,
+      "hp": 5,
+      "attacks": "1 shortsword +1 (1d6) or 1 sling (far) +2 (1d4)",
+      "movement": "near",
+      "ability_score_strength": 1,
+      "ability_score_dexterity": 2,
+      "ability_score_constitution": 1,
+      "ability_score_intelligence": 0,
+      "ability_score_wisdom": 0,
+      "ability_score_charisma": 0,
+      "alignment": "C",
+      "talents": "Rubbery. Half damage from stabbing weapons",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 230,
+    "fields": {
+      "name": "Bogthorn",
+      "lv": 2,
+      "ac": 13,
+      "hp": 11,
+      "attacks": "1 stab +0 (1d4) or 1 thorn hail (near) +2 (1d4 + poison)",
+      "movement": "near (climb)",
+      "ability_score_strength": 0,
+      "ability_score_dexterity": 2,
+      "ability_score_constitution": 2,
+      "ability_score_intelligence": -3,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": -3,
+      "alignment": "C",
+      "talents": "Poison. DC 12 CON or paralyzed for 1d4 rounds",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 231,
+    "fields": {
+      "name": "Dralech",
+      "lv": 6,
+      "ac": 13,
+      "hp": 29,
+      "attacks": "3 bone axe +5 (2d6)",
+      "movement": "near",
+      "ability_score_strength": 4,
+      "ability_score_dexterity": 1,
+      "ability_score_constitution": 2,
+      "ability_score_intelligence": 0,
+      "ability_score_wisdom": 0,
+      "ability_score_charisma": 1,
+      "alignment": "C",
+      "talents": "Shatter. Destroy one non-magic gear instead of dealing damage",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 232,
+    "fields": {
+      "name": "Gordock Breeg",
+      "lv": 4,
+      "ac": 15,
+      "hp": 19,
+      "attacks": "1 bastard sword +3 (1d10) or 1 sling (far) +2 (1d4)",
+      "movement": "near",
+      "ability_score_strength": 3,
+      "ability_score_dexterity": 2,
+      "ability_score_constitution": 1,
+      "ability_score_intelligence": 1,
+      "ability_score_wisdom": 2,
+      "ability_score_charisma": 2,
+      "alignment": "N",
+      "talents": "Algae-Eater. Lose 1d4 HP to gain advantage on next check/attack",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 233,
+    "fields": {
+      "name": "Hexling",
+      "lv": 2,
+      "ac": 12,
+      "hp": 11,
+      "attacks": "1 chill touch +2 (1d6 + energy drain)",
+      "movement": "near",
+      "ability_score_strength": 0,
+      "ability_score_dexterity": 2,
+      "ability_score_constitution": 2,
+      "ability_score_intelligence": 0,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": 0,
+      "alignment": "C",
+      "talents": "Energy Drain. 1d4 CON damage. If reduced to 0, become hexling",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 234,
+    "fields": {
+      "name": "Howler",
+      "lv": 1,
+      "ac": 15,
+      "hp": 5,
+      "attacks": "1 club +2 (1d4) or 1 sling (far) +2 (1d4)",
+      "movement": "near",
+      "ability_score_strength": 2,
+      "ability_score_dexterity": 2,
+      "ability_score_constitution": 1,
+      "ability_score_intelligence": 0,
+      "ability_score_wisdom": 0,
+      "ability_score_charisma": 0,
+      "alignment": "N",
+      "talents": "Mob. Deal +1 damage in melee when beside an ally",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 235,
+    "fields": {
+      "name": "Ichor Ooze",
+      "lv": 3,
+      "ac": 12,
+      "hp": 15,
+      "attacks": "2 tendril +3 (1d6)",
+      "movement": "near (climb)",
+      "ability_score_strength": 3,
+      "ability_score_dexterity": 2,
+      "ability_score_constitution": 2,
+      "ability_score_intelligence": -3,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": -3,
+      "alignment": "N",
+      "talents": "Rubbery. Half damage from stabbing weapons. Corrosive. Metal or wood that touches the ooze is destroyed on a d6 roll of",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 236,
+    "fields": {
+      "name": "Marrow Fiend",
+      "lv": 8,
+      "ac": 15,
+      "hp": 39,
+      "attacks": "2 claws +7 (1d10) and 1 sap gout (near line) +5 (2d6 + sap)",
+      "movement": "near (climb)",
+      "ability_score_strength": 4,
+      "ability_score_dexterity": 4,
+      "ability_score_constitution": 3,
+      "ability_score_intelligence": 2,
+      "ability_score_wisdom": 3,
+      "ability_score_charisma": 3,
+      "alignment": "C",
+      "talents": "Devour. Use turn to devour a humanoid body to regain 3d8 HP. Sap. DC 15 DEX check or stuck in place. Repeat check on turn to escape",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 237,
+    "fields": {
+      "name": "Mugdulblub",
+      "lv": 12,
+      "ac": 16,
+      "hp": 58,
+      "attacks": "3 tendril (near) +8 (2d8) and 1 dissolve",
+      "movement": "near (climb, swim)",
+      "ability_score_strength": 5,
+      "ability_score_dexterity": 3,
+      "ability_score_constitution": 4,
+      "ability_score_intelligence": 2,
+      "ability_score_wisdom": 3,
+      "ability_score_charisma": 4,
+      "alignment": "C",
+      "talents": "Rubbery. Half damage from stabbing weapons. Mutagenic. Creatures within near 1:6 chance on their turn of a mutation. 1d4: 1. Extra eye, 2-3. Lost bone, 4. Extra finger Dissolve. One creature in far DC 15 CON or 1d4 CON damage. If reduced to 0, become ichor ooze under Mugdulblub's control",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 238,
+    "fields": {
+      "name": "Mutant Catfish",
+      "lv": 2,
+      "ac": 11,
+      "hp": 11,
+      "attacks": "1 claw +2 (1d6) or 1 barb (near) +2 (1d4 + poison)",
+      "movement": "near (swim)",
+      "ability_score_strength": 2,
+      "ability_score_dexterity": 1,
+      "ability_score_constitution": 2,
+      "ability_score_intelligence": -2,
+      "ability_score_wisdom": 0,
+      "ability_score_charisma": -2,
+      "alignment": "N",
+      "talents": "Poison. DC 12 CON or paralyzed 1d4 rounds",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 239,
+    "fields": {
+      "name": "Tar Bat",
+      "lv": 1,
+      "ac": 13,
+      "hp": 4,
+      "attacks": "1 bite +3 (1d4)",
+      "movement": "near (fly)",
+      "ability_score_strength": -3,
+      "ability_score_dexterity": 3,
+      "ability_score_constitution": 0,
+      "ability_score_intelligence": -3,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": -3,
+      "alignment": "N",
+      "talents": "Pyro. Seeks open flames, ignites on contact with them to deal +1d4 damage. Immune to fire. PLOGRINA B. Lank-haired and moon-eyed. Purple ichor dribbles from the corners of her trembling mouth. AC 14, HP 25, ATK 2 tendril (near) +4 (1d6), MV near, S +0, D +4, C +3, I +1, W +1, Ch +3, AL C, LV 5 Rubbery. Half damage from stabbing weapons. Slime Form. Turn into a puddle of slime that can climb walls for 1d4 rounds (does not use action)",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.creature",
+    "pk": 240,
+    "fields": {
+      "name": "Skrell",
+      "lv": 1,
+      "ac": 13,
+      "hp": 5,
+      "attacks": "1 claw +2 (1d6)",
+      "movement": "double near",
+      "ability_score_strength": 2,
+      "ability_score_dexterity": 3,
+      "ability_score_constitution": 1,
+      "ability_score_intelligence": -3,
+      "ability_score_wisdom": 1,
+      "ability_score_charisma": -3,
+      "alignment": "C",
+      "talents": "Clever. Advantage on checks to do the same action on a consecutive turn. A pale, faceless man with elongated limbs and curved talons that rake the ground. Moves in quick stutters during each eyeblink. AC 17, HP 61, ATK 3 finger needle +9 (2d10) and 1 terrify, MV near (teleport), S +5, D +7, C +3, I +4, W +4, Ch +5, AL C, LV 13 Fearless. Immune to morale checks. Terrify. One target in near DC 15 CHA or paralyzed 1d4 rounds. Waking Nightmare. In place of attacks, all creatures within near DC 15 CHA or flee in a random direction for 1d4 rounds",
+      "document": "cursed-scroll-1"
+    }
   }
 ]
