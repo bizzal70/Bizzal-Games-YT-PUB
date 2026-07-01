@@ -2,16 +2,16 @@
   "approvals": {
     "2026-06-30": {
       "day": "2026-06-30",
-      "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-864635ea60a6",
+      "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-7436eb0f6511",
       "category": "spell_use_case",
       "angle": "dm_counterplay",
       "status": "published",
-      "requested_utc": "2026-07-01T04:21:42Z",
-      "decision_utc": "2026-07-01T04:21:42Z",
+      "requested_utc": "2026-07-01T04:31:21Z",
+      "decision_utc": "2026-07-01T04:31:21Z",
       "decision_by": "autopublish",
       "publish_rc": 0,
-      "publish_output": "[upload_youtube] uploaded id=JI0O6bULfuE privacy=private file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4 https://www.youtube.com/watch?v=JI0O6bULfuE [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dnd5e.json hash=0ca51c498f1c7e6c",
-      "youtube_url": "https://www.youtube.com/watch?v=JI0O6bULfuE"
+      "publish_output": "[upload_youtube] uploaded id=plm4o8PA00Q privacy=private file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4 https://www.youtube.com/watch?v=plm4o8PA00Q [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dnd5e.json hash=9d870e58dd56c3a7",
+      "youtube_url": "https://www.youtube.com/watch?v=plm4o8PA00Q"
     }
   }
 }

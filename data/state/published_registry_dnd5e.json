@@ -77,6 +77,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
         "video_sha256": "2a6526ac25f548ed408ae65910aa21524f9c7f29bc3ce642fa9f5f43e99ea08f"
       }
+    },
+    {
+      "published_utc": "2026-07-01T04:31:24Z",
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-7436eb0f6511",
+      "publish_hash": "9d870e58dd56c3a7c56995c7e6039168dce88f49cfcb47459b576a710deed4b4",
+      "youtube_video_id": "plm4o8PA00Q",
+      "youtube_url": "https://www.youtube.com/watch?v=plm4o8PA00Q",
+      "video_sha256": "4eff17de9a1865dc462c3468ec22e11cca1c02583d174a1a45216299152382ad",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+      "fingerprint": {
+        "day": "2026-06-30",
+        "category": "spell_use_case",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-7436eb0f6511",
+        "canonical_hash": "7436eb0f65118cedf4676ffd030127c1c4cc241d192402cc68e08d80ac944fb1",
+        "script_id": "6fb671998564202fa33614b46696f30b2d3ffc01ea3d7aef10b93ba5d125677d",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_acid-splash",
+        "fact_name": "Acid Splash",
+        "hook": "Acid Splash looks low-stakes until smart timing makes it absurdly useful.",
+        "body": "Acid Splash is a cantrip. Evocation spell with a range of 60 ft. It detonates in a 5-foot-radius sphere. Creatures caught in it must make a Dexterity saving throw or take 1d6 acid damage. Don't waste it on targets built to shrug off saves. Use it smartly; reward clever casting with information or advantage, not just a reroll.",
+        "cta": "DMs: Use Acid Splash wisely; it's not for the resilient, but for those caught unaware in your carefully crafted terrain.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+        "video_sha256": "4eff17de9a1865dc462c3468ec22e11cca1c02583d174a1a45216299152382ad"
+      }
     }
   ]
 }
