@@ -2,16 +2,16 @@
   "approvals": {
     "2026-06-30": {
       "day": "2026-06-30",
-      "content_id": "bgp-2026-06-30-rules-ruling-rule-2-8234bd98de79",
+      "content_id": "bgp-2026-06-30-rules-ruling-rule-1-12bb2baf8120",
       "category": "rules_ruling",
       "angle": "edge_case",
       "status": "published",
-      "requested_utc": "2026-07-01T05:18:52Z",
-      "decision_utc": "2026-07-01T05:18:52Z",
+      "requested_utc": "2026-07-01T05:27:36Z",
+      "decision_utc": "2026-07-01T05:27:36Z",
       "decision_by": "autopublish",
       "publish_rc": 0,
-      "publish_output": "[upload_youtube] uploaded id=AJMOxiMgCTo privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4 https://www.youtube.com/watch?v=AJMOxiMgCTo [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_shadowdark.json hash=a42feb12bd7fdee2",
-      "youtube_url": "https://www.youtube.com/watch?v=AJMOxiMgCTo"
+      "publish_output": "[upload_youtube] uploaded id=3_gwuOzsdwg privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4 https://www.youtube.com/watch?v=3_gwuOzsdwg [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_shadowdark.json hash=fb2f078c8ba51746",
+      "youtube_url": "https://www.youtube.com/watch?v=3_gwuOzsdwg"
     }
   }
 }

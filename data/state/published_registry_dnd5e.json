@@ -181,6 +181,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
         "video_sha256": "f64990dcc437377e32e394d9ee18e92f136078c48c93d565fe4b3c17d5b7c796"
       }
+    },
+    {
+      "published_utc": "2026-07-01T05:23:56Z",
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-alarm-c3ec13eddd23",
+      "publish_hash": "abaee718680fa9d54e6a2c02b96b798d0ec0965c006c871a79c8d5524d175451",
+      "youtube_video_id": "gINu6h8PYm8",
+      "youtube_url": "https://www.youtube.com/watch?v=gINu6h8PYm8",
+      "video_sha256": "c50fb0a3895de9cb6330b4a3fb0d7868a49a2ce4d59b6f94f4b73373c419075e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+      "fingerprint": {
+        "day": "2026-06-30",
+        "category": "spell_use_case",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-alarm-c3ec13eddd23",
+        "canonical_hash": "c3ec13eddd237ca29b83450eb54fd6c6f7d5cb8fe2669599064a71433c6cc254",
+        "script_id": "a44e3c463d5fabba3eea97a970db15c431bade5f721c52bd496ec7784f76d23d",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_alarm",
+        "fact_name": "Alarm",
+        "hook": "Alarm looks low-stakes until smart timing makes it absurdly useful.",
+        "body": "Alarm is a 1st-level abjuration spell with a range of 30 feet and a duration of 8 hours. Many players cast it without considering the 20-foot cube area limitation, leading to ineffective placements. Smart play involves positioning the alarm in high-traffic areas or at critical entry points, maximizing the information gained from alerts about intrusions.",
+        "cta": "DMs: Position Alarm in high-traffic areas to ensure your players learn the hard way that a 20-foot cube has its limits.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+        "video_sha256": "c50fb0a3895de9cb6330b4a3fb0d7868a49a2ce4d59b6f94f4b73373c419075e"
+      }
     }
   ]
 }

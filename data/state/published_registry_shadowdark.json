@@ -51,6 +51,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4",
         "video_sha256": "5aad9c49e0efb580b1b7f0ebc7e2febfcc1a462760b94bd73334fd13453dfcf2"
       }
+    },
+    {
+      "published_utc": "2026-07-01T05:27:38Z",
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-rules-ruling-rule-1-12bb2baf8120",
+      "publish_hash": "fb2f078c8ba5174609ba15309651a4ab1b49d306b87afaba8513f492d558f755",
+      "youtube_video_id": "3_gwuOzsdwg",
+      "youtube_url": "https://www.youtube.com/watch?v=3_gwuOzsdwg",
+      "video_sha256": "0ff498b2841392df455d051993ce08d430b7cf97b3763c3987c3a673d73ec344",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4",
+      "fingerprint": {
+        "day": "2026-06-30",
+        "category": "rules_ruling",
+        "angle": "edge_case",
+        "content_id": "bgp-2026-06-30-rules-ruling-rule-1-12bb2baf8120",
+        "canonical_hash": "12bb2baf81206a3a0120e0daf1da31ec809cee1ac1531286f0d0421bea112542",
+        "script_id": "c6dfdfa63f919ae74ff9e71728d14adb2eb340912d7a2bdb84b4ea5bcc758eba",
+        "fact_kind": "rule",
+        "fact_pk": 1,
+        "fact_name": "Advantage and Disadvantage",
+        "hook": "Players often misapply Advantage and Disadvantage in sequential actions.",
+        "body": "Advantage allows rolling two d20s and taking the higher result, while Disadvantage means rolling two d20s and taking the lower result. Players frequently forget that these effects do not stack; if both apply, only one takes effect based on the order of operations. Smart play requires determining the correct application before rolling, ensuring the most favorable outcome is achieved based on circumstances. Clear rulings on timing can prevent disputes during gameplay.",
+        "cta": "DMs: Clarify how Advantage and Disadvantage will be applied before rolling, or expect the usual confusion and arguments.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4",
+        "video_sha256": "0ff498b2841392df455d051993ce08d430b7cf97b3763c3987c3a673d73ec344"
+      }
     }
   ]
 }
