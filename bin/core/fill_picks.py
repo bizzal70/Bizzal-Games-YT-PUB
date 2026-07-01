@@ -29,6 +29,7 @@ REF_CFG = os.getenv("BIZZAL_REFERENCE_SOURCES_PATH", "").strip() or os.path.join
 if not os.path.isabs(REF_CFG):
     REF_CFG = os.path.join(REPO_ROOT, REF_CFG)
 VALIDATED_DIR = resolve_repo_path(os.getenv("BIZZAL_ATOM_VALIDATED_DIR", ""), os.path.join(REPO_ROOT, "data", "atoms", "validated"))
+STATE_DIR = os.path.join(REPO_ROOT, "data", "state")
 
 def load_json(path: str):
     with open(path, "r", encoding="utf-8") as f:
@@ -139,6 +140,37 @@ def recent_used_fact_names(current_day: str, lookback_days: int, categories: set
         count += 1
         if count >= lookback_days:
             break
+
+    return used
+
+
+def registry_used_fact_names(categories: set[str]) -> set[str]:
+    """Read the permanent publish registry and return all ever-published fact names
+    for the given categories. This is the long-term dedup layer -- validated atoms
+    are ephemeral (runner temp) but the registry is committed back to the repo."""
+    registry_path = os.path.join(STATE_DIR, f"published_registry_{SYSTEM_ID}.json")
+    if not os.path.exists(registry_path):
+        return set()
+
+    try:
+        data = load_json(registry_path)
+    except Exception:
+        return set()
+
+    items = data if isinstance(data, list) else (data.get("items") or [])
+    canonical_categories = {canonical_category(c) for c in categories}
+    used: set[str] = set()
+
+    for entry in items:
+        if not isinstance(entry, dict):
+            continue
+        fp = entry.get("fingerprint") or entry
+        cat = canonical_category(str(fp.get("category") or ""))
+        if cat not in canonical_categories:
+            continue
+        name = normalize_name(fp.get("fact_name") or "")
+        if name:
+            used.add(name)
 
     return used
 
@@ -352,17 +384,27 @@ def main():
     atom.setdefault("picks", {})
     picks = atom["picks"]
 
+    # Short-term PK avoidance from local validated atoms (ephemeral, best-effort)
     avoid_creature = recent_used_pks("creature_pk", day, lookback_days)
     avoid_spell = recent_used_pks("spell_pk", day, lookback_days)
     avoid_item = recent_used_pks("item_pk", day, lookback_days)
     avoid_rule = recent_used_pks("rule_pk", day, lookback_days)
     avoid_class = recent_used_pks("class_pk", day, lookback_days)
 
+    # Short-term name avoidance from local validated atoms
     avoid_creature_names = recent_used_fact_names(day, name_lookback_days, {"monster_tactic", "encounter_seed"})
     avoid_spell_names = recent_used_fact_names(day, name_lookback_days, {"spell_use_case"})
     avoid_item_names = recent_used_fact_names(day, name_lookback_days, {"item_spotlight"})
     avoid_rule_names = recent_used_fact_names(day, name_lookback_days, {"rules_ruling", "rules_myth"})
     avoid_class_names = recent_used_fact_names(day, name_lookback_days, {"character_micro_tip"})
+
+    # Permanent name avoidance from the publish registry (committed back to repo).
+    # This ensures we never cover the same topic twice regardless of how long ago it ran.
+    avoid_creature_names |= registry_used_fact_names({"monster_tactic", "encounter_seed"})
+    avoid_spell_names    |= registry_used_fact_names({"spell_use_case"})
+    avoid_item_names     |= registry_used_fact_names({"item_spotlight"})
+    avoid_rule_names     |= registry_used_fact_names({"rules_ruling", "rules_myth"})
+    avoid_class_names    |= registry_used_fact_names({"character_micro_tip"})
 
     # Fill required picks per category (v1)
     if category == "monster_tactic":
