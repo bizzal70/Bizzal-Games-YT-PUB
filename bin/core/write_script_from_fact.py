@@ -808,6 +808,30 @@ def locked_tokens(script: dict, fact: dict) -> list:
     return sorted(tokens)
 
 
+_BANNED_OPENERS = (
+    "players often",
+    "the smart play is",
+    "smart play involves",
+    "the common mistake is",
+    "the common trap is",
+)
+
+
+def _first_banned_opener(text: str):
+    """Return the first banned sentence-opener phrase found, else None.
+
+    The prompt asks the model to avoid these templated openers, but it still
+    slips one in occasionally. This is the deterministic guard behind that ask.
+    """
+    import re as _re
+    for sent in _re.split(r"(?<=[.!?])\s+", str(text or "")):
+        low = sent.strip().lstrip("\"'").strip().lower()
+        for phrase in _BANNED_OPENERS:
+            if low.startswith(phrase):
+                return phrase
+    return None
+
+
 def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) -> dict:
     if not env_true("BIZZAL_ENABLE_AI_SCRIPT", True):
         ai_diag("AI script polish off (BIZZAL_ENABLE_AI_SCRIPT=0)")
@@ -966,6 +990,48 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
         if is_generic_cta(out.get("cta", "")):
             out["cta"] = clean_ai_style_text(script.get("cta", ""), segment="cta")
             ai_diag("AI script CTA reverted by anti-generic gate")
+
+        # --- Post-generation banned-opener lint (one corrective retry) ---
+        _violation = _first_banned_opener(" ".join([out["hook"], out["body"], out["cta"]]))
+        if _violation:
+            ai_diag(f"AI script lint: banned opener '{_violation}' detected — regenerating once")
+            try:
+                _fix_payload = dict(payload)
+                _fix_payload["messages"] = payload["messages"] + [
+                    {"role": "assistant", "content": json.dumps(out, ensure_ascii=False)},
+                    {"role": "user", "content": (
+                        "Your previous answer began a sentence with the BANNED phrase "
+                        f"\"{_violation}\". Rewrite hook/body/cta so that NO sentence begins with "
+                        "'Players often', 'The smart play is', 'Smart play involves', or 'The common mistake is'. "
+                        "Keep every specific mechanic and number. Lead each sentence with the mechanic, the "
+                        "number, or the consequence. Return the same strict JSON object (hook, body, cta)."
+                    )},
+                ]
+                _req2 = request.Request(
+                    endpoint,
+                    data=json.dumps(_fix_payload).encode("utf-8"),
+                    headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+                    method="POST",
+                )
+                with request.urlopen(_req2, timeout=35) as _resp2:
+                    _raw2 = _resp2.read().decode("utf-8")
+                _content2 = (((json.loads(_raw2).get("choices") or [{}])[0].get("message") or {}).get("content") or "{}")
+                _obj2 = json.loads(_content2)
+                _fixed = {
+                    "hook": clean_ai_style_text(_obj2.get("hook") or out["hook"], segment="hook"),
+                    "body": clean_ai_style_text(_obj2.get("body") or out["body"], segment="body"),
+                    "cta": clean_ai_style_text(_obj2.get("cta") or out["cta"], segment="cta"),
+                }
+                if _fixed["hook"] and _fixed["body"] and _fixed["cta"]:
+                    _still = _first_banned_opener(" ".join([_fixed["hook"], _fixed["body"], _fixed["cta"]]))
+                    if _still:
+                        ai_diag(f"AI script lint: opener '{_still}' still present after retry — shipping anyway")
+                    else:
+                        ai_diag("AI script lint: banned opener fixed on retry")
+                    out = _fixed
+            except Exception as _exc:
+                ai_diag(f"AI script lint retry skipped: {_exc}")
+        # --- end banned-opener lint ---
 
         blob = f"{out['hook']} {out['body']} {out['cta']}"
         skipped_numeric_locks = []
