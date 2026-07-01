@@ -1,58 +1,1250 @@
 [
   {
-    "model": "reference.item",
+    "model": "shadowdark.item",
     "pk": 1,
     "fields": {
-      "name": "Torch",
-      "document": "shadowdark-v4.8"
+      "name": "Armor Of Saint Terragnis",
+      "bonus": "+3 plate mail.",
+      "benefit": "Hostile spells that target you are DC 18 to cast. Once per month, you can summon an Avatar of Saint Terragnis (treat as an archangel) to fight by your side for 10 rounds.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.item",
+    "model": "shadowdark.item",
     "pk": 2,
     "fields": {
-      "name": "Lantern",
-      "document": "shadowdark-v4.8"
+      "name": "Amulet Of Vitality",
+      "bonus": "",
+      "benefit": "Your Constitution stat becomes 18 (+4) while wearing this amulet.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.item",
+    "model": "shadowdark.item",
     "pk": 3,
     "fields": {
-      "name": "Rope",
-      "document": "shadowdark-v4.8"
+      "name": "Alabaster Destrier",
+      "bonus": "",
+      "benefit": "Once per day, the wielder can speak the command word to turn the statuette into a pegasus that accepts neutral or lawful riders. The statuette remains in this form for 1 hour.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.item",
+    "model": "shadowdark.item",
     "pk": 4,
     "fields": {
-      "name": "Rations",
-      "document": "shadowdark-v4.8"
+      "name": "Amulet Of Secrecy",
+      "bonus": "",
+      "benefit": "You can't be detected by divination magic such as the scrying spell or a Crystal Ball while wearing this amulet.",
+      "curse": "You constantly have the sensation of being watched. \"St. Terragnis wore this armor to fight the Legion of the Ninth Circle. She triumphed that day ; so will we. \" -Iraga, half-orc priest",
+      "desc": "",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.item",
+    "model": "shadowdark.item",
     "pk": 5,
     "fields": {
-      "name": "Iron Spikes",
-      "document": "shadowdark-v4.8"
+      "name": "Armor Of The Oni",
+      "bonus": "+1 plate mail.",
+      "benefit": "You can speak and understand Diabolic. Your melee weapon attacks deal +1 damage.",
+      "curse": "You have disadvantage on attacks and spellcasting checks against demons.",
+      "desc": "",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.item",
+    "model": "shadowdark.item",
     "pk": 6,
     "fields": {
-      "name": "Crowbar",
-      "document": "shadowdark-v4.8"
+      "name": "Bag Of Badgers",
+      "bonus": "",
+      "benefit": "Once per day, you can reach inside the bag and pull out an angry badger. You can throw the badger up to a near distance. The badger attacks the nearest creature for 3 rounds before waddling away.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.item",
+    "model": "shadowdark.item",
     "pk": 7,
     "fields": {
-      "name": "Grappling Hook",
-      "document": "shadowdark-v4.8"
+      "name": "Bag Of Devouring",
+      "bonus": "",
+      "benefit": "",
+      "curse": "This bag devours and destroys anything placed inside it in 1d6 rounds.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 8,
+    "fields": {
+      "name": "Bead Of Force",
+      "bonus": "",
+      "benefit": "You can throw this bead at one target up to a near distance. If you hit, the target becomes caught in a resilient sphere spell (pg. 69).",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 9,
+    "fields": {
+      "name": "Bag Of Holding",
+      "bonus": "",
+      "benefit": "This bag has an interdimensional space inside that can hold up to 10 gear slots.",
+      "curse": "Placing this item inside another Bag of Holding or a Portable Hole destroys both items and all held inside them.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 10,
+    "fields": {
+      "name": "Blade Of Vengeance",
+      "bonus": "+2 bastard sword.",
+      "benefit": "You have advantage on attacks against undead creatures with this sword. You can use the sword to cast turn undead once per day (+4 bonus).",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 11,
+    "fields": {
+      "name": "Boots Of Dancing",
+      "bonus": "",
+      "benefit": "",
+      "curse": "As soon as you don these boots, you begin cavorting and dancing uncontrollably. You move randomly each turn and must pass a DC 15 Dexterity check to remove the boots.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 12,
+    "fields": {
+      "name": "Boots Of Hovering",
+      "bonus": "",
+      "benefit": "You can walk on an insubstantial surface for 1 turn at a time. You fall through the surface if you end your turn on it.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 13,
+    "fields": {
+      "name": "Boots Of The Cat",
+      "bonus": "",
+      "benefit": "You can jump up to a near distance from a standstill. Your checks to move silently are always easy (DC 9).",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 14,
+    "fields": {
+      "name": "Bracers Of Archery",
+      "bonus": "",
+      "benefit": "You deal +1 damage with ranged weapons.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 15,
+    "fields": {
+      "name": "Bracers Of Defense",
+      "bonus": "",
+      "benefit": "You get a +1 bonus to your armor class.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 16,
+    "fields": {
+      "name": "Brak'S Cube Of Perfection",
+      "bonus": "",
+      "benefit": "Roll the cube by rolling a d6. Your corresponding stat permanently increases to 18 (+4). 1. Strength. 2. Dexterity. 3. Constitution. 4. Intelligence. 5. Wisdom. 6. Charisma. After being rolled, Brak's Cube of Perfection teleports to a random location in the multiverse.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 17,
+    "fields": {
+      "name": "Brak'S Book Of Misspells",
+      "bonus": "",
+      "benefit": "",
+      "curse": "This spellbook contains one scroll each of acid arrow (pg. 54), fireball (pg. 60), and sleep (pg. 71). When a wizard tries to cast or learn a spell from these scrolls, the spell targets the caster on a success.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 18,
+    "fields": {
+      "name": "Circlet Of Wisdom",
+      "bonus": "",
+      "benefit": "Your Wisdom stat becomes 18 (+4) while wearing this circlet.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 19,
+    "fields": {
+      "name": "Cloak Of Elvenkind",
+      "bonus": "",
+      "benefit": "Your checks to hide are always easy (DC 9). Once per day, you can become invisible for 5 rounds. The invisibility ends if you attack or cast a spell.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 20,
+    "fields": {
+      "name": "Cloak Of The Bat",
+      "bonus": "",
+      "benefit": "You can fly a near distance as your movement while in a shadowy area.",
+      "curse": "Each time you use the cloak to fly, roll a d20. On a result of 1, you and your gear turn into a small bat for 3 rounds.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 21,
+    "fields": {
+      "name": "Crystal Ball",
+      "bonus": "",
+      "benefit": "Only wizards can use a Crystal Ball. You can use it to cast the scrying spell (pg. 70). If you fail the spellcasting check to cast scrying, the Crystal Ball ceases to function for a day.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 22,
+    "fields": {
+      "name": "Dagger Of The Goblin Hero",
+      "bonus": "+1 dagger.",
+      "benefit": "You can speak Goblin. All goblinoid creatures react to you with a friendly attitude.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 23,
+    "fields": {
+      "name": "Egg Of The Cockatrice",
+      "bonus": "",
+      "benefit": "Once per week, you can speak a command word that causes a cockatrice to hatch and follow your commands for 5 rounds before flying away. The egg repairs itself over one week.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 24,
+    "fields": {
+      "name": "Flying Carpet",
+      "bonus": "",
+      "benefit": "The carpet fits two riders (one is the driver). It can fly double near on the driver's turn.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 25,
+    "fields": {
+      "name": "Genie Lamp",
+      "bonus": "",
+      "benefit": "Rubbing the lamp causes its resident djinni (50% chance) or efreeti (50% chance) to emerge. A djinni grants its summoner one wish spell (pg. 73) before disappearing. An efreeti does the same, but only after being defeated in combat.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 26,
+    "fields": {
+      "name": "Gloves Of Agility",
+      "bonus": "",
+      "benefit": "Your Dexterity stat becomes 18 (+4) while wearing these gloves.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 27,
+    "fields": {
+      "name": "Goblin Bomb",
+      "bonus": "",
+      "benefit": "You can light the bomb's fuse and throw it a near distance. It explodes in 1d4 rounds, dealing 2d8 damage to everything in near range.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 28,
+    "fields": {
+      "name": "Gauntlets Of Might",
+      "bonus": "",
+      "benefit": "Your Strength stat becomes 18 (+4) while wearing these gauntlets.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 29,
+    "fields": {
+      "name": "Greataxe Of The Horde",
+      "bonus": "+2 greataxe.",
+      "benefit": "Once per day, you can turn a regular hit with this weapon into a critical hit.",
+      "curse": "Each time you go below half your hit points, make a DC 12 Charisma check. On a failure, you enter a battle rage for 1d4 rounds and must attack the nearest creature.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 30,
+    "fields": {
+      "name": "Hat Of Intellect",
+      "bonus": "",
+      "benefit": "Your Intelligence stat becomes 18 (+4) while wearing this hat.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 31,
+    "fields": {
+      "name": "Hat Of The Hound",
+      "bonus": "",
+      "benefit": "You can transform into a mastiff each day for up to 10 rounds total. Your clothing and possessions transform with you.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 32,
+    "fields": {
+      "name": "Helm Of Mind Reading",
+      "bonus": "",
+      "benefit": "You can cast the detect thoughts spell (pg. 58) three times per day (+4 bonus).",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 33,
+    "fields": {
+      "name": "Horned Helm Of Ramlaat",
+      "bonus": "",
+      "benefit": "This helm grants you a +1 bonus to your armor class. You have advantage on any check you make to knock down creatures or objects.",
+      "curse": "You feel compelled to headbutt delicate objects.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 34,
+    "fields": {
+      "name": "Hourglass Of The Black Sands",
+      "bonus": "",
+      "benefit": "Once per day, you can turn the hourglass when you cast a spell. The spell's effects last 1d4 rounds longer.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 35,
+    "fields": {
+      "name": "Immovable Rod",
+      "bonus": "",
+      "benefit": "When you click the button, the rod becomes fixed in space (holds 5,000 lbs). Clicking the button again ends the effect.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 36,
+    "fields": {
+      "name": "Jewel Of Barbalt",
+      "bonus": "",
+      "benefit": "You roll a critical success on an 18-20.",
+      "curse": "You roll a critical failure on a 1-3.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 37,
+    "fields": {
+      "name": "Kytherian Cog",
+      "bonus": "",
+      "benefit": "You start every session with a luck token.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 38,
+    "fields": {
+      "name": "Longbow Of The Elven Kings",
+      "bonus": "+1 longbow.",
+      "benefit": "You have advantage on attacks with this bow against unnatural creatures and outsiders.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 39,
+    "fields": {
+      "name": "Memnon'S Discordant Blade",
+      "bonus": "+1 greatsword.",
+      "benefit": "Once per day, you can utterly annihilate one creature of level 9 or less that you damage with this blade. The creature can pass a DC 18 Constitution check to take 3d8 damage instead.",
+      "curse": "You cannot relinquish ownership of this blade unless it is taken from you by a creature that defeats you in combat. For each day you do not slay a LV 2 or greater creature with this sword, you lose 1d6 hit points. These are restored only when you kill a LV 2 or greater creature with the sword.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 40,
+    "fields": {
+      "name": "Memnon'S Blazing Javelin",
+      "bonus": "+1 javelin.",
+      "benefit": "The javelin always returns to your hand after being thrown. Once per day, when you throw this javelin, you can turn it into lightning as per the lightning bolt spell (no spellcasting check).",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 41,
+    "fields": {
+      "name": "Magic Ink",
+      "bonus": "",
+      "benefit": "The ink's writing is invisible when cool and can only be seen when warmed up by a nearby source of strong heat. There's enough for 1d4 uses.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 42,
+    "fields": {
+      "name": "Memnon'S Entropic Armor",
+      "bonus": "+1 plate mail.",
+      "benefit": "Once per day, you can speak the armor's command word. Until your next turn, all non-magical weapons that strike you are instantly unmade, shattering into dust. You take no damage from them.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 43,
+    "fields": {
+      "name": "Mirror Of Mischief",
+      "bonus": "",
+      "benefit": "",
+      "curse": "The first time a humanoid creature looks into this mirror, the mirror creates an evil and malicious duplicate of them. The duplicate can step from the mirror and is an exact copy of the subject (except for magical gear, which looks identical but is mundane in nature). The evil duplicate can live indefinitely outside the mirror. It attempts to sow chaos in the life of the creature it duplicated.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 44,
+    "fields": {
+      "name": "Moonwrought Chainmail",
+      "bonus": "+1 mithral chainmail.",
+      "benefit": "Once per day, you can speak the armor's command word. You gain a +1 bonus to your next spellcasting check or ranged attack.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 45,
+    "fields": {
+      "name": "Necklace Of Charm",
+      "bonus": "",
+      "benefit": "Your Charisma stat becomes 18 (+4) while wearing this necklace.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 46,
+    "fields": {
+      "name": "Necrotic Mace Of Withering",
+      "bonus": "+1 mace.",
+      "benefit": "While holding the mace, you can turn cure wounds spells you cast into harmful magic that instead inflicts the same amount of damage it would heal.",
+      "curse": "If you use the mace to cast an inverted cure wounds spell, you are haunted by nightmares that night. You must pass a DC 12 Wisdom check during your next rest or gain no benefit from resting.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 47,
+    "fields": {
+      "name": "Obsidian Witchknife",
+      "bonus": "+2 dagger.",
+      "benefit": "When you cast a spell while holding this dagger, you may wound yourself with it. Add the amount of damage you take to your spellcasting check.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 48,
+    "fields": {
+      "name": "Onyx Destrier",
+      "bonus": "",
+      "benefit": "Once per day, the wielder can speak the command word to turn the statuette into a nightmare that accepts neutral or chaotic riders. The statuette remains in this form for 1 hour.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 49,
+    "fields": {
+      "name": "Nightcloak Armor",
+      "bonus": "+1 leather armor.",
+      "benefit": "Once per day, you may choose to automatically pass a Dexterity check to hide.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 50,
+    "fields": {
+      "name": "Ophidian Armor",
+      "bonus": "+1 leather armor.",
+      "benefit": "You have advantage on checks to avoid the effects of poison.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 51,
+    "fields": {
+      "name": "Pearl Of Power",
+      "bonus": "",
+      "benefit": "Once per day, you may regain the ability to cast a spell you have lost. This cannot restore a spell lost due to a critical spellcasting failure.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 52,
+    "fields": {
+      "name": "Pipe Of The Rolling Hills",
+      "bonus": "",
+      "benefit": "Up to three times per day, regain 1d4 hit points when you smoke this pipe.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 53,
+    "fields": {
+      "name": "Pipes Of The Sewers",
+      "bonus": "",
+      "benefit": "Once per day, you can play these pipes to summon 2d6 giant rats. The rats obey you for d6 rounds, and then they scatter and flee.",
+      "curse": "If you stop playing while the rats are present, they turn on you and attack.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 54,
+    "fields": {
+      "name": "Portable Hole",
+      "bonus": "",
+      "benefit": "The Portable Hole folds open on a flat surface into a 6-foot wide, 6-foot deep hole. It has 20 gear slots of storage. The hole closes when you fold the cloth into a small square.",
+      "curse": "Placing this item inside a Bag of Holding or another Portable Hole destroys both items and all held inside them. \"There's nothing better than a cheese, a pipe, and a story. \" -Ralina, halfling thief, relating a halfling saying",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 55,
+    "fields": {
+      "name": "Potion Of Extirpation",
+      "bonus": "",
+      "benefit": "You can pour the potion on one object or creature filling up to a close area. The target is utterly removed from reality and cannot be returned by anything short of a wish spell.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 56,
+    "fields": {
+      "name": "Potion Of Flying",
+      "bonus": "",
+      "benefit": "You can fly a near distance for 10 rounds when you drink this potion.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 57,
+    "fields": {
+      "name": "Potion Of Forgetfulness",
+      "bonus": "",
+      "benefit": "If you serve this potion to an intelligent being and that being drinks it, the imbiber permanently forgets one memory of your choosing.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 58,
+    "fields": {
+      "name": "Potion Of Giant Strength",
+      "bonus": "",
+      "benefit": "Your Strength becomes 18 (+4) and you deal x2 damage on melee attacks for 10 rounds.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 59,
+    "fields": {
+      "name": "Potion Of Healing",
+      "bonus": "",
+      "benefit": "The imbiber of this potion regains hit points based on their level. LV 0-3: 1d6 hit points. LV 4-6: 2d8 hit points. LV 7-9: 3d10 hit points. LV 10+: 4d12 hit points.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 60,
+    "fields": {
+      "name": "Potion Of Invisibility",
+      "bonus": "",
+      "benefit": "When you drink this potion, you become invisible for 10 rounds or until you attack or cast a spell.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 61,
+    "fields": {
+      "name": "Potion Of Legendary Deeds",
+      "bonus": "",
+      "benefit": "When you drink this potion, you gain one level and your XP total resets to zero.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 62,
+    "fields": {
+      "name": "Potion Of Polymorph",
+      "bonus": "",
+      "benefit": "When you drink this potion, it casts the polymorph spell (pg. 67) on you with a duration of 1 hour instead of 10 rounds.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 63,
+    "fields": {
+      "name": "Potion Of Vitality",
+      "bonus": "",
+      "benefit": "When you drink this potion, roll your class's hit points die. You permanently gain that many HP.",
+      "curse": "If you drink more than one Potion of Vitality in your lifetime, you must pass a DC 18 Constitution check each time or die instantly.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 64,
+    "fields": {
+      "name": "Ring Of Feather Falling",
+      "bonus": "",
+      "benefit": "Once per day, the ring can cast feather fall (pg. 60) on you when you fall.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 65,
+    "fields": {
+      "name": "Ring Of Fireballs",
+      "bonus": "",
+      "benefit": "You can pluck the glass marble from the ring and throw it up to a far distance, causing a fireball spell (pg. 60) to bloom at the site of impact. The glass marble regrows after you successfully complete a rest.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 66,
+    "fields": {
+      "name": "Ring Of Invisibility",
+      "bonus": "",
+      "benefit": "Once per day, the ring can cast the invisibility spell (pg. 63) on you.",
+      "curse": "There is a cumulative 1% chance each time you rest that your sleep is ruined by apocalyptic nightmares, and you gain no benefit from resting. This resets to a 1% chance each time it triggers.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 67,
+    "fields": {
+      "name": "Ring Of Ramlaat",
+      "bonus": "",
+      "benefit": "Once per day, you can enter a rage where you deal double damage for 5 rounds. During the rage, you can't cast spells and enemies have advantage on melee attacks against you.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 68,
+    "fields": {
+      "name": "Robe Of The Druid",
+      "bonus": "",
+      "benefit": "Only a wizard with the Druid title can wear this robe. Your unarmored AC becomes 15 plus your Dexterity modifier. Twice per day, you can regain the ability to cast one lost spell. You have advantage on casting the shapechange spell. When you cast it, its duration is 1 hour instead of focus.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 69,
+    "fields": {
+      "name": "Robe Of The Sorcerer",
+      "bonus": "",
+      "benefit": "Only a wizard with the Sorcerer title can wear this robe. Your unarmored AC becomes 15 plus your Dexterity modifier. When you cast a spell that deals damage, add your Intelligence modifier to the total. You have advantage on casting the power word kill spell.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 70,
+    "fields": {
+      "name": "Robe Of The Archmage",
+      "bonus": "",
+      "benefit": "Only a wizard with the Archmage title can wear this robe. Your unarmored AC becomes 15 plus your Dexterity modifier. Choose three spells you know. Their spellcasting DC is always 11. You have advantage on casting the disintegrate spell.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 71,
+    "fields": {
+      "name": "Scarab Of Protection",
+      "bonus": "",
+      "benefit": "If you die, make a DC 18 Constitution check. If you succeed, you are unconscious instead of dead.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 72,
+    "fields": {
+      "name": "Scimitar Of The Ash Moon",
+      "bonus": "+3 greatsword.",
+      "benefit": "If you roll a critical hit with this weapon, the target is beheaded. It dies instantly if decapitation would kill it.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 73,
+    "fields": {
+      "name": "Shield Of The Crusader",
+      "bonus": "+1 shield.",
+      "benefit": "Once per day, you can speak a prayer to wreathe the shield in holy flames, granting +2 to your AC for 3 rounds.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 74,
+    "fields": {
+      "name": "Shield Of The Lion",
+      "bonus": "+1 shield.",
+      "benefit": "Once per day, you can command the lion to animate and bellow a ferocious roar. All hostile creatures within near range must immediately make a morale check.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 75,
+    "fields": {
+      "name": "Shield Of The Witch-King",
+      "bonus": "+2 shield.",
+      "benefit": "You take half damage from undead creatures.",
+      "curse": "If you go to 0 HP, the spirit of Ix-Natheer tries to steal your body. He blocks healing magic from affecting you. If you die, Ix-Natheer possesses you.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 76,
+    "fields": {
+      "name": "Shortsword Of The Thief",
+      "bonus": "+1 shortsword.",
+      "benefit": "Once per day, regain a luck token you just spent.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 77,
+    "fields": {
+      "name": "Silver Mace Of Wrath",
+      "bonus": "+1 mace.",
+      "benefit": "This weapon deals double damage against creatures with lycanthropy.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 78,
+    "fields": {
+      "name": "Sphere Of Annihilation",
+      "bonus": "",
+      "benefit": "This sphere utterly destroys all matter it touches. Intelligent beings can move the flying sphere a near distance by passing a DC 18 Intelligence check. If multiple creatures vie for control of the sphere, it is a contested Intelligence check instead. Wizards have advantage on this check. The winner moves the sphere a near distance. If the sphere moves into a space occupied by a creature, the being controlling the sphere makes an attack roll against that creature with a +7 bonus. On a hit, the creature is obliterated.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 79,
+    "fields": {
+      "name": "Spyglass Of True Sight",
+      "bonus": "",
+      "benefit": "When you look through the spyglass, you can see invisible creatures and objects.",
+      "curse": "The wielder feels a compulsion to look at everything through the spyglass.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 80,
+    "fields": {
+      "name": "Staff Of Healing",
+      "bonus": "+1 staff.",
+      "benefit": "Once per day, you can touch a creature with the staff to heal it for 1d6 hit points.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 81,
+    "fields": {
+      "name": "Staff Of Ord",
+      "bonus": "+3 staff.",
+      "benefit": "Functions as a wand of dimension door (pg. 59), fireball (pg. 60), sending (pg. 70), and telekinesis (pg. 72). Unlike a wand, the staff remains intact if you roll a 1 on your spellcasting checks. Hostile spells targeting you are DC 18 to cast.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 82,
+    "fields": {
+      "name": "The Kytherian Mechanism",
+      "bonus": "",
+      "benefit": "A handle turns The Kytherian Mechanism's mighty wheels, but it doesn't function until its seven missing Kytherian Cogs are replaced. Once functional, activating the mechanism allows the operator to undo one event of their choosing from history. Then, the seven Kytherian Cogs magically scatter to far-flung locations.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 83,
+    "fields": {
+      "name": "The Malediction Infernal",
+      "bonus": "",
+      "benefit": "A chaotic being who reads this tome gains a level and learns the Diabolic language. A non-chaotic being who reads this book must pass a DC 18 Wisdom check or lose one level. After being read, the tome teleports to a far-flung location.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 84,
+    "fields": {
+      "name": "Staff Of The Cobra",
+      "bonus": "+1 staff.",
+      "benefit": "All snakes regard you with a friendly attitude unless you do something to upset them. Once per day, you can throw the staff to the ground. It becomes a giant snake for 5 rounds that obeys your mental commands. If the giant snake goes to 0 HP, it reverts into a staff.",
+      "curse": "You have disadvantage on attacks and casting hostile spells targeting snakes.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 85,
+    "fields": {
+      "name": "Sword Of The Ancients",
+      "bonus": "+2 longsword.",
+      "benefit": "The sword is unbreakable and can carve through any material. The owner can summon the sword to their hand if it's on the same plane.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 86,
+    "fields": {
+      "name": "Thrice-Blessed Sword",
+      "bonus": "+3 longsword.",
+      "benefit": "You deal double damage against demons, devils, and undead.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 87,
+    "fields": {
+      "name": "Tome Mordanticus",
+      "bonus": "",
+      "benefit": "When you read the tome, you learn three True Names (pg. 319) of three beings you choose. Your True Name also appears in the book after reading it.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 88,
+    "fields": {
+      "name": "Tome Of Gehemna",
+      "bonus": "",
+      "benefit": "Each day, a random wizard spell scroll appears inside the tome, replacing the spell scroll from the prior day.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 89,
+    "fields": {
+      "name": "Tome Of Hadebe",
+      "bonus": "",
+      "benefit": "The tome contains one each of the following scrolls: burning hands (pg. 56), fireball (pg. 60), and prismatic orb (pg. 67).",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 90,
+    "fields": {
+      "name": "Trident Of The Seas",
+      "bonus": "+2 spear.",
+      "benefit": "You can breathe underwater, as well as speak to and understand wild sea creatures. Once per day, you can cast control water (pg. 57) with a +4 bonus.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 91,
+    "fields": {
+      "name": "True Name",
+      "bonus": "",
+      "benefit": "You have advantage on attack rolls and spellcasting checks targeting a creature whose True Name you utter.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 92,
+    "fields": {
+      "name": "Wand Of Unlife",
+      "bonus": "",
+      "benefit": "This wand contains the spells animate dead (pg. 54) and create undead (pg. 58).",
+      "curse": "Each time you use the wand to cast a spell, you take 1d4 points of Constitution damage. If you reach 0 Constitution from this effect, you die and turn into a zombie.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 93,
+    "fields": {
+      "name": "Wand Of Warding",
+      "bonus": "",
+      "benefit": "This wand contains the spells dispel magic (pg. 59) and protection from energy (pg. 68).",
+      "curse": "Each time you fail a spellcasting check with this wand, you also lose the ability to cast a random spell you know until you complete a rest.",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 94,
+    "fields": {
+      "name": "Warhammer Of The Dwarf Lords",
+      "bonus": "+1 warhammer.",
+      "benefit": "This weapon has the thrown property (pg. 37) to a near distance. It always returns to your hand after being thrown. Your attacks with this weapon deal double damage against giants.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 95,
+    "fields": {
+      "name": "War Horn Of The Angels",
+      "bonus": "",
+      "benefit": "Only a lawful being can wield the horn. Once per day, you can blow the horn to cast rebuke unholy (pg. 69) with a +4 bonus. A demon or devil who hears the horn has disadvantage on its Charisma check vs. your rebuke unholy spellcasting check.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 96,
+    "fields": {
+      "name": "Well Of Many Worlds",
+      "bonus": "",
+      "benefit": "The Well of Many Worlds folds open on a flat surface into a 6-foot wide hole. Creatures can jump into the hole once per day each to be transported to a random plane of existence.",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 97,
+    "fields": {
+      "name": "Wraith Chain",
+      "bonus": "+1 mithral chainmail.",
+      "benefit": "Once per day, you may cause an attack that hits you to miss instead. 323Join The Dark",
+      "curse": "",
+      "desc": "",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 98,
+    "fields": {
+      "name": "Shadowdark Rpg Community",
+      "bonus": "",
+      "benefit": "",
+      "curse": "",
+      "desc": "Find other Shadowdark RPG players, Game Masters, and creators in The Arcane Library's Discord server! It's a friendly place to organize games, share ideas, and ask questions. Discord link: https://discord.gg/ thearcanelibrary Also, keep an eye out at gaming conventions for Shadowdark events and open tables! Kelsey Dionne, Shadowdark RPG's creator and head of The Arcane Library, runs open-table, unscheduled games at Gary Con each year. Come find where she's lurking and jump in! You can also stay up-to-date on Shadowdark RPG happenings by joining the newsletter. Newsletter link: https://www. thearcanelibrary.com/pages/ shadowdark-rpg-newsletterFIND ADVENTURES",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 99,
+    "fields": {
+      "name": "And Content",
+      "bonus": "",
+      "benefit": "",
+      "curse": "",
+      "desc": "Visit thearcanelibrary.com for the latest in Shadowdark RPG adventures and articles. There, you can grab print or PDF issues of Cursed Scroll, the official Shadowdark zine bursting with themed character options, monsters, locations, and critically-acclaimed adventures. Follow The Arcane Library on youtube.com/thearcanelibrary for video guides, tips, tricks, and adventure walkthroughs! Finally, spectacular creators such as Taylor Seely-Wright, Laurin-David Weggen, James Mishler, Jake Savala, and Sersa Victory have published an amazing array of adventures, settings, character options and more under the Shadowdark RPG Third-Party License. Check out their excellent work on drivethrurpg.com and itch.io! 324DEDICATION To my amazing wife, Jessee, for encouraging me in all my work. To The Arcane Library Discord arcanists for playtesting and shaping Shadowdark RPG. To the stalwart Circle: Doc, Scott, Brian, Jake, Jesse, Matt, Paul, Dason. To the wise Council: Alex, X, Joe, B. To Lauren for being my best friend, coven-sister, and fellow adventurer. To my shield-brother, Brandon, for bringing about a new RPG design era, sharing joy from the heart, and helping me believe in myself. To James Mishler and the Merlin's Keep crew for being lifelong friends, mentors, and family. To the Fairhill Four for reminding me why I love gaming: BJ, Hessick, Bennett, and Teri. To Castle Sauvage for sharing their immense insight. To all the hammers that were destroyed along the way.FONTS JSL Blackletter font © 2023 Jeffrey S. Lee. Old Newspaper Types font © 2023 Manfred Klein. Montserrat font family © 2023 Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral, Jacques Le Bailly.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 100,
+    "fields": {
+      "name": "Attribution Statement",
+      "bonus": "",
+      "benefit": "",
+      "curse": "",
+      "desc": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/ systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/ licenses/by/4.0/legalcode.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 101,
+    "fields": {
+      "name": "Shadowdark Rpg Licensing",
+      "bonus": "",
+      "benefit": "",
+      "curse": "",
+      "desc": "Creators can publish their own Shadowdark RPG material using the Shadowdark RPG Third-Party License (printed on pg. 325). As a part of this book, the Shadowdark RPG Third-Party License will always be published and available for creators to rely on.Credits 325SHADOWDARK RPG THIRD-PARTY LICENSE VERSION 1.1 1. Terms. If you adhere to these terms, you may publish third-party material stating compatibility with Shadowdark RPG for free or for sale and keep 100% of the profits. 2. Content. You may freely use and reference the general concepts of Shadowdark RPG, such as the rules and game mechanics. You may use the names of the game's beings, locations, spells, and items. You may not use the game's art. You may not print verbatim passages of text (no matter the length) from the game, with the exception of monsters, spells, and magic items. 3. Logos and Branding. You may use the “Designed for use with Shadowdark RPG” logos from the Creator Kit, although it's not required to use the logos. You may use the term Shadowdark RPG in reference to compatibility (stating, for example, “This game is compatible with Shadowdark RPG” or another similar phrase). You may not use The Arcane Library logo or Shadowdark RPG logo under any circumstances. You may not imply that your publication is an official The Arcane Library, LLC or Shadowdark RPG product or that you or your publication are affiliated or associated with or approved, sponsored, or endorsed by The Arcane Library, LLC or Shadowdark RPG. 4. Legal. The Arcane Library, LLC takes no responsibility for any legal claims against your product and will not be liable to you on any legal theory (including, without limitation, negligence) or otherwise for any losses, costs, expenses, or damages arising out of this license or use of the licensed material.This license shall be governed by, and interpreted and construed in accordance with, the domestic law of the State of Nevada without giving effect to any choice of law provision or rule that would cause the application of laws of any jurisdiction other than the State of Nevada. The exclusive venue for any dispute related to this license shall be the United States District Court for the District of Nevada. You irrevocably consent to the exercise of personal jurisdiction over you by the state courts located in Clark County, Nevada, and federal courts located in Las Vegas, Nevada. Unless stated otherwise herein, copyright rights and moral rights, such as the right of integrity, are not licensed under this license, nor are publicity, privacy, and/ or other similar personality rights. Patent and trademark rights are not licensed under this license. The Arcane Library, LLC reserves all rights not expressly granted herein. If any provision of this license is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable or, if not reformable, severed from this license without affecting the enforceability of the remaining provisions. Nothing in this license is a limitation upon, or waiver of, any privileges and immunities that apply to The Arcane Library, LLC, including from the legal processes of any jurisdiction or authority. You must include the following in your publication: \"[Product Name] is an independent product published under the Shadowdark RPG Third-Party License and is not affiliated with The Arcane Library, LLC. Shadowdark RPG © 2023 The Arcane Library, LLC.\" Roll 1d6. 1 = random encounter. • Unsafe. Check every 3 rounds. • Risky. Check every 2 rounds. • Deadly. Check every round. d6 Starting Distance 1 Close 2-4 Near 5-6 Far",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 102,
+    "fields": {
+      "name": "Distance",
+      "bonus": "",
+      "benefit": "",
+      "curse": "",
+      "desc": "2d6 Activity 2-4 Hunting 5-6 Eating 7-8 Building/nesting 9-10 Socializing/playing 11 Guarding 12 Sleeping",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 103,
+    "fields": {
+      "name": "Activity",
+      "bonus": "",
+      "benefit": "",
+      "curse": "",
+      "desc": "2d6 + CHA mod Attitude 0-6 Hostile 7-8 Suspicious 9 Neutral 10-11 Curious 12+ Friendly REACTIONRandom Encounters Characters Stat Modifier 1-3 -4 4-5 -3 6-7 -2 8-9 -1 10-11 0 12-13 +1 14-15 +2 16-17 +3 18+ +4",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 104,
+    "fields": {
+      "name": "Stats",
+      "bonus": "",
+      "benefit": "",
+      "curse": "",
+      "desc": "Language Speakers Common Humanoids Dwarvish Dwarves Elvish Elves Giant Giants Goblin Goblinoids Merran Aquatic folk Orcish Orcs Reptilian Reptile folk Sylvan Fey folk Thanian Beast folk Celestial (R) Angels Diabolic (R) Demons Draconic (R) Dragons Primordial (R) Elder things",
+      "document": "shadowdark-core"
     }
   }
 ]
