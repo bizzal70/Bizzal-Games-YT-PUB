@@ -64,5 +64,47 @@
       "spell_tiers": 5,
       "document": "shadowdark-core"
     }
+  },
+  {
+    "model": "shadowdark.characterclass",
+    "pk": 5,
+    "fields": {
+      "name": "Cursed Knight of St. Ydris",
+      "hit_dice": "1d6",
+      "weapons": "All melee weapons",
+      "armor": "All armor and shields",
+      "primary_abilities": "Charisma",
+      "key_talent": "Demonic Possession: 3/day, +1 damage (plus half your level) for 3 rounds. Also casts witch spells.",
+      "caster_type": "witch (Charisma, DC 10+tier)",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.characterclass",
+    "pk": 6,
+    "fields": {
+      "name": "Warlock",
+      "hit_dice": "1d6",
+      "weapons": "Club, crossbow, dagger, longsword, staff",
+      "armor": "Leather armor",
+      "primary_abilities": "Charisma",
+      "key_talent": "Patron: a chosen patron grants (or withholds) Patron Boons; you get a random Boon talent at level 1 and may roll on the Boon table as you level.",
+      "caster_type": "patron-based",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.characterclass",
+    "pk": 7,
+    "fields": {
+      "name": "Witch",
+      "hit_dice": "1d4",
+      "weapons": "Dagger, staff",
+      "armor": "Leather armor",
+      "primary_abilities": "Charisma",
+      "key_talent": "Familiar: a loyal small animal that can be the source of your spells (ranges measured from it); revive it by sacrificing 1d4 HP.",
+      "caster_type": "witch (Charisma, DC 10+tier)",
+      "document": "cursed-scroll-1"
+    }
   }
 ]
