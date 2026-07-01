@@ -1,18 +1,110 @@
 [
   {
-    "model": "reference.rule",
+    "model": "shadowdark.rule",
     "pk": 1,
     "fields": {
       "name": "Advantage and Disadvantage",
-      "document": "shadowdark-v4.8"
+      "desc": "Roll twice and use the better (advantage) or worse (disadvantage) result. Multiple sources of advantage or disadvantage do not stack — you either have it or you don't. Advantage and disadvantage cancel each other out.",
+      "document": "shadowdark-core"
     }
   },
   {
-    "model": "reference.rule",
+    "model": "shadowdark.rule",
     "pk": 2,
     "fields": {
-      "name": "Death Timer",
-      "document": "shadowdark-v4.8"
+      "name": "Difficulty Class",
+      "desc": "Easy DC 9, Normal DC 12, Hard DC 15, Extreme DC 18. Characters roll d20 + relevant stat modifier against the DC.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.rule",
+    "pk": 3,
+    "fields": {
+      "name": "Focus Spells",
+      "desc": "Focus spells last as long as you concentrate. You can't cast other focus spells while focusing. Taking damage requires a DC 12 CON check or you lose focus.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.rule",
+    "pk": 4,
+    "fields": {
+      "name": "Torch and Light",
+      "desc": "Torches last 1 hour of real time. Characters without darkvision must carry a light source or be blind. Tracking real time is core to Shadowdark play.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.rule",
+    "pk": 5,
+    "fields": {
+      "name": "Spell Casting Check",
+      "desc": "To cast a spell, roll d20 + relevant stat modifier vs DC 10 + spell tier. On a failure the spell doesn't fire but the slot is consumed. Critical failure triggers a mishap (Wizard only).",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.rule",
+    "pk": 6,
+    "fields": {
+      "name": "Backstab",
+      "desc": "Thieves deal an extra weapon die of damage when hitting a creature unaware of the attack, plus additional weapon dice equal to half thief level (rounded down).",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.rule",
+    "pk": 7,
+    "fields": {
+      "name": "Morale",
+      "desc": "Monsters check morale (DC 15 WIS) when half their number are defeated or when a powerful ally falls. Failure means they flee or surrender.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.rule",
+    "pk": 8,
+    "fields": {
+      "name": "Dying and Death",
+      "desc": "At 0 HP a character is dying. Each round make a DC 15 CON check or die. A natural 20 stabilises at 1 HP. Allies can stabilise you with a DC 12 WIS check.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.rule",
+    "pk": 9,
+    "fields": {
+      "name": "Encumbrance and Gear Slots",
+      "desc": "Characters have gear slots equal to their Strength score (minimum 10). Each item occupies 1 slot unless noted. Exceeding slots imposes disadvantage on physical checks.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.rule",
+    "pk": 10,
+    "fields": {
+      "name": "Weapon Mastery",
+      "desc": "Fighters choose one weapon type and gain +1 to attack and damage, plus half their level (rounded down) added to those rolls.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.rule",
+    "pk": 11,
+    "fields": {
+      "name": "Turn Undead",
+      "desc": "Priests cast turn undead as a spell (it doesn't count toward known spells). Undead of LV equal to or less than the roll result flee for 2d4 rounds.",
+      "document": "shadowdark-core"
+    }
+  },
+  {
+    "model": "shadowdark.rule",
+    "pk": 12,
+    "fields": {
+      "name": "Random Encounters",
+      "desc": "Every 10 minutes in the Shadowdark, roll d6. On a 1, a random encounter occurs. This makes resource management and light tracking critical.",
+      "document": "shadowdark-core"
     }
   }
 ]
