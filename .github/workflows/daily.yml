@@ -60,6 +60,14 @@ jobs:
       BIZZAL_ENABLE_TTS: "1"
       BIZZAL_ENABLE_BG_IMAGE: "1"
       BIZZAL_ENABLE_BG_MUSIC: "1"
+      # Pacing & render quality
+      BIZZAL_TTS_SPEED: "0.9"
+      BIZZAL_SHORTS_DURATION: "55"
+      BIZZAL_BODY_PAGE_MIN_SEC: "6"
+      BIZZAL_TTS_BODY_PAGE_MIN_SEC: "6"
+      # Fade to black: 1.2s fade then 0.5s hold
+      BIZZAL_END_FADE_SEC: "1.2"
+      BIZZAL_END_BLACK_PAD_SEC: "0.5"
     steps:
       - name: Checkout (full history for commit-back)
         uses: actions/checkout@v5
