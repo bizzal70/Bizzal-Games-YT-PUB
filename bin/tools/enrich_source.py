@@ -48,7 +48,9 @@ CATEGORY_SPEC = {
     },
     "spells": {
         "file": "Spell.json",
-        "fields": ["name", "tier", "range_text", "duration", "classes", "desc"],
+        # "effect" = a short mechanical summary the AI reads (unlike "desc", which
+        # the generator strips). Lets tips be accurate for spells the model doesn't know.
+        "fields": ["name", "tier", "range_text", "duration", "classes", "desc", "effect"],
     },
     "items": {
         "file": "Item.json",
