@@ -68,6 +68,8 @@ jobs:
       # Fade to black: 1.2s fade then 0.5s hold
       BIZZAL_END_FADE_SEC: "1.2"
       BIZZAL_END_BLACK_PAD_SEC: "0.5"
+      # Branding watermark overlaid on every video
+      BIZZAL_CHANNEL_WATERMARK: "@Bizzal_Games"
     steps:
       - name: Checkout (full history for commit-back)
         uses: actions/checkout@v5
