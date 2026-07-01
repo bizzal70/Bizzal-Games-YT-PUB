@@ -28,7 +28,8 @@ data/assets/
 # keep generated pointers/snapshots out of git:
 reference/active
 reference/snapshots/
-reference/shadowdark/source_pdfs/*.pdf
+reference/systems/shadowdark/source_pdfs/*.pdf
+reference/systems/dnd5e/source_pdfs/*.pdf
 
 # misc
 __pycache__/

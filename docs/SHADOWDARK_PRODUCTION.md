@@ -20,12 +20,12 @@ This project supports a parallel Shadowdark daily chain alongside D&D 5e, both d
 
 ## Reference files
 
-- Source PDFs: `reference/shadowdark/source_pdfs`
-- Active JSON dataset: `reference/shadowdark/active`
+- Source PDFs: `reference/systems/shadowdark/source_pdfs`
+- Active JSON dataset: `reference/systems/shadowdark/active`
 
 ## Bootstrap JSON fixtures from PDFs
 
-Run this once after PDFs are placed in `reference/shadowdark/source_pdfs`:
+Run this once after PDFs are placed in `reference/systems/shadowdark/source_pdfs`:
 
 ```bash
 source .venv/bin/activate

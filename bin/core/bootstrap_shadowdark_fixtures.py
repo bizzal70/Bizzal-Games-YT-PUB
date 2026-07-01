@@ -83,12 +83,12 @@ def main() -> int:
     parser.add_argument("--repo-root", default="", help="Repo root (default: auto from script location)")
     parser.add_argument(
         "--pdf-dir",
-        default="reference/shadowdark/source_pdfs",
+        default="reference/systems/shadowdark/source_pdfs",
         help="Directory containing Shadowdark PDF files",
     )
     parser.add_argument(
         "--out-dir",
-        default="reference/shadowdark/active",
+        default="reference/systems/shadowdark/active",
         help="Output directory for fixture JSON files",
     )
     parser.add_argument(
