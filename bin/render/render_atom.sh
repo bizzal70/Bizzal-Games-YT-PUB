@@ -597,12 +597,9 @@ for ((i=1; i<=BODY_PAGE_COUNT; i++)); do
 done
 CTA_END="$(float_add "$DUR" "$CTA_FINAL_HOLD_SEC")"
 VF+="drawtext=${COMMON}:textfile=${CTA_FILE}:fontsize=50:${XPOS}:${YPOS}:enable='between(t,${BODY_END},${CTA_END})'"
-CHANNEL_WATERMARK="${BIZZAL_CHANNEL_WATERMARK:-}"
-if [[ -n "$CHANNEL_WATERMARK" ]]; then
-  WATERMARK_FILE="$TMPDIR/watermark.txt"
-  printf '%s' "$CHANNEL_WATERMARK" > "$WATERMARK_FILE"
-  VF+=",drawtext=fontfile=${FONT}:textfile=${WATERMARK_FILE}:fontcolor=white@0.85:fontsize=30:x=w-text_w-24:y=24:box=1:boxcolor=black@0.50:boxborderw=10:shadowcolor=black@0.6:shadowx=1:shadowy=1"
-fi
+# Brand icon overlay applied as a post-process step after VIDEO_ONLY is built
+BRAND_ICON="${BIZZAL_BRAND_ICON:-${REPO_ROOT}/assets/brand/channel_icon.png}"
+BRAND_ICON_SIZE="${BIZZAL_BRAND_ICON_SIZE:-100}"
 
 COLOR_DUR="$CTA_END"
 
@@ -685,6 +682,20 @@ else
     -vf "$VF" \
     -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
     "$VIDEO_ONLY"
+fi
+
+# Overlay brand icon (circular PNG with alpha) top-right corner
+if [[ -f "$BRAND_ICON" ]]; then
+  VIDEO_ONLY_BRANDED="$TMPDIR/video_only_branded.mp4"
+  ffmpeg -y -hide_banner -loglevel error \
+    -i "$VIDEO_ONLY" \
+    -i "$BRAND_ICON" \
+    -filter_complex "[1:v]scale=${BRAND_ICON_SIZE}:${BRAND_ICON_SIZE}[icon];[0:v][icon]overlay=x=W-w-20:y=20:format=auto" \
+    -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
+    "$VIDEO_ONLY_BRANDED" \
+  && mv "$VIDEO_ONLY_BRANDED" "$VIDEO_ONLY" \
+  && echo "[render] brand icon overlay applied size=${BRAND_ICON_SIZE}px icon=${BRAND_ICON}" >&2 \
+  || echo "[render] WARN: brand icon overlay failed, continuing without it" >&2
 fi
 
 if [[ "$INTRO_PAD_SEC" != "0" ]]; then
