@@ -780,14 +780,12 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
 
 
 def locked_tokens(script: dict, fact: dict) -> list:
+    # Only lock the fact name — numbers are allowed to drop when the AI rewrites
+    # scenario-first. Stat recitation is the problem we're solving, not preserving.
     tokens = set()
     name = (fact.get("name") or (fact.get("fields") or {}).get("name") or "").strip()
     if name:
         tokens.add(name)
-
-    for text in [script.get("hook", ""), script.get("body", ""), script.get("cta", "")]:
-        for n in re.findall(r"\b\d+(?:\.\d+)?\b", text or ""):
-            tokens.add(n)
     return sorted(tokens)
 
 
@@ -827,10 +825,12 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
 
     prompt = {
         "task": (
-            "Rewrite hook/body/cta in the voice of a dry, world-weary veteran DM "
-            "who has run this a hundred times and has no patience for hype or hand-holding. "
-            "Authoritative, specific, slightly wry. No cheerleading. "
-            "Preserve all factual content — just change the tone."
+            "Rewrite hook/body/cta as a veteran DM talking to someone who has already read the manual. "
+            "RTFM energy: assume they know the rules — you're telling them what those rules mean at an actual table. "
+            "Dry, world-weary, slightly sardonic. No hype, no hand-holding, no recitation. "
+            "For the body: scenario-first. Describe the specific moment where this decision matters. "
+            "One concrete table situation beats three accurate stats. "
+            "Numbers only if they're the punchline, not the point."
             + (f" Spice modifier: {spice_instruction}" if spice_instruction else "")
         ),
         "category": atom.get("category") or "",
@@ -850,15 +850,16 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
         },
         "rules": [
             "Return strict JSON object with keys: hook, body, cta.",
-            "Do not invent new stats, rules, or proper nouns.",
-            "Keep all numeric facts and fact_name intact.",
-            "Hook: one punchy sentence. Dry observation or wry setup — not a hype opener.",
-            "Body: 2-4 sentences. Specific and tactical. Cut any word that doesn't earn its place.",
-            "CTA: one sentence. Direct, slightly sardonic. Implies the reader already knows why.",
-            "No cheerleading phrases: no 'let's dive in', 'exciting', 'amazing', 'powerful tool'.",
-            "No soft filler: no 'in your next session', 'consider using', 'feel free to'.",
+            "Do not invent mechanics, stats, or proper nouns that aren't in the input.",
+            "fact_name must appear somewhere in the output.",
+            "Hook: one punchy sentence. Dry observation or wry setup that makes someone stop scrolling.",
+            "Body: 2-4 sentences. Scenario-first — the specific table moment where this matters, not a rulebook entry. 'You drop this on two goblins sharing a square' beats 'Range: 60 ft, 5-foot-radius sphere.' If the input body reads like a rulebook, rewrite it entirely.",
+            "CTA: one sentence. The specific move for someone who already knows the rules — when and why, right now, not 'consider using'.",
+            "Do NOT recite the description text verbatim or near-verbatim. If your body reads like a rulebook entry, it is wrong.",
+            "No cheerleading: no 'exciting', 'amazing', 'powerful tool', 'let's dive in'.",
+            "No soft filler: no 'in your next session', 'consider using', 'feel free to', 'don't forget'.",
             "No theatrical fantasy narration: no 'the darkness beckons', 'adventurers gather'.",
-            "When pdf_flavor_snippet is provided, include at least one concrete detail from it.",
+            "When pdf_flavor_snippet is provided, use at least one concrete detail from it — but as a scenario, not a quote.",
             "No markdown.",
         ],
     }
@@ -872,10 +873,12 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
                 "role": "system",
                 "content": (
                     "You are a veteran DM who has been running these games for decades. "
-                    "You rewrite RPG short-form scripts in your own voice: dry, world-weary, authoritative. "
-                    "You have no patience for hype, hand-holding, or generic coaching speak. "
-                    "You call things what they are. You assume the reader has been around the table. "
-                    "Preserve every factual detail. Change only the tone."
+                    "You talk about RPG mechanics the way a seasoned player does at the table — "
+                    "through situations and moments, not rulebook recitation. "
+                    "Dry, world-weary, slightly sardonic. You assume the reader has read the manual. "
+                    "You don't re-explain what the manual says. "
+                    "You describe when it matters and why most people miss it. "
+                    "RTFM is your baseline: they know the rules, you're telling them what those rules mean in practice."
                 ),
             },
             {
