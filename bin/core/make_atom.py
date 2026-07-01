@@ -240,7 +240,7 @@ def clear_irrelevant_picks(atom: dict):
     atom["picks"] = picks
 
 def minimal_validate(atom: dict):
-    # Minimal âshapeâ validation (keeps you from shipping junk)
+    # Minimal “shape” validation (keeps you from shipping junk)
     required_top = ["day", "created_at", "category", "angle", "style", "picks", "fact", "script", "script_id", "content"]
     for k in required_top:
         if k not in atom:
@@ -289,7 +289,7 @@ def minimal_validate(atom: dict):
     return True, "ok"
 
 def load_schema_min_ok():
-    # optional: ensure file exists; weâre not full jsonschema-validating yet
+    # optional: ensure file exists; we’re not full jsonschema-validating yet
     return os.path.exists(SCHEMA_MIN)
 
 # ---------- pipeline orchestration ----------
