@@ -93,11 +93,20 @@ def main() -> int:
         print("[tts] ERROR: missing valid OPENAI_API_KEY/BIZZAL_OPENAI_API_KEY", file=sys.stderr)
         return 3
 
+    voice_instructions = (
+        "Speak with dry, world-weary authority. "
+        "Measured pace — never rushed. "
+        "Slight sardonic undertone, like someone who has seen this exact mistake a hundred times. "
+        "No enthusiasm, no uplift at the end of sentences. "
+        "Confident and direct."
+    )
+
     payload = {
         "model": args.model,
         "voice": voice,
         "speed": speed,
         "input": narration,
+        "instructions": voice_instructions,
         "response_format": "wav",
         "format": "wav",
     }
