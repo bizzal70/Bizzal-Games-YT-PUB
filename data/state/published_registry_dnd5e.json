@@ -103,6 +103,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
         "video_sha256": "4eff17de9a1865dc462c3468ec22e11cca1c02583d174a1a45216299152382ad"
       }
+    },
+    {
+      "published_utc": "2026-07-01T04:51:00Z",
+      "day": "2026-06-30",
+      "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-11082e260d9e",
+      "publish_hash": "3f69c47c48820880906804d4897f02bf2e5945d82f2a34f628dc549f8ef8c0b5",
+      "youtube_video_id": "iiELs79IUIU",
+      "youtube_url": "https://www.youtube.com/watch?v=iiELs79IUIU",
+      "video_sha256": "34f6a5655ce6d3372cef91c19b81d52a4a8fe87fa660e498bee327ef162823d6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+      "fingerprint": {
+        "day": "2026-06-30",
+        "category": "spell_use_case",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-06-30-spell-use-case-spell-srd-2024-acid-splash-11082e260d9e",
+        "canonical_hash": "11082e260d9e4dae87d1dbaee7900deb4e41b4b345ff81175e930f1205462dd1",
+        "script_id": "bb6c4f5898f2345fbbe0155c5f88cdb8872be8a6996425a1da4c23866810dce4",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_acid-splash",
+        "fact_name": "Acid Splash",
+        "hook": "Acid Splash looks low-stakes until smart timing makes it absurdly useful.",
+        "body": "Picture this: your party is cornered in a narrow stone corridor. Two goblins are squabbling over a shiny trinket, oblivious to the approaching doom. You drop Acid Splash right between them. Suddenly, they're not just taking 1d6 damage; they're faced with a choice - dodge or get melted. That's a moment to shine. Smart targets mean smart plays. Use clever spellcasting to turn the tide, not just chip away at hit points. Maybe one of them spills the beans on a hidden passage while panicking from the acid. Who knew cantrips could be a conversation starter?",
+        "cta": "DMs: use Acid Splash to force goblins into a panic; their choices can lead to unexpected revelations, not just damage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
+        "video_sha256": "34f6a5655ce6d3372cef91c19b81d52a4a8fe87fa660e498bee327ef162823d6"
+      }
     }
   ]
 }
