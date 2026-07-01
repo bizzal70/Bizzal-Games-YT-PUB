@@ -825,12 +825,11 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
 
     prompt = {
         "task": (
-            "Rewrite hook/body/cta as a veteran DM talking to someone who has already read the manual. "
-            "RTFM energy: assume they know the rules — you're telling them what those rules mean at an actual table. "
-            "Dry, world-weary, slightly sardonic. No hype, no hand-holding, no recitation. "
-            "For the body: scenario-first. Describe the specific moment where this decision matters. "
-            "One concrete table situation beats three accurate stats. "
-            "Numbers only if they're the punchline, not the point."
+            "Rewrite hook/body/cta as a dry mechanical observation for someone who already read the manual. "
+            "No scenes. No characters. No narration. "
+            "State what the mechanic actually does in practice, what players consistently get wrong about it, "
+            "and what smart play looks like — in plain declarative sentences. "
+            "Numbers only if they're the point. Mechanics as the subject, not as flavor."
             + (f" Spice modifier: {spice_instruction}" if spice_instruction else "")
         ),
         "category": atom.get("category") or "",
@@ -852,33 +851,35 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             "Return strict JSON object with keys: hook, body, cta.",
             "Do not invent mechanics, stats, or proper nouns that aren't in the input.",
             "fact_name must appear somewhere in the output.",
-            "Hook: one punchy sentence. Dry observation or wry setup that makes someone stop scrolling.",
-            "Body: 2-4 sentences. Scenario-first — the specific table moment where this matters, not a rulebook entry. 'You drop this on two goblins sharing a square' beats 'Range: 60 ft, 5-foot-radius sphere.' If the input body reads like a rulebook, rewrite it entirely.",
-            "CTA: one sentence. The specific move for someone who already knows the rules — when and why, right now, not 'consider using'.",
-            "Do NOT recite the description text verbatim or near-verbatim. If your body reads like a rulebook entry, it is wrong.",
+            "Hook: one dry declarative sentence. The observation that makes someone stop scrolling — what they got wrong, what they missed, what the mechanic actually does.",
+            "Body: 2-4 sentences. Mechanical observation only — no scenes, no characters, no 'you are in a dungeon'. State what the mechanic enables, what the common mistake is, and what smart play looks like. 'Acid Splash hits two targets if they share a square. Most players aim for isolated enemies and waste the AoE.' That register, that directness.",
+            "CTA: one sentence. The exact mechanic or timing to use — specific, actionable, no hedging.",
+            "Do NOT write scenes. Do NOT put characters in the text ('the rogue', 'the goblin', 'your party'). Do NOT narrate. If your body describes a scene, it is wrong.",
+            "Do NOT recite the description text verbatim or near-verbatim.",
             "No cheerleading: no 'exciting', 'amazing', 'powerful tool', 'let's dive in'.",
             "No soft filler: no 'in your next session', 'consider using', 'feel free to', 'don't forget'.",
-            "No theatrical flourishes: no 'Picture this', 'Who knew', 'Suddenly', 'oblivious to doom', 'the darkness beckons', 'adventurers gather'. Dry observation, not campfire narration.",
-            "When pdf_flavor_snippet is provided, use at least one concrete detail from it — but as a scenario, not a quote.",
+            "No theatrical setup: no 'Picture this', 'Who knew', 'Suddenly', 'Watch as', 'It's about the story', 'oblivious to doom'.",
+            "When pdf_flavor_snippet is provided, extract a concrete mechanical detail from it — not flavor, not a quote.",
             "No markdown.",
         ],
     }
 
     payload = {
         "model": model,
-        "temperature": 0.55,
+        "temperature": 0.45,
         "response_format": {"type": "json_object"},
         "messages": [
             {
                 "role": "system",
                 "content": (
-                    "You are a veteran DM who has been running these games for decades. "
-                    "You talk about RPG mechanics the way a seasoned player does at the table — "
-                    "through situations and moments, not rulebook recitation. "
-                    "Dry, world-weary, slightly sardonic. You assume the reader has read the manual. "
-                    "You don't re-explain what the manual says. "
-                    "You describe when it matters and why most people miss it. "
-                    "RTFM is your baseline: they know the rules, you're telling them what those rules mean in practice."
+                    "You are a veteran DM making observations about RPG mechanics. "
+                    "Dry, world-weary, slightly sardonic. No scenes, no characters, no narration. "
+                    "You make an observation about how a mechanic actually works at the table — "
+                    "what players consistently get wrong, what the rules mean in practice, "
+                    "when it matters and why most people miss it. "
+                    "You do not tell stories. You do not set scenes. You do not describe goblins doing things. "
+                    "You state a fact, then say what that fact means for someone who already read the manual. "
+                    "Think: senior engineer in a code review, not a dungeon master telling campfire stories."
                 ),
             },
             {
