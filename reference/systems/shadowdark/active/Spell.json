@@ -1052,5 +1052,558 @@
       "desc": "A protective force wrought of your holy conviction surrounds you. You gain a +2 bonus to your armor class for the duration.",
       "document": "shadowdark-core"
     }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 71,
+    "fields": {
+      "name": "Anathema",
+      "tier": 5,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Touched creature's allies turn on it for 1 day; each time you/allies harm it they get a DC 15 WIS check to end it.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 72,
+    "fields": {
+      "name": "Beguile",
+      "tier": 4,
+      "range_text": "Near",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Create a real-seeming illusion; a creature that interacts fails a DC 15 WIS check or is enchanted to protect it.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 73,
+    "fields": {
+      "name": "Bogboil",
+      "tier": 2,
+      "range_text": "Far",
+      "duration": "5 rounds",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Turn a near cube of ground to boiling quicksand; a stuck creature can't move until it beats your cast with a DEX check.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 74,
+    "fields": {
+      "name": "Broomstick",
+      "tier": 3,
+      "range_text": "Self",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Conjure a broomstick: fly a near distance each round and hover (Focus).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 75,
+    "fields": {
+      "name": "Cacklerot",
+      "tier": 2,
+      "range_text": "Close",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Touched creature LV 4 or less collapses in helpless laughter for the duration.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 76,
+    "fields": {
+      "name": "Cat'S Eye",
+      "tier": 2,
+      "range_text": "Self",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "See invisible creatures and secret doors for the duration.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 77,
+    "fields": {
+      "name": "Cauldron",
+      "tier": 1,
+      "range_text": "Close",
+      "duration": "1 round",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Conjure a cauldron that does one: repair a mundane item, summon a toad servant (3 rounds), or stash up to 3 slots of gear.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 78,
+    "fields": {
+      "name": "Cloak Of Night",
+      "tier": 4,
+      "range_text": "Self",
+      "duration": "8 rounds",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "AC becomes 17 (20 on a crit cast) plus advantage to sneak/hide for 8 rounds.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 79,
+    "fields": {
+      "name": "Coven",
+      "tier": 3,
+      "range_text": "Self",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Regain one spent tier-3-or-lower spell; can't recast until you rest.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 80,
+    "fields": {
+      "name": "Curse",
+      "tier": 4,
+      "range_text": "Close",
+      "duration": "Permanent",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Permanently afflict a touched creature with one curse (warts, ash-tasting food, nightmares, an ally turns enemy, etc.).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 81,
+    "fields": {
+      "name": "Dreamwalk",
+      "tier": 5,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "You + willing allies enter a named sleeper's dream, then step out beside that creature (teleport).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 82,
+    "fields": {
+      "name": "Enfeeble",
+      "tier": 5,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Reduce a touched creature's random stat to 3 (-4) for a week; a failed cast hits one of YOUR stats instead.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 83,
+    "fields": {
+      "name": "Eyebite",
+      "tier": 1,
+      "range_text": "Near",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "One target takes 1d4 damage and can't see you until end of its next turn.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 84,
+    "fields": {
+      "name": "Finger Of Death",
+      "tier": 5,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Touched creature LV 9 or less dies; a failed cast becomes a critical failure (mishap at disadvantage).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 85,
+    "fields": {
+      "name": "Fog",
+      "tier": 1,
+      "range_text": "Close",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "A close fog moves with you, making you hard to see; attacks vs creatures inside have disadvantage (Focus).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 86,
+    "fields": {
+      "name": "Frog Rain",
+      "tier": 2,
+      "range_text": "Far",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "All creatures in a near cube at Far take 1d6 damage.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 87,
+    "fields": {
+      "name": "Glassbones",
+      "tier": 4,
+      "range_text": "Close",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Touched creature takes double damage for the duration (Focus).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 88,
+    "fields": {
+      "name": "Howl",
+      "tier": 3,
+      "range_text": "Near",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "All enemies within near make a morale check (morale-immune creatures unaffected).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 89,
+    "fields": {
+      "name": "Hypnotize",
+      "tier": 1,
+      "range_text": "Near",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "A creature LV 3 or less that sees you is stupefied; breaking line of sight lets it end it on a DC 15 CHA check (Focus).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 90,
+    "fields": {
+      "name": "Mistletoe",
+      "tier": 3,
+      "range_text": "Near",
+      "duration": "1d8 days",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Two creatures become enchanted with each other for 1d8 days; taking damage lets one end it on a DC 15 CHA check.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 91,
+    "fields": {
+      "name": "Moonbeam",
+      "tier": 4,
+      "range_text": "Far",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "One creature within Far takes 3d6 damage.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 92,
+    "fields": {
+      "name": "Mother Of Night",
+      "tier": 5,
+      "range_text": "Self",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Make one wish (GM interprets); a failed cast drags you to The Nightfall until you appease her.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 93,
+    "fields": {
+      "name": "Nightmare",
+      "tier": 4,
+      "range_text": "Self",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Focus on a seen, sleeping creature (level <= half yours) for 3 straight rounds to kill it with fright.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 94,
+    "fields": {
+      "name": "Pin Doll",
+      "tier": 3,
+      "range_text": "On the same plane",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Bind a creature via its hair/flesh; each round of focus, push a pin to deal 2d6 to it.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 95,
+    "fields": {
+      "name": "Poison",
+      "tier": 2,
+      "range_text": "Close",
+      "duration": "5 rounds",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "A touched worn/carried object becomes toxic; anyone in contact at start of turn takes 1d6 (5 rounds).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 96,
+    "fields": {
+      "name": "Puppet",
+      "tier": 1,
+      "range_text": "Close",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "A touched humanoid LV 2 or less mimics your movements; self-harm lets it resist on a DC 15 CHA check (Focus).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 97,
+    "fields": {
+      "name": "Shadowdance",
+      "tier": 1,
+      "range_text": "Near",
+      "duration": "3 rounds",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Create a person-sized audiovisual illusion that moves within near for 3 rounds; can't affect physical objects.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 98,
+    "fields": {
+      "name": "Soul Jar",
+      "tier": 5,
+      "range_text": "Close",
+      "duration": "Permanent",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Move a touched creature's soul (LV 9 or less) into a vessel; its body goes comatose (you may possess it); break vessel to return soul.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 99,
+    "fields": {
+      "name": "Speak With Dead",
+      "tier": 3,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Ask a touched corpse three yes/no questions, answered truthfully; 2x in 24h makes a fail a critical failure.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 100,
+    "fields": {
+      "name": "Spidersilk",
+      "tier": 2,
+      "range_text": "Self",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Walk on vertical surfaces as if flat for the duration (Focus).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 101,
+    "fields": {
+      "name": "Swarm",
+      "tier": 3,
+      "range_text": "Far",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Creatures starting their turn in a near cube at Far take 2d6 damage and are blinded (Focus).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 102,
+    "fields": {
+      "name": "Toadstool",
+      "tier": 2,
+      "range_text": "Self",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Conjure a toadstool; eating it restores 1d6 HP (gone end of your next turn).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 103,
+    "fields": {
+      "name": "Void Stare",
+      "tier": 3,
+      "range_text": "Far",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "One seen creature LV 6 or less falls under your control; you choose its turn actions (Focus).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 104,
+    "fields": {
+      "name": "Whisper",
+      "tier": 3,
+      "range_text": "Close",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Plant one brief false memory a creature believes; a failed cast plants one in YOUR mind instead.",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 105,
+    "fields": {
+      "name": "Willowman",
+      "tier": 1,
+      "range_text": "Near",
+      "duration": "Instant",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "One creature LV 2 or less makes a morale check - even normally morale-immune creatures (e.g. undead).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 106,
+    "fields": {
+      "name": "Witchlight",
+      "tier": 1,
+      "range_text": "Near",
+      "duration": "Focus",
+      "classes": [
+        "Witch"
+      ],
+      "effect": "Summon a floating light (close radius) that changes color/shape and floats up to near each turn (Focus).",
+      "document": "cursed-scroll-1"
+    }
+  },
+  {
+    "model": "shadowdark.spell",
+    "pk": 107,
+    "fields": {
+      "name": "Oak, Ash, Thorn",
+      "tier": 1,
+      "classes": [
+        "Witch"
+      ],
+      "effect": "For the duration, faeries/demons/devils can't attack, possess, compel, or beguile you.",
+      "document": "cursed-scroll-1"
+    }
   }
 ]
