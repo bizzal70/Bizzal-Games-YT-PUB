@@ -6,11 +6,13 @@ name: Daily content pipeline
 
 on:
   schedule:
-    # GitHub cron is UTC. 8am Denver is 15:00 UTC during MST and 14:00 UTC
-    # during MDT, so we fire on both hours and let the guard step keep only
-    # the one that is actually 08:00 in America/Denver right now.
-    - cron: "0 14 * * *"
-    - cron: "0 15 * * *"
+    # GitHub's scheduled runs lag and often skip -- worst at :00 (peak load). So we
+    # fire several OFF-PEAK (:17) crons across the morning and let the once-per-day
+    # guard publish on the FIRST that actually lands and no-op the rest. DST-agnostic:
+    # the guard's 7-11am America/Denver window covers both MST and MDT.
+    - cron: "17 14 * * *"
+    - cron: "17 15 * * *"
+    - cron: "17 16 * * *"
   workflow_dispatch:
     inputs:
       systems:
