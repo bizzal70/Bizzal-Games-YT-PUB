@@ -863,6 +863,10 @@ def _first_style_violation(text: str):
     m = _VAGUE_FILLER_RE.search(str(text or ""))
     if m:
         return ("vague filler phrase", m.group(0).strip())
+    # Flow backstop: copy should not open with an index-inverted name ("Golem, Iron").
+    _t = str(text or "").strip().lstrip("\"'")
+    if re.match(r"[A-Z][a-z]+,\s+[A-Z][a-z]", _t):
+        return ("index-inverted name lead", _t.split(".")[0][:40])
     return None
 
 
