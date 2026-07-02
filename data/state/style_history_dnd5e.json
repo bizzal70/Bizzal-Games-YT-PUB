@@ -30,5 +30,15 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-07-02": {
+    "item_spotlight": {
+      "angle": "best_user",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

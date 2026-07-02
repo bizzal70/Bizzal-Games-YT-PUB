@@ -103,6 +103,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-06-30.mp4",
         "video_sha256": "c880d67e58adf3f6f7326129690a7b4c35e47e57dd498384078377ce96e9d78b"
       }
+    },
+    {
+      "published_utc": "2026-07-02T14:53:55Z",
+      "day": "2026-07-02",
+      "content_id": "bgp-2026-07-02-encounter-seed-creature-103-c438ed253a73",
+      "publish_hash": "afe540e04011d607d10af6b803167700f83f3626bd06a95f14dd0e84374d4261",
+      "youtube_video_id": "cuwZJjTMV3s",
+      "youtube_url": "https://www.youtube.com/watch?v=cuwZJjTMV3s",
+      "video_sha256": "99ad645605c35b63054ba5418d6f213183f5219c2688223f3f88138d283554f6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-02.mp4",
+      "fingerprint": {
+        "day": "2026-07-02",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-07-02-encounter-seed-creature-103-c438ed253a73",
+        "canonical_hash": "c438ed253a73b3bfcffc888044dd99a430397418ed7e62a421b4322a4c7b759c",
+        "script_id": "3b268aede913b242c29e5ecf52c9140e1f9b5dbeff2afd9b7c16bc6a96283ea1",
+        "fact_kind": "creature",
+        "fact_pk": 103,
+        "fact_name": "Golem, Iron",
+        "hook": "Golem, Iron is perfect for a playful encounter that can still punish bad habits.",
+        "body": "Golem, Iron has an Armor Class of 19 and 49 hit points, making it tough to hit and resilient. Its Poison Breath affects all within near range, requiring a DC 15 Constitution save or dealing 8d6 damage. Non-magical damage and cold are ineffective due to its immunities. Use magical attacks and avoid fire, which heals it.",
+        "cta": "DMs: Remind them fire heals the Iron Golem, so they don't accidentally make it stronger with their pyrotechnics.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-02.mp4",
+        "video_sha256": "99ad645605c35b63054ba5418d6f213183f5219c2688223f3f88138d283554f6"
+      }
     }
   ]
 }

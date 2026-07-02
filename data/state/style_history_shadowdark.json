@@ -30,5 +30,17 @@
       "spice": [],
       "tts_voice_id": "coral"
     }
+  },
+  "2026-07-02": {
+    "encounter_seed": {
+      "angle": "three_beats",
+      "voice": "strict_referee",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "fable"
+    }
   }
 }

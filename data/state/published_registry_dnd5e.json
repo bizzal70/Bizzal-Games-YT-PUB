@@ -233,6 +233,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-06-30.mp4",
         "video_sha256": "6b89194ea8e2d0576156a37d99dbfcdfa450294e1056de1b8d8c2e847bedce44"
       }
+    },
+    {
+      "published_utc": "2026-07-02T14:50:53Z",
+      "day": "2026-07-02",
+      "content_id": "bgp-2026-07-02-item-spotlight-item-srd-2024-hand-crossbow-plus-2-39a3a5ff01fb",
+      "publish_hash": "d936a40df29e41fc0b52e55d7df8a0952d65e1089f9e64308ae0842c7e09dd1f",
+      "youtube_video_id": "UsjIJ52HOnY",
+      "youtube_url": "https://www.youtube.com/watch?v=UsjIJ52HOnY",
+      "video_sha256": "749ea40fa01e27a62dba976ef4acbb57048c6e7ac8c41cd2674ab758e0eea036",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-02.mp4",
+      "fingerprint": {
+        "day": "2026-07-02",
+        "category": "item_spotlight",
+        "angle": "best_user",
+        "content_id": "bgp-2026-07-02-item-spotlight-item-srd-2024-hand-crossbow-plus-2-39a3a5ff01fb",
+        "canonical_hash": "39a3a5ff01fb70ccb0de30006002e2e656b95ab7e0c6c0f86796e16608df5dac",
+        "script_id": "02d8e906f5610b4ac766adf8d4285232d77fe1f6254eee5e5d8448f3f80af806",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_hand-crossbow-plus-2",
+        "fact_name": "Hand Crossbow (+2)",
+        "hook": "Hand Crossbow (+2): humble gear with main-character energy when the table gets creative.",
+        "body": "This magic weapon offers a +2 bonus, which is often misused by players who focus solely on damage output. The hand crossbow's size and versatility allow it to be used as a positioning tool, such as lifting or moving objects in a dungeon environment. Ignoring its utility outside of combat is a missed opportunity; anchoring the crossbow can manipulate the environment to your advantage.",
+        "cta": "DMs: Use the Hand Crossbow (+2) to secure ropes or levers, leveraging its tiny size and +2 bonus outside combat.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-02.mp4",
+        "video_sha256": "749ea40fa01e27a62dba976ef4acbb57048c6e7ac8c41cd2674ab758e0eea036"
+      }
     }
   ]
 }
