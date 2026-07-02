@@ -81,22 +81,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: DST-safe 8am-MT guard (scheduled runs only)
+      - name: 8am-MT morning guard (once/day, lag-tolerant; scheduled)
         id: guard
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "manual run; skipping time guard"
-            echo "proceed=true" >> "$GITHUB_OUTPUT"
-            exit 0
+            echo "manual run; skipping guard"; echo "proceed=true" >> "$GITHUB_OUTPUT"; exit 0
           fi
-          hour="$(TZ=America/Denver date +%H)"
-          echo "America/Denver hour=$hour"
-          if [ "$hour" = "08" ]; then
-            echo "proceed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "not 8am MT; this scheduled trigger is a no-op"
-            echo "proceed=false" >> "$GITHUB_OUTPUT"
+          hh=$(TZ=America/Denver date +%H); today=$(TZ=America/Denver date +%F); hour=$((10#$hh))
+          echo "America/Denver: $today hour=$hh"
+          # Morning window absorbs GitHub's scheduled-run lag (crons fire 7-9am MT across DST).
+          if [ "$hour" -lt 7 ] || [ "$hour" -gt 11 ]; then
+            echo "outside 07-11 MT window; no-op"; echo "proceed=false" >> "$GITHUB_OUTPUT"; exit 0
           fi
+          # Once per day: skip if any system already published today (concurrency serializes the two crons).
+          if grep -qs "$today" data/state/published_registry_*.json; then
+            echo "already published today ($today); no-op"; echo "proceed=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          echo "proceed=true" >> "$GITHUB_OUTPUT"
 
       - name: Set up Python
         if: steps.guard.outputs.proceed == 'true'
