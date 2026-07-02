@@ -68,6 +68,20 @@ def canonical_category(category: str) -> str:
     }
     return aliases.get((category or "").strip().lower(), (category or "").strip().lower())
 
+def _deinvert_name(name):
+    """Turn index-inverted names ("Golem, Iron") into natural spoken order
+    ("Iron Golem") so the copy and TTS don't read awkwardly. Only single-comma
+    names (a base + one modifier); multi-comma names (e.g. "Oak, Ash, Thorn")
+    and comma-free names are left unchanged."""
+    s = str(name or "").strip()
+    if s.count(",") != 1:
+        return name
+    base, mod = (p.strip() for p in s.split(","))
+    if base and mod:
+        return f"{mod} {base}"
+    return name
+
+
 def main():
     path = atom_path()
     atom = load_json(path)
@@ -112,6 +126,13 @@ def main():
         sys.exit(5)
 
     base_fields = base_rec.get("fields") or {}
+
+    # De-invert index-style names ("Golem, Iron" -> "Iron Golem") at the source so
+    # everything downstream (base script, prompt, fact_mechanics, locked tokens, TTS)
+    # uses the natural spoken form. Mutates base_fields (shared with fact["fields"]).
+    _dn = _deinvert_name(base_fields.get("name"))
+    if _dn != base_fields.get("name"):
+        base_fields["name"] = _dn
 
     fact = {
         "kind": kind,
