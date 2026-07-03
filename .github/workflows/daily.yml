@@ -6,13 +6,11 @@ name: Daily content pipeline
 
 on:
   schedule:
-    # GitHub's scheduled runs lag and often skip -- worst at :00 (peak load). So we
-    # fire several OFF-PEAK (:17) crons across the morning and let the once-per-day
-    # guard publish on the FIRST that actually lands and no-op the rest. DST-agnostic:
-    # the guard's 7-11am America/Denver window covers both MST and MDT.
-    - cron: "17 14 * * *"
-    - cron: "17 15 * * *"
-    - cron: "17 16 * * *"
+    # GitHub cron is UTC. 8am Denver is 15:00 UTC during MST and 14:00 UTC
+    # during MDT, so we fire on both hours and let the guard step keep only
+    # the one that is actually 08:00 in America/Denver right now.
+    - cron: "0 14 * * *"
+    - cron: "0 15 * * *"
   workflow_dispatch:
     inputs:
       systems:
@@ -24,13 +22,9 @@ on:
         required: false
         default: "unlisted"
       dry_run:
-        description: 'Set "true" to generate+render but skip the YouTube upload'
+        description: 'Set "true" to generate+render but skip the YouTube and Instagram uploads'
         required: false
         default: "false"
-      category:
-        description: 'Test only: force a category (e.g. spell_use_case, monster_tactic); blank = normal spine pick'
-        required: false
-        default: ""
 
 # Never let two runs publish at once (would risk a double-upload before the
 # dedup registry is committed back).
@@ -54,6 +48,10 @@ jobs:
       BIZZAL_YT_CLIENT_SECRET: ${{ secrets.BIZZAL_YT_CLIENT_SECRET }}
       SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      # Instagram Reels publishing
+      BIZZAL_IG_ACCESS_TOKEN: ${{ secrets.BIZZAL_IG_ACCESS_TOKEN }}
+      BIZZAL_IG_USER_ID: ${{ secrets.BIZZAL_IG_USER_ID }}
+      BIZZAL_IG_REGISTRY: "data/state/published_registry_instagram.json"
       # --- runtime behaviour ---
       BIZZAL_YT_TOKEN_FILE: ${{ github.workspace }}/.secrets/youtube_token.json
       BIZZAL_YT_NONINTERACTIVE: "1"
@@ -83,23 +81,22 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 8am-MT morning guard (once/day, lag-tolerant; scheduled)
+      - name: DST-safe 8am-MT guard (scheduled runs only)
         id: guard
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "manual run; skipping guard"; echo "proceed=true" >> "$GITHUB_OUTPUT"; exit 0
+            echo "manual run; skipping time guard"
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
-          hh=$(TZ=America/Denver date +%H); today=$(TZ=America/Denver date +%F); hour=$((10#$hh))
-          echo "America/Denver: $today hour=$hh"
-          # Morning window absorbs GitHub's scheduled-run lag (crons fire 7-9am MT across DST).
-          if [ "$hour" -lt 7 ] || [ "$hour" -gt 11 ]; then
-            echo "outside 07-11 MT window; no-op"; echo "proceed=false" >> "$GITHUB_OUTPUT"; exit 0
+          hour="$(TZ=America/Denver date +%H)"
+          echo "America/Denver hour=$hour"
+          if [ "$hour" = "08" ]; then
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "not 8am MT; this scheduled trigger is a no-op"
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
           fi
-          # Once per day: skip if any system already published today (concurrency serializes the two crons).
-          if grep -qs "$today" data/state/published_registry_*.json; then
-            echo "already published today ($today); no-op"; echo "proceed=false" >> "$GITHUB_OUTPUT"; exit 0
-          fi
-          echo "proceed=true" >> "$GITHUB_OUTPUT"
 
       - name: Set up Python
         if: steps.guard.outputs.proceed == 'true'
@@ -109,16 +106,7 @@ jobs:
 
       - name: Install ffmpeg
         if: steps.guard.outputs.proceed == 'true'
-        # Retry + hard-timeout each apt call so a transient runner/apt
-        # stall self-heals instead of hanging the whole run for hours.
-        timeout-minutes: 12
-        run: |
-          for i in 1 2 3; do
-            timeout 120 sudo apt-get update -o Acquire::Retries=3 || { echo "apt update timed out (attempt $i)"; sleep 5; continue; }
-            timeout 180 sudo apt-get install -y -o Acquire::Retries=3 ffmpeg && { echo "ffmpeg installed (attempt $i)"; exit 0; }
-            echo "ffmpeg install failed/timed out (attempt $i); retrying in 5s"; sleep 5
-          done
-          echo "ffmpeg install failed after 3 attempts" >&2; exit 1
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
       - name: Install Python deps
         if: steps.guard.outputs.proceed == 'true'
@@ -146,16 +134,12 @@ jobs:
           BIZZAL_YT_PRIVACY: ${{ github.event.inputs.privacy || 'unlisted' }}
           # dry_run: generate + render but skip the YouTube upload entirely.
           BIZZAL_SKIP_PUBLISH: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
-          BIZZAL_FORCE_CATEGORY: ${{ github.event.inputs.category || '' }}
         run: bin/core/run_daily_cloud_cron.sh
 
-      - name: Dry-run readout (print generated script)
-        if: steps.guard.outputs.proceed == 'true' && github.event.inputs.dry_run == 'true'
-        run: |
-          for f in data/atoms/validated/*.json; do
-            echo "=== $f ==="
-            python -c "import json,sys; a=json.load(open(sys.argv[1])); s=a['script']; f=a.get('fact',{}); print('FACT:', f.get('name') or f.get('fact_name') or f.get('title')); print('CATEGORY:', a.get('category')); print('HOOK:', s['hook']); print('BODY:', s['body']); print('CTA:', s['cta'])" "$f"
-          done
+      - name: Publish to Instagram Reels
+        if: steps.guard.outputs.proceed == 'true' && github.event.inputs.dry_run != 'true' && env.BIZZAL_IG_ACCESS_TOKEN != ''
+        run: python bin/upload/upload_instagram.py
+
       - name: Commit safety-state back to repo
         if: steps.guard.outputs.proceed == 'true' && always()
         run: |
