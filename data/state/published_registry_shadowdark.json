@@ -129,6 +129,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-02.mp4",
         "video_sha256": "99ad645605c35b63054ba5418d6f213183f5219c2688223f3f88138d283554f6"
       }
+    },
+    {
+      "published_utc": "2026-07-03T15:08:31Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-rules-myth-rule-10-455795a6575f",
+      "publish_hash": "62b7e9f39d61bca22741a4e3701e4b6bd70e968e14373868aecee716f0a44482",
+      "youtube_video_id": "FpZWgcX9kuw",
+      "youtube_url": "https://www.youtube.com/watch?v=FpZWgcX9kuw",
+      "video_sha256": "ea0b7776c63f92b9f781f6085c7e83b08bf1f22be8d03548db280e6767d35da5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-03.mp4",
+      "fingerprint": {
+        "day": "2026-07-03",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-07-03-rules-myth-rule-10-455795a6575f",
+        "canonical_hash": "455795a6575f0935ad65fcbde1024299d96778544231715dde15053eca372559",
+        "script_id": "12e97706a450cbd4f4ba558176018ff13ef1bd87cad847b08aeee49d233128ab",
+        "fact_kind": "rule",
+        "fact_pk": 10,
+        "fact_name": "Weapon Mastery",
+        "hook": "Weapon Mastery grants a +1 bonus to attack and damage rolls with one chosen weapon type.",
+        "body": "Fighters add half their level, rounded down, to attack and damage rolls with their mastered weapon. This bonus is often misapplied as a flat level addition. Correct application means a level 5 fighter gains an additional +2, not +5. Consistent application of this rule ensures balanced gameplay.",
+        "cta": "DMs: Remind your fighters that Weapon Mastery adds half their level to rolls, not their full level.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-03.mp4",
+        "video_sha256": "ea0b7776c63f92b9f781f6085c7e83b08bf1f22be8d03548db280e6767d35da5"
+      }
     }
   ]
 }

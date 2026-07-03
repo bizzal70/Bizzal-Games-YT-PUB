@@ -259,6 +259,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-02.mp4",
         "video_sha256": "749ea40fa01e27a62dba976ef4acbb57048c6e7ac8c41cd2674ab758e0eea036"
       }
+    },
+    {
+      "published_utc": "2026-07-03T15:05:50Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-black-dragon-21e2b6ccf133",
+      "publish_hash": "d1fc1a93fb5d2092db0491fd8bce4a95581bfb8c85d71dd414926b7d09ed657c",
+      "youtube_video_id": "SjW6c-K2mK4",
+      "youtube_url": "https://www.youtube.com/watch?v=SjW6c-K2mK4",
+      "video_sha256": "8c5e5c9c62b260cc5285f8ebd3b9b9a582576f97a20cbecdc9e0c9d759003133",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+      "fingerprint": {
+        "day": "2026-07-03",
+        "category": "encounter_seed",
+        "angle": "terrain_feature",
+        "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-black-dragon-21e2b6ccf133",
+        "canonical_hash": "21e2b6ccf1331474b63da314a4576c9ea93dcf637465d0c23e0ff6f1c2f979cb",
+        "script_id": "b0a4da79d3a5d43c82ca646ad6f3f204c838ef60942e13a52ff2c8554d4fc1f4",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_ancient-black-dragon",
+        "fact_name": "Ancient Black Dragon",
+        "hook": "Use Ancient Black Dragon as 'comic relief' that quietly pressures the party's decisions.",
+        "body": "Acid Breath from an Ancient Black Dragon is a 90-foot line that deals 15d8 acid damage, requiring a DC 22 Dexterity saving throw. Underestimating the impact of this breath weapon on clustered positions leads to multiple party members being caught in its area. Positioning to spread out before engagement minimizes this risk. The dragon's Cloud of Insects ability can obscure vision and create difficult terrain, which is frequently overlooked when planning movement across the battlefield.",
+        "cta": "DMs: Use the dragon's 90-foot Acid Breath to force players into the swamp's difficult terrain early.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+        "video_sha256": "8c5e5c9c62b260cc5285f8ebd3b9b9a582576f97a20cbecdc9e0c9d759003133"
+      }
     }
   ]
 }

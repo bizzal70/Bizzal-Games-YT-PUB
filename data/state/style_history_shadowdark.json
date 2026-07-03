@@ -42,5 +42,17 @@
       ],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-07-03": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

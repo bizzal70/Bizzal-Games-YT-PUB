@@ -25,6 +25,19 @@
       "publish_rc": 0,
       "publish_output": "[upload_youtube] uploaded id=UsjIJ52HOnY privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-02.mp4 https://www.youtube.com/watch?v=UsjIJ52HOnY [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dnd5e.json hash=d936a40df29e41fc",
       "youtube_url": "https://www.youtube.com/watch?v=UsjIJ52HOnY"
+    },
+    "2026-07-03": {
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-black-dragon-21e2b6ccf133",
+      "category": "encounter_seed",
+      "angle": "terrain_feature",
+      "status": "published",
+      "requested_utc": "2026-07-03T15:05:48Z",
+      "decision_utc": "2026-07-03T15:05:48Z",
+      "decision_by": "autopublish",
+      "publish_rc": 0,
+      "publish_output": "[upload_youtube] uploaded id=SjW6c-K2mK4 privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4 https://www.youtube.com/watch?v=SjW6c-K2mK4 [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dnd5e.json hash=d1fc1a93fb5d2092",
+      "youtube_url": "https://www.youtube.com/watch?v=SjW6c-K2mK4"
     }
   }
 }
