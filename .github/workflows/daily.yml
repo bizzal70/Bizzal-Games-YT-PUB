@@ -25,6 +25,10 @@ on:
         description: 'Set "true" to generate+render but skip the YouTube and Instagram uploads'
         required: false
         default: "false"
+      smoke_test:
+        description: 'Set "true" to bypass the same-day rerun guard (for testing only)'
+        required: false
+        default: "false"
 
 # Never let two runs publish at once (would risk a double-upload before the
 # dedup registry is committed back).
@@ -56,7 +60,8 @@ jobs:
       BIZZAL_YT_TOKEN_FILE: ${{ github.workspace }}/.secrets/youtube_token.json
       BIZZAL_YT_NONINTERACTIVE: "1"
       BIZZAL_REQUIRE_DISCORD_APPROVAL: "0"
-      BIZZAL_PREVENT_SAME_DAY_RERUN: "0"
+      # smoke_test=true bypasses same-day rerun guard; production always "1"
+      BIZZAL_PREVENT_SAME_DAY_RERUN: ${{ github.event.inputs.smoke_test == 'true' && '0' || '1' }}
       # AI features on (user decision). Individual systems can still override
       # via their DB flags; these are the workflow-level defaults.
       BIZZAL_OPENAI_MODEL: "gpt-4o"
@@ -137,9 +142,9 @@ jobs:
         run: bin/core/run_daily_cloud_cron.sh
 
       - name: Publish to Instagram Reels
+        if: steps.guard.outputs.proceed == 'true' && github.event.inputs.dry_run != 'true' && env.BIZZAL_IG_ACCESS_TOKEN != ''
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        if: steps.guard.outputs.proceed == 'true' && github.event.inputs.dry_run != 'true' && env.BIZZAL_IG_ACCESS_TOKEN != ''
         run: python bin/upload/upload_instagram.py
 
       - name: Commit safety-state back to repo
