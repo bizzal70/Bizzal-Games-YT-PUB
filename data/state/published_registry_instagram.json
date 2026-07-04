@@ -13,6 +13,20 @@
       "hook": "Ancient Red Dragon is perfect for a playful encounter that can still punish bad habits.",
       "body": "With an Armor Class of 22 and 507 hit points, the Ancient Red Dragon presents a formidable challenge. Its commanding presence can disrupt party coordination, while its fiery breath weapon deals 26d6 fire damage in a 90-foot cone. Underestimating the dragon's 80-foot fly speed allows it to dictate engagement range, making it crucial to use terrain to limit its movement options. Forcing the dragon into predictable attack patterns can mitigate its battlefield control.",
       "cta": "DMs: Use a cliff or cavern ceiling to negate the dragon's 80-foot fly speed advantage and limit its fiery breath."
+    },
+    {
+      "published_utc": "2026-07-04T14:40:12Z",
+      "day": "2026-07-04",
+      "content_id": "bgp-2026-07-04-rules-myth-rule-srd-2024-combat-the-order-of-combat-ed934fecfee4",
+      "instagram_post_id": "18109079755861124",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "4c32e216575e8c8ee6ed91e570842fe61e114c50d854ce02525c680a6256dbca",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-04.mp4",
+      "fact_name": "The Order of Combat",
+      "category": "rules_myth",
+      "hook": "The Order of Combat dictates that initiative determines turn sequence, not speed or dexterity.",
+      "body": "Initiative, not dexterity modifiers or movement speed, decides who acts first in combat. Conflating dexterity with initiative leads to confusion when slower characters act before faster ones. This misunderstanding can disrupt strategy and timing. Planning actions based on actual turn order, determined by initiative rolls, prevents misplaced assumptions about character speed.",
+      "cta": "DMs: Remind your players that page 13 clearly states initiative order dictates combat turns, not dexterity or speed."
     }
   ]
 }

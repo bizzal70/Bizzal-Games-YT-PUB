@@ -467,6 +467,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
         "video_sha256": "f412a785b41c0269c7bcb903870329c6a0986f8ec5f2215b04c554af6df6001a"
       }
+    },
+    {
+      "published_utc": "2026-07-04T14:36:56Z",
+      "day": "2026-07-04",
+      "content_id": "bgp-2026-07-04-rules-myth-rule-srd-2024-combat-the-order-of-combat-ed934fecfee4",
+      "publish_hash": "b605899f308d895a334ae835283b3e56f5fa98c51ae8ff85f5f04b8c4e6ae4a4",
+      "youtube_video_id": "3VYIZe5pcno",
+      "youtube_url": "https://www.youtube.com/watch?v=3VYIZe5pcno",
+      "video_sha256": "4c32e216575e8c8ee6ed91e570842fe61e114c50d854ce02525c680a6256dbca",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-04.mp4",
+      "fingerprint": {
+        "day": "2026-07-04",
+        "category": "rules_myth",
+        "angle": "why_people_get_it_wrong",
+        "content_id": "bgp-2026-07-04-rules-myth-rule-srd-2024-combat-the-order-of-combat-ed934fecfee4",
+        "canonical_hash": "ed934fecfee450c685f7c0db0e8f7700b8dcb62a02898ad4d672bc7d2f5b5c26",
+        "script_id": "f47f8da926b68bde19dd97464185d9f44b729c40ec50b2c164b664bee686ddf9",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_combat_the-order-of-combat",
+        "fact_name": "The Order of Combat",
+        "hook": "The Order of Combat dictates that initiative determines turn sequence, not speed or dexterity.",
+        "body": "Initiative, not dexterity modifiers or movement speed, decides who acts first in combat. Conflating dexterity with initiative leads to confusion when slower characters act before faster ones. This misunderstanding can disrupt strategy and timing. Planning actions based on actual turn order, determined by initiative rolls, prevents misplaced assumptions about character speed.",
+        "cta": "DMs: Remind your players that page 13 clearly states initiative order dictates combat turns, not dexterity or speed.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-04.mp4",
+        "video_sha256": "4c32e216575e8c8ee6ed91e570842fe61e114c50d854ce02525c680a6256dbca"
+      }
     }
   ]
 }

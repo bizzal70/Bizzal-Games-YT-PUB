@@ -233,6 +233,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-03.mp4",
         "video_sha256": "adaaf715250dbc36c88ad6e62ee831aa166fbdb293337f5eeb617036b051915e"
       }
+    },
+    {
+      "published_utc": "2026-07-04T14:39:28Z",
+      "day": "2026-07-04",
+      "content_id": "bgp-2026-07-04-spell-use-case-spell-84-722606e9129b",
+      "publish_hash": "3378d8f295ae0b79c986c22efcd7ae56ae327eacb080d447ba1f340af3f4fc45",
+      "youtube_video_id": "qh_b-_7dR94",
+      "youtube_url": "https://www.youtube.com/watch?v=qh_b-_7dR94",
+      "video_sha256": "d352a7a2840f5d677f74d3e5b44e0ed50066454aeff54d95aad8f203a1890ef1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-04.mp4",
+      "fingerprint": {
+        "day": "2026-07-04",
+        "category": "spell_use_case",
+        "angle": "best_moment",
+        "content_id": "bgp-2026-07-04-spell-use-case-spell-84-722606e9129b",
+        "canonical_hash": "722606e9129bc86c73be01d8bb751d362a0ce1fc04c2e38470ec41c2472c1120",
+        "script_id": "8021098e9b9d4ea47708ab381464ce02347ba00d2d71a440e2a755cc5104628f",
+        "fact_kind": "spell",
+        "fact_pk": 84,
+        "fact_name": "Finger Of Death",
+        "hook": "Finger Of Death instantly kills a creature of level 9 or less.",
+        "body": "Finger Of Death has a range of 'Close' and a duration of 'Instant'. Misuse occurs when players treat it as a damage spell rather than a decisive solution to a specific problem. The correct application is targeting a creature whose removal changes the tactical landscape, not just reducing hit points.",
+        "cta": "DMs: Use Finger Of Death to instantly remove a level 9 or lower creature that disrupts your players' plans.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-04.mp4",
+        "video_sha256": "d352a7a2840f5d677f74d3e5b44e0ed50066454aeff54d95aad8f203a1890ef1"
+      }
     }
   ]
 }
