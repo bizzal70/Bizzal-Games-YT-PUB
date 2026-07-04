@@ -311,6 +311,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
         "video_sha256": "25c179bf498b095f276a5de57b35ddc8ea5c5371197718023622f3d93424a5ee"
       }
+    },
+    {
+      "published_utc": "2026-07-04T02:31:45Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-brass-dragon-fd2a91b27e17",
+      "publish_hash": "2d11b55ce3fb517928277bfac645b40e29ec3734652305510d7193fc318cc47b",
+      "youtube_video_id": "psslMIzeWdA",
+      "youtube_url": "https://www.youtube.com/watch?v=psslMIzeWdA",
+      "video_sha256": "bc30add5d985e6348011693887f965ba062dec327f544722789be9900d687287",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+      "fingerprint": {
+        "day": "2026-07-03",
+        "category": "encounter_seed",
+        "angle": "terrain_feature",
+        "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-brass-dragon-fd2a91b27e17",
+        "canonical_hash": "fd2a91b27e1724b87175c90f22e998452c106f9ae56687754b0274babd731b0a",
+        "script_id": "273a8b61649ccd12d7f5bc05572ea8dcc77915876157acdd9a1c64639255605f",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_ancient-brass-dragon",
+        "fact_name": "Ancient Brass Dragon",
+        "hook": "Use Ancient Brass Dragon as 'comic relief' that quietly pressures the party's decisions.",
+        "body": "With an armor class of 20 and 332 hit points, the Ancient Brass Dragon is a formidable opponent. Its fire breath, with immunity to fire damage, is often underestimated by players who focus on direct attacks without considering terrain. Players frequently ignore its ability to fly 80 feet per round, which allows it to control the battlefield from the air. Utilizing terrain to limit its movement or force it into confined spaces is a more effective strategy.",
+        "cta": "DMs: Force the dragon into a 267-foot-wide canyon to negate its 80-foot flight advantage and exploit its limited maneuverability.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+        "video_sha256": "bc30add5d985e6348011693887f965ba062dec327f544722789be9900d687287"
+      }
     }
   ]
 }
