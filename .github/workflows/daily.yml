@@ -137,6 +137,8 @@ jobs:
         run: bin/core/run_daily_cloud_cron.sh
 
       - name: Publish to Instagram Reels
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: steps.guard.outputs.proceed == 'true' && github.event.inputs.dry_run != 'true' && env.BIZZAL_IG_ACCESS_TOKEN != ''
         run: python bin/upload/upload_instagram.py
 
