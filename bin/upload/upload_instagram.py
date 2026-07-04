@@ -364,9 +364,9 @@ def main() -> int:
     registry_file = ig_registry_path(repo_root)
     registry = load_registry(registry_file)
     for item in registry.get("items") or []:
-        if isinstance(item, dict) and item.get("day") == day:
+        if isinstance(item, dict) and item.get("content_id") == content_id and content_id:
             prior_id = item.get("instagram_post_id") or "(unknown)"
-            eprint(f"ERROR: duplicate publish blocked. day={day} prior_post={prior_id}")
+            eprint(f"ERROR: duplicate publish blocked. content_id={content_id} prior_post={prior_id}")
             return 6
 
     caption = build_caption(atom, day)
