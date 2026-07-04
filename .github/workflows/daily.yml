@@ -157,6 +157,6 @@ jobs:
             echo "no safety-state changes to commit"
           else
             git commit -m "chore(state): update publish registry + history [skip ci]"
-            git pull --rebase origin HEAD
+            git pull --rebase --autostash origin HEAD
             git push
           fi
