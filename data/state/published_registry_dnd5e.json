@@ -285,6 +285,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
         "video_sha256": "8c5e5c9c62b260cc5285f8ebd3b9b9a582576f97a20cbecdc9e0c9d759003133"
       }
+    },
+    {
+      "published_utc": "2026-07-04T02:26:08Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-blue-dragon-d885124cf6a9",
+      "publish_hash": "ba2e267a820b9467e15d4ca8e289212ee98b891255416edc91696224d76da443",
+      "youtube_video_id": "rIXm-OkTBfs",
+      "youtube_url": "https://www.youtube.com/watch?v=rIXm-OkTBfs",
+      "video_sha256": "25c179bf498b095f276a5de57b35ddc8ea5c5371197718023622f3d93424a5ee",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+      "fingerprint": {
+        "day": "2026-07-03",
+        "category": "encounter_seed",
+        "angle": "terrain_feature",
+        "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-blue-dragon-d885124cf6a9",
+        "canonical_hash": "d885124cf6a9a430b620f1478267ab7b6899c28968df66eeb02c208c93f0dd11",
+        "script_id": "66c84169cc03e52bfb442456974bba46b84ab94939c783515c801a8b4658ea42",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_ancient-blue-dragon",
+        "fact_name": "Ancient Blue Dragon",
+        "hook": "Ancient Blue Dragon is perfect for a playful encounter that can still punish bad habits.",
+        "body": "With an armor class of 22 and 481 hit points, the Ancient Blue Dragon is a formidable opponent. Its Lightning Breath, a 90-foot line that deals 16d10 lightning damage, requires a DC 24 Dexterity saving throw. Underestimating the dragon's ability to control the battlefield with its 80-foot flying speed and 40-foot burrow speed often leads to tactical errors. Using terrain to restrict its movement and force it into less advantageous positions can be crucial.",
+        "cta": "DMs: Use terrain to limit the dragon's 80-foot flight and 40-foot burrow speeds, or watch it toy with your party.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+        "video_sha256": "25c179bf498b095f276a5de57b35ddc8ea5c5371197718023622f3d93424a5ee"
+      }
     }
   ]
 }
