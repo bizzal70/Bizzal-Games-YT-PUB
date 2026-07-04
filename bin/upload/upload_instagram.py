@@ -88,7 +88,7 @@ def cover_image_path_for_day(repo_root: Path, day: str) -> Path | None:
 
 
 def ig_registry_path(repo_root: Path) -> Path:
-    val = (os.getenv("BIZZAL_IG_REGISTRY") or "data/archive/publish/published_registry_instagram.json").strip()
+    val = (os.getenv("BIZZAL_IG_REGISTRY") or "data/state/published_registry_instagram.json").strip()
     p = Path(val).expanduser()
     if not p.is_absolute():
         p = repo_root / p
@@ -221,6 +221,23 @@ def delete_release(repo: str, release_id: int, token: str):
 # Instagram Graph API
 # ---------------------------------------------------------------------------
 
+
+def ig_check_token(access_token: str) -> None:
+    """Warn if the Instagram token is expiring within 7 days."""
+    try:
+        r = requests.get(
+            f"{GRAPH_BASE}/me",
+            params={"fields": "id,username"},
+            headers={"Authorization": f"Bearer {access_token}"},
+            timeout=15,
+        )
+        if not r.ok:
+            eprint(f"WARNING: Instagram token health check failed {r.status_code}: {r.text}")
+        else:
+            print(f"[upload_instagram] token ok, user={r.json().get('username')}")
+    except Exception as exc:
+        eprint(f"WARNING: Instagram token health check error: {exc}")
+
 def ig_create_reels_container(
     ig_user_id: str,
     access_token: str,
@@ -233,13 +250,13 @@ def ig_create_reels_container(
         "media_type": "REELS",
         "video_url": video_url,
         "caption": caption,
-        "access_token": access_token,
     }
     if cover_url:
         params["cover_url"] = cover_url
     r = requests.post(
         f"{GRAPH_BASE}/{ig_user_id}/media",
         params=params,
+        headers={"Authorization": f"Bearer {access_token}"},
         timeout=60,
     )
     if not r.ok:
@@ -254,7 +271,8 @@ def ig_poll_container(container_id: str, access_token: str, timeout_sec: int = 3
     while time.time() < deadline:
         r = requests.get(
             f"{GRAPH_BASE}/{container_id}",
-            params={"fields": "status_code,status", "access_token": access_token},
+            params={"fields": "status_code,status"},
+            headers={"Authorization": f"Bearer {access_token}"},
             timeout=30,
         )
         r.raise_for_status()
@@ -273,10 +291,8 @@ def ig_publish_container(ig_user_id: str, access_token: str, container_id: str) 
     """Returns the Instagram post/media ID."""
     r = requests.post(
         f"{GRAPH_BASE}/{ig_user_id}/media_publish",
-        params={
-            "creation_id": container_id,
-            "access_token": access_token,
-        },
+        params={"creation_id": container_id},
+        headers={"Authorization": f"Bearer {access_token}"},
         timeout=60,
     )
     if not r.ok:
@@ -311,6 +327,8 @@ def main() -> int:
     if not github_repo:
         eprint("ERROR: GITHUB_REPOSITORY is not set (e.g. bizzal70/Bizzal-Games-YT-PUB)")
         return 1
+
+    ig_check_token(ig_access_token)
 
     repo_root = Path(__file__).resolve().parents[2]
 
@@ -387,7 +405,6 @@ def main() -> int:
 
     except Exception as exc:
         eprint(f"ERROR: Instagram publish failed: {exc}")
-        delete_release(github_repo, release_id, github_token)
         return 4
     finally:
         # Step 5: always clean up temp release
