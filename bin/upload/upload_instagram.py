@@ -298,7 +298,7 @@ def main() -> int:
 
     day = args.day.strip()
     if not day:
-        day = datetime.utcnow().strftime("%Y-%m-%d")
+        day = datetime.now().strftime("%Y-%m-%d")  # uses TZ env var (America/Denver), matching the pipeline
 
     try:
         video_path = Path(args.video).expanduser() if args.video else default_video_path_for_day(repo_root, day)
