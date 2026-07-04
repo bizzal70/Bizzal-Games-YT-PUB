@@ -415,6 +415,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
         "video_sha256": "22bfe44eb9c55a15e360d84a5a575a677a684ca773b7d79d39ecfa26e4a5cab8"
       }
+    },
+    {
+      "published_utc": "2026-07-04T04:15:05Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-green-dragon-877b3714b687",
+      "publish_hash": "8c9476a1f8974e8b374e72f22e2050bbe9d9d9fb184a7c9177242993ed2194d9",
+      "youtube_video_id": "yJvTVEln03U",
+      "youtube_url": "https://www.youtube.com/watch?v=yJvTVEln03U",
+      "video_sha256": "1169c1623dc8160e30c891bb4890dc165550643aa446f10bbb0646e82d809eb1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+      "fingerprint": {
+        "day": "2026-07-03",
+        "category": "encounter_seed",
+        "angle": "terrain_feature",
+        "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-green-dragon-877b3714b687",
+        "canonical_hash": "877b3714b687f90de77ed1e674a0ce499f29f7d5ad5f4c9c51ed82ea49202932",
+        "script_id": "a7f7b396290bcda35774787d51506d4cf1b0edd5ff3774324f475c07274e5867",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_ancient-green-dragon",
+        "fact_name": "Ancient Green Dragon",
+        "hook": "Use Ancient Green Dragon as 'comic relief' that quietly pressures the party's decisions.",
+        "body": "With an Armor Class of 21 and 402 hit points, the Ancient Green Dragon is a formidable opponent, but its true strength lies in its ability to control the battlefield. Its Mind Invasion ability, combined with a Multiattack, can force opponents into costly decisions. Many players underestimate the dragon's ability to manipulate terrain and positioning, often focusing too much on direct attacks. Optimal play requires leveraging terrain features to mitigate the dragon's control, forcing it to engage on less advantageous terms.",
+        "cta": "DMs: Force the party to contest the dragon's 60-foot blindsight range by exploiting natural cover early in the encounter.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+        "video_sha256": "1169c1623dc8160e30c891bb4890dc165550643aa446f10bbb0646e82d809eb1"
+      }
     }
   ]
 }

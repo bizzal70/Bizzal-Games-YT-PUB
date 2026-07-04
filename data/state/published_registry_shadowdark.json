@@ -181,6 +181,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-03.mp4",
         "video_sha256": "114cf5267a2db7fe038ae6ff58b07765d5bf4da71ddd0cf086d8450a045e3916"
       }
+    },
+    {
+      "published_utc": "2026-07-04T04:17:35Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-rules-myth-rule-12-cd3610062ada",
+      "publish_hash": "c343f348808b59f5ec5a84bce1458f55218bb65d772e4a24061bb73bfd2bf335",
+      "youtube_video_id": "cUO6zUqJerw",
+      "youtube_url": "https://www.youtube.com/watch?v=cUO6zUqJerw",
+      "video_sha256": "7745c7314d3bfcfccae2ba2655f88c256e8eb3268d8b9a4b88c4774b9fd98bce",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-03.mp4",
+      "fingerprint": {
+        "day": "2026-07-03",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-07-03-rules-myth-rule-12-cd3610062ada",
+        "canonical_hash": "cd3610062ada7368326d8953e3cf4c0d5840b95d3346a8e84d3355af0e54271b",
+        "script_id": "6669aa78a759d58c14fabdc001c39d083861751ca4c85c156f8fd0f42b088311",
+        "fact_kind": "rule",
+        "fact_pk": 12,
+        "fact_name": "Random Encounters",
+        "hook": "Random Encounters occur every 10 minutes in the Shadowdark on a d6 roll of 1.",
+        "body": "Every 10 minutes requires a d6 roll for Random Encounters, making resource management and light tracking critical. Ignoring time intervals leads to encounters without preparation. Precise tracking of time and resources is necessary to avoid unnecessary danger.",
+        "cta": "DMs: Roll a d6 every 10 minutes in the Shadowdark; watch them finally learn to count torches.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-03.mp4",
+        "video_sha256": "7745c7314d3bfcfccae2ba2655f88c256e8eb3268d8b9a4b88c4774b9fd98bce"
+      }
     }
   ]
 }
