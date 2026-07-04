@@ -337,6 +337,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
         "video_sha256": "bc30add5d985e6348011693887f965ba062dec327f544722789be9900d687287"
       }
+    },
+    {
+      "published_utc": "2026-07-04T02:38:17Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-bronze-dragon-f57168733f4e",
+      "publish_hash": "62990550fd06ccc3c5bedfee14c80b8d0a959ccb56a281e6637e35a36ed5037e",
+      "youtube_video_id": "O7KWF86qKfY",
+      "youtube_url": "https://www.youtube.com/watch?v=O7KWF86qKfY",
+      "video_sha256": "e9bae447790ef072cba389bfa0e1335b11b59deacc341e63703d6799fd5e1b2c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+      "fingerprint": {
+        "day": "2026-07-03",
+        "category": "encounter_seed",
+        "angle": "terrain_feature",
+        "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-bronze-dragon-f57168733f4e",
+        "canonical_hash": "f57168733f4ebb9debb03bd2ea8953620a8133f7d65fc767b5d9c65d61100255",
+        "script_id": "fe7d3ccccd3ebfe0c6d4697a892856f017118a1616961a109977f49064370441",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_ancient-bronze-dragon",
+        "fact_name": "Ancient Bronze Dragon",
+        "hook": "Light tone, real consequences: build the scene around Ancient Bronze Dragon and table overconfidence.",
+        "body": "With an armor class of 22 and 444 hit points, the Ancient Bronze Dragon is a formidable opponent that can withstand significant punishment. Its Lightning Breath can deal substantial damage, but blindsight within 60 feet allows it to detect invisible creatures. Terrain will not hide you; leverage the dragon's lawful good alignment to negotiate or distract it with moral dilemmas. Its fly speed of 80 feet enables quick repositioning, so controlling the battlefield with terrain that limits movement options is crucial.",
+        "cta": "DMs: Force the dragon to land by introducing a terrain feature that limits its 80-foot fly speed early on.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+        "video_sha256": "e9bae447790ef072cba389bfa0e1335b11b59deacc341e63703d6799fd5e1b2c"
+      }
     }
   ]
 }
