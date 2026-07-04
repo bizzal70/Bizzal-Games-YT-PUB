@@ -85,7 +85,7 @@ def default_video_path_for_day(repo_root: Path, day: str) -> Path:
     if day_video.is_file():
         return day_video
 
-    today = datetime.utcnow().strftime("%Y-%m-%d")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     allow_latest_fallback = (os.getenv("BIZZAL_UPLOAD_ALLOW_LATEST_FALLBACK") or "0").strip() == "1"
     if day != today and not allow_latest_fallback:
         raise FileNotFoundError(
@@ -374,9 +374,7 @@ def main() -> int:
 
     day = args.day.strip()
     if not day:
-        from datetime import datetime
-
-        day = datetime.utcnow().strftime("%Y-%m-%d")
+        day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     try:
         default_video_path = default_video_path_for_day(repo_root, day)
