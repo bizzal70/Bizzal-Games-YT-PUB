@@ -423,6 +423,9 @@ def main() -> int:
         "video_path": str(video_path),
         "fact_name": (fact.get("name") or "").strip(),
         "category": atom.get("category") or "",
+        "hook": ((atom.get("script") or {}).get("hook") or "").strip(),
+        "body": ((atom.get("script") or {}).get("body") or "").strip(),
+        "cta": ((atom.get("script") or {}).get("cta") or "").strip(),
     })
     save_registry(registry_file, registry)
     print(f"[upload_instagram] registry={registry_file}")
