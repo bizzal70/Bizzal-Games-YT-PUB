@@ -1,0 +1,15 @@
+{
+  "items": [
+    {
+      "published_utc": "2026-07-04T02:44:52Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-copper-dragon-d8ecad782e87",
+      "instagram_post_id": "18431312989193189",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d7248d3c8d60a4b1485a55ef783fb3c41fb0991b87adfcabc7079948370abf10",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+      "fact_name": "Ancient Copper Dragon",
+      "category": "encounter_seed"
+    }
+  ]
+}

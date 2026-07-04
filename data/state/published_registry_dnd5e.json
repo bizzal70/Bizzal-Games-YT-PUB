@@ -363,6 +363,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
         "video_sha256": "e9bae447790ef072cba389bfa0e1335b11b59deacc341e63703d6799fd5e1b2c"
       }
+    },
+    {
+      "published_utc": "2026-07-04T02:44:14Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-copper-dragon-d8ecad782e87",
+      "publish_hash": "9c1610e47c72f3bf2790de822c73a39f20245fda2e59a6ac733e7f3d035b09a5",
+      "youtube_video_id": "K3fDoAw6UFg",
+      "youtube_url": "https://www.youtube.com/watch?v=K3fDoAw6UFg",
+      "video_sha256": "d7248d3c8d60a4b1485a55ef783fb3c41fb0991b87adfcabc7079948370abf10",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+      "fingerprint": {
+        "day": "2026-07-03",
+        "category": "encounter_seed",
+        "angle": "terrain_feature",
+        "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-copper-dragon-d8ecad782e87",
+        "canonical_hash": "d8ecad782e87864312c51f136809ea10b36737e69fa6d77322b366f539379b16",
+        "script_id": "0aa9f78dcec12dd48e8b0afab494abc52e246f74466bf6ab8bd280568f69e040",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_ancient-copper-dragon",
+        "fact_name": "Ancient Copper Dragon",
+        "hook": "Light tone, real consequences: build the scene around Ancient Copper Dragon and table overconfidence.",
+        "body": "With an armor class of 21 and 367 hit points, the Ancient Copper Dragon is a formidable opponent. Its Acid Breath attack can impose significant pressure, dealing damage that is often underestimated due to the dragon's immunity to acid. Misjudging the dragon's Giggling Magic can lead to overlooking its ability to use spells creatively in combat. Instead of focusing solely on direct attacks, leveraging the terrain to limit the dragon's movement can shift the battle's momentum.",
+        "cta": "DMs: Use the dragon's 40-foot climb speed against it by incorporating steep cliffs or narrow ledges to control its movement.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+        "video_sha256": "d7248d3c8d60a4b1485a55ef783fb3c41fb0991b87adfcabc7079948370abf10"
+      }
     }
   ]
 }
