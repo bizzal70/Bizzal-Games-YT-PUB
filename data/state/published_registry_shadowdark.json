@@ -155,6 +155,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-03.mp4",
         "video_sha256": "ea0b7776c63f92b9f781f6085c7e83b08bf1f22be8d03548db280e6767d35da5"
       }
+    },
+    {
+      "published_utc": "2026-07-04T03:34:29Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-rules-myth-rule-11-5ae26863147e",
+      "publish_hash": "463841f29962a7ef3ab6bf7719ad66f14e025a2211d56fef972cb80f6fe345d9",
+      "youtube_video_id": "PxeViM18h1A",
+      "youtube_url": "https://www.youtube.com/watch?v=PxeViM18h1A",
+      "video_sha256": "114cf5267a2db7fe038ae6ff58b07765d5bf4da71ddd0cf086d8450a045e3916",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-03.mp4",
+      "fingerprint": {
+        "day": "2026-07-03",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-07-03-rules-myth-rule-11-5ae26863147e",
+        "canonical_hash": "5ae26863147e33bb7c607478967fd00c3f57866feae3458395f377e489d48903",
+        "script_id": "5c15cfac02060fc9caa643f58c723e4f04b3832364cd5350c9a62c7007daee51",
+        "fact_kind": "rule",
+        "fact_pk": 11,
+        "fact_name": "Turn Undead",
+        "hook": "Turn Undead affects undead with a level equal to or less than the roll result.",
+        "body": "Turn Undead causes affected undead to flee for 2d4 rounds. It is not a spell and does not count toward known spells, which means it can be used without expending a spell slot. Many players mistake it for a spell and fail to use it when available. Optimal use involves targeting large groups of low-level undead to maximize the effect.",
+        "cta": "DMs: Remind your cleric that Turn Undead isn't a spell, so they can scatter those skeletons without burning a slot.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-03.mp4",
+        "video_sha256": "114cf5267a2db7fe038ae6ff58b07765d5bf4da71ddd0cf086d8450a045e3916"
+      }
     }
   ]
 }

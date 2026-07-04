@@ -389,6 +389,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
         "video_sha256": "d7248d3c8d60a4b1485a55ef783fb3c41fb0991b87adfcabc7079948370abf10"
       }
+    },
+    {
+      "published_utc": "2026-07-04T03:31:42Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-gold-dragon-c4b1b3166704",
+      "publish_hash": "220d6be4230af0004611d169faeb3180fc5a66b40bd2cdfb094c238d1f35640e",
+      "youtube_video_id": "UTLYvwyKLV8",
+      "youtube_url": "https://www.youtube.com/watch?v=UTLYvwyKLV8",
+      "video_sha256": "22bfe44eb9c55a15e360d84a5a575a677a684ca773b7d79d39ecfa26e4a5cab8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+      "fingerprint": {
+        "day": "2026-07-03",
+        "category": "encounter_seed",
+        "angle": "terrain_feature",
+        "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-gold-dragon-c4b1b3166704",
+        "canonical_hash": "c4b1b316670460295681b7de71862f60a1c7f2d2349351c8727842fb147f96c1",
+        "script_id": "8e0fb6104fc2010c4ac6669283517cd23ced875f0ceac4fc6bef7fcddd03d67a",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_ancient-gold-dragon",
+        "fact_name": "Ancient Gold Dragon",
+        "hook": "Use Ancient Gold Dragon as 'comic relief' that quietly pressures the party's decisions.",
+        "body": "With a flying speed of 80 feet and a blindsight range of 60 feet, the Ancient Gold Dragon can control the battlefield without ever touching the ground. Its Fire Breath affects a 90-foot cone, dealing significant damage that players often underestimate due to its wide area. Many players fail to account for the dragon's ability to detect invisible creatures within its blindsight range, leading to ineffective stealth strategies. Proper play involves leveraging terrain to limit the dragon's movement and force it into confined spaces where its breath weapon is less effective.",
+        "cta": "DMs: Use the dragon's 90-foot cone breath weapon to punish players who cluster together, forcing them to rethink their tactics.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+        "video_sha256": "22bfe44eb9c55a15e360d84a5a575a677a684ca773b7d79d39ecfa26e4a5cab8"
+      }
     }
   ]
 }

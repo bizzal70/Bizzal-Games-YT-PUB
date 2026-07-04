@@ -28,16 +28,16 @@
     },
     "2026-07-03": {
       "day": "2026-07-03",
-      "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-copper-dragon-d8ecad782e87",
+      "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-gold-dragon-c4b1b3166704",
       "category": "encounter_seed",
       "angle": "terrain_feature",
       "status": "published",
-      "requested_utc": "2026-07-04T02:44:12Z",
-      "decision_utc": "2026-07-04T02:44:12Z",
+      "requested_utc": "2026-07-04T03:31:39Z",
+      "decision_utc": "2026-07-04T03:31:39Z",
       "decision_by": "autopublish",
       "publish_rc": 0,
-      "publish_output": "[upload_youtube] uploaded id=K3fDoAw6UFg privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4 https://www.youtube.com/watch?v=K3fDoAw6UFg [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dnd5e.json hash=9c1610e47c72f3bf",
-      "youtube_url": "https://www.youtube.com/watch?v=K3fDoAw6UFg"
+      "publish_output": "[upload_youtube] uploaded id=UTLYvwyKLV8 privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4 https://www.youtube.com/watch?v=UTLYvwyKLV8 [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dnd5e.json hash=220d6be4230af000",
+      "youtube_url": "https://www.youtube.com/watch?v=UTLYvwyKLV8"
     }
   }
 }
