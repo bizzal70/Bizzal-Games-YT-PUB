@@ -1,1 +1,18 @@
-{"items": []}
+{
+  "items": [
+    {
+      "published_utc": "2026-07-04T04:36:29Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-red-dragon-49fba9863d00",
+      "instagram_post_id": "18099642097907189",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "f412a785b41c0269c7bcb903870329c6a0986f8ec5f2215b04c554af6df6001a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+      "fact_name": "Ancient Red Dragon",
+      "category": "encounter_seed",
+      "hook": "Ancient Red Dragon is perfect for a playful encounter that can still punish bad habits.",
+      "body": "With an Armor Class of 22 and 507 hit points, the Ancient Red Dragon presents a formidable challenge. Its commanding presence can disrupt party coordination, while its fiery breath weapon deals 26d6 fire damage in a 90-foot cone. Underestimating the dragon's 80-foot fly speed allows it to dictate engagement range, making it crucial to use terrain to limit its movement options. Forcing the dragon into predictable attack patterns can mitigate its battlefield control.",
+      "cta": "DMs: Use a cliff or cavern ceiling to negate the dragon's 80-foot fly speed advantage and limit its fiery breath."
+    }
+  ]
+}

@@ -441,6 +441,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
         "video_sha256": "1169c1623dc8160e30c891bb4890dc165550643aa446f10bbb0646e82d809eb1"
       }
+    },
+    {
+      "published_utc": "2026-07-04T04:31:26Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-red-dragon-49fba9863d00",
+      "publish_hash": "db21c81f30fc11e8472bc04d0fc0622a37a04a11102158ee8ff6a5322d3f4ee9",
+      "youtube_video_id": "GDpAjfWpDzY",
+      "youtube_url": "https://www.youtube.com/watch?v=GDpAjfWpDzY",
+      "video_sha256": "f412a785b41c0269c7bcb903870329c6a0986f8ec5f2215b04c554af6df6001a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+      "fingerprint": {
+        "day": "2026-07-03",
+        "category": "encounter_seed",
+        "angle": "terrain_feature",
+        "content_id": "bgp-2026-07-03-encounter-seed-creature-srd-2024-ancient-red-dragon-49fba9863d00",
+        "canonical_hash": "49fba9863d0044446d25152266d57fd1cd34e4d8c099408001bb0a6e78395eac",
+        "script_id": "fbc67b36d311610eb1ecf52a08a6b3e7ddcd57945a85e370556e20f3c7fa0b22",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_ancient-red-dragon",
+        "fact_name": "Ancient Red Dragon",
+        "hook": "Ancient Red Dragon is perfect for a playful encounter that can still punish bad habits.",
+        "body": "With an Armor Class of 22 and 507 hit points, the Ancient Red Dragon presents a formidable challenge. Its commanding presence can disrupt party coordination, while its fiery breath weapon deals 26d6 fire damage in a 90-foot cone. Underestimating the dragon's 80-foot fly speed allows it to dictate engagement range, making it crucial to use terrain to limit its movement options. Forcing the dragon into predictable attack patterns can mitigate its battlefield control.",
+        "cta": "DMs: Use a cliff or cavern ceiling to negate the dragon's 80-foot fly speed advantage and limit its fiery breath.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-03.mp4",
+        "video_sha256": "f412a785b41c0269c7bcb903870329c6a0986f8ec5f2215b04c554af6df6001a"
+      }
     }
   ]
 }

@@ -207,6 +207,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-03.mp4",
         "video_sha256": "7745c7314d3bfcfccae2ba2655f88c256e8eb3268d8b9a4b88c4774b9fd98bce"
       }
+    },
+    {
+      "published_utc": "2026-07-04T04:34:29Z",
+      "day": "2026-07-03",
+      "content_id": "bgp-2026-07-03-rules-myth-rule-8-9e78b49be878",
+      "publish_hash": "6cb7d84429d1a7015d8f8ef5c052c061eebe462141be9f6f453ed94ae158ffa7",
+      "youtube_video_id": "YlC1sVoAKJw",
+      "youtube_url": "https://www.youtube.com/watch?v=YlC1sVoAKJw",
+      "video_sha256": "adaaf715250dbc36c88ad6e62ee831aa166fbdb293337f5eeb617036b051915e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-03.mp4",
+      "fingerprint": {
+        "day": "2026-07-03",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-07-03-rules-myth-rule-8-9e78b49be878",
+        "canonical_hash": "9e78b49be87826964cf7174cd9e073b6a1010b46c7adcc5a24fab72fc4bd7832",
+        "script_id": "a993e43d6ae2b050d03ecc9f15f255a4806d443eb28da2818add6a7414f0eeea",
+        "fact_kind": "rule",
+        "fact_pk": 8,
+        "fact_name": "Dying and Death",
+        "hook": "Dying at 0 HP requires a DC 15 Constitution check each round.",
+        "body": "Dying and Death mechanics dictate that, at 0 HP, a character must make a DC 15 Constitution check each round or die. A natural 20 stabilizes the character at 1 HP. Allies can stabilize a dying character with a DC 12 Wisdom check. Misunderstanding these checks often leads to unnecessary character death; understanding and applying them correctly can save lives.",
+        "cta": "DMs: Enforce the DC 15 Constitution check at 0 HP to avoid unnecessary character deaths from rule ignorance.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-03.mp4",
+        "video_sha256": "adaaf715250dbc36c88ad6e62ee831aa166fbdb293337f5eeb617036b051915e"
+      }
     }
   ]
 }
