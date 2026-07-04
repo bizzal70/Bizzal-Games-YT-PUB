@@ -3,8 +3,8 @@
 Upload the daily rendered Short to Instagram Reels.
 
 Flow:
-  1. Upload MP4 as a GitHub Release asset to get a public URL (temp hosting)
-  2. POST to Instagram Graph API to create a Reels container
+  1. Upload MP4 (and optional cover PNG) as GitHub Release assets to get public URLs
+  2. POST to Instagram Graph API to create a Reels container (with cover_url if available)
   3. Poll container until status_code == FINISHED (up to ~4 min)
   4. POST to media_publish
   5. Delete the GitHub Release (clean up temp hosting)
@@ -75,6 +75,16 @@ def default_video_path_for_day(repo_root: Path, day: str) -> Path:
     if not latest_path.is_absolute():
         latest_path = repo_root / latest_path
     return latest_path
+
+
+def cover_image_path_for_day(repo_root: Path, day: str) -> Path | None:
+    """Return the bg PNG for the day if it exists, else None."""
+    by_day_dir_raw = (os.getenv("BIZZAL_RENDERS_BY_DAY_DIR") or "data/renders/by_day").strip()
+    by_day_dir = Path(by_day_dir_raw).expanduser()
+    if not by_day_dir.is_absolute():
+        by_day_dir = repo_root / by_day_dir
+    cover = by_day_dir / f"{day}.bg.png"
+    return cover if cover.is_file() else None
 
 
 def ig_registry_path(repo_root: Path) -> Path:
@@ -175,17 +185,16 @@ def create_temp_release(repo: str, token: str, day: str) -> dict:
     return r.json()
 
 
-def upload_release_asset(upload_url: str, video_path: Path, token: str) -> str:
-    """Upload MP4 to GitHub Release asset; returns the browser_download_url."""
-    # upload_url looks like: https://uploads.github.com/repos/.../assets{?name,label}
+def upload_release_asset(upload_url: str, file_path: Path, token: str, content_type: str = "video/mp4") -> str:
+    """Upload a file to GitHub Release assets; returns the browser_download_url."""
     base_url = upload_url.split("{")[0]
-    url = f"{base_url}?name={video_path.name}"
-    with video_path.open("rb") as f:
+    url = f"{base_url}?name={file_path.name}"
+    with file_path.open("rb") as f:
         r = requests.post(
             url,
             headers={
                 "Authorization": f"Bearer {token}",
-                "Content-Type": "video/mp4",
+                "Content-Type": content_type,
             },
             data=f,
             timeout=300,
@@ -212,16 +221,25 @@ def delete_release(repo: str, release_id: int, token: str):
 # Instagram Graph API
 # ---------------------------------------------------------------------------
 
-def ig_create_reels_container(ig_user_id: str, access_token: str, video_url: str, caption: str) -> str:
+def ig_create_reels_container(
+    ig_user_id: str,
+    access_token: str,
+    video_url: str,
+    caption: str,
+    cover_url: str | None = None,
+) -> str:
     """Returns container_id."""
+    params = {
+        "media_type": "REELS",
+        "video_url": video_url,
+        "caption": caption,
+        "access_token": access_token,
+    }
+    if cover_url:
+        params["cover_url"] = cover_url
     r = requests.post(
         f"{GRAPH_BASE}/{ig_user_id}/media",
-        params={
-            "media_type": "REELS",
-            "video_url": video_url,
-            "caption": caption,
-            "access_token": access_token,
-        },
+        params=params,
         timeout=60,
     )
     if not r.ok:
@@ -298,7 +316,7 @@ def main() -> int:
 
     day = args.day.strip()
     if not day:
-        day = datetime.now().strftime("%Y-%m-%d")  # uses TZ env var (America/Denver), matching the pipeline
+        day = datetime.now().strftime("%Y-%m-%d")
 
     try:
         video_path = Path(args.video).expanduser() if args.video else default_video_path_for_day(repo_root, day)
@@ -314,6 +332,12 @@ def main() -> int:
     except Exception as exc:
         eprint(f"ERROR: unable to load atom for day {day}: {exc}")
         return 3
+
+    cover_path = cover_image_path_for_day(repo_root, day)
+    if cover_path:
+        print(f"[upload_instagram] cover image found: {cover_path.name}")
+    else:
+        print("[upload_instagram] no cover image found; Instagram will auto-select a frame")
 
     video_sha = sha256_file(video_path)
     content_id = str(((atom.get("content") or {}).get("content_id") or "")).strip()
@@ -337,14 +361,20 @@ def main() -> int:
     upload_url = release["upload_url"]
 
     video_url = None
+    cover_url = None
     try:
         print(f"[upload_instagram] uploading {video_path.name} ({video_path.stat().st_size // 1024}KB)")
-        video_url = upload_release_asset(upload_url, video_path, github_token)
-        print(f"[upload_instagram] temp url={video_url}")
+        video_url = upload_release_asset(upload_url, video_path, github_token, "video/mp4")
+        print(f"[upload_instagram] temp video url={video_url}")
+
+        if cover_path:
+            print(f"[upload_instagram] uploading cover {cover_path.name} ({cover_path.stat().st_size // 1024}KB)")
+            cover_url = upload_release_asset(upload_url, cover_path, github_token, "image/png")
+            print(f"[upload_instagram] temp cover url={cover_url}")
 
         # Step 2: create Instagram Reels container
         print("[upload_instagram] creating Reels container")
-        container_id = ig_create_reels_container(ig_user_id, ig_access_token, video_url, caption)
+        container_id = ig_create_reels_container(ig_user_id, ig_access_token, video_url, caption, cover_url)
         print(f"[upload_instagram] container_id={container_id}")
 
         # Step 3: poll until FINISHED
