@@ -56,7 +56,7 @@ jobs:
       BIZZAL_YT_TOKEN_FILE: ${{ github.workspace }}/.secrets/youtube_token.json
       BIZZAL_YT_NONINTERACTIVE: "1"
       BIZZAL_REQUIRE_DISCORD_APPROVAL: "0"
-      BIZZAL_PREVENT_SAME_DAY_RERUN: "1"
+      BIZZAL_PREVENT_SAME_DAY_RERUN: "0"
       # AI features on (user decision). Individual systems can still override
       # via their DB flags; these are the workflow-level defaults.
       BIZZAL_OPENAI_MODEL: "gpt-4o"
