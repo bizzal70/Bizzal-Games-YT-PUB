@@ -51,6 +51,19 @@
       "publish_rc": 0,
       "publish_output": "[upload_youtube] uploaded id=3VYIZe5pcno privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-04.mp4 https://www.youtube.com/watch?v=3VYIZe5pcno [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dnd5e.json hash=b605899f308d895a",
       "youtube_url": "https://www.youtube.com/watch?v=3VYIZe5pcno"
+    },
+    "2026-07-05": {
+      "day": "2026-07-05",
+      "content_id": "bgp-2026-07-05-class-spotlight-class-srd-2024-warrior-of-the-open-hand-de6f69da1f8b",
+      "category": "class_spotlight",
+      "angle": "early_power_spike",
+      "status": "published",
+      "requested_utc": "2026-07-05T14:38:34Z",
+      "decision_utc": "2026-07-05T14:38:34Z",
+      "decision_by": "autopublish",
+      "publish_rc": 0,
+      "publish_output": "[upload_youtube] uploaded id=uKQR1MT1nCU privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-05.mp4 https://www.youtube.com/watch?v=uKQR1MT1nCU [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dnd5e.json hash=47fc8ce1a2ae89e9",
+      "youtube_url": "https://www.youtube.com/watch?v=uKQR1MT1nCU"
     }
   }
 }

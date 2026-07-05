@@ -259,6 +259,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-04.mp4",
         "video_sha256": "d352a7a2840f5d677f74d3e5b44e0ed50066454aeff54d95aad8f203a1890ef1"
       }
+    },
+    {
+      "published_utc": "2026-07-05T14:42:51Z",
+      "day": "2026-07-05",
+      "content_id": "bgp-2026-07-05-class-spotlight-class-12-ee72a031a01f",
+      "publish_hash": "040f812fde76abbef24919524fbcefee569fc9a75dfd80a3b70c2930812fbcca",
+      "youtube_video_id": "r6QuBtR50ww",
+      "youtube_url": "https://www.youtube.com/watch?v=r6QuBtR50ww",
+      "video_sha256": "5a9a9353768889b0ed4406c749bbfb29ee9ef6ae1e49f2bd63447c28064ded65",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-05.mp4",
+      "fingerprint": {
+        "day": "2026-07-05",
+        "category": "class_spotlight",
+        "angle": "early_power_spike",
+        "content_id": "bgp-2026-07-05-class-spotlight-class-12-ee72a031a01f",
+        "canonical_hash": "ee72a031a01faec3177cfd9b0d0f2b1c4178a79b315252644d25305094e1e8f7",
+        "script_id": "6cb2de8f38d1aec331f029769d8b41ac7f25c6948985267b1f0cbf2f77360827",
+        "fact_kind": "class",
+        "fact_pk": 12,
+        "fact_name": "Seer",
+        "hook": "Seer gains a significant power spike with the Destined talent, adding 1d6 to rolls using a luck token.",
+        "body": "Destined allows the Seer to add 1d6 to any roll when using a luck token, creating a notable power spike. Mismanagement occurs when players use luck tokens reactively, rather than planning turns around the potential boost. Omen, usable 3 times per day, requires a DC 9 Wisdom check to gain a luck token, which can be a reliable setup for Destined. Timing the use of luck tokens to coincide with critical rolls can increase success rates significantly, especially in high-stakes situations.",
+        "cta": "DMs: At level 3, remind your Seer to hoard luck tokens for critical rolls, not random whims.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-05.mp4",
+        "video_sha256": "5a9a9353768889b0ed4406c749bbfb29ee9ef6ae1e49f2bd63447c28064ded65"
+      }
     }
   ]
 }

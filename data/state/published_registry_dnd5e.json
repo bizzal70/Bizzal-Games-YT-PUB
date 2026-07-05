@@ -493,6 +493,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-04.mp4",
         "video_sha256": "4c32e216575e8c8ee6ed91e570842fe61e114c50d854ce02525c680a6256dbca"
       }
+    },
+    {
+      "published_utc": "2026-07-05T14:38:37Z",
+      "day": "2026-07-05",
+      "content_id": "bgp-2026-07-05-class-spotlight-class-srd-2024-warrior-of-the-open-hand-de6f69da1f8b",
+      "publish_hash": "47fc8ce1a2ae89e95068fda8a98ab93d6c920f4ef1b25026273a1ae0a02efc59",
+      "youtube_video_id": "uKQR1MT1nCU",
+      "youtube_url": "https://www.youtube.com/watch?v=uKQR1MT1nCU",
+      "video_sha256": "34529ac9f73bd28413b529b846346c84405eac3aff9c13500b9a91f7c46b341e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-05.mp4",
+      "fingerprint": {
+        "day": "2026-07-05",
+        "category": "class_spotlight",
+        "angle": "early_power_spike",
+        "content_id": "bgp-2026-07-05-class-spotlight-class-srd-2024-warrior-of-the-open-hand-de6f69da1f8b",
+        "canonical_hash": "de6f69da1f8b03915f705db5dc41da94e68e5dfff81af1fb600f3d82aa64d544",
+        "script_id": "25e43bde4baac9541fe3a0d0b7565c49f61be76aebd022e8d5fb2819487101ed",
+        "fact_kind": "class",
+        "fact_pk": "srd-2024_warrior-of-the-open-hand",
+        "fact_name": "Warrior of the Open Hand",
+        "hook": "Warrior of the Open Hand techniques allow unarmed strikes to impose conditions without saving throws.",
+        "body": "Warrior of the Open Hand techniques can push, trip, or neutralize opponents without requiring a saving throw. Misusing these techniques as situational tools limits their effectiveness. Integrating them into every combat round maximizes control over the battlefield. Using these techniques consistently as a primary strategy maintains advantage and battlefield control.",
+        "cta": "DMs: Remind your monk to exploit Open Hand techniques every round to push, trip, or neutralize foes without saving throws.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-05.mp4",
+        "video_sha256": "34529ac9f73bd28413b529b846346c84405eac3aff9c13500b9a91f7c46b341e"
+      }
     }
   ]
 }

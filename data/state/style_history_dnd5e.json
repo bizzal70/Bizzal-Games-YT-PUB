@@ -62,5 +62,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-07-05": {
+    "class_spotlight": {
+      "angle": "early_power_spike",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "class_mentor",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }
