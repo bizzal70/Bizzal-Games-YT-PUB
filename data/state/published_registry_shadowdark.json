@@ -285,6 +285,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-05.mp4",
         "video_sha256": "5a9a9353768889b0ed4406c749bbfb29ee9ef6ae1e49f2bd63447c28064ded65"
       }
+    },
+    {
+      "published_utc": "2026-07-05T16:58:19Z",
+      "day": "2026-07-05",
+      "content_id": "bgp-2026-07-05-class-spotlight-class-6-a51e97024131",
+      "publish_hash": "a5d05b12026dbf9acaaad978b4338a6fe2ffa83de8fda907ecebf111246dee6f",
+      "youtube_video_id": "nL8iTIBQO3U",
+      "youtube_url": "https://www.youtube.com/watch?v=nL8iTIBQO3U",
+      "video_sha256": "f52137c0618737a5e0f7595ee585a1b72b6886cc4c612207235eaabe24f14924",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-05.mp4",
+      "fingerprint": {
+        "day": "2026-07-05",
+        "category": "class_spotlight",
+        "angle": "early_power_spike",
+        "content_id": "bgp-2026-07-05-class-spotlight-class-6-a51e97024131",
+        "canonical_hash": "a51e97024131140c9dd56b5220120a7555fa0ce4d4a9f0c97a58db40334abfe4",
+        "script_id": "f8fb9bfd41c25405db97541866380b2e253272a590d55f3eefc99f076ed30a3f",
+        "fact_kind": "class",
+        "fact_pk": 6,
+        "fact_name": "Warlock",
+        "hook": "Warlock power spikes with Patron Boons at specific levels.",
+        "body": "Warlocks rely on Charisma and Patron Boons to create impactful turns. The key talent is the Patron, which grants random Boon talents starting at level 1. Misunderstanding the timing and impact of these Boons leads to suboptimal planning, as they are often treated as random benefits. Identifying the level where a Boon significantly enhances capabilities allows alignment of feats, spells, and tactics to exploit that power spike.",
+        "cta": "DMs: Remind your Warlock to plan around the level 1 Boon talent spike, aligning feats and spells for maximum impact.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-05.mp4",
+        "video_sha256": "f52137c0618737a5e0f7595ee585a1b72b6886cc4c612207235eaabe24f14924"
+      }
     }
   ]
 }

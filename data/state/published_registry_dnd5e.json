@@ -519,6 +519,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-05.mp4",
         "video_sha256": "34529ac9f73bd28413b529b846346c84405eac3aff9c13500b9a91f7c46b341e"
       }
+    },
+    {
+      "published_utc": "2026-07-05T16:54:41Z",
+      "day": "2026-07-05",
+      "content_id": "bgp-2026-07-05-class-spotlight-class-srd-2024-wizard-e0a1bef01b3b",
+      "publish_hash": "a948df5061d4e382561691ac15b0e71fc14fc4ece2a9307fb0e6f92dfd123ec3",
+      "youtube_video_id": "Nf8KZC3nmg4",
+      "youtube_url": "https://www.youtube.com/watch?v=Nf8KZC3nmg4",
+      "video_sha256": "b7a945bbc069c886fa8d77360b5c4e7523e4b4b450252ab954a46dfbf198ad46",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-05.mp4",
+      "fingerprint": {
+        "day": "2026-07-05",
+        "category": "class_spotlight",
+        "angle": "early_power_spike",
+        "content_id": "bgp-2026-07-05-class-spotlight-class-srd-2024-wizard-e0a1bef01b3b",
+        "canonical_hash": "e0a1bef01b3bc5dee6f3e65d00aaa6ee99268e54a6025de448df2c668f4e512a",
+        "script_id": "3f0a31ddf8b97c9106e4d58dc1de09bce7837d0a9008b14270680372e91e6295",
+        "fact_kind": "class",
+        "fact_pk": "srd-2024_wizard",
+        "fact_name": "Wizard",
+        "hook": "Wizard spells scale dramatically at level 5 with access to 3rd-level spells.",
+        "body": "A Wizard's power spike occurs at level 5 when 3rd-level spells become available. Many players underestimate the impact of spells like Fireball, which deals 8d6 damage in a 20-foot radius. Mismanagement occurs when players rely on low-level spells or cantrips instead of utilizing these more potent options. Optimal play involves planning spell slots and positioning to maximize area effects and manage resources effectively.",
+        "cta": "DMs: Remind your Wizards that at level 5, 8d6 Fireball beats cantrips, so they should stop hoarding spell slots.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-05.mp4",
+        "video_sha256": "b7a945bbc069c886fa8d77360b5c4e7523e4b4b450252ab954a46dfbf198ad46"
+      }
     }
   ]
 }

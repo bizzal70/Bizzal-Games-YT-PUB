@@ -27,6 +27,20 @@
       "hook": "The Order of Combat dictates that initiative determines turn sequence, not speed or dexterity.",
       "body": "Initiative, not dexterity modifiers or movement speed, decides who acts first in combat. Conflating dexterity with initiative leads to confusion when slower characters act before faster ones. This misunderstanding can disrupt strategy and timing. Planning actions based on actual turn order, determined by initiative rolls, prevents misplaced assumptions about character speed.",
       "cta": "DMs: Remind your players that page 13 clearly states initiative order dictates combat turns, not dexterity or speed."
+    },
+    {
+      "published_utc": "2026-07-05T16:59:03Z",
+      "day": "2026-07-05",
+      "content_id": "bgp-2026-07-05-class-spotlight-class-srd-2024-wizard-e0a1bef01b3b",
+      "instagram_post_id": "17936469159291595",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "b7a945bbc069c886fa8d77360b5c4e7523e4b4b450252ab954a46dfbf198ad46",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-05.mp4",
+      "fact_name": "Wizard",
+      "category": "class_spotlight",
+      "hook": "Wizard spells scale dramatically at level 5 with access to 3rd-level spells.",
+      "body": "A Wizard's power spike occurs at level 5 when 3rd-level spells become available. Many players underestimate the impact of spells like Fireball, which deals 8d6 damage in a 20-foot radius. Mismanagement occurs when players rely on low-level spells or cantrips instead of utilizing these more potent options. Optimal play involves planning spell slots and positioning to maximize area effects and manage resources effectively.",
+      "cta": "DMs: Remind your Wizards that at level 5, 8d6 Fireball beats cantrips, so they should stop hoarding spell slots."
     }
   ]
 }
