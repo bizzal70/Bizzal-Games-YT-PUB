@@ -1,0 +1,46 @@
+name: Dump DB migrations baseline
+
+# One-shot workflow: dumps all Supabase config tables as INSERT statements
+# and commits the result as db/migrations/0002_baseline_seed_data.sql
+# Run manually once. After that, future changes go in new numbered files.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    env:
+      BIZZAL_DB_URL: ${{ secrets.BIZZAL_DB_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install psycopg[binary]
+
+      - name: Dump config tables to SQL
+        run: python bin/core/dump_migrations.py
+
+      - name: Commit migration file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add db/migrations/0002_baseline_seed_data.sql
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "feat(db): add 0002 baseline seed data snapshot [skip ci]"
+            git pull --rebase --autostash origin HEAD
+            git push
+          fi
