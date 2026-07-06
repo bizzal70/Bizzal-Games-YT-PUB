@@ -1,0 +1,83 @@
+{
+  "shadowdark-core": {
+    "title": "Shadowdark RPG",
+    "version": "V4-8",
+    "publisher": "The Arcane Library",
+    "pdf": "Shadowdark_RPG_-_V4-8.pdf",
+    "ingested_date": "2026-02-12",
+    "content": {
+      "creatures": 228,
+      "spells": 70,
+      "items": 96,
+      "classes": 4,
+      "rules": 12
+    },
+    "notes": "Core rulebook. Full ingestion. Items cleaned of 8 PDF-artifact junk entries."
+  },
+  "cursed-scroll-1": {
+    "title": "Cursed Scroll Vol. 1: Diablerie",
+    "version": "V4-3",
+    "publisher": "The Arcane Library",
+    "pdf": "Cursed Scroll 1 - Diablerie V4-3.pdf",
+    "ingested_date": "2026-07-06",
+    "content": {
+      "creatures": 12,
+      "spells": 37,
+      "items": 0,
+      "classes": 3,
+      "rules": 0
+    },
+    "pending": {
+      "items": "Treasure section (pg. 68) not yet ingested."
+    },
+    "notes": "Witch/Warlock/Cursed Knight theme. Spells and creatures fully ingested."
+  },
+  "cursed-scroll-2": {
+    "title": "Cursed Scroll Vol. 2: Red Sands",
+    "version": "V2-2",
+    "publisher": "The Arcane Library",
+    "pdf": "Cursed Scroll 2 - Red Sands V2-2.pdf",
+    "ingested_date": "2026-07-06",
+    "content": {
+      "creatures": 8,
+      "spells": 0,
+      "items": 8,
+      "classes": 3,
+      "rules": 0
+    },
+    "notes": "Desert theme. No spells (fighter/rogue zine). Weapons: Blowgun, Bolas, Morningstar, Pike, Razor Chain, Scimitar, Shuriken, Whip."
+  },
+  "cursed-scroll-3": {
+    "title": "Cursed Scroll Vol. 3: Midnight Sun",
+    "version": "V3-5",
+    "publisher": "The Arcane Library",
+    "pdf": "Cursed Scroll 3 - Midnight Sun V3-5.pdf",
+    "ingested_date": "2026-07-06",
+    "content": {
+      "creatures": 9,
+      "spells": 20,
+      "items": 3,
+      "classes": 2,
+      "rules": 0
+    },
+    "notes": "Norse/Viking theme. Seer class spells fully ingested. Weapons: Handaxe, Stave, Round Shield."
+  },
+  "solodark": {
+    "title": "SoloDark",
+    "version": "V1",
+    "publisher": "The Arcane Library",
+    "pdf": "SoloDark_V1_(PDF).pdf",
+    "ingested_date": null,
+    "content": {
+      "creatures": 0,
+      "spells": 0,
+      "items": 0,
+      "classes": 0,
+      "rules": 0
+    },
+    "pending": {
+      "all": "Solo play rules not yet ingested."
+    },
+    "notes": "Solo play supplement. Ingestion not started."
+  }
+}
