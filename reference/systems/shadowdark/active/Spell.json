@@ -1132,7 +1132,7 @@
     "model": "shadowdark.spell",
     "pk": 76,
     "fields": {
-      "name": "Cat'S Eye",
+      "name": "Cat's Eye",
       "tier": 2,
       "range_text": "Self",
       "duration": "Focus",
@@ -1670,7 +1670,7 @@
     "model": "shadowdark.spell",
     "pk": 112,
     "fields": {
-      "name": "Freya'S Omen",
+      "name": "Freya's Omen",
       "tier": 4,
       "range_text": "Self",
       "duration": "1d6 rounds",
@@ -1685,7 +1685,7 @@
     "model": "shadowdark.spell",
     "pk": 113,
     "fields": {
-      "name": "Loki'S Trickery",
+      "name": "Loki's Trickery",
       "tier": 4,
       "range_text": "Near",
       "duration": "Instant",
@@ -1700,7 +1700,7 @@
     "model": "shadowdark.spell",
     "pk": 114,
     "fields": {
-      "name": "Odin'S Wisdom",
+      "name": "Odin's Wisdom",
       "tier": 4,
       "range_text": "Self",
       "duration": "1d6 rounds",
@@ -1805,7 +1805,7 @@
     "model": "shadowdark.spell",
     "pk": 121,
     "fields": {
-      "name": "Thor'S Thunder",
+      "name": "Thor's Thunder",
       "tier": 4,
       "range_text": "Far",
       "duration": "Instant",
