@@ -85,7 +85,6 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
-
       - name: DST-safe 8am-MT guard (scheduled runs only)
         id: guard
         run: |
@@ -95,13 +94,33 @@ jobs:
             exit 0
           fi
           hour="$(TZ=America/Denver date +%H)"
-          echo "America/Denver hour=$hour"
-          if [ "$hour" = "08" ]; then
+          today="$(TZ=America/Denver date +%Y-%m-%d)"
+          echo "America/Denver hour=${hour}  today=${today}"
+          if [ "${hour}" = "08" ]; then
+            echo "on-time 8am run; proceeding"
             echo "proceed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "not 8am MT; this scheduled trigger is a no-op"
-            echo "proceed=false" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+          # Catchup: if past 8am MT and no registry entry for today,
+          # GitHub likely missed the 8am cron -- allow this run to fill in.
+          if [ "${hour}" -gt "08" ] 2>/dev/null; then
+            ran_today=false
+            for reg in data/state/published_registry_dnd5e.json data/state/published_registry_shadowdark.json; do
+              if [ -f "${reg}" ] && grep -q "\"day\": \"${today}\"" "${reg}"; then
+                ran_today=true
+                break
+              fi
+            done
+            if [ "${ran_today}" = "false" ]; then
+              echo "catchup: past 8am MT, no registry entry for ${today} -- proceeding"
+              echo "proceed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "already ran today (${today}); skipping duplicate scheduled trigger"
+          else
+            echo "before 8am MT (${hour}); skipping early scheduled trigger"
+          fi
+          echo "proceed=false" >> "$GITHUB_OUTPUT"
 
       - name: Set up Python
         if: steps.guard.outputs.proceed == 'true'
