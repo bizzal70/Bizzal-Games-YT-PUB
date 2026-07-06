@@ -183,7 +183,7 @@
     "model": "shadowdark.item",
     "pk": 16,
     "fields": {
-      "name": "Brak'S Cube Of Perfection",
+      "name": "Brak's Cube Of Perfection",
       "bonus": "",
       "benefit": "Roll the cube by rolling a d6. Your corresponding stat permanently increases to 18 (+4). 1. Strength. 2. Dexterity. 3. Constitution. 4. Intelligence. 5. Wisdom. 6. Charisma. After being rolled, Brak's Cube of Perfection teleports to a random location in the multiverse.",
       "curse": "",
@@ -195,7 +195,7 @@
     "model": "shadowdark.item",
     "pk": 17,
     "fields": {
-      "name": "Brak'S Book Of Misspells",
+      "name": "Brak's Book Of Misspells",
       "bonus": "",
       "benefit": "",
       "curse": "This spellbook contains one scroll each of acid arrow (pg. 54), fireball (pg. 60), and sleep (pg. 71). When a wizard tries to cast or learn a spell from these scrolls, the spell targets the caster on a success.",
@@ -459,7 +459,7 @@
     "model": "shadowdark.item",
     "pk": 39,
     "fields": {
-      "name": "Memnon'S Discordant Blade",
+      "name": "Memnon's Discordant Blade",
       "bonus": "+1 greatsword.",
       "benefit": "Once per day, you can utterly annihilate one creature of level 9 or less that you damage with this blade. The creature can pass a DC 18 Constitution check to take 3d8 damage instead.",
       "curse": "You cannot relinquish ownership of this blade unless it is taken from you by a creature that defeats you in combat. For each day you do not slay a LV 2 or greater creature with this sword, you lose 1d6 hit points. These are restored only when you kill a LV 2 or greater creature with the sword.",
@@ -471,7 +471,7 @@
     "model": "shadowdark.item",
     "pk": 40,
     "fields": {
-      "name": "Memnon'S Blazing Javelin",
+      "name": "Memnon's Blazing Javelin",
       "bonus": "+1 javelin.",
       "benefit": "The javelin always returns to your hand after being thrown. Once per day, when you throw this javelin, you can turn it into lightning as per the lightning bolt spell (no spellcasting check).",
       "curse": "",
@@ -495,7 +495,7 @@
     "model": "shadowdark.item",
     "pk": 42,
     "fields": {
-      "name": "Memnon'S Entropic Armor",
+      "name": "Memnon's Entropic Armor",
       "bonus": "+1 plate mail.",
       "benefit": "Once per day, you can speak the armor's command word. Until your next turn, all non-magical weapons that strike you are instantly unmade, shattering into dust. You take no damage from them.",
       "curse": "",
@@ -1081,18 +1081,6 @@
   },
   {
     "model": "shadowdark.item",
-    "pk": 91,
-    "fields": {
-      "name": "True Name",
-      "bonus": "",
-      "benefit": "You have advantage on attack rolls and spellcasting checks targeting a creature whose True Name you utter.",
-      "curse": "",
-      "desc": "",
-      "document": "shadowdark-core"
-    }
-  },
-  {
-    "model": "shadowdark.item",
     "pk": 92,
     "fields": {
       "name": "Wand Of Unlife",
@@ -1167,84 +1155,165 @@
     "model": "shadowdark.item",
     "pk": 98,
     "fields": {
-      "name": "Shadowdark Rpg Community",
-      "bonus": "",
-      "benefit": "",
-      "curse": "",
-      "desc": "Find other Shadowdark RPG players, Game Masters, and creators in The Arcane Library's Discord server! It's a friendly place to organize games, share ideas, and ask questions. Discord link: https://discord.gg/ thearcanelibrary Also, keep an eye out at gaming conventions for Shadowdark events and open tables! Kelsey Dionne, Shadowdark RPG's creator and head of The Arcane Library, runs open-table, unscheduled games at Gary Con each year. Come find where she's lurking and jump in! You can also stay up-to-date on Shadowdark RPG happenings by joining the newsletter. Newsletter link: https://www. thearcanelibrary.com/pages/ shadowdark-rpg-newsletterFIND ADVENTURES",
-      "document": "shadowdark-core"
+      "name": "Blowgun",
+      "cost": "5 gp",
+      "category": "weapon",
+      "type": "ranged",
+      "damage": "1",
+      "range_text": "Near",
+      "properties": "Firing from hiding doesn't reveal your position.",
+      "slots": 1,
+      "document": "cursed-scroll-2"
     }
   },
   {
     "model": "shadowdark.item",
     "pk": 99,
     "fields": {
-      "name": "And Content",
-      "bonus": "",
-      "benefit": "",
-      "curse": "",
-      "desc": "Visit thearcanelibrary.com for the latest in Shadowdark RPG adventures and articles. There, you can grab print or PDF issues of Cursed Scroll, the official Shadowdark zine bursting with themed character options, monsters, locations, and critically-acclaimed adventures. Follow The Arcane Library on youtube.com/thearcanelibrary for video guides, tips, tricks, and adventure walkthroughs! Finally, spectacular creators such as Taylor Seely-Wright, Laurin-David Weggen, James Mishler, Jake Savala, and Sersa Victory have published an amazing array of adventures, settings, character options and more under the Shadowdark RPG Third-Party License. Check out their excellent work on drivethrurpg.com and itch.io! 324DEDICATION To my amazing wife, Jessee, for encouraging me in all my work. To The Arcane Library Discord arcanists for playtesting and shaping Shadowdark RPG. To the stalwart Circle: Doc, Scott, Brian, Jake, Jesse, Matt, Paul, Dason. To the wise Council: Alex, X, Joe, B. To Lauren for being my best friend, coven-sister, and fellow adventurer. To my shield-brother, Brandon, for bringing about a new RPG design era, sharing joy from the heart, and helping me believe in myself. To James Mishler and the Merlin's Keep crew for being lifelong friends, mentors, and family. To the Fairhill Four for reminding me why I love gaming: BJ, Hessick, Bennett, and Teri. To Castle Sauvage for sharing their immense insight. To all the hammers that were destroyed along the way.FONTS JSL Blackletter font © 2023 Jeffrey S. Lee. Old Newspaper Types font © 2023 Manfred Klein. Montserrat font family © 2023 Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral, Jacques Le Bailly.",
-      "document": "shadowdark-core"
+      "name": "Bolas",
+      "cost": "2 gp",
+      "category": "weapon",
+      "type": "ranged",
+      "damage": "-",
+      "range_text": "Near",
+      "properties": "When you hit a legged creature the size of a horse or smaller, it is knocked prone.",
+      "slots": 1,
+      "document": "cursed-scroll-2"
     }
   },
   {
     "model": "shadowdark.item",
     "pk": 100,
     "fields": {
-      "name": "Attribution Statement",
-      "bonus": "",
-      "benefit": "",
-      "curse": "",
-      "desc": "This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/ systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/ licenses/by/4.0/legalcode.",
-      "document": "shadowdark-core"
+      "name": "Morningstar",
+      "cost": "5 gp",
+      "category": "weapon",
+      "type": "melee",
+      "damage": "1d6/1d8",
+      "range_text": "Close",
+      "properties": "Versatile (V): use 1d6 one-handed or 1d8 two-handed.",
+      "slots": 1,
+      "document": "cursed-scroll-2"
     }
   },
   {
     "model": "shadowdark.item",
     "pk": 101,
     "fields": {
-      "name": "Shadowdark Rpg Licensing",
-      "bonus": "",
-      "benefit": "",
-      "curse": "",
-      "desc": "Creators can publish their own Shadowdark RPG material using the Shadowdark RPG Third-Party License (printed on pg. 325). As a part of this book, the Shadowdark RPG Third-Party License will always be published and available for creators to rely on.Credits 325SHADOWDARK RPG THIRD-PARTY LICENSE VERSION 1.1 1. Terms. If you adhere to these terms, you may publish third-party material stating compatibility with Shadowdark RPG for free or for sale and keep 100% of the profits. 2. Content. You may freely use and reference the general concepts of Shadowdark RPG, such as the rules and game mechanics. You may use the names of the game's beings, locations, spells, and items. You may not use the game's art. You may not print verbatim passages of text (no matter the length) from the game, with the exception of monsters, spells, and magic items. 3. Logos and Branding. You may use the “Designed for use with Shadowdark RPG” logos from the Creator Kit, although it's not required to use the logos. You may use the term Shadowdark RPG in reference to compatibility (stating, for example, “This game is compatible with Shadowdark RPG” or another similar phrase). You may not use The Arcane Library logo or Shadowdark RPG logo under any circumstances. You may not imply that your publication is an official The Arcane Library, LLC or Shadowdark RPG product or that you or your publication are affiliated or associated with or approved, sponsored, or endorsed by The Arcane Library, LLC or Shadowdark RPG. 4. Legal. The Arcane Library, LLC takes no responsibility for any legal claims against your product and will not be liable to you on any legal theory (including, without limitation, negligence) or otherwise for any losses, costs, expenses, or damages arising out of this license or use of the licensed material.This license shall be governed by, and interpreted and construed in accordance with, the domestic law of the State of Nevada without giving effect to any choice of law provision or rule that would cause the application of laws of any jurisdiction other than the State of Nevada. The exclusive venue for any dispute related to this license shall be the United States District Court for the District of Nevada. You irrevocably consent to the exercise of personal jurisdiction over you by the state courts located in Clark County, Nevada, and federal courts located in Las Vegas, Nevada. Unless stated otherwise herein, copyright rights and moral rights, such as the right of integrity, are not licensed under this license, nor are publicity, privacy, and/ or other similar personality rights. Patent and trademark rights are not licensed under this license. The Arcane Library, LLC reserves all rights not expressly granted herein. If any provision of this license is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable or, if not reformable, severed from this license without affecting the enforceability of the remaining provisions. Nothing in this license is a limitation upon, or waiver of, any privileges and immunities that apply to The Arcane Library, LLC, including from the legal processes of any jurisdiction or authority. You must include the following in your publication: \"[Product Name] is an independent product published under the Shadowdark RPG Third-Party License and is not affiliated with The Arcane Library, LLC. Shadowdark RPG © 2023 The Arcane Library, LLC.\" Roll 1d6. 1 = random encounter. • Unsafe. Check every 3 rounds. • Risky. Check every 2 rounds. • Deadly. Check every round. d6 Starting Distance 1 Close 2-4 Near 5-6 Far",
-      "document": "shadowdark-core"
+      "name": "Pike",
+      "cost": "10 gp",
+      "category": "weapon",
+      "type": "melee",
+      "damage": "1d10",
+      "range_text": "2x Close",
+      "properties": "Two-handed (2H). 2 slots. Reach weapon.",
+      "slots": 2,
+      "document": "cursed-scroll-2"
     }
   },
   {
     "model": "shadowdark.item",
     "pk": 102,
     "fields": {
-      "name": "Distance",
-      "bonus": "",
-      "benefit": "",
-      "curse": "",
-      "desc": "2d6 Activity 2-4 Hunting 5-6 Eating 7-8 Building/nesting 9-10 Socializing/playing 11 Guarding 12 Sleeping",
-      "document": "shadowdark-core"
+      "name": "Razor Chain",
+      "cost": "12 gp",
+      "category": "weapon",
+      "type": "melee/ranged",
+      "damage": "1d6",
+      "range_text": "Close/Near",
+      "properties": "Finesse (F): use STR or DEX. Lash (La): ranged attack does not provoke opportunity attacks.",
+      "slots": 1,
+      "document": "cursed-scroll-2"
     }
   },
   {
     "model": "shadowdark.item",
     "pk": 103,
     "fields": {
-      "name": "Activity",
-      "bonus": "",
-      "benefit": "",
-      "curse": "",
-      "desc": "2d6 + CHA mod Attitude 0-6 Hostile 7-8 Suspicious 9 Neutral 10-11 Curious 12+ Friendly REACTIONRandom Encounters Characters Stat Modifier 1-3 -4 4-5 -3 6-7 -2 8-9 -1 10-11 0 12-13 +1 14-15 +2 16-17 +3 18+ +4",
-      "document": "shadowdark-core"
+      "name": "Scimitar",
+      "cost": "8 gp",
+      "category": "weapon",
+      "type": "melee",
+      "damage": "1d6",
+      "range_text": "Close",
+      "properties": "Finesse (F): use STR or DEX.",
+      "slots": 1,
+      "document": "cursed-scroll-2"
     }
   },
   {
     "model": "shadowdark.item",
     "pk": 104,
     "fields": {
-      "name": "Stats",
-      "bonus": "",
-      "benefit": "",
-      "curse": "",
-      "desc": "Language Speakers Common Humanoids Dwarvish Dwarves Elvish Elves Giant Giants Goblin Goblinoids Merran Aquatic folk Orcish Orcs Reptilian Reptile folk Sylvan Fey folk Thanian Beast folk Celestial (R) Angels Diabolic (R) Demons Draconic (R) Dragons Primordial (R) Elder things",
-      "document": "shadowdark-core"
+      "name": "Shuriken",
+      "cost": "1 gp",
+      "category": "weapon",
+      "type": "ranged",
+      "damage": "1d4",
+      "range_text": "Near",
+      "properties": "Firing from hiding doesn't reveal your position.",
+      "slots": 1,
+      "document": "cursed-scroll-2"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 105,
+    "fields": {
+      "name": "Whip",
+      "cost": "10 gp",
+      "category": "weapon",
+      "type": "melee/ranged",
+      "damage": "1d4",
+      "range_text": "Close/Near",
+      "properties": "Finesse (F): use STR or DEX. Lash (La): ranged attack does not provoke opportunity attacks.",
+      "slots": 1,
+      "document": "cursed-scroll-2"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 106,
+    "fields": {
+      "name": "Handaxe",
+      "cost": "5 gp",
+      "category": "weapon",
+      "type": "melee/ranged",
+      "damage": "1d6",
+      "range_text": "Close/Near",
+      "properties": "Can be thrown.",
+      "slots": 1,
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 107,
+    "fields": {
+      "name": "Stave",
+      "cost": "3 gp",
+      "category": "weapon",
+      "type": "melee",
+      "damage": "1d4",
+      "range_text": "Close",
+      "properties": "Two-handed (2H).",
+      "slots": 1,
+      "document": "cursed-scroll-3"
+    }
+  },
+  {
+    "model": "shadowdark.item",
+    "pk": 108,
+    "fields": {
+      "name": "Round Shield",
+      "cost": "5 gp",
+      "category": "armor",
+      "type": "shield",
+      "damage": "-",
+      "range_text": "-",
+      "properties": "+1 AC.",
+      "slots": 1,
+      "document": "cursed-scroll-3"
     }
   }
 ]
