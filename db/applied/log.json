@@ -1,0 +1,9 @@
+{
+  "applied": [
+    {
+      "migration": "0001_baseline_schema.sql",
+      "applied_date": "2026-07-01",
+      "note": "Initial Supabase setup — all config tables created."
+    }
+  ]
+}
