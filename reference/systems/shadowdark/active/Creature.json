@@ -57,7 +57,7 @@
     "model": "shadowdark.creature",
     "pk": 3,
     "fields": {
-      "name": "Angel, Seraph",
+      "name": "Seraph Angel",
       "lv": 3,
       "ac": 14,
       "hp": 14,
@@ -82,7 +82,7 @@
     "model": "shadowdark.creature",
     "pk": 4,
     "fields": {
-      "name": "Angel, Domini",
+      "name": "Domini Angel",
       "lv": 9,
       "ac": 17,
       "hp": 42,
@@ -109,7 +109,7 @@
     "model": "shadowdark.creature",
     "pk": 5,
     "fields": {
-      "name": "Angel, Principi",
+      "name": "Principi Angel",
       "lv": 11,
       "ac": 16,
       "hp": 53,
@@ -161,7 +161,7 @@
     "model": "shadowdark.creature",
     "pk": 7,
     "fields": {
-      "name": "Ape, Snow",
+      "name": "Snow Ape",
       "lv": 4,
       "ac": 13,
       "hp": 19,
@@ -446,7 +446,7 @@
     "model": "shadowdark.creature",
     "pk": 18,
     "fields": {
-      "name": "Bat, Giant",
+      "name": "Giant Bat",
       "lv": 2,
       "ac": 12,
       "hp": 9,
@@ -469,7 +469,7 @@
     "model": "shadowdark.creature",
     "pk": 19,
     "fields": {
-      "name": "Bat, Swarm",
+      "name": "Swarm Bat",
       "lv": 4,
       "ac": 12,
       "hp": 18,
@@ -492,7 +492,7 @@
     "model": "shadowdark.creature",
     "pk": 20,
     "fields": {
-      "name": "Bear, Brown",
+      "name": "Brown Bear",
       "lv": 7,
       "ac": 13,
       "hp": 25,
@@ -799,7 +799,7 @@
     "model": "shadowdark.creature",
     "pk": 32,
     "fields": {
-      "name": "Centipede, Giant",
+      "name": "Giant Centipede",
       "lv": 1,
       "ac": 11,
       "hp": 4,
@@ -824,7 +824,7 @@
     "model": "shadowdark.creature",
     "pk": 33,
     "fields": {
-      "name": "Centipede, Swarm",
+      "name": "Swarm Centipede",
       "lv": 4,
       "ac": 11,
       "hp": 18,
@@ -980,7 +980,7 @@
     "model": "shadowdark.creature",
     "pk": 39,
     "fields": {
-      "name": "Crab, Giant",
+      "name": "Giant Crab",
       "lv": 5,
       "ac": 15,
       "hp": 24,
@@ -1104,7 +1104,7 @@
     "model": "shadowdark.creature",
     "pk": 44,
     "fields": {
-      "name": "Demon, Balor",
+      "name": "Balor Demon",
       "lv": 16,
       "ac": 19,
       "hp": 77,
@@ -1131,7 +1131,7 @@
     "model": "shadowdark.creature",
     "pk": 45,
     "fields": {
-      "name": "Demon, Glabrezu",
+      "name": "Glabrezu Demon",
       "lv": 8,
       "ac": 15,
       "hp": 40,
@@ -1156,7 +1156,7 @@
     "model": "shadowdark.creature",
     "pk": 46,
     "fields": {
-      "name": "Demon, Dretch",
+      "name": "Dretch Demon",
       "lv": 2,
       "ac": 12,
       "hp": 11,
@@ -1182,7 +1182,7 @@
     "model": "shadowdark.creature",
     "pk": 47,
     "fields": {
-      "name": "Demon, Marilith",
+      "name": "Marilith Demon",
       "lv": 9,
       "ac": 17,
       "hp": 43,
@@ -1207,7 +1207,7 @@
     "model": "shadowdark.creature",
     "pk": 48,
     "fields": {
-      "name": "Demon, Vrock",
+      "name": "Vrock Demon",
       "lv": 5,
       "ac": 14,
       "hp": 24,
@@ -1262,7 +1262,7 @@
     "model": "shadowdark.creature",
     "pk": 50,
     "fields": {
-      "name": "Devil, Barbed",
+      "name": "Barbed Devil",
       "lv": 3,
       "ac": 13,
       "hp": 14,
@@ -1289,7 +1289,7 @@
     "model": "shadowdark.creature",
     "pk": 51,
     "fields": {
-      "name": "Devil, Cubi",
+      "name": "Cubi Devil",
       "lv": 6,
       "ac": 14,
       "hp": 29,
@@ -1317,7 +1317,7 @@
     "model": "shadowdark.creature",
     "pk": 52,
     "fields": {
-      "name": "Devil, Erinyes",
+      "name": "Erinyes Devil",
       "lv": 9,
       "ac": 17,
       "hp": 43,
@@ -1344,7 +1344,7 @@
     "model": "shadowdark.creature",
     "pk": 53,
     "fields": {
-      "name": "Devil, Horned",
+      "name": "Horned Devil",
       "lv": 7,
       "ac": 16,
       "hp": 35,
@@ -1370,7 +1370,7 @@
     "model": "shadowdark.creature",
     "pk": 54,
     "fields": {
-      "name": "Devil, Imp",
+      "name": "Imp Devil",
       "lv": 2,
       "ac": 13,
       "hp": 9,
@@ -1598,7 +1598,7 @@
     "model": "shadowdark.creature",
     "pk": 63,
     "fields": {
-      "name": "Dragon, Desert",
+      "name": "Desert Dragon",
       "lv": 13,
       "ac": 17,
       "hp": 61,
@@ -1626,7 +1626,7 @@
     "model": "shadowdark.creature",
     "pk": 64,
     "fields": {
-      "name": "Dragon, Fire",
+      "name": "Fire Dragon",
       "lv": 17,
       "ac": 18,
       "hp": 80,
@@ -1653,7 +1653,7 @@
     "model": "shadowdark.creature",
     "pk": 65,
     "fields": {
-      "name": "Dragon, Forest",
+      "name": "Forest Dragon",
       "lv": 12,
       "ac": 16,
       "hp": 58,
@@ -1680,7 +1680,7 @@
     "model": "shadowdark.creature",
     "pk": 66,
     "fields": {
-      "name": "Dragon, Frost",
+      "name": "Frost Dragon",
       "lv": 14,
       "ac": 17,
       "hp": 68,
@@ -1707,7 +1707,7 @@
     "model": "shadowdark.creature",
     "pk": 67,
     "fields": {
-      "name": "Dragon, Sea",
+      "name": "Sea Dragon",
       "lv": 16,
       "ac": 17,
       "hp": 76,
@@ -1735,7 +1735,7 @@
     "model": "shadowdark.creature",
     "pk": 68,
     "fields": {
-      "name": "Dragon, Swamp",
+      "name": "Swamp Dragon",
       "lv": 12,
       "ac": 16,
       "hp": 58,
@@ -1788,7 +1788,7 @@
     "model": "shadowdark.creature",
     "pk": 70,
     "fields": {
-      "name": "Drow, Priestess",
+      "name": "Priestess Drow",
       "lv": 6,
       "ac": 16,
       "hp": 28,
@@ -1820,7 +1820,7 @@
     "model": "shadowdark.creature",
     "pk": 71,
     "fields": {
-      "name": "Drow, Drider",
+      "name": "Drider Drow",
       "lv": 6,
       "ac": 16,
       "hp": 29,
@@ -1933,7 +1933,7 @@
     "model": "shadowdark.creature",
     "pk": 75,
     "fields": {
-      "name": "Dung Beetle, Giant",
+      "name": "Giant Dung Beetle",
       "lv": 2,
       "ac": 13,
       "hp": 10,
@@ -2089,7 +2089,7 @@
     "model": "shadowdark.creature",
     "pk": 81,
     "fields": {
-      "name": "Frog, Giant",
+      "name": "Giant Frog",
       "lv": 2,
       "ac": 12,
       "hp": 10,
@@ -2251,7 +2251,7 @@
     "model": "shadowdark.creature",
     "pk": 87,
     "fields": {
-      "name": "Giant, Cloud",
+      "name": "Cloud Giant",
       "lv": 10,
       "ac": 15,
       "hp": 48,
@@ -2276,7 +2276,7 @@
     "model": "shadowdark.creature",
     "pk": 88,
     "fields": {
-      "name": "Giant, Fire",
+      "name": "Fire Giant",
       "lv": 9,
       "ac": 15,
       "hp": 44,
@@ -2301,7 +2301,7 @@
     "model": "shadowdark.creature",
     "pk": 89,
     "fields": {
-      "name": "Giant, Frost",
+      "name": "Frost Giant",
       "lv": 9,
       "ac": 14,
       "hp": 44,
@@ -2326,7 +2326,7 @@
     "model": "shadowdark.creature",
     "pk": 90,
     "fields": {
-      "name": "Giant, Stone",
+      "name": "Stone Giant",
       "lv": 8,
       "ac": 17,
       "hp": 40,
@@ -2352,7 +2352,7 @@
     "model": "shadowdark.creature",
     "pk": 91,
     "fields": {
-      "name": "Giant, Goat",
+      "name": "Goat Giant",
       "lv": 8,
       "ac": 12,
       "hp": 39,
@@ -2376,7 +2376,7 @@
     "model": "shadowdark.creature",
     "pk": 92,
     "fields": {
-      "name": "Giant, Storm",
+      "name": "Storm Giant",
       "lv": 12,
       "ac": 15,
       "hp": 58,
@@ -2403,7 +2403,7 @@
     "model": "shadowdark.creature",
     "pk": 93,
     "fields": {
-      "name": "Giant, Hill",
+      "name": "Hill Giant",
       "lv": 7,
       "ac": 11,
       "hp": 34,
@@ -2504,7 +2504,7 @@
     "model": "shadowdark.creature",
     "pk": 97,
     "fields": {
-      "name": "Gnome, Deep",
+      "name": "Deep Gnome",
       "lv": 3,
       "ac": 14,
       "hp": 14,
@@ -2556,7 +2556,7 @@
     "model": "shadowdark.creature",
     "pk": 99,
     "fields": {
-      "name": "Goblin, Boss",
+      "name": "Boss Goblin",
       "lv": 4,
       "ac": 14,
       "hp": 20,
@@ -2581,7 +2581,7 @@
     "model": "shadowdark.creature",
     "pk": 100,
     "fields": {
-      "name": "Goblin, Shaman",
+      "name": "Shaman Goblin",
       "lv": 4,
       "ac": 12,
       "hp": 19,
@@ -2640,7 +2640,7 @@
     "model": "shadowdark.creature",
     "pk": 102,
     "fields": {
-      "name": "Golem, Flesh",
+      "name": "Flesh Golem",
       "lv": 7,
       "ac": 9,
       "hp": 35,
@@ -2666,7 +2666,7 @@
     "model": "shadowdark.creature",
     "pk": 103,
     "fields": {
-      "name": "Golem, Iron",
+      "name": "Iron Golem",
       "lv": 10,
       "ac": 19,
       "hp": 49,
@@ -2694,7 +2694,7 @@
     "model": "shadowdark.creature",
     "pk": 104,
     "fields": {
-      "name": "Golem, Stone",
+      "name": "Stone Golem",
       "lv": 8,
       "ac": 18,
       "hp": 40,
@@ -2895,7 +2895,7 @@
     "model": "shadowdark.creature",
     "pk": 112,
     "fields": {
-      "name": "Hag, Weald",
+      "name": "Weald Hag",
       "lv": 6,
       "ac": 14,
       "hp": 28,
@@ -2922,7 +2922,7 @@
     "model": "shadowdark.creature",
     "pk": 113,
     "fields": {
-      "name": "Hag, Night",
+      "name": "Night Hag",
       "lv": 8,
       "ac": 14,
       "hp": 37,
@@ -2948,7 +2948,7 @@
     "model": "shadowdark.creature",
     "pk": 114,
     "fields": {
-      "name": "Hag, Sea",
+      "name": "Sea Hag",
       "lv": 6,
       "ac": 15,
       "hp": 28,
@@ -3229,7 +3229,7 @@
     "model": "shadowdark.creature",
     "pk": 125,
     "fields": {
-      "name": "Kobold, Sorcerer",
+      "name": "Sorcerer Kobold",
       "lv": 3,
       "ac": 13,
       "hp": 13,
@@ -3290,7 +3290,7 @@
     "model": "shadowdark.creature",
     "pk": 127,
     "fields": {
-      "name": "Leech, Giant",
+      "name": "Giant Leech",
       "lv": 2,
       "ac": 9,
       "hp": 10,
@@ -3482,7 +3482,7 @@
     "model": "shadowdark.creature",
     "pk": 134,
     "fields": {
-      "name": "Manta Ray, Giant",
+      "name": "Giant Manta Ray",
       "lv": 8,
       "ac": 13,
       "hp": 37,
@@ -3764,7 +3764,7 @@
     "model": "shadowdark.creature",
     "pk": 145,
     "fields": {
-      "name": "Naga, Bone",
+      "name": "Bone Naga",
       "lv": 6,
       "ac": 13,
       "hp": 31,
@@ -3840,7 +3840,7 @@
     "model": "shadowdark.creature",
     "pk": 148,
     "fields": {
-      "name": "Octopus, Giant",
+      "name": "Giant Octopus",
       "lv": 5,
       "ac": 13,
       "hp": 23,
@@ -3946,7 +3946,7 @@
     "model": "shadowdark.creature",
     "pk": 152,
     "fields": {
-      "name": "Orc, Chieftain",
+      "name": "Chieftain Orc",
       "lv": 4,
       "ac": 14,
       "hp": 19,
@@ -4226,7 +4226,7 @@
     "model": "shadowdark.creature",
     "pk": 163,
     "fields": {
-      "name": "Piranha, Swarm",
+      "name": "Swarm Piranha",
       "lv": 3,
       "ac": 12,
       "hp": 13,
@@ -4384,7 +4384,7 @@
     "model": "shadowdark.creature",
     "pk": 169,
     "fields": {
-      "name": "Rat, Giant",
+      "name": "Giant Rat",
       "lv": 1,
       "ac": 11,
       "hp": 5,
@@ -4409,7 +4409,7 @@
     "model": "shadowdark.creature",
     "pk": 170,
     "fields": {
-      "name": "Rat, Dire",
+      "name": "Dire Rat",
       "lv": 2,
       "ac": 12,
       "hp": 10,
@@ -4434,7 +4434,7 @@
     "model": "shadowdark.creature",
     "pk": 171,
     "fields": {
-      "name": "Rat, Swarm",
+      "name": "Swarm Rat",
       "lv": 6,
       "ac": 10,
       "hp": 28,
@@ -4692,7 +4692,7 @@
     "model": "shadowdark.creature",
     "pk": 181,
     "fields": {
-      "name": "Scarab, Swarm",
+      "name": "Swarm Scarab",
       "lv": 3,
       "ac": 13,
       "hp": 14,
@@ -4766,7 +4766,7 @@
     "model": "shadowdark.creature",
     "pk": 184,
     "fields": {
-      "name": "Scorpion, Giant",
+      "name": "Giant Scorpion",
       "lv": 3,
       "ac": 14,
       "hp": 13,
@@ -4868,7 +4868,7 @@
     "model": "shadowdark.creature",
     "pk": 188,
     "fields": {
-      "name": "Shark, Megalodon",
+      "name": "Megalodon Shark",
       "lv": 8,
       "ac": 13,
       "hp": 38,
@@ -4968,7 +4968,7 @@
     "model": "shadowdark.creature",
     "pk": 192,
     "fields": {
-      "name": "Snake, Giant",
+      "name": "Giant Snake",
       "lv": 5,
       "ac": 12,
       "hp": 23,
@@ -4993,7 +4993,7 @@
     "model": "shadowdark.creature",
     "pk": 193,
     "fields": {
-      "name": "Snake, Cobra",
+      "name": "Cobra Snake",
       "lv": 1,
       "ac": 12,
       "hp": 4,
@@ -5018,7 +5018,7 @@
     "model": "shadowdark.creature",
     "pk": 194,
     "fields": {
-      "name": "Snake, Swarm",
+      "name": "Swarm Snake",
       "lv": 4,
       "ac": 12,
       "hp": 19,
@@ -5124,7 +5124,7 @@
     "model": "shadowdark.creature",
     "pk": 198,
     "fields": {
-      "name": "Spider, Giant",
+      "name": "Giant Spider",
       "lv": 3,
       "ac": 13,
       "hp": 13,
@@ -5149,7 +5149,7 @@
     "model": "shadowdark.creature",
     "pk": 199,
     "fields": {
-      "name": "Spider, Swarm",
+      "name": "Swarm Spider",
       "lv": 2,
       "ac": 13,
       "hp": 9,
@@ -5392,7 +5392,7 @@
     "model": "shadowdark.creature",
     "pk": 208,
     "fields": {
-      "name": "Troll, Frost",
+      "name": "Frost Troll",
       "lv": 7,
       "ac": 13,
       "hp": 34,
@@ -5548,7 +5548,7 @@
     "model": "shadowdark.creature",
     "pk": 214,
     "fields": {
-      "name": "Viperian, Ophid",
+      "name": "Ophid Viperian",
       "lv": 6,
       "ac": 14,
       "hp": 28,
@@ -5574,7 +5574,7 @@
     "model": "shadowdark.creature",
     "pk": 215,
     "fields": {
-      "name": "Viperian, Wizard",
+      "name": "Wizard Viperian",
       "lv": 8,
       "ac": 13,
       "hp": 37,
@@ -5629,7 +5629,7 @@
     "model": "shadowdark.creature",
     "pk": 217,
     "fields": {
-      "name": "Wasp, Giant",
+      "name": "Giant Wasp",
       "lv": 2,
       "ac": 13,
       "hp": 9,
@@ -5784,7 +5784,7 @@
     "model": "shadowdark.creature",
     "pk": 223,
     "fields": {
-      "name": "Wolf, Dire",
+      "name": "Dire Wolf",
       "lv": 4,
       "ac": 12,
       "hp": 19,
@@ -5809,7 +5809,7 @@
     "model": "shadowdark.creature",
     "pk": 224,
     "fields": {
-      "name": "Wolf, Winter",
+      "name": "Winter Wolf",
       "lv": 5,
       "ac": 12,
       "hp": 23,
