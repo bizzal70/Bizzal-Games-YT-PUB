@@ -64,6 +64,19 @@
       "publish_rc": 0,
       "publish_output": "[upload_youtube] uploaded id=Nf8KZC3nmg4 privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-05.mp4 https://www.youtube.com/watch?v=Nf8KZC3nmg4 [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dnd5e.json hash=a948df5061d4e382",
       "youtube_url": "https://www.youtube.com/watch?v=Nf8KZC3nmg4"
+    },
+    "2026-07-06": {
+      "day": "2026-07-06",
+      "content_id": "bgp-2026-07-06-monster-tactic-creature-srd-2024-bugbear-stalker-bfa0b5ca2407",
+      "category": "monster_tactic",
+      "angle": "how_it_wins",
+      "status": "published",
+      "requested_utc": "2026-07-06T21:14:15Z",
+      "decision_utc": "2026-07-06T21:14:15Z",
+      "decision_by": "autopublish",
+      "publish_rc": 0,
+      "publish_output": "[upload_youtube] uploaded id=ryKnwo0LPb8 privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-06.mp4 https://www.youtube.com/watch?v=ryKnwo0LPb8 [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dnd5e.json hash=9e55a11e436bb103",
+      "youtube_url": "https://www.youtube.com/watch?v=ryKnwo0LPb8"
     }
   }
 }

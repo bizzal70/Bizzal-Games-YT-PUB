@@ -64,6 +64,19 @@
       "publish_rc": 0,
       "publish_output": "[upload_youtube] uploaded id=nL8iTIBQO3U privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-05.mp4 https://www.youtube.com/watch?v=nL8iTIBQO3U [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_shadowdark.json hash=a5d05b12026dbf9a",
       "youtube_url": "https://www.youtube.com/watch?v=nL8iTIBQO3U"
+    },
+    "2026-07-06": {
+      "day": "2026-07-06",
+      "content_id": "bgp-2026-07-06-monster-tactic-creature-51-63df955347b7",
+      "category": "monster_tactic",
+      "angle": "how_it_wins",
+      "status": "published",
+      "requested_utc": "2026-07-06T21:17:32Z",
+      "decision_utc": "2026-07-06T21:17:32Z",
+      "decision_by": "autopublish",
+      "publish_rc": 0,
+      "publish_output": "[upload_youtube] uploaded id=hCDrAamCYug privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-06.mp4 https://www.youtube.com/watch?v=hCDrAamCYug [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_shadowdark.json hash=06a25f25aa1949d4",
+      "youtube_url": "https://www.youtube.com/watch?v=hCDrAamCYug"
     }
   }
 }

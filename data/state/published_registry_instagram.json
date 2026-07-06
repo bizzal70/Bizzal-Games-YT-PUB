@@ -41,6 +41,20 @@
       "hook": "Wizard spells scale dramatically at level 5 with access to 3rd-level spells.",
       "body": "A Wizard's power spike occurs at level 5 when 3rd-level spells become available. Many players underestimate the impact of spells like Fireball, which deals 8d6 damage in a 20-foot radius. Mismanagement occurs when players rely on low-level spells or cantrips instead of utilizing these more potent options. Optimal play involves planning spell slots and positioning to maximize area effects and manage resources effectively.",
       "cta": "DMs: Remind your Wizards that at level 5, 8d6 Fireball beats cantrips, so they should stop hoarding spell slots."
+    },
+    {
+      "published_utc": "2026-07-06T21:18:33Z",
+      "day": "2026-07-06",
+      "content_id": "bgp-2026-07-06-monster-tactic-creature-srd-2024-bugbear-stalker-bfa0b5ca2407",
+      "instagram_post_id": "18105969002103765",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "f5f6109d2e2db8f3c4ba95a474f952c0b216709d29443283010c29e2375cce90",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-06.mp4",
+      "fact_name": "Bugbear Stalker",
+      "category": "monster_tactic",
+      "hook": "Low-threat on paper, high-chaos at the table: Bugbear Stalker.",
+      "body": "AC 15 and HP 65 mean it can take a few hits while executing its plan. With a Stealth bonus of +6, it often surprises parties, making the first move count. Abduct allows it to reposition enemies easily, disrupting formations. Ignoring this mobility can lead to disastrous positioning errors. Focus fire on the Bugbear Stalker to prevent it from dictating the battle's flow.",
+      "cta": "Players: laugh first, then respect turn economy before this joke encounter snowballs."
     }
   ]
 }

@@ -311,6 +311,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-05.mp4",
         "video_sha256": "f52137c0618737a5e0f7595ee585a1b72b6886cc4c612207235eaabe24f14924"
       }
+    },
+    {
+      "published_utc": "2026-07-06T21:17:33Z",
+      "day": "2026-07-06",
+      "content_id": "bgp-2026-07-06-monster-tactic-creature-51-63df955347b7",
+      "publish_hash": "06a25f25aa1949d47632a20bf38ad0d213d0477a35fd6c07bf6f21909c700609",
+      "youtube_video_id": "hCDrAamCYug",
+      "youtube_url": "https://www.youtube.com/watch?v=hCDrAamCYug",
+      "video_sha256": "4e914c1e311da2e059949c0c06410acf244808579181d696ae8f989944d289c3",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-06.mp4",
+      "fingerprint": {
+        "day": "2026-07-06",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-07-06-monster-tactic-creature-51-63df955347b7",
+        "canonical_hash": "63df955347b7e2e9af1d09383ee5b7062a949865e24e5c270261c64d8323d735",
+        "script_id": "5101e106575034512d264fff4dca6f17b4e84aa587406f926bfc67f214611ab1",
+        "fact_kind": "creature",
+        "fact_pk": 51,
+        "fact_name": "Cubi Devil",
+        "hook": "Yes, Cubi Devil looks harmless - until the table underestimates it and gives it free turns.",
+        "body": "Charm requires a DC 15 Charisma save and can last for 1d6 hours. Players underestimate the impact of a failed save, often treating it as minor. The real threat is losing control of a key party member. Change Shape allows the Cubi Devil to infiltrate unnoticed, often leading to surprise encounters. Treat its ability to fly as a tactical advantage, not just movement.",
+        "cta": "Players: laugh first, then respect turn economy before this joke encounter snowballs.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-06.mp4",
+        "video_sha256": "4e914c1e311da2e059949c0c06410acf244808579181d696ae8f989944d289c3"
+      }
     }
   ]
 }
