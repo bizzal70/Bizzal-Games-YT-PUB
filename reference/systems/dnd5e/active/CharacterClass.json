@@ -1,362 +1,641 @@
 [
-{
-  "fields": {
-    "caster_type": "NONE",
-    "document": "srd-2024",
-    "hit_dice": "D12",
-    "name": "Barbarian",
-    "primary_abilities": [],
-    "saving_throws": [
-      "con",
-      "str"
-    ],
-    "subclass_of": null
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "document": "srd-2024",
+      "hit_dice": "D12",
+      "name": "Barbarian",
+      "primary_abilities": [],
+      "saving_throws": [
+        "con",
+        "str"
+      ],
+      "subclass_of": null
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_barbarian"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_barbarian"
-},
-{
-  "fields": {
-    "caster_type": "FULL",
-    "document": "srd-2024",
-    "hit_dice": "D8",
-    "name": "Bard",
-    "primary_abilities": [],
-    "saving_throws": [
-      "cha",
-      "dex"
-    ],
-    "subclass_of": null
+  {
+    "fields": {
+      "caster_type": "FULL",
+      "document": "srd-2024",
+      "hit_dice": "D8",
+      "name": "Bard",
+      "primary_abilities": [],
+      "saving_throws": [
+        "cha",
+        "dex"
+      ],
+      "subclass_of": null
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_bard"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_bard"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "desc": "*Celebrate Connection to the Natural World*\n\nThe Circle of the Land comprises mystics and sages who safeguard ancient knowledge and rites. These Druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of their communities.",
-    "document": "srd-2024",
-    "hit_dice": null,
-    "name": "Circle of the Land",
-    "primary_abilities": [],
-    "saving_throws": [],
-    "subclass_of": "srd-2024_druid"
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "desc": "*Celebrate Connection to the Natural World*\n\nThe Circle of the Land comprises mystics and sages who safeguard ancient knowledge and rites. These Druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of their communities.",
+      "document": "srd-2024",
+      "hit_dice": null,
+      "name": "Circle of the Land",
+      "primary_abilities": [],
+      "saving_throws": [],
+      "subclass_of": "srd-2024_druid"
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_circle-of-the-land"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_circle-of-the-land"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "desc": "*Pursue Physical Excellence in Combat*\n\nA Champion focuses on the development of martial prowess in a relentless pursuit of victory. Champions combine rigorous training with physical excellence to deal devastating blows, withstand peril, and garner glory. Whether in athletic contests or bloody battle, Champions strive for the crown of the victor.",
-    "document": "srd-2024",
-    "hit_dice": null,
-    "name": "Champion",
-    "primary_abilities": [],
-    "saving_throws": [],
-    "subclass_of": "srd-2024_fighter"
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "desc": "*Pursue Physical Excellence in Combat*\n\nA Champion focuses on the development of martial prowess in a relentless pursuit of victory. Champions combine rigorous training with physical excellence to deal devastating blows, withstand peril, and garner glory. Whether in athletic contests or bloody battle, Champions strive for the crown of the victor.",
+      "document": "srd-2024",
+      "hit_dice": null,
+      "name": "Champion",
+      "primary_abilities": [],
+      "saving_throws": [],
+      "subclass_of": "srd-2024_fighter"
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_champion"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_champion"
-},
-{
-  "fields": {
-    "caster_type": "FULL",
-    "document": "srd-2024",
-    "hit_dice": "D8",
-    "name": "Cleric",
-    "primary_abilities": [],
-    "saving_throws": [
-      "cha",
-      "wis"
-    ],
-    "subclass_of": null
+  {
+    "fields": {
+      "caster_type": "FULL",
+      "document": "srd-2024",
+      "hit_dice": "D8",
+      "name": "Cleric",
+      "primary_abilities": [],
+      "saving_throws": [
+        "cha",
+        "wis"
+      ],
+      "subclass_of": null
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_cleric"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_cleric"
-},
-{
-  "fields": {
-    "caster_type": "FULL",
-    "desc": "*Plumb the Depths of Magical Knowledge*\n\nBards of the College of Lore collect spells and secrets from diverse sources, such as scholarly tomes, mystical rites, and peasant tales. The college's members gather in libraries and universities to share their lore with one another. They also meet at festivals or affairs of state, where they can expose corruption, unravel lies, and poke fun at self-important figures of authority.",
-    "document": "srd-2024",
-    "hit_dice": "D8",
-    "name": "College of Lore",
-    "primary_abilities": [],
-    "saving_throws": [],
-    "subclass_of": "srd-2024_bard"
+  {
+    "fields": {
+      "caster_type": "FULL",
+      "desc": "*Plumb the Depths of Magical Knowledge*\n\nBards of the College of Lore collect spells and secrets from diverse sources, such as scholarly tomes, mystical rites, and peasant tales. The college's members gather in libraries and universities to share their lore with one another. They also meet at festivals or affairs of state, where they can expose corruption, unravel lies, and poke fun at self-important figures of authority.",
+      "document": "srd-2024",
+      "hit_dice": "D8",
+      "name": "College of Lore",
+      "primary_abilities": [],
+      "saving_throws": [],
+      "subclass_of": "srd-2024_bard"
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_college-of-lore"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_college-of-lore"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "desc": "*Breathe the Magic of Dragons*\n\nYour innate magic comes from the gift of a dragon. Perhaps an ancient dragon facing death bequeathed some of its magical power to you or your ancestor. You might have absorbed magic from a site infused with dragons' power. Or perhaps you handled a treasure taken from a dragon's hoard that was steeped in draconic power. Or you might have a dragon for an ancestor.",
-    "document": "srd-2024",
-    "hit_dice": null,
-    "name": "Draconic Sorcery",
-    "primary_abilities": [],
-    "saving_throws": [],
-    "subclass_of": "srd-2024_sorcerer"
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "desc": "*Breathe the Magic of Dragons*\n\nYour innate magic comes from the gift of a dragon. Perhaps an ancient dragon facing death bequeathed some of its magical power to you or your ancestor. You might have absorbed magic from a site infused with dragons' power. Or perhaps you handled a treasure taken from a dragon's hoard that was steeped in draconic power. Or you might have a dragon for an ancestor.",
+      "document": "srd-2024",
+      "hit_dice": null,
+      "name": "Draconic Sorcery",
+      "primary_abilities": [],
+      "saving_throws": [],
+      "subclass_of": "srd-2024_sorcerer"
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_draconic-sorcery"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_draconic-sorcery"
-},
-{
-  "fields": {
-    "caster_type": "FULL",
-    "document": "srd-2024",
-    "hit_dice": "D8",
-    "name": "Druid",
-    "primary_abilities": [],
-    "saving_throws": [
-      "int",
-      "wis"
-    ],
-    "subclass_of": null
+  {
+    "fields": {
+      "caster_type": "FULL",
+      "document": "srd-2024",
+      "hit_dice": "D8",
+      "name": "Druid",
+      "primary_abilities": [],
+      "saving_throws": [
+        "int",
+        "wis"
+      ],
+      "subclass_of": null
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_druid"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_druid"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "desc": "*Create Explosive Elemental Effects*\n\nYour studies focus on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some Evokers find employment in military forces, serving as artillery to blast armies from afar. Others use their power to protect others, while some seek their own gain.",
-    "document": "srd-2024",
-    "hit_dice": null,
-    "name": "Evoker",
-    "primary_abilities": [],
-    "saving_throws": [],
-    "subclass_of": "srd-2024_wizard"
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "desc": "*Create Explosive Elemental Effects*\n\nYour studies focus on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some Evokers find employment in military forces, serving as artillery to blast armies from afar. Others use their power to protect others, while some seek their own gain.",
+      "document": "srd-2024",
+      "hit_dice": null,
+      "name": "Evoker",
+      "primary_abilities": [],
+      "saving_throws": [],
+      "subclass_of": "srd-2024_wizard"
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_evoker"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_evoker"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "desc": "*Make a Deal with the Lower Planes*\n\nYour pact draws on the Lower Planes, the realms of perdition. You might forge a bargain with a demon lord, an archdevil, or another fiend that is especially mighty. That patron's aims are evil—the corruption or destruction of all things, ultimately including you—and your path is defined by the extent to which you strive against those aims.",
-    "document": "srd-2024",
-    "hit_dice": null,
-    "name": "Fiend Patron",
-    "primary_abilities": [],
-    "saving_throws": [],
-    "subclass_of": "srd-2024_warlock"
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "desc": "*Make a Deal with the Lower Planes*\n\nYour pact draws on the Lower Planes, the realms of perdition. You might forge a bargain with a demon lord, an archdevil, or another fiend that is especially mighty. That patron's aims are evil—the corruption or destruction of all things, ultimately including you—and your path is defined by the extent to which you strive against those aims.",
+      "document": "srd-2024",
+      "hit_dice": null,
+      "name": "Fiend Patron",
+      "primary_abilities": [],
+      "saving_throws": [],
+      "subclass_of": "srd-2024_warlock"
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_fiend-patron"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_fiend-patron"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "document": "srd-2024",
-    "hit_dice": "D10",
-    "name": "Fighter",
-    "primary_abilities": [],
-    "saving_throws": [
-      "dex",
-      "str"
-    ],
-    "subclass_of": null
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "document": "srd-2024",
+      "hit_dice": "D10",
+      "name": "Fighter",
+      "primary_abilities": [],
+      "saving_throws": [
+        "dex",
+        "str"
+      ],
+      "subclass_of": null
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_fighter"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_fighter"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "desc": "*Protect Nature and People from Destruction*\n\nYou stalk prey in the wilds and elsewhere, using your abilities as a Hunter to protect nature and people everywhere from forces that would destroy them.",
-    "document": "srd-2024",
-    "hit_dice": null,
-    "name": "Hunter",
-    "primary_abilities": [],
-    "saving_throws": [],
-    "subclass_of": "srd-2024_ranger"
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "desc": "*Protect Nature and People from Destruction*\n\nYou stalk prey in the wilds and elsewhere, using your abilities as a Hunter to protect nature and people everywhere from forces that would destroy them.",
+      "document": "srd-2024",
+      "hit_dice": null,
+      "name": "Hunter",
+      "primary_abilities": [],
+      "saving_throws": [],
+      "subclass_of": "srd-2024_ranger"
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_hunter"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_hunter"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "desc": "*Soothe the Hurts of the World*\n\nThe Life Domain focuses on the positive energy that helps sustain all life in the multiverse. Clerics who tap into this domain are masters of healing, using that life force to cure many hurts.\n\nExistence itself relies on the positive energy associated with this domain, so a Cleric of almost any religious tradition might choose it. This domain is particularly associated with agricultural deities, gods of healing or endurance, and gods of home and community. Religious orders of healing also seek the magic of this domain.",
-    "document": "srd-2024",
-    "hit_dice": null,
-    "name": "Life Domain",
-    "primary_abilities": [],
-    "saving_throws": [],
-    "subclass_of": "srd-2024_cleric"
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "desc": "*Soothe the Hurts of the World*\n\nThe Life Domain focuses on the positive energy that helps sustain all life in the multiverse. Clerics who tap into this domain are masters of healing, using that life force to cure many hurts.\n\nExistence itself relies on the positive energy associated with this domain, so a Cleric of almost any religious tradition might choose it. This domain is particularly associated with agricultural deities, gods of healing or endurance, and gods of home and community. Religious orders of healing also seek the magic of this domain.",
+      "document": "srd-2024",
+      "hit_dice": null,
+      "name": "Life Domain",
+      "primary_abilities": [],
+      "saving_throws": [],
+      "subclass_of": "srd-2024_cleric"
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_life-domain"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_life-domain"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "document": "srd-2024",
-    "hit_dice": "D8",
-    "name": "Monk",
-    "primary_abilities": [],
-    "saving_throws": [
-      "dex",
-      "wis"
-    ],
-    "subclass_of": null
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "document": "srd-2024",
+      "hit_dice": "D8",
+      "name": "Monk",
+      "primary_abilities": [],
+      "saving_throws": [
+        "dex",
+        "wis"
+      ],
+      "subclass_of": null
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_monk"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_monk"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "desc": "*Uphold the Ideals of Justice and Order*\n\nThe Oath of Devotion binds Paladins to the ideals of justice and order. These Paladins meet the archetype of the knight in shining armor. They hold themselves to the highest standards of conduct, and some—for better or worse—hold the rest of the world to the same standards.\n\nMany who swear this oath are devoted to gods of law and good and use their gods' tenets as the measure of personal devotion. Others hold angels as their ideals and incorporate images of angelic wings into their helmets or coats of arms.\n\nThese paladins share the following tenets:\n\n- Let your word be your promise.\n- Protect the weak and never fear to act.\n- Let your honorable deeds be an example.",
-    "document": "srd-2024",
-    "hit_dice": null,
-    "name": "Oath of Devotion",
-    "primary_abilities": [],
-    "saving_throws": [],
-    "subclass_of": "srd-2024_paladin"
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "desc": "*Uphold the Ideals of Justice and Order*\n\nThe Oath of Devotion binds Paladins to the ideals of justice and order. These Paladins meet the archetype of the knight in shining armor. They hold themselves to the highest standards of conduct, and some—for better or worse—hold the rest of the world to the same standards.\n\nMany who swear this oath are devoted to gods of law and good and use their gods' tenets as the measure of personal devotion. Others hold angels as their ideals and incorporate images of angelic wings into their helmets or coats of arms.\n\nThese paladins share the following tenets:\n\n- Let your word be your promise.\n- Protect the weak and never fear to act.\n- Let your honorable deeds be an example.",
+      "document": "srd-2024",
+      "hit_dice": null,
+      "name": "Oath of Devotion",
+      "primary_abilities": [],
+      "saving_throws": [],
+      "subclass_of": "srd-2024_paladin"
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_oath-of-devotion"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_oath-of-devotion"
-},
-{
-  "fields": {
-    "caster_type": "HALF",
-    "document": "srd-2024",
-    "hit_dice": "D10",
-    "name": "Paladin",
-    "primary_abilities": [],
-    "saving_throws": [
-      "cha",
-      "wis"
-    ],
-    "subclass_of": null
+  {
+    "fields": {
+      "caster_type": "HALF",
+      "document": "srd-2024",
+      "hit_dice": "D10",
+      "name": "Paladin",
+      "primary_abilities": [],
+      "saving_throws": [
+        "cha",
+        "wis"
+      ],
+      "subclass_of": null
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_paladin"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_paladin"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "desc": "*Channel Rage into Violent Fury*\n\nBarbarians who walk the Path of the Berserker direct their Rage primarily toward violence. Their path is one of untrammeled fury, and they thrill in the chaos of battle as they allow their Rage to seize and empower them.",
-    "document": "srd-2024",
-    "hit_dice": "D12",
-    "name": "Path of the Berserker",
-    "primary_abilities": [],
-    "saving_throws": [],
-    "subclass_of": "srd-2024_barbarian"
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "desc": "*Channel Rage into Violent Fury*\n\nBarbarians who walk the Path of the Berserker direct their Rage primarily toward violence. Their path is one of untrammeled fury, and they thrill in the chaos of battle as they allow their Rage to seize and empower them.",
+      "document": "srd-2024",
+      "hit_dice": "D12",
+      "name": "Path of the Berserker",
+      "primary_abilities": [],
+      "saving_throws": [],
+      "subclass_of": "srd-2024_barbarian"
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_path-of-the-berserker"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_path-of-the-berserker"
-},
-{
-  "fields": {
-    "caster_type": "HALF",
-    "document": "srd-2024",
-    "hit_dice": "D10",
-    "name": "Ranger",
-    "primary_abilities": [],
-    "saving_throws": [
-      "dex",
-      "str"
-    ],
-    "subclass_of": null
+  {
+    "fields": {
+      "caster_type": "HALF",
+      "document": "srd-2024",
+      "hit_dice": "D10",
+      "name": "Ranger",
+      "primary_abilities": [],
+      "saving_throws": [
+        "dex",
+        "str"
+      ],
+      "subclass_of": null
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_ranger"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_ranger"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "document": "srd-2024",
-    "hit_dice": "D8",
-    "name": "Rogue",
-    "primary_abilities": [],
-    "saving_throws": [
-      "dex",
-      "int"
-    ],
-    "subclass_of": null
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "document": "srd-2024",
+      "hit_dice": "D8",
+      "name": "Rogue",
+      "primary_abilities": [],
+      "saving_throws": [
+        "dex",
+        "int"
+      ],
+      "subclass_of": null
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_rogue"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_rogue"
-},
-{
-  "fields": {
-    "caster_type": "FULL",
-    "document": "srd-2024",
-    "hit_dice": "D6",
-    "name": "Sorcerer",
-    "primary_abilities": [],
-    "saving_throws": [
-      "cha",
-      "con"
-    ],
-    "subclass_of": null
+  {
+    "fields": {
+      "caster_type": "FULL",
+      "document": "srd-2024",
+      "hit_dice": "D6",
+      "name": "Sorcerer",
+      "primary_abilities": [],
+      "saving_throws": [
+        "cha",
+        "con"
+      ],
+      "subclass_of": null
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_sorcerer"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_sorcerer"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "desc": "*Hunt for Treasure as a Classic Adventurer*\n\nA mix of burglar, treasure hunter, and explorer, you are the epitome of an adventurer. In addition to improving your agility and stealth, you gain abilities useful for delving into ruins and getting maximum benefit from the magic items you find there.",
-    "document": "srd-2024",
-    "hit_dice": null,
-    "name": "Thief",
-    "primary_abilities": [],
-    "saving_throws": [],
-    "subclass_of": "srd-2024_rogue"
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "desc": "*Hunt for Treasure as a Classic Adventurer*\n\nA mix of burglar, treasure hunter, and explorer, you are the epitome of an adventurer. In addition to improving your agility and stealth, you gain abilities useful for delving into ruins and getting maximum benefit from the magic items you find there.",
+      "document": "srd-2024",
+      "hit_dice": null,
+      "name": "Thief",
+      "primary_abilities": [],
+      "saving_throws": [],
+      "subclass_of": "srd-2024_rogue"
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_thief"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_thief"
-},
-{
-  "fields": {
-    "caster_type": "PACT",
-    "document": "srd-2024",
-    "hit_dice": "D8",
-    "name": "Warlock",
-    "primary_abilities": [],
-    "saving_throws": [
-      "cha",
-      "wis"
-    ],
-    "subclass_of": null
+  {
+    "fields": {
+      "caster_type": "PACT",
+      "document": "srd-2024",
+      "hit_dice": "D8",
+      "name": "Warlock",
+      "primary_abilities": [],
+      "saving_throws": [
+        "cha",
+        "wis"
+      ],
+      "subclass_of": null
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_warlock"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_warlock"
-},
-{
-  "fields": {
-    "caster_type": "NONE",
-    "desc": "*Master Unarmed Combat Techniques*\n\nWarriors of the Open Hand are masters of unarmed combat. They learn techniques to push and trip their opponents and manipulate their own energy to protect themselves from harm.",
-    "document": "srd-2024",
-    "hit_dice": null,
-    "name": "Warrior of the Open Hand",
-    "primary_abilities": [],
-    "saving_throws": [],
-    "subclass_of": "srd-2024_monk"
+  {
+    "fields": {
+      "caster_type": "NONE",
+      "desc": "*Master Unarmed Combat Techniques*\n\nWarriors of the Open Hand are masters of unarmed combat. They learn techniques to push and trip their opponents and manipulate their own energy to protect themselves from harm.",
+      "document": "srd-2024",
+      "hit_dice": null,
+      "name": "Warrior of the Open Hand",
+      "primary_abilities": [],
+      "saving_throws": [],
+      "subclass_of": "srd-2024_monk"
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_warrior-of-the-open-hand"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_warrior-of-the-open-hand"
-},
-{
-  "fields": {
-    "caster_type": "FULL",
-    "document": "srd-2024",
-    "hit_dice": "D6",
-    "name": "Wizard",
-    "primary_abilities": [],
-    "saving_throws": [
-      "int",
-      "wis"
-    ],
-    "subclass_of": null
+  {
+    "fields": {
+      "caster_type": "FULL",
+      "document": "srd-2024",
+      "hit_dice": "D6",
+      "name": "Wizard",
+      "primary_abilities": [],
+      "saving_throws": [
+        "int",
+        "wis"
+      ],
+      "subclass_of": null
+    },
+    "model": "api_v2.characterclass",
+    "pk": "srd-2024_wizard"
   },
-  "model": "api_v2.characterclass",
-  "pk": "srd-2024_wizard"
-}
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_path-of-the-ancestral-guardian",
+    "fields": {
+      "name": "Path of the Ancestral Guardian",
+      "desc": "A barbarian subclass that calls upon the spirits of honored ancestors to protect allies. At 3rd level, when you rage, you can target one creature you hit with an attack — ancestral spirits haunt it, giving it disadvantage on attacks against anyone other than you, and other creatures gain advantage on attacks against it while it is haunted. At 6th level, you can cast augury and clairvoyance without expending a spell slot (uses your spirit power). At 10th level, while raging, you and your allies gain resistance to damage from haunted creatures. At 14th level, you can call ancestral spirits to briefly protect an ally when they take damage.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_path-of-the-storm-herald",
+    "fields": {
+      "name": "Path of the Storm Herald",
+      "desc": "A barbarian subclass that channels elemental storms while raging. At 3rd level, choose an environment (Desert, Sea, or Tundra). While raging, you emit an aura in a 10-foot radius. Desert: creatures of your choice in the aura take 2 fire damage at the end of each turn. Sea: you can choose one creature in the aura and force a Dexterity save or take 1d6 lightning damage. Tundra: creatures of your choice gain 2 temporary hit points. At 6th level you gain a storm-environment-specific benefit. At 10th and 14th level the aura powers scale up.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_path-of-the-zealot",
+    "fields": {
+      "name": "Path of the Zealot",
+      "desc": "A barbarian subclass devoted to a deity, channeling divine fury in battle. At 3rd level, Divine Fury adds 1d6 necrotic or radiant damage (your choice) on the first hit each turn while raging. Warrior of the Gods: when you die, a spell that restores life (revivify, raise dead, etc.) doesn't expend a material component when targeting you. At 6th level, Fanatical Focus lets you reroll a failed save once per rage. At 10th level, Zealous Presence grants advantage on attack rolls and saves to allies within 60 feet (1/long rest). At 14th level, Rage Beyond Death: you don't die while raging, no matter how low your HP drops.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_college-of-glamour",
+    "fields": {
+      "name": "College of Glamour",
+      "desc": "A bard subclass drawing power from the Feywild to enchant and beguile. Mantle of Inspiration (3rd level, bonus action): spend a Bardic Inspiration die to grant up to 5 creatures temporary HP equal to your roll + Charisma modifier, and each can immediately move up to their speed without provoking opportunity attacks. Enthralling Performance (3rd): after performing for 1 minute, up to 5 humanoids are charmed by you for 1 hour (Wisdom save). Mantle of Majesty (6th): cast command as a bonus action on each turn while maintaining concentration on it, without expending a spell slot. Unbreakable Majesty (14th): assume a magically majestic presence — creatures attacking you must make a Charisma save or attack a different target (1/short rest).",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_college-of-swords",
+    "fields": {
+      "name": "College of Swords",
+      "desc": "A bard subclass that combines combat prowess with bardic magic. Bonus Proficiencies (3rd): medium armor and scimitars. Fighting Style (3rd): choose Dueling or Two-Weapon Fighting. Blade Flourish (3rd): when you take the Attack action, your speed increases by 10 feet and you can expend a Bardic Inspiration die to perform one of three flourishes — Defensive (add die to AC until start of next turn), Slashing (deal die extra damage and the target must make a Strength save or be pushed 5 feet), or Mobile (deal die extra damage to a different creature within 5 feet). Extra Attack (6th). Master's Flourish (14th): when using Blade Flourish, roll a d6 instead of expending a Bardic Inspiration die.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_college-of-whispers",
+    "fields": {
+      "name": "College of Whispers",
+      "desc": "A bard subclass that uses dark secrets and psychological manipulation. Psychic Blades (3rd): when you hit a creature with a weapon attack, expend a Bardic Inspiration die to deal extra psychic damage (2d6 at 3rd, scaling up). Words of Terror (3rd): after speaking privately with a humanoid for 1 minute, it must make a Wisdom save or become frightened of you for 1 hour. Mantle of Whispers (6th): when a humanoid dies within 30 feet, you can capture its shadow. You can then look like that creature and know its surface memories (8 hours, action to don/doff). Shadow Lore (14th): magically whisper 30 feet to one creature, forcing a Wisdom save or the creature is frightened and charmed by you for 8 hours.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_forge-domain",
+    "fields": {
+      "name": "Forge Domain",
+      "desc": "A cleric subclass devoted to deities of smithing and craft. Domain Spells include identify, searing smite, heat metal, magic weapon, elemental weapon, protection from energy, fabricate, wall of fire, animate objects, creation. Blessing of the Forge (1st): at the end of a long rest, touch one nonmagical weapon or piece of armor — it becomes magical (+1 to attack/damage or AC) until you use this feature again. Channel Divinity: Artisan's Blessing (2nd): conduct a 1-hour ritual to create a simple or martial weapon, set of tools, or nonmagical item worth up to 100 gp (material cost consumed). Soul of the Forge (6th): resistance to fire, +1 AC while wearing heavy armor. Divine Strike (8th): +1d8 fire damage per weapon hit (2d8 at 14th). Saint of Forge and Fire (17th): immunity to fire, resistant to bludgeoning/piercing/slashing from nonmagical attacks while in heavy armor.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_grave-domain",
+    "fields": {
+      "name": "Grave Domain",
+      "desc": "A cleric subclass focused on the line between life and death, preventing undeath. Domain Spells include bane, false life, gentle repose, ray of enfeeblement, speak with dead, vampiric touch, blight, death ward, antilife shell, raise dead. Circle of Mortality (1st): when you cast a healing spell on a creature at 0 HP, maximize the healing dice. You also learn spare the dying as a cantrip and can cast it as a bonus action at range 30 feet. Eyes of the Grave (1st): detect undead within 60 feet. Channel Divinity: Path to the Grave (2nd): curse one creature — the next time it takes damage, it's vulnerable to that damage (once per enemy per curse). Sentinel at Death's Door (6th): reaction to turn a critical hit into a normal hit. Potent Spellcasting (8th). Keeper of Souls (17th): when a creature within 60 feet dies, you or one ally within 60 feet regains HP equal to the dead creature's number of hit dice.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_circle-of-dreams",
+    "fields": {
+      "name": "Circle of Dreams",
+      "desc": "A druid subclass tied to the magic of the Feywild and the dream realm. Balm of the Summer Court (2nd): regain a pool of d6s equal to your druid level at long rest; use a bonus action to expend dice and restore HP to a creature within 120 feet (+ half your druid level as temporary HP). Hearth of Moonlight and Shadow (6th): when you set up a tiny hut or similar short rest spot, you and allies regain 1d6 extra HP per hit die spent. Hidden Paths (10th): bonus action to teleport 60 feet to unoccupied space you can see, or teleport a willing creature to such a space within 30 feet. Walker in Dreams (14th): after a short rest, cast dream, scrying, or teleportation circle without a spell slot (target must be a location you've visited).",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_circle-of-the-shepherd",
+    "fields": {
+      "name": "Circle of the Shepherd",
+      "desc": "A druid subclass focused on summoning and protecting beasts and fey. Speech of the Woods (2nd): learn Sylvan; beasts can understand your speech; can communicate with beasts in a limited way. Spirit Totem (2nd): bonus action to summon a spirit within 60 feet (30-foot aura): Bear (temp HP = 5 + druid level), Hawk (advantage on Perception, attack advantage once per turn), Unicorn (allies can spend hit dice). Mighty Summoner (6th): beasts and fey summoned by your spells gain +2 HP per HD and weapons count as magical. Guardian Soul (10th): your Spirit Totem also provides resistance to chosen damage type. Faithful Summons (14th): if reduced to 0 HP, summon 4 beasts (of CR 2 or lower) that appear within 20 feet and act in defense.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_arcane-archer",
+    "fields": {
+      "name": "Arcane Archer",
+      "desc": "A fighter subclass that infuses arrows with arcane magic. Arcane Archer Lore (3rd): choose Arcana or Nature proficiency; learn prestidigitation or druidcraft. Arcane Shot (3rd): use a magical shot option when you fire from a shortbow or longbow (2/short rest, DC = 8 + proficiency + Int). Options include Banishing Arrow (target makes a Charisma save or is banished), Beguiling Arrow (target makes a Wisdom save or is charmed), Bursting Arrow (2d6 force, explodes 10-foot area), Enfeebling Arrow (Const save or halved weapon damage), Grasping Arrow (3d6 poison, poisoned and slowed by brambles), Piercing Arrow (1d6 piercing, passes through targets), Seeking Arrow (ignores cover, auto-corrects path), Shadow Arrow (Wisdom save or can't see beyond 5 feet). Magic Arrow (7th): arrows count as magic. Curving Shot (7th): miss → redirect to new target. Ever-Ready Shot (15th): regain one Arcane Shot on initiative if you have no uses.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_cavalier",
+    "fields": {
+      "name": "Cavalier",
+      "desc": "A fighter subclass specializing in mounted combat. Bonus Proficiency (3rd): one of Animal Handling, History, Insight, Performance, or Persuasion, plus one language. Born to the Saddle (3rd): advantage on saves to avoid falling off a mount; mounting/dismounting costs 5 feet; if your mount is knocked prone you can drop off with no fall damage. Unwavering Mark (3rd): when you hit a creature, mark it until end of your next turn. If it attacks anyone other than you, you can make a bonus attack. Hold the Line (7th): creatures provoke opportunity attacks by moving within your reach. Ferocious Charger (10th): on a hit after moving 10+ feet on your turn, target makes a Str save or is knocked prone. Vigilant Defender (15th): you can make opportunity attacks a number of times equal to your reaction count (not just once per turn).",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_samurai",
+    "fields": {
+      "name": "Samurai",
+      "desc": "A fighter subclass focused on willpower, social grace, and fighting spirit. Bonus Proficiency (3rd): History, Insight, Performance, or Persuasion; plus one language. Fighting Spirit (3rd): bonus action to gain advantage on weapon attacks this turn and 5 temporary HP (scales at 7th and 15th level). Elegant Courtier (7th): add Wisdom modifier to Persuasion checks; if you fail a Wisdom save you can use your reaction to reroll (proficiency bonus uses/long rest). Tireless Spirit (10th): regain a Fighting Spirit use when you roll initiative with no uses remaining. Rapid Strike (15th): trade advantage on an attack for an extra attack on that turn. Strength Before Death (18th): when reduced to 0 HP, delay the incapacitation until after your next turn; you immediately take an extra turn (still with 0 HP), then fall unconscious.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_way-of-the-drunken-master",
+    "fields": {
+      "name": "Way of the Drunken Master",
+      "desc": "A monk subclass that uses unpredictable, seemingly stumbling movements to confuse enemies. Bonus Proficiencies (3rd): Brewer's Supplies, Performance. Drunken Technique (3rd): when you use Flurry of Blows, gain the Disengage benefit and your speed increases by 10 feet. Tipsy Sway (6th): Leap to Your Feet (drop from prone costs 5 feet not half speed); Redirect Attack (when a creature misses you, spend 1 ki to redirect the attack to another target within 5 feet). Drunkard's Luck (11th): before an ability check, attack roll, or save you make with disadvantage, spend 2 ki to cancel the disadvantage. Intoxicated Frenzy (17th): up to 3 extra attacks with Flurry of Blows, each against a different target.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_way-of-the-kensei",
+    "fields": {
+      "name": "Way of the Kensei",
+      "desc": "A monk subclass focused on mastery of weapons as an extension of the self. Path of the Kensei (3rd): choose 2 weapons (at least one melee, one can be ranged). These become monk weapons; melee kensei weapons deal your martial arts die. Agile Parry (3rd): if you make an unarmed strike as part of the Attack action and aren't using the kensei weapon, +2 AC until start of your next turn. Kensei's Shot (3rd): bonus action to make ranged kensei weapon attacks deal +1d4 damage. One with the Blade (6th): kensei weapons count as magical; Magic Kensei Weapons for ki-fueled attacks. Sharpen the Blade (11th): spend up to 3 ki points to give your kensei weapon a bonus to attack and damage rolls equal to ki spent (+1, +2, or +3) for 1 minute. Unerring Accuracy (17th): once per turn, reroll a missed attack with a monk weapon.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_way-of-the-sun-soul",
+    "fields": {
+      "name": "Way of the Sun Soul",
+      "desc": "A monk subclass that channels ki into searing bolts of radiant energy. Radiant Sun Bolt (3rd): make ranged spell attacks (range 30/60) that deal 1d4 + Dexterity modifier radiant damage, using Flurry of Blows rules. Searing Arc Strike (6th): spend 2+ ki after an attack to cast burning hands (costs 1 ki per level above 2nd). Searing Sunburst (11th): throw a globe of light (range 150 feet, 20-foot radius, DC = ki save DC, 2d6 radiant damage on failed Con save); 0–3 ki for 2d6 extra. Sun Shield (17th): shed bright light 30 feet; when a creature hits you in melee, deal 5 + Wisdom modifier radiant damage to it.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_oath-of-conquest",
+    "fields": {
+      "name": "Oath of Conquest",
+      "desc": "A paladin subclass sworn to crush their enemies and inspire fear through dominance. Tenets: ruthlessness, might as the path to peace, total domination. Oath Spells include armor of Agathys, command, hold person, spiritual weapon, bestow curse, fear, dominate beast, stoneskin, dominate person, hold monster. Channel Divinity: Conquering Presence (frighten creatures in 30-foot radius, Wisdom save) and Guided Strike (+10 to an attack roll). Aura of Conquest (7th): frightened creatures have speed 0 in your aura, and you deal psychic damage equal to half your paladin level when they start their turn there. Scornful Rebuke (15th): resistance to all damage while concentrating; when you take damage you deal psychic damage equal to Charisma modifier to the attacker. Invincible Conqueror (20th): bonus action to gain resistance to all damage, extra attack, and attacks deal an extra die of divine smite damage for 1 minute.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_oath-of-redemption",
+    "fields": {
+      "name": "Oath of Redemption",
+      "desc": "A paladin subclass dedicated to peaceful resolution and offering mercy to enemies. Tenets: peace, innocence, patience, wisdom. Oath Spells include sanctuary, sleep, calm emotions, hold person, counterspell, hypnotic pattern, otiluke's resilient sphere, stoneskin, hold monster, wall of force. Channel Divinity: Emissary of Peace (+5 to Persuasion for 10 minutes) and Rebuke the Violent (reaction when an ally is attacked, deal that damage to the attacker if it fails a Wisdom save). Aura of the Guardian (7th): reaction to take damage that a creature within your aura would take (it takes none, you take it all). Protective Spirit (15th): if you end your turn below half HP, regain 1d6 + half your paladin level HP. Emissary of Redemption (20th): resistance to all damage from creatures you haven't attacked; if such a creature damages you, it takes radiant damage equal to half the damage it dealt.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_gloom-stalker",
+    "fields": {
+      "name": "Gloom Stalker",
+      "desc": "A ranger subclass that excels in darkness and underground environments. Gloom Stalker Magic: disguise self, rope trick, fear, greater invisibility, seeming. Dread Ambusher (3rd): add your Wisdom modifier to initiative. In the first turn of combat, your walking speed increases by 10 feet and you can make one additional weapon attack. If that attack hits, it deals an extra 1d8 damage. Umbral Sight (3rd): you gain darkvision 60 feet (or extend existing darkvision by 30 feet) and are invisible to creatures that rely on darkvision to see you in darkness. Iron Mind (7th): proficiency in Wisdom saves (or Int or Cha if already proficient). Stalker's Flurry (11th): once per turn, if you miss an attack, make another attack against the same target. Shadowy Dodge (15th): when a creature attacks you, use reaction to impose disadvantage.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_horizon-walker",
+    "fields": {
+      "name": "Horizon Walker",
+      "desc": "A ranger subclass attuned to the multiverse, guarding against planar threats. Horizon Walker Magic: protection from evil and good, misty step, protection from energy, banishment, teleportation circle. Detect Portal (3rd): detect planar portals within 1 mile at will. Planar Warrior (3rd): bonus action to cause one weapon attack this turn to deal force damage and deal an extra 1d8 force damage on a hit (2d8 at 11th). Ethereal Step (7th): bonus action to step into the Ethereal Plane until the end of your turn (you can pass through solid objects). Distant Strike (11th): on the Attack action, teleport up to 10 feet before each attack; if you attack 2+ different creatures, make one bonus attack. Spectral Defense (15th): reaction to halve the triggering damage.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_monster-slayer",
+    "fields": {
+      "name": "Monster Slayer",
+      "desc": "A ranger subclass that specializes in hunting powerful supernatural creatures. Monster Slayer Magic: protection from evil and good, zone of truth, magic circle, banishment, hold monster. Hunter's Sense (3rd): bonus action to identify a creature's immunities and resistances, or highest damage type if any. Slayer's Prey (3rd): bonus action to mark one creature within 60 feet — first hit each turn deals 1d6 extra damage. Supernatural Defense (7th): add 1d6 to saves against the prey's spells and effects, and to ability checks to avoid being grappled/restrained by it. Magic-User's Nemesis (11th): reaction when a creature casts a spell or teleports within 60 feet — force a Wisdom save or the spell/teleport fails. Slayer's Counter (15th): when your prey forces a save, use reaction to make one weapon attack against it; on a hit, you automatically succeed on the save.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_inquisitive",
+    "fields": {
+      "name": "Inquisitive",
+      "desc": "A rogue subclass built around reading people and uncovering deception. Ear for Deceit (3rd): treat a Wisdom (Insight) check of 7 or lower as an 8. Eye for Detail (3rd): bonus action to use Perception to spot hidden creatures/objects or Investigate to uncover clues. Insightful Fighting (3rd): bonus action to make an Insight check contested by a creature's Deception — on a success, you can use Sneak Attack against it even without advantage or an ally adjacent (lasts 1 minute or until you use it again). Steady Eye (9th): if you move no more than half your speed on this turn, advantage on Perception and Investigation. Unerring Eye (13th): detect magical or invisible or shapechanger creatures within 30 feet (action, proficiency bonus times/long rest). Eye for Weakness (17th): when Insightful Fighting is active, deal an extra 3d6 Sneak Attack damage.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_mastermind",
+    "fields": {
+      "name": "Mastermind",
+      "desc": "A rogue subclass focused on social manipulation and orchestrating others. Master of Intrigue (3rd): gain proficiency with disguise kits, forgery kits, one gaming set, and two languages. Master of Tactics (3rd): use the Help action as a bonus action; the Help action works from 30 feet away for attacks. Insightful Manipulator (9th): spend 1 minute observing or conversing with a creature to learn two of: Int, Wis, Cha, class levels, or whether they have more/fewer/equal hit points than you. Misdirection (13th): use an action to trick a creature within 30 feet into thinking another creature provided Sneak Attack — that creature takes the blame for 1 minute. Soul of Deceit (17th): your thoughts can't be read by any means. Immunity to effects that would compel truth (zone of truth, etc.).",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_scout",
+    "fields": {
+      "name": "Scout",
+      "desc": "A rogue subclass optimized for mobility and wilderness navigation. Skirmisher (3rd): when a creature ends its turn adjacent to you, you can use a reaction to move up to half your speed away from it (doesn't provoke opportunity attacks). Survivalist (3rd): proficiency in Nature and Survival; double proficiency bonus on checks with those skills. Superior Mobility (9th): walking speed increases by 10 feet; if you have a climb or swim speed, those also increase by 10. Ambush Master (13th): advantage on initiative rolls; first creature you hit on turn 1 grants advantage on attacks against it to all allies until start of your next turn. Sudden Strike (17th): if you take the Attack action, make one additional attack as a bonus action (this can trigger Sneak Attack, but only one Sneak Attack per turn).",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_swashbuckler",
+    "fields": {
+      "name": "Swashbuckler",
+      "desc": "A rogue subclass combining combat flair with social panache. Fancy Footwork (3rd): after attacking a creature, it can't make opportunity attacks against you for the rest of your turn. Rakish Audacity (3rd): add Charisma modifier to initiative rolls; you can use Sneak Attack without requiring a nearby ally or advantage as long as no other creature is within 5 feet of you and your target. Panache (9th): spend 1 minute in conversation to charm or frighten a humanoid. Elegant Maneuver (13th): bonus action to give yourself advantage on next Acrobatics or Athletics check this turn. Master Duelist (17th): when you miss an attack, reroll it with advantage (1/short rest).",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_divine-soul",
+    "fields": {
+      "name": "Divine Soul",
+      "desc": "A sorcerer subclass touched by divine magic, able to draw from the cleric spell list. Divine Magic (1st): you can choose spells from the cleric spell list as well as the sorcerer list; learn a bonus spell based on your soul's affinity (Good: cure wounds, Evil: inflict wounds, Law: bless, Chaos: bane, Neutrality: protection from evil and good). Favored by the Gods (1st): when you fail a saving throw or miss an attack roll, add 2d4 to the roll (1/short rest). Empowered Healing (6th): when you or an ally within 5 feet rolls dice to restore HP with a spell, reroll any 1s on the dice (costs 1 sorcery point). Otherworldly Wings (14th): bonus action to grow feathered or insectile wings, gaining fly speed 30 feet. Unearthly Recovery (18th): bonus action when below half HP to regain HP equal to half your HP maximum (1/long rest).",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_shadow-magic",
+    "fields": {
+      "name": "Shadow Magic",
+      "desc": "A sorcerer subclass drawing power from the Shadowfell. Eyes of the Dark (1st): darkvision 120 feet; learn darkness spell for free, can cast it by spending 2 sorcery points without a spell slot. Strength of the Grave (1st): when damage reduces you to 0 HP (not radiant or critical), make a Charisma save (DC = 5 + damage dealt) to drop to 1 HP instead (1/long rest). Hound of Ill Omen (6th): spend 3 sorcery points to summon a Hound of Ill Omen (modified Dire Wolf) that targets one creature — the target has disadvantage on saves against your spells while the hound is within 5 feet of it. Shadow Walk (14th): when in dim light or darkness, bonus action to teleport up to 120 feet to unoccupied dim/dark space you can see. Umbral Form (18th): spend 6 sorcery points to become a shadow for 1 minute (resistance to all non-force, non-radiant damage; can move through creatures and objects as difficult terrain).",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_storm-sorcery",
+    "fields": {
+      "name": "Storm Sorcery",
+      "desc": "A sorcerer subclass with power rooted in storms and the sea. Wind Speaker (1st): speak, read, and write Primordial. Tempestuous Magic (1st): after casting a 1st-level or higher spell, use a bonus action to fly up to 10 feet (doesn't provoke opportunity attacks). Heart of the Storm (6th): resistance to lightning and thunder; when you cast a 1st-level+ spell that deals lightning or thunder damage, creatures within 10 feet take damage equal to half your sorcerer level. Storm Guide (6th): bonus action to control rain and wind within 100 feet (stop rain in a 20-foot radius, change wind direction). Storm's Fury (14th): reaction when hit by melee attack, deal lightning damage equal to sorcerer level (Con save for half) and push attacker 20 feet. Wind Soul (18th): immunity to lightning and thunder; fly 60 feet; spend 1 hour to grant 5 creatures magic flight (30 feet) for 1 hour.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_the-celestial",
+    "fields": {
+      "name": "The Celestial",
+      "desc": "A warlock subclass with a patron from the Upper Planes — an angel, empyrean, or similar being. Expanded Spell List: cure wounds, guiding bolt, flaming sphere, lesser restoration, daylight, revivify, guardian of faith, wall of fire, flame strike, greater restoration. Bonus Cantrips (1st): learn light and sacred flame. Healing Light (1st): pool of d6s equal to 1 + warlock level; use a bonus action to expend dice to restore HP to a creature within 60 feet (max dice per use = Charisma modifier). Radiant Soul (6th): resistance to radiant damage; add Charisma modifier as extra damage when you deal radiant or fire damage with a spell. Celestial Resilience (10th): you and up to five allies gain temporary HP when you finish a short or long rest (equal to warlock level + Charisma modifier). Searing Vengeance (14th): when you or a friendly creature within 60 feet regains HP, you can use reaction to deal 2d8 + Charisma radiant damage to each creature within 30 feet of you (blinding on failed Con save).",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_the-hexblade",
+    "fields": {
+      "name": "The Hexblade",
+      "desc": "A warlock subclass with a patron tied to a sentient weapon from the Shadowfell. Expanded Spell List: shield, wrathful smite, blur, branding smite, blink, elemental weapon, phantasmal killer, staggering smite, banishing smite, cone of cold. Hexblade's Curse (1st): bonus action to curse one creature within 30 feet for 1 minute — add proficiency bonus to damage against it, score crits on 19-20, and regain HP equal to Charisma modifier + warlock level if it dies while cursed (1/short rest). Hex Warrior (1st): proficiency with medium armor, shields, and martial weapons; one weapon you touch becomes your Hex Warrior weapon — you use Charisma instead of Strength or Dexterity for attack/damage rolls with it. Accursed Specter (6th): when you slay a humanoid, raise it as a specter under your control (1 at a time). Armor of Hexes (10th): if your cursed target hits you, roll d6 — on 4+, attack misses instead. Master of Hexes (14th): when your cursed target dies, move the curse to a new target within 30 feet.",
+      "document": "xanathars-guide"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "xanathars-guide_war-magic",
+    "fields": {
+      "name": "War Magic",
+      "desc": "A wizard subclass that combines arcane power with battlefield awareness and durability. Arcane Deflection (2nd): when you are hit by an attack or fail a save, use a reaction to gain +2 AC or +4 to the save. If you do, you can cast only cantrips until end of your next turn. Tactical Wit (2nd): add your Intelligence modifier to initiative rolls. Power Surge (6th): store magical energy when you counter or dispel a spell — keep a count of surges (max = Intelligence modifier). Once per turn when you deal damage, expend a surge to add extra damage equal to half your wizard level. Durable Magic (10th): while concentrating on a spell, +2 bonus to AC and all saves. Deflecting Shroud (14th): when Arcane Deflection activates, three creatures of your choice within 60 feet each take force damage equal to half your wizard level.",
+      "document": "xanathars-guide"
+    }
+  }
 ]
