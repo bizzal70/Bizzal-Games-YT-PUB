@@ -637,5 +637,284 @@
       "desc": "A wizard subclass that combines arcane power with battlefield awareness and durability. Arcane Deflection (2nd): when you are hit by an attack or fail a save, use a reaction to gain +2 AC or +4 to the save. If you do, you can cast only cantrips until end of your next turn. Tactical Wit (2nd): add your Intelligence modifier to initiative rolls. Power Surge (6th): store magical energy when you counter or dispel a spell — keep a count of surges (max = Intelligence modifier). Once per turn when you deal damage, expend a surge to add extra damage equal to half your wizard level. Durable Magic (10th): while concentrating on a spell, +2 bonus to AC and all saves. Deflecting Shroud (14th): when Arcane Deflection activates, three creatures of your choice within 60 feet each take force damage equal to half your wizard level.",
       "document": "xanathars-guide"
     }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_artificer",
+    "fields": {
+      "name": "Artificer",
+      "desc": "A master of invention, the Artificer uses ingenuity and magic to unlock extraordinary capabilities in objects. At 1st level, Magical Tinkering lets you touch a nonmagical object to give it a minor magical property. Spellcasting uses Intelligence. At 2nd level, Infuse Item: learn Artificer Infusions (enhanced arcane focus, enhanced defense, enhanced weapon, homunculus servant, returning weapon, etc.) — infuse items after a long rest, max infusions = half Artificer level. At 3rd level choose a Specialist subclass. The Artificer Tool Expertise doubles your proficiency bonus for any tool proficiency. At 5th level, The Right Tool for the Job: spend 1 hour to create any artisan's tool from nothing. At 6th level, Tool Expertise. Flash of Genius (7th): when you or an ally within 30 feet makes a saving throw or ability check, you can add your Intelligence modifier to the roll (proficiency bonus uses/long rest). Magic Item Adept (10th): attune to 4 magic items at once; craft items of common or uncommon rarity in half the time for half the cost. Spell-Storing Item (11th): store a 1st- or 2nd-level Artificer spell in an item — the holder can cast it. Magic Item Savant (14th): attune to 5 items, ignore class/race/spell/level requirements. Magic Item Master (18th): attune to 6 items. Soul of Artifice (20th): +1 to all saves per attuned magic item; reaction when reduced to 0 HP to end one of your Artificer Infusions and drop to 1 HP instead.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_alchemist",
+    "fields": {
+      "name": "Alchemist",
+      "desc": "An Artificer subclass focused on potions, acids, and transmutational brews. Tools: Alchemist's Supplies. Spells: healing word, ray of sickness, flaming sphere, Melf's acid arrow, gaseous form, mass healing word, blight, death ward, cloudkill, raise dead. Experimental Elixir (3rd): after a long rest, create magical elixirs equal to your proficiency bonus (choose from: Healing, Swiftness, Resilience, Boldness, Flight, Transformation). Alchemical Savant (5th): when you cast a spell using Alchemist's Supplies as the spellcasting focus, add Intelligence modifier to healing or acid/fire/necrotic/poison damage. Restorative Reagents (9th): use Alchemist's Supplies as a focus for lesser restoration without expending a spell slot (2× Intelligence modifier per long rest); any experimental elixir also grants temp HP equal to 2 + Intelligence modifier. Chemical Mastery (15th): resistance to acid and poison damage; immunity to the poisoned condition; once per long rest, cast greater restoration or heal for free.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_armorer",
+    "fields": {
+      "name": "Armorer",
+      "desc": "An Artificer subclass that integrates armor as a magical weapon system. Tools: Smith's Tools. Spells: magic missile, thunderwave, mirror image, shatter, hypnotic pattern, lightning bolt, fire shield, greater invisibility, passwall, wall of force. Arcane Armor (3rd): spend 1 hour to turn armor into Arcane Armor — it can't be removed against your will, counts as your spellcasting focus, replaces the need for material components, and you can don/doff it as an action. Armor Model (3rd): choose Guardian (Thunder Gauntlets 1d8 thunder, mark target) or Infiltrator (Lightning Launcher 1d6 lightning at range, one attack per turn deals +1d6 lightning). Extra Attack (5th). Armor Modifications (9th): armor and gauntlets count as separate items for infusions. Perfected Armor (15th): Guardian — reaction to pull Large or smaller creatures 30 feet toward you when they attack someone other than you (Str save). Infiltrator — Lightning Launcher attack advantage when you move 0 feet that turn, and you can become invisible as a bonus action (ends when you attack, cast, or take damage).",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_artillerist",
+    "fields": {
+      "name": "Artillerist",
+      "desc": "An Artificer subclass specializing in magical cannons and explosive firepower. Tools: Woodcarver's Tools. Spells: shield, thunderwave, scorching ray, shatter, fireball, wind wall, ice storm, wall of fire, cone of cold, wall of force. Eldritch Cannon (3rd): action to create a small magical cannon (Flamethrower: 15-foot cone, Dex save for 2d8 fire; Force Ballista: ranged spell attack, 2d8 force, push 5 feet; Protector: temp HP = 1d8 + Intelligence to you and all creatures within 10 feet). Only one cannon at a time; cannons last 1 hour. Arcane Firearm (5th): after finishing a long rest, imbue a wand, staff, or rod as your Arcane Firearm — when you cast an Artificer spell through it, deal +1d8 damage of that spell's type. Explosive Cannon (9th): your cannon's damage dice become d8s; action to detonate the cannon (60-foot range, 3d8 force, Dex save). Fortified Position (15th): you and allies within 10 feet of your cannon have half cover; you can have two cannons simultaneously.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_battle-smith",
+    "fields": {
+      "name": "Battle Smith",
+      "desc": "An Artificer subclass that uses magic to augment weapons and a Steel Defender companion. Tools: Smith's Tools. Proficiencies: martial weapons. Spells: heroism, shield, branding smite, warding bond, aura of vitality, conjure barrage, aura of purity, fire shield, banishing smite, mass cure wounds. Battle Ready (3rd): proficiency with martial weapons; use Intelligence instead of Strength or Dexterity for attack and damage rolls with magic weapons. Steel Defender (3rd): create a mechanical dog, horse, or other creature using the Steel Defender stat block. It obeys your commands (bonus action), acts on your initiative. If it dies you can recreate it after a long rest (or during a short rest by expending a spell slot of 1st level or higher). Extra Attack (5th). Arcane Jolt (9th): once per turn when you or your Steel Defender hits a creature, deal 2d6 extra force damage (or heal a creature within 30 feet for 2d6 HP). Improved Defender (15th): Steel Defender gains +2 AC; Arcane Jolt damage increases to 4d6.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_path-of-the-beast",
+    "fields": {
+      "name": "Path of the Beast",
+      "desc": "A barbarian subclass that channels a bestial spirit, manifesting physical animal traits while raging. Form of the Beast (3rd): while raging, your body transforms — choose one: Bite (1d8 piercing, regain HP equal to proficiency bonus on a hit once per rage when at or below half HP), Claws (two claw attacks on the Attack action, each 1d6 slashing), or Tail (reaction when attacked, adds 1d8 to AC, one creature within 10 feet also takes 1d8 piercing). Bestial Soul (6th): your natural weapons count as magical; choose one permanent physical upgrade (swimming speed = walking speed, climb speed = walking speed, or jump distance doubles). Infectious Fury (10th): when you hit with natural weapons while raging, one creature within 30 feet must make a Wisdom save (DC = 8 + proficiency + Con) or be compelled to make one attack against a target of your choice, or take 2d12 psychic damage. Call the Hunt (14th): when you enter rage, choose up to proficiency bonus creatures within 30 feet — they can rage with you (once per long rest). Each time a selected creature hits, you gain 5 temp HP.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_path-of-wild-magic",
+    "fields": {
+      "name": "Path of Wild Magic",
+      "desc": "A barbarian subclass infused with the Feywild's wild magic, triggering random magical effects while raging. Magic Awareness (3rd): action to detect the presence of spells or magic items within 60 feet (proficiency bonus uses/long rest). Wild Surge (3rd): when you enter rage, roll a d8 on the Wild Magic Surge table. Results include: d3 target swaps, psychic link with an ally, spectral limbs granting extra attacks, retributive force burst, teleportation pulse, free spells, protective shield. Bolstering Magic (6th): action to touch a creature (or yourself) and roll d3 — add to attack rolls and saves for 10 minutes OR regain one expended spell slot of 1st or 2nd level. Unstable Backlash (10th): when you take damage or fail a save while raging, use reaction to roll immediately on the Wild Magic Surge table and replace the current effect. Controlled Surge (14th): roll Wild Magic Surge twice and choose which result applies.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_college-of-creation",
+    "fields": {
+      "name": "College of Creation",
+      "desc": "A bard subclass channeling the Song of Creation that shaped the universe. Mote of Potential (3rd): when you give a Bardic Inspiration die to a creature, it also gains a Mote of Potential. When the die is rolled the mote triggers an additional effect: ability check (a random die explodes, dealing thunder damage in a 5-foot radius), attack roll (the target and one creature you choose within 5 feet take thunder damage equal to the Bardic Inspiration die), saving throw (the target gains temp HP equal to the Bardic Inspiration roll + Charisma modifier). Performance of Creation (3rd): action to create one Medium or smaller nonmagical item worth up to 20 × bard level GP in an unoccupied space within 10 feet (concentration, up to 1 hour; proficiency bonus uses/long rest). Animating Performance (6th): use a Bardic Inspiration die to animate a Large or smaller nonmagical item within 30 feet for 1 hour — it uses the Dancing Item stat block and acts on your initiative. Creative Crescendo (14th): when you use Performance of Creation, create up to proficiency bonus items of the same type; items need not be Medium or smaller.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_college-of-eloquence",
+    "fields": {
+      "name": "College of Eloquence",
+      "desc": "A bard subclass embodying the ideal of silver-tongued mastery and devastating debate. Silver Tongue (3rd): treat a Persuasion or Deception roll of 9 or lower as a 10. Unsettling Words (3rd): bonus action to expend a Bardic Inspiration die and choose a creature within 60 feet — subtract the roll from the next saving throw that creature makes before the start of your next turn. Unfailing Inspiration (6th): when a creature adds your Bardic Inspiration die to a check and fails, that creature keeps the Bardic Inspiration die. Universal Speech (6th): action to choose up to proficiency bonus creatures within 60 feet — they understand you regardless of language, and you understand them in return, for 1 hour (proficiency bonus uses/long rest). Infectious Inspiration (14th): when a creature uses your Bardic Inspiration and succeeds on a check, you can use reaction to give another creature within 60 feet a Bardic Inspiration die for free (doesn't cost a use).",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_order-domain",
+    "fields": {
+      "name": "Order Domain",
+      "desc": "A cleric subclass devoted to deities of civilization, law, and order — imposing discipline through divine authority. Domain Spells: command, heroism, hold person, zone of truth, mass healing word, slow, compulsion, locate creature, commune, dominate person. Bonus Proficiencies (1st): heavy armor, persuasion. Voice of Authority (1st): if you cast a spell of 1st level or higher using a spell slot that targets an ally, that ally can use their reaction immediately after your spell resolves to make one weapon attack against a creature of your choice that you can see. Order's Demand (2nd channel divinity): creatures of your choice within 30 feet make a Wisdom save; on a failure, they're charmed by you until end of their next turn or until they take damage. While charmed, you can redirect their movement (no action). Embodiment of the Law (6th): when you cast an enchantment spell of 1st level or higher as a bonus action, it costs no spell slot (proficiency bonus uses/long rest). Divine Strike (8th): +1d8 psychic damage per weapon hit (2d8 at 14th). Order's Wrath (17th): when you use Voice of Authority, the creature struck is also cursed until end of your next turn — your allies deal +2d8 psychic damage to it on a hit.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_peace-domain",
+    "fields": {
+      "name": "Peace Domain",
+      "desc": "A cleric subclass focused on forging bonds between people and resolving conflict without violence. Domain Spells: heroism, sanctuary, aid, warding bond, beacon of hope, sending, aura of purity, Otiluke's resilient sphere, greater restoration, rary's telepathic bond. Implement of Peace (1st): proficiency in Insight, Performance, or Persuasion (your choice). Emboldening Bond (1st): action to forge a bond between up to proficiency bonus willing creatures within 30 feet of each other (including yourself). For 10 minutes, each bonded creature adds 1d4 to their attack rolls, ability checks, and saving throws while within 30 feet of another bonded creature. Balm of Peace (2nd channel divinity): move up to walking speed without provoking opportunity attacks, and each creature you come within 5 feet of can be healed for 2d6 + Wisdom modifier HP. Protective Bond (6th): when a bonded creature within 30 feet is about to take damage, you can use reaction to teleport to an unoccupied space within 5 feet of it and take the damage instead. Potent Spellcasting (8th). Expansive Bond (17th): Emboldening Bond and Protective Bond can work across 60 feet; Protective Bond grants resistance to the triggering damage.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_twilight-domain",
+    "fields": {
+      "name": "Twilight Domain",
+      "desc": "A cleric subclass devoted to the liminal space between light and darkness — guarding those who cross the boundary of sleep. Domain Spells: faerie fire, sleep, moonbeam, see invisibility, aura of vitality, Leomund's tiny hut, aura of life, greater invisibility, circle of power, mislead. Bonus Proficiencies (1st): martial weapons, heavy armor. Eyes of Night (1st): darkvision 300 feet; bonus action to share this darkvision with willing creatures (proficiency bonus), lasting 1 hour. Vigilant Blessing (1st): no action — touch a creature when you finish a long rest to give it advantage on the next initiative roll it makes. Steps of Night (2nd channel divinity): bonus action to fly up to 300 feet until end of your turn without provoking opportunity attacks, in dim light or darkness. Twilight Sanctuary (2nd channel divinity): create a 30-foot-radius sphere of dim light for 1 minute — when a creature ends its turn in it, choose either temp HP equal to 1d6 + cleric level OR end one effect causing it to be charmed or frightened. Divine Strike (8th): +1d8 psychic damage per weapon hit (2d8 at 14th). Midnight Shroud (17th): you become immune to the frightened condition; twilight sanctuary can end any effect causing sleep.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_circle-of-spores",
+    "fields": {
+      "name": "Circle of Spores",
+      "desc": "A druid subclass that sees life and death as part of a cycle, wielding the power of spores and rot. Circle Spells (2nd): chill touch, blind/deafness, gentle repose, animate dead, gaseous form, blight, confusion, cloudkill, contagion. Halo of Spores (2nd): when a creature moves within 10 feet of you, use a reaction to deal 1d4 necrotic damage (Constitution save negates) — this increases as you level. Symbiotic Entity (2nd): expend a Wild Shape use to awaken your spores for 10 minutes: gain temp HP equal to 4 × druid level, Halo of Spores damage doubles, your melee weapon attacks deal 1d6 extra necrotic damage. Fungal Infestation (6th): when a Small or Medium beast or humanoid dies within 10 feet of you, use a reaction to animate it as a zombie (basic stats) that obeys your commands for 1 hour. Spreading Spores (10th): as a bonus action while Symbiotic Entity is active, create a 10-foot-cube of toxic spores lasting 1 minute — creatures entering or starting there must save against Halo of Spores damage. Fungal Body (14th): immune to blinded, deafened, frightened, and poisoned conditions; critical hits against you are treated as normal hits.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_circle-of-stars",
+    "fields": {
+      "name": "Circle of Stars",
+      "desc": "A druid subclass that draws power from the night sky, using starlight maps and celestial patterns. Star Map (2nd): create a star map during a long rest; it functions as a druidic focus, and you always have the guidance cantrip plus can cast guiding bolt without a spell slot (proficiency bonus uses/long rest). Starry Form (2nd): expend a Wild Shape use to take on a constellation form for 10 minutes — choose Archer (bonus action to make a ranged spell attack dealing 1d8 + Wisdom radiant), Chalice (when you cast a healing spell, also restore 1d8 + Wisdom HP to yourself or another creature within 30 feet), or Dragon (treat concentration spell checks as a natural 10). Cosmic Omen (6th): roll a d6 when you finish a long rest — if odd, you have Weal (use a reaction to add 1d6 to an ally's attack or save); if even, Woe (use a reaction to subtract 1d6 from an enemy's attack or save). Twinkling Constellations (10th): Starry Form benefits improve — Archer can be used twice per turn, Chalice heals 2d8 + Wisdom, Dragon grants 20-foot fly speed. Full of Stars (14th): while in Starry Form, you become partially incorporeal — resistance to bludgeoning, piercing, and slashing damage.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_circle-of-wildfire",
+    "fields": {
+      "name": "Circle of Wildfire",
+      "desc": "A druid subclass that bonds with a Wildfire Spirit, understanding that destruction is necessary for new growth. Wildfire Spirit (2nd): as a bonus action (or as part of casting a spell), summon your Wildfire Spirit in an unoccupied space within 30 feet. The spirit uses the Wildfire Spirit stat block (acts on your initiative, 5-foot teleport burst when summoned dealing 2d6 fire in a 10-foot radius, fire immunity). Lasts until you dismiss it, it dies, or you summon it again. Enhanced Bond (2nd): while your spirit is summoned, your fire and healing spells gain +1d8 fire damage (fire) or +1d8 healing (healing). Circle Spells: burning hands, cure wounds, flaming sphere, scorching ray, plant growth, revivify, aura of life, fire storm, flame strike, mass cure wounds. Cauterizing Flames (6th): when a Small or larger creature dies within 60 feet of your spirit, you can use a reaction to create a spectral flame there — a creature within 5 feet of the flame can use an action to extinguish it and heal 2d10 + Wisdom HP (proficiency bonus flames active at a time). Blazing Revival (10th): if you drop to 0 HP while your spirit is alive, it explodes and you stabilize at 1 HP (once per long rest). Eternal Blaze (14th): summon your spirit as a bonus action without expending a Wild Shape use; when it dies, you gain resistance to fire damage for 1 minute.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_psi-warrior",
+    "fields": {
+      "name": "Psi Warrior",
+      "desc": "A fighter subclass that augments combat with psionic powers drawn from within. Psionic Power (3rd): psionic energy dice pool (d6s, amount = proficiency bonus × 2; recharge on a long rest, regain one on a short rest). Uses: Protective Field (reaction to reduce damage to you or an ally within 30 feet by the die roll + Intelligence modifier), Psionic Strike (after hitting with a weapon, expend a die and deal additional force damage equal to the die + Intelligence modifier), Telekinetic Movement (action to move one Large or smaller object or creature within 30 feet up to 30 feet in any direction; creature must fail a Strength save to be moved). Telekinetic Adept (7th): Psi-Powered Leap (bonus action fly speed = twice walking speed until end of turn) and Telekinetic Thrust (when you use Psionic Strike, the target must save or be knocked prone or moved 10 feet). Guarded Mind (10th): resistance to psychic damage; if you start your turn charmed or frightened, expend a die to end the condition. Bulwark of Force (15th): use Protective Field on any number of creatures (bonus action) for 1 minute (proficiency bonus uses/long rest). Telekinetic Master (18th): action to cast telekinesis (no slot) and make one weapon attack as a bonus action while concentrating on it (proficiency bonus uses/long rest).",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_rune-knight",
+    "fields": {
+      "name": "Rune Knight",
+      "desc": "A fighter subclass that harnesses ancient runes — inscriptions from giants — to enhance weapons, armor, and their own body. Rune Carver (3rd): learn two runes; inscribe them on objects during a short rest (one rune per item, proficiency bonus total active runes). Runes: Cloud (Wis advantage or Invisible), Fire (Int advantage or +2d6 fire on hit), Frost (Str advantage or restrained), Hill (Con advantage or +2d4 + Wis temp HP), Stone (Perception advantage or knocked prone), Storm (Acrobatics advantage or pushed 15 feet). Giant's Might (3rd): bonus action to grow Large for 1 minute and deal +1d6 damage on one weapon attack per turn (proficiency bonus uses/long rest). Runic Shield (7th): reaction to force a creature within 60 feet that was just hit to reroll its damage dice, using the lower result. Great Stature (10th): Giant's Might now makes you Large (or bigger) permanently — you grow 3d4 inches taller; Giant's Might damage becomes 1d8. Master of Runes (15th): invoke each rune twice per short/long rest (instead of once). Runic Juggernaut (18th): Giant's Might can make you Huge; reach increases by 5 feet; Giant's Might damage becomes 1d10.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_way-of-mercy",
+    "fields": {
+      "name": "Way of Mercy",
+      "desc": "A monk subclass that practices the healing arts alongside its capacity for harm — understanding both sides of the life cycle. Implements of Mercy (3rd): proficiency with Herbalism Kit and Insight; wear a mask of your choosing. Hand of Healing (3rd): when you take the Attack action, replace one attack with a touch that restores hit points equal to a roll of your Martial Arts die + Wisdom modifier (or spend 1 ki for the same healing without using an attack). Hand of Harm (3rd): when you hit a creature with an unarmed strike, expend 1 ki to deal additional necrotic damage equal to one Martial Arts die + Wisdom modifier; also apply the Poisoned condition until the end of the target's next turn (once per turn). Physician's Touch (6th): Hand of Healing can also end one disease or one of blinded/deafened/paralyzed/poisoned/stunned. Hand of Harm can also apply the Poisoned condition for 1 minute. Flurry of Healing and Harm (11th): when you use Flurry of Blows, replace each hit with Hand of Harm; replace each miss with Hand of Healing on yourself. Hand of Ultimate Mercy (17th): spend 5 ki to touch a creature dead no more than 24 hours and cast raise dead on it (free, no material component).",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_way-of-the-astral-self",
+    "fields": {
+      "name": "Way of the Astral Self",
+      "desc": "A monk subclass that draws forth an astral form — a manifestation of their spirit body — to overwhelm their foes. Arms of the Astral Self (3rd): spend 1 ki to summon spectral arms (use Wisdom instead of Strength for Athletics; attack with the arms using Wisdom; each arm deals 1d10 force damage; make two bonus arm attacks instead of one when you use Flurry of Blows). Visage of the Astral Self (6th): spend 1 ki to summon an astral visage (darkvision 120 feet; see invisible creatures; speak any language; you can attempt to frighten one creature within 10 feet as a bonus action). Body of the Astral Self (11th): summon both arms and visage simultaneously for 1 ki; while both are active, gain resistance to bludgeoning/piercing/slashing damage; when you take damage, reduce it by Wisdom modifier (minimum 1). Awakened Astral Self (17th): spend 5 ki to awaken your complete astral form — you can see invisible and ethereal creatures; arms deal 2d10 force damage; gain +2 AC; astral arms grant two additional reactions per round.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_oath-of-glory",
+    "fields": {
+      "name": "Oath of Glory",
+      "desc": "A paladin subclass who swears to perform glorious acts and inspire others through legendary deeds. Tenets: actions over words, strength of body, glory in battle. Oath Spells: guiding bolt, heroism, enhance ability, magic weapon, haste, protection from energy, compulsion, freedom of movement, legend lore, motivational speech (from Acquisitions Inc). Channel Divinity: Peerless Athlete (advantage on Str/Dex ability checks, can't be grappled, double carrying capacity for 10 minutes) and Inspiring Smite (distribute 2d8 + paladin level temp HP among creatures within 30 feet after Divine Smite). Aura of Alacrity (7th): your walking speed increases by 10 feet; when a creature starts their turn within your aura (10 feet), their speed increases by 10 feet. Glorious Defense (15th): when you or another creature within 10 feet is hit, use reaction to add Charisma modifier to the AC for that attack; if it misses, make one weapon attack against the attacker (Charisma modifier uses/long rest). Living Legend (20th): for 1 minute: Charisma replaces any d20 for spell attack rolls; once per turn on a miss, reroll the attack and use the new roll; if you fail a save, use a reaction to succeed instead.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_oath-of-the-watchers",
+    "fields": {
+      "name": "Oath of the Watchers",
+      "desc": "A paladin subclass sworn to guard against incursions from extraplanar threats — aberrations, celestials, elementals, fey, and fiends. Tenets: vigilance, loyalty, discipline. Oath Spells: alarm, detect magic, moonbeam, see invisibility, counterspell, nondetection, aura of purity, banishment, hold monster, scrying. Channel Divinity: Watcher's Will (advantage on Int/Wis/Cha saving throws for you and allies in your aura for 1 minute) and Abjure the Extraplanar (force Extraplanar creatures within 30 feet to make Wisdom saves or be turned for 1 minute). Aura of the Sentinel (7th): initiative rolls of you and allies within 10 feet increase by proficiency bonus. Vigilant Rebuke (15th): when you or a creature you can see makes an Int/Wis/Cha saving throw, use a reaction on a success to deal 2d8 + Charisma force damage to the creature that forced the save. Mortal Bulwark (20th): for 1 minute: truesight 120 feet; Extraplanar creatures have disadvantage on attack rolls against you; when you hit an Extraplanar creature, you can immediately attempt to banish it (Charisma save).",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_fey-wanderer",
+    "fields": {
+      "name": "Fey Wanderer",
+      "desc": "A ranger subclass that wanders the boundary between worlds, carrying Feywild magic on their shoulders. Dreadful Strikes (3rd): deal 1d4 psychic damage once per turn on a hit with a weapon (doesn't stack with Hunter's Mark). Fey Wanderer Magic: charm person, misty step, dispel magic, dimension door, mislead. Otherworldly Glamour (3rd): add Wisdom modifier to Charisma checks; proficiency in Deception, Performance, or Persuasion. Beguiling Twist (7th): when a creature within 120 feet succeeds on a save against being charmed or frightened, you can use reaction to redirect the effect to a different creature within 30 feet of the original target (Wisdom save or be charmed/frightened for 1 minute). Fey Reinforcements (11th): learn summon fey for free; cast it once per long rest without a slot. Misty Wanderer (15th): cast misty step without a slot (proficiency bonus uses/long rest); can bring a willing creature along when you do.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_swarmkeeper",
+    "fields": {
+      "name": "Swarmkeeper",
+      "desc": "A ranger subclass bonded with a swarm of nature spirits in the form of insects, birds, or similar creatures. Gathered Swarm (3rd): your swarm inhabits your space and remains bonded to you. Once per turn when you hit a creature, the swarm causes one additional effect (your choice): the target takes 1d6 piercing damage; the target must make a Strength save or be moved 15 feet in a direction you choose; you can move up to 5 feet without provoking opportunity attacks. Swarmkeeper Magic (3rd): mage hand (mote of swarm), faerie fire, web, gaseous form, arcane eye, giant insect, insect plague, veiled presence. Writhing Tide (7th): bonus action to fly up to 10 feet on your swarm for 1 minute (proficiency bonus uses/long rest). Mighty Swarm (11th): your Gathered Swarm damage becomes 1d8; you can knock targets prone instead of moving them; movement from the swarm doesn't provoke opportunity attacks. Swarming Dispersal (15th): reaction when you take damage to disperse into the swarm (reduce damage by half, teleport up to 30 feet).",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_phantom",
+    "fields": {
+      "name": "Phantom",
+      "desc": "A rogue subclass that brushes against death so often that they gain power from its proximity. Whispers of the Dead (3rd): whenever you finish a short or long rest, you gain a skill or tool proficiency of your choice stolen from the dead until you use this feature again. Wails from the Grave (3rd): immediately after dealing Sneak Attack damage, send necrotic energy into another creature within 30 feet of the target — it takes half the Sneak Attack dice in necrotic damage (proficiency bonus uses/long rest; recharge on short/long rest). Tokens of the Departed (9th): when a humanoid dies within 30 feet, use a reaction to create a Tiny Trinket (soul token) from it. While holding the token, you know if the soul it came from is in Hades. You can use the token in place of material components for speak with dead, targeting the token's soul directly. You can hold up to proficiency bonus tokens. Ghost Walk (13th): spend one Wails from the Grave use to enter a ghostly state for 10 minutes — 10-foot fly speed, immunity to opportunity attacks, resistance to bludgeoning/piercing/slashing from nonmagical attacks. Death's Friend (17th): Wails from the Grave recharges on every short rest; one creature per turn that your Sneak Attack damages grants you a soul token automatically.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_soulknife",
+    "fields": {
+      "name": "Soulknife",
+      "desc": "A rogue subclass that cuts minds and slips through space using psychic blades. Psionic Power (3rd): pool of psionic energy dice (d6s = proficiency bonus × 2; one recharges on short rest). Uses: Psi-Bolstered Knack (when you fail an ability check using a proficient skill or tool, roll a die and add it), Psychic Whispers (spend a die to establish telepathic communication with proficiency bonus creatures within 1 mile for a number of hours equal to the die roll). Psychic Blades (3rd): as part of the Attack action, manifest a psychic blade from your hand — melee weapon attack, no material component, 1d6 psychic damage, finesse, thrown (60 feet), vanishes after the hit. If you make two weapon attacks in an Attack action, the second is a bonus action with a d4 instead. Soul Blades (9th): Homing Strikes (spend a die after missing with a psychic blade to add the roll to the attack) and Psychic Teleportation (bonus action — throw a psychic blade 10–300 feet and teleport to the space it hit). Psychic Veil (13th): become invisible for 1 hour (ends if you attack or force a save); proficiency bonus uses/long rest. Rend Mind (17th): when you Sneak Attack a creature with a psychic blade, force a Wisdom save or the target is stunned until end of your next turn.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_aberrant-mind",
+    "fields": {
+      "name": "Aberrant Mind",
+      "desc": "A sorcerer subclass with psionic powers from contact with aberrant beings from the Far Realm. Telepathic Speech (1st): telepathy with one creature within 30 feet that speaks a language (understanding is mutual, lasts 1 minute, concentration not required; once per long rest). Psionic Spells (1st): always prepared — arms of Hadar, dissonant whispers, calm emotions, detect thoughts, hunger of Hadar, sending, Evard's black tentacles, summon aberration, telekinesis, rary's telepathic bond. Expenditure: cast any of these by spending 2 sorcery points instead of a spell slot. Warped Being (6th): resistance to psychic damage; advantage on Concentration saves. Revelation in Flesh (6th): spend 1–4 sorcery points (bonus action) to transform for 10 minutes — 1pt: breathe water or fly 30 feet (hover); 2pt: teleport 30 feet as a bonus action; 3pt: move through creatures and objects as difficult terrain; 4pt: see into Ethereal Plane 60 feet. Warping Implosion (14th): teleport 120 feet and send psychic feedback — creatures within 30 feet of your origin must make Strength saves or take 3d10 force and be pulled 30 feet toward your destination (half on success, no pull). Stable Anomaly (18th): you can't be surprised; advantage on attack rolls against creatures within 5 feet; enemies within 5 feet have disadvantage on saves against your spells.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_clockwork-soul",
+    "fields": {
+      "name": "Clockwork Soul",
+      "desc": "A sorcerer subclass drawing power from the plane of absolute law — Mechanus — channeling cosmic order. Clockwork Magic (1st): always prepared — alarm, protection from evil and good, aid, lesser restoration, dispel magic, protection from energy, freedom of movement, summon construct, wall of force, hold monster. Restore Balance (1st): reaction to cancel advantage or disadvantage on any roll a creature makes within 60 feet (proficiency bonus uses/long rest). Bastion of Law (6th): spend 1–5 sorcery points to create a magical ward on a willing creature within 30 feet — it gains 1d8 temp HP per sorcery point spent. The ward lasts until depleted or until you cast this again. Trance of Order (14th): bonus action to enter a heightened state for 1 minute: minimum roll of 10 on attack rolls, ability checks, and saves; creatures can't have advantage on attacks against you. Clockwork Cavalcade (18th): briefly summon clockwork spirits in a 30-foot cube — all spells and magic item charges in the cube are restored, all conditions on creatures in the cube end, all damaged nonmagical objects are fully repaired (once per long rest).",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_the-fathomless",
+    "fields": {
+      "name": "The Fathomless",
+      "desc": "A warlock subclass with a patron from the oceanic depths — a kraken, leviathan, or unknowable deep entity. Tentacle of the Deeps (1st): bonus action to summon a spectral tentacle (10-foot reach melee spell attack, 1d8 cold damage, target's speed halved until start of your next turn; lasts 1 minute). Gift of the Sea (1st): breathing water; swim speed 40 feet. Expanded Spells: create or destroy water, thunderwave, gust of wind, silence, lightning bolt, sleet storm, control water, freedom of movement, Bigby's hand, cone of cold. Oceanic Soul (6th): resistance to cold; while submerged, you can communicate telepathically with any creature also submerged within 1 mile. Guardian Coil (6th): when you or a creature you can see within your tentacle's range takes damage, use reaction to reduce that damage by 1d8 + Charisma modifier. Grasping Tentacles (10th): learn Evard's black tentacles (free, once per long rest without a slot; add Charisma modifier to damage while concentrating on it). When a creature is restrained by your black tentacles, you gain temp HP equal to your warlock level. Fathomless Plunge (14th): action to teleport yourself and up to five willing creatures within 30 feet to any point of water you can see within 1 mile (or familiar water within 1 mile if not visible); once per short/long rest.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_the-genie",
+    "fields": {
+      "name": "The Genie",
+      "desc": "A warlock subclass with a patron from the elemental planes — a noble Dao, Djinni, Efreeti, or Marid. Genie's Vessel (1st): a Tiny object serves as your vessel — the genie's home and your conduit. You can enter the vessel (action) to rest inside it (you can act from within, but can't move; lasts until you exit or you die). Bottled Respite: enter the vessel as an action; gain temp HP equal to warlock level + Charisma. Genie's Wrath (1st): once per turn, when you hit with an attack roll, deal extra damage based on genie type — Dao: bludgeoning, Djinni: thunder, Efreeti: fire, Marid: cold — equal to proficiency bonus. Expanded Spells by type (Dao: detect evil and good, sanctuary, phantasmal force, spike growth, create food and water, meld into stone, phantasmal killer, stoneskin, creation, wall of stone; Efreeti: burning hands, detect magic, scorching ray, suggestion, fireball, major image, fire shield, wall of fire, flame strike, geas). Elemental Gift (6th): resistance to your genie's damage type; fly speed 30 feet (hover) as a bonus action for 10 minutes (proficiency bonus uses/long rest). Sanctuary Vessel (10th): your vessel becomes a safe place for 6 creatures; they benefit from a short rest in 10 minutes; you can expend spell slots to heal resting creatures. Limited Wish (14th): utter a wish for a 6th-level-or-lower spell from any class list — no material components, no slot required (1d4 long rests before you can use this again).",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_bladesinging",
+    "fields": {
+      "name": "Bladesinging",
+      "desc": "A wizard subclass that blends arcane magic with martial swordplay (originally from Elven tradition). Training in War and Song (2nd): proficiency with one one-handed melee weapon; proficiency in Performance. Bladesong (2nd): bonus action to start a bladesong for 1 minute (can't wear medium/heavy armor, can't wield a two-handed or versatile weapon two-handed): +Intelligence modifier to AC, walking speed increases 10 feet, advantage on Acrobatics, +Intelligence modifier to Constitution concentration saves (proficiency bonus uses/long rest). Extra Attack (6th): attack twice on the Attack action (one of those attacks can be replaced by a cantrip). Song of Defense (10th): reaction when hit — spend a spell slot to reduce damage by 5 × the slot level. Song of Victory (14th): while Bladesong is active, add Intelligence modifier to melee weapon damage.",
+      "document": "tashas-cauldron"
+    }
+  },
+  {
+    "model": "api_v2.characterclass",
+    "pk": "tashas-cauldron_order-of-scribes",
+    "fields": {
+      "name": "Order of Scribes",
+      "desc": "A wizard subclass that treats spellbooks as living magical entities and crafts their spells through written mastery. Wizardly Quill (2nd): summon a magical quill (bonus action) that writes twice as fast and copies spells in 2 minutes per level instead of 2 hours. Awakened Spellbook (2nd): your spellbook gains a spark of sentience — use it as a spellcasting focus; when you cast a spell from it, you can change its damage type to any other damage type in the book; it can cast speak with dead once per day (asking about its previous owner); if destroyed, recreate it in a 1-hour ritual (retains all its knowledge). Master Scrivener (6th): after a long rest, magically scribe one 1st- or 2nd-level spell from your book on a scroll (free, lasts until used; bonus beyond normal scroll crafting). One Word of Power: use scroll as a free spell slot once per long rest. Manifest Mind (10th): bonus action to manifest your book's mind as a Tiny spectral image — it can move 30 feet per turn, you can cast spells through it as if you were in its space, and you can communicate through it. One with the Word (14th): while your Awakened Spellbook is on your person, you have advantage on all Intelligence (Arcana) checks; also, once per long rest when you fail a save or are hit, you can avoid the effect entirely — but three spell levels' worth of spells are lost from your book until you next cast those spells.",
+      "document": "tashas-cauldron"
+    }
   }
 ]
