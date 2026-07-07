@@ -1,0 +1,857 @@
+[
+  {
+    "model": "dcc.creature",
+    "pk": 1,
+    "fields": {
+      "name": "Basilisk",
+      "hit_dice": 6,
+      "armor_class": "16",
+      "attacks": [
+        "2 claws +4 (1d6)",
+        "1 bite +4 (1d8)"
+      ],
+      "movement": "30'",
+      "alignment": "N",
+      "special": [
+        "Petrifying gaze: any creature meeting gaze makes DC 14 Fort save or is turned to stone permanently; even a reflection can petrify",
+        "Thick hide: immune to fire",
+        "Kills on crit: a natural 20 is an automatic kill, not just petrification"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 2,
+    "fields": {
+      "name": "Black Pudding",
+      "hit_dice": 10,
+      "armor_class": "8",
+      "attacks": [
+        "1 pseudopod +6 (2d8, split on hit)"
+      ],
+      "movement": "10'",
+      "alignment": "N",
+      "special": [
+        "Acid: dissolves organic material (leather, rope, wood) in 1 round; metal in 1d6 rounds",
+        "Splitting: edged weapons split the pudding into 2 creatures each with half HD",
+        "Cold immunity, lightning/fire do double damage",
+        "Can squeeze through cracks 1\" wide"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 3,
+    "fields": {
+      "name": "Bugbear",
+      "hit_dice": 3,
+      "armor_class": "14",
+      "attacks": [
+        "1 weapon +2 (1d8+2)"
+      ],
+      "movement": "30'",
+      "alignment": "C",
+      "special": [
+        "Surprise: surprises on 1-4 on d6 due to silent movement",
+        "Intimidation: creatures with fewer HD must make Will save on first round or flee",
+        "Leader variant: 5 HD leader commands group; add +1 to all attacks while leader alive"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 4,
+    "fields": {
+      "name": "Chimera",
+      "hit_dice": 9,
+      "armor_class": "19",
+      "attacks": [
+        "2 claws +6 (1d6)",
+        "1 bite (lion) +6 (2d6)",
+        "1 bite (dragon) +6 (3d6)",
+        "breath weapon"
+      ],
+      "movement": "30'/50' fly",
+      "alignment": "C",
+      "special": [
+        "Breath weapon: each head can breathe 3×/day; roll d3 for type: 1=fire cone 30' (3d6 Ref DC 14), 2=lightning bolt 60' (2d8 Ref DC 12), 3=goat head gore (charges instead)",
+        "Multiple attacks: only limited to one breath per round",
+        "Regenerates 2 HP/round while any head alive"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 5,
+    "fields": {
+      "name": "Cockatrice",
+      "hit_dice": 5,
+      "armor_class": "13",
+      "attacks": [
+        "1 bite +3 (1d3, petrification)"
+      ],
+      "movement": "20'/60' fly",
+      "alignment": "N",
+      "special": [
+        "Petrifying bite: Fort DC 12 or turned to stone permanently on the SAME round as the bite (faster than a basilisk)",
+        "Petrifaction reversed by blood of cockatrice applied within 24 hours",
+        "Immune to own petrification"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 6,
+    "fields": {
+      "name": "Demon Type I (Barlgura)",
+      "hit_dice": 8,
+      "armor_class": "15",
+      "attacks": [
+        "2 fists +5 (1d6)",
+        "1 bite +5 (1d6)"
+      ],
+      "movement": "30'",
+      "alignment": "C",
+      "special": [
+        "Immune to non-magical weapons",
+        "Fire/cold/electricity resistance (half damage)",
+        "Gate (5%): summon another Type I demon",
+        "Darkness at will",
+        "Berserk: on wounds below 10 HP, gains +2 to attack"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 7,
+    "fields": {
+      "name": "Demon Type II (Hezrou)",
+      "hit_dice": 9,
+      "armor_class": "17",
+      "attacks": [
+        "2 claws +6 (1d6)",
+        "1 bite +6 (4d6)"
+      ],
+      "movement": "30'",
+      "alignment": "C",
+      "special": [
+        "Immune to non-magical weapons",
+        "Stench: all within 10' make Fort DC 13 each round or are nauseated (-2 to all rolls)",
+        "Gate (15%): summon a Type I or II demon",
+        "Telepathy 100'",
+        "Cannot be turned by clerics below 5th level"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 8,
+    "fields": {
+      "name": "Demon Type III (Glabrezu)",
+      "hit_dice": 10,
+      "armor_class": "18",
+      "attacks": [
+        "2 claws +7 (2d8)",
+        "2 pincers +7 (1d12)",
+        "1 bite +7 (1d6)"
+      ],
+      "movement": "30'",
+      "alignment": "C",
+      "special": [
+        "Immune to non-magical weapons",
+        "Can grant wishes (3×): wishes are corrupted and cost the recipient",
+        "Reverse gravity at will",
+        "Dispel magic at will (caster level 9)",
+        "Gate (20%): summon 1-2 Type I, one Type II, or one Type III"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 9,
+    "fields": {
+      "name": "Dragonborn (Red Dragon Hatchling)",
+      "hit_dice": 3,
+      "armor_class": "14",
+      "attacks": [
+        "1 bite +3 (1d6)",
+        "1 breath"
+      ],
+      "movement": "40'/60' fly",
+      "alignment": "C or N",
+      "special": [
+        "Fire breath (2×/day): 20' cone, 2d6 fire, Ref DC 10 for half",
+        "Immune to fire",
+        "Will grow: at 6 HD becomes a young red dragon (see full dragon entry)",
+        "Magic use: 5% chance each level of manifesting minor spells"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 10,
+    "fields": {
+      "name": "Fire Giant",
+      "hit_dice": 11,
+      "armor_class": "18 (plate)",
+      "attacks": "['1 greatclub +9 (3d8+6)','1 hurl boulder +7 (2d8)']",
+      "movement": "40'",
+      "alignment": "L or C",
+      "special": [
+        "Fire immunity",
+        "Hurl boulders: range 200', no penalty",
+        "Extraordinary strength: can uproot trees, collapse walls on successful attack roll",
+        "Berserker fury: when below half HP, gains extra attack"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 11,
+    "fields": {
+      "name": "Frost Giant",
+      "hit_dice": 10,
+      "armor_class": "17 (chain)",
+      "attacks": "['1 greataxe +8 (3d6+5)','1 hurl ice boulder +7 (2d10)']",
+      "movement": "40'",
+      "alignment": "C",
+      "special": [
+        "Cold immunity",
+        "Vulnerable to fire (+2 damage per die)",
+        "Hurl boulders: 150' range",
+        "Blizzard howl: once/battle, Fort DC 14 or all within 30' suffer -2 to rolls for 1 turn from cold shock"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 12,
+    "fields": {
+      "name": "Gelatinous Cube",
+      "hit_dice": 4,
+      "armor_class": "8",
+      "attacks": [
+        "1 pseudopod +0 (2d4 + engulf)"
+      ],
+      "movement": "10'",
+      "alignment": "N",
+      "special": [
+        "Engulf: on hit, target must make Ref DC 12 or be engulfed — takes 2d6 acid/round and is paralyzed",
+        "Transparent: surprised on 1-5 on d6 unless actively searching",
+        "Immune to lightning, cold, acid"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 13,
+    "fields": {
+      "name": "Ghoul",
+      "hit_dice": 2,
+      "armor_class": "13",
+      "attacks": [
+        "2 claws +1 (1d3+paralysis)",
+        "1 bite +1 (1d6+paralysis)"
+      ],
+      "movement": "30'",
+      "alignment": "C",
+      "special": [
+        "Paralyzing touch: Fort DC 13 or paralyzed 1d4 turns (elves immune)",
+        "Undead immunities: immune to sleep, charm, hold",
+        "Pack tactics: +1 to attack per additional ghoul in melee with same target",
+        "Stench: Fort DC 11 or -1 to attack while adjacent"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 14,
+    "fields": {
+      "name": "Harpy",
+      "hit_dice": 3,
+      "armor_class": "11",
+      "attacks": [
+        "2 talons +2 (1d4)"
+      ],
+      "movement": "20'/50' fly",
+      "alignment": "C",
+      "special": [
+        "Captivating song: all within 300' who can hear must make Will DC 13 or be compelled to walk toward harpy (can't attack)",
+        "Resistances: none special but song works through walls if heard",
+        "Song breaks on harpy attack or creature taking damage"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 15,
+    "fields": {
+      "name": "Hellhound",
+      "hit_dice": 5,
+      "armor_class": "16",
+      "attacks": [
+        "1 bite +4 (1d6+fire)"
+      ],
+      "movement": "40'",
+      "alignment": "L(evil) or C",
+      "special": [
+        "Fire breath (1×/round): 10' cone, 3d6 fire, Ref DC 13 for half",
+        "Fire immunity",
+        "Can sense invisible or ethereal creatures by heat",
+        "Loyal to master: morale never breaks if master within 60'"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 16,
+    "fields": {
+      "name": "Hydra",
+      "hit_dice": 8,
+      "armor_class": "15",
+      "attacks": [
+        "5–12 bites +4 each (1d6 each)"
+      ],
+      "movement": "20'",
+      "alignment": "N",
+      "special": [
+        "Multiple heads: starts with 5–12 (roll 1d8+4) heads; each head can attack each round",
+        "Severing heads: cutting a head off requires 6+ damage to a head in one strike; otherwise it regrows in 1 round (2 heads on natural 20 cut)",
+        "Fire/acid prevents regrowth",
+        "Each head has 8 HP; body has full HP"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 17,
+    "fields": {
+      "name": "Invisible Stalker",
+      "hit_dice": 8,
+      "armor_class": "17",
+      "attacks": [
+        "1 fist +6 (3d6)"
+      ],
+      "movement": "30'",
+      "alignment": "L(N) or N",
+      "special": [
+        "Permanent invisibility: only see with true seeing, dust of revealing, etc.",
+        "Perfect tracking: can track any assigned target across any distance, any plane",
+        "Resentful: on 20+ concentration, stalker may deliberately fail on 1d20=1 (secretly)",
+        "Wind form: can pass through any crack or opening"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 18,
+    "fields": {
+      "name": "Kobold",
+      "hit_dice": 0.5,
+      "armor_class": "13",
+      "attacks": [
+        "1 weapon +0 (1d4)"
+      ],
+      "movement": "20'",
+      "alignment": "L(C)",
+      "special": [
+        "Cunning traps: 60% chance any corridor has a kobold trap (DC 12 Ref or 1d6 damage)",
+        "Pack: +1 attack per 3 additional kobolds in melee",
+        "Daylight sensitivity: -1 to attack in bright light",
+        "Alarm cry: kobolds 3× normal hearing range for detecting intruders"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 19,
+    "fields": {
+      "name": "Lich",
+      "hit_dice": 10,
+      "armor_class": "20",
+      "attacks": [
+        "1 touch +8 (1d10+paralysis)"
+      ],
+      "movement": "30'",
+      "alignment": "C",
+      "special": [
+        "Paralyzing touch: Fort DC 16 or paralyzed 1d4 turns, even on miss (aura)",
+        "Undead immunities: immune to cold, electricity, polymorph, sleep, charm, fear",
+        "Level 11+ wizard spells: has at minimum 6th-level spells available",
+        "Phylactery: Lich cannot die while phylactery is intact; reform in 1d10 days",
+        "Fear aura: all within 10' must make Will DC 15 or be shaken (-2 to all rolls)"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 20,
+    "fields": {
+      "name": "Lizard Man",
+      "hit_dice": 2,
+      "armor_class": "14",
+      "attacks": [
+        "1 weapon +1 (1d8)",
+        "1 bite +1 (1d4)"
+      ],
+      "movement": "20'/30' swim",
+      "alignment": "N",
+      "special": [
+        "Aquatic advantage: +2 to all rolls in or near water",
+        "Hold breath: 15 minutes",
+        "Pack hunter: +1 attack per 2 additional lizard men targeting same creature",
+        "Ambush: surprise on 1-4 when in swampy terrain"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 21,
+    "fields": {
+      "name": "Manticore",
+      "hit_dice": 6,
+      "armor_class": "17",
+      "attacks": [
+        "2 claws +4 (1d4)",
+        "1 bite +4 (2d4)",
+        "tail spike volley"
+      ],
+      "movement": "30'/50' fly",
+      "alignment": "C",
+      "special": [
+        "Tail spikes: fire up to 6 spikes per round, each at +4 for 1d6 damage; range 60'; regenerate 12 spikes per day",
+        "Roar: once/battle, creatures within 30' must make Will DC 13 or be shaken 1 round",
+        "Intelligence: manticores plot and lie; may negotiate"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 22,
+    "fields": {
+      "name": "Medusa",
+      "hit_dice": 6,
+      "armor_class": "11",
+      "attacks": [
+        "1 weapon +3 (1d6)",
+        "poison hair (bonus)"
+      ],
+      "movement": "30'",
+      "alignment": "C",
+      "special": [
+        "Petrifying gaze: any creature meeting eyes must Fort DC 14 or be turned to stone; averting eyes imposes -4 to attack",
+        "Venomous hair: any creature within 5' must Fort DC 12 or take 1d6 Str damage",
+        "Reflection: a polished mirror shows medusa's gaze and it applies to her",
+        "Venomous bite through hair: +4 for 1d4 + Fort DC 12 or 2d6 Str"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 23,
+    "fields": {
+      "name": "Mummy",
+      "hit_dice": 6,
+      "armor_class": "17",
+      "attacks": [
+        "1 slam +4 (1d12 + mummy rot)"
+      ],
+      "movement": "20'",
+      "alignment": "L(evil)",
+      "special": [
+        "Mummy rot: Fort DC 14 or contract mummy rot — lose 1 point of Str each day until cured by Remove Curse; death if Str reaches 0",
+        "Undead immunities",
+        "Vulnerable to fire: takes double damage from fire; if on fire, must make Fort DC 12 each round or attacks are wild",
+        "Fear: creatures under 4 HD must make Will DC 11 or flee on sight"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 24,
+    "fields": {
+      "name": "Ogre",
+      "hit_dice": 4,
+      "armor_class": "15",
+      "attacks": [
+        "1 greatclub +4 (1d10+3)"
+      ],
+      "movement": "30'",
+      "alignment": "C",
+      "special": [
+        "Throw rocks: range 30', +3 for 1d8",
+        "Bellowing charge: on first round of combat, free charge attack at +2",
+        "Dim but memorable: can be bribed with food (Fort DC 8 to resist a good meal offer)",
+        "Ogre mage variant: 5 HD, can cast levitate/darkness/polymorph self 1×/day each"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 25,
+    "fields": {
+      "name": "Roc",
+      "hit_dice": 18,
+      "armor_class": "17",
+      "attacks": [
+        "2 talons +12 (2d10)",
+        "1 beak +12 (3d6)"
+      ],
+      "movement": "20'/150' fly",
+      "alignment": "N",
+      "special": [
+        "Carry prey: on two talon hits same target in one round, creature is snatched (Str DC 18 to break free)",
+        "Dive bomb: once/battle, dive at double speed for double damage with talons",
+        "Egg possession: adults with eggs are permanently enraged (+2 attack/damage)"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 26,
+    "fields": {
+      "name": "Salamander (Fire)",
+      "hit_dice": 8,
+      "armor_class": "16",
+      "attacks": [
+        "1 spear +6 (1d8+fire)",
+        "1 constrict +6 (2d6 fire)"
+      ],
+      "movement": "30'",
+      "alignment": "C",
+      "special": [
+        "Fire immunity",
+        "Constrict: on hit with tail, target must Fort DC 14 or take automatic constrict damage each round",
+        "Heat aura: all within 5' take 1d6 fire/round",
+        "Metal heating: metal weapons that hit a salamander deal only 1 point of damage as they melt; caster takes 1d6 fire"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 27,
+    "fields": {
+      "name": "Shadow",
+      "hit_dice": 3,
+      "armor_class": "13",
+      "attacks": [
+        "1 touch +2 (1d4 + Str drain)"
+      ],
+      "movement": "30'",
+      "alignment": "C",
+      "special": [
+        "Strength drain: each hit drains 1d4 Str (Fort DC 12 halves); death if Str reaches 0",
+        "Undead: create spawn from Str-drained victims",
+        "Only damaged by magic and silver weapons",
+        "Stealth: move silently in darkness, 95% undetected"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 28,
+    "fields": {
+      "name": "Stone Giant",
+      "hit_dice": 10,
+      "armor_class": "21 (natural)",
+      "attacks": [
+        "1 greatclub +8 (3d6+5)",
+        "1 hurl boulder +8 (2d12)"
+      ],
+      "movement": "40'",
+      "alignment": "N",
+      "special": [
+        "Hurl boulders: 300' range",
+        "Catch boulders: on successful Ref save can catch incoming boulders and throw back",
+        "Rocky camouflage: surprise on 1-3 when in rocky terrain",
+        "Stonesense: detect vibrations through stone floor 60'"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 29,
+    "fields": {
+      "name": "Treant",
+      "hit_dice": 8,
+      "armor_class": "21 (bark)",
+      "attacks": [
+        "2 branch slams +6 (2d8)"
+      ],
+      "movement": "30'",
+      "alignment": "L(G)",
+      "special": [
+        "Animate trees: call 1d2 trees within 60' to fight (treat as 3 HD creatures dealing 2d6)",
+        "Fire vulnerability: takes +2 damage per die from fire",
+        "Old growth: ancient treants (12+ HD) can speak to trees across entire forest",
+        "Trample: can move through small creatures dealing 1d12 each"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 30,
+    "fields": {
+      "name": "Wyvern",
+      "hit_dice": 7,
+      "armor_class": "17",
+      "attacks": [
+        "2 talons +5 (2d6)",
+        "1 bite +5 (1d8)",
+        "1 sting +5 (1d6+poison)"
+      ],
+      "movement": "20'/60' fly",
+      "alignment": "N",
+      "special": [
+        "Poison sting: Fort DC 14 or 2d6 Con damage (Fort DC 14 again in 1 round or death)",
+        "Fly-by attack: can attack and move full fly speed in same round",
+        "Snatch on two talon hits: same as roc snatching"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 40,
+    "fields": {
+      "name": "Abyssal Larva",
+      "hit_dice": 0.5,
+      "armor_class": "9",
+      "attacks": [
+        "1 bite +0 (1d3 + rot)"
+      ],
+      "movement": "15'",
+      "alignment": "C",
+      "special": [
+        "Soul rot: Fort DC 10 each hit or lose 1 point of Luck permanently",
+        "Wriggling mass: treat as a swarm (immune to individual weapons; area effects deal full damage)",
+        "Larvae are the damned: killing one permanently removes it from the cycle of souls"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 41,
+    "fields": {
+      "name": "Bone Devil (Osyluth)",
+      "hit_dice": 9,
+      "armor_class": "19",
+      "attacks": [
+        "2 claws +6 (1d4)",
+        "1 sting +6 (3d6+Fort DC 14 poison)",
+        "1 bone tail +6 (1d6)"
+      ],
+      "movement": "30'",
+      "alignment": "L(evil)",
+      "special": [
+        "Poison sting: Fort DC 14 or 3d6 Str damage over 1d6 rounds",
+        "See invisible",
+        "Immune to fire, cold",
+        "Gate (30%): summon 1-2 lesser devils",
+        "Only damaged by silver or magic weapons",
+        "Fear immunity; paralyze lesser undead at will"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 42,
+    "fields": {
+      "name": "Cave Fisher",
+      "hit_dice": 3,
+      "armor_class": "14",
+      "attacks": [
+        "1 claw +3 (1d6)",
+        "filament trap"
+      ],
+      "movement": "15'/30' wall-climb",
+      "alignment": "N",
+      "special": [
+        "Filament: shoots sticky filament 60', Fort DC 12 or stuck (Str DC 16 to break)",
+        "Reel in: pulls stuck target 10'/round",
+        "Scuttles: immune to difficult terrain on rock/cave surfaces",
+        "Dangerous in packs: filaments can immobilize an entire party in 2 rounds"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 43,
+    "fields": {
+      "name": "Crypt Thing",
+      "hit_dice": 6,
+      "armor_class": "15",
+      "attacks": [
+        "1 touch +4 (1d6 + teleport)"
+      ],
+      "movement": "30'",
+      "alignment": "N",
+      "special": [
+        "Teleport others: on hit, target is teleported to a random dungeon room (Ref DC 14 to resist)",
+        "Undead: immunities",
+        "Anchor: cannot leave its crypt",
+        "Power of place: crypt thing has +2 to all rolls inside its crypt"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 44,
+    "fields": {
+      "name": "Demon Fly",
+      "hit_dice": 4,
+      "armor_class": "13",
+      "attacks": [
+        "1 bite +3 (1d4+poison)",
+        "2 claws +3 (1d3)"
+      ],
+      "movement": "10'/40' fly",
+      "alignment": "C",
+      "special": [
+        "Venomous bite: Fort DC 12 or paralyzed 1d4 rounds",
+        "Drone: all creatures within 10' must Fort DC 11 each round or be nauseated",
+        "Compound eyes: cannot be flanked; +4 to Perception"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 45,
+    "fields": {
+      "name": "Doppelganger",
+      "hit_dice": 4,
+      "armor_class": "12",
+      "attacks": [
+        "1 bite +3 (1d12)",
+        "1 claw +3 (1d6)"
+      ],
+      "movement": "30'",
+      "alignment": "N",
+      "special": [
+        "Shapeshift: can perfectly duplicate any humanoid seen; takes 1 round",
+        "Memory theft: on killing a target, can access its memories for 1 hour",
+        "Detect thoughts at will (30' range)",
+        "Immune to sleep and charm",
+        "If killed, melts into gray ooze revealing true form"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 46,
+    "fields": {
+      "name": "Giant Centipede",
+      "hit_dice": 1,
+      "armor_class": "11",
+      "attacks": [
+        "1 bite +0 (1d4+poison)"
+      ],
+      "movement": "30'",
+      "alignment": "N",
+      "special": [
+        "Poison: Fort DC 12 or take 1d6 Str damage over 1 round (Str 0 = death)",
+        "Climbing: moves on walls and ceilings at full speed",
+        "Swarm variant: 4 HD swarm, attacks everyone in 10' radius"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 47,
+    "fields": {
+      "name": "Giant Rat",
+      "hit_dice": 0.5,
+      "armor_class": "11",
+      "attacks": [
+        "1 bite +0 (1d4+disease)"
+      ],
+      "movement": "30'/swim 15'",
+      "alignment": "N",
+      "special": [
+        "Filth fever: Fort DC 9 each bite; fever onset 1d3 days, -2 Str/-2 Sta while diseased",
+        "Pack instinct: rats will not retreat while any rat in pack is fighting",
+        "Drowning surprise: attack as part of swimming; +2 to hit in water"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 48,
+    "fields": {
+      "name": "Grave Worm",
+      "hit_dice": 5,
+      "armor_class": "11",
+      "attacks": [
+        "1 bite +4 (1d8)",
+        "1 tail +4 (2d6 crush)"
+      ],
+      "movement": "20'/burrow 15'",
+      "alignment": "N",
+      "special": [
+        "Burrowing: moves through soil at 15'/round; creates tunnels 5' diameter",
+        "Acid trail: leaves slippery acid trail (Ref DC 10 or fall; 1d4 acid to fallen)",
+        "Sense of death: can smell dead flesh within 300'",
+        "Swallowed whole on crit: Fort DC 15 or swallowed (4d6 acid per round)"
+      ],
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.creature",
+    "pk": 49,
+    "fields": {
+      "name": "Iron Cobra",
+      "hit_dice": 3,
+      "armor_class": "16",
+      "attacks": [
+        "1 bite +4 (1d4+poison)"
+      ],
+      "movement": "30'",
+      "alignment": "N",
+      "special": [
+        "Poison: Fort DC 13 or 2d6 Str over 1d4 rounds",
+        "Construct: immune to sleep, charm, hold; damaged only by +1 or better weapons",
+        "Track scent: follow a specific scent 1 mile regardless of terrain",
+        "Winding up: if spring is wound down (1d6 hits), it stops moving until rewound"
+      ],
+      "document": "dcc-core"
+    }
+  }
+]
