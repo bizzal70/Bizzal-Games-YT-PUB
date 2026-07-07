@@ -1,0 +1,62 @@
+name: Long-form topic scout
+
+on:
+  schedule:
+    # Sunday 9pm MT (03:00 UTC Monday) — populate queue for the week ahead
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+    inputs:
+      day:
+        description: "Override date YYYY-MM-DD (default: today)"
+        required: false
+        default: ""
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    env:
+      TZ: America/Denver
+      BIZZAL_OPENAI_API_KEY: ${{ secrets.BIZZAL_OPENAI_API_KEY }}
+      BIZZAL_YT_DATA_API_KEY: ${{ secrets.BIZZAL_YT_DATA_API_KEY }}
+      BIZZAL_OPENAI_MODEL: "gpt-4o"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -q psycopg2-binary PyYAML
+
+      - name: Run topic scout
+        env:
+          BIZZAL_DB_URL: ${{ secrets.BIZZAL_DB_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          DAY="${{ github.event.inputs.day }}"
+          if [ -n "$DAY" ]; then
+            python bin/longform/topic_scout.py --day "$DAY"
+          else
+            python bin/longform/topic_scout.py
+          fi
+
+      - name: Commit topic queue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/longform/topic_queue.json || true
+          if git diff --cached --quiet; then
+            echo "no queue changes to commit"
+          else
+            git commit -m "chore(longform): update topic queue [skip ci]"
+            git pull --rebase --autostash origin HEAD
+            git push
+          fi
