@@ -1,0 +1,146 @@
+[
+  {
+    "model": "dcc.item",
+    "pk": 1,
+    "fields": {
+      "name": "Sword of Air and Darkness",
+      "bonus": "+2 to attack and damage",
+      "benefit": "On a natural 19-20, target is transported to the ethereal plane for 1d6 rounds (Fort DC 14 resists). Once per day can cast darkness (100' radius) as a spell check result of 18.",
+      "curse": "The sword whispers the names of the slain to its wielder during sleep; Will DC 12 each night or lose 1 point of Luck permanently to the sword's hunger.",
+      "desc": "A black-bladed weapon with a faint moaning wind audible to the wielder.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 2,
+    "fields": {
+      "name": "Ring of Spell Storing",
+      "bonus": "",
+      "benefit": "Can hold up to 3 levels of wizard or cleric spells (cast into it by any spellcaster). The wearer can release any stored spell as a free action, using the original spell check result at time of storage.",
+      "curse": "Ring becomes uncomfortably hot when a stored spell is released, dealing 1 HP of fire damage to the wearer per spell level released.",
+      "desc": "A plain silver band with a hair-thin crack that glows faintly when storing a spell.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 3,
+    "fields": {
+      "name": "Potion of Giant Strength",
+      "bonus": "",
+      "benefit": "For 1 turn, treat Strength as 20 (modifier +4 to all Strength rolls and melee damage). Attack die improves two steps.",
+      "curse": "After the effect ends, 1d3 points of Strength are drained until the next long rest.",
+      "desc": "Tastes of iron and earth; roiling brown color.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 4,
+    "fields": {
+      "name": "Gauntlets of the Ogre King",
+      "bonus": "+3 to all melee damage",
+      "benefit": "Treat Strength as 18 while wearing. Can tear open doors, barricades, and locks as a warrior Mighty Deed at -2 to the deed die.",
+      "curse": "The wearer cannot perform tasks requiring fine motor skills (picking pockets, lock picking, spell casting with somatic components) without making a DC 12 Agility check.",
+      "desc": "Massive iron gauntlets engraved with a crude orc face.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 5,
+    "fields": {
+      "name": "Cloak of the Mountaineer",
+      "bonus": "",
+      "benefit": "Grants a climbing speed equal to ground speed; automatically succeed at all climb checks except overhang (DC 12). Once per day, feather fall for 1 round.",
+      "curse": "Cloak whispers urges to scale things regardless of danger; Will DC 9 each time a tall structure is visible or the wearer must move toward it.",
+      "desc": "Brown and gray patches, always dusty regardless of cleaning.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 6,
+    "fields": {
+      "name": "Staff of Disruption",
+      "bonus": "+2 to attack and damage",
+      "benefit": "On a hit against an undead creature, it is turned (as per cleric Turn Unholy at a result of 18). On a natural 20 vs. undead, it is destroyed. Can be used to detect undead within 30' (vibrates).",
+      "curse": "Clerics of chaos cannot wield it — it deals 1d6 damage to them per round held.",
+      "desc": "Pale birchwood carved with intertwined holy symbols of three competing faiths.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 7,
+    "fields": {
+      "name": "Helm of the Lizard King",
+      "bonus": "",
+      "benefit": "Grants command over all reptiles and lizard men within 60' (Will DC 12 to resist). Immune to fear while wearing.",
+      "curse": "Wearer cannot benefit from healing magic while wearing the helm — wounds close on their own (1 HP per hour).",
+      "desc": "Ornate scaled iron helm with a crest shaped like a lizard crest. Extremely uncomfortable.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 8,
+    "fields": {
+      "name": "Boots of Mist-Stepping",
+      "bonus": "",
+      "benefit": "Once per day, step through up to 30' of air as a misty form (cannot be intercepted, pass through bars, move silently). Lasts 1 round — must materialize in unoccupied space.",
+      "curse": "After each use, save Fort DC 11 or be partially dematerialized — take 1d3 damage over 1d4 rounds as the body reforms.",
+      "desc": "Gray suede boots that never make sound; always slightly damp.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 9,
+    "fields": {
+      "name": "The Grimoire of Zulmak",
+      "bonus": "",
+      "benefit": "A spell book containing three unique 3rd-level wizard spells (Zulmak's Binding Chains, Eye of the Undying, Whispers from the Dark). Reading it grants these spells as known spells (no normal study time required).",
+      "curse": "Each time a spell from this book is cast, roll d6: on a 1, the reader receives one level of corruption from Zulmak's residual influence. On a natural 1 spell check with these spells, greater corruption always results.",
+      "desc": "Black iron covers, pages of vellum, ink that remains wet to the touch.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 10,
+    "fields": {
+      "name": "Amulet of Luck",
+      "bonus": "+1 Luck permanently when attuned (via week of wearing)",
+      "benefit": "Once per day, the wearer may reroll any single die result and take the better roll (declared before the reroll).",
+      "curse": "If the wearer dies while wearing the amulet, it shatters permanently.",
+      "desc": "A carved four-leaf clover in pale green jade on a simple cord.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 11,
+    "fields": {
+      "name": "Scrolls of the Forbidden Summoning",
+      "bonus": "",
+      "benefit": "Contains the ritual for summoning a Demon Type II or III (judge's choice) without a spell check. The summoning is not bound — the demon is immediately hostile. Any caster reading the scroll must make Will DC 13 or be compelled to complete the ritual.",
+      "curse": "Compulsion DC increases to 16 if the reader is chaotic. Once read, the scroll crumbles to ash.",
+      "desc": "Stored in a lead tube; scrolls smell of sulfur; edges are scorched.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 12,
+    "fields": {
+      "name": "Dagger of the Assassin",
+      "bonus": "+3 to attack and damage when attacking a surprised or unaware target",
+      "benefit": "On a backstab (thief ability), add +2d6 damage beyond normal backstab bonus. Once per session, may be used to deal automatic maximum damage on one attack when the target is unaware.",
+      "curse": "The dagger must taste blood at least once per week or it begins to drain 1 Luck per day from the wielder.",
+      "desc": "Narrow black blade with a notched edge; handle of dark bone.",
+      "document": "dcc-core"
+    }
+  }
+]
