@@ -1,0 +1,175 @@
+name: Long-form daily pipeline
+
+on:
+  schedule:
+    # Mon/Wed/Fri 10am MT (16:00/17:00 UTC depending on DST)
+    - cron: "0 16 * * 1,3,5"
+    - cron: "0 17 * * 1,3,5"
+  workflow_dispatch:
+    inputs:
+      system:
+        description: 'System to run: dnd5e | shadowdark | dcc | all'
+        required: false
+        default: "all"
+      dry_run:
+        description: 'Set "true" to generate + render but skip YouTube upload'
+        required: false
+        default: "false"
+      privacy:
+        description: "YouTube privacy: unlisted | private | public"
+        required: false
+        default: "unlisted"
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    outputs:
+      proceed: ${{ steps.guard.outputs.proceed }}
+    steps:
+      - id: guard
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "manual run; skipping time guard"
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          hour="$(TZ=America/Denver date +%H)"
+          today="$(TZ=America/Denver date +%F)"
+          dow="$(TZ=America/Denver date +%u)"  # 1=Mon 3=Wed 5=Fri
+
+          # Only run on Mon/Wed/Fri
+          if [[ "$dow" != "1" && "$dow" != "3" && "$dow" != "5" ]]; then
+            echo "not a longform day (dow=$dow); skipping"
+            echo "proceed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Catchup guard
+          if [ "${hour}" -gt "10" ] 2>/dev/null; then
+            ran_today=false
+            for reg in data/state/published_registry_longform_dnd5e.json \
+                       data/state/published_registry_longform_shadowdark.json \
+                       data/state/published_registry_longform_dcc.json; do
+              if [ -f "${reg}" ] && grep -q "\"day\": \"${today}\"" "${reg}"; then
+                ran_today=true; break
+              fi
+            done
+            if [ "${ran_today}" = "false" ]; then
+              echo "catchup: past 10am MT, no longform entry for ${today} -- proceeding"
+              echo "proceed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "longform already ran today (${today}); skipping"
+          else
+            echo "before 10am MT (${hour}); skipping early trigger"
+          fi
+          echo "proceed=false" >> "$GITHUB_OUTPUT"
+
+  run:
+    needs: guard
+    if: needs.guard.outputs.proceed == 'true'
+    runs-on: ubuntu-latest
+    env:
+      TZ: America/Denver
+      BIZZAL_DB_URL: ${{ secrets.BIZZAL_DB_URL }}
+      BIZZAL_OPENAI_API_KEY: ${{ secrets.BIZZAL_OPENAI_API_KEY }}
+      BIZZAL_REPLICATE_API_TOKEN: ${{ secrets.BIZZAL_REPLICATE_API_TOKEN }}
+      BIZZAL_YT_CLIENT_ID: ${{ secrets.BIZZAL_YT_CLIENT_ID }}
+      BIZZAL_YT_CLIENT_SECRET: ${{ secrets.BIZZAL_YT_CLIENT_SECRET }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      BIZZAL_YT_TOKEN_FILE: /home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/.secrets/youtube_token.json
+      BIZZAL_YT_NONINTERACTIVE: "1"
+      BIZZAL_OPENAI_MODEL: "gpt-4o"
+      BIZZAL_ENABLE_AI: "1"
+      BIZZAL_ENABLE_AI_SCRIPT: "1"
+      BIZZAL_ENABLE_TTS: "1"
+      BIZZAL_ENABLE_BG_IMAGE: "1"
+      BIZZAL_ENABLE_BG_MUSIC: "1"
+      BIZZAL_BG_MUSIC_GAIN: "0.20"
+      BIZZAL_TTS_SPEED: "0.92"
+      BIZZAL_BRAND_ICON_SIZE: "100"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ffmpeg
+        run: sudo apt-get install -y ffmpeg
+
+      - name: Install Python deps
+        run: pip install -q psycopg2-binary PyYAML Pillow
+
+      - name: Materialize YouTube OAuth token
+        env:
+          BIZZAL_YT_TOKEN_JSON: ${{ secrets.BIZZAL_YT_TOKEN_JSON }}
+        run: |
+          mkdir -p .secrets
+          echo "$BIZZAL_YT_TOKEN_JSON" > .secrets/youtube_token.json
+
+      - name: Determine systems to run
+        id: systems
+        run: |
+          INPUT="${{ github.event.inputs.system || 'all' }}"
+          DOW="$(TZ=America/Denver date +%u)"
+          if [ "$INPUT" = "all" ]; then
+            # Rotate: Mon=dnd5e, Wed=shadowdark, Fri=dcc
+            case "$DOW" in
+              1) echo "systems=dnd5e"     >> "$GITHUB_OUTPUT" ;;
+              3) echo "systems=shadowdark" >> "$GITHUB_OUTPUT" ;;
+              5) echo "systems=dcc"       >> "$GITHUB_OUTPUT" ;;
+              *) echo "systems=dnd5e"     >> "$GITHUB_OUTPUT" ;;
+            esac
+          else
+            echo "systems=$INPUT" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run long-form pipeline
+        env:
+          BIZZAL_CLOUD_SYSTEMS: ${{ steps.systems.outputs.systems }}
+          BIZZAL_YT_PRIVACY: ${{ github.event.inputs.privacy || 'public' }}
+          BIZZAL_SKIP_PUBLISH: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
+        run: |
+          IFS=',' read -ra SYSTEMS <<< "$BIZZAL_CLOUD_SYSTEMS"
+          for sys in "${SYSTEMS[@]}"; do
+            sys="$(echo "$sys" | tr -d ' ')"
+            echo "=== longform: $sys ==="
+            bin/longform/run_longform_for_system.sh "$sys" || {
+              echo "WARNING: longform failed for $sys (non-fatal)"
+            }
+          done
+
+      - name: Archive render to storage
+        if: github.event.inputs.dry_run != 'true'
+        env:
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          BIZZAL_STORAGE_BUCKET: renders
+        run: |
+          TODAY="$(TZ=America/Denver date +%F)"
+          IFS=',' read -ra SYSTEMS <<< "${{ steps.systems.outputs.systems }}"
+          for sys in "${SYSTEMS[@]}"; do
+            sys="$(echo "$sys" | tr -d ' ')"
+            bin/core/archive_render_to_storage.sh "longform_${sys}" "$TODAY" || true
+          done
+
+      - name: Commit state back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/state data/longform/topic_queue.json || true
+          if git diff --cached --quiet; then
+            echo "no state changes to commit"
+          else
+            git commit -m "chore(state): update longform registry [skip ci]"
+            git pull --rebase --autostash origin HEAD
+            git push
+          fi
