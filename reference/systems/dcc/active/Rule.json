@@ -5,7 +5,8 @@
     "fields": {
       "name": "The Dice Chain",
       "desc": "DCC does not use +1/-1 bonuses the way other games do. Instead it shifts between non-standard polyhedrons: d3–d4–d5–d6–d7–d8–d10–d12–d14–d16–d20–d24–d30. When an effect gives a bonus (better die step) you move one step right; a penalty moves you left. Example: a warrior with a d8 for attacks gets a bonus to attacks — they now roll a d10. Two bonuses = d12. This system means low bonuses feel mechanical (shift a die) and high bonuses feel dramatic (you're rolling a d24). Minimum die is d3; maximum is d30. Multiple shifts stack: two bonuses on a d6 gives d8, three bonuses gives d10.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "DCC replaces +1/-1 bonuses with steps along a chain of dice (d3-d4-d5-d6-d7-d8-d10-d12-d14-d16-d20-d24-d30). A bonus shifts you one die larger, a penalty one smaller, and steps stack. Minimum d3, maximum d30, so big bonuses literally hand you a bigger die."
     }
   },
   {
@@ -14,7 +15,8 @@
     "fields": {
       "name": "Luck",
       "desc": "Every DCC character has a Luck score (3-18). Luck can be burned permanently to add to any roll: spend 1 Luck point to add +1 to any die roll (declared before the roll). Once burned, Luck is permanent ability score loss — it rarely recovers. Thieves can earn Luck back. Warriors can burn Luck on attack rolls. Halflings burn Luck more efficiently (d3 die, not d1 for the bonus). Luck at character creation affects birth augur: the circumstance of birth (roll on a d30 table) determines which roll type the character's Luck modifier applies to. Example: 'Lived through famine' means +/- Luck modifier applies to poison saves specifically.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "Every character has a Luck score you can burn permanently for +1 per point, at the cost of ability-score loss that rarely returns. Thieves regain Luck, warriors burn it on attacks, halflings burn it more efficiently, and a birth augur ties your Luck modifier to one roll type."
     }
   },
   {
@@ -23,7 +25,8 @@
     "fields": {
       "name": "Mighty Deeds of Arms",
       "desc": "Warriors and Dwarves can attempt a Mighty Deed of Arms on any attack: before the attack roll, declare the Deed (push, disarm, trip, blind, sunder armor, ride-by attack, etc.). The Deed succeeds if: (1) the attack hits, AND (2) the attack die shows a number equal to or greater than the Deed die threshold (starts at 3, the threshold is always 3+). There is no roll for the Deed itself — no opposed check, no saving throw (unless the Judge rules one is appropriate). The die result also determines the Deed's magnitude: a result of 3 is 'barely works', a 7+ is 'spectacular'. Deed die scales: d3 at level 1, up to d10+ at high levels.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "Warriors and Dwarves declare a Deed (trip, disarm, blind, sunder) before attacking; it works if the attack hits AND the Deed die shows 3+, with the die value setting how spectacular it is. No opposed roll, no save. The Deed die grows with level from d3 up to d10+."
     }
   },
   {
@@ -32,7 +35,8 @@
     "fields": {
       "name": "Spell Check",
       "desc": "All spells in DCC are cast by rolling a spell check: d20 + relevant ability modifier (Int for wizards, Personality for clerics) + caster level. The result is looked up on the spell's individual result table — not a universal table. Each spell has its own ladder of results from 'lost and corrupted' (natural 1) through weak success (12-13) to spectacular mastery (32+). Spells are not memorized per Vancian convention — they are 'wielded' and may be lost on failure. A result below 12 is typically a failure: the spell is not cast, but the caster keeps the spell unless a 1 was rolled. Clerics add Personality, not Intelligence.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "Every spell is cast by rolling d20 + ability mod (Int for wizards, Personality for clerics) + level against that spell's own result table, with no fixed slots. Higher results scale the effect; under about 12 usually fails, but you keep the spell unless you rolled a natural 1."
     }
   },
   {
@@ -41,7 +45,8 @@
     "fields": {
       "name": "Corruption",
       "desc": "When a wizard rolls a natural 1 on a spell check, the spell is permanently lost AND the wizard rolls on the Corruption table. Roll d6+Luck modifier (or d10 for major corruption): results 1-2 are Minor (cosmetic, temporary Luck loss), 3-4 are Major (personality changes, ability score drain, physical deformity), 5+ are Greater (transformation, madness, planar affliction). Corruption is permanent — it cannot be cured by Remove Curse. A heavily corrupted wizard looks increasingly monstrous and alien. This is intentional: the road to arcane mastery costs your humanity.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "A wizard's natural 1 on a spell check loses the spell permanently and forces a corruption roll (d6+Luck, worse for major). Results run from cosmetic through ability drain and deformity to full transformation or madness. Corruption is permanent and can't be Remove Cursed."
     }
   },
   {
@@ -50,7 +55,8 @@
     "fields": {
       "name": "The Funnel",
       "desc": "0-level play is DCC's signature campaign opener: each player creates 3-4 0th-level characters (peasants with random occupations, 1d4 HP, 1 weapon from their trade). These fragile commoners are run through a lethal dungeon scenario — most will die. Survivors advance to 1st level and choose a class based on their ability scores and what felt natural. The Funnel creates table investment: your 1st-level warrior survived by being clever and lucky, not by being optimal. 0-level characters have no class, no class abilities, no spells — just raw ability scores, 1 random trade good, and stubbornness.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "DCC opens at 0-level: each player runs 3-4 random peasants through a lethal dungeon. Most die, and survivors pick a class and reach 1st level. It earns table investment because your warrior lived by being clever and lucky, not optimal. 0-level characters have no class or spells."
     }
   },
   {
@@ -59,7 +65,8 @@
     "fields": {
       "name": "Patron Bond and Invoke Patron",
       "desc": "Wizards and Elves can bond with a patron (a demon lord, elder deity, cosmic horror) using the Patron Bond spell. Once bonded, they learn Invoke Patron (a 1st-level spell) and patron-specific spells. Invoke Patron always succeeds at some level (no corruption on failure) but the results depend on whether the patron is pleased. Regular service (roleplay requirements) improves patron response; neglect or betrayal worsens it. Patron Taint: each patron bond attempt risks patron taint — the patron's personality overwrites aspects of the wizard's. Multiple patron bonds are possible but taint accumulates. Patrons have individual spells, unique tables, and boons listed in the core book.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "Wizards and Elves bond to a patron (demon lord, elder god) to learn Invoke Patron and patron spells. Invoke always does something with no corruption on failure, but the result depends on the patron's mood, improved by service. Each bond risks patron taint, which accumulates and rewrites personality."
     }
   },
   {
@@ -68,7 +75,8 @@
     "fields": {
       "name": "Saving Throws",
       "desc": "DCC has three saving throws, not five. Fortitude (Fort): resists physical effects — poison, disease, paralysis, death. Reflex (Ref): avoids area effects — traps, breath weapons, explosions. Willpower (Will): resists mental effects — charm, fear, confusion, spells targeting the mind. Each class has a 'class save' (the one that improves fastest) listed on its advancement table. Luck modifier applies to ONE type of saving throw per character (determined by birth augur roll). Action dice do not apply to saves — saves use d20 + bonus vs. DC. There is no proficiency bonus or proficiency die for saves in DCC.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "DCC uses three saves: Fortitude (poison, disease, paralysis, death), Reflex (traps, breath, blasts), and Will (charm, fear, mind effects). Each class has one class save that improves fastest. The Luck modifier applies to just one save type per character, set by birth augur."
     }
   },
   {
@@ -77,7 +85,8 @@
     "fields": {
       "name": "Disapproval (Cleric Mechanic)",
       "desc": "Every time a cleric fails a spell check (rolls below the success threshold), their deity's disapproval increases by 1. Disapproval starts at only triggering on a natural 1. As disapproval grows, the natural result range that triggers disapproval expands — eventually a cleric might trigger disapproval on a 1 through 4. When disapproval is triggered, roll on the Disapproval Table: results include losing access to spells, being commanded to perform acts of penance, suffering temporary ability score damage, or being struck down. Disapproval resets to 1 after a full night of prayer, significant acts of faith, or meeting major religious obligations.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "Each failed cleric spell check raises deity disapproval, and the natural-roll range that triggers it widens over the day, starting at just a 1. When triggered, roll the Disapproval Table for lost spells, penance, ability damage, or worse. Rest, prayer, and acts of faith reset it to 1."
     }
   },
   {
@@ -86,7 +95,8 @@
     "fields": {
       "name": "Birth Augur",
       "desc": "At character creation, roll d30 on the Birth Augur table to determine the context of the character's birth (e.g., 'Born on the battlefield,' 'Survived a shipwreck,' 'Child of a demon'). The augur specifies which die roll the character's Luck modifier applies to permanently: it might be attack rolls, poison saves, critical hit results, or something specific like 'damage from crossbows'. The Luck modifier applies ONLY to that one type of roll for the whole character's life — spending Luck gives +1 to any roll, but the Birth Augur gives a free ongoing bonus (or penalty) to a single roll type. This is one of DCC's most memorable character creation quirks.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "A d30 roll at creation sets your birth context and permanently ties your Luck modifier to one roll type: attack rolls, poison saves, crit results, even damage from crossbows. That free ongoing bonus or penalty applies for life, separate from spending Luck for a one-off +1."
     }
   },
   {
@@ -95,7 +105,8 @@
     "fields": {
       "name": "Critical Hits",
       "desc": "Critical hits in DCC use a table, not just double damage. When a creature rolls a natural 20 (or meets its crit range, which Warriors expand at high levels), it rolls on a Crit Table using a Crit Die determined by its class and level. Results range from 'deal maximum damage' (weak crits) to 'sever limb,' 'drop weapon,' 'blind eye,' 'instant death,' or 'embed weapon in target.' Warriors use Table III; wizards use Table I (rarely). Higher crit dice = better table outcomes. Targets also roll on a fumble table on natural 1s: results include dropping weapons, hitting allies, tripping, or breaking equipment.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "Crits use tables, not just double damage. On a natural 20 (Warriors widen this range) you roll a Crit Die set by class and level on a crit table, from max damage up to severed limbs, blindness, or instant death. Bigger crit dice reach nastier results; natural 1s send you to a fumble table."
     }
   },
   {
@@ -104,7 +115,8 @@
     "fields": {
       "name": "Action Dice",
       "desc": "Low-level characters have one action die (d20). As Warriors, Dwarves, and eventually other classes level, they gain additional action dice — each action die can be used for one attack or one spell cast per round. This is not just 'extra attacks'; each action die is independent and can be used flexibly. Example: a level 8 Warrior might roll d20+d14: one for a regular attack and one for a Mighty Deed attempt simultaneously. Spellcasters can cast two spells in one round when they gain a second action die. The action die replaces attack bonus as the primary measure of martial power — higher die type also means fewer fumbles (a d16 only fumbles on a 1 of 16 possible outcomes).",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "Instead of extra-attack bonuses, characters gain additional action dice as they level, and each die independently fuels one attack or spell that round. A high Warrior might roll d20+d14 to attack and attempt a Deed at once; casters can throw two spells. Bigger dice also fumble less often."
     }
   }
 ]
