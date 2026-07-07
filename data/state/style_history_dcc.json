@@ -1,1 +1,12 @@
-{}
+{
+  "2026-07-06": {
+    "monster_tactic": {
+      "angle": "how_it_wins",
+      "voice": "chaos_herald",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
+  }
+}
