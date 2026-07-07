@@ -106,7 +106,7 @@ jobs:
           # GitHub likely missed the 8am cron -- allow this run to fill in.
           if [ "${hour}" -gt "08" ] 2>/dev/null; then
             ran_today=false
-            for reg in data/state/published_registry_dnd5e.json data/state/published_registry_shadowdark.json; do
+            for reg in data/state/published_registry_dnd5e.json data/state/published_registry_shadowdark.json data/state/published_registry_dcc.json; do
               if [ -f "${reg}" ] && grep -q "\"day\": \"${today}\"" "${reg}"; then
                 ran_today=true
                 break
