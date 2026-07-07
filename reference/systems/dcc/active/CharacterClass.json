@@ -1,0 +1,114 @@
+[
+  {
+    "model": "dcc.characterclass",
+    "pk": 1,
+    "fields": {
+      "name": "Warrior",
+      "hit_dice": "1d12",
+      "action_dice": "1d20 (1d16 at 5th, 1d20+1d14 at 8th)",
+      "crit_die": "1d12/III",
+      "saves": "Fort: class die, Ref: +0, Will: +0",
+      "weapons": "All weapons",
+      "armor": "All armor and shields",
+      "luck_die": "d8 (Warriors burn Luck for attack rolls in addition to other uses)",
+      "desc": "Warriors use Mighty Deeds of Arms: on any attack roll, declare a Deed (blind, trip, disarm, push, etc.). If the attack hits AND the action die shows 3+, the Deed succeeds — no save, no roll. The die result is the Deed die (higher = more dramatic effect). Warriors get a free Mighty Deed attempt every round, not limited by spells or resources. At higher levels, warriors gain extra attack dice, improved crit range, and Deed dice that scale to d10+. Luck affects attack rolls directly (see table). Weapon specialization: with any weapon trained for 3+ levels, add deed die to damage.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.characterclass",
+    "pk": 2,
+    "fields": {
+      "name": "Wizard",
+      "hit_dice": "1d4",
+      "action_dice": "1d20",
+      "crit_die": "1d4/I",
+      "saves": "Fort: +0, Ref: +0, Will: class die",
+      "weapons": "Daggers, staffs, whips",
+      "armor": "None (may not wear armor)",
+      "luck_die": "d3",
+      "desc": "Wizards cast spells by making a spell check: d20 + Int modifier + caster level, compared to a variable DC (roll on the spell table). Higher results produce better outcomes. A natural 1 is always catastrophic — the spell is lost permanently AND the wizard rolls on the corruption table (minor, major, or greater corruption permanently alters appearance, stats, or personality). Any result below 12 is typically a failure with the spell retained. Above 12: spell fires but may have weaker effects. The key tension: wizards can push their luck but risk losing spells and accumulating corruption. Patrons: wizards may bond with patrons (demon lords, deities, cosmic entities) for extra power and invoke patron spells, but patron displeasure (patron taint) reshapes the character. Spells never auto-recharge — a wizard with no spell check successes in a day may be useless.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.characterclass",
+    "pk": 3,
+    "fields": {
+      "name": "Cleric",
+      "hit_dice": "1d8",
+      "action_dice": "1d20",
+      "crit_die": "1d8/II",
+      "saves": "Fort: class die, Ref: +0, Will: +1/level",
+      "weapons": "All blunt weapons (no edged except by deity approval)",
+      "armor": "All armor and shields",
+      "luck_die": "d4",
+      "desc": "Clerics cast spells through divine favor: spell check = d20 + Per modifier + caster level, but ALSO must track deity disapproval. Every failed spell check adds 1 point of disapproval. Disapproval starts at 1 (on a natural 1) and grows — higher disapproval means the deity may refuse spells entirely, force acts of penance, or smite the cleric. Disapproval resets on long prayer and penance. The mechanic enforces actual roleplay of faith — a cleric who never prays, never gives alms, and never acts in alignment will find their spells ceasing to function entirely. Turn Unholy: works on a spell check; higher results affect more powerful undead; on natural 20 the undead may be destroyed or permanently banished. Clerics can heal, but healing is also a spell check — it's not guaranteed.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.characterclass",
+    "pk": 4,
+    "fields": {
+      "name": "Thief",
+      "hit_dice": "1d6",
+      "action_dice": "1d20",
+      "crit_die": "1d6/II",
+      "saves": "Fort: +0, Ref: class die, Will: +0",
+      "weapons": "All weapons",
+      "armor": "Leather, padded; no metal armor",
+      "luck_die": "d6 (Thieves may burn Luck for skill checks — and can earn Luck back by performing improbable feats)",
+      "desc": "Thieves have a unique set of skills that use a d20 roll vs. a difficulty: Backstab (bonus to attack and damage from hiding; attack die improves to d24 at 5th), Sneak silently, Hide in shadows, Pick pockets, Climb walls, Pick locks, Find/disable traps, Forge documents, Disguise self, Read languages, Handle poison. Each skill starts at a set percentage and improves by level. Crucially, thieves are the ONLY class that can regain burned Luck — they earn it back by performing risky maneuvers that entertain the table. Backstab: +4 to attack, weapon die improves two steps (d6→d10), and is the only class ability that benefits from the d30 rule on sneak attacks. Level advancement is fastest in the game.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.characterclass",
+    "pk": 5,
+    "fields": {
+      "name": "Dwarf",
+      "hit_dice": "1d10",
+      "action_dice": "1d20",
+      "crit_die": "1d10/III",
+      "saves": "Fort: class die +2, Ref: +0, Will: +0",
+      "weapons": "All weapons",
+      "armor": "All armor and shields",
+      "luck_die": "d8",
+      "desc": "Dwarves function like fighters with a racial class identity. They get Mighty Deeds of Arms just like Warriors but their deed die maxes at d14 (not d16). Trade-off: superior saves (Fort +2 over Warriors at all levels), superior underground senses (detect grade, construction, depth 1-4 on d6 always), and a unique Shield Brother ability — a Dwarf can spend their action to grant an adjacent ally a +2 AC bonus from the dwarf's body-blocking. Dwarves are immune to paralysis and resist magic (saving throws against spells use Fort). Infravision: see heat signatures in complete darkness to 60'. Dwarves cannot be wizards (no arcane ability), but may be trained in divine magic in rare campaigns.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.characterclass",
+    "pk": 6,
+    "fields": {
+      "name": "Elf",
+      "hit_dice": "1d6",
+      "action_dice": "1d20",
+      "crit_die": "1d6/II",
+      "saves": "Fort: +0, Ref: +1/level, Will: class die",
+      "weapons": "All weapons (but preference toward swords and bows)",
+      "armor": "All armor — but arcane spells require no armor",
+      "luck_die": "d6",
+      "desc": "Elves combine warrior and wizard abilities but excel at neither. They use a d20 action die, can make melee attacks AND cast spells in the same turn (the only class with this), and cast spells like wizards (spell check mechanic). However: elves are severely limited in corruption resistance — they gain patron taint on 1-2 (not just 1). They are immune to paralysis and hold. They have infravision 60', speak elvish plus other ancient tongues. Key trade-off: jack-of-all-trades but master of none — inferior spell checks to a true wizard at the same level, inferior deed die to a warrior, but unique flexibility. Elves detect secret doors on 1-2 in 6 when passing within 10'.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.characterclass",
+    "pk": 7,
+    "fields": {
+      "name": "Halfling",
+      "hit_dice": "1d6",
+      "action_dice": "1d20",
+      "crit_die": "1d6/II",
+      "saves": "Fort: +0, Ref: class die +2, Will: +0",
+      "weapons": "All weapons sized for small characters",
+      "armor": "Leather, chain; no plate",
+      "luck_die": "d3 (but Halflings have the highest Luck of any race at character creation and it burns at d3 intervals — best overall Luck economy)",
+      "desc": "Halflings function through their Good Fortune mechanic: once per session, a halfling can declare Good Fortune before any roll — they roll the Luck die and add it to that check. This isn't burning Luck permanently; it's a free bonus. Additionally, halflings can grant the Good Fortune bonus to a nearby ally instead (the only class with this ability). Halflings are small (penalties to Str-based tasks, bonuses to stealth) and get +4 to AC against large creatures. Sneak: halflings make noise checks like thieves but at a superior die. The halfling's charm allows them to negotiate with hostile creatures at +2 to all reaction rolls. Halflings cannot multiclass but gain a luck die from level to level faster than any other class.",
+      "document": "dcc-core"
+    }
+  }
+]
