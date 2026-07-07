@@ -427,5 +427,426 @@
       "document": "dcc-core",
       "effect": "Cleric spell check summoning a spirit weapon that fights as a fighter of rising level; higher results add alignment damage, extra attacks, reach against ethereal foes, and an hour-long divine weapon that crits on 18-20."
     }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 73,
+    "fields": {
+      "name": "Ekim's Mystical Mask",
+      "level": 1,
+      "caster_class": "wizard",
+      "range_text": "Self",
+      "duration": "1 round per CL",
+      "save": "See below",
+      "effect": "Wizard spell check conjuring a mystical mask granting scaling defenses against attacks, spells, gaze, and mind effects for 1 round per level; the caster may invoke a lesser result than rolled to pick a weaker but handier benefit.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 74,
+    "fields": {
+      "name": "Feather Fall",
+      "level": 1,
+      "caster_class": "wizard",
+      "range_text": "25'",
+      "duration": "1 round per caster level or until landing",
+      "save": "Will to avoid",
+      "effect": "Wizard spell check, castable instantly out of turn, that slows a fall for the caster or a target in range to prevent injury and allow gliding on the breeze; higher results extend range, targets, and control.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 75,
+    "fields": {
+      "name": "Spider Climb",
+      "level": 1,
+      "caster_class": "wizard",
+      "range_text": "Self or touch (see below)",
+      "duration": "1 turn per CL",
+      "effect": "Wizard spell check granting a spider's ability to climb walls and ceilings for 1 turn per level; higher results boost climb speed and can extend it to allies.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 76,
+    "fields": {
+      "name": "Magic Mouth",
+      "level": 2,
+      "caster_class": "wizard",
+      "range_text": "Varies",
+      "duration": "1 hour or longer",
+      "effect": "Wizard spell check placing an enchanted mouth that speaks a set message when a defined trigger occurs; higher results allow longer messages, subtler triggers, and longer-lasting or interactive effects.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 77,
+    "fields": {
+      "name": "Mirror Image",
+      "level": 2,
+      "caster_class": "wizard",
+      "range_text": "Self or touch",
+      "duration": "1 round or longer",
+      "save": "Will vs. spell check DC",
+      "effect": "Wizard spell check creating illusory duplicates that mimic the caster and draw attacks away; the number of images scales with the result, and higher castings can duplicate allies or objects.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 78,
+    "fields": {
+      "name": "Monster Summoning",
+      "level": 2,
+      "caster_class": "wizard",
+      "range_text": "20'",
+      "duration": "Varies",
+      "effect": "Wizard spell check (after drawing a pentacle) summoning a monster the caster knows and has a material remnant of; the result sets the creature's power, obedience, and duration, and a botched control roll can turn it hostile.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 79,
+    "fields": {
+      "name": "Phantasm",
+      "level": 2,
+      "caster_class": "wizard",
+      "range_text": "100' or more",
+      "duration": "1 round or longer, with concentration",
+      "save": "Will vs. spell check DC",
+      "effect": "Wizard spell check creating a purely visual illusion (no sound, touch, or smell) that the caster shapes with concentration; higher results make larger, more detailed, or self-sustaining illusions. Viewers save Will to disbelieve.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 80,
+    "fields": {
+      "name": "Shatter",
+      "level": 2,
+      "caster_class": "wizard",
+      "range_text": "Touch or further",
+      "duration": "Instantaneous or longer",
+      "effect": "Wizard spell check that shatters an inanimate object, especially crystal or glass; higher results damage tougher materials and can leave ongoing fractures that weaken the object against future blows.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 81,
+    "fields": {
+      "name": "Wizard Staff",
+      "level": 2,
+      "caster_class": "wizard",
+      "range_text": "Self",
+      "duration": "Permanent",
+      "effect": "Wizard spell check crafting a soul-linked magic staff (only one at a time; 1,000 gp per level in materials); the result sets the staff's stored spells and powers, and its destruction causes the wizard great harm.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 82,
+    "fields": {
+      "name": "Binding",
+      "level": 2,
+      "caster_class": "cleric",
+      "range_text": "30' or more",
+      "duration": "Varies",
+      "save": "Will vs. spell check DC",
+      "effect": "Wizard or cleric spell check that binds and commands a supernatural creature (easiest if already summoned); the result sets how completely it is controlled and for how long, up to permanent servitude. The target resists with Will.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 83,
+    "fields": {
+      "name": "Breathe Life",
+      "level": 3,
+      "caster_class": "wizard",
+      "range_text": "Touch",
+      "duration": "1 turn or longer",
+      "effect": "Wizard spell check that animates an inanimate object into an obedient servant (moving statues, guardian doors, clay homunculi); higher results grant smarter, tougher, longer-lasting creations.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 84,
+    "fields": {
+      "name": "Eternal Champion",
+      "level": 3,
+      "caster_class": "wizard",
+      "range_text": "1 mile",
+      "duration": "Until sunset",
+      "effect": "Wizard spell check that dream-summons a legendary warrior to fight for the caster from sunrise to sunset; higher results call a mightier champion. The caster must sleep to cast it and the warrior fades at nightfall.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 85,
+    "fields": {
+      "name": "Fireball",
+      "level": 3,
+      "caster_class": "wizard",
+      "range_text": "50' or more, exploding in a sphere of 20' radius or more",
+      "duration": "Instantaneous",
+      "save": "Ref vs. spell check",
+      "effect": "Wizard spell check hurling an exploding flame that fills a 20' radius (Ref save for half); the result scales the fire damage and can enlarge the blast, ignite the surroundings, and punch through cover.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 86,
+    "fields": {
+      "name": "Lightning Bolt",
+      "level": 3,
+      "caster_class": "wizard",
+      "range_text": "See below",
+      "duration": "See below",
+      "save": "Ref vs. spell check DC",
+      "effect": "Wizard spell check loosing a bolt of electricity that electrocutes creatures, splinters wood, and melts metal (Ref save for half); the result sets the damage and the bolt's length and reach.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 87,
+    "fields": {
+      "name": "Planar Step",
+      "level": 3,
+      "caster_class": "wizard",
+      "range_text": "Potentially infinite (see below)",
+      "duration": "Permanent transfer of location",
+      "save": "Unwilling targets receive Will save vs. spell check DC",
+      "effect": "Wizard spell check teleporting the caster, short hops on the same world at low results, up to stepping to other planes or dimensions at high results; a misjudged roll risks a dangerous or imprecise arrival.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 88,
+    "fields": {
+      "name": "Runic Alphabet, Fey",
+      "level": 3,
+      "caster_class": "wizard",
+      "range_text": "One inscribed rune",
+      "duration": "Until triggered",
+      "save": "Will save vs. spell check; -1 penalty if of an alignment opposed to caster",
+      "effect": "Wizard spell check inscribing a triggered fey rune (200 gp each) whose eldritch sigils hold subtle, dangerous power; the result sets the rune's potency and trigger, and victims resist with Will.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 89,
+    "fields": {
+      "name": "Slow",
+      "level": 3,
+      "caster_class": "wizard",
+      "range_text": "20' + 10' per CL",
+      "duration": "Varies",
+      "save": "Sometimes (Will)",
+      "effect": "Wizard spell check halving a target's movement and actions (sometimes a Will save), and able to cancel haste; higher results affect more targets for longer.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 90,
+    "fields": {
+      "name": "Sword Magic",
+      "level": 3,
+      "caster_class": "wizard",
+      "range_text": "Self",
+      "duration": "Permanent",
+      "effect": "Wizard spell check that forges a magic weapon whose properties depend on the result plus the materials and craftsmanship invested; better rolls yield stronger enchantments. It is a slow, deliberate creation, not a combat spell.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 91,
+    "fields": {
+      "name": "Turn to Stone",
+      "level": 3,
+      "caster_class": "wizard",
+      "range_text": "30' plus 10' per caster level",
+      "duration": "Various",
+      "save": "Fortitude to avoid",
+      "effect": "Wizard spell check (Fort save) that petrifies living targets; its reverse, turn to flesh, undoes it. The result sets how many are affected and how completely, and water creatures take extra damage.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 92,
+    "fields": {
+      "name": "Control Fire",
+      "level": 4,
+      "caster_class": "wizard",
+      "range_text": "15'",
+      "duration": "Varies",
+      "save": "Fort partial (sometimes)",
+      "effect": "Wizard spell check that creates and shapes fire into walls, blasts, or protective barriers (Fort partial); the caster may invoke any result at or below the roll, choosing among effects that scale with the check.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 93,
+    "fields": {
+      "name": "Control Ice",
+      "level": 4,
+      "caster_class": "wizard",
+      "range_text": "20' per caster level",
+      "duration": "Varies",
+      "save": "Fort partial (sometimes)",
+      "effect": "Wizard spell check raising ice walls or blasts of freezing cold to block or harm foes (Fort partial); the caster may invoke any result at or below the roll for a menu of scaling effects.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 94,
+    "fields": {
+      "name": "Wizard Sense",
+      "level": 4,
+      "caster_class": "wizard",
+      "range_text": "60' or more (see below)",
+      "duration": "1 round per caster level",
+      "effect": "Wizard spell check extending the caster's senses to observe distant events or pierce illusions and concealment for 1 round per level; higher results reach farther and reveal more truth.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 95,
+    "fields": {
+      "name": "Hepsoj's Fecund Fungi",
+      "level": 5,
+      "caster_class": "wizard",
+      "range_text": "100' plus 20' per CL",
+      "duration": "Varies",
+      "save": "Varies",
+      "effect": "Wizard spell check amplifying fungal spores into effects (choking clouds, ablative fungal armor, restraining growths, spontaneous fungus); the caster may invoke a lesser result than rolled to pick a weaker but handier option.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 96,
+    "fields": {
+      "name": "Replication",
+      "level": 5,
+      "caster_class": "wizard",
+      "range_text": "100' +10' per CL or touch",
+      "duration": "Varies",
+      "effect": "Wizard spell check creating a magical double of the caster to act, scout, or cheat death; the caster may invoke any result at or below the roll, trading a stronger double for a handier one.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 97,
+    "fields": {
+      "name": "Second Sight",
+      "level": 1,
+      "caster_class": "cleric",
+      "range_text": "Self",
+      "duration": "1 round or more",
+      "effect": "Cleric spell check that augurs the future, giving the cleric insight into the consequences of a contemplated action; higher results yield clearer, farther-reaching, or more specific foresight.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 98,
+    "fields": {
+      "name": "Banish",
+      "level": 2,
+      "caster_class": "cleric",
+      "range_text": "30' or more",
+      "duration": "Varies",
+      "save": "Will vs. spell check DC",
+      "effect": "Cleric spell check (Will save) forcing a creature away, usually a supernatural one back to its native plane or a mundane one back to its lair; the result sets how forcefully and how permanently it is banished.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 99,
+    "fields": {
+      "name": "Restore Vitality",
+      "level": 2,
+      "caster_class": "cleric",
+      "range_text": "Touch or further",
+      "duration": "Permanent",
+      "effect": "Cleric spell check that restores lost ability scores, mends broken or severed limbs, and can heal, but never restores Luck; higher results reverse graver damage. Cast on self or an ally.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 100,
+    "fields": {
+      "name": "Speak with the Dead",
+      "level": 3,
+      "caster_class": "cleric",
+      "range_text": "Self",
+      "duration": "Varies",
+      "effect": "Cleric spell check questioning a corpse, which answers to the limit of what it knew in life; the cleric must share a language with it. Higher results grant more questions and fuller answers.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 101,
+    "fields": {
+      "name": "Affliction of the Gods",
+      "level": 4,
+      "caster_class": "cleric",
+      "range_text": "50' + 10' per CL",
+      "duration": "Varies",
+      "save": "Fort vs. spell check DC",
+      "effect": "Cleric spell check (Fort save) striking all enemies in an area with divine afflictions and wounds; those opposed to the faith save at a penalty. Higher results inflict graver, longer-lasting conditions.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 102,
+    "fields": {
+      "name": "Sanctify / Desecrate",
+      "level": 4,
+      "caster_class": "cleric",
+      "range_text": "20' square area per CL",
+      "duration": "Varies",
+      "save": "See below",
+      "effect": "Cleric spell check dedicating a 20'-per-level space to the deity for supernatural protection and attunement to the god's will, a refuge for the faithful; it can also corrupt an enemy's holy ground. Higher results strengthen and enlarge it.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 103,
+    "fields": {
+      "name": "Righteous Fire",
+      "level": 5,
+      "caster_class": "cleric",
+      "range_text": "100' + 10' per CL",
+      "duration": "Instantaneous",
+      "save": "See below",
+      "effect": "Cleric spell check calling down divine fire to burn the cleric's foes; the result scales the damage and area, and enemies of the faith fare worse (save varies).",
+      "document": "dcc-core"
+    }
   }
 ]
