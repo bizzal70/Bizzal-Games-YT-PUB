@@ -1508,5 +1508,260 @@
       "effect": "Cleric spell check raising a stationary barrier of whirling blades that bars passage and shreds anyone touching it for 1 round per level; creatures beyond it gain cover bonuses. Higher results widen and sharpen the wall.",
       "document": "dcc-core"
     }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 153,
+    "fields": {
+      "name": "Arcane Affinity",
+      "level": 2,
+      "caster_class": "wizard",
+      "range_text": "Self",
+      "duration": "Varies",
+      "effect": "Wizard spell check by which a specialist mage (necromancer, pyromancer, elementalist, summoner) deepens their bond to a chosen school of magic, gaining scaling bonuses when casting spells of that specialty; the result sets how strong and lasting the affinity is.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 154,
+    "fields": {
+      "name": "Detect Invisible",
+      "level": 2,
+      "caster_class": "wizard",
+      "range_text": "60' or more",
+      "duration": "Varies",
+      "save": "Will vs. spell check DC (sometimes)",
+      "effect": "Wizard spell check granting inner sight to perceive invisible creatures and objects; if a target is hidden by an invisibility spell, the caster's result becomes the DC for its Will save. Higher results reveal more and last longer.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 155,
+    "fields": {
+      "name": "Invoke Patron",
+      "caster_class": "wizard",
+      "effect": "Wizard spell check (available after Patron Bond) that calls on the bonded patron for direct aid; each patron has its own unique result table and boons, and failure never causes corruption, the patron simply may or may not respond.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 156,
+    "fields": {
+      "name": "Tadpole Transformation",
+      "level": 1,
+      "caster_class": "wizard",
+      "patron": "Bobugbubilz",
+      "range_text": "Self",
+      "duration": "Varies",
+      "effect": "Bobugbubilz patron spell transforming the caster's body toward amphibian form for swamp boons (swimming, leaping, water-breathing, and more as the result climbs); a natural 1 brings patron taint.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 157,
+    "fields": {
+      "name": "Glorious Mire",
+      "level": 2,
+      "caster_class": "wizard",
+      "patron": "Bobugbubilz",
+      "range_text": "Touch",
+      "duration": "Varies",
+      "save": "Sometimes",
+      "effect": "Bobugbubilz patron spell conjuring a zone of clinging briny mud that mires, slows, and engulfs enemies (save sometimes); higher results widen the mire and deepen its grip, drowning the trapped.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 158,
+    "fields": {
+      "name": "Bottomfeeder Bond",
+      "level": 3,
+      "caster_class": "wizard",
+      "patron": "Bobugbubilz",
+      "range_text": "30' or more",
+      "duration": "1 turn or more",
+      "save": "Will vs. spell check DC for intelligent creatures",
+      "effect": "Bobugbubilz patron spell (Will save) summoning and commanding swamp creatures, crocodiles, catfish, venomous snakes, biting flies, to serve for 1 turn or more; higher results call more and deadlier servants.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 159,
+    "fields": {
+      "name": "Snake Trick",
+      "level": 1,
+      "caster_class": "wizard",
+      "patron": "Azi Dahaka",
+      "range_text": "Varies",
+      "duration": "Varies",
+      "save": "Will vs. check if the",
+      "effect": "Azi Dahaka patron spell (Will save) transforming any nonliving object into a writhing serpent that obeys the caster; higher results make larger, more venomous snakes for longer. Magic items get a Will save to resist.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 160,
+    "fields": {
+      "name": "Kith of the Hydra",
+      "level": 2,
+      "caster_class": "wizard",
+      "patron": "Azi Dahaka",
+      "range_text": "Self",
+      "duration": "Varies",
+      "effect": "Azi Dahaka patron spell granting hydra-like resilience, knitting wounds, mending bones and even limbs, and cheating death, but only at great sacrifice; the result sets how much regeneration and how steep the cost.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 161,
+    "fields": {
+      "name": "Reap the Whirlwind",
+      "level": 3,
+      "caster_class": "wizard",
+      "patron": "Azi Dahaka",
+      "range_text": "Self",
+      "duration": "1d5 rounds + CL",
+      "effect": "Azi Dahaka patron spell transforming the caster into a raging sandstorm for 1d5+level rounds to batter, blind, and shred everything nearby; higher results make a larger, fiercer whirlwind.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 162,
+    "fields": {
+      "name": "Sequester",
+      "level": 1,
+      "caster_class": "wizard",
+      "patron": "Sezrekan",
+      "range_text": "Varies",
+      "duration": "1d24 hours per CL",
+      "save": "Will or Skill",
+      "effect": "Sezrekan patron spell securing an area against intrusion for 1d24 hours per level so the caster can study and scheme undisturbed; intruders face Will or skill checks against the result. Higher rolls hide and ward the sanctum better.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 163,
+    "fields": {
+      "name": "Shield Maiden",
+      "level": 2,
+      "caster_class": "wizard",
+      "patron": "Sezrekan",
+      "range_text": "Self",
+      "duration": "Varies",
+      "effect": "Sezrekan patron spell summoning the ghost of a bound warrior-maiden to fight and guard the caster; the result sets how many answer and how capable each fierce spectral defender is.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 164,
+    "fields": {
+      "name": "Phylactery of the Soul",
+      "level": 3,
+      "caster_class": "wizard",
+      "patron": "Sezrekan",
+      "range_text": "Self",
+      "duration": "Variable",
+      "save": "See below",
+      "effect": "Sezrekan patron spell storing the caster's soul in an amulet or gem (worth at least 1d8x100 gp) while they keep control of their body, cheating death; the result sets the protection's strength and duration. A lich-like safeguard.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 165,
+    "fields": {
+      "name": "Forest Walk",
+      "level": 1,
+      "caster_class": "wizard",
+      "patron": "The King of Elfland",
+      "range_text": "Varies",
+      "duration": "Varies",
+      "effect": "King of Elfland patron spell teleporting the caster tree-to-tree via the hidden byways of Elfland (same species of tree); the result sets the range and how many travel along. A fey shortcut through the woods.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 166,
+    "fields": {
+      "name": "Warhorn of Elfland",
+      "level": 2,
+      "caster_class": "wizard",
+      "patron": "The King of Elfland",
+      "range_text": "Self",
+      "duration": "Varies",
+      "effect": "King of Elfland patron spell sounding a horn (carved from a beast of 5 HD or more) to summon fierce, short-lived elfland warriors to fight for the caster; higher results call more and mightier fey soldiers.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 167,
+    "fields": {
+      "name": "The Dreaming",
+      "level": 3,
+      "caster_class": "wizard",
+      "patron": "The King of Elfland",
+      "range_text": "Self",
+      "duration": "Varies",
+      "effect": "King of Elfland patron spell drawing the slumbering twilight magic of Elfland into the mortal world, slowing time and warping reality around the caster; higher results deepen the dream and its strange effects on foes.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 168,
+    "fields": {
+      "name": "Blade of Atropos",
+      "level": 1,
+      "caster_class": "wizard",
+      "patron": "The Three Fates",
+      "range_text": "Self",
+      "duration": "Varies",
+      "save": "Will save vs. 15+CL",
+      "effect": "Three Fates patron spell conjuring a fated blade meant to end chaos-creatures and marked arcane targets (Will save); the result sets the blade's deadliness against destined foes. A weapon of preordained death.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 169,
+    "fields": {
+      "name": "Curse of Moirae",
+      "level": 2,
+      "caster_class": "wizard",
+      "patron": "The Three Fates",
+      "range_text": "Varies",
+      "duration": "Varies",
+      "save": "Will vs. spell",
+      "effect": "Three Fates patron spell (Will save) measuring out a target's life to hasten an untimely, fated end; after casting, the caster has 1d4+level rounds to seal it. Higher results make the doom surer and harder to escape.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 170,
+    "fields": {
+      "name": "Warp & Weft",
+      "level": 3,
+      "caster_class": "wizard",
+      "patron": "The Three Fates",
+      "range_text": "1d100' +10' per CL",
+      "duration": "1d3+CL turns, except where noted",
+      "save": "Will save vs. spell check if unwilling",
+      "effect": "Three Fates patron spell (Will save) that bends, stretches, or reweaves the threads of destiny within range, altering luck, outcomes, and fate itself for 1d3+level turns; immense power carried at great risk, even to the caster.",
+      "document": "dcc-core"
+    }
   }
 ]
