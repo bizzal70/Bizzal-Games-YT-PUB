@@ -13,6 +13,48 @@ if not SYSTEM_ID:
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 
 
+def _load_system_voice(system_id: str) -> dict:
+    """Per-system voice theming (config/system_voice.json).
+
+    Returns the system's entry merged over the 'default' entry, so any field a
+    system omits (or any brand-new system with no entry) falls back to a
+    neutral GM-run voice rather than D&D framing.
+    """
+    path = os.path.join(REPO_ROOT, "config", "system_voice.json")
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            cfg = json.load(f)
+    except Exception:
+        cfg = {}
+    base = cfg.get("default") or {}
+    entry = cfg.get(system_id) or {}
+    return {**base, **entry}
+
+
+_VOICE = _load_system_voice(SYSTEM_ID)
+GM_TERM = _VOICE.get("gm_term", "GM")
+GM_TERM_PLURAL = _VOICE.get("gm_term_plural", GM_TERM + "s")
+VOICE_CHARTER = (_VOICE.get("voice_charter") or "").strip()
+BANNED_TERMS = [t.lower() for t in (_VOICE.get("banned_terms") or [])]
+
+
+def _voice_prompt_suffix() -> str:
+    """System-identity directive appended to the LLM system prompts."""
+    charter = VOICE_CHARTER or ("Use the vocabulary and mechanics of this game only; "
+                                "do not import terms from other tabletop systems.")
+    return (f" SYSTEM VOICE ({SYSTEM_ID}): {charter}"
+            f" The game-runner is called the {GM_TERM}; never call them a 'DM' unless this IS D&D.")
+
+
+def _first_offsystem_term(text: str):
+    """First banned off-system vocabulary term in the text, else None."""
+    low = str(text or "").lower()
+    for term in BANNED_TERMS:
+        if re.search(r"\b" + re.escape(term) + r"\b", low):
+            return term
+    return None
+
+
 def resolve_incoming_dir() -> str:
     val = (os.getenv("BIZZAL_ATOM_INCOMING_DIR") or "").strip()
     if not val:
@@ -677,7 +719,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
     if not pdf_flavor_required() and not pdf_snippet:
         ai_diag("AI CTA polish continuing without PDF flavor snippet (best-effort mode)")
 
-    prefix = "DMs"
+    prefix = GM_TERM_PLURAL
     m = re.match(r"^\s*([A-Za-z ]{2,20}):", current_cta)
     if m:
         maybe_prefix = m.group(1).strip()
@@ -740,10 +782,11 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
                 "role": "system",
                 "content": (
                     "You rewrite RPG short-form CTA lines. "
-                    "Voice: dry, world-weary veteran DM who has run this encounter a hundred times. "
+                    "Voice: dry, world-weary veteran game-runner who has run this encounter a hundred times. "
                     "No hype, no cheerleading, no pep-talk energy. "
-                    "Authoritative and specific — you call the table's bad habits what they are. "
+                    "Authoritative and specific— you call the table's bad habits what they are. "
                     "One wry sentence that tells them exactly what to do and implies they already know why."
+                    + _voice_prompt_suffix()
                 ),
             },
             {
@@ -863,6 +906,11 @@ def _first_style_violation(text: str):
     m = _VAGUE_FILLER_RE.search(str(text or ""))
     if m:
         return ("vague filler phrase", m.group(0).strip())
+    # Cross-system guard: copy must not borrow another game's vocabulary
+    # (e.g. DCC copy saying "bonus action", Shadowdark saying "concentration").
+    off = _first_offsystem_term(text)
+    if off:
+        return ("off-system vocabulary", off)
     # Flow backstop: copy should not open with an index-inverted name ("Golem, Iron").
     _t = str(text or "").strip().lstrip("\"'")
     if re.match(r"[A-Z][a-z]+,\s+[A-Z][a-z]", _t):
@@ -982,14 +1030,15 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             {
                 "role": "system",
                 "content": (
-                    "You are a veteran DM making observations about RPG mechanics. "
+                    "You are a veteran game-runner making observations about RPG mechanics. "
                     "Dry, world-weary, slightly sardonic. No scenes, no characters, no narration. "
                     "You make an observation about how a mechanic actually works at the table — "
                     "what players consistently get wrong, what the rules mean in practice, "
                     "when it matters and why most people miss it. "
                     "You do not tell stories. You do not set scenes. You do not describe goblins doing things. "
                     "You state a fact, then say what that fact means for someone who already read the manual. "
-                    "Think: senior engineer in a code review, not a dungeon master telling campfire stories."
+                    "Think: senior engineer in a code review, not a storyteller spinning campfire tales."
+                    + _voice_prompt_suffix()
                 ),
             },
             {
@@ -1342,6 +1391,17 @@ def clean_ai_style_text(s: str, segment: str = "body") -> str:
 
     txt = txt.replace("Dungeon Masters:", "DMs:")
     txt = txt.replace("Player Characters:", "Players:")
+
+    # Re-theme the D&D "DM" vocabulary to this system's game-runner term. The
+    # generator has ~60 hardcoded "DMs:" CTA templates plus "DM twist/tip/callout"
+    # nuggets; this single pass fixes them all (and any DM-ism the LLM emits) for
+    # non-D&D systems. For D&D (GM_TERM == "DM") every rule below is a no-op.
+    if GM_TERM != "DM":
+        txt = re.sub(r"\bDM(\s+(?:twist|tip|tips|callout|fairness|note|move|call))",
+                     GM_TERM + r"\1", txt)
+        txt = re.sub(r"\bDMs\b", GM_TERM_PLURAL, txt)
+        txt = re.sub(r"\bDM\b", GM_TERM, txt)
+        txt = txt.replace("Dungeon Masters", GM_TERM_PLURAL).replace("Dungeon Master", GM_TERM)
 
     txt = re.sub(
         r"Table setup[—-]let's run the encounter of the ([A-Za-z][A-Za-z\- ]+)\.",
