@@ -1563,16 +1563,20 @@ def build_monster_body(angle: str, fields: dict, traits: list, actions: list, at
 # ---------------- Spell scripts ----------------
 
 def is_concentration(fields: dict) -> bool:
-    # WotC/Open5e exports may store this as a bool, string, or embed it in duration/desc.
+    # Concentration is a D&D-5e-shaped mechanic. Detect it only from STRUCTURED
+    # signals: an explicit `concentration` field, or the word in the `duration`
+    # field (5e exports store "Concentration, up to 1 minute" there).
+    # Do NOT scan freeform `desc` -- other systems (e.g. DCC) mention the plain
+    # word "concentration" inside spell-check result text, which would falsely
+    # inject 5e concentration framing into non-5e copy.
     v = fields.get("concentration")
     if isinstance(v, bool):
         return v
     if isinstance(v, str) and v.strip():
         return "true" in v.strip().lower() or "concentration" in v.strip().lower()
 
-    desc = sstr(fields.get("desc")).lower()
-    dur  = sstr(fields.get("duration")).lower()
-    return ("concentration" in desc) or ("concentration" in dur)
+    dur = sstr(fields.get("duration")).lower()
+    return "concentration" in dur
 def spell_anchor(fields: dict):
     lvl = fields.get("level")
     school = fields.get("school") or fields.get("spell_school") or ""
