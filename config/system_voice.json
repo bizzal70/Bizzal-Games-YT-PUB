@@ -1,0 +1,27 @@
+{
+  "_README": "Per-system voice theming for the RTFM copy generator. Each system's entry supplies its game-master term, a voice_charter (injected into the LLM system prompt to give the copy that system's tonal identity), and banned_terms (off-system vocabulary that triggers one corrective regeneration). Adding a new system = add an entry here; anything missing falls back to 'default', so a new system is never mis-themed as D&D.",
+  "default": {
+    "gm_term": "GM",
+    "gm_term_plural": "GMs",
+    "voice_charter": "Use the vocabulary, assumptions, and mechanics of THIS game only. Do not import terms or rules from other tabletop systems. The person running the game is the GM. Keep the dry, world-weary RTFM voice: state the mechanic, name what players get wrong, say the better line of play.",
+    "banned_terms": ["bonus action", "bounded accuracy", "the dm", "dungeon master", "the judge", "spellburn", "mighty deed", "dice chain"]
+  },
+  "dnd5e": {
+    "gm_term": "DM",
+    "gm_term_plural": "DMs",
+    "voice_charter": "This is Dungeons & Dragons 5th Edition. Think in 5e's language: the action economy (action, bonus action, reaction, movement), bounded accuracy, concentration, ability saving throws, advantage/disadvantage, and spell slots. The reader runs the table as the DM. Voice is tactical, rules-precise, and dry.",
+    "banned_terms": ["spellburn", "mighty deed", "the judge", "dice chain", "luck die", "spell check table", "usage die", "torch clock"]
+  },
+  "shadowdark": {
+    "gm_term": "GM",
+    "gm_term_plural": "GMs",
+    "voice_charter": "This is Shadowdark, a grim old-school (OSR) game. Its identity: real-time light and torch clocks (light burns down in actual minutes), brutal lethality, scarce resources, and lean d20-over-AC combat with NO 5e conveniences (no bonus actions, no bounded accuracy, no elaborate action economy, no concentration). The reader runs the table as the GM. Voice is terse, unsentimental, and old-school: survival over spectacle.",
+    "banned_terms": ["bonus action", "bounded accuracy", "concentration", "the dm", "dungeon master", "the judge", "spellburn", "mighty deed", "dice chain"]
+  },
+  "dcc": {
+    "gm_term": "Judge",
+    "gm_term_plural": "Judges",
+    "voice_charter": "This is Dungeon Crawl Classics (DCC), gonzo Appendix-N sword-and-sorcery. Its identity: spell checks (roll d20 + ability + level on each spell's own result table, no slots), Mighty Deeds of Arms, the dice chain, Luck burned permanently, corruption and patron taint for wizards, deity disapproval for clerics, the 0-level funnel, and weird pulp danger. The reader runs the table as the Judge, never a 'DM'. Voice is lurid, old-school, and a little unhinged: mercurial magic and mortal stakes.",
+    "banned_terms": ["bonus action", "bounded accuracy", "spell slot", "the dm", "dungeon master", "the gm"]
+  }
+}
