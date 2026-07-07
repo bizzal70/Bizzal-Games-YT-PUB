@@ -142,5 +142,104 @@
       "desc": "Narrow black blade with a notched edge; handle of dark bone.",
       "document": "dcc-core"
     }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 13,
+    "fields": {
+      "name": "Eviscerator Blade",
+      "benefit": "A magic weapon that explodes its damage dice: every time the wielder rolls the maximum on a damage die, they roll another and add it, chaining as long as maximums keep coming. A hot streak turns one hit into a bloodbath.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 14,
+    "fields": {
+      "name": "Medusa's Touch Blade",
+      "benefit": "A magic blade whose strike forces a Fort save (DC 1d10+10) or the victim is permanently turned to stone. One good hit can end a fight outright, though the DC swings with the roll.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 15,
+    "fields": {
+      "name": "Blade of Great Strength",
+      "benefit": "While wielded, this magic weapon raises the bearer's Strength by +4, boosting melee attack and damage across the board. Its power vanishes the moment it leaves your hand.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 16,
+    "fields": {
+      "name": "Holy Brand Weapon",
+      "benefit": "A blessed magic weapon that deals an extra +1d4 damage to unholy creatures, undead, and demons. Ordinary foes feel nothing special, but against the unclean it bites deep.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 17,
+    "fields": {
+      "name": "Blade of Precise Strike",
+      "benefit": "A finely-honed magic weapon granting a +1d4 bonus to attack rolls, making hard-to-hit targets far easier to land. The bonus varies each swing but always helps.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 18,
+    "fields": {
+      "name": "Whirlwind Strike Blade",
+      "benefit": "A magic weapon that lets the wielder trade their normal attack for two attacks in one round, each rolled with 1d10 instead of 1d20 (normal attack bonus applies). No critical hits are possible while whirling, trading big hits for volume.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 19,
+    "fields": {
+      "name": "Armor-breaker Weapon",
+      "benefit": "On any critical hit, this magic weapon destroys the opponent's armor outright, on top of the normal crit effects, stripping their AC for the rest of the fight.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 20,
+    "fields": {
+      "name": "Weapon-breaker",
+      "benefit": "On any critical hit, this magic weapon destroys the opponent's weapon (or maims natural weapons like claws and fangs), on top of the normal crit effects, leaving them disarmed.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 21,
+    "fields": {
+      "name": "Throwing Blade",
+      "benefit": "A magic sword balanced for throwing up to 20' as a ranged attack that always flies back to the wielder's hand after the throw, so you never lose your weapon.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 22,
+    "fields": {
+      "name": "Death Dealer (Bane Weapon)",
+      "benefit": "A magic weapon attuned to a specific kind of foe (its bane); when it strikes that bane, the creature must make a Fort save (DC 1d20+10) or die instantly. Against anything else it is just a fine blade.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.item",
+    "pk": 23,
+    "fields": {
+      "name": "Hunter (Bane Weapon)",
+      "benefit": "A magic weapon that senses its designated bane within 100', even through invisibility or magical concealment, piercing such defenses as if with a +10 Will save. A relentless tracker against its chosen enemy.",
+      "document": "dcc-core"
+    }
   }
 ]
