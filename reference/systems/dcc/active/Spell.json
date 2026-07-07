@@ -1,0 +1,398 @@
+[
+  {
+    "model": "dcc.spell",
+    "pk": 1,
+    "fields": {
+      "name": "Animal Summoning",
+      "level": 1,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl. 1-11: failure (roll corruption on natural 1). 12-13: summon 1 animal of 1 HD or less, 1 round. 14-17: summon 1d3 animals up to 2 HD each, 1 turn. 18-19: summon 1 animal up to 4 HD, 1 hour. 20-23: summon 1d4 animals up to 3 HD each, 2 hours. 24-27: summon 1 animal up to 8 HD or four 2 HD, 2 hours; they obey normal commands. 28-29: summon up to 8 HD in any combination, 2 hours plus they perform suicidal acts. 30-31: legendary beast form summon (judge's discretion). 32+: ancient beast of myth; permanent companion. Caster cannot harm summoned animals.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 2,
+    "fields": {
+      "name": "Cantrip",
+      "level": 1,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl. 1-11: failure. 12-13: one simple utility effect (light a candle, clean a spot, produce a sound). 14-17: three minor effects simultaneously. 18-19: effects with 1 hour duration. 20-23: create one ongoing cantrip effect, concentration. 24-27: permanent minor magical effect (inscribe rune, permanent light source). 28+: cantrip can replicate certain 1st-level spells at the judge's discretion. No material component required at any level.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 3,
+    "fields": {
+      "name": "Charm Person",
+      "level": 1,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl vs. Will save. 1-11: failure (1 = lost + corruption). 12-13: target charmed for 1 hour (-2 penalty if not humanoid). 14-17: charmed for 1d6 hours; target treats caster as close friend. 18-19: charmed for 1 day; will answer questions truthfully. 20-23: charmed for 1 week. 24-27: charmed for 1 month; target will perform dangerous but not suicidal tasks. 28-29: permanent charm (broken by hostile act). 30-31: charmed and loyal companion, unbreakable short of death. 32+: rewrite the target's personality permanently. Monsters take -2 penalty; outsiders -4.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 4,
+    "fields": {
+      "name": "Chill Touch",
+      "level": 1,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl, touch attack required. 1-11: failure. 12-13: target takes 1d3 damage; -1 Str for 1 turn. 14-17: 1d6 damage, -2 Str for 1d6 turns. 18-19: 1d8 damage, target must make Fort save or be paralyzed 1 round. 20-23: 1d10 damage, -1d3 Str for 1 hour. 24-27: 1d12 damage, -1d6 Str permanently (lost until magically healed). 28-29: 2d8 damage, target gains 1 level of corruption (undead created if killed). 30-31: 2d12 damage, Fort save or permanent Str drain to 3. 32+: instant death on failed Fort save; slain become undead servants.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 5,
+    "fields": {
+      "name": "Choking Cloud",
+      "level": 1,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl. 1-11: failure. 12-13: 5' radius cloud, 1 round; creatures in cloud must Fort save or spend action coughing. 14-17: 10' radius, 1d3 rounds; save or -2 to all rolls while inside. 18-19: 10' radius, 1d6 rounds; no save; creatures take 1d4 damage per round. 20-23: 20' radius, 1d6+1 rounds; 1d6 damage per round. 24-27: 30' radius, 1 turn; 1d8 per round and target is blinded while inside. 28-29: 40' radius, 1 turn; 2d6 per round; lingers for hours. 30+: choking death, kills all creatures that fail Fort saves in the cloud within 1d3 rounds.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 6,
+    "fields": {
+      "name": "Color Spray",
+      "level": 1,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl, cone 30' long 15' wide. 1-11: failure. 12-13: creatures with 1 HD or less are blinded 1 round. 14-17: creatures up to 3 HD blinded 1d4 rounds. 18-19: all creatures blinded 1d6 rounds; up to 3 HD unconscious 1 round. 20-23: all blinded 1d8 rounds; up to 6 HD unconscious 1d4 rounds. 24-27: all unconscious 1d6 rounds regardless of HD. 28-29: catatonic for 1 turn; creatures see permanent waking hallucinations. 30+: creatures who fail Will save are permanently blinded or driven insane (judge's choice).",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 7,
+    "fields": {
+      "name": "Detect Magic",
+      "level": 1,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl. 1-11: failure. 12-13: detect presence of magic in 30', 1 round. 14-17: identify strength (faint/moderate/strong/overwhelming) in 60', 1 turn. 18-19: identify type of school of any magic detected. 20-23: identify exact spell or enchantment type, 1 turn. 24-27: identify command words of magic items; read dweomer aura for 1 hour. 28+: see through all illusions; detect invisible; read any magical text. Concentration required for sustained detection.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 8,
+    "fields": {
+      "name": "Enlarge",
+      "level": 1,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl. 1-11: failure. 12-13: target grows one size category for 1 turn (+1 damage, -2 AC). 14-17: two size categories, 1 turn (+1d6 damage, -4 AC). 18-19: one category, 1 hour, attacks deal +1 die step damage. 20-23: two categories, 1 hour, +2 die steps damage, +1 to hit. 24-27: can also shrink targets (Fort save or reduce size two steps). 28+: can enlarge objects including dungeon walls; affect up to 1 target per level. Works on unwilling targets with Fort save; can be used to crush or rupture objects.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 9,
+    "fields": {
+      "name": "Find Familiar",
+      "level": 1,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl, 1-hour ritual. 1-11: failure. 12-13: attracts a mundane animal willing to serve; no special powers. 14-17: true familiar with magical bond; caster can see/hear through familiar. 18-19: familiar gains one minor magical ability (fire resistance, darkvision, etc.). 20-23: familiar is a minor magical creature (pseudo-dragon, imp equivalent). 24-27: powerful familiar (will-o-wisp, quasit); grants caster 1 additional spell known. 28-29: greater familiar; dies granting caster full HP back once. 30+: legendary creature; serves for life; grants bonus HD. If familiar dies caster takes 1d6 damage per HD of familiar.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 10,
+    "fields": {
+      "name": "Flaming Hands",
+      "level": 1,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl, cone 10' long. 1-11: failure. 12-13: 1d3 fire damage, no save. 14-17: 1d6 per round for 2 rounds, Ref save for half. 18-19: 2d6 fire, Ref save for half; ignites flammable materials. 20-23: 3d6 fire, Ref save for half; 10' wide cone. 24-27: 4d6 fire; 15' cone; creatures that fail save are on fire (1d6/round until extinguished). 28-29: 5d6 fire; 20' cone; on fire; melts metal armor (AC penalty). 30+: 6d6 fire; all creatures in 30' cone; armor destroyed on failed save.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 11,
+    "fields": {
+      "name": "Magic Missile",
+      "level": 1,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl, auto-hit. 1-11: failure. 12-13: 1 missile, 1d4+1 force damage. 14-17: 2 missiles, 1d4+1 each. 18-19: 3 missiles. 20-23: 4 missiles; each deals 1d6+1 damage. 24-27: 5 missiles at 1d8+1 each. 28-29: 7 missiles at 1d8+1; can split between targets. 30-31: 10 missiles, 1d10+1 each. 32+: 2d6 missiles; auto-crits. Missiles always hit, track up to one per level, force damage bypasses non-magical protection.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 12,
+    "fields": {
+      "name": "Patron Bond",
+      "level": 1,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl, 1-hour ritual. 1-11: failure (patron taint on natural 1—permanent personality change). 12-13: weak bond; patron barely notices; one patron taint. 14-15: bond established; invoke patron spell learned; one patron taint. 16-19: strong bond; patron grants extra spell; patron taint only on corruption rolls. 20-23: favored status; patron may communicate via dreams; invoke patron improves one step. 24-27: chosen champion; patron provides minor active assistance once per session. 28+: beloved champion; patron intervenes directly when invoked (at judge's discretion); no taint on this casting. Must be cast on self. Recast anytime patron bond weakens.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 13,
+    "fields": {
+      "name": "Sleep",
+      "level": 1,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl, Will save. 1-11: failure. 12-13: 1 HD of creatures sleep 1 round. 14-17: 2d4 HD of creatures, 1 turn (lower HD creatures affected first). 18-19: 3d6 HD, 1 hour. 20-23: 4d8 HD, 1 hour; affects undead. 24-27: 5d12 HD, natural sleep lasts until woken; affects constructs and undead at -4 save. 28-29: entire dungeon level may sleep; wake only on extreme stimulus. 30+: indefinite sleep; target won't wake for years without magical intervention.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 20,
+    "fields": {
+      "name": "ESP",
+      "level": 2,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl, concentration. 1-12: failure. 13-15: detect surface thoughts of one creature within 60', 1 round. 16-19: read thoughts of one creature within 120', 1 turn; general emotional state only. 20-21: read detailed thoughts, 1 turn; target can make Will save. 22-25: read thoughts of up to 3 creatures simultaneously. 26-29: read deep memories and desires; probe for specific info with Will contest. 30+: read all minds within 60' simultaneously; implant suggestions on failed saves. Works through barriers at reduced range; doesn't work on mindless undead.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 21,
+    "fields": {
+      "name": "Invisibility",
+      "level": 2,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl. 1-12: failure. 13-15: target invisible for 1 turn; breaks on attack. 16-19: invisible for 1 hour, remains after attack. 20-21: invisible for 1 day; can attack without breaking. 22-25: target and all carried items invisible; no concentration. 26-29: invisible plus all creatures within 10' radius. 30+: permanent invisibility on target; can be applied to objects; even true seeing fails at 32+.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 22,
+    "fields": {
+      "name": "Levitate",
+      "level": 2,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl. 1-12: failure. 13-15: rise or lower 10'/round, concentration, 1 turn. 16-19: full movement vertically, 1 hour. 20-21: levitate a target within 60'; move horizontally at half speed. 22-25: fly speed 20'/round in any direction, 1 hour. 26-29: fly speed 40'/round; carry up to encumbrance limit. 30+: fly speed 60'; grant flight to others within touch; no concentration; lasts 1 day.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 23,
+    "fields": {
+      "name": "Locate Object",
+      "level": 2,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl. 1-12: failure. 13-15: detect object within 60' if caster knows its exact appearance. 16-19: sense direction of known object within 360'. 20-21: sense exact distance to object within 1 mile. 22-25: locate any object by type (not exact item) within 1 mile. 26-29: object location bypasses magical concealment. 30+: locate a unique object anywhere in the plane; reveal its current holder.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 24,
+    "fields": {
+      "name": "Knock",
+      "level": 2,
+      "caster_class": "wizard",
+      "school": "",
+      "desc": "Spell check d20+Int+lvl. 1-12: failure. 13-15: open one non-magical lock or bar. 16-19: open 1d3 locks, doors, or containers in range. 20-21: open all locks in 30'; arcane locks require higher result. 22-25: open arcane-locked doors; negate magical traps on containers. 26-29: destroy door or container; portcullis or stone doors fall open. 30+: open any door or container in line of sight; dispel all sealing magic in area.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 50,
+    "fields": {
+      "name": "Blessing",
+      "level": 1,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl, deity must approve (alignment check). 1-11: failure (deity disapproval by 1). 12-13: +1 to one creature's attack rolls or saves for 1 turn. 14-17: +1 to all attack rolls and saves within 20' radius, 1 turn. 18-19: +1 attack/save and +1 damage, 1 turn, 30' radius. 20-23: +2 attack/save, 1 turn, 60' radius. 24-27: +2 attack/save/damage; fear immunity for duration, 1 hour. 28-29: entire party benefits; effect extends to morale checks of hirelings. 30+: divine aura; +3 attack/save/damage; enemies are cowed (-2 morale). Cumulative with similar effects only if from different sources.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 51,
+    "fields": {
+      "name": "Darkness",
+      "level": 1,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl. 1-11: failure. 12-13: 20' radius darkness, 1 turn; blocks normal sight. 14-17: 30' radius, 1 hour; blocks darkvision at 20+. 18-19: magical darkness that is only pierced by light spells of 4th level or higher. 20-23: 40' radius, up to 1 day; dispels light spells up to 3rd level. 24-27: darkness follows a target or fills a room. 28+: absolute darkness, no light source penetrates; even magical light extinguished. Clerics of darkness-aligned patrons add +2 to this spell check.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 52,
+    "fields": {
+      "name": "Detect Evil",
+      "level": 1,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl. 1-11: failure. 12-13: sense evil intent within 30', 1 round. 14-17: detect evil creatures, items, or spells within 60', 1 turn. 18-19: identify strength of evil aura; know source type (creature/item/spell). 20-23: detect subtle evil (disguised demons, enchanted items); 1 turn. 24-27: read the evil history of an item or location. 28+: see true form of shapeshifted evil entities; detect lawfully evil alignment distinctions. Chaotic clerics cast this as Detect Good.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 53,
+    "fields": {
+      "name": "Detect Magic",
+      "level": 1,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl. 1-11: failure. 12-13: sense magic within 30', 1 round. 14-17: identify whether an object or creature has magical properties, 1 turn. 18-19: identify school of magic; count number of active spells on a creature. 20-23: identify specific spell effects and their remaining duration. 24-27: read a spell scroll without triggering it; identify curse effects. 28+: see through magical disguises; determine caster level of all effects.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 54,
+    "fields": {
+      "name": "Holy Sanctuary",
+      "level": 1,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl. 1-11: failure. 12-13: any creature attacking the warded target must make Will save or lose its action. 14-17: sanctuary radius 5', 1 round; attackers save at -2. 18-19: 10' radius, 1 turn; automatically blesses all within. 20-23: 20' radius, 1 turn; no hostile creature can enter unless it makes Will save (DC = spell check result). 24-27: 30' radius, 1 hour; undead cannot enter. 28+: entire dungeon room; undead destroyed on contact; lasts 1 day.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 55,
+    "fields": {
+      "name": "Paralysis",
+      "level": 1,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl vs. Fort save. 1-11: failure. 12-13: target is slowed (half actions, -2 AC) for 1 round. 14-17: paralyzed for 1d4 rounds; can target 1 creature up to 30'. 18-19: paralyzed for 1 turn; may target undead. 20-23: 2 targets paralyzed for 1 turn. 24-27: all targets within 20' radius must save or be paralyzed for 1 hour. 28+: permanent paralysis until Remove Curse is cast. Chaotic clerics may use this offensively; lawful clerics only in self-defense.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 56,
+    "fields": {
+      "name": "Word of Command",
+      "level": 1,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl vs. Will save. 1-11: failure. 12-13: single one-word command (flee, fall, stop) obeyed for 1 round; no save. 14-17: one-word command with Will save; on failure target obeys for 1 turn. 18-19: short phrase command (10 words or less); 1 turn. 20-23: complex command up to 1 sentence; 1 hour. 24-27: permanent command on failed save; target doesn't realize they are compelled. 28+: command all creatures within 30' who can hear. Deity alignment affects which commands are acceptable.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 60,
+    "fields": {
+      "name": "Cure Paralysis",
+      "level": 2,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl. 1-12: failure. 13-15: remove paralysis from one creature via touch. 16-19: remove paralysis from 1d3 creatures within 30'. 20-21: remove paralysis and restore 1d4 lost ability score points. 22-25: reverse any immobilization effect (magical, mundane, petrification at 26+). 26+: restore creature from petrification or magical sleep. Greater results also apply a 1 turn immunity to repeated paralysis.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 61,
+    "fields": {
+      "name": "Cure Poison",
+      "level": 2,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl. 1-12: failure. 13-15: slow poison (reduce effect by half) for 1 hour. 16-19: neutralize one poison; no ongoing damage. 20-21: cure poison and restore 1d4 ability score points lost to it. 22-25: cure all poisons on one creature; immunity to poison for 1 day. 26+: cure all poisons in 30' radius; create antidote for a specific poison. Cleric must identify poison type to cure specific long-term effects.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 62,
+    "fields": {
+      "name": "Curse",
+      "level": 2,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl vs. Will save. 1-12: failure. 13-15: -1 to all rolls for 1 day. 16-19: -2 to all rolls for 1 week; first failed save has disadvantage. 20-21: specific curse (blind, deaf, -4 to a specific skill) for 1 month. 22-25: permanent curse; requires Remove Curse of equal or greater check. 26-29: hereditary curse; affects caster if broken. 30+: reality-altering curse; target may be transformed or afflicted forever. Lawful clerics may only use this on chaotic enemies. Chaotic clerics use freely.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 63,
+    "fields": {
+      "name": "Lotus Stare",
+      "level": 2,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl, eye contact required; range 30'. 1-12: failure. 13-15: target is fascinated for 1 round; may not move toward caster. 16-19: target is stupefied (takes no voluntary actions) for 1 round. 20-21: target is entranced for 1 turn; will answer simple questions honestly. 22-25: deep trance for 1 hour; implant a minor suggestion. 26+: permanent fascination; target follows caster anywhere as a thrall (Will save each day to resist). Wearing eye coverings provides immunity. Undead immune.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 64,
+    "fields": {
+      "name": "Neutralize Poison",
+      "level": 2,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl. 1-12: failure. 13-15: neutralize one active poison via touch; no damage restored. 16-19: neutralize all active poisons on one creature; restore 1 HP per die of poison damage dealt. 20-21: neutralize poison and grant immunity for 1 day. 22-25: create a potion of neutralize poison from natural components (1 use, lasts 1 day). 26+: neutralize poison in an entire room; purify a water supply; transmute poison into holy water.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 70,
+    "fields": {
+      "name": "Animate Dead",
+      "level": 3,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl. 1-13: failure (chaotic clerics: failure on 1 only). 14-17: animate one corpse as zombie or skeleton for 1 day; basic commands only. 18-21: animate 1d4 corpses; lasts 1 week; can issue complex orders. 22-25: animate 2d6 corpses permanently; they are loyal to the caster. 26-29: animate corpses as ghouls; each retains a fragment of their living skills. 30+: animate any number in 60' radius; create wights or wraiths from freshly killed. Lawful clerics suffer -4 to this check; successful use usually requires deity approval.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 71,
+    "fields": {
+      "name": "Remove Curse",
+      "level": 3,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl vs. original curse check. 1-13: failure. 14-17: remove a minor curse (1-2 level spell). 18-21: remove any curse up to 3rd level origin. 22-25: remove any curse including hereditary or legendary ones. 26-29: remove curse from a location or object. 30+: undo the effects of a cursed item including ability score damage, transformation, or personality change. Caster must know the curse's origin to target it precisely; otherwise check is at -2.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.spell",
+    "pk": 72,
+    "fields": {
+      "name": "Spiritual Weapon",
+      "level": 3,
+      "caster_class": "cleric",
+      "school": "",
+      "desc": "Spell check d20+Per+lvl. 1-13: failure. 14-17: glowing weapon attacks as a 1st-level fighter (1d8 damage), 1 round. 18-21: attacks as a 3rd-level fighter, concentration, 1 turn. 22-25: weapon is imbued with deity's alignment; does +1d6 extra damage to opposed alignment; lasts 1 turn without concentration. 26-29: weapon attacks twice per round; can attack invisible or ethereal creatures. 30+: divine weapon persists for 1 hour; crits on 18-20; destroyed armor on critical hit.",
+      "document": "dcc-core"
+    }
+  }
+]
