@@ -12,7 +12,8 @@
       "armor": "All armor and shields",
       "luck_die": "d8 (Warriors burn Luck for attack rolls in addition to other uses)",
       "desc": "Warriors use Mighty Deeds of Arms: on any attack roll, declare a Deed (blind, trip, disarm, push, etc.). If the attack hits AND the action die shows 3+, the Deed succeeds — no save, no roll. The die result is the Deed die (higher = more dramatic effect). Warriors get a free Mighty Deed attempt every round, not limited by spells or resources. At higher levels, warriors gain extra attack dice, improved crit range, and Deed dice that scale to d10+. Luck affects attack rolls directly (see table). Weapon specialization: with any weapon trained for 3+ levels, add deed die to damage.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "The martial powerhouse: every attack can carry a free Mighty Deed (trip, disarm, blind) that lands if the hit connects and the action die reads 3+, with no save or resource cost. Deed dice, extra attacks, and crit range all grow with level, and Luck adds directly to attack rolls."
     }
   },
   {
@@ -28,7 +29,8 @@
       "armor": "None (may not wear armor)",
       "luck_die": "d3",
       "desc": "Wizards cast spells by making a spell check: d20 + Int modifier + caster level, compared to a variable DC (roll on the spell table). Higher results produce better outcomes. A natural 1 is always catastrophic — the spell is lost permanently AND the wizard rolls on the corruption table (minor, major, or greater corruption permanently alters appearance, stats, or personality). Any result below 12 is typically a failure with the spell retained. Above 12: spell fires but may have weaker effects. The key tension: wizards can push their luck but risk losing spells and accumulating corruption. Patrons: wizards may bond with patrons (demon lords, deities, cosmic entities) for extra power and invoke patron spells, but patron displeasure (patron taint) reshapes the character. Spells never auto-recharge — a wizard with no spell check successes in a day may be useless.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "Casts by spell check (d20+Int+level) against each spell's own table with no fixed slots; push for bigger results, but a natural 1 loses the spell forever and rolls corruption that permanently warps you. Can bond patrons for power at the cost of taint. A bad-roll day can leave a wizard useless."
     }
   },
   {
@@ -44,7 +46,8 @@
       "armor": "All armor and shields",
       "luck_die": "d4",
       "desc": "Clerics cast spells through divine favor: spell check = d20 + Per modifier + caster level, but ALSO must track deity disapproval. Every failed spell check adds 1 point of disapproval. Disapproval starts at 1 (on a natural 1) and grows — higher disapproval means the deity may refuse spells entirely, force acts of penance, or smite the cleric. Disapproval resets on long prayer and penance. The mechanic enforces actual roleplay of faith — a cleric who never prays, never gives alms, and never acts in alignment will find their spells ceasing to function entirely. Turn Unholy: works on a spell check; higher results affect more powerful undead; on natural 20 the undead may be destroyed or permanently banished. Clerics can heal, but healing is also a spell check — it's not guaranteed.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "Divine caster using d20+Personality+level, but every failed check adds deity disapproval that widens the trigger range and can cut off spells, force penance, or smite; only prayer and faithful acts reset it. Healing is itself a spell check, never guaranteed, and the cleric also turns undead."
     }
   },
   {
@@ -60,7 +63,8 @@
       "armor": "Leather, padded; no metal armor",
       "luck_die": "d6 (Thieves may burn Luck for skill checks — and can earn Luck back by performing improbable feats)",
       "desc": "Thieves have a unique set of skills that use a d20 roll vs. a difficulty: Backstab (bonus to attack and damage from hiding; attack die improves to d24 at 5th), Sneak silently, Hide in shadows, Pick pockets, Climb walls, Pick locks, Find/disable traps, Forge documents, Disguise self, Read languages, Handle poison. Each skill starts at a set percentage and improves by level. Crucially, thieves are the ONLY class that can regain burned Luck — they earn it back by performing risky maneuvers that entertain the table. Backstab: +4 to attack, weapon die improves two steps (d6→d10), and is the only class ability that benefits from the d30 rule on sneak attacks. Level advancement is fastest in the game.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "Skill specialist rolling d20 vs. difficulty for backstab, stealth, locks, traps, and poison. Backstab adds +4 and bumps the weapon die two steps. Uniquely, thieves earn burned Luck back by pulling off improbable stunts, and they level fastest in the game."
     }
   },
   {
@@ -76,7 +80,8 @@
       "armor": "All armor and shields",
       "luck_die": "d8",
       "desc": "Dwarves function like fighters with a racial class identity. They get Mighty Deeds of Arms just like Warriors but their deed die maxes at d14 (not d16). Trade-off: superior saves (Fort +2 over Warriors at all levels), superior underground senses (detect grade, construction, depth 1-4 on d6 always), and a unique Shield Brother ability — a Dwarf can spend their action to grant an adjacent ally a +2 AC bonus from the dwarf's body-blocking. Dwarves are immune to paralysis and resist magic (saving throws against spells use Fort). Infravision: see heat signatures in complete darkness to 60'. Dwarves cannot be wizards (no arcane ability), but may be trained in divine magic in rare campaigns.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "A racial warrior with Mighty Deeds (deed die caps at d14) plus superior Fortitude saves, paralysis immunity, and 60' infravision. Detects underground features on a d6, and the Shield Brother action grants an adjacent ally +2 AC by body-blocking. A Dwarf can't be a wizard."
     }
   },
   {
@@ -92,7 +97,8 @@
       "armor": "All armor — but arcane spells require no armor",
       "luck_die": "d6",
       "desc": "Elves combine warrior and wizard abilities but excel at neither. They use a d20 action die, can make melee attacks AND cast spells in the same turn (the only class with this), and cast spells like wizards (spell check mechanic). However: elves are severely limited in corruption resistance — they gain patron taint on 1-2 (not just 1). They are immune to paralysis and hold. They have infravision 60', speak elvish plus other ancient tongues. Key trade-off: jack-of-all-trades but master of none — inferior spell checks to a true wizard at the same level, inferior deed die to a warrior, but unique flexibility. Elves detect secret doors on 1-2 in 6 when passing within 10'.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "The only class that can make a melee attack and cast a spell in the same turn, blending warrior and wizard but mastering neither, with weaker spell checks and deed die than the specialists. Immune to paralysis and spots secret doors, but fragile to magic: patron taint triggers on 1-2, not just 1."
     }
   },
   {
@@ -108,7 +114,8 @@
       "armor": "Leather, chain; no plate",
       "luck_die": "d3 (but Halflings have the highest Luck of any race at character creation and it burns at d3 intervals — best overall Luck economy)",
       "desc": "Halflings function through their Good Fortune mechanic: once per session, a halfling can declare Good Fortune before any roll — they roll the Luck die and add it to that check. This isn't burning Luck permanently; it's a free bonus. Additionally, halflings can grant the Good Fortune bonus to a nearby ally instead (the only class with this ability). Halflings are small (penalties to Str-based tasks, bonuses to stealth) and get +4 to AC against large creatures. Sneak: halflings make noise checks like thieves but at a superior die. The halfling's charm allows them to negotiate with hostile creatures at +2 to all reaction rolls. Halflings cannot multiclass but gain a luck die from level to level faster than any other class.",
-      "document": "dcc-core"
+      "document": "dcc-core",
+      "effect": "Runs on Good Fortune: once per session, before any roll, add the Luck die as a free (non-burning) bonus, or hand that bonus to a nearby ally, uniquely. Best Luck economy in the game, +4 AC vs. large foes, superior stealth, and +2 to reaction rolls when negotiating."
     }
   }
 ]
