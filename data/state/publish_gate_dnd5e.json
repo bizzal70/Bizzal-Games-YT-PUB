@@ -77,6 +77,19 @@
       "publish_rc": 0,
       "publish_output": "[upload_youtube] uploaded id=ryKnwo0LPb8 privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-06.mp4 https://www.youtube.com/watch?v=ryKnwo0LPb8 [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dnd5e.json hash=9e55a11e436bb103",
       "youtube_url": "https://www.youtube.com/watch?v=ryKnwo0LPb8"
+    },
+    "2026-07-07": {
+      "day": "2026-07-07",
+      "content_id": "bgp-2026-07-07-spell-use-case-spell-xanathars-guide-word-of-radiance-82e1afcf9957",
+      "category": "spell_use_case",
+      "angle": "best_moment",
+      "status": "published",
+      "requested_utc": "2026-07-07T15:15:21Z",
+      "decision_utc": "2026-07-07T15:15:21Z",
+      "decision_by": "autopublish",
+      "publish_rc": 0,
+      "publish_output": "[upload_youtube] uploaded id=JrK3LeBvCFg privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-07.mp4 https://www.youtube.com/watch?v=JrK3LeBvCFg [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dnd5e.json hash=d52746ffaeb7dd2d",
+      "youtube_url": "https://www.youtube.com/watch?v=JrK3LeBvCFg"
     }
   }
 }

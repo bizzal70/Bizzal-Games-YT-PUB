@@ -55,6 +55,20 @@
       "hook": "Low-threat on paper, high-chaos at the table: Bugbear Stalker.",
       "body": "AC 15 and HP 65 mean it can take a few hits while executing its plan. With a Stealth bonus of +6, it often surprises parties, making the first move count. Abduct allows it to reposition enemies easily, disrupting formations. Ignoring this mobility can lead to disastrous positioning errors. Focus fire on the Bugbear Stalker to prevent it from dictating the battle's flow.",
       "cta": "Players: laugh first, then respect turn economy before this joke encounter snowballs."
+    },
+    {
+      "published_utc": "2026-07-07T15:22:11Z",
+      "day": "2026-07-07",
+      "content_id": "bgp-2026-07-07-spell-use-case-spell-xanathars-guide-word-of-radiance-82e1afcf9957",
+      "instagram_post_id": "17990154794818011",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "a05f5f47dfaecba58f848b3eb96b17cdbc8f0a69c9a84b0b267600ad3e66a7c2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-07.mp4",
+      "fact_name": "Word of Radiance",
+      "category": "spell_use_case",
+      "hook": "Word of Radiance is the spell people joke about - right before it saves a turn cycle.",
+      "body": "Word of Radiance is a cantrip that deals 1d6 radiant damage and requires a Constitution saving throw. It targets all chosen creatures within a 5-foot sphere, not just one. Casting it against high-Constitution enemies often results in failed damage rolls. Better results occur when used against multiple low-Constitution targets clustered around the caster, increasing the likelihood of successful damage application.",
+      "cta": "DMs: When you're surrounded by weaklings, unleash Word of Radiance to exploit their low Constitution and clear the rabble."
     }
   ]
 }

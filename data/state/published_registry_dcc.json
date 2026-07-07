@@ -1,1 +1,30 @@
-[]
+{
+  "items": [
+    {
+      "published_utc": "2026-07-07T15:08:19Z",
+      "day": "2026-07-07",
+      "content_id": "bgp-2026-07-07-spell-use-case-spell-2-694e7e44e837",
+      "publish_hash": "eaa0921867058d8d76b29b5b5cba54f6402ada812efe36b96daabfcf1969acad",
+      "youtube_video_id": "Ie9M_q_MHdw",
+      "youtube_url": "https://www.youtube.com/watch?v=Ie9M_q_MHdw",
+      "video_sha256": "e2ca21bdaf54bdf7def717d3d8cb1ef608f61de0d117202bab62b6cfbf0b0918",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-07.mp4",
+      "fingerprint": {
+        "day": "2026-07-07",
+        "category": "spell_use_case",
+        "angle": "crit_result",
+        "content_id": "bgp-2026-07-07-spell-use-case-spell-2-694e7e44e837",
+        "canonical_hash": "694e7e44e83720bcfb911e073cc335fc555f2a23ba019c8864ef4bc33a209c0a",
+        "script_id": "9cc7f8e4949e5f90cbc45d7dfd401a8012eb1c1040e2f2cd85ca9944182c0d4e",
+        "fact_kind": "spell",
+        "fact_pk": 2,
+        "fact_name": "Cantrip",
+        "hook": "Cantrip looks low-stakes until smart timing makes it absurdly useful.",
+        "body": "Cantrip, a 1st-level spell for wizards, requires concentration and varies in effect based on the spell check result. A roll of 1-11 results in failure, while 12-13 allows for a simple utility effect like lighting a candle. Many players mistakenly use Cantrip solely for minor effects, overlooking the potential for three simultaneous effects with a roll of 14-17, or longer-lasting effects with an 18-19. Optimal use involves casting Cantrip to change the encounter state, not just for damage, and managing concentration against environmental pressures rather than arbitrary counters.",
+        "cta": "DMs: Remind them that a 14-17 roll on Cantrip can create three effects, which they consistently forget.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-07.mp4",
+        "video_sha256": "e2ca21bdaf54bdf7def717d3d8cb1ef608f61de0d117202bab62b6cfbf0b0918"
+      }
+    }
+  ]
+}

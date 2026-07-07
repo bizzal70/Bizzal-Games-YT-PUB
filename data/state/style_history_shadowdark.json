@@ -88,5 +88,15 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-07-07": {
+    "rules_ruling": {
+      "angle": "fast_ruling",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

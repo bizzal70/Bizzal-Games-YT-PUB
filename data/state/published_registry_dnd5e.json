@@ -571,6 +571,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-06.mp4",
         "video_sha256": "f5f6109d2e2db8f3c4ba95a474f952c0b216709d29443283010c29e2375cce90"
       }
+    },
+    {
+      "published_utc": "2026-07-07T15:15:24Z",
+      "day": "2026-07-07",
+      "content_id": "bgp-2026-07-07-spell-use-case-spell-xanathars-guide-word-of-radiance-82e1afcf9957",
+      "publish_hash": "d52746ffaeb7dd2d541e8ef43f346ae3e8021027f537017561ada7c3517413de",
+      "youtube_video_id": "JrK3LeBvCFg",
+      "youtube_url": "https://www.youtube.com/watch?v=JrK3LeBvCFg",
+      "video_sha256": "a05f5f47dfaecba58f848b3eb96b17cdbc8f0a69c9a84b0b267600ad3e66a7c2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-07.mp4",
+      "fingerprint": {
+        "day": "2026-07-07",
+        "category": "spell_use_case",
+        "angle": "best_moment",
+        "content_id": "bgp-2026-07-07-spell-use-case-spell-xanathars-guide-word-of-radiance-82e1afcf9957",
+        "canonical_hash": "82e1afcf9957bafc432a032271e8aa5d225eff342c8239e51ae2e2c5402414f7",
+        "script_id": "abb0368fe8c64d1db9725cdc6eea4846cda63094dd1d75dbe56caf42a3e2c0d4",
+        "fact_kind": "spell",
+        "fact_pk": "xanathars-guide_word-of-radiance",
+        "fact_name": "Word of Radiance",
+        "hook": "Word of Radiance is the spell people joke about - right before it saves a turn cycle.",
+        "body": "Word of Radiance is a cantrip that deals 1d6 radiant damage and requires a Constitution saving throw. It targets all chosen creatures within a 5-foot sphere, not just one. Casting it against high-Constitution enemies often results in failed damage rolls. Better results occur when used against multiple low-Constitution targets clustered around the caster, increasing the likelihood of successful damage application.",
+        "cta": "DMs: When you're surrounded by weaklings, unleash Word of Radiance to exploit their low Constitution and clear the rabble.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-07.mp4",
+        "video_sha256": "a05f5f47dfaecba58f848b3eb96b17cdbc8f0a69c9a84b0b267600ad3e66a7c2"
+      }
     }
   ]
 }

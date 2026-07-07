@@ -337,6 +337,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-06.mp4",
         "video_sha256": "4e914c1e311da2e059949c0c06410acf244808579181d696ae8f989944d289c3"
       }
+    },
+    {
+      "published_utc": "2026-07-07T15:21:10Z",
+      "day": "2026-07-07",
+      "content_id": "bgp-2026-07-07-rules-ruling-rule-9-73b50d3b8ec4",
+      "publish_hash": "ac5488104cbfc3a43b0dbf4c7237be0db308ec3d97c8f9e64c2c06a1f1d5ac9b",
+      "youtube_video_id": "KBbJeq7onJ8",
+      "youtube_url": "https://www.youtube.com/watch?v=KBbJeq7onJ8",
+      "video_sha256": "f74ffac78c6b71e297bf64188ad8ef3a88f4e15e815b7ca2d0afb913dd017fa2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-07.mp4",
+      "fingerprint": {
+        "day": "2026-07-07",
+        "category": "rules_ruling",
+        "angle": "fast_ruling",
+        "content_id": "bgp-2026-07-07-rules-ruling-rule-9-73b50d3b8ec4",
+        "canonical_hash": "73b50d3b8ec4aa12b74a242082c8989327f5cb3dbd846274565127024b6e0909",
+        "script_id": "f1d1e31474edf10bed8aa03e402b50bf5225a9f2be8316328cb7570bd699c24b",
+        "fact_kind": "rule",
+        "fact_pk": 9,
+        "fact_name": "Encumbrance and Gear Slots",
+        "hook": "Table call: Encumbrance and Gear Slots.",
+        "body": "Fast ruling for Encumbrance and Gear Slots: decide intent, then resolve with one clear call. Characters have gear slots equal to their Strength score (minimum 10). Each item occupies 1 slot unless noted. Exceeding slots imposes disadvantage on physical checks. Clear rulings now save argument time later.",
+        "cta": "DMs: Characters have gear slots equal to Strength; exceeding them means disadvantage on physical checks, so count carefully.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-07.mp4",
+        "video_sha256": "f74ffac78c6b71e297bf64188ad8ef3a88f4e15e815b7ca2d0afb913dd017fa2"
+      }
     }
   ]
 }

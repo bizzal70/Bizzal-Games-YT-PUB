@@ -1,4 +1,19 @@
 {
   "last_checked": null,
-  "approved": false
+  "approved": false,
+  "approvals": {
+    "2026-07-07": {
+      "day": "2026-07-07",
+      "content_id": "bgp-2026-07-07-spell-use-case-spell-2-694e7e44e837",
+      "category": "spell_use_case",
+      "angle": "crit_result",
+      "status": "published",
+      "requested_utc": "2026-07-07T15:08:16Z",
+      "decision_utc": "2026-07-07T15:08:16Z",
+      "decision_by": "autopublish",
+      "publish_rc": 0,
+      "publish_output": "[upload_youtube] uploaded id=Ie9M_q_MHdw privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-07.mp4 https://www.youtube.com/watch?v=Ie9M_q_MHdw [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dcc.json hash=eaa0921867058d8d",
+      "youtube_url": "https://www.youtube.com/watch?v=Ie9M_q_MHdw"
+    }
+  }
 }
