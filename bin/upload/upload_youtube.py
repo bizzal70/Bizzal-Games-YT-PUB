@@ -173,7 +173,7 @@ def build_title(atom: dict, day: str) -> str:
     name = (fact.get("name") or "Daily RPG Tip").strip()
     category = (atom.get("category") or "rpg_short").replace("_", " ").title()
     profile = content_profile(atom)
-    hashline = "#shadowdark #osr #shorts" if profile == "shadowdark" else "#dnd #ttrpg #shorts"
+    hashline = hashtags_for(profile)["title"]
     title = f"{name} • {category} {hashline}"
     return title[:100]
 
@@ -186,7 +186,7 @@ def build_description(atom: dict, day: str) -> str:
     category = (atom.get("category") or "").strip()
     angle = (atom.get("angle") or "").strip()
     profile = content_profile(atom)
-    hashtags = "#shadowdark #osr #ttrpg #shorts" if profile == "shadowdark" else "#dnd #dnd5e #ttrpg #shorts"
+    hashtags = hashtags_for(profile)["desc"]
     lines = [
         f"Daily RPG Short • {day}",
         "",
@@ -204,28 +204,64 @@ def build_description(atom: dict, day: str) -> str:
     return "\n".join(x for x in lines if x is not None)[:5000]
 
 
+# Per-system hashtag / tag sets, keyed by system id (BIZZAL_SYSTEM_ID).
+# Add a row when onboarding a system; unknown systems get a neutral fallback
+# rather than being mislabeled as D&D.
+_HASHTAGS = {
+    "dnd5e": {
+        "title": "#dnd #ttrpg #shorts",
+        "desc": "#dnd #dnd5e #ttrpg #shorts",
+        "youtube_tags": ["dnd", "dnd5e", "ttrpg", "shorts"],
+    },
+    "shadowdark": {
+        "title": "#shadowdark #osr #shorts",
+        "desc": "#shadowdark #osr #ttrpg #shorts",
+        "youtube_tags": ["shadowdark", "osr", "ttrpg", "shorts", "dungeon", "rpg"],
+    },
+    "dcc": {
+        "title": "#dcc #osr #shorts",
+        "desc": "#dcc #dungeoncrawlclassics #osr #ttrpg #shorts",
+        "youtube_tags": ["dcc", "dungeon crawl classics", "osr", "ttrpg", "shorts", "rpg"],
+    },
+}
+_HASHTAGS_FALLBACK = {
+    "title": "#ttrpg #rpg #shorts",
+    "desc": "#ttrpg #rpg #shorts",
+    "youtube_tags": ["ttrpg", "rpg", "shorts"],
+}
+
+
+def hashtags_for(profile: str) -> dict:
+    return _HASHTAGS.get(profile, _HASHTAGS_FALLBACK)
+
+
 def content_profile(atom: dict) -> str:
+    # Authoritative: the system id the daily pipeline is running under
+    # (set by bin/core/system_env.sh). Returns e.g. "dnd5e" / "shadowdark" / "dcc".
+    sysid = (os.getenv("BIZZAL_SYSTEM_ID") or "").strip().lower()
+    if sysid:
+        return sysid
+
+    # Fallbacks for out-of-pipeline / legacy invocations.
     label = (os.getenv("BIZZAL_CHAIN_LABEL") or "").strip().lower()
     if label in {"shadowdark", "sd"}:
         return "shadowdark"
+    if label == "dcc":
+        return "dcc"
 
     source = atom.get("source") or {}
     active_srd_path = str(source.get("active_srd_path") or "").lower()
-    if "shadowdark" in active_srd_path:
-        return "shadowdark"
-
     fact = atom.get("fact") or {}
     document = str(fact.get("document") or "").lower()
-    if "shadowdark" in document:
-        return "shadowdark"
+    for token, prof in (("shadowdark", "shadowdark"), ("dcc", "dcc")):
+        if token in active_srd_path or token in document:
+            return prof
 
-    return "dnd"
+    return "dnd5e"
 
 
 def youtube_tags_for_profile(profile: str) -> list[str]:
-    if profile == "shadowdark":
-        return ["shadowdark", "osr", "ttrpg", "shorts", "dungeon", "rpg"]
-    return ["dnd", "dnd5e", "ttrpg", "shorts"]
+    return hashtags_for(profile)["youtube_tags"]
 
 
 def get_youtube_service(client_secrets: Path, token_file: Path):
