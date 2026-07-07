@@ -118,5 +118,122 @@
       "document": "dcc-core",
       "effect": "Instead of extra-attack bonuses, characters gain additional action dice as they level, and each die independently fuels one attack or spell that round. A high Warrior might roll d20+d14 to attack and attempt a Deed at once; casters can throw two spells. Bigger dice also fumble less often."
     }
+  },
+  {
+    "model": "dcc.rule",
+    "pk": 13,
+    "fields": {
+      "name": "Spellburn",
+      "effect": "Before rolling a spell check, a wizard may burn points of Strength, Agility, or Stamina to add that many points to the check (blood fuels magic). The ability loss heals over time like damage, but reaching for more power can invite dark bargains with demons or patrons.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.rule",
+    "pk": 14,
+    "fields": {
+      "name": "Mercurial Magic",
+      "effect": "When a wizard first learns a spell, they roll once on a d100 table for a permanent, unique quirk it will always have for them, a bonus, a side effect, or an altered manifestation. The same spell behaves differently in different wizards' hands, making every grimoire personal.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.rule",
+    "pk": 15,
+    "fields": {
+      "name": "Regaining Spells",
+      "effect": "Each spell-check result reads 'lost' or 'not lost.' A 'lost' result means that spell can't be cast again until regained, usually after a night's rest, prayer, or ritual. Low rolls burn through a caster's usable spells fast, so a bad day can leave them empty-handed.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.rule",
+    "pk": 16,
+    "fields": {
+      "name": "Turn Unholy",
+      "effect": "A cleric turns unholy creatures with a spell check compared to the targets' HD on a table; strong results root, drive off, or outright destroy undead and demons, while weak ones affect only the feeblest. Failure adds to deity disapproval like any missed cleric check.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.rule",
+    "pk": 17,
+    "fields": {
+      "name": "Spell Duels",
+      "effect": "When wizards clash, spells collide: the defender may counterspell, and matched castings trigger phlogiston disturbances, spellburn escalation, and corruption. The duel resolves through opposed checks and dramatic mishaps, and the loser is often reduced to a pile of ash.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.rule",
+    "pk": 18,
+    "fields": {
+      "name": "Fumbles",
+      "effect": "A natural 1 on an attack is a fumble, an automatic miss plus a roll on the fumble table (lower is worse, and Luck is reversed here, so high Luck hurts). Heavier armor rolls a bigger, nastier die. Only warriors and dwarves may burn 1 Luck to cancel the fumble roll.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.rule",
+    "pk": 19,
+    "fields": {
+      "name": "Two-Weapon Fighting",
+      "effect": "With high enough Agility, a character attacks with a primary weapon and a light off-hand weapon (dagger, short sword) in the same round; both rolls use smaller dice along the dice chain, with the penalty shrinking as Agility rises. Low Agility makes dual-wielding a bad bet.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.rule",
+    "pk": 20,
+    "fields": {
+      "name": "Morale",
+      "effect": "Monsters, retainers, and NPCs check morale at key moments, when the first of a group falls, when half are down, or when a lone foe is badly hurt, to decide whether they fight on or flee. Player characters never check morale; that call is always the player's.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.rule",
+    "pk": 21,
+    "fields": {
+      "name": "Healing",
+      "effect": "Wounds mend with rest, never past the natural maximum: 1 HP per night while adventuring, 2 HP per night with full bed rest. Lingering critical-hit effects, like a speed penalty from a wounded kneecap, heal only when their associated damage heals.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.rule",
+    "pk": 22,
+    "fields": {
+      "name": "Skill Checks",
+      "effect": "A trained skill rolls 1d20, an untrained one only 1d10, plus the relevant ability modifier against the DC. What you're trained in comes from your 0-level occupation, so a character's past trade defines what they can reliably attempt.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.rule",
+    "pk": 23,
+    "fields": {
+      "name": "Alignment",
+      "effect": "DCC alignment is cosmic, not moral: Law, Neutrality, or Chaos, marking which side of the eternal struggle a character serves. It shapes patrons, clerical spells, magic items, and how supernatural forces react, more allegiance than personality.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.rule",
+    "pk": 24,
+    "fields": {
+      "name": "Experience Points",
+      "effect": "DCC hands out XP in tiny amounts by an encounter's danger, roughly 0 to 4 points each, not by monster kills or treasure gathered. A handful of points levels a low character, so surviving a deadly scene matters far more than grinding fights.",
+      "document": "dcc-core"
+    }
+  },
+  {
+    "model": "dcc.rule",
+    "pk": 25,
+    "fields": {
+      "name": "Ability Score Loss",
+      "effect": "Some attacks drain ability scores, and hitting 0 in one is disabling: 0 Strength or Agility means you can't move, 0 Stamina drops you unconscious, 0 Personality or Intelligence leaves a babbling idiot, and 0 Luck brings constant ruinous mishaps. It heals slowly over time.",
+      "document": "dcc-core"
+    }
   }
 ]
