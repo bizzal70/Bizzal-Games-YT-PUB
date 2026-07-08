@@ -94,5 +94,17 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-07-08": {
+    "rules_ruling": {
+      "angle": "fast_ruling",
+      "voice": "friendly_vet",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "alloy"
+    }
   }
 }

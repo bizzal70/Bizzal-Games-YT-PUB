@@ -90,6 +90,18 @@
       "publish_rc": 0,
       "publish_output": "[upload_youtube] uploaded id=KBbJeq7onJ8 privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-07.mp4 https://www.youtube.com/watch?v=KBbJeq7onJ8 [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_shadowdark.json hash=ac5488104cbfc3a4",
       "youtube_url": "https://www.youtube.com/watch?v=KBbJeq7onJ8"
+    },
+    "2026-07-08": {
+      "day": "2026-07-08",
+      "content_id": "bgp-2026-07-08-item-spotlight-item-18-a91131c310a6",
+      "category": "item_spotlight",
+      "angle": "clever_use",
+      "status": "approved_publish_failed",
+      "requested_utc": "2026-07-08T15:01:07Z",
+      "decision_utc": "2026-07-08T15:01:07Z",
+      "decision_by": "autopublish",
+      "publish_rc": 9,
+      "publish_output": "ERROR: upload auth failed (invalid_grant: token expired or revoked). Re-auth required for token file: /home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/.secrets/youtube_token.json"
     }
   }
 }

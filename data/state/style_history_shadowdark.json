@@ -98,5 +98,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-07-08": {
+    "item_spotlight": {
+      "angle": "clever_use",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "dungeon_gear_mentor",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

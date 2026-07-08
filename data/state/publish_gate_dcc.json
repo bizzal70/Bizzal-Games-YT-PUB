@@ -14,6 +14,18 @@
       "publish_rc": 0,
       "publish_output": "[upload_youtube] uploaded id=Ie9M_q_MHdw privacy=unlisted file=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-07.mp4 https://www.youtube.com/watch?v=Ie9M_q_MHdw [upload_youtube] registry=/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/state/published_registry_dcc.json hash=eaa0921867058d8d",
       "youtube_url": "https://www.youtube.com/watch?v=Ie9M_q_MHdw"
+    },
+    "2026-07-08": {
+      "day": "2026-07-08",
+      "content_id": "bgp-2026-07-08-rules-ruling-rule-13-bb4f1f90ff55",
+      "category": "rules_ruling",
+      "angle": "luck_burn_timing",
+      "status": "approved_publish_failed",
+      "requested_utc": "2026-07-08T14:54:41Z",
+      "decision_utc": "2026-07-08T14:54:41Z",
+      "decision_by": "autopublish",
+      "publish_rc": 9,
+      "publish_output": "ERROR: upload auth failed (invalid_grant: token expired or revoked). Re-auth required for token file: /home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/.secrets/youtube_token.json"
     }
   }
 }
