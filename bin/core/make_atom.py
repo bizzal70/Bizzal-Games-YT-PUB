@@ -390,6 +390,17 @@ def main():
     atom = load_json(atom_path)
     ok, msg = minimal_validate(atom)
     if ok:
+        # Copy readout: on a dry-run (BIZZAL_SKIP_PUBLISH=1) or when
+        # BIZZAL_COPY_READOUT is set, print the final hook/body/cta per system so
+        # voice/tone can be verified from the pipeline log without publishing.
+        if os.getenv("BIZZAL_SKIP_PUBLISH") == "1" or os.getenv("BIZZAL_COPY_READOUT"):
+            s = atom.get("script") or {}
+            fn = (atom.get("fact") or {}).get("name")
+            sysid = os.getenv("BIZZAL_SYSTEM_ID", "")
+            print(f"[copy-readout] system={sysid} category={atom.get('category')} fact={fn}")
+            print(f"[copy-readout] HOOK: {s.get('hook','')}")
+            print(f"[copy-readout] BODY: {s.get('body','')}")
+            print(f"[copy-readout] CTA:  {s.get('cta','')}")
         dst = safe_move(atom_path, VALID_DIR)
         print(dst)
         return
