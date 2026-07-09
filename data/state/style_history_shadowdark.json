@@ -110,5 +110,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-07-09": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "grim_warden",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

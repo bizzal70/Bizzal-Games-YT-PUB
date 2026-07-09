@@ -106,5 +106,17 @@
       ],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-07-09": {
+    "item_spotlight": {
+      "angle": "drawback_watchout",
+      "voice": "rules_lawyer",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "sage"
+    }
   }
 }

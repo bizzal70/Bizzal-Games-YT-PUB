@@ -102,6 +102,18 @@
       "decision_by": "autopublish",
       "publish_rc": 9,
       "publish_output": "ERROR: upload auth failed (invalid_grant: token expired or revoked). Re-auth required for token file: /home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/.secrets/youtube_token.json"
+    },
+    "2026-07-09": {
+      "day": "2026-07-09",
+      "content_id": "bgp-2026-07-09-encounter-seed-creature-18-1e0d3c2d6819",
+      "category": "encounter_seed",
+      "angle": "twist",
+      "status": "approved_publish_failed",
+      "requested_utc": "2026-07-09T15:15:46Z",
+      "decision_utc": "2026-07-09T15:15:46Z",
+      "decision_by": "autopublish",
+      "publish_rc": 9,
+      "publish_output": "ERROR: upload auth failed (invalid_grant: token expired or revoked). Re-auth required for token file: /home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/.secrets/youtube_token.json"
     }
   }
 }
