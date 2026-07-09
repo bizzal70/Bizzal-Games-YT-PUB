@@ -29,12 +29,12 @@
     },
     "2026-07-09": {
       "day": "2026-07-09",
-      "content_id": "bgp-2026-07-09-item-spotlight-item-13-6d95120a2753",
+      "content_id": "bgp-2026-07-09-item-spotlight-item-13-76855856ac58",
       "category": "item_spotlight",
       "angle": "drawback_watchout",
       "status": "approved_publish_failed",
-      "requested_utc": "2026-07-09T15:08:14Z",
-      "decision_utc": "2026-07-09T15:08:14Z",
+      "requested_utc": "2026-07-09T16:07:14Z",
+      "decision_utc": "2026-07-09T16:07:14Z",
       "decision_by": "autopublish",
       "publish_rc": 9,
       "publish_output": "ERROR: upload auth failed (invalid_grant: token expired or revoked). Re-auth required for token file: /home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/.secrets/youtube_token.json"
