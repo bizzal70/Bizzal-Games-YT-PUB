@@ -122,5 +122,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-07-10": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "grim_warden",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

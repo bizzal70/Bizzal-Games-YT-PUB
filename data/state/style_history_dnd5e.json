@@ -118,5 +118,15 @@
       ],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-07-10": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "gritty_dm",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

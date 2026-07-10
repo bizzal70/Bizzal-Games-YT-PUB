@@ -40,5 +40,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-07-10": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "grim_referee",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }
