@@ -117,12 +117,12 @@
     },
     "2026-07-10": {
       "day": "2026-07-10",
-      "content_id": "bgp-2026-07-10-encounter-seed-creature-srd-2024-adult-bronze-dragon-86df7fc2032c",
+      "content_id": "bgp-2026-07-10-encounter-seed-creature-srd-2024-adult-bronze-dragon-5240217eed1d",
       "category": "encounter_seed",
       "angle": "twist",
       "status": "approved_publish_failed",
-      "requested_utc": "2026-07-10T15:06:10Z",
-      "decision_utc": "2026-07-10T15:06:10Z",
+      "requested_utc": "2026-07-10T15:58:40Z",
+      "decision_utc": "2026-07-10T15:58:40Z",
       "decision_by": "autopublish",
       "publish_rc": 9,
       "publish_output": "ERROR: upload auth failed (invalid_grant: token expired or revoked). Re-auth required for token file: /home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/.secrets/youtube_token.json"
