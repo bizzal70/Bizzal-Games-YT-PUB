@@ -138,5 +138,17 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-07-12": {
+    "class_spotlight": {
+      "angle": "early_power_spike",
+      "voice": "rules_lawyer",
+      "tone": "heroic",
+      "persona": "class_mentor",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "sage"
+    }
   }
 }
