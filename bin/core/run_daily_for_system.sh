@@ -57,7 +57,18 @@ run_inner() {
   day="$(date +%F)"
 
   echo "[run_daily_for_system:$SYSTEM_ID] generate+render (day=$day)..."
+  local _render_rc=0
+  set +e
   "$REPO_ROOT/bin/core/run_daily.sh"
+  _render_rc=$?
+  set -e
+  if [[ $_render_rc -eq 20 ]]; then
+    echo "[run_daily_for_system:$SYSTEM_ID] QUALITY GATE: Replicate components missing; skipping publish (will retry next run)"
+    return 0
+  elif [[ $_render_rc -ne 0 ]]; then
+    echo "[run_daily_for_system:$SYSTEM_ID] generate+render failed (rc=$_render_rc)"
+    return $_render_rc
+  fi
 
   if [[ "${BIZZAL_SKIP_PUBLISH:-0}" == "1" ]]; then
     echo "[run_daily_for_system:$SYSTEM_ID] BIZZAL_SKIP_PUBLISH=1; skipping autopublish (dry run)"
