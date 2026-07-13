@@ -173,8 +173,7 @@ def build_title(atom: dict, day: str) -> str:
     name = (fact.get("name") or "Daily RPG Tip").strip()
     category = (atom.get("category") or "rpg_short").replace("_", " ").title()
     profile = content_profile(atom)
-    hashline = hashtags_for(profile)["title"]
-    title = f"{name} • {category} {hashline}"
+    title = f"{name} • {category}"
     return title[:100]
 
 
