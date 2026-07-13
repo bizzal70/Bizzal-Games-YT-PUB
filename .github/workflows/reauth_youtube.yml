@@ -1,0 +1,109 @@
+name: Refresh YouTube OAuth token
+
+# Two-step cloud reauth:
+#   Step 1 — Run with no inputs → logs print the Google auth URL
+#   Step 2 — Visit URL, copy the code, re-run with auth_code=XXXX → token saved to secret
+
+on:
+  workflow_dispatch:
+    inputs:
+      auth_code:
+        description: "Step 2 only: paste the code Google gave you (leave empty for Step 1)"
+        required: false
+        default: ""
+
+jobs:
+  reauth:
+    runs-on: ubuntu-latest
+    env:
+      BIZZAL_YT_CLIENT_ID: ${{ secrets.BIZZAL_YT_CLIENT_ID }}
+      BIZZAL_YT_CLIENT_SECRET: ${{ secrets.BIZZAL_YT_CLIENT_SECRET }}
+
+    steps:
+      - name: "Step 1 — Generate auth URL (run with empty auth_code)"
+        if: github.event.inputs.auth_code == ''
+        run: |
+          python3 - <<'EOF'
+          import os, urllib.parse
+          client_id = os.environ["BIZZAL_YT_CLIENT_ID"]
+          scopes = " ".join([
+              "https://www.googleapis.com/auth/youtube.upload",
+              "https://www.googleapis.com/auth/youtube.readonly",
+          ])
+          params = {
+              "client_id": client_id,
+              "redirect_uri": "urn:ietf:wg:oauth:2.0:oob",
+              "response_type": "code",
+              "scope": scopes,
+              "access_type": "offline",
+              "prompt": "consent",
+              "include_granted_scopes": "true",
+          }
+          url = "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode(params)
+          print("=" * 70)
+          print("OPEN THIS URL IN YOUR BROWSER AND SIGN IN WITH bizzalgames70@gmail.com")
+          print("=" * 70)
+          print(url)
+          print("=" * 70)
+          print("Google will give you a code. Re-run this workflow with auth_code=<that code>")
+          EOF
+
+      - name: "Step 2 — Exchange code, save token to secret"
+        if: github.event.inputs.auth_code != ''
+        env:
+          AUTH_CODE: ${{ github.event.inputs.auth_code }}
+          GH_TOKEN: ${{ secrets.BIZZAL_GITHUB_PAT }}
+        run: |
+          python3 - <<'EOF'
+          import os, json, urllib.request, urllib.parse, datetime
+
+          code          = os.environ["AUTH_CODE"].strip()
+          client_id     = os.environ["BIZZAL_YT_CLIENT_ID"]
+          client_secret = os.environ["BIZZAL_YT_CLIENT_SECRET"]
+
+          data = urllib.parse.urlencode({
+              "code":          code,
+              "client_id":     client_id,
+              "client_secret": client_secret,
+              "redirect_uri":  "urn:ietf:wg:oauth:2.0:oob",
+              "grant_type":    "authorization_code",
+          }).encode()
+
+          req  = urllib.request.Request(
+              "https://oauth2.googleapis.com/token", data=data,
+              headers={"Content-Type": "application/x-www-form-urlencoded"},
+          )
+          resp = json.loads(urllib.request.urlopen(req).read())
+
+          if "error" in resp:
+              raise RuntimeError(f"Token exchange failed: {resp}")
+
+          expiry = (
+              datetime.datetime.utcnow()
+              + datetime.timedelta(seconds=resp.get("expires_in", 3600))
+          ).strftime("%Y-%m-%dT%H:%M:%S.000000Z")
+
+          token = {
+              "token":          resp["access_token"],
+              "refresh_token":  resp.get("refresh_token", ""),
+              "token_uri":      "https://oauth2.googleapis.com/token",
+              "client_id":      client_id,
+              "client_secret":  client_secret,
+              "scopes": [
+                  "https://www.googleapis.com/auth/youtube.upload",
+                  "https://www.googleapis.com/auth/youtube.readonly",
+              ],
+              "universe_domain": "googleapis.com",
+              "account":         "",
+              "expiry":          expiry,
+          }
+          with open("yt_token.json", "w") as f:
+              json.dump(token, f)
+          print("[reauth] token exchanged OK")
+          EOF
+
+          gh secret set BIZZAL_YT_TOKEN_JSON \
+            --repo bizzal70/Bizzal-Games-YT-PUB \
+            --body "$(cat yt_token.json)"
+          rm -f yt_token.json
+          echo "[reauth] BIZZAL_YT_TOKEN_JSON secret updated — pipeline is live again"
