@@ -154,5 +154,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-07-13": {
+    "monster_tactic": {
+      "angle": "common_mistake",
+      "voice": "torchbearer_ref",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

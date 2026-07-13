@@ -72,5 +72,17 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-07-13": {
+    "monster_tactic": {
+      "angle": "how_to_counter",
+      "voice": "survival_coach",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

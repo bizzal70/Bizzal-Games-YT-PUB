@@ -150,6 +150,18 @@
       "decision_by": "autopublish",
       "publish_rc": 9,
       "publish_output": "ERROR: upload auth failed (invalid_grant: token expired or revoked). Re-auth required for token file: /home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/.secrets/youtube_token.json"
+    },
+    "2026-07-13": {
+      "day": "2026-07-13",
+      "content_id": "bgp-2026-07-13-monster-tactic-creature-srd-2024-night-hag-fb05aad32a61",
+      "category": "monster_tactic",
+      "angle": "common_mistake",
+      "status": "approved_publish_failed",
+      "requested_utc": "2026-07-13T15:09:18Z",
+      "decision_utc": "2026-07-13T15:09:18Z",
+      "decision_by": "autopublish",
+      "publish_rc": 9,
+      "publish_output": "ERROR: upload auth failed (invalid_grant: token expired or revoked). Re-auth required for token file: /home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/.secrets/youtube_token.json"
     }
   }
 }
