@@ -1035,3 +1035,24 @@ if [[ "$ECHO_PREVIEW_URL" == "1" ]]; then
   echo "[render] preview latest: http://${PREVIEW_HOST}:${PREVIEW_PORT}${PREVIEW_LATEST_PATH}" >&2
   echo "[render] preview day:    http://${PREVIEW_HOST}:${PREVIEW_PORT}${PREVIEW_DAY_PATH}" >&2
 fi
+
+# Quality gate: exit 20 if any Replicate-generated component is missing.
+# The caller (run_daily_for_system.sh) interprets exit 20 as "render OK but
+# do not publish today — retry on the next scheduled run."
+_qg_fail=0
+if (( BG_IMAGE_OK == 0 )); then
+  echo "[render] QUALITY GATE: no background image generated (BG_IMAGE_OK=0)" >&2
+  _qg_fail=1
+fi
+if [[ "${BG_IMAGE_MODE:-}" == "per_screen" && "${BG_IMAGE_MODE_USED:-}" != "per_screen" ]]; then
+  echo "[render] QUALITY GATE: per-screen images failed; fell back to ${BG_IMAGE_MODE_USED:-none}" >&2
+  _qg_fail=1
+fi
+if (( MUSIC_OK == 0 )) && [[ "${MUSIC_ENABLED:-0}" == "1" ]]; then
+  echo "[render] QUALITY GATE: background music generation failed (MUSIC_OK=0)" >&2
+  _qg_fail=1
+fi
+if (( _qg_fail == 1 )); then
+  echo "[render] QUALITY GATE FAIL: video rendered but publish will be skipped (exit 20)" >&2
+  exit 20
+fi
