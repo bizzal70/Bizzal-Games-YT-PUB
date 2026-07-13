@@ -321,6 +321,7 @@ def pick_creature_pk(
     angle: str,
     avoid: set | None = None,
     avoid_names: set | None = None,
+    avoid_prefixes: set | None = None,
 ) -> int:
     path = os.path.join(active_dir, filename)
     if not os.path.exists(path):
@@ -355,7 +356,7 @@ def pick_creature_pk(
         print(f"ERROR: No creature pk records found in: {path}", file=sys.stderr)
         sys.exit(12)
 
-    pick = pick_candidate_pk(filtered_candidates, avoid or set(), avoid_names or set())
+    pick = pick_candidate_pk(filtered_candidates, avoid or set(), avoid_names or set(), avoid_prefixes or set())
     if pick is None:
         print(f"ERROR: Unable to choose creature pk from: {path}", file=sys.stderr)
         sys.exit(13)
