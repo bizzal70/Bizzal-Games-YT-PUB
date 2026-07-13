@@ -61,6 +61,14 @@ def normalize_name(value) -> str:
     return str(value or "").strip().lower()
 
 
+def extract_name_prefix(name: str) -> str:
+    "`First word of a normalized name for creature subtype grouping.
+    E.g. 'ancient' from 'ancient red dragon'. Ignores trivial words (<= 2 chars).""
+    parts = (name or "").strip().split()
+    w = parts[0] if parts else ""
+    return w if len(w) > 2 else ""
+
+
 def validated_atom_paths() -> list[str]:
     if not os.path.isdir(VALIDATED_DIR):
         return []
@@ -175,6 +183,33 @@ def registry_used_fact_names(categories: set[str]) -> set[str]:
     return used
 
 
+def registry_used_name_prefixes(categories: set[str]) -> set[str]:
+    "`Return first-word prefixes of published creature fact names in given categories.
+    Prevents e.g. 'Ancient Red Dragon' then 'Ancient Blue Dragon' on consecutive same-DOW runs.""
+    registry_path = os.path.join(STATE_DIR, f"published_registry_{SYSTEM_ID}.json")
+    if not os.path.exists(registry_path):
+        return set()
+    try:
+        data = load_json(registry_path)
+    except Exception:
+        return set()
+    items = data if isinstance(data, list) else (data.get("items") or [])
+    canonical_categories = {canonical_category(c) for c in categories}
+    prefixes: set[str] = set()
+    for entry in items:
+        if not isinstance(entry, dict):
+            continue
+        fp = entry.get("fingerprint") or entry
+        cat = canonical_category(str(fp.get("category") or ""))
+        if cat not in canonical_categories:
+            continue
+        name = normalize_name(fp.get("fact_name") or "")
+        prefix = extract_name_prefix(name)
+        if prefix:
+            prefixes.add(prefix)
+    return prefixes
+
+
 def choose_pk_with_variety(candidates: list, avoid: set):
     if not candidates:
         return None
@@ -183,24 +218,33 @@ def choose_pk_with_variety(candidates: list, avoid: set):
     return random.choice(pool)
 
 
-def pick_candidate_pk(candidates: list[tuple[int, str]], avoid_pks: set | None = None, avoid_names: set | None = None):
+def pick_candidate_pk(candidates: list[tuple[int, str]], avoid_pks: set | None = None, avoid_names: set | None = None, avoid_prefixes: set | None = None):
     if not candidates:
         return None
 
     avoid_pks = avoid_pks or set()
     avoid_names = avoid_names or set()
+    avoid_prefixes = avoid_prefixes or set()
 
+    # Primary: avoid pks, names, AND subtype prefix
     primary = [
-        (pk, name)
-        for pk, name in candidates
-        if pk not in avoid_pks and normalize_name(name) not in avoid_names
+        (pk, name) for pk, name in candidates
+        if pk not in avoid_pks
+        and normalize_name(name) not in avoid_names
+        and extract_name_prefix(normalize_name(name)) not in avoid_prefixes
     ]
     if primary:
         return random.choice(primary)[0]
 
-    secondary = [(pk, name) for pk, name in candidates if pk not in avoid_pks]
+    # Secondary: relax prefix constraint
+    secondary = [(pk, name) for pk, name in candidates if pk not in avoid_pks and normalize_name(name) not in avoid_names]
     if secondary:
         return random.choice(secondary)[0]
+
+    # Tertiary: only avoid exact pk collision
+    tertiary = [(pk, name) for pk, name in candidates if pk not in avoid_pks]
+    if tertiary:
+        return random.choice(tertiary)[0]
 
     return random.choice(candidates)[0]
 
@@ -406,12 +450,16 @@ def main():
     avoid_rule_names     |= registry_used_fact_names({"rules_ruling", "rules_myth"})
     avoid_class_names    |= registry_used_fact_names({"character_micro_tip"})
 
+    # Subtype prefix avoidance for creatures -- prevents e.g. Ancient Red then Ancient Blue
+    # on consecutive same-DOW runs. Falls back gracefully if all prefixes exhausted.
+    avoid_creature_prefixes = registry_used_name_prefixes({"monster_tactic", "encounter_seed"})
+
     # Fill required picks per category (v1)
     if category == "monster_tactic":
         ensure_pick(
             picks,
             "creature_pk",
-            pick_creature_pk(active_dir, creature_file, category, angle, avoid_creature, avoid_creature_names),
+            pick_creature_pk(active_dir, creature_file, category, angle, avoid_creature, avoid_creature_names, avoid_creature_prefixes),
         )
 
     elif category == "spell_use_case":
@@ -428,7 +476,7 @@ def main():
         ensure_pick(
             picks,
             "creature_pk",
-            pick_creature_pk(active_dir, creature_file, category, angle, avoid_creature, avoid_creature_names),
+            pick_creature_pk(active_dir, creature_file, category, angle, avoid_creature, avoid_creature_names, avoid_creature_prefixes),
         )
 
     elif category == "character_micro_tip":
