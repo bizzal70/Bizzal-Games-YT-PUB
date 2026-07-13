@@ -31,6 +31,88 @@ def content_profile(atom: dict) -> str:
     return "dnd"
 
 
+# ---------------------------------------------------------------------------
+# Visual style presets — selected by BIZZAL_BG_STYLE env var.
+# Add new entries here to introduce additional looks without touching logic.
+# ---------------------------------------------------------------------------
+_STYLE_PRESETS: dict[str, dict] = {
+    # Stark black-and-white pen-and-ink illustration with a wry RTFM edge.
+    # Think 1st-edition Monster Manual meets sardonic instructional diagram.
+    "bw_rtfm": {
+        "base": (
+            "stark black and white pen-and-ink illustration, "
+            "1970s tabletop RPG rulebook diagram aesthetic, "
+            "wry sardonic editorial cartoon style, "
+            "bold confident linework, crosshatch shading, "
+            "no color, pure monochrome, black ink on white"
+        ),
+        "tone_map": {
+            "gritty":  "grim pen-and-ink scene, heavy crosshatch, oppressive negative space",
+            "heroic":  "bold heroic diagram, clean ink lines, dramatic silhouette",
+            "ominous": "ominous etching, dense shadow hatching, sinister vignette",
+            "neutral": "clear instructional illustration, even linework, dry wit implied",
+        },
+        "category_map": {
+            "monster_tactic":    "creature encounter diagram with annotated tactical notes",
+            "encounter_seed":    "encounter scene rendered as a dry instructional plate",
+            "spell_use_case":    "arcane effect illustrated as a technical diagram",
+            "item_spotlight":    "artifact rendered as a museum catalog plate",
+            "rules_ruling":      "rules clarification illustrated with deadpan precision",
+            "rules_myth":        "common misconception debunked in editorial diagram form",
+            "character_micro_tip": "class technique illustrated as a wry how-to diagram",
+        },
+        "profile_shadowdark": (
+            "old-school OSR dungeon crawl etching, "
+            "harsh torch-shadow crosshatch, low-magic grim practicality"
+        ),
+        "shared_tail": [
+            "no color, no grey washes, monochrome only",
+            "no text, no logo, no watermark, no UI, no frame border",
+        ],
+    },
+
+    # Current default: rich cinematic fantasy color art.
+    "color_cinematic": {
+        "base": "vertical 9:16 background image for short-form video",
+        "tone_map": {
+            "gritty":  "dark gritty fantasy art, moody contrast, weathered textures, cinematic shadows",
+            "heroic":  "epic heroic fantasy art, cinematic composition, dramatic rim lighting, high grandeur",
+            "ominous": "ominous dark fantasy art, torchlit gloom, high tension atmosphere, severe shadows",
+            "neutral": "clean detailed fantasy art, balanced lighting, rich environment detail",
+        },
+        "category_map": {
+            "monster_tactic":    "a dangerous creature encounter setup with tactical terrain",
+            "encounter_seed":    "a game-ready fantasy encounter scene with clear visual stakes",
+            "spell_use_case":    "an arcane spell moment with magical energy and dramatic motion",
+            "item_spotlight":    "a close cinematic presentation of a fantasy artifact in its environment",
+            "rules_ruling":      "a fantasy adventuring scene showing positional play and clarity",
+            "rules_myth":        "a fantasy tabletop-inspired scene correcting a common tactical misconception",
+            "character_micro_tip": "a class-focused fantasy moment showing role and decision-making",
+        },
+        "profile_shadowdark": (
+            "old-school dark fantasy, torchlit dungeon mood, "
+            "low-magic peril, claustrophobic ruins, grim practical adventuring tone"
+        ),
+        "shared_tail": [
+            "high detail, atmospheric depth, tasteful depth of field",
+            "no text, no logo, no watermark, no UI, no frame border",
+            "no modern city, no firearms, no sci-fi tech",
+        ],
+    },
+}
+
+_STYLE_ORDER = list(_STYLE_PRESETS.keys())
+
+
+def resolve_bg_style() -> str:
+    """Return the active style key from BIZZAL_BG_STYLE, defaulting to bw_rtfm."""
+    raw = clean(os.getenv("BIZZAL_BG_STYLE") or "").lower()
+    if raw == "random":
+        import random as _random
+        return _random.choice(_STYLE_ORDER)
+    return raw if raw in _STYLE_PRESETS else "bw_rtfm"
+
+
 def build_prompt(atom: dict) -> str:
     category = clean(atom.get("category") or "")
     angle = clean(atom.get("angle") or "")
@@ -39,61 +121,34 @@ def build_prompt(atom: dict) -> str:
     fact = atom.get("fact") or {}
     name = clean(fact.get("name") or "")
     kind = clean(fact.get("kind") or "")
-
-    tone_map = {
-        "gritty": "dark gritty fantasy art, moody contrast, weathered textures, cinematic shadows",
-        "heroic": "epic heroic fantasy art, cinematic composition, dramatic rim lighting, high grandeur",
-        "ominous": "ominous dark fantasy art, torchlit gloom, high tension atmosphere, severe shadows",
-        "neutral": "clean detailed fantasy art, balanced lighting, rich environment detail",
-    }
-    category_map = {
-        "monster_tactic": "a dangerous creature encounter setup with tactical terrain",
-        "encounter_seed": "a game-ready fantasy encounter scene with clear visual stakes",
-        "spell_use_case": "an arcane spell moment with magical energy and dramatic motion",
-        "item_spotlight": "a close cinematic presentation of a fantasy artifact in its environment",
-        "rules_ruling": "a fantasy adventuring scene showing positional play and clarity",
-        "rules_myth": "a fantasy tabletop-inspired scene correcting a common tactical misconception",
-        "character_micro_tip": "a class-focused fantasy moment showing role and decision-making",
-    }
-
-    tone_desc = tone_map.get(tone, tone_map["neutral"])
-    scene_desc = category_map.get(category, "a cinematic fantasy tabletop-inspired scene")
     profile = content_profile(atom)
     chain_prefix = clean(os.getenv("BIZZAL_BG_IMAGE_PROMPT_PREFIX") or "")
     chain_suffix = clean(os.getenv("BIZZAL_BG_IMAGE_PROMPT_SUFFIX") or "")
 
-    parts = [
-        "vertical 9:16 background image for short-form video",
-    ]
+    preset_key = resolve_bg_style()
+    preset = _STYLE_PRESETS[preset_key]
+
+    tone_desc = preset["tone_map"].get(tone, next(iter(preset["tone_map"].values())))
+    scene_desc = preset["category_map"].get(category, "a tabletop RPG-inspired scene")
+
+    parts = ["vertical 9:16 background image for short-form video", preset["base"]]
     if chain_prefix:
         parts.append(chain_prefix)
     if profile == "shadowdark":
-        parts.append(
-            "old-school dark fantasy, torchlit dungeon mood, low-magic peril, claustrophobic ruins, grim practical adventuring tone"
-        )
-    parts.extend(
-        [
-        tone_desc,
-        scene_desc,
-        ]
-    )
+        parts.append(preset["profile_shadowdark"])
+    parts.extend([tone_desc, scene_desc])
     if name:
         label = kind or "subject"
         parts.append(f"focus on {label}: {name}")
     if angle:
         parts.append(f"angle emphasis: {angle}")
-
-    parts.extend(
-        [
-            "high detail, atmospheric depth, tasteful depth of field",
-            "no text, no logo, no watermark, no UI, no frame border",
-            "no modern city, no firearms, no sci-fi tech",
-        ]
-    )
-    if profile == "shadowdark":
+    parts.extend(preset["shared_tail"])
+    if profile == "shadowdark" and preset_key == "color_cinematic":
         parts.append("avoid glossy high-fantasy sheen; emphasize darkness, stone, torch smoke, worn materials")
     if chain_suffix:
         parts.append(chain_suffix)
+
+    print(f"[bgimg] style={preset_key}", file=sys.stderr)
     return "; ".join(parts)
 
 
