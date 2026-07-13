@@ -94,6 +94,53 @@ def recent_values(key: str, lookback_days: int) -> list[str]:
     return vals
 
 
+def registry_recent_categories(lookback: int) -> list[str]:
+    """Read recent categories from the committed publish registry.
+    Supplements recent_values() which only sees ephemeral validated atoms (not available in CI)."""
+    registry_path = os.path.join(DATA_DIR, "state", f"published_registry_{SYSTEM_ID}.json")
+    if not os.path.exists(registry_path):
+        return []
+    try:
+        data = load_json(registry_path)
+    except Exception:
+        return []
+    items = data if isinstance(data, list) else (data.get("items") or [])
+    cats: list[str] = []
+    for entry in reversed(items):
+        if not isinstance(entry, dict):
+            continue
+        fp = entry.get("fingerprint") or entry
+        cat = str(fp.get("category") or "").strip().lower()
+        if cat:
+            cats.append(cat)
+        if len(cats) >= lookback:
+            break
+    return cats
+
+
+def registry_recent_angles(lookback: int) -> list[str]:
+    """Read recent angles from the committed publish registry."""
+    registry_path = os.path.join(DATA_DIR, "state", f"published_registry_{SYSTEM_ID}.json")
+    if not os.path.exists(registry_path):
+        return []
+    try:
+        data = load_json(registry_path)
+    except Exception:
+        return []
+    items = data if isinstance(data, list) else (data.get("items") or [])
+    angles: list[str] = []
+    for entry in reversed(items):
+        if not isinstance(entry, dict):
+            continue
+        fp = entry.get("fingerprint") or entry
+        angle = str(fp.get("angle") or "").strip().lower()
+        if angle:
+            angles.append(angle)
+        if len(angles) >= lookback:
+            break
+    return angles
+
+
 def choose_varied_weighted(weights: dict, seed_key: str, recent: list[str]) -> str | None:
     items = [(str(k), int(v)) for k, v in (weights or {}).items() if int(v) > 0]
     if not items:
@@ -166,8 +213,8 @@ def pick_category_and_angle_for_day(day_str: str):
         angle_lookback = int((os.getenv("BIZZAL_ANGLE_VARIETY_LOOKBACK_DAYS") or "7").strip())
     except ValueError:
         angle_lookback = 7
-    recent_categories = recent_values("category", category_lookback)
-    recent_angles = recent_values("angle", angle_lookback)
+    recent_categories = recent_values("category", category_lookback) + registry_recent_categories(category_lookback)
+    recent_angles = recent_values("angle", angle_lookback) + registry_recent_angles(angle_lookback)
 
     # Preferred model: weekly_spine + category_weights.<category>.angles
     wk = spine.get("weekly_spine") if isinstance(spine, dict) else {}
