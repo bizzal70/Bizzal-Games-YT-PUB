@@ -75,8 +75,15 @@ run_inner() {
     return 0
   fi
 
-  echo "[run_daily_for_system:$SYSTEM_ID] autopublish (day=$day)..."
-  "$REPO_ROOT/bin/core/discord_publish_gate.py" autopublish --day "$day"
+  echo "[run_daily_for_system:$SYSTEM_ID] publish YouTube (day=$day)..."
+  python "$REPO_ROOT/bin/upload/upload_youtube.py" --day "$day"
+
+  if [[ -n "${BIZZAL_IG_ACCESS_TOKEN:-}" ]]; then
+    echo "[run_daily_for_system:$SYSTEM_ID] publish Instagram (day=$day)..."
+    python "$REPO_ROOT/bin/upload/upload_instagram.py" --day "$day"
+  else
+    echo "[run_daily_for_system:$SYSTEM_ID] BIZZAL_IG_ACCESS_TOKEN not set; skipping Instagram"
+  fi
 }
 
 {
