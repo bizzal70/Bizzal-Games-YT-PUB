@@ -77,12 +77,12 @@
     },
     "2026-07-13": {
       "day": "2026-07-13",
-      "content_id": "bgp-2026-07-13-monster-tactic-creature-406-87bf97a63f08",
+      "content_id": "bgp-2026-07-13-monster-tactic-creature-406-5964517f1767",
       "category": "monster_tactic",
       "angle": "how_to_counter",
       "status": "approved_publish_failed",
-      "requested_utc": "2026-07-13T15:06:27Z",
-      "decision_utc": "2026-07-13T15:06:27Z",
+      "requested_utc": "2026-07-13T16:00:50Z",
+      "decision_utc": "2026-07-13T16:00:50Z",
       "decision_by": "autopublish",
       "publish_rc": 9,
       "publish_output": "ERROR: upload auth failed (invalid_grant: token expired or revoked). Re-auth required for token file: /home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/.secrets/youtube_token.json"
