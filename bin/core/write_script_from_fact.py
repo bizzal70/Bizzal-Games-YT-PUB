@@ -1115,6 +1115,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
                     _still = _first_style_violation(" ".join([_fixed["hook"], _fixed["body"], _fixed["cta"]]))
                     if _still:
                         ai_diag(f"AI script lint: {_still[0]} '{_still[1]}' still present after retry \u2014 shipping anyway")
+                        atom.setdefault("diagnostics", {})["tone_lint_violation"] = f"{_still[0]}: {_still[1]}"
                     else:
                         ai_diag("AI script lint: style violation fixed on retry")
                     out = _fixed
