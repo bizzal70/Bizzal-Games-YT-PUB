@@ -153,8 +153,6 @@ def content_profile(atom: dict) -> str:
 def build_caption(atom: dict, day: str) -> str:
     script = atom.get("script") or {}
     hook = (script.get("hook") or "").strip()
-    body = (script.get("body") or "").strip()
-    cta = (script.get("cta") or "").strip()
     fact = atom.get("fact") or {}
     name = (fact.get("name") or "").strip()
     profile = content_profile(atom)
@@ -164,10 +162,6 @@ def build_caption(atom: dict, day: str) -> str:
         parts.append(name)
     if hook:
         parts.append(hook)
-    if body:
-        parts.append(body)
-    if cta:
-        parts.append(cta)
     parts.append(tags)
     caption = "\n\n".join(p for p in parts if p)
     return caption[:2200]  # Instagram caption limit
