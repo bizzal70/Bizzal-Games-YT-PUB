@@ -520,6 +520,7 @@ def main() -> int:
             "video_sha256": video_sha,
             "video_path": str(video_path),
             "fingerprint": fingerprint,
+            **({"tone_lint_violation": (atom.get("diagnostics") or {}).get("tone_lint_violation")} if (atom.get("diagnostics") or {}).get("tone_lint_violation") else {}),
         }
     )
     save_registry(registry_file, registry)
