@@ -11,6 +11,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import os
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -24,19 +25,22 @@ def _get(path: str, params: dict) -> dict | None:
     try:
         with urllib.request.urlopen(url, timeout=30) as r:
             return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        print(f"[ig-metrics] {path} -> {e.code}: {e.read().decode('utf-8', 'replace')[:300]}")
     except Exception as e:  # noqa: BLE001
         print(f"[ig-metrics] {path} failed: {e}")
-        return None
+    return None
 
 
 def collect(limit: int = 12) -> list[dict] | None:
     token = os.environ.get("BIZZAL_IG_ACCESS_TOKEN")
-    uid = os.environ.get("BIZZAL_IG_USER_ID")
-    if not token or not uid:
-        print("[ig-metrics] missing BIZZAL_IG_* env")
+    if not token:
+        print("[ig-metrics] missing BIZZAL_IG_ACCESS_TOKEN")
         return None
+    # Instagram Login flavor (token starts IGA...): list the authed user's own
+    # media via me/media (the token identifies the account; no user-id needed).
     media = _get(
-        f"{uid}/media",
+        "me/media",
         {"fields": "id,caption,media_type,permalink,timestamp", "limit": limit,
          "access_token": token},
     )
