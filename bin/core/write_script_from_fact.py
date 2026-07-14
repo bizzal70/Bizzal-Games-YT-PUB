@@ -888,7 +888,15 @@ _VAGUE_FILLER_RE = re.compile(
     r"|versatile (?:tool|option|choice|spell)"
     r"|(?:crucial|useful|handy|great|effective|valuable) in (?:many|various|most|countless|numerous|a variety of) (?:situations|scenarios|cases|encounters)"
     r"|in (?:many|various|most|countless|numerous|a variety of) (?:situations|scenarios|cases|encounters)"
-    r"|can be (?:a )?(?:powerful|invaluable|crucial|game[- ]?changing)",
+    r"|can be (?:a )?(?:powerful|invaluable|crucial|game[- ]?changing)"
+    # Templated "abstract cause -> vague effect" cadence flagged in content review:
+    # e.g. "Misunderstanding the timing ... leads to suboptimal planning",
+    # "Mismanagement occurs when ...", "often results in / often leads to".
+    r"|misunderstand\w* [\w\s,'-]{0,40}?(?:leads? to|results? in|causes?)"
+    r"|mismanagement (?:occurs|happens|arises)"
+    r"|often (?:leads? to|results? in|treated as|overlooked|misunderstood)"
+    r"|treated as (?:random|a )"
+    r"|suboptimal (?:planning|play|decisions?|choices?)",
     re.IGNORECASE,
 )
 
