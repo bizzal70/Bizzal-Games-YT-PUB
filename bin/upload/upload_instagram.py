@@ -117,12 +117,27 @@ def save_registry(path: Path, obj: dict):
 # Per-system Instagram hashtag sets, keyed by system id (BIZZAL_SYSTEM_ID).
 # Add a row when onboarding a system; unknown systems get a neutral fallback
 # rather than being mislabeled as D&D.
-_IG_HASHTAGS = {
-    "dnd5e": "#dnd #dnd5e #ttrpg #rpg #shorts #reels",
-    "shadowdark": "#shadowdark #osr #ttrpg #rpg #shorts #reels",
-    "dcc": "#dcc #dungeoncrawlclassics #osr #ttrpg #rpg #shorts #reels",
+_IG_CORE_TAGS = ["#ttrpg", "#rpg", "#shorts", "#reels"]
+_IG_TAG_POOL = {
+    "dnd5e": ["#dnd", "#dnd5e", "#dungeonsanddragons", "#dungeonmaster", "#dmtips",
+              "#ttrpgcommunity", "#tabletopgames", "#dndmemes", "#rpggamer", "#dnd5e2024"],
+    "shadowdark": ["#shadowdark", "#osr", "#oldschoolrpg", "#dungeoncrawl", "#indierpg",
+                   "#ttrpgcommunity", "#tabletoprpg", "#osrrpg", "#dungeonmaster"],
+    "dcc": ["#dcc", "#dungeoncrawlclassics", "#osr", "#goodmangames", "#dungeonmaster",
+            "#oldschoolrenaissance", "#tabletoprpg", "#ttrpgcommunity"],
 }
-_IG_HASHTAGS_FALLBACK = "#ttrpg #rpg #shorts #reels"
+
+
+def _rotating_hashtags(profile: str, seed_str: str, pick: int = 6) -> str:
+    """Core tags + a per-post rotating subset of the system pool, so captions
+    are not identical every day (a discovery signal the content review flagged)."""
+    pool = _IG_TAG_POOL.get(profile)
+    if not pool:
+        return " ".join(_IG_CORE_TAGS)
+    # Stable offset via hashlib (hash() is not stable across runs).
+    offset = int(hashlib.sha256(seed_str.encode()).hexdigest(), 16) % len(pool)
+    rotated = pool[offset:] + pool[:offset]
+    return " ".join(dict.fromkeys(_IG_CORE_TAGS + rotated[:pick]))
 
 
 def content_profile(atom: dict) -> str:
@@ -150,18 +165,26 @@ def content_profile(atom: dict) -> str:
     return "dnd5e"
 
 
+# Cross-promote to YouTube (Reels are repurposed from the daily YT short) and
+# ask for the follow — the caption previously had neither.
+_IG_FOLLOW_CTA = (
+    "Daily tabletop RPG rulings. Follow @bizzalgames70 for one a day. "
+    "Full videos on YouTube: @Bizzal_Games"
+)
+
+
 def build_caption(atom: dict, day: str) -> str:
     script = atom.get("script") or {}
     hook = (script.get("hook") or "").strip()
+    cta = (script.get("cta") or "").strip()
     fact = atom.get("fact") or {}
     name = (fact.get("name") or "").strip()
     profile = content_profile(atom)
-    tags = _IG_HASHTAGS.get(profile, _IG_HASHTAGS_FALLBACK)
-    parts = []
-    if name:
-        parts.append(name)
-    if hook:
-        parts.append(hook)
+    tags = _rotating_hashtags(profile, f"{day}|{name}")
+    parts = [hook or name]          # lead with the hook: first line is the scroll-stopper
+    if cta:
+        parts.append(cta)           # the script's table-tip CTA, previously dropped
+    parts.append(_IG_FOLLOW_CTA)
     parts.append(tags)
     caption = "\n\n".join(p for p in parts if p)
     return caption[:2200]  # Instagram caption limit
