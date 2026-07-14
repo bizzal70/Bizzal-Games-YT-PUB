@@ -1,0 +1,41 @@
+name: ig-metrics
+
+on:
+  schedule:
+    - cron: "30 11 * * *"   # 11:30 UTC, before the metrics job (12:00) reads it
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ig-metrics
+  cancel-in-progress: false
+
+jobs:
+  ig-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect Instagram metrics
+        env:
+          BIZZAL_IG_ACCESS_TOKEN: ${{ secrets.BIZZAL_IG_ACCESS_TOKEN }}
+          BIZZAL_IG_USER_ID: ${{ secrets.BIZZAL_IG_USER_ID }}
+        run: python bin/tools/collect_ig_metrics.py
+
+      - name: Commit metrics
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/metrics/instagram.json || true
+          if ! git diff --cached --quiet; then
+            git commit -m "ig-metrics: refresh [skip ci]"
+            git push
+          else
+            echo "no ig-metrics change"
+          fi
