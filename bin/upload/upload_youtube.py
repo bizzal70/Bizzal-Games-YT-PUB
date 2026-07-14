@@ -168,32 +168,90 @@ def duplicate_publish(registry: dict, publish_hash: str, content_id: str) -> dic
     return None
 
 
+def _hook_fragment(hook: str, limit: int = 55) -> str:
+    """Pull a short, punchy curiosity fragment out of the (full-sentence) hook.
+
+    The hook is a whole sentence like "Yes, Cubi Devil looks harmless - until the
+    table underestimates it and gives it free turns." For a title we want the
+    tension, not the whole thing, so take the clause before the first dash/colon/
+    period, drop a leading "Yes,"/"No,", and trim to a title-friendly length on a
+    word boundary. Returns "" if nothing usable is left.
+    """
+    import re
+
+    frag = re.split(r"\s+[-—:]\s+|(?<=[.!?])\s+", hook.strip(), maxsplit=1)[0].strip()
+    frag = re.sub(r"^(?:yes|no|and|but|so),?\s+", "", frag, flags=re.IGNORECASE).strip()
+    frag = frag.rstrip(".!,;: ")
+    if len(frag) > limit:
+        frag = frag[:limit].rsplit(" ", 1)[0].rstrip(".!,;: ")
+    return frag
+
+
 def build_title(atom: dict, day: str) -> str:
+    """Hook-first title: lead with the tension, keep the entity name for search.
+
+    Was "Name • Category" (a label with no hook). Now "Hook fragment • Name" so
+    the first words do curiosity work, e.g. "Free turns for free • Cubi Devil".
+    Falls back to the old shape if no usable hook fragment exists.
+    """
     fact = atom.get("fact") or {}
     name = (fact.get("name") or "Daily RPG Tip").strip()
     category = (atom.get("category") or "rpg_short").replace("_", " ").title()
-    profile = content_profile(atom)
-    title = f"{name} • {category}"
+    script = atom.get("script") or {}
+    frag = _hook_fragment((script.get("hook") or "").strip())
+    if frag and name.lower() not in frag.lower():
+        title = f"{frag} • {name}"
+    elif frag:
+        title = frag
+    else:
+        title = f"{name} • {category}"
     return title[:100]
 
 
 def build_description(atom: dict, day: str) -> str:
+    """Description tuned for retention (line 1 hook), search (line 2 keywords),
+    and subscriber growth (explicit CTA + next-up + subscribe).
+
+    The visible feed/preview shows only the first ~150 chars, so the hook and a
+    keyword-front-loaded summary lead; the full body follows; then a real CTA.
+    """
     script = atom.get("script") or {}
+    fact = atom.get("fact") or {}
     hook = (script.get("hook") or "").strip()
     body = (script.get("body") or "").strip()
     cta = (script.get("cta") or "").strip()
+    name = (fact.get("name") or "").strip()
     category = (atom.get("category") or "").strip()
+    category_label = category.replace("_", " ")
     angle = (atom.get("angle") or "").strip()
     profile = content_profile(atom)
     hashtags = hashtags_for(profile)["desc"]
+
+    # Line 2: keyword-front-loaded summary for search (name + system + topic).
+    system_label = {"dnd5e": "D&D 5e", "shadowdark": "Shadowdark", "dcc": "DCC"}.get(
+        profile, "TTRPG"
+    )
+    keyword_bits = [b for b in (name, system_label, category_label) if b]
+    keyword_line = " · ".join(keyword_bits)
+
+    # Explicit CTA block — the single biggest gap the content review flagged.
+    subscribe = f"▶ Subscribe for a daily {system_label} ruling — a new short every day."
+    playlist_url = (os.getenv("BIZZAL_YT_PLAYLIST_URL") or "").strip()
+
     lines = [
-        f"Daily RPG Short • {day}",
+        hook or keyword_line,
         "",
-        hook,
+        keyword_line,
         "",
         body,
         "",
         cta,
+        "",
+        subscribe,
+    ]
+    if playlist_url:
+        lines.append(f"📺 More rulings: {playlist_url}")
+    lines += [
         "",
         f"category: {category}",
         f"angle: {angle}",

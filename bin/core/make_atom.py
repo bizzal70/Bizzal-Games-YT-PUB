@@ -222,9 +222,19 @@ def pick_category_and_angle_for_day(day_str: str):
 
     if isinstance(wk, dict) and wk:
         try:
-            dow = DOW_KEYS[datetime.strptime(day_str, "%Y-%m-%d").weekday()]
+            weekday = datetime.strptime(day_str, "%Y-%m-%d").weekday()
         except ValueError:
-            dow = DOW_KEYS[datetime.now().weekday()]
+            weekday = datetime.now().weekday()
+        # Cross-system de-clustering: each system reads the weekly spine at a
+        # per-system phase offset so the three channels don't all publish the
+        # same format on the same day (content review flagged 3 "Class Spotlight"
+        # shorts within 24-48h). Each system still cycles through every day's
+        # category across the week — just shifted. Set the offset to 0 via
+        # BIZZAL_WEEKLY_SPINE_SYSTEM_PHASE=0 to restore lockstep scheduling.
+        if (os.getenv("BIZZAL_WEEKLY_SPINE_SYSTEM_PHASE") or "1").strip() != "0":
+            phase = int(sha256_text(f"spine-phase|{SYSTEM_ID}")[:8], 16) % 7
+            weekday = (weekday + phase) % 7
+        dow = DOW_KEYS[weekday]
         category = wk.get(dow)
         if category:
             angle_weights = ((cw.get(category) or {}).get("angles") or {}) if isinstance(cw, dict) else {}
