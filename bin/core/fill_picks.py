@@ -62,8 +62,9 @@ def normalize_name(value) -> str:
 
 
 def extract_name_prefix(name: str) -> str:
-    "`First word of a normalized name for creature subtype grouping.
-    E.g. 'ancient' from 'ancient red dragon'. Ignores trivial words (<= 2 chars).""
+    """First word of a normalized name for creature subtype grouping.
+    E.g. 'ancient' from 'ancient red dragon'. Ignores trivial words (<= 2 chars).
+    """
     parts = (name or "").strip().split()
     w = parts[0] if parts else ""
     return w if len(w) > 2 else ""
