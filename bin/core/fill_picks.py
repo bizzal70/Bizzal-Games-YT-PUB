@@ -185,8 +185,10 @@ def registry_used_fact_names(categories: set[str]) -> set[str]:
 
 
 def registry_used_name_prefixes(categories: set[str]) -> set[str]:
-    "`Return first-word prefixes of published creature fact names in given categories.
-    Prevents e.g. 'Ancient Red Dragon' then 'Ancient Blue Dragon' on consecutive same-DOW runs.""
+    """
+    Return first-word prefixes of published creature fact names in given categories.
+    Prevents e.g. 'Ancient Red Dragon' then 'Ancient Blue Dragon' on consecutive same-DOW runs.
+    """
     registry_path = os.path.join(STATE_DIR, f"published_registry_{SYSTEM_ID}.json")
     if not os.path.exists(registry_path):
         return set()
