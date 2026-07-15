@@ -124,15 +124,18 @@ check("supabase:rest_api", check_supabase_rest)
 
 # 8. Instagram
 def check_ig():
+    import http.client, ssl, urllib.parse
     token   = os.environ["BIZZAL_IG_ACCESS_TOKEN"]
-    user_id = os.environ["BIZZAL_IG_USER_ID"]
-    url = (f"https://graph.facebook.com/v19.0/{user_id}"
-           f"?fields=username,name&access_token={token}")
-    with urllib.request.urlopen(url, timeout=10) as r:
-        resp = json.loads(r.read())
+    ctx = ssl.create_default_context()
+    conn = http.client.HTTPSConnection("graph.facebook.com", context=ctx, timeout=10)
+    conn.request("GET", "/v19.0/me?fields=id,username",
+                 headers={"Authorization": f"Bearer {token}"})
+    r = conn.getresponse()
+    body = r.read().decode()
+    resp = json.loads(body)
     if "error" in resp:
-        raise ValueError(resp["error"].get("message", str(resp["error"])))
-    return f"@{resp.get('username','?')}"
+        raise ValueError(resp["error"].get("message", body[:120]))
+    return f"@{resp.get('username','?')} (id={resp.get('id','?')})"
 check("instagram:access_token", check_ig)
 
 # Summary
