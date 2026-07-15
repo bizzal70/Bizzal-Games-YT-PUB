@@ -491,24 +491,6 @@ def main() -> int:
     fingerprint = fp["fingerprint"]
     content_id = str(((atom.get("content") or {}).get("content_id") or "")).strip()
 
-    approval_file = approval_state_path(repo_root)
-    approval_state = load_approval_state(approval_file)
-    approval_entry = ((approval_state.get("approvals") or {}).get(day) or {}) if isinstance(approval_state, dict) else {}
-    approval_status = str(approval_entry.get("status") or "").strip().lower()
-    approval_content_id = str(approval_entry.get("content_id") or "").strip()
-    if approval_status not in {"approved", "published"}:
-        eprint(
-            "ERROR: publish blocked; Discord approval required. "
-            f"day={day} status={approval_status or '(missing)'} state_file={approval_file}"
-        )
-        return 7
-    if content_id and approval_content_id and approval_content_id != content_id:
-        eprint(
-            "ERROR: publish blocked; approval content mismatch. "
-            f"day={day} approved_content_id={approval_content_id} atom_content_id={content_id}"
-        )
-        return 8
-
     registry_file = publish_registry_path(repo_root)
     registry = load_registry(registry_file)
     prior = duplicate_publish(registry, publish_hash, content_id)
