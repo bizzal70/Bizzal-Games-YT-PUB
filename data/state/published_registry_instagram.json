@@ -111,6 +111,48 @@
       "hook": "Backstab grants extra weapon dice when hitting an unaware target.",
       "body": "Backstab triggers when a thief hits a creature unaware of the attack, dealing an extra weapon die of damage plus additional weapon dice equal to half the thief's level, rounded down. Declaring the trigger before rolling is crucial to ensure the bonus applies without dispute. This prevents invalidating the bonus due to oversight.",
       "cta": "GMs: Have the thief declare Backstab before rolling to ensure they get the extra damage dice without argument."
+    },
+    {
+      "published_utc": "2026-07-15T03:42:07Z",
+      "day": "2026-07-14",
+      "content_id": "bgp-2026-07-14-rules-ruling-rule-19-9ff2a1d1288c",
+      "instagram_post_id": "18099381419339546",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "1f28535598ed9a0f6a41353839872509e3965e63b21fb46d3f4b49bcd7a10f11",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-14.mp4",
+      "fact_name": "Two-Weapon Fighting",
+      "category": "rules_ruling",
+      "hook": "Two-Weapon Fighting reduces attack dice size based on Agility.",
+      "body": "Two-Weapon Fighting allows characters to attack with both a primary weapon and a light off-hand weapon in the same round. Both attacks use smaller dice along the dice chain, with penalties decreasing as Agility increases. Low Agility results in inefficient dual-wielding due to increased penalties. High Agility minimizes penalties and maximizes attack effectiveness, making dual-wielding more viable.",
+      "cta": "Judges: If their Agility is below 16, remind them they're just flailing with those smaller dice."
+    },
+    {
+      "published_utc": "2026-07-15T03:48:02Z",
+      "day": "2026-07-14",
+      "content_id": "bgp-2026-07-14-class-spotlight-class-tashas-cauldron-oath-of-glory-3b45100bc8ba",
+      "instagram_post_id": "18362016088210045",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "1297fbcee15bf56456c34419fddc981059c6ff719b1678a570653bd782b99f63",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-14.mp4",
+      "fact_name": "Oath of Glory",
+      "category": "class_spotlight",
+      "hook": "Oath of Glory allows paladins to shift roles between setup and closer effectively.",
+      "body": "Channel Divinity: Peerless Athlete grants advantage on Strength and Dexterity checks for 10 minutes, but players often waste it on minor tasks. The real value comes from using it to set up for a decisive combat or skill challenge. Inspiring Smite lets you distribute temporary hit points after a successful attack, yet many forget to use it as a buffer against incoming damage. The key is to toggle between these abilities to maintain momentum and avoid overcommitting to a single strategy.",
+      "cta": "DMs: Have your Oath of Glory paladin use Peerless Athlete for crucial Strength checks, not trivial tasks, to control the encounter's pace."
+    },
+    {
+      "published_utc": "2026-07-15T03:52:10Z",
+      "day": "2026-07-14",
+      "content_id": "bgp-2026-07-14-rules-myth-rule-6-8bfdca7bab1a",
+      "instagram_post_id": "18105659900326641",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "60990d826839040a428397dce6ae9595f4a887e92ed32054eacc7e3d887f8096",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-14.mp4",
+      "fact_name": "Backstab",
+      "category": "rules_myth",
+      "hook": "Backstab adds weapon dice based on thief level when the target is unaware.",
+      "body": "Backstab requires the attacker to call the trigger and apply the effect once per attack. Thieves add an extra weapon die of damage on a hit against an unaware creature, plus additional weapon dice equal to half the thief's level, rounded down. Declaring the trigger consistently avoids disputes. Clear rulings now save argument time later.",
+      "cta": "GMs: Make the thief declare their Backstab before rolling; they add one weapon die per two levels when unnoticed."
     }
   ]
 }
