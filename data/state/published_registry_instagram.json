@@ -153,6 +153,48 @@
       "hook": "Backstab adds weapon dice based on thief level when the target is unaware.",
       "body": "Backstab requires the attacker to call the trigger and apply the effect once per attack. Thieves add an extra weapon die of damage on a hit against an unaware creature, plus additional weapon dice equal to half the thief's level, rounded down. Declaring the trigger consistently avoids disputes. Clear rulings now save argument time later.",
       "cta": "GMs: Make the thief declare their Backstab before rolling; they add one weapon die per two levels when unnoticed."
+    },
+    {
+      "published_utc": "2026-07-15T23:06:02Z",
+      "day": "2026-07-15",
+      "content_id": "bgp-2026-07-15-item-spotlight-item-11-0ab60ebd8358",
+      "instagram_post_id": "18118355551835999",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "dcfb3c0d1b117c600f52445e0e55d8d1b0656b8e07557da4f5a2fcb937057ab6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-15.mp4",
+      "fact_name": "Scrolls of the Forbidden Summoning",
+      "category": "item_spotlight",
+      "hook": "Scrolls of the Forbidden Summoning compel a Will DC 13 check to avoid completing the ritual.",
+      "body": "Summoning a Demon Type II or III without a spell check sounds tempting until you realize the demon arrives unbound and hostile. Casters who fail the Will DC 13 check are forced to finish the ritual, with the DC increasing to 16 for chaotic readers. The scroll's one-time use means it crumbles to ash after reading, leaving no room for second attempts. Prioritize positioning and containment strategies before activating this volatile item.",
+      "cta": "Judges: Only let them touch the Scrolls of the Forbidden Summoning when they've got a DC 13 Will save strategy ready."
+    },
+    {
+      "published_utc": "2026-07-15T23:10:57Z",
+      "day": "2026-07-15",
+      "content_id": "bgp-2026-07-15-monster-tactic-creature-srd-2024-vulture-e563e236ed6f",
+      "instagram_post_id": "17884944744668293",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d0eb7bae933b9b9f61875aaf6c14df2ac785bf0ce2e6871a94df092849ab6939",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-15.mp4",
+      "fact_name": "Vulture",
+      "category": "monster_tactic",
+      "hook": "Vulture is the classic 'easy fight' that gets weird fast if players autopilot.",
+      "body": "With an Armor Class of 10 and only 5 hit points, the Vulture relies on Pack Tactics to offset its fragility. Its Beak attack becomes significantly more threatening with Advantage, allowing it to swarm a target effectively. Misjudging its low challenge rating can lead to underestimating the tactical edge Pack Tactics provides. Disrupting the Vulture's adjacency forces it to break formation, negating its Advantage.",
+      "cta": "DMs: run it with a wink, then punish lazy positioning once so the lesson lands."
+    },
+    {
+      "published_utc": "2026-07-15T23:15:35Z",
+      "day": "2026-07-15",
+      "content_id": "bgp-2026-07-15-spell-use-case-spell-100-5acb304f6248",
+      "instagram_post_id": "17885681352656538",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "ac887e377c5e4bf56ae004cdea4bd0aa5e3a93c68e62eb5dc189e6b4892a92e4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-15.mp4",
+      "fact_name": "Spidersilk",
+      "category": "spell_use_case",
+      "hook": "Spidersilk only works while you maintain focus.",
+      "body": "Spidersilk's duration is Focus, meaning any distraction breaks it. Common misplay: casting it to show off, not to solve a problem. Better play: use it to bypass obstacles or gain tactical advantage, ensuring it directly impacts the encounter's outcome.",
+      "cta": "GMs: Enforce Spidersilk's Focus duration; any distraction ends it, so remind them to stay sharp or fall."
     }
   ]
 }
