@@ -174,5 +174,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-07-15": {
+    "monster_tactic": {
+      "angle": "how_it_wins",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "tactical_analyst",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "sage"
+    }
   }
 }

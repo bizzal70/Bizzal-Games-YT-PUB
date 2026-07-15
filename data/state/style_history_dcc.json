@@ -96,5 +96,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-07-15": {
+    "item_spotlight": {
+      "angle": "loot_priority",
+      "voice": "grim_referee",
+      "tone": "neutral",
+      "persona": "dungeon_gear_mentor",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

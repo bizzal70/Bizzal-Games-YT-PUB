@@ -178,5 +178,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-07-15": {
+    "spell_use_case": {
+      "angle": "common_misplay",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "arcane_survival_coach",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }
