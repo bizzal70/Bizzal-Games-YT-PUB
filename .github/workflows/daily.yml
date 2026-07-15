@@ -155,6 +155,19 @@ jobs:
           printf '%s' "$BIZZAL_YT_TOKEN_JSON" > "$BIZZAL_YT_TOKEN_FILE"
           echo "wrote token file ($(wc -c < "$BIZZAL_YT_TOKEN_FILE") bytes)"
 
+      - name: Ensure scripts are executable
+        if: steps.guard.outputs.proceed == 'true'
+        run: |
+          # gh api PUT always writes mode 100644; this step is the safety net.
+          chmod +x \
+            bin/core/make_atom.py \
+            bin/core/run_daily_cloud_cron.sh \
+            bin/core/run_daily_for_system.sh \
+            bin/render/synthesize_bg_image_replicate.py \
+            bin/render/synthesize_music_replicate.py \
+            bin/upload/upload_youtube.py \
+            bin/upload/upload_instagram.py || true
+
       - name: Run daily pipeline
         if: steps.guard.outputs.proceed == 'true'
         env:
