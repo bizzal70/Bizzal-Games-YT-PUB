@@ -69,6 +69,48 @@
       "hook": "Word of Radiance is the spell people joke about - right before it saves a turn cycle.",
       "body": "Word of Radiance is a cantrip that deals 1d6 radiant damage and requires a Constitution saving throw. It targets all chosen creatures within a 5-foot sphere, not just one. Casting it against high-Constitution enemies often results in failed damage rolls. Better results occur when used against multiple low-Constitution targets clustered around the caster, increasing the likelihood of successful damage application.",
       "cta": "DMs: When you're surrounded by weaklings, unleash Word of Radiance to exploit their low Constitution and clear the rabble."
+    },
+    {
+      "published_utc": "2026-07-15T03:16:59Z",
+      "day": "2026-07-14",
+      "content_id": "bgp-2026-07-14-rules-ruling-rule-19-8a3acb9f631f",
+      "instagram_post_id": "18098720674957882",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "740b385a2343051c3a4bc86e61403d9388b38a74b3aa7625d314810b01b417c5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-14.mp4",
+      "fact_name": "Two-Weapon Fighting",
+      "category": "rules_ruling",
+      "hook": "Two-Weapon Fighting reduces attack dice size based on Agility.",
+      "body": "With Two-Weapon Fighting, both attacks use smaller dice along the dice chain, directly affecting combat effectiveness. High Agility minimizes this penalty, making dual-wielding viable. Low Agility means the penalty outweighs the benefit, leading to inefficient combat choices. Recognizing the dice chain interaction is crucial for effective use.",
+      "cta": "Judges: If their Agility isn't high enough, remind them they're just swinging two butter knives with worse odds."
+    },
+    {
+      "published_utc": "2026-07-15T03:24:56Z",
+      "day": "2026-07-14",
+      "content_id": "bgp-2026-07-14-class-spotlight-class-tashas-cauldron-oath-of-glory-9fa9b8494538",
+      "instagram_post_id": "18057351401762532",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "164b65cc49b2471e3ec788d0199b6ddec77c8ef795fd090d5fb3a87e88ecdf6e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-14.mp4",
+      "fact_name": "Oath of Glory",
+      "category": "class_spotlight",
+      "hook": "Oath of Glory paladins pivot roles between setup and closer based on party needs.",
+      "body": "Channel Divinity options allow Oath of Glory paladins to either bolster allies or strike decisively. Overcommitting to one role can leave the party unbalanced, especially in dynamic encounters. Alternating between enhancing allies and dealing damage ensures consistent impact. This subclass excels by adapting to the flow of combat, maintaining effectiveness across different phases.",
+      "cta": "DMs: Remind your Oath of Glory paladin to use Channel Divinity tactically, alternating between ally support and enemy takedown as needed."
+    },
+    {
+      "published_utc": "2026-07-15T03:29:09Z",
+      "day": "2026-07-14",
+      "content_id": "bgp-2026-07-14-rules-myth-rule-6-339a8cdb47fd",
+      "instagram_post_id": "18117871645836808",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "83947220593e10fc276c261cec065044ba0b351a8f0df4454bc4d2301eecca46",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-14.mp4",
+      "fact_name": "Backstab",
+      "category": "rules_myth",
+      "hook": "Backstab grants extra weapon dice when hitting an unaware target.",
+      "body": "Backstab triggers when a thief hits a creature unaware of the attack, dealing an extra weapon die of damage plus additional weapon dice equal to half the thief's level, rounded down. Declaring the trigger before rolling is crucial to ensure the bonus applies without dispute. This prevents invalidating the bonus due to oversight.",
+      "cta": "GMs: Have the thief declare Backstab before rolling to ensure they get the extra damage dice without argument."
     }
   ]
 }
