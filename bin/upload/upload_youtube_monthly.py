@@ -202,13 +202,13 @@ def upload_video(youtube, video_path: Path, title: str, description: str, privac
 
 
 def build_title(month: str) -> str:
-    return f"Bizzal RPG Monthly Longform â€¢ {month} #dnd #ttrpg"
+    return f"Bizzal RPG Monthly Longform • {month} #dnd #ttrpg"
 
 
 def build_description(month: str) -> str:
     return "\n".join(
         [
-            f"Bizzal Monthly Longform â€¢ {month}",
+            f"Bizzal Monthly Longform • {month}",
             "",
             "Compilation of approved daily shorts for the month.",
             "",
