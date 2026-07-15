@@ -166,8 +166,7 @@ def build_section_prompt(base_prompt: str, section: str, section_text: str) -> s
     section_desc = section_map.get(section_key, "cohesive scene continuation")
 
     parts = [base_prompt, f"screen phase: {section_desc}"]
-    if section_line:
-        parts.append(f"visual cue from script: {section_line}")
+    # Do NOT pass script text to the image model — Flux renders words as literal text in the image.
     return "; ".join(parts)
 
 
