@@ -89,7 +89,7 @@ def check_replicate():
     token = os.environ["BIZZAL_REPLICATE_API_TOKEN"]
     req = urllib.request.Request(
         "https://api.replicate.com/v1/account",
-        headers={"Authorization": f"Bearer {token}"}
+        headers={"Authorization": f"Token {token}"}
     )
     with urllib.request.urlopen(req, timeout=10) as r:
         resp = json.loads(r.read())
