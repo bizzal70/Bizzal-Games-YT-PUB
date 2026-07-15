@@ -86,13 +86,16 @@ check("openai:api_key", check_openai)
 
 # 5. Replicate
 def check_replicate():
+    import http.client, ssl
     token = os.environ["BIZZAL_REPLICATE_API_TOKEN"]
-    req = urllib.request.Request(
-        "https://api.replicate.com/v1/account",
-        headers={"Authorization": f"Token {token}"}
-    )
-    with urllib.request.urlopen(req, timeout=10) as r:
-        resp = json.loads(r.read())
+    ctx = ssl.create_default_context()
+    conn = http.client.HTTPSConnection("api.replicate.com", context=ctx, timeout=10)
+    conn.request("GET", "/v1/account", headers={"Authorization": f"Token {token}"})
+    r = conn.getresponse()
+    body = r.read().decode()
+    if r.status != 200:
+        raise ValueError(f"HTTP {r.status}: {body[:120]}")
+    resp = json.loads(body)
     return f"account: {resp.get('username','?')}"
 check("replicate:api_token", check_replicate)
 
