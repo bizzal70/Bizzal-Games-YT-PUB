@@ -65,7 +65,7 @@ def collect(limit: int = 12) -> list[dict] | None:
                 "id": mid,
                 "permalink": m.get("permalink", ""),
                 "timestamp": (m.get("timestamp", "") or "")[:10],
-                "caption": (m.get("caption", "") or "")[:80],
+                "caption": (m.get("caption", "") or "")[:600],
                 "media_type": m.get("media_type", ""),
                 "reach": vals.get("reach"),
                 "likes": vals.get("likes"),
