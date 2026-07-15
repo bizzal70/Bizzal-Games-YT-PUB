@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import base64
 import json
 import os
 import re
@@ -284,6 +285,73 @@ def detect_visible_text(path: str) -> tuple[bool, list[str], str]:
     return (len(tokens) >= max(1, min_tokens)), tokens, "ok"
 
 
+_ANATOMY_SYSTEM = (
+    "You are a strict QA checker for AI-generated fantasy illustration used as "
+    "short-video backgrounds. Flag ONLY severe structural/anatomical defects that "
+    "make a figure look broken: a human or creature clearly missing its head or "
+    "face when it should have one, extra or missing limbs, fused or duplicated "
+    "bodies, melted or grossly distorted faces, disconnected floating body parts, "
+    "or impossible anatomy. Do NOT flag intentional stylistic choices: hooded, "
+    "cloaked, masked or silhouetted figures, faces turned away or in shadow, figures "
+    "cropped by the frame edge, abstract shapes, or creatures that naturally have no "
+    "head. When unsure, do NOT flag. Respond with JSON only: "
+    '{"defect": true|false, "severity": "none|minor|severe", "issues": ["short reason"]}'
+)
+
+
+def detect_structural_defects(path: str) -> tuple[bool, list[str], str]:
+    """Vision QA gate for anatomy/structure defects (headless figures, extra limbs,
+    melted faces). Only SEVERE defects reject. Returns (has_severe, issues, status)
+    with status in {ok, disabled, no_key, error}. Never blocks rendering: any
+    failure returns (False, [], status) so a QA outage can't stop the pipeline.
+    """
+    if os.getenv("BIZZAL_BG_IMAGE_ANATOMY_CHECK", "1").strip().lower() not in {"1", "true", "yes", "on"}:
+        return False, [], "disabled"
+    api_key = os.getenv("OPENAI_API_KEY") or os.getenv("BIZZAL_OPENAI_API_KEY")
+    if not api_key:
+        return False, [], "no_key"
+    model = os.getenv("BIZZAL_BG_IMAGE_VISION_MODEL", "gpt-4o-mini")
+    try:
+        with open(path, "rb") as handle:
+            b64 = base64.b64encode(handle.read()).decode("ascii")
+    except Exception:
+        return False, [], "error"
+    fmt = "png" if path.lower().endswith(".png") else "jpeg"
+    payload = {
+        "model": model,
+        "max_tokens": 300,
+        "messages": [
+            {"role": "system", "content": _ANATOMY_SYSTEM},
+            {"role": "user", "content": [
+                {"type": "text", "text": "Check this background image for severe structural defects."},
+                {"type": "image_url", "image_url": {"url": f"data:image/{fmt};base64,{b64}"}},
+            ]},
+        ],
+    }
+    try:
+        req = request.Request(
+            os.getenv("BIZZAL_OPENAI_ENDPOINT", "https://api.openai.com/v1/chat/completions"),
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            method="POST",
+        )
+        with request.urlopen(req, timeout=60) as resp:
+            content = (((json.loads(resp.read().decode("utf-8")).get("choices") or [{}])[0]
+                        ).get("message") or {}).get("content") or "{}"
+    except Exception as exc:
+        print(f"[bgimg] WARN: anatomy check failed: {exc}", file=sys.stderr)
+        return False, [], "error"
+    raw = content.strip()
+    if raw.startswith("```"):
+        raw = raw.split("```", 2)[1].lstrip("json").strip()
+    try:
+        verdict = json.loads(raw)
+    except Exception:
+        return False, [], "error"
+    severe = bool(verdict.get("defect")) and str(verdict.get("severity", "")).lower() == "severe"
+    return severe, (verdict.get("issues") or []), "ok"
+
+
 def enrich_prompt(base_prompt: str, attempt_index: int) -> str:
     anti_text = (
         "absolutely no readable text anywhere, no letters, no numbers, "
@@ -412,6 +480,7 @@ def main() -> int:
     timeout_sec = int(os.getenv("BIZZAL_REPLICATE_IMAGE_TIMEOUT_SEC", "300"))
     candidate_attempts = int(os.getenv("BIZZAL_BG_IMAGE_CANDIDATE_ATTEMPTS", "4"))
     ocr_unavailable_warned = False
+    anatomy_unavailable_warned = False
 
     for candidate_idx in range(max(1, candidate_attempts)):
         candidate_prompt = enrich_prompt(prompt, candidate_idx)
@@ -448,10 +517,22 @@ def main() -> int:
         elif status == "ocr_error":
             print("[bgimg] WARN: OCR failed; accepting image without text gate", file=sys.stderr)
 
-        if has_text and candidate_idx < candidate_attempts - 1:
-            preview = ",".join(tokens[:6]) if tokens else "n/a"
+        # Vision anatomy/structure QA — only when text-clean (saves a call on
+        # candidates already being rejected for text).
+        has_defect, defect_issues, defect_status = (False, [], "skip")
+        if not has_text:
+            has_defect, defect_issues, defect_status = detect_structural_defects(tmp_out)
+            if defect_status == "no_key" and not anatomy_unavailable_warned:
+                print("[bgimg] WARN: no OpenAI key; skipping anatomy QA gate", file=sys.stderr)
+                anatomy_unavailable_warned = True
+
+        if (has_text or has_defect) and candidate_idx < candidate_attempts - 1:
+            if has_text:
+                reason = f"detected_text_tokens={','.join(tokens[:6]) if tokens else 'n/a'}"
+            else:
+                reason = f"structural_defect={'; '.join(defect_issues[:2]) or 'severe'}"
             print(
-                f"[bgimg] reject candidate={candidate_idx + 1}/{candidate_attempts} detected_text_tokens={preview}; regenerating",
+                f"[bgimg] reject candidate={candidate_idx + 1}/{candidate_attempts} {reason}; regenerating",
                 file=sys.stderr,
             )
             try:
@@ -467,6 +548,11 @@ def main() -> int:
             preview = ",".join(tokens[:6]) if tokens else "n/a"
             print(
                 f"[bgimg] WARN: accepted final candidate with detected text tokens={preview}",
+                file=sys.stderr,
+            )
+        if has_defect:
+            print(
+                f"[bgimg] WARN: accepted final candidate with structural issues={'; '.join(defect_issues[:2]) or 'severe'}",
                 file=sys.stderr,
             )
 
