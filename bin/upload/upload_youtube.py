@@ -163,7 +163,7 @@ def _hook_fragment(hook: str, limit: int = 55) -> str:
     """
     import re
 
-    frag = re.split(r"\s+[-â€”:]\s+|(?<=[.!?])\s+", hook.strip(), maxsplit=1)[0].strip()
+    frag = re.split(r"\s+[-—:]\s+|(?<=[.!?])\s+", hook.strip(), maxsplit=1)[0].strip()
     frag = re.sub(r"^(?:yes|no|and|but|so),?\s+", "", frag, flags=re.IGNORECASE).strip()
     frag = frag.rstrip(".!,;: ")
     if len(frag) > limit:
@@ -218,8 +218,8 @@ def build_description(atom: dict, day: str) -> str:
     keyword_bits = [b for b in (name, system_label, category_label) if b]
     keyword_line = " · ".join(keyword_bits)
 
-    # Explicit CTA block â€” the single biggest gap the content review flagged.
-    subscribe = f"▶ Subscribe for a daily {system_label} ruling â€” a new short every day."
+    # Explicit CTA block — the single biggest gap the content review flagged.
+    subscribe = f"▶ Subscribe for a daily {system_label} ruling — a new short every day."
     playlist_url = (os.getenv("BIZZAL_YT_PLAYLIST_URL") or "").strip()
 
     lines = [
