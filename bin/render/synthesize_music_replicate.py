@@ -223,6 +223,8 @@ def main() -> int:
                 print(f"[music] ERROR: create prediction failed: {exc}", file=sys.stderr)
                 return 4
     else:
+        # Try each candidate model in order. If a prediction is created but fails,
+        # move on to the next candidate rather than bailing immediately.
         for candidate in deduped_models:
             used_model = candidate
             try:
@@ -231,6 +233,7 @@ def main() -> int:
                 print(f"[music] skip model={candidate}: {exc}", file=sys.stderr)
                 continue
 
+            pred = None
             for attempt in range(1, max(1, create_attempts) + 1):
                 try:
                     pred = http_json("POST", create_url, token, body, timeout=90)
@@ -256,18 +259,67 @@ def main() -> int:
                         pred = None
                         break
                     print(f"[music] ERROR: create prediction model={candidate} HTTP {exc.code}: {detail}", file=sys.stderr)
-                    return 3
+                    pred = None
+                    break
                 except Exception as exc:
                     print(f"[music] ERROR: create prediction model={candidate} failed: {exc}", file=sys.stderr)
-                    return 4
-            if pred is not None:
-                break
+                    pred = None
+                    break
+
+            if pred is None:
+                continue
+
+            pred_id = pred.get("id")
+            if not pred_id:
+                print(f"[music] skip model={candidate}: prediction id missing", file=sys.stderr)
+                continue
+
+            # Poll this candidate to completion
+            started = time.time()
+            poll_url = f"https://api.replicate.com/v1/predictions/{pred_id}"
+            status = pred.get("status")
+            poll_ok = True
+            while status not in {"succeeded", "failed", "canceled"}:
+                if time.time() - started > timeout_sec:
+                    print(f"[music] model={candidate} prediction timed out -- trying next model", file=sys.stderr)
+                    poll_ok = False
+                    break
+                time.sleep(2.0)
+                try:
+                    pred = http_json("GET", poll_url, token, None, timeout=60)
+                    status = pred.get("status")
+                except Exception as exc:
+                    print(f"[music] WARNING: polling error model={candidate}: {exc}", file=sys.stderr)
+                    poll_ok = False
+                    break
+
+            if not poll_ok:
+                continue
+
+            if status != "succeeded":
+                err = pred.get("error") or ""
+                print(f"[music] model={candidate} prediction status={status}: {err} -- trying next model", file=sys.stderr)
+                continue  # KEY FIX: was returning 8, now tries next candidate
+
+            out_url = extract_output_url(pred)
+            if not out_url:
+                print(f"[music] skip model={candidate}: no output URL in prediction", file=sys.stderr)
+                continue
+
+            try:
+                download_file(out_url, args.out, timeout=240)
+            except Exception as exc:
+                print(f"[music] ERROR: download failed model={candidate}: {exc}", file=sys.stderr)
+                continue
+
+            print(f"[music] wrote {args.out} model={used_model} status={status}")
+            return 0
+
+        print("[music] ERROR: no accessible music model succeeded; set BIZZAL_REPLICATE_MUSIC_MODEL to a known-allowed slug", file=sys.stderr)
+        return 4
 
     if pred is None:
-        if version:
-            print("[music] ERROR: create prediction did not return a response", file=sys.stderr)
-        else:
-            print("[music] ERROR: no accessible music model succeeded; set BIZZAL_REPLICATE_MUSIC_MODEL to a known-allowed slug", file=sys.stderr)
+        print("[music] ERROR: create prediction did not return a response", file=sys.stderr)
         return 4
 
     pred_id = pred.get("id")
