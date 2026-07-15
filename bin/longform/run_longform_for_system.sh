@@ -51,7 +51,6 @@ run_inner() {
   export BIZZAL_END_BLACK_PAD_SEC=1.0
   export BIZZAL_CONTENT_TYPE=longform
 
-  export BIZZAL_REQUIRE_DISCORD_APPROVAL=0
   export BIZZAL_LONGFORM_LOG_DIR="$LOG_DIR"
 
   local day

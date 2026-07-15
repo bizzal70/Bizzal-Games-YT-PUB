@@ -48,9 +48,5 @@ else
   echo "[run_daily] NOTE: no render script found yet. Atom is validated and ready."
 fi
 
-# 3) Upload is intentionally disabled here.
-# Publishing must run through bin/core/discord_publish_gate.py check --publish
-# so approved state is captured and enforced.
-echo "[run_daily] upload deferred: use Discord publish gate check --publish"
 
 echo "[run_daily] DONE"

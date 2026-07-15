@@ -52,7 +52,6 @@ jobs:
       # --- runtime behaviour ---
       BIZZAL_YT_TOKEN_FILE: ${{ github.workspace }}/.secrets/youtube_token.json
       BIZZAL_YT_NONINTERACTIVE: "1"
-      BIZZAL_REQUIRE_DISCORD_APPROVAL: "0"
       BIZZAL_ENABLE_AI: "1"
       BIZZAL_ENABLE_TTS: "1"
       BIZZAL_ENABLE_BG_IMAGE: "1"
@@ -165,7 +164,7 @@ jobs:
           ")
                   python3 bin/upload/upload_youtube.py \
                     --file "$LONGFORM_MP4" \
-                    --title "$TITLE_TAG — $MONTH Monthly Compilation" \
+                    --title "$TITLE_TAG â€” $MONTH Monthly Compilation" \
                     --privacy "${BIZZAL_YT_PRIVACY}" \
                     --description "Monthly long-form compilation of all $TITLE_TAG shorts from $MONTH."
                 else

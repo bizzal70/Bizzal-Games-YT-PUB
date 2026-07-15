@@ -50,13 +50,6 @@ def sha256_file(path: Path) -> str:
     return h.hexdigest()
 
 
-def approval_state_path(repo_root: Path) -> Path:
-    val = (os.getenv("BIZZAL_DISCORD_MONTHLY_APPROVAL_STATE") or "data/archive/approvals/discord_monthly_publish_gate.json").strip()
-    p = Path(val).expanduser()
-    if not p.is_absolute():
-        p = repo_root / p
-    return p
-
 
 def publish_registry_path(repo_root: Path) -> Path:
     val = (os.getenv("BIZZAL_MONTHLY_PUBLISH_REGISTRY") or "data/archive/publish/published_monthly_registry.json").strip()
@@ -209,13 +202,13 @@ def upload_video(youtube, video_path: Path, title: str, description: str, privac
 
 
 def build_title(month: str) -> str:
-    return f"Bizzal RPG Monthly Longform • {month} #dnd #ttrpg"
+    return f"Bizzal RPG Monthly Longform â€¢ {month} #dnd #ttrpg"
 
 
 def build_description(month: str) -> str:
     return "\n".join(
         [
-            f"Bizzal Monthly Longform • {month}",
+            f"Bizzal Monthly Longform â€¢ {month}",
             "",
             "Compilation of approved daily shorts for the month.",
             "",
@@ -240,17 +233,6 @@ def main() -> int:
     if not video_path.is_file():
         eprint(f"ERROR: monthly video not found: {video_path}")
         return 3
-
-    approval_file = approval_state_path(repo_root)
-    approval_state = load_json(approval_file)
-    entry = ((approval_state.get("approvals") or {}).get(month) or {}) if isinstance(approval_state, dict) else {}
-    status = str(entry.get("status") or "").strip().lower()
-    if status not in {"approved", "published"}:
-        eprint(
-            "ERROR: monthly publish blocked; Discord approval required. "
-            f"month={month} status={status or '(missing)'} state_file={approval_file}"
-        )
-        return 7
 
     video_sha = sha256_file(video_path)
     packed = json.dumps({"month": month, "video_sha256": video_sha, "video_path": str(video_path)}, sort_keys=True)

@@ -47,10 +47,7 @@ run_inner() {
   mkdir -p "$state_dir"
   export BIZZAL_PUBLISH_REGISTRY="data/state/published_registry_${SYSTEM_ID}.json"
   export BIZZAL_STYLE_HISTORY_PATH="data/state/style_history_${SYSTEM_ID}.json"
-  export BIZZAL_DISCORD_APPROVAL_STATE="data/state/publish_gate_${SYSTEM_ID}.json"
 
-  # No human approval in the cloud path.
-  export BIZZAL_REQUIRE_DISCORD_APPROVAL=0
   export BIZZAL_DAILY_LOG_DIR="$LOG_DIR"
 
   local day

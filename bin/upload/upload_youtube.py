@@ -67,13 +67,6 @@ def publish_registry_path(repo_root: Path) -> Path:
     return p
 
 
-def approval_state_path(repo_root: Path) -> Path:
-    val = (os.getenv("BIZZAL_DISCORD_APPROVAL_STATE") or "data/archive/approvals/discord_publish_gate.json").strip()
-    p = Path(val).expanduser()
-    if not p.is_absolute():
-        p = repo_root / p
-    return p
-
 
 def default_video_path_for_day(repo_root: Path, day: str) -> Path:
     by_day_dir_raw = (os.getenv("BIZZAL_RENDERS_BY_DAY_DIR") or "data/renders/by_day").strip()
@@ -111,15 +104,6 @@ def load_registry(path: Path) -> dict:
         pass
     return {"items": []}
 
-
-def load_approval_state(path: Path) -> dict:
-    if not path.is_file():
-        return {}
-    try:
-        obj = json.loads(path.read_text(encoding="utf-8"))
-        return obj if isinstance(obj, dict) else {}
-    except Exception:
-        return {}
 
 
 def save_registry(path: Path, obj: dict):
@@ -179,7 +163,7 @@ def _hook_fragment(hook: str, limit: int = 55) -> str:
     """
     import re
 
-    frag = re.split(r"\s+[-—:]\s+|(?<=[.!?])\s+", hook.strip(), maxsplit=1)[0].strip()
+    frag = re.split(r"\s+[-â€”:]\s+|(?<=[.!?])\s+", hook.strip(), maxsplit=1)[0].strip()
     frag = re.sub(r"^(?:yes|no|and|but|so),?\s+", "", frag, flags=re.IGNORECASE).strip()
     frag = frag.rstrip(".!,;: ")
     if len(frag) > limit:
@@ -190,8 +174,8 @@ def _hook_fragment(hook: str, limit: int = 55) -> str:
 def build_title(atom: dict, day: str) -> str:
     """Hook-first title: lead with the tension, keep the entity name for search.
 
-    Was "Name • Category" (a label with no hook). Now "Hook fragment • Name" so
-    the first words do curiosity work, e.g. "Free turns for free • Cubi Devil".
+    Was "Name â€¢ Category" (a label with no hook). Now "Hook fragment â€¢ Name" so
+    the first words do curiosity work, e.g. "Free turns for free â€¢ Cubi Devil".
     Falls back to the old shape if no usable hook fragment exists.
     """
     fact = atom.get("fact") or {}
@@ -200,11 +184,11 @@ def build_title(atom: dict, day: str) -> str:
     script = atom.get("script") or {}
     frag = _hook_fragment((script.get("hook") or "").strip())
     if frag and name.lower() not in frag.lower():
-        title = f"{frag} • {name}"
+        title = f"{frag} â€¢ {name}"
     elif frag:
         title = frag
     else:
-        title = f"{name} • {category}"
+        title = f"{name} â€¢ {category}"
     return title[:100]
 
 
@@ -232,10 +216,10 @@ def build_description(atom: dict, day: str) -> str:
         profile, "TTRPG"
     )
     keyword_bits = [b for b in (name, system_label, category_label) if b]
-    keyword_line = " · ".join(keyword_bits)
+    keyword_line = " Â· ".join(keyword_bits)
 
-    # Explicit CTA block — the single biggest gap the content review flagged.
-    subscribe = f"▶ Subscribe for a daily {system_label} ruling — a new short every day."
+    # Explicit CTA block â€” the single biggest gap the content review flagged.
+    subscribe = f"â–¶ Subscribe for a daily {system_label} ruling â€” a new short every day."
     playlist_url = (os.getenv("BIZZAL_YT_PLAYLIST_URL") or "").strip()
 
     lines = [
@@ -250,7 +234,7 @@ def build_description(atom: dict, day: str) -> str:
         subscribe,
     ]
     if playlist_url:
-        lines.append(f"📺 More rulings: {playlist_url}")
+        lines.append(f"ðŸ“º More rulings: {playlist_url}")
     lines += [
         "",
         f"category: {category}",

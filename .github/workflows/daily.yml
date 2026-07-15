@@ -1,7 +1,7 @@
 name: Daily content pipeline
 
 # Cloud v2: generate -> render -> publish to YouTube, straight through (no
-# Discord approval). See docs/CLOUD_V2.md. Runs on a DST-safe 8am America/Denver
+Runs on a DST-safe 8am America/Denver
 # schedule, and on-demand via the "Run workflow" button.
 
 on:
@@ -61,7 +61,6 @@ jobs:
       # --- runtime behaviour ---
       BIZZAL_YT_TOKEN_FILE: ${{ github.workspace }}/.secrets/youtube_token.json
       BIZZAL_YT_NONINTERACTIVE: "1"
-      BIZZAL_REQUIRE_DISCORD_APPROVAL: "0"
       # smoke_test=true bypasses same-day rerun guard; production always "1"
       BIZZAL_PREVENT_SAME_DAY_RERUN: ${{ github.event.inputs.smoke_test == 'true' && '0' || '1' }}
       # AI features on (user decision). Individual systems can still override
