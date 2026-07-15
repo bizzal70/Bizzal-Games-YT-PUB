@@ -166,5 +166,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-07-14": {
+    "rules_myth": {
+      "angle": "quick_example",
+      "voice": "torchbearer_ref",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

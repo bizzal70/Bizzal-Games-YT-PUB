@@ -84,5 +84,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-07-14": {
+    "rules_ruling": {
+      "angle": "saving_throw_type",
+      "voice": "grim_referee",
+      "tone": "neutral",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

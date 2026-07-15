@@ -162,5 +162,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-07-14": {
+    "class_spotlight": {
+      "angle": "party_role_pivot",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "class_mentor",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }
