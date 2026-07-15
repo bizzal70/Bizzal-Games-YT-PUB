@@ -234,7 +234,7 @@ def build_description(atom: dict, day: str) -> str:
         subscribe,
     ]
     if playlist_url:
-        lines.append(f"ðŸ“º More rulings: {playlist_url}")
+        lines.append(f"📺 More rulings: {playlist_url}")
     lines += [
         "",
         f"category: {category}",
