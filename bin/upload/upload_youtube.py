@@ -174,8 +174,8 @@ def _hook_fragment(hook: str, limit: int = 55) -> str:
 def build_title(atom: dict, day: str) -> str:
     """Hook-first title: lead with the tension, keep the entity name for search.
 
-    Was "Name â€¢ Category" (a label with no hook). Now "Hook fragment â€¢ Name" so
-    the first words do curiosity work, e.g. "Free turns for free â€¢ Cubi Devil".
+    Was "Name • Category" (a label with no hook). Now "Hook fragment • Name" so
+    the first words do curiosity work, e.g. "Free turns for free • Cubi Devil".
     Falls back to the old shape if no usable hook fragment exists.
     """
     fact = atom.get("fact") or {}
@@ -184,11 +184,11 @@ def build_title(atom: dict, day: str) -> str:
     script = atom.get("script") or {}
     frag = _hook_fragment((script.get("hook") or "").strip())
     if frag and name.lower() not in frag.lower():
-        title = f"{frag} â€¢ {name}"
+        title = f"{frag} • {name}"
     elif frag:
         title = frag
     else:
-        title = f"{name} â€¢ {category}"
+        title = f"{name} • {category}"
     return title[:100]
 
 
@@ -216,10 +216,10 @@ def build_description(atom: dict, day: str) -> str:
         profile, "TTRPG"
     )
     keyword_bits = [b for b in (name, system_label, category_label) if b]
-    keyword_line = " Â· ".join(keyword_bits)
+    keyword_line = " · ".join(keyword_bits)
 
     # Explicit CTA block â€” the single biggest gap the content review flagged.
-    subscribe = f"â–¶ Subscribe for a daily {system_label} ruling â€” a new short every day."
+    subscribe = f"▶ Subscribe for a daily {system_label} ruling â€” a new short every day."
     playlist_url = (os.getenv("BIZZAL_YT_PLAYLIST_URL") or "").strip()
 
     lines = [
