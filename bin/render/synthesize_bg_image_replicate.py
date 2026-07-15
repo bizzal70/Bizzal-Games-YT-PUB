@@ -41,10 +41,10 @@ _STYLE_PRESETS: dict[str, dict] = {
     "bw_rtfm": {
         "base": (
             "stark black and white pen-and-ink illustration, "
-            "1970s tabletop RPG rulebook diagram aesthetic, "
-            "wry sardonic editorial cartoon style, "
-            "bold confident linework, crosshatch shading, "
-            "no color, pure monochrome, black ink on white"
+            "classic fantasy adventure art, bold confident linework, "
+            "crosshatch shading, dramatic composition, "
+            "no color, pure monochrome, black ink on white, "
+            "no text anywhere, no letters, no numbers, no labels, no runes, no symbols"
         ),
         "tone_map": {
             "gritty":  "grim pen-and-ink scene, heavy crosshatch, oppressive negative space",
@@ -53,13 +53,13 @@ _STYLE_PRESETS: dict[str, dict] = {
             "neutral": "clear instructional illustration, even linework, dry wit implied",
         },
         "category_map": {
-            "monster_tactic":    "creature encounter diagram with annotated tactical notes",
-            "encounter_seed":    "encounter scene rendered as a dry instructional plate",
-            "spell_use_case":    "arcane effect illustrated as a technical diagram",
-            "item_spotlight":    "artifact rendered as a museum catalog plate",
-            "rules_ruling":      "rules clarification illustrated with deadpan precision",
-            "rules_myth":        "common misconception debunked in editorial diagram form",
-            "character_micro_tip": "class technique illustrated as a wry how-to diagram",
+            "monster_tactic":    "creature encounter scene, dramatic action, no text",
+            "encounter_seed":    "encounter scene with adventurers, atmospheric, no text",
+            "spell_use_case":    "arcane magic effect, dynamic energy, no text",
+            "item_spotlight":    "fantasy artifact close-up, detailed linework, no text",
+            "rules_ruling":      "adventurers in action, clear composition, no text",
+            "rules_myth":        "dramatic fantasy scene, bold linework, no text",
+            "character_micro_tip": "character in action pose, confident linework, no text",
         },
         "profile_shadowdark": (
             "old-school OSR dungeon crawl etching, "
@@ -67,7 +67,7 @@ _STYLE_PRESETS: dict[str, dict] = {
         ),
         "shared_tail": [
             "no color, no grey washes, monochrome only",
-            "no text, no logo, no watermark, no UI, no frame border",
+            "absolutely no text, no letters, no numbers, no words, no labels, no runes, no glyphs, no symbols, no logos, no watermarks, no UI, no frame border",
         ],
     },
 
