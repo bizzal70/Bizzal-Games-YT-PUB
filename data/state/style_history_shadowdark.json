@@ -190,5 +190,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-07-16": {
+    "class_spotlight": {
+      "angle": "progression_trap",
+      "voice": "grim_warden",
+      "tone": "dry",
+      "persona": "class_mentor",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "coral"
+    }
   }
 }

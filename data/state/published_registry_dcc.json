@@ -52,6 +52,32 @@
         "video_sha256": "1dc766ace859725c20edaf8fec882d2eceec3b741d5a302936d1fc22df29a9f1"
       },
       "tone_lint_violation": "vague filler phrase: often lead to"
+    },
+    {
+      "published_utc": "2026-07-16T14:51:37Z",
+      "day": "2026-07-16",
+      "content_id": "bgp-2026-07-16-encounter-seed-creature-298-60b4aea284f9",
+      "publish_hash": "e90d7400caddbcaca340fa4f6c2da5e5b2026e3791808f676dfdd931cffdf4d5",
+      "youtube_video_id": "YNQo4-7fV44",
+      "youtube_url": "https://www.youtube.com/watch?v=YNQo4-7fV44",
+      "video_sha256": "8215dc4a154d9763aea44c2e0f03a9f3185cdffa89e62347ca818379efc0726d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-16.mp4",
+      "fingerprint": {
+        "day": "2026-07-16",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-07-16-encounter-seed-creature-298-60b4aea284f9",
+        "canonical_hash": "60b4aea284f96f3a98dafa890aa5c4f563a963e62aa82615ee301b1310385b23",
+        "script_id": "63a31a3df192ffa5df479793c122b9a94547b0ceb120ef15ed933e83ddc09dcc",
+        "fact_kind": "creature",
+        "fact_pk": 298,
+        "fact_name": "Cacophony Golem",
+        "hook": "Light tone, real consequences: build the scene around Cacophony Golem and table overconfidence.",
+        "body": "Magic missiles from a Cacophony Golem deal 1d4+1 damage and require a DC 13 Reflex save to avoid, with a range of 100 feet. Its movement is 0', meaning it remains stationary unless forced to move by external means. The golem's ability to induce insanity adds pressure, but the real threat comes from its cacophony ability, which often goes untelegraphed. Engaging from a distance and leveraging non-magical attacks bypasses its spell resistance, turning the encounter into a battle of attrition.",
+        "cta": "Judges: Remind them that spells have a 50% failure rate and the golem's 0' movement makes it a sitting duck for arrows.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-16.mp4",
+        "video_sha256": "8215dc4a154d9763aea44c2e0f03a9f3185cdffa89e62347ca818379efc0726d"
+      }
     }
   ]
 }

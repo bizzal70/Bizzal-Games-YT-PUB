@@ -623,6 +623,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-15.mp4",
         "video_sha256": "f4142c96c9b68c9d5f03c7ec97b47cb28548a7c6d03ce3d58a8bbb877664a98e"
       }
+    },
+    {
+      "published_utc": "2026-07-16T14:57:47Z",
+      "day": "2026-07-16",
+      "content_id": "bgp-2026-07-16-spell-use-case-spell-princes-of-apocalypse-investiture-of-flame-d750141676cf",
+      "publish_hash": "c9e46bc4a651f2e01351d40f5fb5e593036f4d72c28a6cf1bd4e152270b9f405",
+      "youtube_video_id": "Mp5Z8sfZhnU",
+      "youtube_url": "https://www.youtube.com/watch?v=Mp5Z8sfZhnU",
+      "video_sha256": "2aee405302732e714a8173b36f3a156c1e63ab3978d232f3023ef06a4d8b7674",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-16.mp4",
+      "fingerprint": {
+        "day": "2026-07-16",
+        "category": "spell_use_case",
+        "angle": "combo_pairing",
+        "content_id": "bgp-2026-07-16-spell-use-case-spell-princes-of-apocalypse-investiture-of-flame-d750141676cf",
+        "canonical_hash": "d750141676cf7cd7b729c032ac3e5ccd3d6ddea86161ff251bb9baf348b55f62",
+        "script_id": "9d944346ea4949f045237311cb6d26897dbdf9cbc67093e6b588ebcc613b76b6",
+        "fact_kind": "spell",
+        "fact_pk": "princes-of-apocalypse_investiture-of-flame",
+        "fact_name": "Investiture of Flame",
+        "hook": "Investiture of Flame grants immunity to fire damage and resistance to cold damage for up to 10 minutes.",
+        "body": "Investiture of Flame requires concentration, meaning it competes with other concentration spells and can be disrupted by damage. Many players mistakenly use it solely for its 1d10 fire damage, overlooking its potential to shift the action economy by neutralizing fire-based threats. The optimal play involves using it to change the battlefield dynamics, such as negating enemy fire attacks, rather than just adding another damage source.",
+        "cta": "DMs: Use Investiture of Flame when fire immunity will nullify an enemy's main attack, not just for the 1d10 damage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-16.mp4",
+        "video_sha256": "2aee405302732e714a8173b36f3a156c1e63ab3978d232f3023ef06a4d8b7674"
+      }
     }
   ]
 }

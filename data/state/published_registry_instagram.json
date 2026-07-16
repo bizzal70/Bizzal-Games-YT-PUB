@@ -237,6 +237,36 @@
       "hook": "Spidersilk's duration is Focus, not a set time limit.",
       "body": "Casting Spidersilk without a plan wastes its potential, as it requires Focus to maintain. The common mistake: using it just because it's available, rather than for strategic movement or combat advantage. Optimal use involves timing it to force enemy movement, disrupt their actions, or expedite combat resolution.",
       "cta": "GMs: Demand players state their intent and target before casting Spidersilk, as its Focus duration demands strategic precision."
+    },
+    {
+      "published_utc": "2026-07-16T14:53:20Z",
+      "day": "2026-07-16",
+      "system": "dcc",
+      "content_id": "bgp-2026-07-16-encounter-seed-creature-298-60b4aea284f9",
+      "instagram_post_id": "18331542568253453",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "8215dc4a154d9763aea44c2e0f03a9f3185cdffa89e62347ca818379efc0726d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-16.mp4",
+      "fact_name": "Cacophony Golem",
+      "category": "encounter_seed",
+      "hook": "Light tone, real consequences: build the scene around Cacophony Golem and table overconfidence.",
+      "body": "Magic missiles from a Cacophony Golem deal 1d4+1 damage and require a DC 13 Reflex save to avoid, with a range of 100 feet. Its movement is 0', meaning it remains stationary unless forced to move by external means. The golem's ability to induce insanity adds pressure, but the real threat comes from its cacophony ability, which often goes untelegraphed. Engaging from a distance and leveraging non-magical attacks bypasses its spell resistance, turning the encounter into a battle of attrition.",
+      "cta": "Judges: Remind them that spells have a 50% failure rate and the golem's 0' movement makes it a sitting duck for arrows."
+    },
+    {
+      "published_utc": "2026-07-16T14:59:01Z",
+      "day": "2026-07-16",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-16-spell-use-case-spell-princes-of-apocalypse-investiture-of-flame-d750141676cf",
+      "instagram_post_id": "17980576974047372",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "2aee405302732e714a8173b36f3a156c1e63ab3978d232f3023ef06a4d8b7674",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-16.mp4",
+      "fact_name": "Investiture of Flame",
+      "category": "spell_use_case",
+      "hook": "Investiture of Flame grants immunity to fire damage and resistance to cold damage for up to 10 minutes.",
+      "body": "Investiture of Flame requires concentration, meaning it competes with other concentration spells and can be disrupted by damage. Many players mistakenly use it solely for its 1d10 fire damage, overlooking its potential to shift the action economy by neutralizing fire-based threats. The optimal play involves using it to change the battlefield dynamics, such as negating enemy fire attacks, rather than just adding another damage source.",
+      "cta": "DMs: Use Investiture of Flame when fire immunity will nullify an enemy's main attack, not just for the 1d10 damage."
     }
   ]
 }
