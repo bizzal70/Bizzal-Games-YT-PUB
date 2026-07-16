@@ -25,6 +25,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-07.mp4",
         "video_sha256": "e2ca21bdaf54bdf7def717d3d8cb1ef608f61de0d117202bab62b6cfbf0b0918"
       }
+    },
+    {
+      "published_utc": "2026-07-16T00:20:36Z",
+      "day": "2026-07-15",
+      "content_id": "bgp-2026-07-15-item-spotlight-item-11-48da28af2323",
+      "publish_hash": "7f20cf3542bf5fe46b3f41dddbe03aca7b980fbbd72a6791dcaabf9a318802ae",
+      "youtube_video_id": "kEjemjPAYIQ",
+      "youtube_url": "https://www.youtube.com/watch?v=kEjemjPAYIQ",
+      "video_sha256": "1dc766ace859725c20edaf8fec882d2eceec3b741d5a302936d1fc22df29a9f1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-15.mp4",
+      "fingerprint": {
+        "day": "2026-07-15",
+        "category": "item_spotlight",
+        "angle": "loot_priority",
+        "content_id": "bgp-2026-07-15-item-spotlight-item-11-48da28af2323",
+        "canonical_hash": "48da28af2323a8809f5860fd215ae3af85b0af9387deb9298581b52f3ed3b40c",
+        "script_id": "74a373fd9305c50b0d017935eab4ea7874129ee20b67f59a70f0ab4040ca7dc4",
+        "fact_kind": "item",
+        "fact_pk": 11,
+        "fact_name": "Scrolls of the Forbidden Summoning",
+        "hook": "Scrolls of the Forbidden Summoning compel a Will DC 13 check or force the caster to complete the ritual.",
+        "body": "The scrolls summon a Demon Type II or III without a spell check, but the demon is immediately hostile and unbound. Chaotic readers face a higher compulsion DC of 16. Immediate hostility and lack of control often lead to disastrous positioning. Preparing containment measures before reading the scroll mitigates the risk.",
+        "cta": "Judges: Only use the Scrolls of the Forbidden Summoning if the party has a solid plan for an unbound, hostile demon.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-15.mp4",
+        "video_sha256": "1dc766ace859725c20edaf8fec882d2eceec3b741d5a302936d1fc22df29a9f1"
+      },
+      "tone_lint_violation": "vague filler phrase: often lead to"
     }
   ]
 }

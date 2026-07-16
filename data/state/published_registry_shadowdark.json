@@ -363,6 +363,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-07.mp4",
         "video_sha256": "f74ffac78c6b71e297bf64188ad8ef3a88f4e15e815b7ca2d0afb913dd017fa2"
       }
+    },
+    {
+      "published_utc": "2026-07-16T00:29:54Z",
+      "day": "2026-07-15",
+      "content_id": "bgp-2026-07-15-spell-use-case-spell-100-d0461039d13d",
+      "publish_hash": "019e5ea35f474286bfff2dade91934f217b2af556d3a6c708ad7016e21f67e18",
+      "youtube_video_id": "mOY-IyOjVAU",
+      "youtube_url": "https://www.youtube.com/watch?v=mOY-IyOjVAU",
+      "video_sha256": "fa805099063279bac3631d4f81cc48d454dd586c1cb5183702f45487044ffd71",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-15.mp4",
+      "fingerprint": {
+        "day": "2026-07-15",
+        "category": "spell_use_case",
+        "angle": "common_misplay",
+        "content_id": "bgp-2026-07-15-spell-use-case-spell-100-d0461039d13d",
+        "canonical_hash": "d0461039d13db70be309cc4f5b14289abb973b1d23e7a6be33bb63952b198827",
+        "script_id": "ecd08286d51e326914da974d10c848c37eb664c781f411973773c35223095ab1",
+        "fact_kind": "spell",
+        "fact_pk": 100,
+        "fact_name": "Spidersilk",
+        "hook": "Spidersilk's duration is Focus, not a set time limit.",
+        "body": "Casting Spidersilk without a plan wastes its potential, as it requires Focus to maintain. The common mistake: using it just because it's available, rather than for strategic movement or combat advantage. Optimal use involves timing it to force enemy movement, disrupt their actions, or expedite combat resolution.",
+        "cta": "GMs: Demand players state their intent and target before casting Spidersilk, as its Focus duration demands strategic precision.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-15.mp4",
+        "video_sha256": "fa805099063279bac3631d4f81cc48d454dd586c1cb5183702f45487044ffd71"
+      }
     }
   ]
 }

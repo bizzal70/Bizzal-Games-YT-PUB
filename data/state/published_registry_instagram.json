@@ -195,6 +195,48 @@
       "hook": "Spidersilk only works while you maintain focus.",
       "body": "Spidersilk's duration is Focus, meaning any distraction breaks it. Common misplay: casting it to show off, not to solve a problem. Better play: use it to bypass obstacles or gain tactical advantage, ensuring it directly impacts the encounter's outcome.",
       "cta": "GMs: Enforce Spidersilk's Focus duration; any distraction ends it, so remind them to stay sharp or fall."
+    },
+    {
+      "published_utc": "2026-07-16T00:21:19Z",
+      "day": "2026-07-15",
+      "content_id": "bgp-2026-07-15-item-spotlight-item-11-48da28af2323",
+      "instagram_post_id": "18020945933854123",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "1dc766ace859725c20edaf8fec882d2eceec3b741d5a302936d1fc22df29a9f1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-15.mp4",
+      "fact_name": "Scrolls of the Forbidden Summoning",
+      "category": "item_spotlight",
+      "hook": "Scrolls of the Forbidden Summoning compel a Will DC 13 check or force the caster to complete the ritual.",
+      "body": "The scrolls summon a Demon Type II or III without a spell check, but the demon is immediately hostile and unbound. Chaotic readers face a higher compulsion DC of 16. Immediate hostility and lack of control often lead to disastrous positioning. Preparing containment measures before reading the scroll mitigates the risk.",
+      "cta": "Judges: Only use the Scrolls of the Forbidden Summoning if the party has a solid plan for an unbound, hostile demon."
+    },
+    {
+      "published_utc": "2026-07-16T00:26:29Z",
+      "day": "2026-07-15",
+      "content_id": "bgp-2026-07-15-monster-tactic-creature-srd-2024-vulture-a84c8958eb95",
+      "instagram_post_id": "18011157566919439",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "f4142c96c9b68c9d5f03c7ec97b47cb28548a7c6d03ce3d58a8bbb877664a98e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-15.mp4",
+      "fact_name": "Vulture",
+      "category": "monster_tactic",
+      "hook": "Vulture is the classic 'easy fight' that gets weird fast if players autopilot.",
+      "body": "With an Armor Class of 10 and 5 hit points, Vulture relies on Pack Tactics to gain advantage on attack rolls. Adjacent allies are required to trigger this, and its walking speed of 10 feet limits repositioning. Engaging Vulture in isolation prevents it from gaining advantage. Use movement to disrupt its adjacency and deny it advantage.",
+      "cta": "DMs: run it with a wink, then punish lazy positioning once so the lesson lands."
+    },
+    {
+      "published_utc": "2026-07-16T00:30:34Z",
+      "day": "2026-07-15",
+      "content_id": "bgp-2026-07-15-spell-use-case-spell-100-d0461039d13d",
+      "instagram_post_id": "18017976200704384",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "fa805099063279bac3631d4f81cc48d454dd586c1cb5183702f45487044ffd71",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-15.mp4",
+      "fact_name": "Spidersilk",
+      "category": "spell_use_case",
+      "hook": "Spidersilk's duration is Focus, not a set time limit.",
+      "body": "Casting Spidersilk without a plan wastes its potential, as it requires Focus to maintain. The common mistake: using it just because it's available, rather than for strategic movement or combat advantage. Optimal use involves timing it to force enemy movement, disrupt their actions, or expedite combat resolution.",
+      "cta": "GMs: Demand players state their intent and target before casting Spidersilk, as its Focus duration demands strategic precision."
     }
   ]
 }

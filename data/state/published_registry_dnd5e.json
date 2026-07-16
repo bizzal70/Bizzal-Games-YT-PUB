@@ -597,6 +597,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-07.mp4",
         "video_sha256": "a05f5f47dfaecba58f848b3eb96b17cdbc8f0a69c9a84b0b267600ad3e66a7c2"
       }
+    },
+    {
+      "published_utc": "2026-07-16T00:25:47Z",
+      "day": "2026-07-15",
+      "content_id": "bgp-2026-07-15-monster-tactic-creature-srd-2024-vulture-a84c8958eb95",
+      "publish_hash": "c7187f2d676f5c0f970ec9ca7913afba6aa0071a5d68c95d572d7a97f10453ab",
+      "youtube_video_id": "d2wbE3pQGto",
+      "youtube_url": "https://www.youtube.com/watch?v=d2wbE3pQGto",
+      "video_sha256": "f4142c96c9b68c9d5f03c7ec97b47cb28548a7c6d03ce3d58a8bbb877664a98e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-15.mp4",
+      "fingerprint": {
+        "day": "2026-07-15",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-07-15-monster-tactic-creature-srd-2024-vulture-a84c8958eb95",
+        "canonical_hash": "a84c8958eb95acf98aad4caa3a1bcad3573205438187bec7359cc1ef69a4e105",
+        "script_id": "1decfbe94ee2d0b33dcb153bb88000516d005537a4116acc4b9d9ddee7d6f077",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_vulture",
+        "fact_name": "Vulture",
+        "hook": "Vulture is the classic 'easy fight' that gets weird fast if players autopilot.",
+        "body": "With an Armor Class of 10 and 5 hit points, Vulture relies on Pack Tactics to gain advantage on attack rolls. Adjacent allies are required to trigger this, and its walking speed of 10 feet limits repositioning. Engaging Vulture in isolation prevents it from gaining advantage. Use movement to disrupt its adjacency and deny it advantage.",
+        "cta": "DMs: run it with a wink, then punish lazy positioning once so the lesson lands.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-15.mp4",
+        "video_sha256": "f4142c96c9b68c9d5f03c7ec97b47cb28548a7c6d03ce3d58a8bbb877664a98e"
+      }
     }
   ]
 }
