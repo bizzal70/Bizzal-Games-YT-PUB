@@ -65,7 +65,9 @@ def collect(limit: int = 12) -> list[dict] | None:
                 "id": mid,
                 "permalink": m.get("permalink", ""),
                 "timestamp": (m.get("timestamp", "") or "")[:10],
-                "caption": (m.get("caption", "") or "")[:600],
+                # Full caption (IG's own max is 2200) — never truncate here, or
+                # reviewers mistake our cap for a real mid-sentence cut-off.
+                "caption": (m.get("caption", "") or "")[:2200],
                 "media_type": m.get("media_type", ""),
                 "reach": vals.get("reach"),
                 "likes": vals.get("likes"),
