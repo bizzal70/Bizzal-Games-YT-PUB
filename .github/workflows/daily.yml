@@ -18,9 +18,9 @@ on:
         required: false
         default: "all"
       privacy:
-        description: "YouTube privacy for this run: unlisted | private | public"
+        description: "YouTube privacy for this run: public | unlisted | private"
         required: false
-        default: "unlisted"
+        default: "public"
       dry_run:
         description: 'Set "true" to generate+render but skip the YouTube and Instagram uploads'
         required: false
@@ -172,7 +172,7 @@ jobs:
         if: steps.guard.outputs.proceed == 'true'
         env:
           BIZZAL_CLOUD_SYSTEMS: ${{ github.event.inputs.systems || 'all' }}
-          BIZZAL_YT_PRIVACY: ${{ github.event.inputs.privacy || 'unlisted' }}
+          BIZZAL_YT_PRIVACY: ${{ github.event.inputs.privacy || 'public' }}
           # dry_run: generate + render but skip the YouTube upload entirely.
           BIZZAL_SKIP_PUBLISH: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
         run: bin/core/run_daily_cloud_cron.sh
