@@ -396,12 +396,27 @@ def main() -> int:
     content_id = str(((atom.get("content") or {}).get("content_id") or "")).strip()
 
     # Dedup check against Instagram registry
+    system = content_profile(atom)
     registry_file = ig_registry_path(repo_root)
     registry = load_registry(registry_file)
     for item in registry.get("items") or []:
-        if isinstance(item, dict) and item.get("content_id") == content_id and content_id:
+        if not isinstance(item, dict):
+            continue
+        # Same generated content (atom unchanged since the last publish).
+        if content_id and item.get("content_id") == content_id:
             prior_id = item.get("instagram_post_id") or "(unknown)"
             eprint(f"ERROR: duplicate publish blocked. content_id={content_id} prior_post={prior_id}")
+            return 6
+        # This system already published for this day. content_id embeds a hash of
+        # the generated script, so a re-run that regenerates the atom mints a NEW
+        # content_id and slips past the check above — which is how the same day's
+        # reel got posted twice. Intent is one IG post per system per day, so key
+        # the guard on (day, system), which survives regeneration.
+        if system and day and item.get("system") == system and item.get("day") == day:
+            prior_id = item.get("instagram_post_id") or "(unknown)"
+            eprint(
+                f"ERROR: duplicate publish blocked. system={system} day={day} prior_post={prior_id}"
+            )
             return 6
 
     caption = build_caption(atom, day)
@@ -451,6 +466,10 @@ def main() -> int:
     registry["items"].append({
         "published_utc": utc_now(),
         "day": day,
+        # `system` powers the (day, system) dedup guard above. Entries written
+        # before this field existed simply won't match it; the content_id check
+        # still covers exact re-publishes of an unchanged atom.
+        "system": system,
         "content_id": content_id,
         "instagram_post_id": post_id,
         "instagram_user_id": ig_user_id,
