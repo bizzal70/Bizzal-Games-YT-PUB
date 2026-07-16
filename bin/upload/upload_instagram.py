@@ -117,7 +117,9 @@ def save_registry(path: Path, obj: dict):
 # Per-system Instagram hashtag sets, keyed by system id (BIZZAL_SYSTEM_ID).
 # Add a row when onboarding a system; unknown systems get a neutral fallback
 # rather than being mislabeled as D&D.
-_IG_CORE_TAGS = ["#ttrpg", "#rpg", "#shorts", "#reels"]
+# #shorts is a YouTube-native tag — it does nothing on Instagram except signal an
+# unedited cross-post. #reels IS IG-native, so it stays.
+_IG_CORE_TAGS = ["#ttrpg", "#rpg", "#reels"]
 _IG_TAG_POOL = {
     "dnd5e": ["#dnd", "#dnd5e", "#dungeonsanddragons", "#dungeonmaster", "#dmtips",
               "#ttrpgcommunity", "#tabletopgames", "#dndmemes", "#rpggamer", "#dnd5e2024"],
@@ -167,10 +169,25 @@ def content_profile(atom: dict) -> str:
 
 # Cross-promote to YouTube (Reels are repurposed from the daily YT short) and
 # ask for the follow — the caption previously had neither.
-_IG_FOLLOW_CTA = (
-    "Daily tabletop RPG rulings. Follow @bizzalgames70 for one a day. "
-    "Full videos on YouTube: @Bizzal_Games"
-)
+# Rotated per post rather than one fixed line: an identical closer on every
+# caption stops reading as copy and starts reading as a footer. The mix also
+# asks for saves and comments (engagement has been flat: 0 saves, 0 comments
+# even at 100+ reach) and only occasionally sends traffic to YouTube, so IG
+# keeps a platform-native reason to exist.
+_IG_CTA_POOL = [
+    "One ruling a day, no fluff. Follow @bizzalgames70.",
+    "Save this for your next session. Daily rulings: @bizzalgames70",
+    "Ran it differently at your table? Comments are open. @bizzalgames70",
+    "Daily tabletop RPG rulings. Follow @bizzalgames70 for one a day.",
+    "Full breakdown on YouTube: @Bizzal_Games. Daily rulings: @bizzalgames70",
+    "Bookmark it before your players find the loophole. @bizzalgames70",
+]
+
+
+def _rotating_cta(seed_str: str) -> str:
+    """Deterministic per-post CTA (stable across re-runs of the same day)."""
+    idx = int(hashlib.sha256(seed_str.encode()).hexdigest(), 16) % len(_IG_CTA_POOL)
+    return _IG_CTA_POOL[idx]
 
 
 def build_caption(atom: dict, day: str) -> str:
@@ -184,7 +201,7 @@ def build_caption(atom: dict, day: str) -> str:
     parts = [hook or name]          # lead with the hook: first line is the scroll-stopper
     if cta:
         parts.append(cta)           # the script's table-tip CTA, previously dropped
-    parts.append(_IG_FOLLOW_CTA)
+    parts.append(_rotating_cta(f"{day}|{name}"))
     parts.append(tags)
     caption = "\n\n".join(p for p in parts if p)
     return caption[:2200]  # Instagram caption limit
