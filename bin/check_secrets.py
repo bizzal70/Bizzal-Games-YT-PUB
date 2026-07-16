@@ -124,13 +124,11 @@ check("supabase:rest_api", check_supabase_rest)
 
 # 8. Instagram
 def check_ig():
-    import urllib.parse
-    token   = os.environ["BIZZAL_IG_ACCESS_TOKEN"]
-    url = "https://graph.facebook.com/v19.0/me?" + urllib.parse.urlencode({
-        "fields": "id,username",
-        "access_token": token
-    })
-    req = urllib.request.Request(url)
+    token = os.environ["BIZZAL_IG_ACCESS_TOKEN"]
+    req = urllib.request.Request(
+        "https://graph.instagram.com/v20.0/me?fields=id,username",
+        headers={"Authorization": f"Bearer {token}"}
+    )
     with urllib.request.urlopen(req, timeout=10) as r:
         resp = json.loads(r.read())
     if "error" in resp:
