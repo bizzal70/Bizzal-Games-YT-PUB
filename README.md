@@ -43,9 +43,14 @@ Topic scout → Fact pick → Script (GPT-4o) → Render (ffmpeg) → Publish (Y
    - AI TTS narration (OpenAI)
    - AI background art per screen (Replicate / Flux) — style controlled by `BIZZAL_BG_STYLE`
    - AI background music (Replicate / Stable Audio)
-5. **Quality gate** — if Replicate components (image or music) fail, render exits code 20 and publish is skipped; the run retries next day rather than releasing degraded content
-6. **Publish** — uploads to YouTube; posts to Instagram Reels; archives MP4 to Supabase Storage
-7. **State** — publish registry and style history committed back to repo for dedup and variety
+5. **Quality gates** — every background image candidate is inspected before it's accepted, and rejected ones are regenerated (up to `BIZZAL_BG_IMAGE_CANDIDATE_ATTEMPTS`, default 4):
+   - **text reject** (OCR / tesseract) — Flux renders prompt words as literal text; any image with readable text is discarded
+   - **structure reject** (vision QA) — flags severe anatomical defects (headless or faceless figures, extra limbs, fused/melted bodies). Only **severe** defects reject; hooded, silhouetted, and frame-cropped figures are deliberately *not* flagged, so the bw/OSR style is safe. Disable with `BIZZAL_BG_IMAGE_ANATOMY_CHECK=0`
+   - both gates **fail open** — a missing key or QA outage logs a warning and accepts the image rather than blocking the render
+
+   If Replicate components (image or music) fail outright, render exits code 20 and publish is skipped; the run retries next day rather than releasing degraded content
+6. **Publish** — uploads to YouTube (**public by default**; override per run with the `privacy` input), posts to Instagram Reels, archives MP4 to Supabase Storage
+7. **State** — publish registry and style history committed back to repo for dedup and variety. Instagram dedups on **`(day, system)`** — one reel per system per day, which survives a re-run regenerating the atom
 
 ### Background style
 
@@ -90,7 +95,8 @@ bin/
   upload/                   YouTube + Instagram upload scripts
   longform/                 Long-form: topic_scout, make_longform_atom,
                             write_longform_script, run_longform_for_system
-  tools/                    One-off enrichment utilities
+  tools/                    Enrichment utilities + collect_ig_metrics (read-only
+                            IG insights for the reviewer/metrics agent)
 
 config/                     Atom schema, style rules
 
@@ -103,6 +109,9 @@ data/
     style_history_longform_{system}.json
   longform/
     topic_queue.json         Long-form topic brief queue
+  metrics/
+    instagram.json           Published IG insights (reach/likes/saves), read by
+                             Audit_User_Agent — the IG token lives here, not there
 
 reference/
   systems/
@@ -119,11 +128,14 @@ docs/                       Architecture, deployment, and runbooks
 
 | Workflow | Schedule | What it does |
 |---|---|---|
-| `daily.yml` | 8am MT daily | Shorts for all 3 systems; `systems=` input to target one |
+| `daily.yml` | 8am MT daily | Shorts for all 3 systems; `systems=` to target one, `privacy=` to override public |
 | `longform_daily.yml` | 10am MT Mon/Wed/Fri | Long-form for rotating system |
 | `topic_scout.yml` | 9pm MT Sunday | Populates `topic_queue.json` for the week |
 | `monthly.yml` | 1st of month | Compiles month's Shorts into a compilation |
+| `ig_metrics.yml` | 11:30 UTC daily | Read-only Instagram insights → `data/metrics/instagram.json` (consumed by [Audit_User_Agent](https://github.com/bizzal70/Audit_User_Agent)) |
 | `reauth_youtube.yml` | Manual | Refreshes `BIZZAL_YT_TOKEN_JSON` secret when OAuth expires |
+| `check_secrets.yml` | Manual | Verifies required secrets are present |
+| `dump_db_migrations.yml` | Manual | Exports Supabase migrations |
 
 All workflows support `workflow_dispatch` with `dry_run=true` to generate + render without uploading.
 
@@ -200,7 +212,8 @@ gh run view --repo bizzal70/Bizzal-Games-YT-PUB \
 2. Init state files in `data/state/`:
    `published_registry_{id}.json` → `[]`
    `style_history_{id}.json` → `{}`
-   `publish_gate_{id}.json`
+   *(no `publish_gate_{id}.json` — the Discord approval gate was removed; the
+   existing `publish_gate_*.json` files are orphaned leftovers)*
 3. Seed Supabase tables:
    `rpg_systems`, `system_weekly_spine`, `system_categories`,
    `system_category_angle_weights`, `system_tones`, `system_voices`, `system_personas`
