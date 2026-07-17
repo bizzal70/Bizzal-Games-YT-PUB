@@ -1,6 +1,105 @@
 [
   {
     "system": "dnd5e",
+    "title": "Arcane Factions Unleashed: Power Dynamics",
+    "angle": "Exploring how the new Arcane Factions impact gameplay dynamics and role-playing opportunities.",
+    "rationale": "With the upcoming release of Arcana Unleashed, players are eager to see how these factions will change the game.",
+    "fixture_hint": "rule",
+    "search_keyword": "Preview the arcane factions and backgrounds from Arcana Unleashed",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "7135e189ec23"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Deadfall's High-Stakes Adventures",
+    "angle": "Taking a deep dive into the mechanics of high-level play in Deadfall's Level 11-20 adventure.",
+    "rationale": "Deadfall is generating buzz for its challenging high-level content, appealing to veteran players.",
+    "fixture_hint": "rule",
+    "search_keyword": "Arcana Unleashed: Deadfall will be Level 11-20 adventure",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "76d105b71606"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Minis and More: Beadle & Grimm's Deadfall Set",
+    "angle": "Reviewing the components of the Deadfall set and their practical use in sessions.",
+    "rationale": "The premium price tag and extensive content of this set are hot topics among collectors and players.",
+    "fixture_hint": "item",
+    "search_keyword": "Beadle & Grimm's 'Deadfall' set includes minis, posters, and bonus adventures for a whopping $500",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "b7176d5cd516"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's Dragonbane: A New Adventure Awaits",
+    "angle": "Examining the unique challenges and rewards of the Dragonbane adventure module.",
+    "rationale": "Shadowdark's Dragonbane is part of a fresh wave of content attracting both new and seasoned players.",
+    "fixture_hint": "creature",
+    "search_keyword": "RPG Print News – Dragonbane, Shadowdark, Mausritter, and More",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "08e822f138fa"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Summoning Magic: Unleashing the New Summoner Class",
+    "angle": "Detailing the mechanics and strategic uses of the Summoner Class in Shadowdark.",
+    "rationale": "The introduction of a new class always sparks interest and speculation within the TTRPG community.",
+    "fixture_hint": "class",
+    "search_keyword": "Daggerheart is playtesting a Summoner class",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "e927525a2df8"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Freebies & Sales: Maximize Your Shadowdark Experience",
+    "angle": "Guiding players on how to take advantage of current freebies and sales to enhance gameplay.",
+    "rationale": "These deals are time-sensitive and offer valuable resources for Shadowdark enthusiasts.",
+    "fixture_hint": "item",
+    "search_keyword": "Freebies, Sales, and Charity Bundles for July 6, 2026",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "7736ba2735bb"
+  },
+  {
+    "system": "dcc",
+    "title": "Deathbringer's Kickstarter Success: What's Inside?",
+    "angle": "Dissecting the contents and appeal of the Deathbringer crowdfunding project.",
+    "rationale": "As a notable crowdfunding success, Deathbringer has captured the attention of the DCC community.",
+    "fixture_hint": "item",
+    "search_keyword": "RPG Crowdfunding News – Deathbringer, Sly Flourish, Gary's Appendix, and more",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "666735c62570"
+  },
+  {
+    "system": "dcc",
+    "title": "Fiends & Foes: DCC's Take on Iconic Monsters",
+    "angle": "Analyzing how DCC interprets classic monsters and introduces new challenges.",
+    "rationale": "The release of a lore book focused on beasts and villains reignites interest in monster mechanics.",
+    "fixture_hint": "creature",
+    "search_keyword": "Fiends & Foes is a D&D lore book of beasts, villains, and monstrosities from across the planes",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "db941dfa6568"
+  },
+  {
+    "system": "dcc",
+    "title": "Clownish Evolution: A New Spin on DCC",
+    "angle": "Exploring the thematic and mechanical elements of the clown-centric content in DCC.",
+    "rationale": "The quirky and unexpected addition of clown-themed content sparks curiosity and discussion.",
+    "fixture_hint": "class",
+    "search_keyword": "RPG Evolution: Send in the Clowns",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "2e6f33ef3955"
+  },
+  {
+    "system": "dnd5e",
     "title": "Unpacking Arcana Unleashed Subclasses",
     "angle": "Dive into the newly confirmed 8 subclasses and what they bring to the game",
     "rationale": "With the announcement of the 8 new subclasses, players are eager to know how these will impact their games.",
