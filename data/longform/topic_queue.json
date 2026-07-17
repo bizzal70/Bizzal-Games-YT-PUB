@@ -1,6 +1,105 @@
 [
   {
     "system": "dnd5e",
+    "title": "Arcana Unleashed: The Power of Arcane Backgrounds",
+    "angle": "Explore the new arcane backgrounds and how they shape character development.",
+    "rationale": "Arcana Unleashed is generating buzz with its new backgrounds.",
+    "fixture_hint": "rule",
+    "search_keyword": "Preview the arcane factions and backgrounds from Arcana Unleashed",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "6aee04f06fbe"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Fiends & Foes: Mastering Monstrosities",
+    "angle": "Deep dive into the unique abilities of key monstrosities from the Fiends & Foes book.",
+    "rationale": "The new lore book is a hot topic for D&D fans.",
+    "fixture_hint": "creature",
+    "search_keyword": "Fiends & Foes is a D&D lore book of beasts, villains, and monstrosities from across the planes",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "b978ea630276"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Arcana Unleashed Subclasses: The Ultimate Breakdown",
+    "angle": "Analyze the strengths and weaknesses of the 8 new subclasses.",
+    "rationale": "WotC's announcement of new subclasses has stirred community interest.",
+    "fixture_hint": "class",
+    "search_keyword": "WotC confirms the 8 subclasses coming in Arcana Unleashed",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "f53bcc7b5e0b"
+  },
+  {
+    "system": "shadowdark",
+    "title": "The Art of Dragonbane: Monster Tactics",
+    "angle": "Examine the strategic depth of Dragonbane's monsters in Shadowdark.",
+    "rationale": "Dragonbane is a fresh adventure that's attracting attention.",
+    "fixture_hint": "creature",
+    "search_keyword": "RPG Print News – Dragonbane, Shadowdark, Mausritter, and More",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "018f27e76c41"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Summoning Secrets: Shadowdark's New Class Mechanics",
+    "angle": "Explore the unique summoning mechanics of the new class.",
+    "rationale": "The Summoner class is in playtesting and on players' minds.",
+    "fixture_hint": "class",
+    "search_keyword": "Daggerheart is playtesting a Summoner class",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "fe43f1482bbf"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark Freebies: Hidden Gems",
+    "angle": "Highlight the best freebies available for Shadowdark enthusiasts.",
+    "rationale": "Recent freebies and sales are creating a buzz in the community.",
+    "fixture_hint": "item",
+    "search_keyword": "Freebies, Sales, and Charity Bundles for July 6, 2026",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "90f9d6534742"
+  },
+  {
+    "system": "dcc",
+    "title": "Deathbringer's Dark Items: Unleashing Power",
+    "angle": "Investigate the most potent items from the Deathbringer Kickstarter.",
+    "rationale": "Deathbringer's crowdfunding success is capturing attention.",
+    "fixture_hint": "item",
+    "search_keyword": "RPG Crowdfunding News – Deathbringer, Sly Flourish, Gary's Appendix, and more",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "710fb80390aa"
+  },
+  {
+    "system": "dcc",
+    "title": "Gary's Appendix: Spells of Yesteryear",
+    "angle": "Delve into the vintage spells and their modern-day applications.",
+    "rationale": "As part of a crowdfunding project, these spells are intriguing the community.",
+    "fixture_hint": "spell",
+    "search_keyword": "RPG Crowdfunding News – Deathbringer, Sly Flourish, Gary's Appendix, and more",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "e5756672b425"
+  },
+  {
+    "system": "dcc",
+    "title": "Clownish Evolution: The Rules of Chaos",
+    "angle": "Unpack the chaotic rules that make the Clownish Evolution module unique.",
+    "rationale": "The module's quirky take on rules is a talking point.",
+    "fixture_hint": "rule",
+    "search_keyword": "RPG Evolution: Send in the Clowns",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "610b1cf98b65"
+  },
+  {
+    "system": "dnd5e",
     "title": "Arcane Factions Unleashed: Power Dynamics",
     "angle": "Exploring how the new Arcane Factions impact gameplay dynamics and role-playing opportunities.",
     "rationale": "With the upcoming release of Arcana Unleashed, players are eager to see how these factions will change the game.",
