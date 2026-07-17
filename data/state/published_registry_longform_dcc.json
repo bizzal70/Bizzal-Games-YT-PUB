@@ -1,1 +1,30 @@
-[]
+{
+  "items": [
+    {
+      "published_utc": "2026-07-17T05:11:24Z",
+      "day": "2026-07-16",
+      "content_id": "",
+      "publish_hash": "34bf126a63c078d21d01740e7eab073afd555f3b9c8646880a6c34f8fd35204e",
+      "youtube_video_id": "GX69-Bzs8TU",
+      "youtube_url": "https://www.youtube.com/watch?v=GX69-Bzs8TU",
+      "video_sha256": "246d4f66476b30540099b9b7cbbbbfa2b3e4b449c73dca2ee35b53ae4b49c6db",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-16.mp4",
+      "fingerprint": {
+        "day": "2026-07-16",
+        "category": "",
+        "angle": "Investigate the most potent items from the Deathbringer Kickstarter.",
+        "content_id": "",
+        "canonical_hash": "",
+        "script_id": "5efd243554d00683eabb0a5df14f0150757c9f83ac8281968a04a277f464b478",
+        "fact_kind": "",
+        "fact_pk": null,
+        "fact_name": "",
+        "hook": "Deathbringer's Dark Items: Unleashing Power",
+        "body": "Welcome to Bizzal Games, where today we delve into the Deathbringer Kickstarter's most potent items. We’ll explore their mechanics, benefits, and curses, all designed to add a unique twist to your Dungeon Crawl Classics RPG sessions. Each item offers specific advantages and drawbacks that can significantly impact gameplay. Stay tuned as we dissect these artifacts and reveal how they can alter the course of your adventures. Let's jump right into the details and uncover the secrets behind these dark items.\n\nSword of Air and Darkness. The Sword of Air and Darkness offers a +2 bonus to both attack and damage rolls, making it a formidable weapon in combat. On a natural roll of 19-20, it transports the target to the ethereal plane for 1d6 rounds, unless a Fortitude save DC 14 is made. This sword also allows its wielder to cast darkness with a radius of 100 feet once per day, acting as a spell check result of 18. However, its curse is equally potent; it whispers the names of those it has slain to its wielder during sleep. Failing a Will save DC 12 results in the permanent loss of 1 point of Luck to the sword's insatiable hunger. This black-bladed weapon emits a moaning wind audible only to its wielder, adding to its eerie presence.\n\nRing of Spell Storing. The Ring of Spell Storing is a versatile tool for any spellcaster, capable of holding up to 3 levels of wizard or cleric spells. These spells, once cast into the ring, can be released as a free action, utilizing the original spell check result. This makes the ring an excellent choice for quick and strategic spellcasting in the heat of battle. However, releasing a stored spell causes the ring to become uncomfortably hot, dealing 1 hit point of fire damage per spell level to the wearer. The ring is a plain silver band, with a faint glow emanating from a hair-thin crack when it holds a spell. Despite its simple appearance, the ring's utility in storing and casting spells makes it a valuable asset.\n\nPotion of Giant Strength. The Potion of Giant Strength temporarily boosts the drinker's Strength to 20, providing a +4 modifier to all Strength rolls and melee damage for 1 turn. Additionally, the attack die improves by two steps, offering a significant advantage in combat situations. However, this power comes with a drawback. After the effect ends, the user suffers a drain of 1d3 Strength points until their next long rest. The potion has a distinctive taste of iron and earth, with a roiling brown color that hints at its raw power. This item is perfect for those moments when sheer strength is the key to overcoming an obstacle or enemy.\n\nGauntlets of the Ogre King. The Gauntlets of the Ogre King are massive iron gloves, granting a +3 bonus to all melee damage. While wearing them, the user treats their Strength as 18, allowing them to tear open doors, barricades, and locks as if performing a warrior's Mighty Deed, albeit at a -2 to the deed die. However, the gauntlets limit the wearer’s ability to perform tasks requiring fine motor skills, such as picking pockets or casting spells with somatic components, without a DC 12 Agility check. The gauntlets are engraved with a crude orc face, adding a touch of intimidation. These are ideal for players who value raw power over finesse.\n\nCloak of the Mountaineer. The Cloak of the Mountaineer grants the wearer a climbing speed equal to their ground speed, allowing them to automatically succeed at all climb checks except those involving overhangs with a DC of 12. Once per day, the cloak provides a feather fall effect for 1 round, offering an escape from dangerous heights. However, the cloak whispers urges to scale tall structures, requiring a Will save DC 9 to resist whenever such a structure is visible. The cloak is characterized by its brown and gray patches and remains perpetually dusty. This item is perfect for adventurers who frequently find themselves navigating vertical challenges.\n\nThank you for joining us on this exploration of the Deathbringer Kickstarter's dark items. Each artifact offers unique mechanics and challenges that can enrich your Dungeon Crawl Classics RPG experience. Consider incorporating these items into your campaign to test your party's adaptability and resourcefulness. Don't forget to like, subscribe, and hit the bell icon for more deep dives into tabletop RPG mechanics. Share your experiences with these items in the comments below. Until next time, keep rolling those dice and embracing the chaos!",
+        "cta": "Subscribe for weekly tabletop RPG deep dives.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-16.mp4",
+        "video_sha256": "246d4f66476b30540099b9b7cbbbbfa2b3e4b449c73dca2ee35b53ae4b49c6db"
+      }
+    }
+  ]
+}
