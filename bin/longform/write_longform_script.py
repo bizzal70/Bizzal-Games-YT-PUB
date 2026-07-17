@@ -173,6 +173,29 @@ def main():
     packed = f"{script['intro'].strip()}\n{json.dumps(sections)}\n{script['outro'].strip()}\n"
     script_id = sha256_text(packed)
 
+    # --- Render adapter -------------------------------------------------------
+    # The shared renderer (bin/render/render_atom.sh) consumes script.hook/body/
+    # cta: hook and cta are single title/end cards, and body is paginated into
+    # narrated screens (each getting its own TTS + Replicate background art +
+    # music). Long-form scripts are intro/sections/outro, so fold the full
+    # narration into `body` (where it gets paginated and narrated screen by
+    # screen), bracketed by a short title card and a subscribe end card. Without
+    # this the renderer reads empty hook/body/cta and produces a silent, text-
+    # less video — this is what makes long-form actually render its content.
+    _blocks = []
+    if (script.get("intro") or "").strip():
+        _blocks.append(script["intro"].strip())
+    for _s in sections:
+        _h = (_s.get("heading") or "").strip()
+        _b = (_s.get("body") or "").strip()
+        if _b:
+            _blocks.append(f"{_h}. {_b}" if _h else _b)
+    if (script.get("outro") or "").strip():
+        _blocks.append(script["outro"].strip())
+    script["hook"] = (script.get("youtube_title") or atom.get("title") or "").strip()
+    script["body"] = "\n\n".join(_blocks)
+    script["cta"]  = "Subscribe for weekly tabletop RPG deep dives."
+
     atom["script"]    = script
     atom["script_id"] = script_id
     atom["youtube_title"]       = script.get("youtube_title", atom.get("title", ""))

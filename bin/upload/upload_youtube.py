@@ -429,6 +429,10 @@ def main() -> int:
     parser.add_argument("--day", default=os.getenv("BIZZAL_DAY", ""), help="Day YYYY-MM-DD (default: today inferred by render path)")
     parser.add_argument("--video", default="", help="Video path (default: data/renders/latest/latest.mp4)")
     parser.add_argument("--refresh-auth-only", action="store_true", help="Refresh or create the YouTube OAuth token without uploading")
+    parser.add_argument("--title-override", default="", help="Use this title instead of the computed one (long-form)")
+    parser.add_argument("--description-override", default="", help="Use this description instead of the computed one (long-form)")
+    parser.add_argument("--category-id", default="", help="YouTube category id (default: BIZZAL_YT_CATEGORY_ID or 20)")
+    parser.add_argument("--not-made-for-kids", action="store_true", help="Mark selfDeclaredMadeForKids=False (already the default; accepted for the long-form caller)")
     args = parser.parse_args()
 
     repo_root = Path(__file__).resolve().parents[2]
@@ -488,12 +492,16 @@ def main() -> int:
         eprint("Duplicate override is disabled by policy.")
         return 6
 
-    title = build_title(atom, day)
-    description = build_description(atom, day)
+    # Long-form passes explicit overrides; when they're blank, fall back to the
+    # atom's AI-written youtube_title/description (set by write_longform_script),
+    # then finally to the Shorts builders. Shorts atoms have neither override nor
+    # youtube_* fields, so they keep using build_title/build_description as before.
+    title = (args.title_override or "").strip() or atom.get("youtube_title") or build_title(atom, day)
+    description = (args.description_override or "").strip() or atom.get("youtube_description") or build_description(atom, day)
     privacy = (os.getenv("BIZZAL_YT_PRIVACY") or "private").strip().lower()
     if privacy not in {"private", "unlisted", "public"}:
         privacy = "private"
-    category_id = (os.getenv("BIZZAL_YT_CATEGORY_ID") or "20").strip()  # Gaming
+    category_id = (args.category_id or "").strip() or (os.getenv("BIZZAL_YT_CATEGORY_ID") or "20").strip()  # Gaming
 
     try:
         youtube = get_youtube_service(client_secrets, token_file)

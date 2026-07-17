@@ -41,6 +41,10 @@ CANDIDATES=(
   "data/renders${SFX}/by_day/${DAY}.mp4"
   "data/renders${SFX}/by_day/${DAY}/final.mp4"
   "data/renders${SFX}/latest/latest.mp4"
+  # Composite ids like "longform_dcc" aren't in system_config (so SFX resolves
+  # empty); the runner renders them to data/renders_<system_id>/... — check that.
+  "data/renders_${SYSTEM_ID}/by_day/${DAY}.mp4"
+  "data/renders_${SYSTEM_ID}/latest/latest.mp4"
 )
 
 SRC=""
