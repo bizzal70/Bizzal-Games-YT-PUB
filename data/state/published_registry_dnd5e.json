@@ -649,6 +649,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-16.mp4",
         "video_sha256": "2aee405302732e714a8173b36f3a156c1e63ab3978d232f3023ef06a4d8b7674"
       }
+    },
+    {
+      "published_utc": "2026-07-17T14:48:07Z",
+      "day": "2026-07-17",
+      "content_id": "bgp-2026-07-17-rules-ruling-rule-srd-2024-combat-unseen-attackers-and-target-eed5bd9fcdf5",
+      "publish_hash": "2d02fd8bd382da5bf365d50b94f1cea4c40e97e033105a7cb3e24cb0d7f0204c",
+      "youtube_video_id": "JYftz0TNIzw",
+      "youtube_url": "https://www.youtube.com/watch?v=JYftz0TNIzw",
+      "video_sha256": "83c1f26912e854e4f4623b3972fcef136b1bf9f48d56d490620fa7f6439dd019",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-17.mp4",
+      "fingerprint": {
+        "day": "2026-07-17",
+        "category": "rules_ruling",
+        "angle": "edge_case",
+        "content_id": "bgp-2026-07-17-rules-ruling-rule-srd-2024-combat-unseen-attackers-and-target-eed5bd9fcdf5",
+        "canonical_hash": "eed5bd9fcdf542d2c7be6c2f60f8c0284c865bc183cc0916ce494d9f4509cbe0",
+        "script_id": "41617222192c211dacda3c849d4b114b6bb545a15adad9956665f3e4c8d7c64c",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_combat_unseen-attackers-and-target",
+        "fact_name": "Unseen Attackers and Targets",
+        "hook": "Unseen Attackers and Targets impose Disadvantage on attack rolls against unseen targets.",
+        "body": "When attacking a target you can't see, you always have Disadvantage on the attack roll, regardless of whether you guess the target's location or hear it. This rule often gets misapplied when players assume sound negates the Disadvantage. Correct application involves understanding that Disadvantage applies until the target is visible, ensuring clear rulings and reducing disputes.",
+        "cta": "DMs: Enforce Disadvantage on attacks against unseen targets until visibility is restored; hearing alone doesn't cut it.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-17.mp4",
+        "video_sha256": "83c1f26912e854e4f4623b3972fcef136b1bf9f48d56d490620fa7f6439dd019"
+      }
     }
   ]
 }

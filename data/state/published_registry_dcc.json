@@ -78,6 +78,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-16.mp4",
         "video_sha256": "8215dc4a154d9763aea44c2e0f03a9f3185cdffa89e62347ca818379efc0726d"
       }
+    },
+    {
+      "published_utc": "2026-07-17T14:42:44Z",
+      "day": "2026-07-17",
+      "content_id": "bgp-2026-07-17-class-spotlight-class-7-c133085b4cc6",
+      "publish_hash": "9bdba7ee950da5bfb3bb6368ec60641e7a9d9204f9d192f96cdfc543f5e87648",
+      "youtube_video_id": "KndXgaLRtO4",
+      "youtube_url": "https://www.youtube.com/watch?v=KndXgaLRtO4",
+      "video_sha256": "53db48577704e1695745aa3eda02933e1bb1b329c207248a620b9fe84e2dd233",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-17.mp4",
+      "fingerprint": {
+        "day": "2026-07-17",
+        "category": "class_spotlight",
+        "angle": "warrior_deed",
+        "content_id": "bgp-2026-07-17-class-spotlight-class-7-c133085b4cc6",
+        "canonical_hash": "c133085b4cc65ef55b4c147ca328c19c8ef88aa5d4e217eb7f8e7aadbda43362",
+        "script_id": "02cf7092fc30a953580dedc0eab8ec38c90408574f7b2929e2df6f580d0cd7f5",
+        "fact_kind": "class",
+        "fact_pk": 7,
+        "fact_name": "Halfling",
+        "hook": "Halflings have the best Luck economy in the game.",
+        "body": "Halflings use Good Fortune once per session, adding their Luck die to any roll, or granting it to a nearby ally, without burning Luck. This mechanic is often misused for high-stakes rolls when it shines in consistent, repeatable actions. With +4 AC against large foes and superior stealth, Halflings excel in avoiding damage and maintaining position.",
+        "cta": "Judges: Remind your Halfling to use their Luck die for stealth checks; it's the consistent edge they keep forgetting.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-17.mp4",
+        "video_sha256": "53db48577704e1695745aa3eda02933e1bb1b329c207248a620b9fe84e2dd233"
+      }
     }
   ]
 }

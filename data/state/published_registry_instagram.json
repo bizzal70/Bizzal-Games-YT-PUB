@@ -267,6 +267,51 @@
       "hook": "Investiture of Flame grants immunity to fire damage and resistance to cold damage for up to 10 minutes.",
       "body": "Investiture of Flame requires concentration, meaning it competes with other concentration spells and can be disrupted by damage. Many players mistakenly use it solely for its 1d10 fire damage, overlooking its potential to shift the action economy by neutralizing fire-based threats. The optimal play involves using it to change the battlefield dynamics, such as negating enemy fire attacks, rather than just adding another damage source.",
       "cta": "DMs: Use Investiture of Flame when fire immunity will nullify an enemy's main attack, not just for the 1d10 damage."
+    },
+    {
+      "published_utc": "2026-07-17T14:43:56Z",
+      "day": "2026-07-17",
+      "system": "dcc",
+      "content_id": "bgp-2026-07-17-class-spotlight-class-7-c133085b4cc6",
+      "instagram_post_id": "18089131757443467",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "53db48577704e1695745aa3eda02933e1bb1b329c207248a620b9fe84e2dd233",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-17.mp4",
+      "fact_name": "Halfling",
+      "category": "class_spotlight",
+      "hook": "Halflings have the best Luck economy in the game.",
+      "body": "Halflings use Good Fortune once per session, adding their Luck die to any roll, or granting it to a nearby ally, without burning Luck. This mechanic is often misused for high-stakes rolls when it shines in consistent, repeatable actions. With +4 AC against large foes and superior stealth, Halflings excel in avoiding damage and maintaining position.",
+      "cta": "Judges: Remind your Halfling to use their Luck die for stealth checks; it's the consistent edge they keep forgetting."
+    },
+    {
+      "published_utc": "2026-07-17T14:49:48Z",
+      "day": "2026-07-17",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-17-rules-ruling-rule-srd-2024-combat-unseen-attackers-and-target-eed5bd9fcdf5",
+      "instagram_post_id": "17946501201247044",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "83c1f26912e854e4f4623b3972fcef136b1bf9f48d56d490620fa7f6439dd019",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-17.mp4",
+      "fact_name": "Unseen Attackers and Targets",
+      "category": "rules_ruling",
+      "hook": "Unseen Attackers and Targets impose Disadvantage on attack rolls against unseen targets.",
+      "body": "When attacking a target you can't see, you always have Disadvantage on the attack roll, regardless of whether you guess the target's location or hear it. This rule often gets misapplied when players assume sound negates the Disadvantage. Correct application involves understanding that Disadvantage applies until the target is visible, ensuring clear rulings and reducing disputes.",
+      "cta": "DMs: Enforce Disadvantage on attacks against unseen targets until visibility is restored; hearing alone doesn't cut it."
+    },
+    {
+      "published_utc": "2026-07-17T14:56:28Z",
+      "day": "2026-07-17",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-07-17-monster-tactic-creature-13-208e185463f6",
+      "instagram_post_id": "17959012068159405",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "8cc5aaea3ac7a3abe18f0450605549430d40d230bfe2b477674a5a27811313c8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-17.mp4",
+      "fact_name": "Assassin",
+      "category": "monster_tactic",
+      "hook": "Yes, Assassin looks harmless - until the table underestimates it and gives it free turns.",
+      "body": "Assassin's Execute talent multiplies damage by three against surprised targets, making initial positioning and awareness critical. The +6 attack bonus and 2d4 poisoned dagger damage become devastating when surprise is achieved. Focusing solely on damage without securing position first often results in costly mistakes. Controlling movement lanes and isolating targets can neutralize the Assassin's advantage.",
+      "cta": "DMs: run it with a wink, then punish lazy positioning once so the lesson lands."
     }
   ]
 }

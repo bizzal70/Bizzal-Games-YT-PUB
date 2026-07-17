@@ -202,5 +202,17 @@
       ],
       "tts_voice_id": "coral"
     }
+  },
+  "2026-07-17": {
+    "monster_tactic": {
+      "angle": "counterplay",
+      "voice": "grim_warden",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "fable"
+    }
   }
 }

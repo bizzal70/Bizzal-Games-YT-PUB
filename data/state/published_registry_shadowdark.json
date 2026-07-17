@@ -389,6 +389,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-15.mp4",
         "video_sha256": "fa805099063279bac3631d4f81cc48d454dd586c1cb5183702f45487044ffd71"
       }
+    },
+    {
+      "published_utc": "2026-07-17T14:54:33Z",
+      "day": "2026-07-17",
+      "content_id": "bgp-2026-07-17-monster-tactic-creature-13-208e185463f6",
+      "publish_hash": "f0946894adebb957e26a87dd3b7a6f2388556b1702ab64a323ec39452de3c206",
+      "youtube_video_id": "967ZX_gNpng",
+      "youtube_url": "https://www.youtube.com/watch?v=967ZX_gNpng",
+      "video_sha256": "8cc5aaea3ac7a3abe18f0450605549430d40d230bfe2b477674a5a27811313c8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-17.mp4",
+      "fingerprint": {
+        "day": "2026-07-17",
+        "category": "monster_tactic",
+        "angle": "counterplay",
+        "content_id": "bgp-2026-07-17-monster-tactic-creature-13-208e185463f6",
+        "canonical_hash": "208e185463f6c2effa6e622dd69a1eb88a8550bd998c1221030995d11f4458ae",
+        "script_id": "04888b1caa5af041da1cc4f03f09da13fc92148b26a845036ffd940dc3817db8",
+        "fact_kind": "creature",
+        "fact_pk": 13,
+        "fact_name": "Assassin",
+        "hook": "Yes, Assassin looks harmless - until the table underestimates it and gives it free turns.",
+        "body": "Assassin's Execute talent multiplies damage by three against surprised targets, making initial positioning and awareness critical. The +6 attack bonus and 2d4 poisoned dagger damage become devastating when surprise is achieved. Focusing solely on damage without securing position first often results in costly mistakes. Controlling movement lanes and isolating targets can neutralize the Assassin's advantage.",
+        "cta": "DMs: run it with a wink, then punish lazy positioning once so the lesson lands.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-17.mp4",
+        "video_sha256": "8cc5aaea3ac7a3abe18f0450605549430d40d230bfe2b477674a5a27811313c8"
+      },
+      "tone_lint_violation": "vague filler phrase: often results in"
     }
   ]
 }

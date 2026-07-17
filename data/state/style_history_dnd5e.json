@@ -198,5 +198,17 @@
       ],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-07-17": {
+    "rules_ruling": {
+      "angle": "edge_case",
+      "voice": "friendly_vet",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "alloy"
+    }
   }
 }
