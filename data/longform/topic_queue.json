@@ -1,1 +1,101 @@
-[]
+[
+  {
+    "system": "dnd5e",
+    "title": "Unpacking Arcana Unleashed Subclasses",
+    "angle": "Dive into the newly confirmed 8 subclasses and what they bring to the game",
+    "rationale": "With the announcement of the 8 new subclasses, players are eager to know how these will impact their games.",
+    "fixture_hint": "class",
+    "search_keyword": "WotC confirms the 8 subclasses coming in Arcana Unleashed",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "4f093c4c323b"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Fiends & Foes: Bringing D&D's Villains to Life",
+    "angle": "Explore the new lore book's most intriguing villains and how to incorporate them into your campaign",
+    "rationale": "The release of a new D&D lore book provides fresh content for DMs looking to enhance their storytelling.",
+    "fixture_hint": "creature",
+    "search_keyword": "Fiends & Foes is a D&D lore book of beasts, villains, and monstrosities from across the planes",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "69708e0b1adf"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Deadfall: Leveling Up Your Game with High-Level Adventures",
+    "angle": "How the Deadfall adventure set offers unique challenges for levels 11-20",
+    "rationale": "Deadfall's upcoming release is significant for players seeking content for higher-level characters.",
+    "fixture_hint": "rule",
+    "search_keyword": "Arcana Unleashed: Deadfall will be Level 11-20 adventure",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "b0359bffe5a7"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's Latest: A Look at Dragonbane",
+    "angle": "Analyze the new Dragonbane mechanics and their impact on gameplay",
+    "rationale": "Recent news highlights new Shadowdark content, sparking interest in how it enhances the system.",
+    "fixture_hint": "rule",
+    "search_keyword": "RPG Print News – Dragonbane, Shadowdark, Mausritter, and More",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "c2c8144d7041"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Navigating the Shadowdark: A New Summoner Class",
+    "angle": "Explore the Summoner's abilities and strategies for effective play",
+    "rationale": "The introduction of a new class in Shadowdark piques interest among players looking for fresh gameplay options.",
+    "fixture_hint": "class",
+    "search_keyword": "Daggerheart is playtesting a Summoner class",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "1b568a2540d0"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark Freebies and Sales: What's Worth Grabbing?",
+    "angle": "Highlight the best deals and freebies available for Shadowdark players",
+    "rationale": "With new sales and bundles, it's timely to discuss which offers provide the most value for Shadowdark enthusiasts.",
+    "fixture_hint": "item",
+    "search_keyword": "Freebies, Sales, and Charity Bundles for July 6, 2026",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "f17b865abe96"
+  },
+  {
+    "system": "dcc",
+    "title": "Exploring Deathbringer: DCC's Newest Crowdfunding Hit",
+    "angle": "What makes the Deathbringer project stand out in the DCC universe?",
+    "rationale": "The success of this crowdfunding project is a hot topic and merits a closer look at its unique contributions.",
+    "fixture_hint": "rule",
+    "search_keyword": "RPG Crowdfunding News – Deathbringer, Sly Flourish, Gary's Appendix, and more",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "ff61dcdd7ecd"
+  },
+  {
+    "system": "dcc",
+    "title": "Gary's Appendix: Unearthing the Treasures Within",
+    "angle": "Discover the hidden gems and must-use content from Gary's Appendix for DCC",
+    "rationale": "This new content release for DCC promises fresh material for GMs looking to enrich their campaigns.",
+    "fixture_hint": "item",
+    "search_keyword": "RPG Crowdfunding News – Deathbringer, Sly Flourish, Gary's Appendix, and more",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "e5d72d5b2ff0"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Clownish Evolution: Send in the Clowns!",
+    "angle": "How clowns are transforming DCC gameplay with unique abilities and mischief",
+    "rationale": "The introduction of clowns in the RPG landscape is generating buzz and curiosity among players.",
+    "fixture_hint": "class",
+    "search_keyword": "RPG Evolution: Send in the Clowns",
+    "created_date": "2026-07-17",
+    "status": "pending",
+    "brief_id": "0a70da0f7243"
+  }
+]
