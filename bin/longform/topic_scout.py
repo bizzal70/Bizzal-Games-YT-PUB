@@ -31,9 +31,11 @@ OPENAI_MODEL = os.environ.get("BIZZAL_OPENAI_MODEL", "gpt-4o")
 SYSTEMS = ["dnd5e", "shadowdark", "dcc"]
 
 RSS_FEEDS = [
-    ("EN World",  "https://www.enworld.org/ewr-porta/index.rss"),
-    ("RPGSite",   "https://rpgsite.net/feed.atom"),
-    ("RPGBOT",    "https://rpgbot.net/blog/feed/"),
+    ("EN World",     "https://www.enworld.org/ewr-porta/index.rss"),
+    ("RPGSite",      "https://rpgsite.net/feed.atom"),
+    ("RPGBOT",       "https://rpgbot.net/feed/"),          # /blog/feed/ returned 0 items — feed moved
+    ("Sly Flourish", "https://slyflourish.com/index.xml"),  # D&D/GM prep — strong topic signal
+    ("Gnome Stew",   "https://gnomestew.com/feed/"),        # system-agnostic GM advice
 ]
 
 YT_SEARCH_QUERIES = [
