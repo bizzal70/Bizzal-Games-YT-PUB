@@ -45,8 +45,18 @@ run_inner() {
 
   # Long-form video parameters
   export BIZZAL_SHORTS_DURATION=600       # 10 min max (render will be actual script length)
-  export BIZZAL_BODY_PAGE_MIN_SEC=20      # longer per-screen dwell for long-form
-  export BIZZAL_TTS_BODY_PAGE_MIN_SEC=20
+
+  # Pagination: the long-form body is ~800 words. The renderer's Shorts default
+  # (5 lines/screen, capped at 4 pages) collapses that into 4 screens of ~40
+  # lines each -- unreadable walls of text. Paginate into many short screens
+  # (<=6 wrapped lines each), each with its own narration + art, instead.
+  export BIZZAL_BODY_MAXLINES=6
+  export BIZZAL_BODY_MAX_PAGES=60
+  # Let the per-screen narration drive dwell time (low floor) so short screens
+  # aren't padded out with dead air. A ~30-word screen narrates in ~12s; the
+  # old 20s floor left ~8s of silence per screen across ~30 screens.
+  export BIZZAL_BODY_PAGE_MIN_SEC=8
+  export BIZZAL_TTS_BODY_PAGE_MIN_SEC=8
   export BIZZAL_END_FADE_SEC=2.0
   export BIZZAL_END_BLACK_PAD_SEC=1.0
   export BIZZAL_CONTENT_TYPE=longform
