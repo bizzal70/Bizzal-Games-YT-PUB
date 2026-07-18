@@ -101,6 +101,15 @@ Write a complete YouTube video script for an 8-10 minute video. Follow these rul
 - Each body section has a clear heading and covers one distinct mechanic/ruling/application
 - No filler, no padding, no generic advice
 - Target ~1,400 words total
+- TITLE RULE: the youtube_title must copy the channel's proven Shorts formula — a
+  specific named subject + a concrete, often counterintuitive ruling or
+  consequence. Declarative and factual. NO colon-hype, NO vague gerund hooks
+  ("Unpacking", "Unlocking"), NO marketing words ("Chaos", "Vintage", "Ultimate",
+  "Secrets"). Anchor it to the single most surprising specific mechanic in THIS
+  video. Good examples: "Barrier Tattoo only works without armor" /
+  "Spell Casting Check consumes the slot on failure" /
+  "Halflings have the best Luck economy in the game". Bad (do NOT do this):
+  "Clownish Evolution: Unpacking Chaos in DCC" / "Gary's Appendix: Unlocking Vintage Spells".
 
 Return ONLY valid JSON with this exact schema (no markdown, no commentary):
 {{
@@ -113,8 +122,8 @@ Return ONLY valid JSON with this exact schema (no markdown, no commentary):
   ],
   "outro": "the outro script text (~75 words, ends with a specific actionable CTA)",
   "word_count": <estimated total word count as integer>,
-  "youtube_title": "optimised YouTube title (max 70 chars, no hashtags)",
-  "youtube_description": "150-200 word YouTube description with timestamps placeholder and 5-8 hashtags at end"
+  "youtube_title": "specific subject + concrete counterintuitive ruling, max 70 chars, no hashtags, no colon-hype (see TITLE RULE)",
+  "youtube_description": "150-200 words. FIRST line = the single most specific, surprising ruling from the video, in the same dry factual voice as the title (no hype). Then 2-3 sentences on the concrete mechanics covered. Plain and specific, no marketing adjectives. End with 5-8 relevant hashtags."
 }}"""
 
 
