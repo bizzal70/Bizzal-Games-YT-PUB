@@ -25,6 +25,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-16.mp4",
         "video_sha256": "246d4f66476b30540099b9b7cbbbbfa2b3e4b449c73dca2ee35b53ae4b49c6db"
       }
+    },
+    {
+      "published_utc": "2026-07-18T21:48:39Z",
+      "day": "2026-07-18",
+      "content_id": "",
+      "publish_hash": "8e601a7fe4e065d268355d551ac0c4efb71fa812a4ee506c460d05d8c24c352c",
+      "youtube_video_id": "Q0KX14YQ2RA",
+      "youtube_url": "https://www.youtube.com/watch?v=Q0KX14YQ2RA",
+      "video_sha256": "153d444f2b744e613a22ebe92bacca19ace7f2f750bde3694554b7dabe82770a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
+      "fingerprint": {
+        "day": "2026-07-18",
+        "category": "",
+        "angle": "Delve into the vintage spells and their modern-day applications.",
+        "content_id": "",
+        "canonical_hash": "",
+        "script_id": "56190f9eb864a0aea25a551e4e3b8ff79e8b3b723bea42ecc8d9862f989ad687",
+        "fact_kind": "",
+        "fact_pk": null,
+        "fact_name": "",
+        "hook": "Gary's Appendix: Unlocking Vintage DCC Spells",
+        "body": "Welcome to Bizzal Games, where today we're diving into the vintage spells from Dungeon Crawl Classics, focusing on their mechanics and modern-day applications. We'll be examining spells like Animal Summoning, Cantrip, and Charm Person, dissecting their specific mechanics and how they can be leveraged in your games today. No fluff here, just pure facts and numbers to enhance your spellcasting repertoire. Let's break down these spells, starting with their spell checks and potential outcomes.\n\nAnimal Summoning Mechanics. Animal Summoning is a first-level wizard spell that relies on a spell check of d20 plus Intelligence modifier and caster level. With a result of 1 to 11, the spell fails, and on a natural 1, roll for corruption. A roll of 12 to 13 lets you summon one animal of 1 HD or less for one round. A roll between 14 and 17 increases your summon to 1d3 animals, each up to 2 HD, lasting one turn. Hitting 18 to 19 allows for a single animal up to 4 HD for an hour. Rolling between 20 and 23 grants 1d4 animals up to 3 HD for two hours. At 24 to 27, summon one animal up to 8 HD or four 2 HD animals for two hours, with the added benefit that they obey normal commands. Roll a 28 to 29, and you can summon up to 8 HD in any combination, and they will perform suicidal acts. A roll of 30 to 31 allows for a legendary beast form, at the judge's discretion. Finally, a roll of 32 or more grants you an ancient beast of myth as a permanent companion. Note, the caster cannot harm summoned animals.\n\nCantrip Versatility. The Cantrip spell offers a wide range of minor magical effects determined by a spell check of d20 plus Intelligence modifier and caster level. With a roll of 1 to 11, the spell fails. A result of 12 to 13 allows for one simple utility effect, such as lighting a candle or producing a sound. A roll of 14 to 17 lets you perform three minor effects simultaneously. If you roll between 18 and 19, you can create effects with a duration of one hour. Achieving a roll of 20 to 23 allows for one ongoing cantrip effect, with concentration required. Rolling 24 to 27 creates a permanent minor magical effect, like inscribing a rune or creating a permanent light source. A roll of 28 or more can replicate certain first-level spells, subject to the judge's discretion. Importantly, no material components are required at any level, and the scope of the cantrip depends entirely on the roll.\n\nCharm Person Outcomes. Charm Person is another first-level wizard spell that pits your spell check of d20 plus Intelligence modifier and caster level against the target's Will save. A roll of 1 to 11 results in failure, with a natural 1 causing the spell to be lost and potential corruption. A successful roll of 12 to 13 charms the target for one hour, with a -2 penalty if the target is not humanoid. Rolling between 14 and 17 extends the charm to 1d6 hours, and the target treats the caster as a close friend. A roll of 18 to 19 charms the target for a full day, during which they will answer questions truthfully. Achieving a roll of 20 to 23 results in a charm that lasts one week. A roll of 24 to 27 extends the charm to one month, and the target will perform dangerous, though not suicidal, tasks. A roll of 28 to 29 creates a permanent charm, which can be broken by a hostile act. A roll of 30 to 31 charms the target into a loyal companion, unbreakable short of death. Finally, a roll of 32 or more allows you to rewrite the target's personality permanently. Monsters suffer a -2 penalty, and outsiders take a -4 penalty.\n\nThanks for joining us on this deep dive into the spells of yesteryear. We've explored the intricacies of Animal Summoning, Cantrip, and Charm Person, showing how these vintage spells can still pack a punch in modern gameplay. To enhance your spellcasting further, delve into your Dungeon Crawl Classics rulebook and experiment with these spells in your next session. Don't forget to subscribe and hit the bell for more mechanics-focused content from Bizzal Games. See you next time!",
+        "cta": "Subscribe for weekly tabletop RPG deep dives.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
+        "video_sha256": "153d444f2b744e613a22ebe92bacca19ace7f2f750bde3694554b7dabe82770a"
+      }
     }
   ]
 }
