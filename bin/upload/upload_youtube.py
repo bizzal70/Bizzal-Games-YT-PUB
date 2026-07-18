@@ -237,6 +237,13 @@ def build_description(atom: dict, day: str) -> str:
         lines.append(f"📺 More rulings: {playlist_url}")
     lines += [
         "",
+        "Follow Bizzal Games:",
+        "▶ YouTube: https://www.youtube.com/@Bizzal_Games",
+        "📸 Instagram: https://www.instagram.com/bizzalgames70",
+        "",
+        "📖 More TTRPG rules & rulings — It's Already Written:",
+        "https://bizzal70.github.io/itsalreadywritten/ · @ItsAlrdyWritten on X",
+        "",
         f"category: {category}",
         f"angle: {angle}",
         "",

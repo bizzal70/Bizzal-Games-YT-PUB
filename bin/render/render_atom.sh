@@ -101,7 +101,15 @@ CTA_TXT="$TMPDIR/cta.txt"
 
 jq -r '.script.hook // ""' "$ATOM" > "$HOOK_TXT"
 jq -r '.script.body // ""' "$ATOM" > "$BODY_TXT"
-jq -r '.script.cta  // ""' "$ATOM" > "$CTA_TXT"
+# BIZZAL_END_CARD_TEXT overrides the end card (and its narration) with a fixed
+# brand/social sign-off -- the Shorts runner sets it so every Short closes on a
+# clean "follow Bizzal Games" tag. The atom's script.cta is left untouched, so
+# script_id / dedup are unaffected. Blank (default) = use the script's own cta.
+if [[ -n "${BIZZAL_END_CARD_TEXT:-}" ]]; then
+  printf '%s\n' "$BIZZAL_END_CARD_TEXT" > "$CTA_TXT"
+else
+  jq -r '.script.cta  // ""' "$ATOM" > "$CTA_TXT"
+fi
 
 # Wrap first, then paginate by line-count so nothing can overflow the frame.
 python3 "$REPO_ROOT/bin/render/wrap_text.py" --in "$HOOK_TXT" --out "$HOOK_TXT" --width 30
