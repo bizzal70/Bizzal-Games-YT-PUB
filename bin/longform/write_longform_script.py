@@ -28,6 +28,15 @@ SYSTEM_LABELS = {
     "dcc":        "Dungeon Crawl Classics RPG",
 }
 
+# Channel identity for the end card + description links. The end card text is
+# ALSO narrated (renderer shares one string per segment), so keep it natural
+# language -- the raw @handles / URLs live in the description where they're
+# clickable and don't get read aloud awkwardly.
+YT_CHANNEL_HANDLE = "@Bizzal_Games"
+YT_CHANNEL_URL    = "https://www.youtube.com/@Bizzal_Games"
+IG_HANDLE         = "@bizzalgames70"
+IG_URL            = "https://www.instagram.com/bizzalgames70"
+
 
 def sha256_text(s: str) -> str:
     return hashlib.sha256(s.encode("utf-8")).hexdigest()
@@ -194,12 +203,23 @@ def main():
         _blocks.append(script["outro"].strip())
     script["hook"] = (script.get("youtube_title") or atom.get("title") or "").strip()
     script["body"] = "\n\n".join(_blocks)
-    script["cta"]  = "Subscribe for weekly tabletop RPG deep dives."
+    # End card (also the spoken outro): natural language so TTS reads it well.
+    script["cta"]  = (
+        "Subscribe for weekly tabletop RPG deep dives. "
+        "Follow Bizzal Games on YouTube and Instagram."
+    )
 
     atom["script"]    = script
     atom["script_id"] = script_id
     atom["youtube_title"]       = script.get("youtube_title", atom.get("title", ""))
-    atom["youtube_description"] = script.get("youtube_description", "")
+    # Description carries the clickable channel + IG links (the @handles live
+    # here, not on the burned end card, so they aren't narrated awkwardly).
+    _desc = (script.get("youtube_description", "") or "").rstrip()
+    _links = (
+        f"\n\nSubscribe on YouTube: {YT_CHANNEL_URL} ({YT_CHANNEL_HANDLE})"
+        f"\nInstagram: {IG_URL} ({IG_HANDLE})"
+    )
+    atom["youtube_description"] = (_desc + _links).strip()
     atom["word_count"]          = script.get("word_count", 0)
     atom["updated_at"] = datetime.now(UTC).isoformat(timespec="seconds").replace("+00:00", "Z")
 

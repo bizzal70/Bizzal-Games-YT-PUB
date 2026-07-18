@@ -57,6 +57,16 @@ run_inner() {
   # old 20s floor left ~8s of silence per screen across ~30 screens.
   export BIZZAL_BODY_PAGE_MIN_SEC=8
   export BIZZAL_TTS_BODY_PAGE_MIN_SEC=8
+
+  # Long-form look: opening title card (hook) + end card (cta) stay on screen,
+  # but the body is voiceover + rotating background art + music only -- NO
+  # burned-in script text (the spoken body is carried by the uploaded .srt CC).
+  export BIZZAL_ENABLE_BODY_TEXT=0
+  # "bg imgs" (plural): give each narrated screen its own Replicate image with a
+  # gentle Ken-Burns drift + crossfades, instead of one static image for 8 min.
+  export BIZZAL_BG_IMAGE_MODE=per_screen
+  # Upload our accurate .srt caption track (needs the force-ssl YT token scope).
+  export BIZZAL_UPLOAD_CAPTIONS=1
   export BIZZAL_END_FADE_SEC=2.0
   export BIZZAL_END_BLACK_PAD_SEC=1.0
   export BIZZAL_CONTENT_TYPE=longform

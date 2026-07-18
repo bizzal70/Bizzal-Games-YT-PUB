@@ -319,6 +319,11 @@ def get_youtube_service(client_secrets: Path, token_file: Path):
     scopes = [
         "https://www.googleapis.com/auth/youtube.upload",
         "https://www.googleapis.com/auth/youtube.readonly",
+        # force-ssl is required by captions().insert to upload our own .srt track.
+        # NOTE: the token materialized from BIZZAL_YT_TOKEN_JSON must have been
+        # granted this scope (re-auth), or the refresh will fail "not all
+        # requested scopes were granted". Deploy this only after that re-auth.
+        "https://www.googleapis.com/auth/youtube.force-ssl",
     ]
     creds = None
 
@@ -422,6 +427,54 @@ def upload_video(
         _, response = request.next_chunk()
 
     return response
+
+
+def upload_captions(youtube, video_id: str, srt_path: Path, language: str = "en") -> None:
+    """Attach an SRT caption track to an already-uploaded video.
+
+    Requires the youtube.force-ssl scope. Callers treat failures as non-fatal:
+    a missing scope or transient error must never fail the video publish.
+    """
+    from googleapiclient.http import MediaFileUpload
+
+    body = {
+        "snippet": {
+            "videoId": video_id,
+            "language": language,
+            "name": "English",
+            "isDraft": False,
+        }
+    }
+    youtube.captions().insert(
+        part="snippet",
+        body=body,
+        media_body=MediaFileUpload(str(srt_path), mimetype="application/octet-stream", resumable=False),
+    ).execute()
+
+
+def maybe_upload_captions(youtube, video_id: str, video_path: Path) -> None:
+    """Best-effort: upload a sibling <video>.srt if present and enabled.
+
+    Off by default so Shorts are unchanged; the long-form runner opts in via
+    BIZZAL_UPLOAD_CAPTIONS=1.
+    """
+    if (os.getenv("BIZZAL_UPLOAD_CAPTIONS") or "0").strip().lower() in {"0", "false", "no", "off"}:
+        return
+    srt_path = video_path.with_suffix(".srt")
+    if not srt_path.is_file():
+        return
+    try:
+        upload_captions(youtube, video_id, srt_path)
+        print(f"[upload_youtube] captions uploaded track={srt_path.name}")
+    except Exception as exc:
+        txt = str(exc).lower()
+        if "insufficient" in txt or "forbidden" in txt or "scope" in txt:
+            eprint(
+                "WARN: caption upload skipped — token lacks youtube.force-ssl scope. "
+                "Re-auth BIZZAL_YT_TOKEN_JSON with force-ssl. Video is unaffected."
+            )
+        else:
+            eprint(f"WARN: caption upload failed (non-fatal): {exc}")
 
 
 def main() -> int:
@@ -557,6 +610,9 @@ def main() -> int:
     )
     save_registry(registry_file, registry)
     print(f"[upload_youtube] registry={registry_file} hash={publish_hash[:16]}")
+
+    # Attach our accurate caption track (best-effort; never fails the publish).
+    maybe_upload_captions(youtube, vid, video_path)
     return 0
 
 
