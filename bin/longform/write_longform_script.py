@@ -36,6 +36,10 @@ YT_CHANNEL_HANDLE = "@Bizzal_Games"
 YT_CHANNEL_URL    = "https://www.youtube.com/@Bizzal_Games"
 IG_HANDLE         = "@bizzalgames70"
 IG_URL            = "https://www.instagram.com/bizzalgames70"
+# Sibling TTRPG project — topically aligned, so cross-promo belongs on gaming
+# videos (crypto/cyber blogs deliberately do NOT go here).
+WRITTEN_BLOG_URL  = "https://bizzal70.github.io/itsalreadywritten/"
+WRITTEN_X_HANDLE  = "@ItsAlrdyWritten"
 
 
 def sha256_text(s: str) -> str:
@@ -227,6 +231,8 @@ def main():
     _links = (
         f"\n\nSubscribe on YouTube: {YT_CHANNEL_URL} ({YT_CHANNEL_HANDLE})"
         f"\nInstagram: {IG_URL} ({IG_HANDLE})"
+        f"\n\nMore TTRPG rules & rulings — It's Already Written:"
+        f"\n{WRITTEN_BLOG_URL} · {WRITTEN_X_HANDLE} on X"
     )
     atom["youtube_description"] = (_desc + _links).strip()
     atom["word_count"]          = script.get("word_count", 0)
