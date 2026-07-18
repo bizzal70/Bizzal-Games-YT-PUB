@@ -167,19 +167,18 @@ def content_profile(atom: dict) -> str:
     return "dnd5e"
 
 
-# Cross-promote to YouTube (Reels are repurposed from the daily YT short) and
-# ask for the follow — the caption previously had neither.
-# Rotated per post rather than one fixed line: an identical closer on every
-# caption stops reading as copy and starts reading as a footer. The mix also
-# asks for saves and comments (engagement has been flat: 0 saves, 0 comments
-# even at 100+ reach) and only occasionally sends traffic to YouTube, so IG
-# keeps a platform-native reason to exist.
+# IG-native engagement asks, rotated per post (an identical closer on every
+# caption reads as a footer, not a call to action). Every line drives an
+# on-platform signal -- follow, save, share, or comment -- because IG rewards
+# in-app engagement and the account's has been flat (0 saves, 0 comments even at
+# 100+ reach). Deliberately NO "watch on YouTube" line: sending the viewer
+# off-platform bleeds the exact signal the Reel needs to get distributed.
 _IG_CTA_POOL = [
     "One ruling a day, no fluff. Follow @bizzalgames70.",
     "Save this for your next session. Daily rulings: @bizzalgames70",
-    "Ran it differently at your table? Comments are open. @bizzalgames70",
+    "Ran it differently at your table? Drop it in the comments. @bizzalgames70",
     "Daily tabletop RPG rulings. Follow @bizzalgames70 for one a day.",
-    "Full breakdown on YouTube: @Bizzal_Games. Daily rulings: @bizzalgames70",
+    "Send this to the rules-lawyer in your group. @bizzalgames70",
     "Bookmark it before your players find the loophole. @bizzalgames70",
 ]
 
