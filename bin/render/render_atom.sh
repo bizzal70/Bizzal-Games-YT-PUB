@@ -61,6 +61,11 @@ BG_IMAGE_MODE="${BIZZAL_BG_IMAGE_MODE:-single}"
 BG_IMAGE_XFADE_SEC="${BIZZAL_BG_IMAGE_XFADE_SEC:-0.40}"
 PAGE_XFADE_SEC="${BIZZAL_PAGE_XFADE_SEC:-0.15}"
 CTA_FINAL_HOLD_SEC="${BIZZAL_CTA_FINAL_HOLD_SEC:-0.30}"
+# Burn the paginated body narration onto the screen? Shorts: yes (sound-off
+# hook retention). Long-form: no -- the runner sets this to 0 so the body is
+# just voiceover + background art, with the spoken text carried by the uploaded
+# caption track. The hook (opening title card) and cta (end card) always draw.
+BODY_TEXT_ENABLED="${BIZZAL_ENABLE_BODY_TEXT:-1}"
 AUDIO_PROFILE="${BIZZAL_AUDIO_PROFILE:-default}"
 BG_MUSIC_TAIL_SEC="${BIZZAL_BG_MUSIC_TAIL_SEC:-3}"
 INTRO_PAD_SEC="${BIZZAL_INTRO_PAD_SEC:-0}"
@@ -486,6 +491,31 @@ PY
     if ffmpeg -y -hide_banner -loglevel error -f concat -safe 0 -i "$CONCAT_LIST" -c:a pcm_s16le "$VOICE_WAV"; then
       PREBUILT_TTS=1
       echo "[render] tts timing mode=per_screen body_min_sec=$TTS_BODY_PAGE_MIN_SEC seg_pad_sec=$TTS_SEGMENT_PAD_SEC durations=${SEG_DURS[*]} screen_secs=${SCREEN_SECS[*]} dur=$DUR" >&2
+
+      # --- Caption track (.srt) ------------------------------------------
+      # Caption to the REAL per-segment audio durations (SEG_DURS): the voice
+      # track is a GAPLESS concat of the segments, so the spoken timeline is
+      # their running sum -- NOT the padded on-screen SCREEN_SECS (which drift).
+      # Segment order matches TTS_SEG_FILES: hook, body1..bodyN, cta.
+      if [[ -f "$REPO_ROOT/bin/render/build_srt.py" ]]; then
+        SRT_MANIFEST="$TTS_SEGDIR/srt_manifest.tsv"
+        : > "$SRT_MANIFEST"
+        SRT_TEXT_FILES=("$HOOK_FILE")
+        for ((si=1; si<=BODY_PAGE_COUNT; si++)); do
+          SRT_TEXT_FILES+=("$PAGEDIR/body${si}.txt")
+        done
+        SRT_TEXT_FILES+=("$CTA_FILE")
+        for ((si=0; si<${#SEG_DURS[@]} && si<${#SRT_TEXT_FILES[@]}; si++)); do
+          printf '%s\t%s\n' "${SEG_DURS[$si]}" "${SRT_TEXT_FILES[$si]}" >> "$SRT_MANIFEST"
+        done
+        SUBS_FILE="${OUT%.*}.srt"
+        if python3 "$REPO_ROOT/bin/render/build_srt.py" --manifest "$SRT_MANIFEST" --out "$SUBS_FILE" --offset "$INTRO_PAD_SEC"; then
+          cp -f "$SUBS_FILE" "${LATEST%.*}.srt" 2>/dev/null || true
+          echo "[render] captions written $SUBS_FILE" >&2
+        else
+          echo "[render] WARN: caption build failed (non-fatal)" >&2
+        fi
+      fi
     fi
   else
     echo "[render] per-screen tts timing failed; using word-based screen timing" >&2
@@ -585,13 +615,15 @@ PAGE_START="$HOOK_END"
 for ((i=1; i<=BODY_PAGE_COUNT; i++)); do
   PAGE_END="${BODY_ENDS[$((i-1))]}"
   PAGE_FILE="$PAGEDIR/body${i}.txt"
-  if (( BODY_PAGE_COUNT > 1 )); then
-    FADE_IN_START="$(float_max 0 "$(float_sub "$PAGE_START" "$PAGE_XFADE_SEC")")"
-    FADE_OUT_START="$(float_sub "$PAGE_END" "$PAGE_XFADE_SEC")"
-    BODY_ALPHA="if(lt(t\,${FADE_IN_START})\,0\,if(lt(t\,${PAGE_START})\,(t-${FADE_IN_START})/${PAGE_XFADE_SEC}\,if(lt(t\,${FADE_OUT_START})\,1\,if(lt(t\,${PAGE_END})\,(${PAGE_END}-t)/${PAGE_XFADE_SEC}\,0))))"
-    VF+="drawtext=${COMMON}:textfile=${PAGE_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:${YPOS}:alpha='${BODY_ALPHA}':enable='between(t,${FADE_IN_START},${PAGE_END})',"
-  else
-    VF+="drawtext=${COMMON}:textfile=${PAGE_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:${YPOS}:enable='between(t,${PAGE_START},${PAGE_END})',"
+  if [[ "$BODY_TEXT_ENABLED" == "1" ]]; then
+    if (( BODY_PAGE_COUNT > 1 )); then
+      FADE_IN_START="$(float_max 0 "$(float_sub "$PAGE_START" "$PAGE_XFADE_SEC")")"
+      FADE_OUT_START="$(float_sub "$PAGE_END" "$PAGE_XFADE_SEC")"
+      BODY_ALPHA="if(lt(t\,${FADE_IN_START})\,0\,if(lt(t\,${PAGE_START})\,(t-${FADE_IN_START})/${PAGE_XFADE_SEC}\,if(lt(t\,${FADE_OUT_START})\,1\,if(lt(t\,${PAGE_END})\,(${PAGE_END}-t)/${PAGE_XFADE_SEC}\,0))))"
+      VF+="drawtext=${COMMON}:textfile=${PAGE_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:${YPOS}:alpha='${BODY_ALPHA}':enable='between(t,${FADE_IN_START},${PAGE_END})',"
+    else
+      VF+="drawtext=${COMMON}:textfile=${PAGE_FILE}:fontsize=${BODY_FONT_SIZE}:${XPOS}:${YPOS}:enable='between(t,${PAGE_START},${PAGE_END})',"
+    fi
   fi
   PAGE_START="$PAGE_END"
 done
