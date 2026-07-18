@@ -1,0 +1,47 @@
+name: LF title check (temp)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Title check
+        env:
+          BIZZAL_OPENAI_API_KEY: ${{ secrets.BIZZAL_OPENAI_API_KEY }}
+          BIZZAL_OPENAI_MODEL: "gpt-4o"
+        run: |
+          python - <<'PY'
+          import sys, json
+          sys.path.insert(0, "bin/core")
+          sys.path.insert(0, "bin/longform")
+          import write_longform_script as w
+
+          # Briefs mirroring the two videos that produced hype titles.
+          briefs = [
+              {"title": "Vintage DCC spells from the appendix", "angle": "obscure appendix N spells worth using",
+               "rationale": "players overlook them", "fixture_hint": "spell"},
+              {"title": "Chaos and corruption mechanics in DCC", "angle": "how corruption/misfire escalate",
+               "rationale": "core to DCC identity", "fixture_hint": "rule"},
+          ]
+          for b in briefs:
+              raw = w.call_openai(w.build_prompt(b, [], "dcc"))
+              clean = raw.strip()
+              if clean.startswith("```"):
+                  clean = "\n".join(clean.split("\n")[1:])
+              if clean.endswith("```"):
+                  clean = "\n".join(clean.split("\n")[:-1])
+              d = json.loads(clean)
+              print("BRIEF:", b["title"])
+              print("  TITLE:", d.get("youtube_title"))
+              print("  DESC1:", (d.get("youtube_description","").splitlines() or [""])[0][:140])
+              print()
+          PY
