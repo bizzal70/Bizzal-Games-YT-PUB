@@ -312,6 +312,51 @@
       "hook": "Yes, Assassin looks harmless - until the table underestimates it and gives it free turns.",
       "body": "Assassin's Execute talent multiplies damage by three against surprised targets, making initial positioning and awareness critical. The +6 attack bonus and 2d4 poisoned dagger damage become devastating when surprise is achieved. Focusing solely on damage without securing position first often results in costly mistakes. Controlling movement lanes and isolating targets can neutralize the Assassin's advantage.",
       "cta": "DMs: run it with a wink, then punish lazy positioning once so the lesson lands."
+    },
+    {
+      "published_utc": "2026-07-18T14:35:54Z",
+      "day": "2026-07-18",
+      "system": "dcc",
+      "content_id": "bgp-2026-07-18-rules-myth-rule-19-0aeab09bf3d1",
+      "instagram_post_id": "18122192047753219",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "accd5f3a8b9c970fbd5aa57fe0bce63d3cba13eb2c7a664cc505339efffdb11e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-18.mp4",
+      "fact_name": "Two-Weapon Fighting",
+      "category": "rules_myth",
+      "hook": "Two-Weapon Fighting uses smaller dice along the dice chain with both weapons.",
+      "body": "Two-Weapon Fighting requires high Agility to mitigate penalties. Characters with low Agility suffer from reduced effectiveness due to the smaller dice used for both attacks. Many players overlook that dual-wielding without sufficient Agility is a losing proposition. Optimal play involves ensuring high Agility to minimize penalties and maximize attack potential.",
+      "cta": "Judges: Remind them that without 13+ Agility, their two-weapon dreams are just a dice chain downgrade."
+    },
+    {
+      "published_utc": "2026-07-18T14:40:40Z",
+      "day": "2026-07-18",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-18-item-spotlight-item-tashas-cauldron-barrier-tattoo-79a9bccbc8c8",
+      "instagram_post_id": "18102027668184158",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d788030bc14799ec98e76f3286695259e2b2835dd8875e696b2bec5cd4faec8b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-18.mp4",
+      "fact_name": "Barrier Tattoo",
+      "category": "item_spotlight",
+      "hook": "Barrier Tattoo only works without armor.",
+      "body": "Barrier Tattoo requires attunement and provides an AC bonus based on rarity: +1 for uncommon, +2 for rare, +3 for very rare. Wearing armor negates its effect, as it only functions without armor. Its application demands an anchor point and space, making it impractical in cramped spaces or mid-combat.",
+      "cta": "DMs: Remind players that Barrier Tattoo's AC bonus is void if they wear armor; plan attunement logistics before combat."
+    },
+    {
+      "published_utc": "2026-07-18T14:45:52Z",
+      "day": "2026-07-18",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-07-18-rules-ruling-rule-5-71d671e5746b",
+      "instagram_post_id": "18095977319078022",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "ed9c213ec65d4b91ee335e3b57f847750f5044a9f19b5bb59e0a598b3d632846",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-18.mp4",
+      "fact_name": "Spell Casting Check",
+      "category": "rules_ruling",
+      "hook": "Spell Casting Check consumes the slot on failure.",
+      "body": "Roll d20 plus the relevant stat modifier against DC 10 plus the spell tier to cast a spell. Failure means the spell doesn't activate, but the slot is still consumed. A critical failure for Wizards triggers a mishap. Rushed rolls without confirming the DC lead to unnecessary slot loss. Confirming the DC before rolling prevents this common error.",
+      "cta": "GMs: Ensure players calculate DC as 10 plus spell tier before rolling to prevent unnecessary spell slot loss."
     }
   ]
 }

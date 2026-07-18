@@ -675,6 +675,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-17.mp4",
         "video_sha256": "83c1f26912e854e4f4623b3972fcef136b1bf9f48d56d490620fa7f6439dd019"
       }
+    },
+    {
+      "published_utc": "2026-07-18T14:39:58Z",
+      "day": "2026-07-18",
+      "content_id": "bgp-2026-07-18-item-spotlight-item-tashas-cauldron-barrier-tattoo-79a9bccbc8c8",
+      "publish_hash": "9b42cf2431e518f492604c3d4639547ac8039856f3e83aac7c2997300b45f5de",
+      "youtube_video_id": "9vsHvX0AE4A",
+      "youtube_url": "https://www.youtube.com/watch?v=9vsHvX0AE4A",
+      "video_sha256": "d788030bc14799ec98e76f3286695259e2b2835dd8875e696b2bec5cd4faec8b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-18.mp4",
+      "fingerprint": {
+        "day": "2026-07-18",
+        "category": "item_spotlight",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-07-18-item-spotlight-item-tashas-cauldron-barrier-tattoo-79a9bccbc8c8",
+        "canonical_hash": "79a9bccbc8c8b91be947dea084081864360231f4503b9142802d6eb3407e38b0",
+        "script_id": "e4374fbb97adddece498429f3ad4e2856e2f46258076752b4400fa3ade27464b",
+        "fact_kind": "item",
+        "fact_pk": "tashas-cauldron_barrier-tattoo",
+        "fact_name": "Barrier Tattoo",
+        "hook": "Barrier Tattoo only works without armor.",
+        "body": "Barrier Tattoo requires attunement and provides an AC bonus based on rarity: +1 for uncommon, +2 for rare, +3 for very rare. Wearing armor negates its effect, as it only functions without armor. Its application demands an anchor point and space, making it impractical in cramped spaces or mid-combat.",
+        "cta": "DMs: Remind players that Barrier Tattoo's AC bonus is void if they wear armor; plan attunement logistics before combat.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-18.mp4",
+        "video_sha256": "d788030bc14799ec98e76f3286695259e2b2835dd8875e696b2bec5cd4faec8b"
+      }
     }
   ]
 }

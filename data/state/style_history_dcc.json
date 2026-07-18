@@ -130,5 +130,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-07-18": {
+    "rules_myth": {
+      "angle": "judge_callout",
+      "voice": "grim_referee",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

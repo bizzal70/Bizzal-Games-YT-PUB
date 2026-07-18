@@ -104,6 +104,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-17.mp4",
         "video_sha256": "53db48577704e1695745aa3eda02933e1bb1b329c207248a620b9fe84e2dd233"
       }
+    },
+    {
+      "published_utc": "2026-07-18T14:34:56Z",
+      "day": "2026-07-18",
+      "content_id": "bgp-2026-07-18-rules-myth-rule-19-0aeab09bf3d1",
+      "publish_hash": "f0c96e68153e5156ee7856b659b514f52a41f52976decf4a67131a03fefe61f4",
+      "youtube_video_id": "ag5R075YRb8",
+      "youtube_url": "https://www.youtube.com/watch?v=ag5R075YRb8",
+      "video_sha256": "accd5f3a8b9c970fbd5aa57fe0bce63d3cba13eb2c7a664cc505339efffdb11e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-18.mp4",
+      "fingerprint": {
+        "day": "2026-07-18",
+        "category": "rules_myth",
+        "angle": "judge_callout",
+        "content_id": "bgp-2026-07-18-rules-myth-rule-19-0aeab09bf3d1",
+        "canonical_hash": "0aeab09bf3d19ff6d9f161054ae988c5e90afde16e1ef6a9ffdf189574f8c777",
+        "script_id": "de6b6c3e1e118bcbffe00395ac73ed5897e9c690a63b6be42885390d79c9d1ae",
+        "fact_kind": "rule",
+        "fact_pk": 19,
+        "fact_name": "Two-Weapon Fighting",
+        "hook": "Two-Weapon Fighting uses smaller dice along the dice chain with both weapons.",
+        "body": "Two-Weapon Fighting requires high Agility to mitigate penalties. Characters with low Agility suffer from reduced effectiveness due to the smaller dice used for both attacks. Many players overlook that dual-wielding without sufficient Agility is a losing proposition. Optimal play involves ensuring high Agility to minimize penalties and maximize attack potential.",
+        "cta": "Judges: Remind them that without 13+ Agility, their two-weapon dreams are just a dice chain downgrade.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-18.mp4",
+        "video_sha256": "accd5f3a8b9c970fbd5aa57fe0bce63d3cba13eb2c7a664cc505339efffdb11e"
+      }
     }
   ]
 }

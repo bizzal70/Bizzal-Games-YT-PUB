@@ -214,5 +214,17 @@
       ],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-07-18": {
+    "rules_ruling": {
+      "angle": "common_table_mistake",
+      "voice": "torchbearer_ref",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

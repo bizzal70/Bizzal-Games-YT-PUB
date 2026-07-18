@@ -416,6 +416,32 @@
         "video_sha256": "8cc5aaea3ac7a3abe18f0450605549430d40d230bfe2b477674a5a27811313c8"
       },
       "tone_lint_violation": "vague filler phrase: often results in"
+    },
+    {
+      "published_utc": "2026-07-18T14:44:12Z",
+      "day": "2026-07-18",
+      "content_id": "bgp-2026-07-18-rules-ruling-rule-5-71d671e5746b",
+      "publish_hash": "4d0150f815c0647cfdccf1a665157eea81a3dd09c6f67562d4446d72a8f0a3f2",
+      "youtube_video_id": "rKFb1kxrUZg",
+      "youtube_url": "https://www.youtube.com/watch?v=rKFb1kxrUZg",
+      "video_sha256": "ed9c213ec65d4b91ee335e3b57f847750f5044a9f19b5bb59e0a598b3d632846",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-18.mp4",
+      "fingerprint": {
+        "day": "2026-07-18",
+        "category": "rules_ruling",
+        "angle": "common_table_mistake",
+        "content_id": "bgp-2026-07-18-rules-ruling-rule-5-71d671e5746b",
+        "canonical_hash": "71d671e5746b387c094a8b7a805af5dc16ec4f36d9810a96bc9bfc6f603c2136",
+        "script_id": "7a07a764e64907b8d56c4ac31967c12634b10373d3b736f2208caa886739bafd",
+        "fact_kind": "rule",
+        "fact_pk": 5,
+        "fact_name": "Spell Casting Check",
+        "hook": "Spell Casting Check consumes the slot on failure.",
+        "body": "Roll d20 plus the relevant stat modifier against DC 10 plus the spell tier to cast a spell. Failure means the spell doesn't activate, but the slot is still consumed. A critical failure for Wizards triggers a mishap. Rushed rolls without confirming the DC lead to unnecessary slot loss. Confirming the DC before rolling prevents this common error.",
+        "cta": "GMs: Ensure players calculate DC as 10 plus spell tier before rolling to prevent unnecessary spell slot loss.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-18.mp4",
+        "video_sha256": "ed9c213ec65d4b91ee335e3b57f847750f5044a9f19b5bb59e0a598b3d632846"
+      }
     }
   ]
 }
