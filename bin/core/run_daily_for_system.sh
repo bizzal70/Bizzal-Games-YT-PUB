@@ -50,6 +50,12 @@ run_inner() {
 
   export BIZZAL_DAILY_LOG_DIR="$LOG_DIR"
 
+  # B1: every Short closes on a clean brand/social sign-off (rendered end card +
+  # its narration). The atom's script.cta is left intact, so script_id / dedup
+  # are unaffected. Natural language so TTS reads it well; the clickable @handles
+  # live in the YouTube description (build_description).
+  export BIZZAL_END_CARD_TEXT="Follow Bizzal Games on YouTube and Instagram for a daily ruling."
+
   local day
   day="$(date +%F)"
 
