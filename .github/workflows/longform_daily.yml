@@ -54,9 +54,7 @@ jobs:
           # Catchup guard
           if [ "${hour}" -gt "10" ] 2>/dev/null; then
             ran_today=false
-            for reg in data/state/published_registry_longform_dnd5e.json \
-                       data/state/published_registry_longform_shadowdark.json \
-                       data/state/published_registry_longform_dcc.json; do
+            for reg in data/state/published_registry_longform_*.json; do
               if [ -f "${reg}" ] && grep -q "\"day\": \"${today}\"" "${reg}"; then
                 ran_today=true; break
               fi
@@ -133,13 +131,12 @@ jobs:
           INPUT="${{ github.event.inputs.system || 'all' }}"
           DOW="$(TZ=America/Denver date +%u)"
           if [ "$INPUT" = "all" ]; then
-            # Rotate: Mon=dnd5e, Wed=shadowdark, Fri=dcc
-            case "$DOW" in
-              1) echo "systems=dnd5e"     >> "$GITHUB_OUTPUT" ;;
-              3) echo "systems=shadowdark" >> "$GITHUB_OUTPUT" ;;
-              5) echo "systems=dcc"       >> "$GITHUB_OUTPUT" ;;
-              *) echo "systems=dnd5e"     >> "$GITHUB_OUTPUT" ;;
-            esac
+            # Rotate through every ACTIVE system in the rpg_systems DB (so a new
+            # system is included automatically). Ordinal-date rotation: each
+            # long-form day picks the next system, stable for the date.
+            SYS="$(python3 bin/longform/pick_longform_system.py 2>/dev/null || echo dnd5e)"
+            [ -z "$SYS" ] && SYS=dnd5e
+            echo "systems=$SYS" >> "$GITHUB_OUTPUT"
           else
             echo "systems=$INPUT" >> "$GITHUB_OUTPUT"
           fi
