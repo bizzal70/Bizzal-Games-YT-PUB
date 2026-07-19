@@ -192,8 +192,19 @@ jobs:
           git add data/state data/longform/topic_queue.json || true
           if git diff --cached --quiet; then
             echo "no state changes to commit"
-          else
-            git commit -m "chore(state): update longform registry [skip ci]"
-            git pull --rebase --autostash origin HEAD
-            git push
+            exit 0
           fi
+          git commit -m "chore(state): update longform registry [skip ci]"
+          BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+          # Retry to survive a concurrent push (Shorts/blog/another system
+          # committing state at the same time) -- the single-shot version lost
+          # that race and failed the run even though the video had published.
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase --autostash origin "$BRANCH" && git push origin "HEAD:$BRANCH"; then
+              echo "state committed (attempt $attempt)"
+              exit 0
+            fi
+            echo "commit-back attempt $attempt lost a race; retrying..."
+            sleep $((attempt * 4))
+          done
+          echo "::warning::commit-back failed after 5 attempts; state not persisted this run"
