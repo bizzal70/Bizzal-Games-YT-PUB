@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "published_utc": "2026-07-19T03:10:46Z",
+      "day": "2026-07-18-dcc-clip2",
+      "content_id": "clip:7633c2e629f822cc",
+      "publish_hash": "85bc2b0ebda332bc96be56f1f9c6f9f2a413e41d4a19f8d8f61a7e509cd21c21",
+      "youtube_video_id": "bOHPLFcg3-4",
+      "youtube_url": "https://www.youtube.com/watch?v=bOHPLFcg3-4",
+      "video_sha256": "8dc474ef0bda05fdfc367180816a15c0d9861584203630f4526fcae34c6507a6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-18-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-07-18-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:7633c2e629f822cc",
+        "canonical_hash": "",
+        "script_id": "7633c2e629f822cc4a923a0d40ff6af385857ec347600f0665aa7e2a36d5af4e",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Black Pudding splits when hit by edged weapons",
+        "hook": "Black Pudding splits when hit by edged weapons",
+        "body": "In DCC, hitting a Black Pudding with edged weapons causes it to split into two creatures, each with half the original hit dice. This mechanic can turn a straightforward encounter into a chaotic swarm.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-18-dcc-clip2.mp4",
+        "video_sha256": "8dc474ef0bda05fdfc367180816a15c0d9861584203630f4526fcae34c6507a6"
+      }
+    },
+    {
+      "published_utc": "2026-07-19T03:12:33Z",
+      "day": "2026-07-18-dcc-clip3",
+      "content_id": "clip:ddf050c14d2071cf",
+      "publish_hash": "b0b35af21f457e2b67b5dd7570049899e0b18c28269dd0255eb46aab9003ff44",
+      "youtube_video_id": "-NuyB4CZu4g",
+      "youtube_url": "https://www.youtube.com/watch?v=-NuyB4CZu4g",
+      "video_sha256": "1f0918842c015c54a03e2d2def9796bb50aa3ddb7c205ad16f604771e0011a1a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-18-dcc-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-07-18-dcc-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:ddf050c14d2071cf",
+        "canonical_hash": "",
+        "script_id": "ddf050c14d2071cf951cce1c21fcbc84b0d707b161136515633c839adb8fbb79",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Cockatrice's bite petrifies in the same round",
+        "hook": "Cockatrice's bite petrifies in the same round",
+        "body": "The Cockatrice in DCC turns victims to stone in the same round as its bite if they fail a DC 12 Fortitude save. The only cure is its blood, applied within 24 hours, adding urgency to encounters.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-18-dcc-clip3.mp4",
+        "video_sha256": "1f0918842c015c54a03e2d2def9796bb50aa3ddb7c205ad16f604771e0011a1a"
+      }
+    }
+  ]
+}
