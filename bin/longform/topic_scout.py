@@ -28,7 +28,35 @@ OPENAI_KEY  = os.environ.get("BIZZAL_OPENAI_API_KEY", "")
 YT_API_KEY  = os.environ.get("BIZZAL_YT_DATA_API_KEY", "")   # optional
 OPENAI_MODEL = os.environ.get("BIZZAL_OPENAI_MODEL", "gpt-4o")
 
-SYSTEMS = ["dnd5e", "shadowdark", "dcc"]
+_FALLBACK_LABELS = {
+    "dnd5e":      "D&D 5e (2024 rules)",
+    "shadowdark": "Shadowdark RPG",
+    "dcc":        "Dungeon Crawl Classics RPG",
+}
+
+
+def _load_systems():
+    """Active systems + display labels from the rpg_systems DB, so a new system
+    is picked up automatically (add the DB row + SRD files, no code change).
+    Falls back to the historical three if the DB is unreachable."""
+    try:
+        ids = system_config.list_active_system_ids()
+        if not ids:
+            raise ValueError("no active systems returned")
+        labels = {}
+        for sid in ids:
+            try:
+                labels[sid] = (system_config.get_system(sid).get("display_name")
+                               or _FALLBACK_LABELS.get(sid, sid))
+            except Exception:
+                labels[sid] = _FALLBACK_LABELS.get(sid, sid)
+        return ids, labels
+    except Exception as e:  # DB down / not configured -> historical default
+        print(f"[topic_scout] DB systems lookup failed ({e}); using fallback")
+        return list(_FALLBACK_LABELS.keys()), dict(_FALLBACK_LABELS)
+
+
+SYSTEMS, SYSTEM_LABELS = _load_systems()
 
 RSS_FEEDS = [
     ("EN World",     "https://www.enworld.org/ewr-porta/index.rss"),
@@ -46,11 +74,6 @@ YT_SEARCH_QUERIES = [
     "TTRPG rules explained",
 ]
 
-SYSTEM_LABELS = {
-    "dnd5e":     "D&D 5e (2024 rules)",
-    "shadowdark": "Shadowdark RPG",
-    "dcc":       "Dungeon Crawl Classics RPG",
-}
 
 
 def atomic_write_json(path, obj):
