@@ -1,0 +1,46 @@
+name: db systems check (temp)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      BIZZAL_DB_URL: ${{ secrets.BIZZAL_DB_URL }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Check DB-driven system resolution
+        run: |
+          echo "== pick_longform_system.py =="
+          python bin/longform/pick_longform_system.py
+          echo "== active systems + display names from rpg_systems =="
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, "bin/core")
+          import system_config
+          ids = system_config.list_active_system_ids()
+          print("active_system_ids:", ids)
+          for i in ids:
+              try:
+                  print(f"  {i}: {system_config.get_system(i).get('display_name')}")
+              except Exception as e:
+                  print(f"  {i}: <error {e}>")
+          # confirm topic_scout would use the DB list (not the fallback)
+          sys.path.insert(0, "bin/longform")
+          import topic_scout
+          print("topic_scout.SYSTEMS:", topic_scout.SYSTEMS)
+          print("DB_DRIVEN_OK" if topic_scout.SYSTEMS == ids else "USING_FALLBACK")
+          PY
