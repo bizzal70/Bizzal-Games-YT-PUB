@@ -500,7 +500,24 @@ def main() -> int:
 
         out_url, wait_err = wait_for_prediction(token, pred, timeout_sec)
         if wait_err:
-            print(f"[bgimg] ERROR: {wait_err}", file=sys.stderr)
+            # A prediction that fails MID-EXECUTION (e.g. Replicate E9828
+            # "Director: unexpected error handling prediction") is transient --
+            # retry with a fresh prediction on the next candidate attempt rather
+            # than giving up, which would trip the render quality gate and skip
+            # the whole upload. Previously this returned immediately (0 retries).
+            print(
+                f"[bgimg] WARN: prediction failed ({wait_err}); "
+                f"retry {candidate_idx + 1}/{candidate_attempts}",
+                file=sys.stderr,
+            )
+            if candidate_idx < candidate_attempts - 1:
+                time.sleep(3 + candidate_idx * 2)
+                continue
+            print(
+                f"[bgimg] ERROR: all {candidate_attempts} prediction attempts failed; "
+                f"last={wait_err}",
+                file=sys.stderr,
+            )
             return 6
 
         try:
