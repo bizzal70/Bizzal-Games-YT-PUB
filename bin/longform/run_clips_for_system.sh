@@ -21,21 +21,19 @@ mkdir -p "$LOG_DIR"
 RUN_TS="$(date -u +%Y%m%dT%H%M%SZ)"
 LOG_FILE="${LOG_DIR%/}/clips_${RUN_TS}.log"
 
-# Resolve the source long-form video id from its registry (latest entry for DAY)
-# so each clip's description can link back to the full video.
-LF_REG="$REPO_ROOT/data/state/published_registry_longform_${SYSTEM_ID}.json"
-VIDEO_ID=""
-if [[ -f "$LF_REG" ]]; then
-  VIDEO_ID="$(python3 - "$LF_REG" "$DAY" <<'PY'
-import json, sys
-try:
-    items = json.load(open(sys.argv[1])).get("items", [])
-    m = [i for i in items if i.get("day") == sys.argv[2] and i.get("youtube_video_id")]
-    print(m[-1]["youtube_video_id"] if m else "")
-except Exception:
-    print("")
-PY
-)"
+# The source long-form video id comes from the per-run marker the long-form
+# writes ONLY when it actually published this run. This is the gate: if the
+# long-form was skipped (quality gate / dry run) or failed to publish, there is
+# no marker -> we make NO clips (rather than funneling to an unrelated video).
+# BIZZAL_CLIPS_SOURCE_VIDEO_ID overrides for manual/test invocation.
+VIDEO_ID="${BIZZAL_CLIPS_SOURCE_VIDEO_ID:-}"
+MARKER="$REPO_ROOT/data/renders_longform_${SYSTEM_ID}/by_day/${DAY}.videoid"
+if [[ -z "$VIDEO_ID" && -f "$MARKER" ]]; then
+  VIDEO_ID="$(tr -d '[:space:]' < "$MARKER")"
+fi
+if [[ -z "$VIDEO_ID" ]]; then
+  echo "[run_clips:$SYSTEM_ID] no long-form published this run (no marker at $MARKER); skipping clips"
+  exit 0
 fi
 
 run_inner() {
