@@ -222,5 +222,15 @@
       ],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-07-19": {
+    "encounter_seed": {
+      "angle": "three_beats",
+      "voice": "friendly_vet",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "alloy"
+    }
   }
 }

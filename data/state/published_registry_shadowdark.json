@@ -442,6 +442,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-18.mp4",
         "video_sha256": "ed9c213ec65d4b91ee335e3b57f847750f5044a9f19b5bb59e0a598b3d632846"
       }
+    },
+    {
+      "published_utc": "2026-07-19T15:08:46Z",
+      "day": "2026-07-19",
+      "content_id": "bgp-2026-07-19-item-spotlight-item-43-60c91403933f",
+      "publish_hash": "caa8c3e95956560bd1b32ee418f7c414d30f1846cc7b406080a18f77e2e8b22d",
+      "youtube_video_id": "PNHt-6gkAxo",
+      "youtube_url": "https://www.youtube.com/watch?v=PNHt-6gkAxo",
+      "video_sha256": "46e30b113d8809c952000c2212f3cac85e020d312e0ba72f370c8caec980f4f1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-19.mp4",
+      "fingerprint": {
+        "day": "2026-07-19",
+        "category": "item_spotlight",
+        "angle": "drawback_watchout",
+        "content_id": "bgp-2026-07-19-item-spotlight-item-43-60c91403933f",
+        "canonical_hash": "60c91403933ff71ac56f4a1362ff8c16f91e255adf686575e931910c780e84ab",
+        "script_id": "1a909786d19c65042255562f3e423be89b1522144d0f3c7142d2f7ae25c0cf1f",
+        "fact_kind": "item",
+        "fact_pk": 43,
+        "fact_name": "Mirror Of Mischief",
+        "hook": "The Mirror Of Mischief creates an evil duplicate the first time a humanoid looks into it.",
+        "body": "The duplicate is an exact copy, excluding magical gear, which appears identical but functions as mundane. Many overlook that the duplicate can step from the mirror and act independently, creating a potential adversary with all your abilities. Avoid using the mirror in vulnerable situations or without a clear plan to deal with the duplicate.",
+        "cta": "GMs: Ensure players have a plan for the evil duplicate before anyone looks into the Mirror Of Mischief.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-19.mp4",
+        "video_sha256": "46e30b113d8809c952000c2212f3cac85e020d312e0ba72f370c8caec980f4f1"
+      }
     }
   ]
 }

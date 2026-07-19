@@ -130,6 +130,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-18.mp4",
         "video_sha256": "accd5f3a8b9c970fbd5aa57fe0bce63d3cba13eb2c7a664cc505339efffdb11e"
       }
+    },
+    {
+      "published_utc": "2026-07-19T14:40:10Z",
+      "day": "2026-07-19",
+      "content_id": "bgp-2026-07-19-monster-tactic-creature-141-af98c6537c89",
+      "publish_hash": "2bd51aa6eacdbf2be8c242538f1b0c2bd9800554c5d8742075eac28a934a6008",
+      "youtube_video_id": "sQXVIIbWbng",
+      "youtube_url": "https://www.youtube.com/watch?v=sQXVIIbWbng",
+      "video_sha256": "6c3961aacfb9ccc46c91079b0160d6b2c9ae6a4440c36f9ab790a54faacb3a63",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-19.mp4",
+      "fingerprint": {
+        "day": "2026-07-19",
+        "category": "monster_tactic",
+        "angle": "dungeon_level_fit",
+        "content_id": "bgp-2026-07-19-monster-tactic-creature-141-af98c6537c89",
+        "canonical_hash": "af98c6537c893a742c556e44554751ac22e84d4f96728284a3714f266f12f916",
+        "script_id": "108c4ff3be2c5d5af2e6748375b8b374bfd14614fe5ea9e0787669f2abadd517",
+        "fact_kind": "creature",
+        "fact_pk": 141,
+        "fact_name": "Hellseeker Cockatrice",
+        "hook": "Low-threat on paper, high-chaos at the table: Hellseeker Cockatrice.",
+        "body": "With 3d8 hit dice and an armor class of 14, the Hellseeker Cockatrice is sturdy for its level. Its peck attack not only deals 1d3 damage but also forces a DC 13 Will save against petrification, which many players underestimate. The tail attack adds 1d3 damage with a blood loss effect requiring a DC 12 Fort save, creating ongoing damage pressure. Position it to exploit its 30' flying movement, compelling the table to manage both petrification and sustained damage threats.",
+        "cta": "DMs: run it with a wink, then punish lazy positioning once so the lesson lands.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-19.mp4",
+        "video_sha256": "6c3961aacfb9ccc46c91079b0160d6b2c9ae6a4440c36f9ab790a54faacb3a63"
+      }
     }
   ]
 }

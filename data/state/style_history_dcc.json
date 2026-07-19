@@ -142,5 +142,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-07-19": {
+    "monster_tactic": {
+      "angle": "dungeon_level_fit",
+      "voice": "survival_coach",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

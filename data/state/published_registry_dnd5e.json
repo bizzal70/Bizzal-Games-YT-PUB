@@ -701,6 +701,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-18.mp4",
         "video_sha256": "d788030bc14799ec98e76f3286695259e2b2835dd8875e696b2bec5cd4faec8b"
       }
+    },
+    {
+      "published_utc": "2026-07-19T14:52:54Z",
+      "day": "2026-07-19",
+      "content_id": "bgp-2026-07-19-encounter-seed-creature-monsters-multiverse-ogre-chain-brute-d9f719e4da27",
+      "publish_hash": "b3948d17d9591c35ec6d3f56d7d93c1ddbfded38734e14e9a3b24c9fdf397679",
+      "youtube_video_id": "DkMFXh2yoj8",
+      "youtube_url": "https://www.youtube.com/watch?v=DkMFXh2yoj8",
+      "video_sha256": "ba808a9a1a6c5eca19df96bd8d13b00f6d684d38fcee7efd2bc826e8738ae78d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-19.mp4",
+      "fingerprint": {
+        "day": "2026-07-19",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-07-19-encounter-seed-creature-monsters-multiverse-ogre-chain-brute-d9f719e4da27",
+        "canonical_hash": "d9f719e4da27f50d0f125274aa8fcf4494053577f7223b1faa8685e72d6b87d8",
+        "script_id": "bd3b4fa1444da0656ebbd0cacd613f2ea1e606e8d3f52758b502af6e2feb65e6",
+        "fact_kind": "creature",
+        "fact_pk": "monsters-multiverse_ogre-chain-brute",
+        "fact_name": "Ogre Chain Brute",
+        "hook": "Use Ogre Chain Brute as 'comic relief' that quietly pressures the party's decisions.",
+        "body": "With an AC of 11 and 119 hit points, the Ogre Chain Brute can absorb significant damage while closing the distance quickly. Its speed often catches players off guard, leading to poor positioning. Underestimating its reach and speed allows it to engage with multiple targets. Effective play involves using terrain or spells to control its movement and limit its impact on the battlefield.",
+        "cta": "DMs: Use difficult terrain or spells like Entangle to slow its 40-foot movement and keep it from reaching your squishies.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-19.mp4",
+        "video_sha256": "ba808a9a1a6c5eca19df96bd8d13b00f6d684d38fcee7efd2bc826e8738ae78d"
+      }
     }
   ]
 }
