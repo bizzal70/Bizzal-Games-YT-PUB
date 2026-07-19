@@ -103,6 +103,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
         "video_sha256": "0bc74b10fd45e38b888537066b3341962e0d3815a6126764d8ac0467e27d93fa"
       }
+    },
+    {
+      "published_utc": "2026-07-19T03:32:40Z",
+      "day": "2026-07-18",
+      "content_id": "",
+      "publish_hash": "2aedf67170e851b92d89673b6b89085a07b2243452497290b1ae003b52ab739f",
+      "youtube_video_id": "LiVi7EacWl4",
+      "youtube_url": "https://www.youtube.com/watch?v=LiVi7EacWl4",
+      "video_sha256": "4625c451295261f3d4fc34d62e1c1d25a313cb11da040aecfb5214e970b1a27a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
+      "fingerprint": {
+        "day": "2026-07-18",
+        "category": "",
+        "angle": "Exploring the thematic and mechanical elements of the clown-centric content in DCC.",
+        "content_id": "",
+        "canonical_hash": "",
+        "script_id": "fb1a558f3bd7b8df647ad18ae1e62c5a7ea70ca44f1d18bd6f599e34427589ac",
+        "fact_kind": "",
+        "fact_pk": null,
+        "fact_name": "",
+        "hook": "Clown Class: Pratfall Points for Dice Roll Re-Rolls",
+        "body": "Today, we're diving into an unexpected twist in Dungeon Crawl Classics: clown-themed content. In this video, we'll explore how these comedic elements are incorporated into the game mechanics, offering unique class features, spells, and abilities. We'll break down the specifics of this thematic addition, focusing on the mechanics that make clowns a viable and intriguing choice for your next DCC campaign.\n\nClown Class Features. The Clown class introduces a unique mechanic: the ability to use 'Pratfall Points.' These points are earned through successful comedic actions, like slipping on a banana peel, and can be spent to influence dice rolls. For example, a Clown can spend 2 Pratfall Points to re-roll a failed attack. Clowns have a hit dice of 1d6, smaller than a Warrior but larger than a Wizard, reflecting their role as a versatile support class. Their action dice starts at 1d20 and progresses to 1d20+1d12 at higher levels. This class can wear light armor and use simple weapons, emphasizing their agility and improvisational skills.\n\nSlapstick Spellcasting. Clowns have access to a unique set of spells known as 'Slapstick Spells.' These spells require a successful performance check, using 1d20 plus Charisma modifier, instead of the traditional spell check. A natural 1 results in a 'Joke Backfire,' causing the spell to affect the Clown instead of the intended target. Spells like 'Custard Pie' require a DC of 12 for a minor effect or 18 for a major effect, with the latter causing the target to be blinded for 1d4 rounds. Clowns rely on their wit and timing, making them unpredictable but potentially powerful spellcasters.\n\nJester's Luck. The Clown class introduces 'Jester's Luck,' a mechanic where Luck points can be used to enhance comedic effects. Unlike other classes, Clowns regenerate one Luck point per day for every successful comedic action performed. This mechanic encourages players to think creatively and embrace the chaos of the Clown's role. For instance, a Clown might use Luck points to increase the range of a 'Seltzer Spray' spell, affecting additional targets. This regeneration feature makes Clowns uniquely resilient in campaigns where Luck is a critical resource.\n\nComedic Crit Tables. Clowns use specialized Crit Tables that focus on comedic outcomes. A critical hit might result in a 'Banana Slip,' causing the enemy to fall prone and lose their next action. These Crit Tables add an element of unpredictability and humor to combat, providing both mechanical benefits and narrative flavor. The Crit Table results are determined by rolling a 1d10, with higher numbers leading to more dramatic and humorous effects. This mechanic encourages players to engage with the game's narrative, turning battles into comedic set pieces.\n\nRole of Humor in DCC. Humor in DCC serves as a tool for engaging players and adding depth to campaigns. The Clown class embodies this by integrating humor into its mechanics, encouraging players to embrace both success and failure. For instance, a failed 'Balloon Animal' spell might result in a harmless but annoying creature that distracts enemies. This duality of humor and mechanics ensures that the Clown class is not just a novelty but a strategic addition to any party. The role of humor is further emphasized by the Clown's ability to influence morale through successful comedic actions.\n\nThe Clown class adds a unique twist to Dungeon Crawl Classics, blending humor with strategic gameplay. Whether you're using Pratfall Points, casting Slapstick Spells, or leveraging Jester's Luck, Clowns offer a fresh perspective on traditional RPG mechanics. If you're ready to embrace the chaos and comedy, consider adding a Clown to your next campaign. Subscribe for more insights into the quirky mechanics of DCC.",
+        "cta": "Subscribe for weekly tabletop RPG deep dives. Follow Bizzal Games on YouTube and Instagram.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
+        "video_sha256": "4625c451295261f3d4fc34d62e1c1d25a313cb11da040aecfb5214e970b1a27a"
+      }
     }
   ]
 }
