@@ -1,0 +1,42 @@
+name: clip gen check (temp)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Clip generation check
+        env:
+          BIZZAL_OPENAI_API_KEY: ${{ secrets.BIZZAL_OPENAI_API_KEY }}
+          BIZZAL_OPENAI_MODEL: "gpt-4o"
+        run: |
+          python - <<'PY'
+          import sys, json
+          sys.path.insert(0, "bin/longform")
+          import make_clips_from_longform as m
+
+          title = "Spellcasting Check failures trigger chaos and corruption in DCC"
+          sections = [
+              {"heading": "The failed check", "body": "A failed spellcasting check in DCC doesn't just fizzle. Roll on the misfire or corruption table for that spell. Natural 1 always triggers the worst column, and the judge reads the result aloud."},
+              {"heading": "Corruption accrues", "body": "Corruption is permanent unless removed by specific magic. Minor corruption is cosmetic; major reshapes the body; greater can end the character. It stacks across a career, so casters degrade over time."},
+              {"heading": "Luck burns it back", "body": "You can spend Luck point-for-point to raise a spell check after the roll. Halflings and Thieves regenerate Luck, so they can push checks the wizard cannot. One point can turn a misfire into a success."},
+              {"heading": "Mercurial magic", "body": "At level 1 each wizard rolls a mercurial magic effect per spell, a permanent quirk. Some add damage, some backfire on a low roll. The same spell behaves differently for every caster at the table."},
+          ]
+          raw = m.call_openai(m.build_prompt(title, sections, "DCC", 3))
+          clips = m.parse_clips(raw)
+          print(f"generated {len(clips)} clips:\n")
+          for i, c in enumerate(clips, 1):
+              wc = len(c.get("body","").split())
+              print(f"[{i}] HOOK: {c.get('hook')}")
+              print(f"    BODY ({wc}w): {c.get('body')}")
+              print(f"    TITLE: {c.get('youtube_title')}\n")
+          PY
