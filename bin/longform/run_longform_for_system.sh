@@ -83,7 +83,23 @@ run_inner() {
   python3 "$REPO_ROOT/bin/longform/make_longform_atom.py" --day "$day"
 
   echo "[run_longform_for_system:$SYSTEM_ID] render..."
+  # render_atom.sh exits 20 when a Replicate component (bg art / music) failed:
+  # "rendered but do not publish". This runner is invoked as `if run_inner`,
+  # which NEUTERS set -e, so we MUST check the code explicitly (mirroring the
+  # Shorts runner) — otherwise a transient Replicate error publishes an artless
+  # black-background video.
+  local _render_rc=0
+  set +e
   "$REPO_ROOT/bin/render/render_atom.sh" "$day"
+  _render_rc=$?
+  set -e
+  if [[ $_render_rc -eq 20 ]]; then
+    echo "[run_longform_for_system:$SYSTEM_ID] QUALITY GATE: Replicate components missing; skipping publish (will retry next run)"
+    return 0
+  elif [[ $_render_rc -ne 0 ]]; then
+    echo "[run_longform_for_system:$SYSTEM_ID] render failed (rc=$_render_rc)"
+    return "$_render_rc"
+  fi
 
   # Custom thumbnail: compose the ruling title over the video's hero background
   # image (1280x720) so long-form stops auto-serving a random frame. Fail-soft.
