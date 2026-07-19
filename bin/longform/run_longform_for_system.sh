@@ -129,6 +129,25 @@ run_inner() {
     --category-id 20 \
     --not-made-for-kids || true
 
+  # Record THIS run's published video id in a per-day marker. The clips step
+  # reads it so clips only ever link to this run's long-form -- and skip
+  # entirely if the publish didn't happen (no marker). Only written when a real
+  # upload landed (we already returned early on dry-run / quality-gate skip).
+  LF_VID="$(python3 - "$REPO_ROOT/$BIZZAL_PUBLISH_REGISTRY" "$day" <<'PY'
+import json, sys
+try:
+    items = json.load(open(sys.argv[1])).get("items", [])
+    m = [i for i in items if i.get("day") == sys.argv[2] and i.get("youtube_video_id")]
+    print(m[-1]["youtube_video_id"] if m else "")
+except Exception:
+    print("")
+PY
+)"
+  if [[ -n "$LF_VID" ]]; then
+    printf '%s\n' "$LF_VID" > "$REPO_ROOT/${BIZZAL_RENDERS_BY_DAY_DIR}/${day}.videoid"
+    echo "[run_longform_for_system:$SYSTEM_ID] published id=$LF_VID (clip marker written)"
+  fi
+
   echo "[run_longform_for_system:$SYSTEM_ID] archive render..."
   "$REPO_ROOT/bin/core/archive_render_to_storage.sh" "$SYSTEM_ID" "$day" || true
 }
