@@ -51,6 +51,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
         "video_sha256": "153d444f2b744e613a22ebe92bacca19ace7f2f750bde3694554b7dabe82770a"
       }
+    },
+    {
+      "published_utc": "2026-07-19T00:29:21Z",
+      "day": "2026-07-18",
+      "content_id": "",
+      "publish_hash": "202872598f6cdaf406d2c7877d72e5cb18de61222e0c68fcbd96929edfbbb274",
+      "youtube_video_id": "cOzR7vNgnrE",
+      "youtube_url": "https://www.youtube.com/watch?v=cOzR7vNgnrE",
+      "video_sha256": "1c93f1e13261019b8f97f870b3fe748c3f77846ab04827f180f73965ad076e69",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
+      "fingerprint": {
+        "day": "2026-07-18",
+        "category": "",
+        "angle": "Unpack the chaotic rules that make the Clownish Evolution module unique.",
+        "content_id": "",
+        "canonical_hash": "",
+        "script_id": "e72c1aa96195cb69902368f0d85c58ed89380f82873a926d02d5f6195a800853",
+        "fact_kind": "",
+        "fact_pk": null,
+        "fact_name": "",
+        "hook": "Elastic Dice Chain forces strategic risk-reward in DCC",
+        "body": "Welcome to Bizzal Games, where today we're diving into the Clownish Evolution module for Dungeon Crawl Classics. This module introduces some eccentric rules that twist the conventional mechanics in ways you might not expect. From dynamic dice shifts to peculiar class abilities, Clownish Evolution offers a unique spin on the familiar DCC framework. We'll explore the standout mechanics that define this module, each with its own twist on traditional gameplay. Let's jump into the rules that make Clownish Evolution truly singular.\n\nThe Elastic Dice Chain. In Clownish Evolution, the classic Dice Chain mechanic takes on a new dimension. Normally, DCC shifts bonuses along a dice chain from d3 to d30. In this module, the chain becomes elastic, allowing players to temporarily stretch or compress their die rolls. For instance, a d6 can be stretched to a d8 for one roll, but the next roll must compress to a d4. This mechanic introduces a strategic layer, requiring players to plan their dice shifts carefully. The elasticity rule means that while you can gain a temporary advantage, it must be balanced by an equal disadvantage immediately afterward. This creates a see-saw effect in gameplay, emphasizing tactical thinking over sheer luck.\n\nLuck's Double-Edged Sword. Luck in Clownish Evolution is a fickle friend. While the core DCC rule allows characters to burn Luck for a bonus, this module adds a twist: every point of Luck burned reduces your maximum hit points by one for the rest of the session. This means players must weigh the immediate benefits of using Luck against the long-term consequences on their survivability. Additionally, regaining Luck is even harder in this module. Only specific in-game events or rare items can restore it. This mechanic forces players to consider their Luck usage carefully, making it a resource that can tip the scales in a crucial moment but comes with a steep price.\n\nMighty Deeds with a Twist. Mighty Deeds of Arms are a staple for Warriors and Dwarves in DCC, allowing them to perform extraordinary feats in combat. Clownish Evolution adds a twist: Deeds now have a comedic element. A Warrior might declare a Deed to trip an opponent, but on a roll of 1, they slip on a banana peel instead. The Deed's success still depends on hitting the attack and meeting the Deed die threshold, but the outcome can vary wildly, adding a layer of unpredictability. This mechanic not only serves to entertain but also encourages creativity and humor in combat, making each encounter memorable.\n\nThe Unpredictable Spell Table. Spells in Clownish Evolution come with an added layer of unpredictability. Casting a spell requires a roll on a d100 table unique to this module. The table includes bizarre effects ranging from harmless illusions to catastrophic failures. For example, a simple Light spell might result in a blinding flash affecting everyone, friend and foe alike. This mechanic means that spellcasting is always a gamble, adding tension and excitement to every magical action. Players must think twice before casting, as the consequences can be as unpredictable as they are entertaining.\n\nClownish Evolution takes the familiar mechanics of Dungeon Crawl Classics and gives them a whimsical twist. Whether it's the elastic dice chain or the unpredictable spell outcomes, this module challenges players to think creatively and adapt quickly. If you're ready to add a dose of chaos and humor to your DCC sessions, Clownish Evolution might be just what you're looking for. Be sure to like, subscribe, and hit the bell for more deep dives into the quirkiest RPG modules out there.",
+        "cta": "Subscribe for weekly tabletop RPG deep dives. Follow Bizzal Games on YouTube and Instagram.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
+        "video_sha256": "1c93f1e13261019b8f97f870b3fe748c3f77846ab04827f180f73965ad076e69"
+      }
+    },
+    {
+      "published_utc": "2026-07-19T01:27:27Z",
+      "day": "2026-07-18",
+      "content_id": "",
+      "publish_hash": "519cf9181bded7a5ada21e00647c89ca42b7c7cd2d7c5c62d5131ae6c5ae001b",
+      "youtube_video_id": "crW_l0OTWFc",
+      "youtube_url": "https://www.youtube.com/watch?v=crW_l0OTWFc",
+      "video_sha256": "0bc74b10fd45e38b888537066b3341962e0d3815a6126764d8ac0467e27d93fa",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
+      "fingerprint": {
+        "day": "2026-07-18",
+        "category": "",
+        "angle": "Dissecting the contents and appeal of the Deathbringer crowdfunding project.",
+        "content_id": "",
+        "canonical_hash": "",
+        "script_id": "fd086dd524e15be0b3a67a1dfc4bb0a439014e013457d8e7cbc10875fe64f2df",
+        "fact_kind": "",
+        "fact_pk": null,
+        "fact_name": "",
+        "hook": "Sword of Annihilation disintegrates with a Will DC 15 trade-off",
+        "body": "Deathbringer's Kickstarter campaign has been a resounding success, capturing the attention of Dungeon Crawl Classics fans worldwide. In this video, we will dissect the contents of this crowdfunding project, focusing on the specific mechanics and items that make it unique. From its unique item properties to the surprising consequences they bring, we'll explore what makes Deathbringer stand out in the tabletop RPG community. Let's dive into the specifics and see what this campaign offers to players and GMs alike.\n\nDeathbringer's Sword of Annihilation. The Sword of Annihilation offers a +3 to attack and damage rolls, but its real power lies in its critical hit mechanic. On a natural 18-20, it instantly disintegrates any non-magical object or creature, bypassing all resistances and immunities. However, the sword demands a Will DC 15 check each time it disintegrates a target. Failure results in the wielder taking 1d6 damage as the sword siphons life force. This mechanic creates a high-risk, high-reward scenario, challenging players to balance power with personal safety. Its ability to bypass resistances is a game-changer in many scenarios, making it a must-have for those willing to risk their health for devastating power.\n\nArmor of the Eternal Guardian. The Armor of the Eternal Guardian offers a +4 bonus to AC and grants immunity to fear effects. Its unique feature is the ability to absorb damage from a single source once per day, converting all damage into healing for the wearer. However, each time it absorbs damage, the armor imposes a cumulative -1 penalty to all Dexterity-based checks for 24 hours. This mechanic forces strategic use, as over-reliance can hinder movement and agility. The armor's healing ability can turn the tide in combat, but players must weigh the benefits against potential penalties in agility and skill checks.\n\nRing of Temporal Manipulation. The Ring of Temporal Manipulation allows the wearer to reroll one d20 roll per day, taking the new result. This simple mechanic introduces a powerful element of chance, offering a second chance at crucial moments. However, each use ages the wearer by 1d4 years, a significant consequence that can affect long-term character development. This aging effect adds a layer of strategy, as players must decide when the reroll is worth the potential years lost. The ring's ability to alter fate is invaluable, but its cost ensures that players use it judiciously, adding depth to decision-making processes.\n\nAmulet of Elemental Chaos. This amulet grants the wearer resistance to one type of elemental damage—fire, cold, acid, or lightning—determined randomly each day. The resistance provides a solid defensive boost, but the randomness introduces unpredictability. Additionally, the wearer can cast a single elemental spell once per day, corresponding to the resistance granted, using a spell check result of 16. However, casting the spell triggers a Wild Magic surge, with effects ranging from beneficial to catastrophic. This mechanic encourages creative use and adaptation, as players must navigate the benefits of elemental resistance and spellcasting with the risks of Wild Magic.\n\nBoots of the Planeswalker. The Boots of the Planeswalker grant the wearer the ability to teleport up to 30 feet as a move action once per turn. This provides unparalleled mobility, allowing players to bypass obstacles and reposition in combat. However, each teleportation requires a Luck check, with failure resulting in the wearer arriving 10 feet off-target in a random direction. This adds an element of uncertainty to each use, requiring players to carefully consider when and how to teleport. Despite the risk, the boots offer strategic advantages in both exploration and combat, making them a versatile tool for creative problem-solving.\n\nDeathbringer's Kickstarter success is built on its innovative mechanics and unique item properties. Each item offers powerful abilities balanced by significant consequences, challenging players to think strategically. Whether it's the Sword of Annihilation's disintegration or the Boots of the Planeswalker's teleportation, Deathbringer provides new dimensions to gameplay. Consider supporting the project to bring these mechanics to your table. Don't forget to like, subscribe, and hit the bell for more in-depth RPG content.",
+        "cta": "Subscribe for weekly tabletop RPG deep dives. Follow Bizzal Games on YouTube and Instagram.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
+        "video_sha256": "0bc74b10fd45e38b888537066b3341962e0d3815a6126764d8ac0467e27d93fa"
+      }
     }
   ]
 }

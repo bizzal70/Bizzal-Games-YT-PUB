@@ -67,6 +67,9 @@ run_inner() {
   export BIZZAL_BG_IMAGE_MODE=per_screen
   # Upload our accurate .srt caption track (needs the force-ssl YT token scope).
   export BIZZAL_UPLOAD_CAPTIONS=1
+  # Set our composed 1280x720 thumbnail on the video after upload (needs a
+  # phone-verified channel; fail-soft if not). Long-form only.
+  export BIZZAL_SET_THUMBNAIL=1
   export BIZZAL_END_FADE_SEC=2.0
   export BIZZAL_END_BLACK_PAD_SEC=1.0
   export BIZZAL_CONTENT_TYPE=longform
@@ -80,7 +83,39 @@ run_inner() {
   python3 "$REPO_ROOT/bin/longform/make_longform_atom.py" --day "$day"
 
   echo "[run_longform_for_system:$SYSTEM_ID] render..."
+  # render_atom.sh exits 20 when a Replicate component (bg art / music) failed:
+  # "rendered but do not publish". This runner is invoked as `if run_inner`,
+  # which NEUTERS set -e, so we MUST check the code explicitly (mirroring the
+  # Shorts runner) — otherwise a transient Replicate error publishes an artless
+  # black-background video.
+  local _render_rc=0
+  set +e
   "$REPO_ROOT/bin/render/render_atom.sh" "$day"
+  _render_rc=$?
+  set -e
+  if [[ $_render_rc -eq 20 ]]; then
+    echo "[run_longform_for_system:$SYSTEM_ID] QUALITY GATE: Replicate components missing; skipping publish (will retry next run)"
+    return 0
+  elif [[ $_render_rc -ne 0 ]]; then
+    echo "[run_longform_for_system:$SYSTEM_ID] render failed (rc=$_render_rc)"
+    return "$_render_rc"
+  fi
+
+  # Custom thumbnail: compose the ruling title over the video's hero background
+  # image (1280x720) so long-form stops auto-serving a random frame. Fail-soft.
+  echo "[run_longform_for_system:$SYSTEM_ID] thumbnail..."
+  local _bgimg="$REPO_ROOT/${BIZZAL_RENDERS_BY_DAY_DIR}/${day}.bg.png"
+  local _thumb="$REPO_ROOT/${BIZZAL_RENDERS_BY_DAY_DIR}/${day}.thumb.jpg"
+  local _lf_title
+  _lf_title="$(jq -r '.youtube_title // .title // ""' "$REPO_ROOT/${BIZZAL_ATOM_VALIDATED_DIR}/${day}.json" 2>/dev/null)"
+  if [[ -f "$_bgimg" && -n "$_lf_title" ]]; then
+    python3 "$REPO_ROOT/bin/render/build_thumbnail.py" \
+      --bg "$_bgimg" --title "$_lf_title" --out "$_thumb" \
+      --icon "$REPO_ROOT/assets/brand/channel_icon.png" \
+      || echo "[run_longform_for_system:$SYSTEM_ID] thumbnail gen failed (non-fatal)"
+  else
+    echo "[run_longform_for_system:$SYSTEM_ID] no bg image or title; skipping thumbnail"
+  fi
 
   if [[ "${BIZZAL_SKIP_PUBLISH:-0}" == "1" ]]; then
     echo "[run_longform_for_system:$SYSTEM_ID] BIZZAL_SKIP_PUBLISH=1; skipping upload (dry run)"

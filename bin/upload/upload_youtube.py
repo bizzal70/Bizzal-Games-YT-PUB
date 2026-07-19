@@ -484,6 +484,43 @@ def maybe_upload_captions(youtube, video_id: str, video_path: Path) -> None:
             eprint(f"WARN: caption upload failed (non-fatal): {exc}")
 
 
+def set_thumbnail(youtube, video_id: str, thumb_path: Path) -> None:
+    """Set a custom thumbnail on an uploaded video (needs a phone-verified
+    channel). Callers treat failures as non-fatal."""
+    from googleapiclient.http import MediaFileUpload
+
+    youtube.thumbnails().set(
+        videoId=video_id,
+        media_body=MediaFileUpload(str(thumb_path), mimetype="image/jpeg"),
+    ).execute()
+
+
+def maybe_set_thumbnail(youtube, video_id: str, video_path: Path) -> None:
+    """Best-effort: set a sibling <video>.thumb.jpg custom thumbnail if enabled.
+
+    Off by default (Shorts unchanged); the long-form runner opts in via
+    BIZZAL_SET_THUMBNAIL=1. A non-eligible channel or any error never blocks
+    the publish (the auto-generated frame thumbnail simply stays).
+    """
+    if (os.getenv("BIZZAL_SET_THUMBNAIL") or "0").strip().lower() in {"0", "false", "no", "off"}:
+        return
+    thumb_path = video_path.with_name(f"{video_path.stem}.thumb.jpg")
+    if not thumb_path.is_file():
+        return
+    try:
+        set_thumbnail(youtube, video_id, thumb_path)
+        print(f"[upload_youtube] thumbnail set from {thumb_path.name}")
+    except Exception as exc:
+        txt = str(exc).lower()
+        if "unauthorized" in txt or "forbidden" in txt or "verif" in txt or "not eligible" in txt:
+            eprint(
+                "WARN: custom thumbnail skipped — channel not eligible for custom "
+                "thumbnails (needs phone verification). Video is unaffected."
+            )
+        else:
+            eprint(f"WARN: thumbnail set failed (non-fatal): {exc}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Upload latest rendered short to YouTube")
     parser.add_argument("--day", default=os.getenv("BIZZAL_DAY", ""), help="Day YYYY-MM-DD (default: today inferred by render path)")
@@ -620,6 +657,7 @@ def main() -> int:
 
     # Attach our accurate caption track (best-effort; never fails the publish).
     maybe_upload_captions(youtube, vid, video_path)
+    maybe_set_thumbnail(youtube, vid, video_path)
     return 0
 
 
