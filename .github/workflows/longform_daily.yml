@@ -170,7 +170,7 @@ jobs:
           for sys in "${SYSTEMS[@]}"; do
             sys="$(echo "$sys" | tr -d ' ')"
             echo "=== clips: $sys ==="
-            bin/longform/run_clips_for_system.sh "$sys" "$TODAY" \
+            bash bin/longform/run_clips_for_system.sh "$sys" "$TODAY" \
               || echo "WARNING: clips failed for $sys (non-fatal)"
           done
 
