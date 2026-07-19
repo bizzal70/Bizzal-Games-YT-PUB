@@ -19,6 +19,10 @@ on:
         description: "YouTube privacy: unlisted | private | public"
         required: false
         default: "unlisted"
+      make_clips:
+        description: 'Set "false" to skip cutting the long-form into Shorts clips'
+        required: false
+        default: "true"
 
 permissions:
   contents: write   # commit the long-form registry + state back to the repo
@@ -153,6 +157,21 @@ jobs:
             bin/longform/run_longform_for_system.sh "$sys" || {
               echo "WARNING: longform failed for $sys (non-fatal)"
             }
+          done
+
+      - name: Generate + publish Shorts clips from the long-form
+        if: github.event.inputs.make_clips != 'false'
+        env:
+          BIZZAL_YT_PRIVACY: ${{ github.event.inputs.privacy || 'public' }}
+          BIZZAL_SKIP_PUBLISH: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
+        run: |
+          TODAY="$(TZ=America/Denver date +%F)"
+          IFS=',' read -ra SYSTEMS <<< "${{ steps.systems.outputs.systems }}"
+          for sys in "${SYSTEMS[@]}"; do
+            sys="$(echo "$sys" | tr -d ' ')"
+            echo "=== clips: $sys ==="
+            bin/longform/run_clips_for_system.sh "$sys" "$TODAY" \
+              || echo "WARNING: clips failed for $sys (non-fatal)"
           done
 
       - name: Archive render to storage
