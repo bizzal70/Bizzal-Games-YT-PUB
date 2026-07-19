@@ -30,6 +30,19 @@ SYSTEM_LABELS = {
 }
 
 
+def system_label(system_id: str) -> str:
+    """Display label for a system: static map first, then the rpg_systems DB (so
+    a newly added system reads correctly), then a generic fallback."""
+    if system_id in SYSTEM_LABELS:
+        return SYSTEM_LABELS[system_id]
+    try:
+        sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../core"))
+        import system_config
+        return system_config.get_system(system_id).get("display_name") or "TTRPG"
+    except Exception:
+        return "TTRPG"
+
+
 def sha256_text(s: str) -> str:
     return hashlib.sha256(s.encode("utf-8")).hexdigest()
 
@@ -100,7 +113,7 @@ def parse_clips(raw: str) -> list[dict]:
 
 
 def make_clip_atom(system_id, day, clip, idx, video_id):
-    system_label = SYSTEM_LABELS.get(system_id, "TTRPG")
+    sys_label = system_label(system_id)
     clip_day = f"{day}-{system_id}-clip{idx}"
     hook = (clip.get("hook") or "").strip()
     body = (clip.get("body") or "").strip()
@@ -108,7 +121,7 @@ def make_clip_atom(system_id, day, clip, idx, video_id):
     watch = f"https://www.youtube.com/watch?v={video_id}" if video_id else ""
     desc = (clip.get("youtube_description") or "").rstrip()
     if watch:
-        desc += f"\n\n▶ Full breakdown ({system_label}): {watch}"
+        desc += f"\n\n▶ Full breakdown ({sys_label}): {watch}"
     cta = "Full breakdown on the channel — link below."
     script = {"hook": hook, "body": body, "cta": cta}
     script_id = sha256_text(f"{hook}\n{body}\n{cta}\n")
@@ -152,10 +165,10 @@ def main():
         raise SystemExit(f"[make_clips] ERROR: need >= 2 sections, got {len(sections)}")
 
     n = min(MAX_CLIPS, len(sections))
-    system_label = SYSTEM_LABELS.get(system_id, "TTRPG")
+    sys_label = system_label(system_id)
     print(f"[make_clips] {system_id} {day}: {len(sections)} sections -> up to {n} clips (source video={video_id or 'none'})")
 
-    raw = call_openai(build_prompt(title, sections, system_label, n))
+    raw = call_openai(build_prompt(title, sections, sys_label, n))
     clips = parse_clips(raw)
     if not clips:
         raise SystemExit("[make_clips] ERROR: model returned no clips")
