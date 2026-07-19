@@ -28,6 +28,15 @@ SYSTEM_LABELS = {
     "dcc":        "Dungeon Crawl Classics RPG",
 }
 
+
+def _db_system_label(system_id: str) -> str:
+    """Display name for a system not in the static map (e.g. a newly added one),
+    read from the rpg_systems DB. Falls back to the raw id."""
+    try:
+        return system_config.get_system(system_id).get("display_name") or system_id
+    except Exception:
+        return system_id
+
 # Channel identity for the end card + description links. The end card text is
 # ALSO narrated (renderer shares one string per segment), so keep it natural
 # language -- the raw @handles / URLs live in the description where they're
@@ -85,7 +94,7 @@ def load_fixture_sample(system_id: str, fixture_hint: str) -> list[dict]:
 
 
 def build_prompt(brief: dict, fixture_sample: list[dict], system_id: str) -> str:
-    system_label = SYSTEM_LABELS.get(system_id, system_id)
+    system_label = SYSTEM_LABELS.get(system_id) or _db_system_label(system_id)
     fixture_str = json.dumps(fixture_sample, indent=2, ensure_ascii=False)[:3000] if fixture_sample else "(no fixture data)"
 
     return f"""You are a script writer for Bizzal Games, a tabletop RPG YouTube channel.
