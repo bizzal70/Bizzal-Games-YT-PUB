@@ -51,6 +51,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-18-dcc-clip3.mp4",
         "video_sha256": "1f0918842c015c54a03e2d2def9796bb50aa3ddb7c205ad16f604771e0011a1a"
       }
+    },
+    {
+      "published_utc": "2026-07-19T04:11:14Z",
+      "day": "2026-07-18-dcc-clip1",
+      "content_id": "clip:04323c5d00377fc3",
+      "publish_hash": "6c0b3fa9e16a32a8922466428e19e2cbb01a11a3489d6ee5f99ec04615d994fb",
+      "youtube_video_id": "60B2q3darKI",
+      "youtube_url": "https://www.youtube.com/watch?v=60B2q3darKI",
+      "video_sha256": "e4933f7b3f9c4e1439697b899e2ef47c67551e79b448a585f55794315732d1b2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-18-dcc-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-07-18-dcc-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:04323c5d00377fc3",
+        "canonical_hash": "",
+        "script_id": "04323c5d00377fc31aa0869e74babc67d10872ad33f597479022c1ae3d645c5b",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Deathbringer's dice allow multiple rolls, best result",
+        "hook": "Deathbringer's dice allow multiple rolls, best result",
+        "body": "In Deathbringer, certain actions let players roll multiple dice and pick the best result. A warrior might roll 2d10 for an attack, choosing the higher roll. This mechanic changes the risk-reward balance without altering the Dice Chain.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-18-dcc-clip1.mp4",
+        "video_sha256": "e4933f7b3f9c4e1439697b899e2ef47c67551e79b448a585f55794315732d1b2"
+      }
+    },
+    {
+      "published_utc": "2026-07-19T04:12:52Z",
+      "day": "2026-07-18-dcc-clip2",
+      "content_id": "clip:bee1052c4a75406f",
+      "publish_hash": "88eb35bf2602e104c7094a7e0749b3f17390ceadf44a1827c557468c53857a20",
+      "youtube_video_id": "25YmGgsgzoo",
+      "youtube_url": "https://www.youtube.com/watch?v=25YmGgsgzoo",
+      "video_sha256": "3241aa9b07c9e030f2d17a67e14e6dadef4f2f47f1bebdc3c08a476f6cf4a166",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-18-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-07-18-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:bee1052c4a75406f",
+        "canonical_hash": "",
+        "script_id": "bee1052c4a75406f6e49a998b2194e2f4428e3927b5f720b7c5ce76beb755476",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Deathbringer's Luck boosts must be used quickly",
+        "hook": "Deathbringer's Luck boosts must be used quickly",
+        "body": "Deathbringer overhauls Luck. Players can temporarily boost their Luck score, but must use it quickly or lose it. This adds strategy to Luck use, as the boost is temporary and must be spent wisely.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-18-dcc-clip2.mp4",
+        "video_sha256": "3241aa9b07c9e030f2d17a67e14e6dadef4f2f47f1bebdc3c08a476f6cf4a166"
+      }
+    },
+    {
+      "published_utc": "2026-07-19T04:14:21Z",
+      "day": "2026-07-18-dcc-clip3",
+      "content_id": "clip:4160e5e75cc02ee7",
+      "publish_hash": "96bc73885c93c80914dfc9594bf576e21fb5c49f882004ca7378a507336e7da1",
+      "youtube_video_id": "3fuBqFwAU6I",
+      "youtube_url": "https://www.youtube.com/watch?v=3fuBqFwAU6I",
+      "video_sha256": "e789fcf477d3af7cea3466d81b245a55673d62eef9ccb8a12dec223d2a30c511",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-18-dcc-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-07-18-dcc-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:4160e5e75cc02ee7",
+        "canonical_hash": "",
+        "script_id": "4160e5e75cc02ee7d15040b49a138c7bf82934ebfb15f5f22d0b720bd559bd06",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Deathbringer's Mighty Deeds scale with character level",
+        "hook": "Deathbringer's Mighty Deeds scale with character level",
+        "body": "Deathbringer reimagines Mighty Deeds. Success now scales with character level, making high-level characters more powerful. A level 5 warrior might have a Deed die threshold starting at 5, enhancing their prowess significantly.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-18-dcc-clip3.mp4",
+        "video_sha256": "e789fcf477d3af7cea3466d81b245a55673d62eef9ccb8a12dec223d2a30c511"
+      }
     }
   ]
 }

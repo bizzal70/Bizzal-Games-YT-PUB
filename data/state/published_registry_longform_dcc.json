@@ -129,6 +129,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
         "video_sha256": "4625c451295261f3d4fc34d62e1c1d25a313cb11da040aecfb5214e970b1a27a"
       }
+    },
+    {
+      "published_utc": "2026-07-19T04:09:26Z",
+      "day": "2026-07-18",
+      "content_id": "",
+      "publish_hash": "250e9a5eaa35f65151162e391ed8c0f499eadb6f1a0cf1373dbcfea23e0763ec",
+      "youtube_video_id": "KzxPM9JbqzA",
+      "youtube_url": "https://www.youtube.com/watch?v=KzxPM9JbqzA",
+      "video_sha256": "dabed9e39cd1ae36fb38507e7ba608f26c229a570e200e4a3c73fddf9c8926da",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
+      "fingerprint": {
+        "day": "2026-07-18",
+        "category": "",
+        "angle": "What makes the Deathbringer project stand out in the DCC universe?",
+        "content_id": "",
+        "canonical_hash": "",
+        "script_id": "6d2406e7783b4b15fff6de8a83ce3d53d50f60b9e376e0fcd790513207975dc6",
+        "fact_kind": "",
+        "fact_pk": null,
+        "fact_name": "",
+        "hook": "Deathbringer's Dice Mechanics: Multiple Rolls, Best Result",
+        "body": "Deathbringer is making waves in the Dungeon Crawl Classics community with its unique approach to gameplay mechanics. This new crowdfunding hit stands out by introducing fresh rules and mechanics that expand the core DCC experience. In this video, we'll explore the specific mechanics that make Deathbringer a must-have for fans of the system. Expect a deep dive into rules that challenge conventional gameplay, offering new ways to engage with the DCC universe.\n\nUnique Dice Mechanics. Deathbringer introduces a unique dice mechanic that deviates from the traditional Dice Chain of DCC. Instead of shifting dice sizes, certain actions in Deathbringer allow players to roll multiple dice and choose the best result, simulating a more dynamic outcome. For example, a warrior might roll 2d10 for an attack and take the higher roll, introducing a new layer of strategy. This mechanic alters the risk-reward balance, as higher stakes can lead to significantly better results without altering the existing Dice Chain progression.\n\nEnhanced Luck Economy. In Deathbringer, the Luck mechanic is overhauled to provide more strategic depth. Players can now temporarily boost their Luck score through specific in-game actions, creating a more fluid economy. This mechanic allows for a temporary increase in Luck, which can then be spent on critical rolls. However, this temporary boost comes with a catch: it must be used within a limited timeframe or be lost. This change encourages players to make more tactical decisions about when to burn their Luck, enhancing the strategic element of gameplay.\n\nMighty Deeds Reimagined. Deathbringer reimagines the Mighty Deeds of Arms mechanic by introducing a scaling effect based on character level. Instead of a static threshold, the success of a Deed now scales with the character's level, making high-level characters more potent. For instance, a level 5 warrior might have a Deed die threshold starting at 5 instead of 3, reflecting their increased prowess. This change makes the Mighty Deeds more impactful and relevant throughout a character's progression, ensuring that higher-level characters feel more powerful and capable.\n\nNew Spellcasting Dynamics. Spellcasting in Deathbringer introduces a new dynamic by incorporating a failure cost. When a spell fails, it doesn't just fizzle out; it has a tangible consequence. For example, a failed spell might result in a temporary penalty to the caster's attributes or resources, adding a layer of risk to casting. This mechanic forces spellcasters to weigh their options carefully, as the cost of failure can be significant. It adds a strategic element to spellcasting that requires players to consider the potential fallout of their magical attempts.\n\nCharacter Progression Tweaks. Character progression in Deathbringer offers new pathways that diverge from traditional DCC advancement. The system introduces specific milestones that grant unique abilities or bonuses, rather than just increasing stats. For instance, reaching a certain milestone might unlock a new combat maneuver or a spellcasting technique exclusive to that level. This approach to progression diversifies character development, allowing players to customize their abilities more granularly, thus tailoring their characters to their preferred playstyle.\n\nDeathbringer's innovative mechanics breathe new life into the DCC system, offering players fresh challenges and strategic depth. Whether it's the dynamic dice mechanics or the reimagined Luck economy, these changes provide a richer gameplay experience. To explore these mechanics further and see how they can enhance your DCC campaigns, consider picking up Deathbringer. Subscribe for more in-depth analyses of tabletop RPG mechanics and stay ahead of the game.",
+        "cta": "Subscribe for weekly tabletop RPG deep dives. Follow Bizzal Games on YouTube and Instagram.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
+        "video_sha256": "dabed9e39cd1ae36fb38507e7ba608f26c229a570e200e4a3c73fddf9c8926da"
+      }
     }
   ]
 }
