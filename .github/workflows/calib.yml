@@ -1,0 +1,72 @@
+name: judge calibration (temp)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  calib:
+    runs-on: ubuntu-latest
+    env:
+      BIZZAL_OPENAI_API_KEY: ${{ secrets.BIZZAL_OPENAI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Calibrate judge on SHORT-FORM content
+        run: |
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, "bin/core")
+          import script_quality as Q
+
+          # Real published Shorts (these PERFORM ~300 views) - must NOT be rejected
+          GOOD_SHORTS = [
+            ("Barrier Tattoo (real, performs)",
+             "Barrier Tattoo only works without armor.\n\nBarrier Tattoo grants a +1 AC bonus, "
+             "but the bonus is void while wearing any armor. It requires attunement, so plan "
+             "the slot before the session.\n\nDMs: remind players before they gear up."),
+            ("Spell Casting Check (real, performs)",
+             "Spell Casting Check consumes the slot on failure.\n\nA failed spell check still "
+             "spends the slot. DC is 10 plus spell tier. On a natural 1 roll on the misfire "
+             "table.\n\nGMs: have players calculate DC before rolling."),
+          ]
+          # Real clip body (~35w) from the working Deathbringer set
+          GOOD_CLIP = ("Deathbringer clip (real)",
+             "Deathbringer's Mighty Deeds scale with character level.\n\nThe Deed Die climbs "
+             "with level, and a result of 3 or higher triggers the deed. It applies to every "
+             "attack, so the warrior improves without new feats.")
+          # The defective ones we just unlisted
+          BAD = [
+            ("Mechanics moment (unlisted junk)",
+             "Mechanics moment: Saving Throws and Damage.\n\nSaving throws are an important "
+             "part of the game. Damage can vary quite a bit depending on the situation. "
+             "Every table handles this differently, so do what feels right."),
+            ("Advice-voice (unlisted junk)",
+             "Use Mastiff as 'comic relief' that quietly pressures.\n\nThe Mastiff is a fun "
+             "creature to bring to the table. Players usually enjoy it. Try running it with "
+             "a bit of humor and see how your group reacts."),
+          ]
+
+          print("=== GOOD short-form (must stay publishable) ===")
+          lo = 5.0
+          for name, txt in GOOD_SHORTS + [GOOD_CLIP]:
+              v = Q.judge(txt, context="30-second vertical Short (hook + body + cta)")
+              lo = min(lo, v.score)
+              print(f"  {v.score:>4.1f}  {name}")
+          print(f"  --> lowest GOOD score: {lo}")
+
+          print("\n=== BAD short-form (should be rejected) ===")
+          hi = 0.0
+          for name, txt in BAD:
+              v = Q.judge(txt, context="30-second vertical Short (hook + body + cta)")
+              hi = max(hi, v.score)
+              print(f"  {v.score:>4.1f}  {name}  issues={v.issues[:2]}")
+          print(f"  --> highest BAD score: {hi}")
+
+          print(f"\nSAFE FLOOR WINDOW: above {hi}, at or below {lo}")
+          print("VERDICT:", "SEPARABLE — a floor exists" if hi < lo else "OVERLAP — judge cannot separate these")
+          PY
