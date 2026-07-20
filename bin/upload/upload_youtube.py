@@ -594,6 +594,23 @@ def main() -> int:
     # then finally to the Shorts builders. Shorts atoms have neither override nor
     # youtube_* fields, so they keep using build_title/build_description as before.
     title = (args.title_override or "").strip() or atom.get("youtube_title") or build_title(atom, day)
+
+    # Editorial guard: mechanically repair title defects that have shipped
+    # before (the "descriptor • Subject" template artifact, titles truncated
+    # mid-thought), and loudly flag anything off-formula (generic label
+    # prefixes, GM-advice voice, hype) so it shows up in logs and review.
+    try:
+        sys.path.insert(0, str(repo_root / "bin" / "core"))
+        from title_lint import lint as _title_lint
+
+        _orig = title
+        title, _issues, _ok = _title_lint(title)
+        if title != _orig:
+            print(f"[upload_youtube] title repaired: {_orig!r} -> {title!r}")
+        if _issues:
+            eprint(f"WARN: title lint flagged {_issues} on {title!r} (off-formula)")
+    except Exception as exc:
+        eprint(f"WARN: title lint unavailable ({exc}); using title as-is")
     description = (args.description_override or "").strip() or atom.get("youtube_description") or build_description(atom, day)
     privacy = (os.getenv("BIZZAL_YT_PRIVACY") or "private").strip().lower()
     if privacy not in {"private", "unlisted", "public"}:
