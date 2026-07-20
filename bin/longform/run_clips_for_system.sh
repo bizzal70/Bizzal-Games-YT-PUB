@@ -70,8 +70,9 @@ run_inner() {
     return 0
   fi
 
-  local clip_day _rc
+  local clip_day _rc _idx=0 _pub
   for clip_day in $clip_days; do
+    _idx=$((_idx + 1))
     echo "[run_clips:$SYSTEM_ID] === render clip ${clip_day} ==="
     _rc=0
     set +e
@@ -91,8 +92,22 @@ run_inner() {
       continue
     fi
 
+    # DRIP, don't dump: clip N is scheduled to publish N days after the
+    # long-form. Publishing a long-form plus all its clips at once floods the
+    # feed with one topic and cannibalises its own reach. Only schedule on real
+    # public runs -- unlisted/private test runs upload immediately as-is.
+    PUBLISH_ARGS=()
+    if [[ "${BIZZAL_YT_PRIVACY:-}" == "public" ]]; then
+      _pub="$(date -u -d "+${_idx} days" +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || echo "")"
+      if [[ -n "$_pub" ]]; then
+        PUBLISH_ARGS=(--publish-at "$_pub")
+        echo "[run_clips:$SYSTEM_ID] ${clip_day} -> scheduled ${_pub} (drip +${_idx}d)"
+      fi
+    fi
+
     python3 "$REPO_ROOT/bin/upload/upload_youtube.py" --day "$clip_day" \
       --category-id 20 --not-made-for-kids \
+      ${PUBLISH_ARGS[@]+"${PUBLISH_ARGS[@]}"} \
       || echo "[run_clips:$SYSTEM_ID] ${clip_day} upload failed (non-fatal)"
   done
 }
