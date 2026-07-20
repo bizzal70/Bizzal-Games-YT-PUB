@@ -1,0 +1,82 @@
+{
+  "items": [
+    {
+      "published_utc": "2026-07-20T18:21:07Z",
+      "day": "2026-07-20-shadowdark-clip1",
+      "content_id": "clip:e2ae77d5d0618716",
+      "publish_hash": "71361b0e29165488ce2bc8b33c440cad2d4f2397c7963dcfdb2a6c548b3111ef",
+      "youtube_video_id": "kkBXYhfLRBQ",
+      "youtube_url": "https://www.youtube.com/watch?v=kkBXYhfLRBQ",
+      "video_sha256": "f3c771cb1cba239f84988e4ea216f90ac5718f4e8a278e179535e252ec5fd29c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-07-20-shadowdark-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-07-20-shadowdark-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:e2ae77d5d0618716",
+        "canonical_hash": "",
+        "script_id": "e2ae77d5d06187166e95b51d431bf62484e4d053e72df4dde34d03fd186ec3c5",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Summoners consume spell slot on failed summon",
+        "hook": "Summoners consume spell slot on failed summon",
+        "body": "In Shadowdark, if a Summoner fails a spellcasting check when summoning, the spell slot is consumed. This mechanic highlights the importance of strategic planning and resource management, forcing players to weigh risks before casting.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-07-20-shadowdark-clip1.mp4",
+        "video_sha256": "f3c771cb1cba239f84988e4ea216f90ac5718f4e8a278e179535e252ec5fd29c"
+      }
+    },
+    {
+      "published_utc": "2026-07-20T18:23:30Z",
+      "day": "2026-07-20-shadowdark-clip2",
+      "content_id": "clip:221f7da534769513",
+      "publish_hash": "44c319be13cd6a9c6e75bd8688bfdc7ae8d22a1a17121b0cb2fab9aa358b0c82",
+      "youtube_video_id": "aaxltSAGJzg",
+      "youtube_url": "https://www.youtube.com/watch?v=aaxltSAGJzg",
+      "video_sha256": "66f3d86206b49e5fe9afb3a668e68980dd039c02a9158220bd1c79616e5a90ca",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-07-20-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-07-20-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:221f7da534769513",
+        "canonical_hash": "",
+        "script_id": "221f7da53476951399b8ce87cd0a1f419f3a32f98c0c3de72924c3264c6fbb65",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Summoners' Conjurer's Gift allows extra creature",
+        "hook": "Summoners' Conjurer's Gift allows extra creature",
+        "body": "Shadowdark Summoners have the 'Conjurer's Gift' talent, letting them summon an extra creature once per day without using a spell slot. This provides a tactical edge, enabling extra battlefield control in critical moments.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-07-20-shadowdark-clip2.mp4",
+        "video_sha256": "66f3d86206b49e5fe9afb3a668e68980dd039c02a9158220bd1c79616e5a90ca"
+      }
+    },
+    {
+      "published_utc": "2026-07-20T18:25:29Z",
+      "day": "2026-07-20-shadowdark-clip3",
+      "content_id": "clip:301cd4b80381eb83",
+      "publish_hash": "ee087f89fd9304835ea79417f0e1848d0c4d264e599426591cd698e08c2555fc",
+      "youtube_video_id": "r5c5W-kWLDI",
+      "youtube_url": "https://www.youtube.com/watch?v=r5c5W-kWLDI",
+      "video_sha256": "c0e5cc08ec213702572b2c54e3c980f113addf8411a50f7254fefd7726b2f2c5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-07-20-shadowdark-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-07-20-shadowdark-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:301cd4b80381eb83",
+        "canonical_hash": "",
+        "script_id": "301cd4b80381eb8391fd2ddf3c4fe49f9e0841228536cab5630b3e3fde5ff8cb",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Summoners' hit dice balance durability",
+        "hook": "Summoners' hit dice balance durability",
+        "body": "Summoners in Shadowdark use a 1d6 hit dice, balancing between Fighters' 1d8 and Wizards' 1d4. This mid-range durability allows them moderate frontline presence while relying on summoned creatures for protection.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-07-20-shadowdark-clip3.mp4",
+        "video_sha256": "c0e5cc08ec213702572b2c54e3c980f113addf8411a50f7254fefd7726b2f2c5"
+      }
+    }
+  ]
+}
