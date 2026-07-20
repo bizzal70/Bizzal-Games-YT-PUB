@@ -24,6 +24,16 @@ on:
         required: false
         default: "true"
 
+# Serialize runs so two overlapping scheduled triggers can never BOTH publish.
+# Without this, the DST-safe double cron fired twice at once; each run's guard
+# checked the registry before the other had committed, so both saw "hasn't run
+# today" and published -- duplicate long-form + duplicate clips on the channel.
+# cancel-in-progress:false queues the second run; its guard then correctly sees
+# the first run's committed registry entry and skips. (Shorts already does this.)
+concurrency:
+  group: longform-pipeline
+  cancel-in-progress: false
+
 permissions:
   contents: write   # commit the long-form registry + state back to the repo
 
