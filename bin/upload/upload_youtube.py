@@ -407,8 +407,21 @@ def upload_video(
     privacy: str,
     category_id: str,
     tags: list[str],
+    publish_at: str = "",
 ):
     from googleapiclient.http import MediaFileUpload
+
+    status = {
+        "privacyStatus": privacy,
+        "selfDeclaredMadeForKids": False,
+    }
+    # Scheduled release: YouTube requires the video be uploaded `private` and
+    # flips it public itself at publishAt. Used to DRIP clips over following
+    # days instead of dumping a long-form + all its clips in one burst (which
+    # floods the feed with one topic and cannibalises its own reach).
+    if publish_at:
+        status["privacyStatus"] = "private"
+        status["publishAt"] = publish_at
 
     body = {
         "snippet": {
@@ -417,10 +430,7 @@ def upload_video(
             "categoryId": category_id,
             "tags": tags,
         },
-        "status": {
-            "privacyStatus": privacy,
-            "selfDeclaredMadeForKids": False,
-        },
+        "status": status,
     }
 
     request = youtube.videos().insert(
@@ -530,6 +540,7 @@ def main() -> int:
     parser.add_argument("--description-override", default="", help="Use this description instead of the computed one (long-form)")
     parser.add_argument("--category-id", default="", help="YouTube category id (default: BIZZAL_YT_CATEGORY_ID or 20)")
     parser.add_argument("--not-made-for-kids", action="store_true", help="Mark selfDeclaredMadeForKids=False (already the default; accepted for the long-form caller)")
+    parser.add_argument("--publish-at", default="", help="ISO8601 UTC time to auto-publish (uploads private, YouTube releases it then). Used to drip clips over days.")
     args = parser.parse_args()
 
     repo_root = Path(__file__).resolve().parents[2]
@@ -628,6 +639,7 @@ def main() -> int:
             privacy,
             category_id,
             youtube_tags_for_profile(profile),
+            publish_at=(args.publish_at or "").strip(),
         )
     except Exception as exc:
         if is_oauth_invalid_grant_error(exc):
