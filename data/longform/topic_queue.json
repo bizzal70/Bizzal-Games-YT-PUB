@@ -1,6 +1,105 @@
 [
   {
     "system": "dnd5e",
+    "title": "Marvel Multiverse Meets D&D: A Godzilla Encounter",
+    "angle": "Explore how to integrate Godzilla into your D&D campaign as a colossal creature encounter.",
+    "rationale": "With Godzilla joining Marvel Multiverse Roleplaying, players might be inspired to bring similar titans into D&D.",
+    "fixture_hint": "creature",
+    "search_keyword": "GODZILLA comes to Marvel Multiverse Roleplaying",
+    "created_date": "2026-07-20",
+    "status": "pending",
+    "brief_id": "fa44e81e6169"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Unraveling D&D's Gen Con Announcements",
+    "angle": "Deep dive into the new D&D rule changes and products announced at Gen Con.",
+    "rationale": "WotC's major presence at Gen Con promises significant announcements that will impact D&D campaigns.",
+    "fixture_hint": "rule",
+    "search_keyword": "D&D's Gen Con keynote, featuring new announcements",
+    "created_date": "2026-07-20",
+    "status": "pending",
+    "brief_id": "4f4602f25622"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Arcana Unleashed: Breaking Down New Backgrounds",
+    "angle": "Analyze the impact of new Arcana Unleashed backgrounds on character development.",
+    "rationale": "The release of Arcana Unleashed backgrounds is generating buzz among players looking to expand their character options.",
+    "fixture_hint": "rule",
+    "search_keyword": "Arcana Unleashed backgrounds",
+    "created_date": "2026-07-20",
+    "status": "pending",
+    "brief_id": "2fe05029102d"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Summoning Secrets: Shadowdark's Summoner Mechanics",
+    "angle": "Examine the new Summoner class mechanics being playtested for Shadowdark.",
+    "rationale": "The ongoing playtest of the Summoner class in Shadowdark is drawing interest from players eager to try new class features.",
+    "fixture_hint": "class",
+    "search_keyword": "Daggerheart is playtesting a Summoner class",
+    "created_date": "2026-07-20",
+    "status": "pending",
+    "brief_id": "21859d0d90d9"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Deathbringer's Dark Influence on Shadowdark",
+    "angle": "Investigate how Deathbringer's dark themes can be adapted into Shadowdark campaigns.",
+    "rationale": "With Deathbringer gaining attention, Shadowdark players may be inspired to incorporate similar dark elements.",
+    "fixture_hint": "rule",
+    "search_keyword": "Professor Dungeon Master Talks Deathbringer",
+    "created_date": "2026-07-20",
+    "status": "pending",
+    "brief_id": "9d0b6e21465f"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's Arcane Overhaul: New Faction Dynamics",
+    "angle": "Explore the impact of new arcane factions in Shadowdark and how they alter power dynamics.",
+    "rationale": "The release of Arcana Unleashed with its focus on arcane factions is sparking conversations about faction-based gameplay.",
+    "fixture_hint": "rule",
+    "search_keyword": "Preview the arcane factions and backgrounds from Arcana Unleashed",
+    "created_date": "2026-07-20",
+    "status": "pending",
+    "brief_id": "25777000f42c"
+  },
+  {
+    "system": "dcc",
+    "title": "Deathbringer's Legacy in Dungeon Crawl Classics",
+    "angle": "Assess how elements from Deathbringer can be integrated into DCC adventures.",
+    "rationale": "Deathbringer's Kickstarter success is making waves, prompting DCC players to consider its dark themes.",
+    "fixture_hint": "rule",
+    "search_keyword": "Deathbringer's Kickstarter Success",
+    "created_date": "2026-07-20",
+    "status": "pending",
+    "brief_id": "5d7484049171"
+  },
+  {
+    "system": "dcc",
+    "title": "Fiends & Foes: DCC's Monster Mayhem",
+    "angle": "Delve into how DCC adapts classic monsters into unique and challenging foes.",
+    "rationale": "The upcoming release of Fiends & Foes is drawing interest from DCC fans eager for new monster content.",
+    "fixture_hint": "creature",
+    "search_keyword": "Fiends & Foes is a D&D lore book of beasts",
+    "created_date": "2026-07-20",
+    "status": "pending",
+    "brief_id": "65175773e1b1"
+  },
+  {
+    "system": "dcc",
+    "title": "Gary's Appendix: Old Spells, New Twists",
+    "angle": "Explore how classic spells from Gary's Appendix can be reinvented for modern DCC games.",
+    "rationale": "The mention of Gary's Appendix in recent crowdfunding news is reviving interest in classic spell adaptations.",
+    "fixture_hint": "spell",
+    "search_keyword": "Gary's Appendix, and more",
+    "created_date": "2026-07-20",
+    "status": "pending",
+    "brief_id": "7c8078d81699"
+  },
+  {
+    "system": "dnd5e",
     "title": "Arcana Unleashed: The Power of Arcane Backgrounds",
     "angle": "Explore the new arcane backgrounds and how they shape character development.",
     "rationale": "Arcana Unleashed is generating buzz with its new backgrounds.",
