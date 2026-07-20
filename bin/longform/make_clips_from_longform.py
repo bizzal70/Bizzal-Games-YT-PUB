@@ -16,9 +16,17 @@ Writes: N clip atoms to data/atoms_clips_{system}/validated/{clip_day}.json,
 Env: BIZZAL_OPENAI_API_KEY, BIZZAL_OPENAI_MODEL (default gpt-4o),
      BIZZAL_CLIPS_PER_LONGFORM (default 3).
 """
-import sys, os, json, hashlib
+import sys, os, json, hashlib, re
 from datetime import datetime, UTC
 from urllib import request
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../core"))
+import script_quality
+
+
+def _norm(s: str) -> str:
+    """Loose comparison key: case- and punctuation-insensitive."""
+    return re.sub(r"[^a-z0-9 ]", "", (s or "").lower()).strip()
 
 REPO_ROOT    = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 OPENAI_KEY   = os.environ.get("BIZZAL_OPENAI_API_KEY", "")
@@ -67,7 +75,9 @@ def build_prompt(title: str, sections: list[dict], system_label: str, n: int) ->
     )
     return f"""You are cutting a long-form {system_label} tabletop RPG video into short vertical clips for YouTube Shorts / Reels.
 
-Long-form title: {title}
+Long-form title (already used as the full video's title — do NOT reuse this
+ruling or restate it as a clip; each clip must cover a DIFFERENT ruling so it
+doesn't compete with the video it links to): {title}
 
 Sections:
 {sect_str}
@@ -176,14 +186,39 @@ def main():
     out_dir = os.path.join(REPO_ROOT, f"data/atoms_clips_{system_id}/validated")
     os.makedirs(out_dir, exist_ok=True)
     written = []
+    kept = 0
     for i, clip in enumerate(clips[:n], start=1):
-        if not (clip.get("hook") and clip.get("body")):
+        hook = (clip.get("hook") or "").strip()
+        body = (clip.get("body") or "").strip()
+        if not (hook and body):
             continue
-        clip_day, atom = make_clip_atom(system_id, day, clip, i, video_id)
+
+        # Hard guard: a clip must not restate the long-form's own title, or it
+        # competes with the video it is supposed to funnel into (this shipped
+        # once -- a clip and its parent had effectively the same title).
+        if _norm(hook) == _norm(title):
+            print(f"[make_clips] clip {i} DROPPED: restates the long-form title")
+            continue
+
+        # Editorial gate: a weak clip is worse than no clip -- it is a whole
+        # extra upload competing for the same audience. Fails OPEN.
+        verdict = script_quality.judge(
+            f"{hook}\n\n{body}",
+            context=f"{sys_label} 30-second vertical Short (hook + on-screen body)",
+        )
+        if verdict.available and not verdict.publishable:
+            print(f"[make_clips] clip {i} DROPPED: editor score {verdict.score:.1f} "
+                  f"issues={verdict.issues}")
+            continue
+        if verdict.available:
+            print(f"[make_clips] clip {i} editor score={verdict.score:.1f}")
+
+        kept += 1
+        clip_day, atom = make_clip_atom(system_id, day, clip, kept, video_id)
         dst = os.path.join(out_dir, f"{clip_day}.json")
         atomic_write_json(dst, atom)
         written.append(clip_day)
-        print(f"[make_clips] clip {i}: {atom['script']['hook']!r} -> {dst}")
+        print(f"[make_clips] clip {kept}: {atom['script']['hook']!r} -> {dst}")
 
     # Emit the clip day-keys so the runner knows what to render.
     manifest = os.path.join(out_dir, f"{day}.manifest.json")
