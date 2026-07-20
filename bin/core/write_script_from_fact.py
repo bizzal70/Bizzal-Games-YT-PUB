@@ -2123,6 +2123,32 @@ def main():
     script = apply_low_dc_humor_lane(atom, fact, script, day=day)
 
     full_text = f"{script.get('hook','').strip()}\n{script.get('body','').strip()}\n{script.get('cta','').strip()}\n"
+
+    # Editorial gate. Shorts are the format that actually performs, so they get
+    # the same bar as long-form. Calibrated on real content: published Shorts
+    # that perform score ~4.5; the defective ones we had to pull ("Mechanics
+    # moment: ...", "Use Mastiff as 'comic relief'...") scored 2.5 -- the 3.0
+    # floor separates them with a 2-point margin. Exit 20 is the pipeline's
+    # existing "rendered/generated but do NOT publish" signal. Fails OPEN.
+    try:
+        import script_quality
+        _verdict = script_quality.judge(
+            full_text, context=f"{category} 30-second vertical Short (hook + body + cta)"
+        )
+        if _verdict.available:
+            print(f"[write_script_from_fact] editor score={_verdict.score:.1f}")
+            if not _verdict.publishable:
+                print(
+                    f"[write_script_from_fact] QUALITY GATE: score {_verdict.score:.1f} "
+                    f"below floor; not publishing. issues={_verdict.issues}",
+                    file=sys.stderr,
+                )
+                sys.exit(20)
+    except SystemExit:
+        raise
+    except Exception as exc:
+        print(f"[write_script_from_fact] editor unavailable ({exc}); continuing", file=sys.stderr)
+
     atom["script_id"] = sha256_text(full_text)
     atom["content"] = build_content_contract(atom, atom["script_id"], script, fact, style)
 
