@@ -727,6 +727,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-19.mp4",
         "video_sha256": "ba808a9a1a6c5eca19df96bd8d13b00f6d684d38fcee7efd2bc826e8738ae78d"
       }
+    },
+    {
+      "published_utc": "2026-07-20T15:24:01Z",
+      "day": "2026-07-20",
+      "content_id": "bgp-2026-07-20-rules-myth-rule-srd-2024-damage-and-healing-saving-throws-and-damage-7c3ca1aa427b",
+      "publish_hash": "511cd74275607ce632bb1b8306b706c1604420169eeeadda9bafea540e953586",
+      "youtube_video_id": "znFlAAT2fTE",
+      "youtube_url": "https://www.youtube.com/watch?v=znFlAAT2fTE",
+      "video_sha256": "6f180d7968cd6343e2c6b6791108a7165408420175fcacdb5ca2c43507b24df5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-20.mp4",
+      "fingerprint": {
+        "day": "2026-07-20",
+        "category": "rules_myth",
+        "angle": "quick_example",
+        "content_id": "bgp-2026-07-20-rules-myth-rule-srd-2024-damage-and-healing-saving-throws-and-damage-7c3ca1aa427b",
+        "canonical_hash": "7c3ca1aa427b9421125a8e14958f60861811183a72cb4d51afcec6cadb62c559",
+        "script_id": "7ebcd9a022f6d1531e3cb4eb23dc568f3dad7e148099b756f3a76ed6258d084a",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_damage-and-healing_saving-throws-and-damage",
+        "fact_name": "Saving Throws and Damage",
+        "hook": "Mechanics moment: Saving Throws and Damage.",
+        "body": "Quick example for Saving Throws and Damage: call the trigger, then apply the effect once. Damage dealt via saving throws uses these rules. ## Damage against Multiple Targets When you create a damaging effect that forces two or more targets to make saving throws against it at the same time. Clear rulings now save argument time later.",
+        "cta": "DMs: Run a quick example of saving throws and damage with multiple targets to set tonight's precedent.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-20.mp4",
+        "video_sha256": "6f180d7968cd6343e2c6b6791108a7165408420175fcacdb5ca2c43507b24df5"
+      }
     }
   ]
 }

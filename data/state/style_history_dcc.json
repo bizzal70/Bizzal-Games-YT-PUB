@@ -152,5 +152,15 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-07-20": {
+    "spell_use_case": {
+      "angle": "spell_check_range",
+      "voice": "grim_referee",
+      "tone": "ominous",
+      "persona": "chaos_arcane_coach",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

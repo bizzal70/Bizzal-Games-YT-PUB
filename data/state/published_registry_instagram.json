@@ -357,6 +357,36 @@
       "hook": "Spell Casting Check consumes the slot on failure.",
       "body": "Roll d20 plus the relevant stat modifier against DC 10 plus the spell tier to cast a spell. Failure means the spell doesn't activate, but the slot is still consumed. A critical failure for Wizards triggers a mishap. Rushed rolls without confirming the DC lead to unnecessary slot loss. Confirming the DC before rolling prevents this common error.",
       "cta": "GMs: Ensure players calculate DC as 10 plus spell tier before rolling to prevent unnecessary spell slot loss."
+    },
+    {
+      "published_utc": "2026-07-20T15:24:59Z",
+      "day": "2026-07-20",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-20-rules-myth-rule-srd-2024-damage-and-healing-saving-throws-and-damage-7c3ca1aa427b",
+      "instagram_post_id": "18418388206183063",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "6f180d7968cd6343e2c6b6791108a7165408420175fcacdb5ca2c43507b24df5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-20.mp4",
+      "fact_name": "Saving Throws and Damage",
+      "category": "rules_myth",
+      "hook": "Mechanics moment: Saving Throws and Damage.",
+      "body": "Quick example for Saving Throws and Damage: call the trigger, then apply the effect once. Damage dealt via saving throws uses these rules. ## Damage against Multiple Targets When you create a damaging effect that forces two or more targets to make saving throws against it at the same time. Clear rulings now save argument time later.",
+      "cta": "DMs: Run a quick example of saving throws and damage with multiple targets to set tonight's precedent."
+    },
+    {
+      "published_utc": "2026-07-20T15:29:34Z",
+      "day": "2026-07-20",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-07-20-encounter-seed-creature-136-500531dd108c",
+      "instagram_post_id": "18106351703010880",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "42665bccc1ee77f8c81d015a90f0fcd226d5256db4d52d04a1fd9faba0cc7f9a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-20.mp4",
+      "fact_name": "Mastiff",
+      "category": "encounter_seed",
+      "hook": "Use Mastiff as 'comic relief' that quietly pressures the party's decisions.",
+      "body": "With a bite attack of 1d6 damage and a +1 to hit, the Mastiff's offensive potential is limited. Its movement range is 'near', which can be easily miscalculated in the heat of battle. Neglecting the importance of positioning and timing leads to wasted actions when the Mastiff can't reach its target. Using the Mastiff as a distraction or for objectives that don't require sustained combat presence is more effective.",
+      "cta": "GMs: Track the Mastiff's 'near' movement closely; misjudging distance wastes its 1d6 bite in time-sensitive encounters."
     }
   ]
 }

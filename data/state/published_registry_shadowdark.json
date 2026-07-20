@@ -468,6 +468,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-19.mp4",
         "video_sha256": "46e30b113d8809c952000c2212f3cac85e020d312e0ba72f370c8caec980f4f1"
       }
+    },
+    {
+      "published_utc": "2026-07-20T15:28:50Z",
+      "day": "2026-07-20",
+      "content_id": "bgp-2026-07-20-encounter-seed-creature-136-500531dd108c",
+      "publish_hash": "eeca1c5d4cab3b3f306306be772a1062ad1ff95c98709d5873737bd8d82c5293",
+      "youtube_video_id": "bJ9qAebf-bY",
+      "youtube_url": "https://www.youtube.com/watch?v=bJ9qAebf-bY",
+      "video_sha256": "42665bccc1ee77f8c81d015a90f0fcd226d5256db4d52d04a1fd9faba0cc7f9a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-20.mp4",
+      "fingerprint": {
+        "day": "2026-07-20",
+        "category": "encounter_seed",
+        "angle": "time_pressure",
+        "content_id": "bgp-2026-07-20-encounter-seed-creature-136-500531dd108c",
+        "canonical_hash": "500531dd108ce7628af4cd23c2f9341ac2696c2100004851ca22943145cd6f47",
+        "script_id": "18d3a759eb1cec464790673bf313f9979f2661c008e36592167c68438cad7e0d",
+        "fact_kind": "creature",
+        "fact_pk": 136,
+        "fact_name": "Mastiff",
+        "hook": "Use Mastiff as 'comic relief' that quietly pressures the party's decisions.",
+        "body": "With a bite attack of 1d6 damage and a +1 to hit, the Mastiff's offensive potential is limited. Its movement range is 'near', which can be easily miscalculated in the heat of battle. Neglecting the importance of positioning and timing leads to wasted actions when the Mastiff can't reach its target. Using the Mastiff as a distraction or for objectives that don't require sustained combat presence is more effective.",
+        "cta": "GMs: Track the Mastiff's 'near' movement closely; misjudging distance wastes its 1d6 bite in time-sensitive encounters.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-20.mp4",
+        "video_sha256": "42665bccc1ee77f8c81d015a90f0fcd226d5256db4d52d04a1fd9faba0cc7f9a"
+      }
     }
   ]
 }

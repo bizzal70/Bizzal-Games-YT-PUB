@@ -232,5 +232,15 @@
       "spice": [],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-07-20": {
+    "rules_myth": {
+      "angle": "quick_example",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }
