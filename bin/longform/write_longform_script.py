@@ -14,6 +14,7 @@ from datetime import datetime, UTC
 from urllib import request
 
 import system_config
+import script_quality
 from reference_paths import resolve_active_srd_path
 
 REPO_ROOT    = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
@@ -161,6 +162,39 @@ def call_openai(prompt: str) -> str:
         return json.loads(r.read())["choices"][0]["message"]["content"].strip()
 
 
+def _generate_and_validate(brief: dict, fixture_sample: list, system_id: str) -> dict:
+    """One generation attempt: call the model, parse it, validate the shape.
+    Raises ValueError on anything malformed so the caller can retry."""
+    raw = call_openai(build_prompt(brief, fixture_sample, system_id))
+    clean = raw.strip()
+    if clean.startswith("```"):
+        clean = "\n".join(clean.split("\n")[1:])
+    if clean.endswith("```"):
+        clean = "\n".join(clean.split("\n")[:-1])
+    try:
+        script = json.loads(clean)
+    except json.JSONDecodeError as e:
+        raise ValueError(f"invalid JSON from model: {e}")
+    for k in ["intro", "sections", "outro"]:
+        if k not in script or not script[k]:
+            raise ValueError(f"script missing key: {k}")
+    sections = script.get("sections", [])
+    if not isinstance(sections, list) or len(sections) < 3:
+        raise ValueError(f"need >= 3 sections, got {len(sections)}")
+    return script
+
+
+def _narration_text(script: dict) -> str:
+    """The spoken body the editor judges: intro + each section + outro."""
+    parts = [(script.get("intro") or "").strip()]
+    for s in script.get("sections") or []:
+        h = (s.get("heading") or "").strip()
+        b = (s.get("body") or "").strip()
+        parts.append(f"{h}. {b}" if h else b)
+    parts.append((script.get("outro") or "").strip())
+    return "\n\n".join(p for p in parts if p)
+
+
 def main():
     atom_path = os.environ.get("BIZZAL_LONGFORM_ATOM_PATH", "")
     brief_raw = os.environ.get("BIZZAL_LONGFORM_BRIEF", "")
@@ -176,29 +210,53 @@ def main():
     fixture_sample = load_fixture_sample(SYSTEM_ID, brief.get("fixture_hint", ""))
     print(f"[write_longform_script] fixture sample: {len(fixture_sample)} entries ({brief.get('fixture_hint')})")
 
-    print(f"[write_longform_script] calling {OPENAI_MODEL}...")
-    raw = call_openai(build_prompt(brief, fixture_sample, SYSTEM_ID))
+    # --- Generate + editorially judge, regenerating weak scripts ------------
+    # The pipeline previously had only technical gates, so a mediocre script
+    # still became a video. Now an editor scores each candidate against the
+    # RTFM voice: below target we regenerate, below the floor we refuse to
+    # publish at all. Fails OPEN (no key / API error => treated as passing).
+    quality_attempts = int(os.environ.get("BIZZAL_SCRIPT_QUALITY_RETRIES", "2")) + 1
+    system_label = SYSTEM_LABELS.get(SYSTEM_ID) or _db_system_label(SYSTEM_ID)
+    best_script, best_verdict = None, None
 
-    # Strip markdown fences if present
-    clean = raw.strip()
-    if clean.startswith("```"):
-        clean = "\n".join(clean.split("\n")[1:])
-    if clean.endswith("```"):
-        clean = "\n".join(clean.split("\n")[:-1])
+    for attempt in range(1, quality_attempts + 1):
+        print(f"[write_longform_script] calling {OPENAI_MODEL} (attempt {attempt}/{quality_attempts})...")
+        try:
+            candidate = _generate_and_validate(brief, fixture_sample, SYSTEM_ID)
+        except Exception as exc:
+            print(f"[write_longform_script] attempt {attempt} rejected: {exc}")
+            continue
 
-    try:
-        script = json.loads(clean)
-    except json.JSONDecodeError as e:
-        raise SystemExit(f"[write_longform_script] ERROR: invalid JSON from GPT-4o: {e}\n{raw[:400]}")
+        verdict = script_quality.judge(
+            _narration_text(candidate),
+            context=f"{system_label} long-form: {brief.get('title')}",
+        )
+        if verdict.available:
+            print(f"[write_longform_script] editor score={verdict.score:.1f} "
+                  f"issues={verdict.issues or 'none'}")
+        else:
+            print("[write_longform_script] editor unavailable; accepting candidate")
 
-    # Validate shape
-    for k in ["intro", "sections", "outro"]:
-        if k not in script or not script[k]:
-            raise SystemExit(f"[write_longform_script] ERROR: script missing key: {k}")
+        if best_verdict is None or verdict.score > best_verdict.score:
+            best_script, best_verdict = candidate, verdict
+        if verdict.ok:
+            break
+        if attempt < quality_attempts:
+            print("[write_longform_script] below target; regenerating...")
 
+    if best_script is None:
+        raise SystemExit("[write_longform_script] ERROR: no valid script after all attempts")
+    if not best_verdict.publishable:
+        raise SystemExit(
+            f"[write_longform_script] QUALITY GATE: best score {best_verdict.score:.1f} "
+            f"below floor; refusing to publish. issues={best_verdict.issues}"
+        )
+    if not best_verdict.ok and best_verdict.available:
+        print(f"[write_longform_script] WARN: publishing best-of at {best_verdict.score:.1f} "
+              f"(below target) issues={best_verdict.issues}")
+
+    script = best_script
     sections = script.get("sections", [])
-    if not isinstance(sections, list) or len(sections) < 3:
-        raise SystemExit(f"[write_longform_script] ERROR: need >= 3 sections, got {len(sections)}")
 
     # Compute script_id
     packed = f"{script['intro'].strip()}\n{json.dumps(sections)}\n{script['outro'].strip()}\n"
