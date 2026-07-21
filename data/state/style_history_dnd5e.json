@@ -242,5 +242,15 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-07-21": {
+    "class_spotlight": {
+      "angle": "subclass_identity",
+      "voice": "rules_lawyer",
+      "tone": "heroic",
+      "persona": "class_mentor",
+      "spice": [],
+      "tts_voice_id": "sage"
+    }
   }
 }

@@ -250,5 +250,15 @@
       ],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-07-21": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

@@ -156,6 +156,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-19.mp4",
         "video_sha256": "6c3961aacfb9ccc46c91079b0160d6b2c9ae6a4440c36f9ab790a54faacb3a63"
       }
+    },
+    {
+      "published_utc": "2026-07-21T14:50:51Z",
+      "day": "2026-07-21",
+      "content_id": "bgp-2026-07-21-rules-ruling-rule-9-1ef78c8f942f",
+      "publish_hash": "a1cab57836d2ef2acd5eafc53758def83821696c8ac587857f4b843b6d357ec5",
+      "youtube_video_id": "QBFaL52s3Jg",
+      "youtube_url": "https://www.youtube.com/watch?v=QBFaL52s3Jg",
+      "video_sha256": "a8ee7bae12cd1d4ddb849a10a5505969c199d0872ca3cfbfccf784907783e73f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-21.mp4",
+      "fingerprint": {
+        "day": "2026-07-21",
+        "category": "rules_ruling",
+        "angle": "luck_burn_timing",
+        "content_id": "bgp-2026-07-21-rules-ruling-rule-9-1ef78c8f942f",
+        "canonical_hash": "1ef78c8f942fa3cdbda1b50b437a109b37309c5725cb144bad21144698c31f23",
+        "script_id": "e4c8bb27a348cb7fde0020b521dc10579fb960e0f2096075c5c42b9580ae2d33",
+        "fact_kind": "rule",
+        "fact_pk": 9,
+        "fact_name": "Disapproval (Cleric Mechanic)",
+        "hook": "Disapproval (Cleric Mechanic) increases with each failed spell check.",
+        "body": "Disapproval starts by triggering only on a natural 1, but each failed cleric spell check expands the range by 1 for the day. Clerics who ignore this cumulative effect and cast spells recklessly face greater risk of triggering disapproval. Managing spell casting judiciously and resetting disapproval through rest, prayer, or acts of faith before it becomes a significant risk is crucial.",
+        "cta": "Judges: Enforce disapproval range increases with each failed spell check; clerics must rest or pray to reset it.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-21.mp4",
+        "video_sha256": "a8ee7bae12cd1d4ddb849a10a5505969c199d0872ca3cfbfccf784907783e73f"
+      }
     }
   ]
 }

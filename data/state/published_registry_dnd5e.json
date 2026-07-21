@@ -753,6 +753,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-20.mp4",
         "video_sha256": "6f180d7968cd6343e2c6b6791108a7165408420175fcacdb5ca2c43507b24df5"
       }
+    },
+    {
+      "published_utc": "2026-07-21T14:57:04Z",
+      "day": "2026-07-21",
+      "content_id": "bgp-2026-07-21-class-spotlight-class-tashas-cauldron-fey-wanderer-d6ef2f3181cb",
+      "publish_hash": "97a0ed1959e96fa50521bb05508461128998f671f015d07a0f819cdbbbfbe812",
+      "youtube_video_id": "xOj74v5ekDQ",
+      "youtube_url": "https://www.youtube.com/watch?v=xOj74v5ekDQ",
+      "video_sha256": "54224fc037001c6f715ffdf944a67429bdd21945458a5067fabe0d0c72460923",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-21.mp4",
+      "fingerprint": {
+        "day": "2026-07-21",
+        "category": "class_spotlight",
+        "angle": "subclass_identity",
+        "content_id": "bgp-2026-07-21-class-spotlight-class-tashas-cauldron-fey-wanderer-d6ef2f3181cb",
+        "canonical_hash": "d6ef2f3181cb6c5a7c897cb6ef1cb70214547ab22445516976956cdb08f2ad57",
+        "script_id": "91d65ef7566164540cabc00882722c6cf57be41648c73a87a471705de73856aa",
+        "fact_kind": "class",
+        "fact_pk": "tashas-cauldron_fey-wanderer",
+        "fact_name": "Fey Wanderer",
+        "hook": "Fey Wanderer: Dreadful Strikes deals 1d4 psychic damage once per turn.",
+        "body": "Dreadful Strikes allows a Fey Wanderer to deal 1d4 psychic damage once per turn on a hit with a weapon, and it doesn't stack with Hunter's Mark. Combining features that don't synergize dilutes impact. Consistent damage output comes from focusing on repeatable actions rather than stacking effects.",
+        "cta": "DMs: Remind your Fey Wanderer to choose subclass features that prioritize consistent 1d4 psychic damage over redundant effects like Hunter's Mark.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-21.mp4",
+        "video_sha256": "54224fc037001c6f715ffdf944a67429bdd21945458a5067fabe0d0c72460923"
+      }
     }
   ]
 }

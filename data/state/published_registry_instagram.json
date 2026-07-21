@@ -387,6 +387,51 @@
       "hook": "Use Mastiff as 'comic relief' that quietly pressures the party's decisions.",
       "body": "With a bite attack of 1d6 damage and a +1 to hit, the Mastiff's offensive potential is limited. Its movement range is 'near', which can be easily miscalculated in the heat of battle. Neglecting the importance of positioning and timing leads to wasted actions when the Mastiff can't reach its target. Using the Mastiff as a distraction or for objectives that don't require sustained combat presence is more effective.",
       "cta": "GMs: Track the Mastiff's 'near' movement closely; misjudging distance wastes its 1d6 bite in time-sensitive encounters."
+    },
+    {
+      "published_utc": "2026-07-21T14:51:35Z",
+      "day": "2026-07-21",
+      "system": "dcc",
+      "content_id": "bgp-2026-07-21-rules-ruling-rule-9-1ef78c8f942f",
+      "instagram_post_id": "18111832684766544",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "a8ee7bae12cd1d4ddb849a10a5505969c199d0872ca3cfbfccf784907783e73f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-21.mp4",
+      "fact_name": "Disapproval (Cleric Mechanic)",
+      "category": "rules_ruling",
+      "hook": "Disapproval (Cleric Mechanic) increases with each failed spell check.",
+      "body": "Disapproval starts by triggering only on a natural 1, but each failed cleric spell check expands the range by 1 for the day. Clerics who ignore this cumulative effect and cast spells recklessly face greater risk of triggering disapproval. Managing spell casting judiciously and resetting disapproval through rest, prayer, or acts of faith before it becomes a significant risk is crucial.",
+      "cta": "Judges: Enforce disapproval range increases with each failed spell check; clerics must rest or pray to reset it."
+    },
+    {
+      "published_utc": "2026-07-21T14:57:47Z",
+      "day": "2026-07-21",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-21-class-spotlight-class-tashas-cauldron-fey-wanderer-d6ef2f3181cb",
+      "instagram_post_id": "18133199623622961",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "54224fc037001c6f715ffdf944a67429bdd21945458a5067fabe0d0c72460923",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-21.mp4",
+      "fact_name": "Fey Wanderer",
+      "category": "class_spotlight",
+      "hook": "Fey Wanderer: Dreadful Strikes deals 1d4 psychic damage once per turn.",
+      "body": "Dreadful Strikes allows a Fey Wanderer to deal 1d4 psychic damage once per turn on a hit with a weapon, and it doesn't stack with Hunter's Mark. Combining features that don't synergize dilutes impact. Consistent damage output comes from focusing on repeatable actions rather than stacking effects.",
+      "cta": "DMs: Remind your Fey Wanderer to choose subclass features that prioritize consistent 1d4 psychic damage over redundant effects like Hunter's Mark."
+    },
+    {
+      "published_utc": "2026-07-21T15:06:14Z",
+      "day": "2026-07-21",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-07-21-rules-myth-rule-4-e030560ac496",
+      "instagram_post_id": "18442518808186941",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9ac59e34b699d989307c580d75dbb3b7b661f8fcfd66cd67913cde513bac0cd8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-21.mp4",
+      "fact_name": "Torch and Light",
+      "category": "rules_myth",
+      "hook": "Hard lesson: Torch and Light.",
+      "body": "Myth vs rule: Torch and Light. Torches last 1 hour of real time. Characters without darkvision must carry a light source or be blind. Tracking real time is core to Shadowdark play. Clear rulings now save argument time later.",
+      "cta": "GMs: Set a timer for each torch; when it hits 60 minutes, remind them they're in the dark."
     }
   ]
 }

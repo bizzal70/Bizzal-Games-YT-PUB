@@ -494,6 +494,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-20.mp4",
         "video_sha256": "42665bccc1ee77f8c81d015a90f0fcd226d5256db4d52d04a1fd9faba0cc7f9a"
       }
+    },
+    {
+      "published_utc": "2026-07-21T15:05:17Z",
+      "day": "2026-07-21",
+      "content_id": "bgp-2026-07-21-rules-myth-rule-4-e030560ac496",
+      "publish_hash": "630298e7e9ad42a2734336c2ceaf97eb8953d0be85a23092deb05c6d9e41cf37",
+      "youtube_video_id": "N6tfJ5Xr5QY",
+      "youtube_url": "https://www.youtube.com/watch?v=N6tfJ5Xr5QY",
+      "video_sha256": "9ac59e34b699d989307c580d75dbb3b7b661f8fcfd66cd67913cde513bac0cd8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-21.mp4",
+      "fingerprint": {
+        "day": "2026-07-21",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-07-21-rules-myth-rule-4-e030560ac496",
+        "canonical_hash": "e030560ac49610b94f7bf269fcd0ff7d82ef683f64636e367efc645ec57deca8",
+        "script_id": "d5e2350eb8c014ff17ee2e03d8da9f36de47f40280174ebae48ab18769a92d41",
+        "fact_kind": "rule",
+        "fact_pk": 4,
+        "fact_name": "Torch and Light",
+        "hook": "Hard lesson: Torch and Light.",
+        "body": "Myth vs rule: Torch and Light. Torches last 1 hour of real time. Characters without darkvision must carry a light source or be blind. Tracking real time is core to Shadowdark play. Clear rulings now save argument time later.",
+        "cta": "GMs: Set a timer for each torch; when it hits 60 minutes, remind them they're in the dark.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-21.mp4",
+        "video_sha256": "9ac59e34b699d989307c580d75dbb3b7b661f8fcfd66cd67913cde513bac0cd8"
+      }
     }
   ]
 }
