@@ -435,6 +435,25 @@ def main() -> int:
             )
             return 6
 
+    # Cross-day / reworded duplicate guard via the shared content ledger,
+    # scoped to platform="instagram" so a ruling that's legitimately also on
+    # YouTube is NOT blocked here — only a repeat of the same ruling on IG is.
+    # The (day, system) check above only catches same-day reposts. Fail-open.
+    _ruling = ((atom.get("script") or {}).get("hook") or "").strip()
+    _led = None
+    try:
+        sys.path.insert(0, str(repo_root / "bin" / "core"))
+        import content_ledger as _led
+        _dup, _why, _match = _led.check(_ruling, str(repo_root),
+                                        system_id=system, platform="instagram")
+        if _dup:
+            eprint(f"ERROR: DUPLICATE BLOCKED (IG) — {_why}")
+            eprint(f"  attempted: {_ruling!r} | existing: {(_match or {}).get('title')!r}")
+            return 6
+    except Exception as exc:
+        eprint(f"WARN: content ledger unavailable ({exc}); IG registry dedup only")
+        _led = None
+
     caption = build_caption(atom, day)
     print(f"[upload_instagram] caption preview: {caption[:120]}...")
 
@@ -499,6 +518,18 @@ def main() -> int:
     })
     save_registry(registry_file, registry)
     print(f"[upload_instagram] registry={registry_file}")
+
+    # Record the ruling on the IG side of the ledger so no future IG post can
+    # repeat it (DB + JSON mirror). platform-scoped: does not touch YouTube.
+    if _led is not None:
+        try:
+            _led.record(_ruling, str(repo_root), system_id=system,
+                        platform="instagram", kind="reel",
+                        title=(atom.get("script") or {}).get("hook") or "",
+                        video_id=post_id, day=day)
+            print("[upload_instagram] ledger recorded (instagram)")
+        except Exception as exc:
+            eprint(f"WARN: IG ledger record failed ({exc}); duplicate risk on re-run")
     return 0
 
 
