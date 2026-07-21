@@ -48,8 +48,16 @@ def enabled() -> bool:
 
 def tokens(text: str) -> set:
     """Significant tokens: lowercased, depunctuated, stopword-free, lightly
-    de-pluralized so 'rolls'/'roll' and 'summoners'/'summoner' agree."""
-    raw = re.sub(r"[^a-z0-9\s]", " ", (text or "").lower())
+    de-pluralized so 'rolls'/'roll' and 'summoners'/'summoner' agree.
+
+    CRITICAL: hashtags are stripped FIRST. Legacy titles carry heavy boilerplate
+    ("Warlock • Class Spotlight #dnd #ttrpg #shorts") and those 3 identical tag
+    tokens swamped the one word that actually distinguishes the video — Warlock
+    vs Seer scored 0.71 and looked like a duplicate. Stripping tags drops that
+    to 0.50 (correctly distinct) while true repeats still match exactly.
+    """
+    src = re.sub(r"#\w+", " ", (text or "").lower())
+    raw = re.sub(r"[^a-z0-9\s]", " ", src)
     out = set()
     for w in raw.split():
         if w in _STOP or len(w) < 2:
