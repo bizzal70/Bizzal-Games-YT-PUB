@@ -622,6 +622,28 @@ def main() -> int:
             eprint(f"WARN: title lint flagged {_issues} on {title!r} (off-formula)")
     except Exception as exc:
         eprint(f"WARN: title lint unavailable ({exc}); using title as-is")
+
+    # --- Duplicate guard: ONE ledger across Shorts / long-form / clips -------
+    # The per-pipeline registries hash the generated TEXT, so the same ruling
+    # reworded slipped through and the pipelines couldn't see each other. This
+    # keys on the normalized RULING and is shared by every publish path, so a
+    # clip can't restate its own parent and a re-run can't repost a topic.
+    _ruling = ((atom.get("script") or {}).get("hook") or "").strip() or title
+    _ledger = None
+    try:
+        sys.path.insert(0, str(repo_root / "bin" / "core"))
+        import content_ledger as _ledger
+
+        _dup, _why, _match = _ledger.check(_ruling, str(repo_root))
+        if _dup:
+            eprint(f"ERROR: DUPLICATE BLOCKED — {_why}")
+            eprint(f"  attempted: {_ruling!r}")
+            eprint(f"  existing:  {(_match or {}).get('title')!r} "
+                   f"video={(_match or {}).get('video_id')}")
+            return 11
+    except Exception as exc:
+        eprint(f"WARN: content ledger unavailable ({exc}); relying on registry dedup only")
+        _ledger = None
     description = (args.description_override or "").strip() or atom.get("youtube_description") or build_description(atom, day)
     privacy = (os.getenv("BIZZAL_YT_PRIVACY") or "private").strip().lower()
     if privacy not in {"private", "unlisted", "public"}:
@@ -683,6 +705,19 @@ def main() -> int:
     )
     save_registry(registry_file, registry)
     print(f"[upload_youtube] registry={registry_file} hash={publish_hash[:16]}")
+
+    # Record the ruling so no pipeline can ever republish it (DB + JSON mirror).
+    if _ledger is not None:
+        try:
+            _key = _ledger.record(
+                _ruling, str(repo_root),
+                system_id=str(atom.get("system") or content_profile(atom)),
+                kind=str(atom.get("content_type") or "short"),
+                title=title, video_id=vid, day=day,
+            )
+            print(f"[upload_youtube] ledger recorded key={_key[:16]}")
+        except Exception as exc:
+            eprint(f"WARN: ledger record failed ({exc}); duplicate risk on re-run")
 
     # Attach our accurate caption track (best-effort; never fails the publish).
     maybe_upload_captions(youtube, vid, video_path)
