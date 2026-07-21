@@ -152,7 +152,7 @@ def duplicate_publish(registry: dict, publish_hash: str, content_id: str) -> dic
     return None
 
 
-def _hook_fragment(hook: str, limit: int = 55) -> str:
+def _hook_fragment(hook: str, limit: int = 80) -> str:
     """Pull a short, punchy curiosity fragment out of the (full-sentence) hook.
 
     The hook is a whole sentence like "Yes, Cubi Devil looks harmless - until the
@@ -272,6 +272,17 @@ _HASHTAGS = {
         "youtube_tags": ["dcc", "dungeon crawl classics", "osr", "ttrpg", "shorts", "rpg"],
     },
 }
+# One short, searchable system tag appended to every title. The new formula
+# titles carry no system signal at all, so a viewer scrolling the feed cannot
+# tell whether a ruling is D&D, Shadowdark or DCC -- they click the wrong game
+# and bounce, or worse take the wrong ruling back to their table.
+_SYSTEM_TITLE_TAG = {"dnd5e": "#dnd5e", "shadowdark": "#shadowdark", "dcc": "#dcc"}
+
+
+def system_title_tag(profile: str) -> str:
+    return _SYSTEM_TITLE_TAG.get(profile, "#ttrpg")
+
+
 _HASHTAGS_FALLBACK = {
     "title": "#ttrpg #rpg #shorts",
     "desc": "#ttrpg #rpg #shorts",
@@ -622,6 +633,14 @@ def main() -> int:
             eprint(f"WARN: title lint flagged {_issues} on {title!r} (off-formula)")
     except Exception as exc:
         eprint(f"WARN: title lint unavailable ({exc}); using title as-is")
+
+    # Tell the viewer which game this is. Appended AFTER the lint so it is never
+    # stripped, and only when the title doesn't already name the system.
+    _tag = system_title_tag(content_profile(atom))
+    if _tag.lstrip("#").lower() not in title.lower():
+        _candidate = f"{title} {_tag}"
+        title = _candidate if len(_candidate) <= 100 else f"{title[:100 - len(_tag) - 2].rstrip()} {_tag}"
+    print(f"[upload_youtube] title: {title}")
 
     # --- Duplicate guard: ONE ledger across Shorts / long-form / clips -------
     # The per-pipeline registries hash the generated TEXT, so the same ruling
