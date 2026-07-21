@@ -1109,6 +1109,256 @@
       "video_id": "Ko-A1YHWvCc",
       "day": "2026-02-14",
       "published_at": "2026-07-21T22:21:54+00:00"
+    },
+    {
+      "content_key": "1922dc7d14985a4ed8b81511b70e31d7ea60a1dc4ce70a90c3687e33093d950b",
+      "token_text": "hard lesson light torch",
+      "system_id": "shadowdark",
+      "kind": "backfill",
+      "title": "Hard lesson: Torch and Light",
+      "video_id": "N6tfJ5Xr5QY",
+      "day": "2026-07-21",
+      "published_at": "2026-07-21T22:25:07+00:00"
+    },
+    {
+      "content_key": "3fff6e3c385d26041d47bf5ea56ad868216c171e2261b7aef659b6a6a979ce4f",
+      "token_text": "1d4 deal dreadful fey psychic strike wanderer",
+      "system_id": "dnd5e",
+      "kind": "backfill",
+      "title": "Fey Wanderer: Dreadful Strikes deals 1d4 psychic",
+      "video_id": "xOj74v5ekDQ",
+      "day": "2026-07-21",
+      "published_at": "2026-07-21T22:25:08+00:00"
+    },
+    {
+      "content_key": "c050a6885b429633c43854675006cbaeff3b719558bf4caa2a34af89d6ed07d0",
+      "token_text": "cleric disapproval increase mechanic",
+      "system_id": "dcc",
+      "kind": "backfill",
+      "title": "Disapproval (Cleric Mechanic) increases with each",
+      "video_id": "QBFaL52s3Jg",
+      "day": "2026-07-21",
+      "published_at": "2026-07-21T22:25:08+00:00"
+    },
+    {
+      "content_key": "904f57fcb0ec4c829f438e204a15a4171a3d2a7205abf2956ea2f496194d71e9",
+      "token_text": "balance dice durability hit summoner",
+      "system_id": "shadowdark",
+      "kind": "backfill",
+      "title": "Summoners' hit dice balance durability",
+      "video_id": "r5c5W-kWLDI",
+      "day": "2026-07-20",
+      "published_at": "2026-07-21T22:25:09+00:00"
+    },
+    {
+      "content_key": "953ddae2c2fb9dd2a445d00fd7f4f123e95fc53dcb932bfcead50a0eba48b126",
+      "token_text": "allow conjurer creature extra gift summoner",
+      "system_id": "shadowdark",
+      "kind": "backfill",
+      "title": "Summoners' Conjurer's Gift allows extra creature",
+      "video_id": "aaxltSAGJzg",
+      "day": "2026-07-20",
+      "published_at": "2026-07-21T22:25:10+00:00"
+    },
+    {
+      "content_key": "2c324ac3619f01b6c760c25a301c2dd730de21cc2e620da7f0c1d2f08fcf3519",
+      "token_text": "consume failed slot spell summon summoner",
+      "system_id": "shadowdark",
+      "kind": "backfill",
+      "title": "Summoners consume spell slot on failed summon",
+      "video_id": "kkBXYhfLRBQ",
+      "day": "2026-07-20",
+      "published_at": "2026-07-21T22:25:11+00:00"
+    },
+    {
+      "content_key": "c71363769739764dfd79b596dd54fb879f37736750c6839cd630bf0972711f13",
+      "token_text": "comic mastiff pressure quietly relief use",
+      "system_id": "shadowdark",
+      "kind": "backfill",
+      "title": "Use Mastiff as 'comic relief' that quietly pressures",
+      "video_id": "bJ9qAebf-bY",
+      "day": "2026-07-20",
+      "published_at": "2026-07-21T22:25:12+00:00"
+    },
+    {
+      "content_key": "f1d169908e97b642a99ed27e8c29bc24004c85bae64bc6b5addfdf699829f7bb",
+      "token_text": "damage mechanic moment saving throw",
+      "system_id": "dnd5e",
+      "kind": "backfill",
+      "title": "Mechanics moment: Saving Throws and Damage",
+      "video_id": "znFlAAT2fTE",
+      "day": "2026-07-20",
+      "published_at": "2026-07-21T22:25:12+00:00"
+    },
+    {
+      "content_key": "734d0fd77a95d2a783af5b6a2c5345524d7d994024d1a1a867a56121b4cff8e4",
+      "token_text": "create duplicate evil mirror mischief",
+      "system_id": "shadowdark",
+      "kind": "backfill",
+      "title": "The Mirror Of Mischief creates an evil duplicate the",
+      "video_id": "PNHt-6gkAxo",
+      "day": "2026-07-19",
+      "published_at": "2026-07-21T22:25:13+00:00"
+    },
+    {
+      "content_key": "12ad6e72aa3a66c097f457995e6b188290e1b19707451a5a08bcc6ce40fe82f6",
+      "token_text": "brute chain comic ogre quietly relief use",
+      "system_id": "dnd5e",
+      "kind": "backfill",
+      "title": "Use Ogre Chain Brute as 'comic relief' that quietly",
+      "video_id": "DkMFXh2yoj8",
+      "day": "2026-07-19",
+      "published_at": "2026-07-21T22:25:13+00:00"
+    },
+    {
+      "content_key": "bb6c60e0e1f12eebeed2c2f9c5b8518e161be100ebb4426d5a5ef984e2556ef4",
+      "token_text": "chao cockatrice hellseeker high low paper table threat",
+      "system_id": "dcc",
+      "kind": "backfill",
+      "title": "Low-threat on paper, high-chaos at the table • Hellseeker Cockatrice",
+      "video_id": "sQXVIIbWbng",
+      "day": "2026-07-19",
+      "published_at": "2026-07-21T22:25:14+00:00"
+    },
+    {
+      "content_key": "928c410200bfd896d2d0d54726df8ddc7de99e4b3975bb225687ec5e8dce0751",
+      "token_text": "best deathbringer dice mechanic multiple result roll",
+      "system_id": "dcc",
+      "kind": "backfill",
+      "title": "Deathbringer's Dice Mechanics: Multiple Rolls, Best Result",
+      "video_id": "KzxPM9JbqzA",
+      "day": "2026-07-19",
+      "published_at": "2026-07-21T22:25:14+00:00"
+    },
+    {
+      "content_key": "3ce438f4287201c0a5eb408164e57cb22e6391375a3b5a9190b79271ec432cb6",
+      "token_text": "character deathbringer deed level mighty scale",
+      "system_id": "dcc",
+      "kind": "backfill",
+      "title": "Deathbringer's Mighty Deeds scale with character level",
+      "video_id": "3fuBqFwAU6I",
+      "day": "2026-07-19",
+      "published_at": "2026-07-21T22:25:15+00:00"
+    },
+    {
+      "content_key": "21bde659d0402549855c53647ebd3828b7a885d76125b74035b6d8ce6f65a917",
+      "token_text": "boost deathbringer luck must quickly used",
+      "system_id": "dcc",
+      "kind": "backfill",
+      "title": "Deathbringer's Luck boosts must be used quickly",
+      "video_id": "25YmGgsgzoo",
+      "day": "2026-07-19",
+      "published_at": "2026-07-21T22:25:15+00:00"
+    },
+    {
+      "content_key": "1f420525d94511291f98343d2c08a2f1c7cfe5dfb57d54aa4af783894ca8af4a",
+      "token_text": "casting check consume failure slot spell",
+      "system_id": "shadowdark",
+      "kind": "backfill",
+      "title": "Spell Casting Check consumes the slot on failure",
+      "video_id": "rKFb1kxrUZg",
+      "day": "2026-07-18",
+      "published_at": "2026-07-21T22:25:17+00:00"
+    },
+    {
+      "content_key": "294856e4b0bc00b1592216c052706565c0c3cb549f2a0a9818e7ca2a2723a112",
+      "token_text": "armor barrier only tattoo without work",
+      "system_id": "dnd5e",
+      "kind": "backfill",
+      "title": "Barrier Tattoo only works without armor",
+      "video_id": "9vsHvX0AE4A",
+      "day": "2026-07-18",
+      "published_at": "2026-07-21T22:25:17+00:00"
+    },
+    {
+      "content_key": "097cb9da45f2917e3f96e2301a46a1d7024a8f76884454d8bcdb410d8d0108fb",
+      "token_text": "along dice fighting smaller two uses weapon",
+      "system_id": "dcc",
+      "kind": "backfill",
+      "title": "Two-Weapon Fighting uses smaller dice along the dice",
+      "video_id": "ag5R075YRb8",
+      "day": "2026-07-18",
+      "published_at": "2026-07-21T22:25:18+00:00"
+    },
+    {
+      "content_key": "ad2ebd5ad82602c4690a3fcb00d68db16a20bdb497bcec3e75a15f83b5799019",
+      "token_text": "assassin harmless look",
+      "system_id": "shadowdark",
+      "kind": "backfill",
+      "title": "Assassin looks harmless",
+      "video_id": "967ZX_gNpng",
+      "day": "2026-07-17",
+      "published_at": "2026-07-21T22:25:18+00:00"
+    },
+    {
+      "content_key": "9bbe88b8559caab0803d466821c29422c517d659dd6b7acb5cedf8ff1b539744",
+      "token_text": "attacker disadvantage impose target unseen",
+      "system_id": "dnd5e",
+      "kind": "backfill",
+      "title": "Unseen Attackers and Targets impose Disadvantage on",
+      "video_id": "JYftz0TNIzw",
+      "day": "2026-07-17",
+      "published_at": "2026-07-21T22:25:19+00:00"
+    },
+    {
+      "content_key": "e97da7329ce256ea45076a534757eca910217b6de9c3a98f44fea472dbf57c4c",
+      "token_text": "best economy game halfling have luck",
+      "system_id": "dcc",
+      "kind": "backfill",
+      "title": "Halflings have the best Luck economy in the game",
+      "video_id": "KndXgaLRtO4",
+      "day": "2026-07-17",
+      "published_at": "2026-07-21T22:25:19+00:00"
+    },
+    {
+      "content_key": "515c54d4393e236d29ddb90208694fa50434028e3eb8193fd1b43ac14016a77d",
+      "token_text": "damage fire flame grant immunity investiture",
+      "system_id": "dnd5e",
+      "kind": "backfill",
+      "title": "Investiture of Flame grants immunity to fire damage",
+      "video_id": "Mp5Z8sfZhnU",
+      "day": "2026-07-16",
+      "published_at": "2026-07-21T22:25:20+00:00"
+    },
+    {
+      "content_key": "69cfd9d4c42d4ec890aa08b743d4de1bbfec076aeea95f47a22d3f86b9400f4d",
+      "token_text": "around build cacophony consequence golem light real scene tone",
+      "system_id": "dcc",
+      "kind": "backfill",
+      "title": "Light tone, real consequences: build the scene around • Cacophony Golem",
+      "video_id": "YNQo4-7fV44",
+      "day": "2026-07-16",
+      "published_at": "2026-07-21T22:25:20+00:00"
+    },
+    {
+      "content_key": "526589c1cded0f2449ac26f44bf29e167a7409a9d94e6ad70e7f0b9fee701ca0",
+      "token_text": "13 compel dc forbidden scroll summoning",
+      "system_id": "dcc",
+      "kind": "backfill",
+      "title": "Scrolls of the Forbidden Summoning compel a Will DC 13",
+      "video_id": "kEjemjPAYIQ",
+      "day": "2026-07-16",
+      "published_at": "2026-07-21T22:25:21+00:00"
+    },
+    {
+      "content_key": "49197cb6558dd0615cee4bb52cd7fc7b45f4df742de34caa51eb21a7dfaa32bc",
+      "token_text": "classic easy fight gets vulture weird",
+      "system_id": "dnd5e",
+      "kind": "backfill",
+      "title": "Vulture is the classic 'easy fight' that gets weird",
+      "video_id": "d2wbE3pQGto",
+      "day": "2026-07-16",
+      "published_at": "2026-07-21T22:25:21+00:00"
+    },
+    {
+      "content_key": "466b9aba40f915d9a9e3358125067193a7fa3215a6f2ea0e07fb23fd3cdd33cd",
+      "token_text": "duration focu limit set spidersilk time",
+      "system_id": "shadowdark",
+      "kind": "backfill",
+      "title": "Spidersilk's duration is Focus, not a set time limit",
+      "video_id": "mOY-IyOjVAU",
+      "day": "2026-07-16",
+      "published_at": "2026-07-21T22:25:22+00:00"
     }
   ]
 }
