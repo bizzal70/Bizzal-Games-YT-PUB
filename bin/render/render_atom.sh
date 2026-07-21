@@ -738,6 +738,34 @@ if [[ -f "$BRAND_ICON" ]]; then
   || echo "[render] WARN: brand icon overlay failed, continuing without it" >&2
 fi
 
+# System badge (top-left): so a viewer always knows which game this ruling is
+# for -- the titles alone couldn't convey it in-feed. Fail-soft; disable with
+# BIZZAL_SYSTEM_BADGE=0.
+if [[ "${BIZZAL_SYSTEM_BADGE:-1}" == "1" ]]; then
+  SYS_RAW="$(jq -r '.system // empty' "$ATOM" 2>/dev/null)"
+  [[ -z "$SYS_RAW" ]] && SYS_RAW="${BIZZAL_SYSTEM_ID:-}"
+  SYS_RAW="$(printf '%s' "$SYS_RAW" | tr '[:upper:]' '[:lower:]')"
+  case "$SYS_RAW" in
+    dnd5e|dnd)         BADGE="D&D 5e" ;;
+    shadowdark)        BADGE="SHADOWDARK" ;;
+    dcc)               BADGE="DCC" ;;
+    *)                 BADGE="" ;;
+  esac
+  if [[ -n "$BADGE" && -f "$VIDEO_ONLY" ]]; then
+    VIDEO_ONLY_BADGED="$TMPDIR/video_only_badged.mp4"
+    # ffmpeg drawtext: escape the ampersand in "D&D 5e".
+    BADGE_ESC="${BADGE//&/\\&}"
+    ffmpeg -y -hide_banner -loglevel error \
+      -i "$VIDEO_ONLY" \
+      -vf "drawtext=fontfile=${FONT}:text='${BADGE_ESC}':fontsize=40:fontcolor=white:box=1:boxcolor=black@0.62:boxborderw=16:borderw=2:bordercolor=black@0.9:x=34:y=34" \
+      -c:v libx264 -pix_fmt yuv420p -r 30 -movflags +faststart \
+      "$VIDEO_ONLY_BADGED" \
+    && mv "$VIDEO_ONLY_BADGED" "$VIDEO_ONLY" \
+    && echo "[render] system badge applied: ${BADGE}" >&2 \
+    || echo "[render] WARN: system badge failed, continuing without it" >&2
+  fi
+fi
+
 if [[ "$INTRO_PAD_SEC" != "0" ]]; then
   INTRO_VIDEO="$TMPDIR/video_intro.mp4"
   INTRO_VF="[0:v][1:v]concat=n=2:v=1:a=0"
