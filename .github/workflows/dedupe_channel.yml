@@ -42,6 +42,8 @@ jobs:
           from googleapiclient.discovery import build
 
           EXECUTE = (os.environ.get("EXECUTE") or "").strip().lower() == "true"
+          # Never auto-unlist flagship long-form on a view-count technicality.
+          PROTECTED = {"KzxPM9JbqzA"}   # Deathbringer long-form (thumbnail + CC)
 
           import re as _re
           _SYSTEMS = (("shadowdark",), ("dcc", "dungeoncrawlclassics"),
@@ -116,8 +118,10 @@ jobs:
               for l in losers:
                   mark = "unlist" if l["privacy"] == "public" else f"skip({l['privacy']})"
                   print(f"   {mark:<7} {l['id']}  {l['views']:>5} views  {l['privacy']:<8} {l['title'][:52]}")
-                  if l["privacy"] == "public":
+                  if l["privacy"] == "public" and l["id"] not in PROTECTED:
                       to_unlist.append(l)
+                  elif l["id"] in PROTECTED:
+                      print(f"   PROTECTED {l['id']} — left public (your call)")
               print()
 
           print(f"=> {len(to_unlist)} public duplicates to unlist "
