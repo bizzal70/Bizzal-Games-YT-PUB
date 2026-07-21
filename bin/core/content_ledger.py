@@ -90,17 +90,19 @@ def system_of(text: str) -> str:
     return ""
 
 
-def content_key(text: str, system_id: str = "") -> str:
+def content_key(text: str, system_id: str = "", platform: str = "youtube") -> str:
     """Stable key for an exact-ruling match (order/case/punctuation agnostic),
-    SCOPED BY SYSTEM.
+    SCOPED BY PLATFORM + SYSTEM.
 
-    The system must be part of the key, not just a comparison filter: it is the
-    table's primary key, so without it a D&D Warlock and a Shadowdark Warlock
-    collide and only one row is ever stored — leaving the other system with
-    nothing to match against and letting a true repeat through.
+    Both must be in the key, not just a comparison filter: content_key is the
+    table's primary key. Same-ruling rows for D&D vs Shadowdark, or YouTube vs
+    Instagram, must be DISTINCT rows so each has something to match against.
+    A ruling belongs on both YouTube and IG (cross-posting) but must not repeat
+    WITHIN a platform — platform-in-key gives exactly that.
     """
     sid = (system_id or system_of(text) or "").strip().lower()
-    payload = f"{sid}|" + " ".join(sorted(tokens(text)))
+    plat = (platform or "youtube").strip().lower()
+    payload = f"{plat}|{sid}|" + " ".join(sorted(tokens(text)))
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
@@ -116,12 +118,14 @@ CREATE TABLE IF NOT EXISTS published_content (
     content_key  TEXT PRIMARY KEY,
     token_text   TEXT NOT NULL,
     system_id    TEXT,
+    platform     TEXT,
     kind         TEXT,
     title        TEXT,
     video_id     TEXT,
     day          TEXT,
     published_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+ALTER TABLE published_content ADD COLUMN IF NOT EXISTS platform TEXT;
 """
 
 
@@ -139,12 +143,14 @@ def _db_rows():
             cur.execute(_DDL)
             conn.commit()
             cur.execute(
-                "SELECT content_key, token_text, title, video_id, kind, day, system_id "
+                "SELECT content_key, token_text, title, video_id, kind, day, "
+                "system_id, platform "
                 "FROM published_content ORDER BY published_at DESC LIMIT 2000"
             )
             return [
                 {"content_key": r[0], "token_text": r[1], "title": r[2],
-                 "video_id": r[3], "kind": r[4], "day": r[5], "system_id": r[6]}
+                 "video_id": r[3], "kind": r[4], "day": r[5], "system_id": r[6],
+                 "platform": r[7]}
                 for r in cur.fetchall()
             ]
 
@@ -155,10 +161,11 @@ def _db_insert(row: dict) -> None:
             cur.execute(_DDL)
             cur.execute(
                 "INSERT INTO published_content "
-                "(content_key, token_text, system_id, kind, title, video_id, day) "
-                "VALUES (%s,%s,%s,%s,%s,%s,%s) ON CONFLICT (content_key) DO NOTHING",
+                "(content_key, token_text, system_id, platform, kind, title, video_id, day) "
+                "VALUES (%s,%s,%s,%s,%s,%s,%s,%s) ON CONFLICT (content_key) DO NOTHING",
                 (row["content_key"], row["token_text"], row.get("system_id"),
-                 row.get("kind"), row.get("title"), row.get("video_id"), row.get("day")),
+                 row.get("platform"), row.get("kind"), row.get("title"),
+                 row.get("video_id"), row.get("day")),
             )
             conn.commit()
 
@@ -200,22 +207,29 @@ def _load(repo_root: str):
         return _json_rows(repo_root), "json"
 
 
-def check(text: str, repo_root: str, system_id: str = ""):
+def check(text: str, repo_root: str, system_id: str = "", platform: str = "youtube"):
     """Return (is_duplicate, reason, match_row_or_None).
 
-    Scoped by game system: the same ruling for D&D and for Shadowdark are
-    DIFFERENT videos, so they must not block each other. When either side's
-    system is unknown we still compare (conservative — better a rare false
-    block, which is logged and diagnosable, than a duplicate slipping out).
+    Scoped by PLATFORM + game system: the same ruling on YouTube and on
+    Instagram are legitimate cross-posts (must not block each other); D&D vs
+    Shadowdark are different videos too. Only a repeat on the SAME platform for
+    the SAME system is a duplicate. When a stored row's system/platform is
+    unknown we still compare (conservative — a rare logged false block beats a
+    duplicate slipping out). Rows without a platform are treated as youtube
+    (the whole back catalog predates IG being in the ledger).
     """
     if not enabled() or not (text or "").strip():
         return False, "", None
     sid = (system_id or system_of(text) or "").strip().lower()
-    key, toks = content_key(text, sid), tokens(text)
+    plat = (platform or "youtube").strip().lower()
+    key, toks = content_key(text, sid, plat), tokens(text)
     rows, source = _load(repo_root)
 
     def _comparable(r):
         rsid = (r.get("system_id") or "").strip().lower()
+        rplat = (r.get("platform") or "youtube").strip().lower()
+        if plat != rplat:
+            return False
         return not (sid and rsid and sid != rsid)
 
     for r in rows:
@@ -231,16 +245,17 @@ def check(text: str, repo_root: str, system_id: str = ""):
 
 
 def record(text: str, repo_root: str, *, system_id="", kind="", title="",
-           video_id="", day="") -> str:
+           video_id="", day="", platform="youtube") -> str:
     """Persist a published ruling to BOTH stores. Returns the content key."""
     # Derive the system from legacy hashtags when the caller doesn't know it,
     # so backfilled rows are scopeable instead of blocking every system.
     sid = (system_id or system_of(text) or "").strip().lower()
-    key = content_key(text, sid)
+    plat = (platform or "youtube").strip().lower()
+    key = content_key(text, sid, plat)
     row = {
         "content_key": key,
         "token_text": " ".join(sorted(tokens(text))),
-        "system_id": sid, "kind": kind, "title": title,
+        "system_id": sid, "platform": plat, "kind": kind, "title": title,
         "video_id": video_id, "day": day,
         "published_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
