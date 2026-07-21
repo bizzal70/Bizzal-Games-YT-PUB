@@ -68,9 +68,40 @@ def tokens(text: str) -> set:
     return out
 
 
-def content_key(text: str) -> str:
-    """Stable key for an exact-ruling match (order/case/punctuation agnostic)."""
-    return hashlib.sha256(" ".join(sorted(tokens(text))).encode("utf-8")).hexdigest()
+_SYSTEM_TAGS = (
+    ("shadowdark", {"shadowdark"}),
+    ("dcc", {"dcc", "dungeoncrawlclassics"}),
+    ("dnd5e", {"dnd", "dnd5e", "dnd5e2024", "dungeonsanddragons"}),
+)
+
+
+def system_of(text: str) -> str:
+    """Infer the game system from legacy hashtags ('#dnd', '#shadowdark').
+
+    tokens() strips hashtags (they were causing false duplicates), which also
+    removed the ONE tag that legitimately separates content: a D&D Warlock and
+    a Shadowdark Warlock are different videos. We recover it here so the check
+    can scope by system instead of merging them.
+    """
+    tags = set(re.findall(r"#(\w+)", (text or "").lower()))
+    for system_id, group in _SYSTEM_TAGS:
+        if tags & group:
+            return system_id
+    return ""
+
+
+def content_key(text: str, system_id: str = "") -> str:
+    """Stable key for an exact-ruling match (order/case/punctuation agnostic),
+    SCOPED BY SYSTEM.
+
+    The system must be part of the key, not just a comparison filter: it is the
+    table's primary key, so without it a D&D Warlock and a Shadowdark Warlock
+    collide and only one row is ever stored — leaving the other system with
+    nothing to match against and letting a true repeat through.
+    """
+    sid = (system_id or system_of(text) or "").strip().lower()
+    payload = f"{sid}|" + " ".join(sorted(tokens(text)))
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
 def similarity(a: set, b: set) -> float:
@@ -108,12 +139,12 @@ def _db_rows():
             cur.execute(_DDL)
             conn.commit()
             cur.execute(
-                "SELECT content_key, token_text, title, video_id, kind, day "
+                "SELECT content_key, token_text, title, video_id, kind, day, system_id "
                 "FROM published_content ORDER BY published_at DESC LIMIT 2000"
             )
             return [
                 {"content_key": r[0], "token_text": r[1], "title": r[2],
-                 "video_id": r[3], "kind": r[4], "day": r[5]}
+                 "video_id": r[3], "kind": r[4], "day": r[5], "system_id": r[6]}
                 for r in cur.fetchall()
             ]
 
@@ -169,16 +200,30 @@ def _load(repo_root: str):
         return _json_rows(repo_root), "json"
 
 
-def check(text: str, repo_root: str):
-    """Return (is_duplicate, reason, match_row_or_None)."""
+def check(text: str, repo_root: str, system_id: str = ""):
+    """Return (is_duplicate, reason, match_row_or_None).
+
+    Scoped by game system: the same ruling for D&D and for Shadowdark are
+    DIFFERENT videos, so they must not block each other. When either side's
+    system is unknown we still compare (conservative — better a rare false
+    block, which is logged and diagnosable, than a duplicate slipping out).
+    """
     if not enabled() or not (text or "").strip():
         return False, "", None
-    key, toks = content_key(text), tokens(text)
+    sid = (system_id or system_of(text) or "").strip().lower()
+    key, toks = content_key(text, sid), tokens(text)
     rows, source = _load(repo_root)
+
+    def _comparable(r):
+        rsid = (r.get("system_id") or "").strip().lower()
+        return not (sid and rsid and sid != rsid)
+
     for r in rows:
-        if r.get("content_key") == key:
+        if _comparable(r) and r.get("content_key") == key:
             return True, f"exact ruling already published ({source})", r
     for r in rows:
+        if not _comparable(r):
+            continue
         sim = similarity(toks, set((r.get("token_text") or "").split()))
         if sim >= SIMILARITY:
             return True, f"near-duplicate {sim:.0%} of an existing ruling ({source})", r
@@ -188,11 +233,14 @@ def check(text: str, repo_root: str):
 def record(text: str, repo_root: str, *, system_id="", kind="", title="",
            video_id="", day="") -> str:
     """Persist a published ruling to BOTH stores. Returns the content key."""
-    key = content_key(text)
+    # Derive the system from legacy hashtags when the caller doesn't know it,
+    # so backfilled rows are scopeable instead of blocking every system.
+    sid = (system_id or system_of(text) or "").strip().lower()
+    key = content_key(text, sid)
     row = {
         "content_key": key,
         "token_text": " ".join(sorted(tokens(text))),
-        "system_id": system_id, "kind": kind, "title": title,
+        "system_id": sid, "kind": kind, "title": title,
         "video_id": video_id, "day": day,
         "published_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
