@@ -1,0 +1,128 @@
+name: retro-tag titles with system (temp)
+
+on:
+  workflow_dispatch:
+    inputs:
+      execute:
+        description: 'Set "true" to actually rename. Default is a dry run.'
+        required: false
+        default: "false"
+
+permissions:
+  contents: read
+
+jobs:
+  retag:
+    runs-on: ubuntu-latest
+    env:
+      BIZZAL_YT_TOKEN_FILE: /home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/.secrets/youtube_token.json
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -q google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+      - name: Materialize YouTube OAuth token
+        env:
+          BIZZAL_YT_TOKEN_JSON: ${{ secrets.BIZZAL_YT_TOKEN_JSON }}
+        run: |
+          mkdir -p .secrets
+          printf '%s' "$BIZZAL_YT_TOKEN_JSON" > .secrets/youtube_token.json
+      - name: Append the system hashtag to every untagged title
+        env:
+          EXECUTE: ${{ github.event.inputs.execute }}
+        run: |
+          python - <<'PY'
+          import os, sys, glob, json, re
+          sys.path.insert(0, "bin/core")
+          import content_ledger as L
+          from google.oauth2.credentials import Credentials
+          from google.auth.transport.requests import Request
+          from googleapiclient.discovery import build
+
+          EXECUTE = (os.environ.get("EXECUTE") or "").strip().lower() == "true"
+          TAG = {"dnd5e": "#dnd5e", "shadowdark": "#shadowdark", "dcc": "#dcc"}
+          # tags that already imply a system, so we don't double up
+          HAS_SYS = re.compile(r"#(dnd5e|dnd|shadowdark|dcc|dungeoncrawlclassics|dungeonsanddragons)\b", re.I)
+
+          # video_id -> system, from the publish registries (authoritative; new
+          # formula titles carry no tag to infer from).
+          VID2SYS = {}
+          for p in glob.glob("data/state/published_registry_*.json"):
+              base = os.path.basename(p)[len("published_registry_"):-len(".json")]
+              sysid = re.sub(r"^(longform|clips)_", "", base)
+              if sysid == "instagram":
+                  continue
+              try:
+                  for it in json.load(open(p)).get("items", []):
+                      if it.get("youtube_video_id"):
+                          VID2SYS[it["youtube_video_id"]] = sysid
+              except Exception:
+                  pass
+          print(f"registry map: {len(VID2SYS)} video->system")
+
+          SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
+                    "https://www.googleapis.com/auth/youtube.readonly",
+                    "https://www.googleapis.com/auth/youtube.force-ssl"]
+          creds = Credentials.from_authorized_user_file(".secrets/youtube_token.json", SCOPES)
+          creds.refresh(Request())
+          yt = build("youtube", "v3", credentials=creds)
+
+          ch = yt.channels().list(part="contentDetails", mine=True).execute()
+          uploads = ch["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+          ids, token = [], None
+          while True:
+              r = yt.playlistItems().list(part="snippet", playlistId=uploads,
+                                          maxResults=50, pageToken=token).execute()
+              for i in r.get("items", []):
+                  v = i["snippet"]["resourceId"]["videoId"]
+                  if v not in ids:
+                      ids.append(v)
+              token = r.get("nextPageToken")
+              if not token:
+                  break
+
+          planned, skipped_tagged, skipped_nosys = [], 0, 0
+          for i in range(0, len(ids), 50):
+              r = yt.videos().list(part="snippet,status", id=",".join(ids[i:i+50])).execute()
+              for it in r.get("items", []):
+                  vid, sn = it["id"], it["snippet"]
+                  title = sn["title"]
+                  if HAS_SYS.search(title) or L.system_of(title):
+                      skipped_tagged += 1
+                      continue
+                  sysid = VID2SYS.get(vid, "")
+                  tag = TAG.get(sysid)
+                  if not tag:
+                      skipped_nosys += 1
+                      print(f"  NO-SYSTEM {vid}  {title[:56]}")
+                      continue
+                  cand = f"{title} {tag}"
+                  if len(cand) > 100:
+                      cand = f"{title[:100-len(tag)-1].rstrip()} {tag}"
+                  planned.append((vid, sn, title, cand, sysid))
+
+          print(f"\n{len(planned)} to retag | {skipped_tagged} already tagged | {skipped_nosys} unknown-system\n")
+          for vid, sn, old, new, sysid in planned:
+              print(f"  [{sysid:10}] {old[:48]}  ->  ...{new[-14:]}")
+
+          if EXECUTE:
+              done = 0
+              for vid, sn, old, new, sysid in planned:
+                  try:
+                      body = {"id": vid, "snippet": {
+                          "title": new,
+                          "categoryId": sn.get("categoryId", "20"),
+                          "description": sn.get("description", ""),
+                          "tags": sn.get("tags", []),
+                      }}
+                      yt.videos().update(part="snippet", body=body).execute()
+                      done += 1
+                      print(f"  renamed {vid} -> {new[-16:]}")
+                  except Exception as exc:
+                      print(f"  FAILED  {vid}: {exc}")
+              print(f"\nDONE: {done}/{len(planned)} retagged")
+          else:
+              print("\nDRY RUN — nothing changed")
+          PY
