@@ -42,6 +42,17 @@ jobs:
           from googleapiclient.discovery import build
 
           EXECUTE = (os.environ.get("EXECUTE") or "").strip().lower() == "true"
+
+          import re as _re
+          _SYSTEMS = (("shadowdark",), ("dcc", "dungeoncrawlclassics"),
+                      ("dnd", "dnd5e", "dnd5e2024", "dungeonsanddragons"))
+          def _system_of(title):
+              tags = set(_re.findall(r'#(\w+)', (title or '').lower()))
+              for group in _SYSTEMS:
+                  if tags & set(group):
+                      return group[0]
+              return ''   # new-format titles carry no tags
+
           SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
                     "https://www.googleapis.com/auth/youtube.readonly",
                     "https://www.googleapis.com/auth/youtube.force-ssl"]
@@ -55,7 +66,10 @@ jobs:
           while True:
               r = yt.playlistItems().list(part="snippet", playlistId=uploads,
                                           maxResults=50, pageToken=token).execute()
-              ids += [i["snippet"]["resourceId"]["videoId"] for i in r.get("items", [])]
+              for i in r.get("items", []):
+                  _v = i["snippet"]["resourceId"]["videoId"]
+                  if _v not in ids:
+                      ids.append(_v)   # a video can appear twice in the playlist
               token = r.get("nextPageToken")
               if not token:
                   break
@@ -72,6 +86,7 @@ jobs:
                       "views": int(it.get("statistics", {}).get("viewCount", 0) or 0),
                       "published": it["snippet"]["publishedAt"][:10],
                       "tokens": L.tokens(it["snippet"]["title"]),
+                      "system": _system_of(it["snippet"]["title"]),
                   })
           print(f"scanned {len(vids)} videos\n")
 
@@ -84,6 +99,8 @@ jobs:
               for j in range(i + 1, len(vids)):
                   if j in used:
                       continue
+                  if vids[j]["system"] != a["system"]:
+                      continue   # a D&D Warlock is not a Shadowdark Warlock
                   if L.similarity(a["tokens"], vids[j]["tokens"]) >= L.SIMILARITY:
                       g.append(vids[j]); used.add(j)
               if len(g) > 1:
