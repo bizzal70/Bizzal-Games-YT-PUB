@@ -1,0 +1,106 @@
+name: unlist confabulated dcc longform set (temp)
+
+on:
+  workflow_dispatch:
+    inputs:
+      execute:
+        description: 'Set "true" to actually unlist. Default is a dry run.'
+        required: false
+        default: "false"
+
+permissions:
+  contents: read
+
+jobs:
+  unlist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -q google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+      - name: Materialize YouTube OAuth token
+        env:
+          BIZZAL_YT_TOKEN_JSON: ${{ secrets.BIZZAL_YT_TOKEN_JSON }}
+        run: |
+          mkdir -p .secrets
+          printf '%s' "$BIZZAL_YT_TOKEN_JSON" > .secrets/youtube_token.json
+      - name: Unlist the confabulated DCC long-form catalog + its clips
+        env:
+          EXECUTE: ${{ github.event.inputs.execute }}
+        run: |
+          python - <<'PY'
+          import os
+          from google.oauth2.credentials import Credentials
+          from google.auth.transport.requests import Request
+          from googleapiclient.discovery import build
+
+          EXECUTE = (os.environ.get("EXECUTE") or "").strip().lower() == "true"
+
+          # All 8 published DCC long-forms failed the SRD canon fact-check
+          # (invented DCC items/classes/rules; non-DCC "Deathbringer"/"Clown"
+          # content presented as official). 6 long-forms + their 5 clips.
+          TARGETS = {
+              "GX69-Bzs8TU": "LF: Deathbringer items",
+              "Q0KX14YQ2RA": "LF: vintage spells",
+              "cOzR7vNgnrE": "LF: Clownish Evolution",
+              "crW_l0OTWFc": "LF: Deathbringer crowdfunding",
+              "LiVi7EacWl4": "LF: clown class",
+              "KzxPM9JbqzA": "LF: Deathbringer project",
+              "bOHPLFcg3-4": "clip 07-18",
+              "-NuyB4CZu4g": "clip 07-18",
+              "60B2q3darKI": "clip 07-18",
+              "25YmGgsgzoo": "clip 07-18",
+              "3fuBqFwAU6I": "clip 07-18",
+          }
+
+          SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
+                    "https://www.googleapis.com/auth/youtube.readonly",
+                    "https://www.googleapis.com/auth/youtube.force-ssl"]
+          creds = Credentials.from_authorized_user_file(".secrets/youtube_token.json", SCOPES)
+          creds.refresh(Request())
+          yt = build("youtube", "v3", credentials=creds)
+
+          ids = list(TARGETS)
+          resp = yt.videos().list(part="snippet,status", id=",".join(ids)).execute()
+          found = {it["id"]: it for it in resp.get("items", [])}
+
+          for v in ids:
+              if v not in found:
+                  print(f"  !! NOT FOUND (already gone / never live): {v} ({TARGETS[v]})")
+
+          plan = []
+          for v in ids:
+              it = found.get(v)
+              if not it:
+                  continue
+              cur = it["status"].get("privacyStatus", "?")
+              print(f"  {v:14} [{cur:8}] {it['snippet']['title'][:52]}   <- {TARGETS[v]}")
+              if cur != "unlisted":
+                  plan.append((v, it))
+
+          print(f"\n{len(plan)} to unlist | {len(found)-len(plan)} already unlisted | {len(ids)-len(found)} missing")
+
+          if not EXECUTE:
+              print("\nDRY RUN — nothing changed. Re-run with execute=true to apply.")
+          else:
+              done = 0
+              for v, it in plan:
+                  st = it["status"]
+                  body = {"id": v, "status": {
+                      "privacyStatus": "unlisted",
+                      "selfDeclaredMadeForKids": st.get("selfDeclaredMadeForKids", False),
+                      "license": st.get("license", "youtube"),
+                      "embeddable": st.get("embeddable", True),
+                      "publicStatsViewable": st.get("publicStatsViewable", True),
+                  }}
+                  try:
+                      yt.videos().update(part="status", body=body).execute()
+                      done += 1
+                      print(f"  unlisted {v}")
+                  except Exception as exc:
+                      print(f"  FAILED  {v}: {exc}")
+              print(f"\nDONE: {done}/{len(plan)} unlisted")
+          PY
