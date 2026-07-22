@@ -139,8 +139,9 @@
     "fixture_hint": "creature",
     "search_keyword": "RPG Print News – Dragonbane, Shadowdark, Mausritter, and More",
     "created_date": "2026-07-17",
-    "status": "pending",
-    "brief_id": "018f27e76c41"
+    "status": "blocked",
+    "brief_id": "018f27e76c41",
+    "blocked_reason": "blocked property/system: 'dragonbane'"
   },
   {
     "system": "shadowdark",
@@ -150,8 +151,9 @@
     "fixture_hint": "class",
     "search_keyword": "Daggerheart is playtesting a Summoner class",
     "created_date": "2026-07-17",
-    "status": "pending",
-    "brief_id": "fe43f1482bbf"
+    "status": "blocked",
+    "brief_id": "fe43f1482bbf",
+    "blocked_reason": "blocked property/system: 'daggerheart'"
   },
   {
     "system": "shadowdark",
@@ -238,8 +240,9 @@
     "fixture_hint": "creature",
     "search_keyword": "RPG Print News – Dragonbane, Shadowdark, Mausritter, and More",
     "created_date": "2026-07-17",
-    "status": "pending",
-    "brief_id": "08e822f138fa"
+    "status": "blocked",
+    "brief_id": "08e822f138fa",
+    "blocked_reason": "blocked property/system: 'dragonbane'"
   },
   {
     "system": "shadowdark",
@@ -249,8 +252,9 @@
     "fixture_hint": "class",
     "search_keyword": "Daggerheart is playtesting a Summoner class",
     "created_date": "2026-07-17",
-    "status": "pending",
-    "brief_id": "e927525a2df8"
+    "status": "blocked",
+    "brief_id": "e927525a2df8",
+    "blocked_reason": "blocked property/system: 'daggerheart'"
   },
   {
     "system": "shadowdark",
@@ -337,8 +341,9 @@
     "fixture_hint": "rule",
     "search_keyword": "RPG Print News – Dragonbane, Shadowdark, Mausritter, and More",
     "created_date": "2026-07-17",
-    "status": "pending",
-    "brief_id": "c2c8144d7041"
+    "status": "blocked",
+    "brief_id": "c2c8144d7041",
+    "blocked_reason": "blocked property/system: 'dragonbane'"
   },
   {
     "system": "shadowdark",
@@ -348,8 +353,9 @@
     "fixture_hint": "class",
     "search_keyword": "Daggerheart is playtesting a Summoner class",
     "created_date": "2026-07-17",
-    "status": "pending",
-    "brief_id": "1b568a2540d0"
+    "status": "blocked",
+    "brief_id": "1b568a2540d0",
+    "blocked_reason": "blocked property/system: 'daggerheart'"
   },
   {
     "system": "shadowdark",
