@@ -139,7 +139,11 @@ def pop_brief_hint():
 
 
 def choose_kind(day, hint):
-    if hint in KIND:
+    # Long-form only features depth-rich kinds (creature/class/spell). A single
+    # rule/item is too thin for 8-10 min and tempts the model to pad with drift
+    # (a rule-hinted DCC "Fumbles" run inverted the Luck mechanic). A news hint
+    # is honored only when it points at a rich kind; otherwise we rotate.
+    if hint in ROTATION:
         return hint
     idx = datetime.strptime(day, "%Y-%m-%d").toordinal() % len(ROTATION)
     return ROTATION[idx]
