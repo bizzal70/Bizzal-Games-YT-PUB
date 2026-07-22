@@ -1,0 +1,82 @@
+{
+  "items": [
+    {
+      "published_utc": "2026-07-22T18:03:51Z",
+      "day": "2026-07-22-dnd5e-clip1",
+      "content_id": "clip:d1c77d41d0bb61e4",
+      "publish_hash": "99430688d42ee790d45e38793dbf256bc32499f4e56aaa4d82a0b2105230b723",
+      "youtube_video_id": "wLrrQilVRJE",
+      "youtube_url": "https://www.youtube.com/watch?v=wLrrQilVRJE",
+      "video_sha256": "3ee42ca2273820deb0e1383fa9aac21fe9145bbb62c5995e1c1b69279ec83a08",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-07-22-dnd5e-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-07-22-dnd5e-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:d1c77d41d0bb61e4",
+        "canonical_hash": "",
+        "script_id": "d1c77d41d0bb61e474acf7537fac0e361b2641b1ab4eccfbaf0673bc1e6d0cc2",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Godzilla's breath weapon demands precise positioning",
+        "hook": "Godzilla's breath weapon demands precise positioning",
+        "body": "Godzilla's breath weapon in D&D 5e has a range of 120 feet and a width of 15 feet. Players must succeed on a DC 21 Dexterity saving throw to avoid or halve the damage. Positioning is crucial to survive its devastating impact.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-07-22-dnd5e-clip1.mp4",
+        "video_sha256": "3ee42ca2273820deb0e1383fa9aac21fe9145bbb62c5995e1c1b69279ec83a08"
+      }
+    },
+    {
+      "published_utc": "2026-07-22T18:05:56Z",
+      "day": "2026-07-22-dnd5e-clip2",
+      "content_id": "clip:f0d408ca613f91b9",
+      "publish_hash": "b55869b495a4979558a13c8861b0bbe1739fb45daedccd9ca54a803b2f00513e",
+      "youtube_video_id": "j0nIwXGr8dk",
+      "youtube_url": "https://www.youtube.com/watch?v=j0nIwXGr8dk",
+      "video_sha256": "8c7bbeb363fbd5edc913a6cad06e57814629732dc45dc206b2c10ca35e8d6683",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-07-22-dnd5e-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-07-22-dnd5e-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:f0d408ca613f91b9",
+        "canonical_hash": "",
+        "script_id": "f0d408ca613f91b9f905f3561b94fd1736c1841cb9b2b4918d2d19097a412dbd",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Godzilla's legendary actions keep players on edge",
+        "hook": "Godzilla's legendary actions keep players on edge",
+        "body": "Incorporate legendary actions for Godzilla in D&D 5e. These allow extra attacks, movement, or environmental effects outside its turn. Players must adapt to tremors or difficult terrain, maintaining constant vigilance against this unpredictable threat.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-07-22-dnd5e-clip2.mp4",
+        "video_sha256": "8c7bbeb363fbd5edc913a6cad06e57814629732dc45dc206b2c10ca35e8d6683"
+      }
+    },
+    {
+      "published_utc": "2026-07-22T18:07:35Z",
+      "day": "2026-07-22-dnd5e-clip3",
+      "content_id": "clip:f678c05ac7ac892d",
+      "publish_hash": "4c0b47e124af3bfff61e5aeb1458aaa4f815cc2845707f72851d770de32fc674",
+      "youtube_video_id": "qxZFL_RvMsY",
+      "youtube_url": "https://www.youtube.com/watch?v=qxZFL_RvMsY",
+      "video_sha256": "23afe4fd79d8e4996b86200153f68014fce88fe03536e1a295579de169e3ced1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-07-22-dnd5e-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-07-22-dnd5e-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:f678c05ac7ac892d",
+        "canonical_hash": "",
+        "script_id": "f678c05ac7ac892da09ea49e1cf9519fcf37ddcef9ff3d06988b96cc43ee38c1",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Godzilla's colossal size alters the battlefield",
+        "hook": "Godzilla's colossal size alters the battlefield",
+        "body": "Godzilla's colossal size in D&D 5e means occupying a 30x30 foot space with a 20-foot reach. It blocks paths, creates chokepoints, and affects visibility. Dungeon Masters can use this to craft challenging environments for players.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-07-22-dnd5e-clip3.mp4",
+        "video_sha256": "23afe4fd79d8e4996b86200153f68014fce88fe03536e1a295579de169e3ced1"
+      }
+    }
+  ]
+}
