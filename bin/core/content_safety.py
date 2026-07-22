@@ -93,6 +93,57 @@ def scan_text(text: str) -> tuple:
 
 
 # --------------------------------------------------------------------------- #
+# SRD digest -- a compact, authoritative list of what actually EXISTS in a
+# system, built from reference/systems/<id>/active/*.json (Django-fixture shape:
+# [{"model","pk","fields":{...}}]). Injected into the canon judge so it checks
+# against your real corpus instead of the model's shaky memory of niche games.
+#
+# The corpus is authoritative but INCOMPLETE (the free Shadowdark SRD omits e.g.
+# Luck Tokens). So the digest is used as "definitely real" grounding, NOT as an
+# exhaustive whitelist -- the judge still flags only CLEAR fabrication.
+# --------------------------------------------------------------------------- #
+# High-fabrication-risk small sets first so they survive truncation; big
+# Creature lists last.
+_DIGEST_KINDS = ["Rule", "CharacterClass", "Background", "Feat", "Species",
+                 "Item", "Spell", "Creature"]
+
+
+def _fields(rec: dict) -> dict:
+    return rec.get("fields", rec) if isinstance(rec, dict) else {}
+
+
+def srd_digest(system_id: str, repo_root: str, max_chars: int = 12000) -> str:
+    base = os.path.join(repo_root, "reference", "systems", system_id, "active")
+    if not os.path.isdir(base):
+        return ""
+    parts = []
+    for kind in _DIGEST_KINDS:
+        p = os.path.join(base, kind + ".json")
+        if not os.path.exists(p):
+            continue
+        try:
+            data = json.load(open(p, encoding="utf-8"))
+        except Exception:
+            continue
+        if not isinstance(data, list):
+            continue
+        entries = []
+        for rec in data:
+            f = _fields(rec)
+            nm = f.get("name") or f.get("title")
+            if not nm:
+                continue
+            if kind == "Rule":
+                desc = (f.get("description") or f.get("text") or f.get("desc") or "")
+                entries.append(f"{nm}: {desc[:90]}" if desc else nm)
+            else:
+                entries.append(nm)
+        if entries:
+            parts.append(f"{kind} ({len(entries)}): " + "; ".join(entries))
+    return "\n".join(parts)[:max_chars]
+
+
+# --------------------------------------------------------------------------- #
 # LLM accuracy fact-check. Catches invented IN-SYSTEM content the denylist can't
 # see (a "Shadowdark Summoner" script never says "Daggerheart").
 # --------------------------------------------------------------------------- #
@@ -124,13 +175,15 @@ The script below is published as teaching real {system_label} content. Fact-chec
 2. WRONG SYSTEM: content that actually belongs to a DIFFERENT game presented as {system_label} (e.g. a Daggerheart "Summoner" class taught as a Shadowdark class).
 3. THIRD-PARTY IP: a non-TTRPG franchise used as the subject (Godzilla, Marvel, Pokemon, Star Wars, etc.).
 
-Allowed (grounded = true):
-- Discussing real, recently announced OFFICIAL products/rules for {system_label}, even if you are unsure of every detail.
-- Clearly-labeled homebrew or optional variants IF the script explicitly frames them as homebrew / a house rule / "at your table" (not as official established rules).
+AUTHORITATIVE {system_label} REFERENCE (real content that DEFINITELY exists; this list is trustworthy but INCOMPLETE -- the game has more than this):
+{reference}
 
-Not allowed (grounded = false): presenting invented or wrong-system content as real, established {system_label} rules; or any third-party IP subject.
+Rules for your verdict:
+- grounded = FALSE only when the script's CORE subject is CLEARLY one of: (1) a class/subclass/spell/item/monster/rule that is invented and NOT plausibly official {system_label} content, (2) content that actually belongs to a DIFFERENT game, or (3) third-party IP.
+- Give the benefit of the doubt to plausible real official content and to minor mechanical-detail differences. A named entity that appears in the reference above is DEFINITELY real -- never flag it. Missing from the reference does NOT by itself mean fabricated (the reference is incomplete); judge fabrication by whether the thing is plausibly real official {system_label} content.
+- Discussing real, recently announced official products, or clearly-labeled homebrew the script frames as a house rule, is grounded = true.
 
-Judge only what is written. When a core subject of the script is fabricated or wrong-system, grounded = false.
+Judge only what is written.
 
 Return ONLY JSON, no markdown:
 {{"grounded": true|false, "verdict": "one sentence", "problems": ["short specific problem", "..."]}}
@@ -176,8 +229,10 @@ def _parse_canon(raw: str) -> CanonVerdict:
                         verdict=str(d.get("verdict", "")), problems=problems, raw=raw)
 
 
-def canon_check(script_text: str, system_label: str, api_key: str = "") -> CanonVerdict:
-    """LLM accuracy fact-check. available=False when the judge could not run
+def canon_check(script_text: str, system_label: str, api_key: str = "",
+                reference: str = "") -> CanonVerdict:
+    """LLM accuracy fact-check, grounded in an authoritative SRD `reference`
+    digest (see srd_digest). available=False when the judge could not run
     (no key / API error / unparseable) -- the CALLER decides fail-open vs closed."""
     if not gate_enabled():
         return CanonVerdict(available=False)
@@ -187,6 +242,7 @@ def canon_check(script_text: str, system_label: str, api_key: str = "") -> Canon
     try:
         raw = _call_openai(
             _CANON_PROMPT.format(system_label=system_label or "the system",
+                                 reference=reference.strip() or "(none provided)",
                                  script=script_text[:12000]),
             api_key)
     except Exception:
