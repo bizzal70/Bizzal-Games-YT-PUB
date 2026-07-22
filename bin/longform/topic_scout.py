@@ -13,7 +13,7 @@ Outputs:
 
 Usage: python bin/longform/topic_scout.py [--day YYYY-MM-DD]
 """
-import sys, os, json, hashlib, argparse
+import sys, os, re, json, hashlib, argparse
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../core"))
 
 from datetime import datetime, UTC
@@ -73,6 +73,65 @@ YT_SEARCH_QUERIES = [
     "OSR tabletop RPG",
     "TTRPG rules explained",
 ]
+
+
+# --------------------------------------------------------------------------- #
+# Topic safety guard.
+#
+# The scout feeds GPT-4o raw TTRPG headlines and asks for briefs "anchored to
+# what the community is talking about." Unguarded, it maps ANY trending headline
+# onto one of our systems -- including third-party IP and other games. That
+# shipped a homebrew "Godzilla in D&D 5e" long-form + 3 clips (2026-07-22),
+# seeded by a "Godzilla comes to Marvel Multiverse Roleplaying" headline, and a
+# "Shadowdark Summoner" (Summoner is a Daggerheart class, not Shadowdark).
+#
+# Two failure modes, both blocked BEFORE a brief can enter the queue:
+#   1. Third-party franchises / non-owned properties as the video subject
+#      (Godzilla, Marvel, Pokemon, ...). We don't own these; a statblock/video
+#      built on them is an IP-claim magnet and off-brand.
+#   2. Other commercial TTRPGs forced into our lanes (a Daggerheart or Dragonbane
+#      headline turned into a "Shadowdark" brief), which makes the generator
+#      confabulate content that does not exist in the target system.
+#
+# We block on ANY match across title/angle/rationale/search_keyword. Deliberately
+# conservative: dropping an ambiguous topic costs nothing (the curated facts DB
+# is the real content backbone); publishing "Shadowdark's Dragonbane" costs
+# brand trust. The denylist is the primary, high-precision guard; the crossover
+# words are a small net for novel IP the denylist has not seen yet.
+# --------------------------------------------------------------------------- #
+_BLOCKED_TERMS = {
+    # non-TTRPG franchises / protected IP (never a legitimate video subject)
+    "godzilla", "kaiju", "marvel", "avengers", "dc comics", "batman", "superman",
+    "pokemon", "pokémon", "star wars", "star trek", "lord of the rings",
+    "tolkien", "the witcher", "warhammer", "elden ring", "dark souls", "zelda",
+    "mario", "minecraft", "fortnite", "harry potter", "disney",
+    "game of thrones", "one piece", "naruto", "dragon ball", "sonic the",
+    "halo", "call of duty",
+    # other commercial TTRPGs we do NOT cover (confabulation risk if forced in)
+    "pathfinder", "daggerheart", "dragonbane", "mausritter", "mothership",
+    "call of cthulhu", "vampire the masquerade", "world of darkness",
+    "cyberpunk", "blades in the dark", "mork borg", "mörk borg",
+    "numenera", "savage worlds", "gurps", "fate core", "starfinder",
+    "lancer", "traveller",
+}
+
+# high-precision crossover framing ("X Meets D&D") -- a net for IP the denylist
+# has not enumerated. Kept narrow: broad verb patterns ("integrate X into your
+# game") false-positive on legitimate in-system topics.
+_CROSSOVER_RE = re.compile(r"\b(meets|crossover|cross[- ]over|mash[- ]?up|versus)\b", re.I)
+
+
+def brief_is_safe(brief: dict) -> tuple[bool, str]:
+    """(ok, reason). ok=False => do not queue. See module guard notes above."""
+    blob = " ".join(str(brief.get(k, "")) for k in
+                    ("title", "angle", "rationale", "search_keyword")).lower()
+    for term in _BLOCKED_TERMS:
+        if re.search(r"(?<![a-z])" + re.escape(term) + r"(?![a-z])", blob):
+            return False, f"blocked property/system: {term!r}"
+    m = _CROSSOVER_RE.search(blob)
+    if m:
+        return False, f"crossover framing: {m.group(0)!r}"
+    return True, ""
 
 
 
@@ -176,6 +235,12 @@ Generate exactly 9 long-form YouTube video topic briefs — 3 per system. Each b
 - Match the tone: fact-based, wry, RTFM (no theatrical openers, no character framing)
 - Be 8-12 minutes of content when expanded
 - Include a fixture_hint: the specific fixture type to anchor to (spell/creature/item/rule/class)
+- STAY IN LANE. Every brief must be about the ACTUAL rules/content of one of the
+  three systems above. NEVER build a topic around a third-party franchise
+  (Godzilla, Marvel, Pokemon, Star Wars, etc.) or another RPG system (Pathfinder,
+  Daggerheart, Dragonbane, etc.), and NEVER propose crossover or "import X into
+  your D&D game" topics. If a headline is about an unrelated property or a
+  different game, IGNORE that headline.
 
 Return ONLY a JSON array of exactly 9 objects. No markdown, no commentary. Schema:
 [
@@ -261,12 +326,18 @@ def main():
 
     # Stamp and validate each brief
     stamped = []
+    dropped = 0
     for b in briefs:
         if not isinstance(b, dict):
             continue
         system = b.get("system", "").strip()
         if system not in SYSTEMS:
             print(f"  [scout] WARN: unknown system '{system}' in brief, skipping")
+            continue
+        ok, why = brief_is_safe(b)
+        if not ok:
+            dropped += 1
+            print(f"  [scout] DROP unsafe brief ({why}): {b.get('title','')!r}")
             continue
         b["created_date"] = day
         b["status"] = "pending"
@@ -275,7 +346,7 @@ def main():
         ).hexdigest()[:12]
         stamped.append(b)
 
-    print(f"  [scout] {len(stamped)} briefs validated")
+    print(f"  [scout] {len(stamped)} briefs validated ({dropped} dropped as unsafe)")
 
     # Prepend new briefs (newest first), deduplicate by title
     existing_title_set = {b.get("title", "").lower() for b in queue}
