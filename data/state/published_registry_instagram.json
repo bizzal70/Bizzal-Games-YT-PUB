@@ -432,6 +432,51 @@
       "hook": "Hard lesson: Torch and Light.",
       "body": "Myth vs rule: Torch and Light. Torches last 1 hour of real time. Characters without darkvision must carry a light source or be blind. Tracking real time is core to Shadowdark play. Clear rulings now save argument time later.",
       "cta": "GMs: Set a timer for each torch; when it hits 60 minutes, remind them they're in the dark."
+    },
+    {
+      "published_utc": "2026-07-22T14:54:09Z",
+      "day": "2026-07-22",
+      "system": "dcc",
+      "content_id": "bgp-2026-07-22-item-spotlight-item-1-baf854945214",
+      "instagram_post_id": "18399035551090406",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "b637f0a746693edcd0116648b99bce0c3579f9b30b4a2a11940a6b2251da8b12",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-22.mp4",
+      "fact_name": "Sword of Air and Darkness",
+      "category": "item_spotlight",
+      "hook": "The Sword of Air and Darkness transports targets to the ethereal plane on a natural 19-20.",
+      "body": "The +2 bonus to attack and damage is straightforward, but the ethereal plane effect is often mishandled. Players frequently overlook the importance of the 1d6 round duration, failing to capitalize on the temporary removal of a foe. The darkness spell, cast once per day at a result of 18, should be used strategically to control the battlefield. The curse's Will DC 12 check each night risks permanent Luck loss, often ignored until it's too late.",
+      "cta": "Judges: When they roll a natural 19-20, remind them to exploit the 1d6 rounds of ethereal isolation."
+    },
+    {
+      "published_utc": "2026-07-22T15:01:22Z",
+      "day": "2026-07-22",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-22-monster-tactic-creature-srd-2024-gold-dragon-wyrmling-6359ce78fefc",
+      "instagram_post_id": "18611821447056103",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "16c90e9303d255848701cf6f3b246ba5d91d047fc3075ae17bdef69e8a0f398b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-22.mp4",
+      "fact_name": "Gold Dragon Wyrmling",
+      "category": "monster_tactic",
+      "hook": "Gold Dragon Wyrmling is the classic 'easy fight' that gets weird fast if players autopilot.",
+      "body": "Fire Breath has a recharge of 5-6 and deals 15 (4d6) fire damage in a 15-foot cone, with a DC 13 Dexterity saving throw. Its flying speed of 60 feet allows it to reposition easily, making it hard to pin down. Amphibious nature means it can engage in both air and underwater combat without penalty. Spreading out denies its ability to use Fire Breath effectively, and preventing it from leveraging its flight to isolate targets is crucial.",
+      "cta": "Players: laugh first, then respect turn economy before this joke encounter snowballs."
+    },
+    {
+      "published_utc": "2026-07-22T15:06:47Z",
+      "day": "2026-07-22",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-07-22-spell-use-case-spell-50-f640d529eb2d",
+      "instagram_post_id": "18005466758764086",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "94e6d3a805d06cfa590a76bc57393658a615e76eb0c1d9f93e678371ee445fbc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-22.mp4",
+      "fact_name": "Magic Circle",
+      "category": "spell_use_case",
+      "hook": "Magic Circle requires Focus to maintain.",
+      "body": "Magic Circle creates a near-sized cube centered on the caster, preventing a named creature type from attacking or casting hostile spells for as long as Focus is maintained. Breaking Focus ends the protection immediately, leaving the caster vulnerable. Ensure the caster remains undisturbed to leverage the circle for strategic positioning or negotiation without interruption.",
+      "cta": "GMs: Keep the caster's Focus uninterrupted; one slip and that Magic Circle's gone, leaving them wide open."
     }
   ]
 }

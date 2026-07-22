@@ -260,5 +260,15 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-07-22": {
+    "spell_use_case": {
+      "angle": "dm_twist",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "arcane_survival_coach",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

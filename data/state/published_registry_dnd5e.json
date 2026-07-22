@@ -779,6 +779,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-21.mp4",
         "video_sha256": "54224fc037001c6f715ffdf944a67429bdd21945458a5067fabe0d0c72460923"
       }
+    },
+    {
+      "published_utc": "2026-07-22T15:00:23Z",
+      "day": "2026-07-22",
+      "content_id": "bgp-2026-07-22-monster-tactic-creature-srd-2024-gold-dragon-wyrmling-6359ce78fefc",
+      "publish_hash": "61f9fb40e33126c2789142bf3ee5973d7ebcebc0bdf8e8fa9ea748693236bcf7",
+      "youtube_video_id": "7r4G1-auTas",
+      "youtube_url": "https://www.youtube.com/watch?v=7r4G1-auTas",
+      "video_sha256": "16c90e9303d255848701cf6f3b246ba5d91d047fc3075ae17bdef69e8a0f398b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-22.mp4",
+      "fingerprint": {
+        "day": "2026-07-22",
+        "category": "monster_tactic",
+        "angle": "counterplay",
+        "content_id": "bgp-2026-07-22-monster-tactic-creature-srd-2024-gold-dragon-wyrmling-6359ce78fefc",
+        "canonical_hash": "6359ce78fefc5e6f72f435520f7db1aa8052ce080f7a2fbc0bb4573ce859ed29",
+        "script_id": "47d64e22d7a864cd175b86a4339459a5c9dc544d7a185f001d857c8292a20b35",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_gold-dragon-wyrmling",
+        "fact_name": "Gold Dragon Wyrmling",
+        "hook": "Gold Dragon Wyrmling is the classic 'easy fight' that gets weird fast if players autopilot.",
+        "body": "Fire Breath has a recharge of 5-6 and deals 15 (4d6) fire damage in a 15-foot cone, with a DC 13 Dexterity saving throw. Its flying speed of 60 feet allows it to reposition easily, making it hard to pin down. Amphibious nature means it can engage in both air and underwater combat without penalty. Spreading out denies its ability to use Fire Breath effectively, and preventing it from leveraging its flight to isolate targets is crucial.",
+        "cta": "Players: laugh first, then respect turn economy before this joke encounter snowballs.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-22.mp4",
+        "video_sha256": "16c90e9303d255848701cf6f3b246ba5d91d047fc3075ae17bdef69e8a0f398b"
+      }
     }
   ]
 }

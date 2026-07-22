@@ -520,6 +520,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-21.mp4",
         "video_sha256": "9ac59e34b699d989307c580d75dbb3b7b661f8fcfd66cd67913cde513bac0cd8"
       }
+    },
+    {
+      "published_utc": "2026-07-22T15:05:33Z",
+      "day": "2026-07-22",
+      "content_id": "bgp-2026-07-22-spell-use-case-spell-50-f640d529eb2d",
+      "publish_hash": "8ee31229cd8d935599d58d337839d34b3f77acd2d85a65f117c4ac3a8eb9e98c",
+      "youtube_video_id": "UKa1iABWHiY",
+      "youtube_url": "https://www.youtube.com/watch?v=UKa1iABWHiY",
+      "video_sha256": "94e6d3a805d06cfa590a76bc57393658a615e76eb0c1d9f93e678371ee445fbc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-22.mp4",
+      "fingerprint": {
+        "day": "2026-07-22",
+        "category": "spell_use_case",
+        "angle": "dm_twist",
+        "content_id": "bgp-2026-07-22-spell-use-case-spell-50-f640d529eb2d",
+        "canonical_hash": "f640d529eb2d2501204a79b8f9d393dff3b082bbde7cee0d60722993d4f2dee4",
+        "script_id": "dbea197ea093acf4a98ff243e39957c7baaec009a58432f0d809ac6d686941fc",
+        "fact_kind": "spell",
+        "fact_pk": 50,
+        "fact_name": "Magic Circle",
+        "hook": "Magic Circle requires Focus to maintain.",
+        "body": "Magic Circle creates a near-sized cube centered on the caster, preventing a named creature type from attacking or casting hostile spells for as long as Focus is maintained. Breaking Focus ends the protection immediately, leaving the caster vulnerable. Ensure the caster remains undisturbed to leverage the circle for strategic positioning or negotiation without interruption.",
+        "cta": "GMs: Keep the caster's Focus uninterrupted; one slip and that Magic Circle's gone, leaving them wide open.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-22.mp4",
+        "video_sha256": "94e6d3a805d06cfa590a76bc57393658a615e76eb0c1d9f93e678371ee445fbc"
+      }
     }
   ]
 }
