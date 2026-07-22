@@ -79,18 +79,32 @@ observed: flagged the *Ancient Gold Dragon*, *Alter Self* concentration, and
   auto-unlist on it alone. Note the fixtures are an SRD **subset**, so
   "not in fixtures" ≠ "fake" (real Monster-Manual dragons aren't in the SRD).
 
-## Going-forward architecture (the real fix)
+## Going-forward architecture (the real fix — IMPLEMENTED 2026-07-22)
 
-Ground long-form like Shorts:
-1. Pick the subject from `reference/systems/<sys>/active/*` (rotate kinds; track
-   used entities in state) — not from the news.
-2. Feed the entity's real fields as source-of-truth; instruct the model to explain
-   only what's supported (interactions, edge cases, common misplays) and never
-   invent items/subclasses/mechanics.
-3. Public sources may influence *which real topic* is chosen; news that isn't a
-   rule becomes commentary, never invented rules.
-4. Backstop with `canon_check` (grounded) + the IP scan + quality gate.
-5. Re-enable auto-public only after a dry-run proves accuracy on real fixtures.
+Long-form is now grounded like Shorts (`make_longform_atom.py` + `write_longform_script.py`):
+1. Pick a REAL fixture entity via the same `attach_fact.py` resolver the Shorts
+   use (so expansions are always in scope). Rotate depth-rich kinds
+   **creature / class / spell**; track used pks in
+   `data/state/longform_srd_used_<sys>.json`. Rule/item are excluded — too thin
+   for 8-10 min, which tempts the model to pad and drift.
+2. `attach_fact.py` assembles the full fact (base + creature traits/actions/attacks);
+   the writer feeds those real fields as authoritative source data and is told to
+   ground every claim in them and never invent.
+3. A news brief may bias *which rich kind* is featured (topicality); content is
+   always the real entity, never the headline.
+4. Backstops: deterministic IP scan (hard-block) + quality gate + `canon_check`.
+
+### canon_check is ADVISORY, not a blocker (verified decision)
+Dry-run across all 3 systems produced real subjects incl. expansions (Swarmkeeper
+from Tasha's, Desert Rider from Cursed Scroll 2, Cleric, Advantage/Disadvantage).
+The canon judge caught a real error (DCC "Fumbles" inverted the Luck mechanic) but
+ALSO false-positived on "Desert Rider" — a real Cursed Scroll class gpt-4o doesn't
+know. So `canon_check` runs by default as advisory (logs the verdict); hard-block
+only via `BIZZAL_CANON_HARD_BLOCK=1`. Auto-blocking on it would kill real expansion
+content. The safe posture is: grounded generation + unlisted-until-verified +
+advisory canon flag for the human review.
+
+Re-enable auto-public only after a few grounded long-forms are reviewed good.
 
 ## Runbook
 
