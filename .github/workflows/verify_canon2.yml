@@ -1,0 +1,68 @@
+name: verify canon gate negative control (temp)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      BIZZAL_OPENAI_API_KEY: ${{ secrets.BIZZAL_OPENAI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Canon gate must PASS genuinely accurate rules (false-positive check)
+        run: |
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, "bin/core")
+          import content_safety as cs
+
+          DND = ("Grappling in D&D 5e uses a special melee attack. Instead of dealing "
+                 "damage you make an attack the target contests with an Athletics or "
+                 "Acrobatics check against your Athletics check. On a success the target "
+                 "is grappled and its speed becomes 0. The creature can use its action to "
+                 "escape by contesting again. Your speed is halved while dragging a "
+                 "grappled creature unless it is two or more sizes smaller. The grapple "
+                 "ends if you are incapacitated or the target is moved outside your reach.")
+
+          SHD = ("In Shadowdark, light is a resource. A torch burns for one real hour of "
+                 "play, and when it goes out the party is in darkness. Characters without "
+                 "darkvision cannot attack or read scrolls without a light source. Luck "
+                 "tokens let a player add 1d6 to a roll after seeing the result, and each "
+                 "token is spent when used. The four core classes are Fighter, Priest, "
+                 "Thief, and Wizard.")
+
+          DCC = ("In Dungeon Crawl Classics a wizard casts by making a spell check: roll "
+                 "1d20 plus caster level plus Intelligence modifier against the spell's "
+                 "target number. A natural 1 is a misfire and can trigger corruption. "
+                 "Warriors and dwarves roll a Deed Die with attacks; on a 3 or higher they "
+                 "declare a Mighty Deed of Arms such as disarming or tripping a foe. "
+                 "Players can burn Luck to add to a roll, and thieves recover spent Luck "
+                 "while most other classes do not.")
+
+          LABELS = [("D&D 5e (2024 rules)", DND),
+                    ("Shadowdark RPG", SHD),
+                    ("Dungeon Crawl Classics RPG", DCC)]
+
+          print("NEGATIVE CONTROL: these are REAL rules and MUST come back grounded=true\n"+"="*70)
+          allpass = True
+          for label, txt in LABELS:
+              ok, hits = cs.scan_text(txt)
+              v = cs.canon_check(txt, label)
+              passed = ok and v.grounded
+              allpass = allpass and passed
+              print(f"\n[{'PASS' if passed else 'FALSE-POSITIVE'}] {label}")
+              print(f"        scan_ok={ok} ip_hits={hits}")
+              print(f"        canon: available={v.available} grounded={v.grounded}")
+              print(f"        verdict: {v.verdict}")
+              for p in v.problems:
+                  print(f"          - {p}")
+          print("\n" + ("ALL REAL RULES PASSED — gate is precise" if allpass
+                        else "!! FALSE POSITIVE(S) — gate too strict, do NOT wire yet"))
+          PY
