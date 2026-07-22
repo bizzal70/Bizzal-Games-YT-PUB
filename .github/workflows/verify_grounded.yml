@@ -1,0 +1,52 @@
+name: verify grounded longform (temp)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      BIZZAL_DB_URL: ${{ secrets.BIZZAL_DB_URL }}
+      BIZZAL_OPENAI_API_KEY: ${{ secrets.BIZZAL_OPENAI_API_KEY }}
+      BIZZAL_OPENAI_MODEL: "gpt-4o"
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -q -r requirements.txt
+      - name: Generate a grounded long-form for each system (NO publish, NO render)
+        run: |
+          TODAY="$(date +%F)"
+          for sys in dnd5e shadowdark dcc; do
+            echo ""
+            echo "===================== $sys ====================="
+            source bin/core/system_env.sh "$sys"
+            export BIZZAL_ATOM_INCOMING_DIR="data/atoms_longform_${sys}/incoming"
+            export BIZZAL_ATOM_VALIDATED_DIR="data/atoms_longform_${sys}/validated"
+            export BIZZAL_ATOM_FAILED_DIR="data/atoms_longform_${sys}/failed"
+            export BIZZAL_CONTENT_TYPE=longform
+            python3 bin/longform/make_longform_atom.py --day "$TODAY" || echo ">> make_longform_atom returned non-zero for $sys"
+            f="data/atoms_longform_${sys}/validated/${TODAY}.json"
+            if [ -f "$f" ]; then
+              python3 - "$f" <<'PY'
+import json, sys
+a = json.load(open(sys.argv[1]))
+fact = a.get("fact", {})
+print("GROUNDED SUBJECT:", repr(fact.get("name")), "| kind:", a.get("kind"), "| pk:", fact.get("pk"))
+print("TITLE:", a.get("youtube_title"))
+body = (a.get("script", {}).get("body", "") or "")
+print(f"WORD COUNT: ~{a.get('word_count')}  BODY chars: {len(body)}")
+print("--- BODY (first 1400 chars) ---")
+print(body[:1400])
+PY
+            else
+              echo ">> no validated atom for $sys — it hit a gate (see log above)"
+              ls -1 "data/atoms_longform_${sys}/failed/" 2>/dev/null || true
+            fi
+          done
