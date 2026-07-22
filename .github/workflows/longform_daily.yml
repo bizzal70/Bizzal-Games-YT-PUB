@@ -154,7 +154,7 @@ jobs:
       - name: Run long-form pipeline
         env:
           BIZZAL_CLOUD_SYSTEMS: ${{ steps.systems.outputs.systems }}
-          BIZZAL_YT_PRIVACY: ${{ github.event.inputs.privacy || 'public' }}
+          BIZZAL_YT_PRIVACY: ${{ github.event.inputs.privacy || 'unlisted' }}
           BIZZAL_SKIP_PUBLISH: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
         run: |
           IFS=',' read -ra SYSTEMS <<< "$BIZZAL_CLOUD_SYSTEMS"
@@ -169,7 +169,7 @@ jobs:
       - name: Generate + publish Shorts clips from the long-form
         if: github.event.inputs.make_clips != 'false'
         env:
-          BIZZAL_YT_PRIVACY: ${{ github.event.inputs.privacy || 'public' }}
+          BIZZAL_YT_PRIVACY: ${{ github.event.inputs.privacy || 'unlisted' }}
           BIZZAL_SKIP_PUBLISH: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
         run: |
           TODAY="$(TZ=America/Denver date +%F)"
