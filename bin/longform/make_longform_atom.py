@@ -14,6 +14,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../core"))
 from datetime import datetime, UTC
 
 import system_config
+import content_safety
 
 SYSTEM_ID = os.environ.get("BIZZAL_SYSTEM_ID", "").strip()
 if not SYSTEM_ID:
@@ -160,33 +161,59 @@ def main():
     os.environ["BIZZAL_LONGFORM_BRIEF"] = json.dumps(brief)
     os.environ["BIZZAL_LONGFORM_ATOM_PATH"] = atom_path(day)
 
-    # Generate the script
+    # Generate the script. If the writer exits non-zero (quality gate refused to
+    # publish, or an API error), the brief must NOT be left dangling in_progress
+    # forever -- mark it failed so it is not silently orphaned (pop_next_brief
+    # only ever picks "pending").
     script_writer = os.path.join(REPO_ROOT, "bin", "longform", "write_longform_script.py")
-    run_step(script_writer)
+    try:
+        run_step(script_writer)
+    except SystemExit as exc:
+        mark_brief_done(brief.get("brief_id"), "failed")
+        if os.path.exists(atom_path(day)):
+            os.replace(atom_path(day), os.path.join(failed_dir(), f"{day}.json"))
+        raise SystemExit(f"[make_longform_atom] script generation failed; brief marked failed: {exc}")
 
-    # Reload and validate
+    # Reload the atom the writer produced.
     atom = load_json(atom_path(day))
+
+    def _reject(status: str, msg: str):
+        atom.setdefault("errors", []).append({
+            "at": datetime.now(UTC).isoformat(timespec="seconds").replace("+00:00", "Z"),
+            "error": msg,
+        })
+        atomic_write_json(atom_path(day), atom)
+        os.replace(atom_path(day), os.path.join(failed_dir(), f"{day}.json"))
+        mark_brief_done(brief.get("brief_id"), status)
+        raise SystemExit(f"[make_longform_atom] {msg}")
+
     ok, msg = minimal_validate(atom)
+    if not ok:
+        _reject("failed", f"validation failed: {msg}")
 
-    if ok:
-        dst = os.path.join(validated_dir(), f"{day}.json")
-        os.replace(atom_path(day), dst)
-        mark_brief_done(brief.get("brief_id"), "used")
-        print(f"[make_longform_atom] validated → {dst}")
-        print(dst)
-        return
+    # CONTENT SAFETY GATE (deterministic, no API): scan the FINAL title + body
+    # for third-party IP / other-game systems. Hard backstop behind the scout
+    # guard -- a "Godzilla in D&D" script never publishes even if a brief slips
+    # through. (In-system fabrication like a fake "Shadowdark Summoner" is caught
+    # by the SRD-grounded canon gate; this layer is the API-free IP block.)
+    _script = atom.get("script", {}) if isinstance(atom.get("script"), dict) else {}
+    _scan_blob = " ".join([
+        atom.get("youtube_title", "") or "",
+        atom.get("title", "") or "",
+        _script.get("hook", "") or "",
+        _script.get("body", "") or "",
+    ])
+    _safe, _hits = content_safety.scan_text(_scan_blob)
+    if not _safe:
+        _reject("blocked", f"content safety: blocked property/system {_hits}")
 
-    # Failure path
-    atom.setdefault("errors", [])
-    atom["errors"].append({
-        "at": datetime.now(UTC).isoformat(timespec="seconds").replace("+00:00", "Z"),
-        "error": msg,
-    })
-    atomic_write_json(atom_path(day), atom)
-    dst = os.path.join(failed_dir(), f"{day}.json")
+    # Passed all gates.
+    dst = os.path.join(validated_dir(), f"{day}.json")
     os.replace(atom_path(day), dst)
-    mark_brief_done(brief.get("brief_id"), "failed")
-    raise SystemExit(f"[make_longform_atom] validation failed: {msg}")
+    mark_brief_done(brief.get("brief_id"), "used")
+    print(f"[make_longform_atom] validated → {dst}")
+    print(dst)
+    return
 
 
 if __name__ == "__main__":
