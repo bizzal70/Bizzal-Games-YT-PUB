@@ -94,10 +94,25 @@ Ground long-form like Shorts:
 
 ## Runbook
 
+### Where facts come from (verified)
+The runtime fact source for Shorts/IG is the committed **`reference/systems/<sys>/active/*.json`**
+files. `bin/core/attach_fact.py` → `resolve_active_srd_path` → `load_json(base_path)`
+→ `index_by_pk().get(pk)`. There is **no umbrel and no DB** in the fact path
+(`sync_reference_from_umbrel.sh` is dormant; `BIZZAL_DB_URL` is only the
+content-ledger/dedup store). These fixtures include ingested expansions
+(e.g. Shadowdark Cursed Scroll vols; see `source_registry.json`). Every Short/IG
+post carries a real `fact_pk`, so its subject is grounded by construction.
+
 ### Audit published content
-- Deterministic (trustworthy): for each registry item, slugify `fact_name` and
-  check membership in the union of `reference/systems/<sys>/active/*.json` names.
-  Not-in-fixtures = candidate; hand-verify (SRD subset causes false positives).
+- Deterministic (trustworthy): for each registry item, check `fact_name` membership
+  in the union of `reference/systems/<sys>/active/*.json` names using
+  **order-independent token matching** (fixtures store inverted names like
+  "Golem, Iron"; see `attach_fact._deinvert_name`).
+  **Load large fixtures via the raw media type**, not the contents API — files
+  over ~1MB (D&D `Creature.json`, `Item.json`) return EMPTY from
+  `contents --jq .content`, which will silently make every creature/item look
+  "ungrounded". Use `gh api <path> -H "Accept: application/vnd.github.raw"` or the
+  git blobs API.
 - Advisory (LLM): `content_safety.canon_check(text, label, reference=srd_digest(sys, repo))`.
   Read the `problems`; do not auto-act.
 
@@ -131,3 +146,10 @@ endpoint. IG audits produce a review list only; removals are manual in-app.
   it, or the brief is stranded forever.
 - **Quality ≠ truth.** A quality/voice judge rewards confident specificity, which is
   exactly what a good fabrication has. Accuracy needs a *separate, grounded* check.
+- **GitHub contents API truncates >1MB files.** `contents --jq .content` returns
+  empty for files over ~1MB (no error). An audit that reads fixtures this way will
+  silently treat all large-file content as missing. Use the raw media type / git
+  blobs API. (This produced a false "13 D&D shorts are ungrounded" result until caught.)
+- **Don't infer live infra from a filename.** `sync_reference_from_umbrel.sh` in the
+  tree does not mean umbrel is used — it isn't. Verify the actual runtime path in
+  code before asserting a data source.
