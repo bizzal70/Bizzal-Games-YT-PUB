@@ -1,0 +1,55 @@
+name: verify canon gate (temp)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      BIZZAL_OPENAI_API_KEY: ${{ secrets.BIZZAL_OPENAI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fact-check real published long-form scripts
+        run: |
+          python - <<'PY'
+          import json, os, glob, sys
+          sys.path.insert(0, "bin/core")
+          import content_safety as cs
+
+          LABEL = {"dnd5e": "D&D 5e (2024 rules)",
+                   "shadowdark": "Shadowdark RPG",
+                   "dcc": "Dungeon Crawl Classics RPG"}
+
+          cases = []
+          for path in sorted(glob.glob("data/state/published_registry_longform_*.json")):
+              sysid = os.path.basename(path)[len("published_registry_longform_"):-len(".json")]
+              items = json.load(open(path)).get("items", [])
+              for it in items:
+                  fp = it.get("fingerprint", {})
+                  body = fp.get("body") or ""
+                  title = it.get("fingerprint", {}).get("hook") or ""
+                  if body:
+                      cases.append((sysid, it.get("day",""), it.get("youtube_video_id",""),
+                                    title, body))
+
+          print(f"fact-checking {len(cases)} real long-form scripts\n" + "="*70)
+          for sysid, day, vid, title, body in cases:
+              label = LABEL.get(sysid, sysid)
+              ok, hits = cs.scan_text(title + "\n" + body)
+              v = cs.canon_check(body, label)
+              flag = "OK   " if (ok and (v.grounded or not v.available)) else "BLOCK"
+              print(f"\n[{flag}] {sysid}/{day} {vid}")
+              print(f"        scan_ok={ok} ip_hits={hits}")
+              print(f"        canon: available={v.available} grounded={v.grounded}")
+              print(f"        verdict: {v.verdict}")
+              if v.problems:
+                  for p in v.problems:
+                      print(f"          - {p}")
+          PY
