@@ -1,0 +1,86 @@
+name: audit all published content (temp)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    env:
+      BIZZAL_OPENAI_API_KEY: ${{ secrets.BIZZAL_OPENAI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fact-check every published YouTube item against the SRD corpus
+        run: |
+          python - <<'PY'
+          import json, os, glob, ast, sys
+          sys.path.insert(0, "bin/core")
+          import content_safety as cs
+
+          LABEL = {"dnd5e": "D&D 5e (2024 rules)",
+                   "shadowdark": "Shadowdark RPG",
+                   "dcc": "Dungeon Crawl Classics RPG"}
+          REPO = os.getcwd()
+          digests = {s: cs.srd_digest(s, REPO) for s in LABEL}
+          for s, d in digests.items():
+              print(f"[digest] {s}: {len(d)} chars")
+
+          def load(path):
+              try: return json.load(open(path)).get("items", [])
+              except Exception: return []
+
+          def item_text(it):
+              fp = it.get("fingerprint")
+              if isinstance(fp, str):
+                  try: fp = ast.literal_eval(fp)
+                  except Exception: fp = {}
+              if not isinstance(fp, dict): fp = {}
+              parts = [fp.get("hook", ""), fp.get("body", ""), fp.get("cta", "")]
+              text = "\n".join(p for p in parts if p).strip()
+              title = fp.get("fact_name", "") or fp.get("hook", "") or ""
+              if not text:
+                  text = fp.get("angle", "") or it.get("content_id", "")
+              return title, text
+
+          rows = []
+          for s in LABEL:
+              for tier, pat in (("short", f"data/state/published_registry_{s}.json"),
+                                ("clip",  f"data/state/published_registry_clips_{s}.json"),
+                                ("long",  f"data/state/published_registry_longform_{s}.json")):
+                  for it in load(pat):
+                      vid = it.get("youtube_video_id", "")
+                      if not vid:
+                          continue
+                      title, text = item_text(it)
+                      if not text:
+                          continue
+                      ok, hits = cs.scan_text(f"{title}\n{text}")
+                      v = cs.canon_check(text, LABEL[s], reference=digests[s])
+                      bad = (not ok) or (v.available and not v.grounded)
+                      rows.append({
+                          "sys": s, "tier": tier, "day": it.get("day", ""), "vid": vid,
+                          "ip_hits": hits, "avail": v.available, "grounded": v.grounded,
+                          "verdict": v.verdict, "problems": v.problems,
+                          "title": (title or text)[:60], "bad": bad,
+                      })
+
+          bad = [r for r in rows if r["bad"]]
+          good = [r for r in rows if not r["bad"]]
+          print(f"\n{'='*72}\nAUDITED {len(rows)} items | {len(good)} PASS | {len(bad)} FLAGGED\n{'='*72}")
+          for r in bad:
+              print(f"\n[FLAG] {r['sys']}/{r['tier']}/{r['day']} {r['vid']}  {r['title']!r}")
+              print(f"       ip_hits={r['ip_hits']} grounded={r['grounded']} avail={r['avail']}")
+              print(f"       {r['verdict']}")
+              for p in r["problems"]:
+                  print(f"         - {p}")
+          print("\n--- PASS list (sys/tier/vid) ---")
+          for r in good:
+              print(f"  ok {r['sys']}/{r['tier']} {r['vid']} {r['title']!r}")
+          print("\nUNLIST_CANDIDATES=" + ",".join(r["vid"] for r in bad))
+          PY
