@@ -1,0 +1,42 @@
+name: Content audit (SRD fact-check)
+
+on:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: "today | all"
+        required: false
+        default: "today"
+      day:
+        description: "Specific day YYYY-MM-DD (overrides scope=today)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    env:
+      BIZZAL_DB_URL: ${{ secrets.BIZZAL_DB_URL }}
+      BIZZAL_OPENAI_API_KEY: ${{ secrets.BIZZAL_OPENAI_API_KEY }}
+      BIZZAL_OPENAI_MODEL: "gpt-4o"
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -q -r requirements.txt
+      - name: Fact-check published content against the SRD corpus
+        run: |
+          SCOPE="${{ github.event.inputs.scope || 'today' }}"
+          DAY="${{ github.event.inputs.day }}"
+          if [ "$SCOPE" = "all" ]; then
+            python3 bin/core/audit_published.py --all
+          elif [ -n "$DAY" ]; then
+            python3 bin/core/audit_published.py --day "$DAY"
+          else
+            python3 bin/core/audit_published.py --day "$(date +%F)"
+          fi
