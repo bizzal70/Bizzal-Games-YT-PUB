@@ -546,6 +546,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-22.mp4",
         "video_sha256": "94e6d3a805d06cfa590a76bc57393658a615e76eb0c1d9f93e678371ee445fbc"
       }
+    },
+    {
+      "published_utc": "2026-07-23T15:14:47Z",
+      "day": "2026-07-23",
+      "content_id": "bgp-2026-07-23-class-spotlight-class-7-1b97ffd18a19",
+      "publish_hash": "0e163eb193be436d7ccbe48bf708963f46aacce8cc8983d9217dee8fcbb3c676",
+      "youtube_video_id": "RkoyZaC2g4E",
+      "youtube_url": "https://www.youtube.com/watch?v=RkoyZaC2g4E",
+      "video_sha256": "75f895558ac855665ee206a65296e0a8b80ab1567b19c4f231d665fae63f2ccb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-23.mp4",
+      "fingerprint": {
+        "day": "2026-07-23",
+        "category": "class_spotlight",
+        "angle": "party_role_pivot",
+        "content_id": "bgp-2026-07-23-class-spotlight-class-7-1b97ffd18a19",
+        "canonical_hash": "1b97ffd18a19ffda925936f137a9bea337a4b8e936eadbdd67be4eddbff2daa8",
+        "script_id": "63c4f5ff8ce1899a3b4747cd8e88f8947d444f888fd6968ee7df3e76c703dbab",
+        "fact_kind": "class",
+        "fact_pk": 7,
+        "fact_name": "Witch",
+        "hook": "The Witch's Familiar allows spells to originate from its location, not yours.",
+        "body": "With 1d4 hit dice and leather armor, the Witch is fragile and must avoid frontline combat. The Familiar can be revived by sacrificing 1d4 HP, which is often underestimated as a strategic resource. Players commonly misuse the Familiar by keeping it too close, negating its utility as a remote spell source. Position the Familiar strategically to maximize spell range and maintain distance from threats.",
+        "cta": "GMs: Remind players the Familiar's range is their spell range; keep it out of harm's way for maximum utility.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-23.mp4",
+        "video_sha256": "75f895558ac855665ee206a65296e0a8b80ab1567b19c4f231d665fae63f2ccb"
+      }
     }
   ]
 }

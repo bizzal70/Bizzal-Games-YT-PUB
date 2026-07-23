@@ -182,5 +182,17 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-07-23": {
+    "encounter_seed": {
+      "angle": "terrain_feature",
+      "voice": "grim_referee",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

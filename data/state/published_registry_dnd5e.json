@@ -805,6 +805,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-22.mp4",
         "video_sha256": "16c90e9303d255848701cf6f3b246ba5d91d047fc3075ae17bdef69e8a0f398b"
       }
+    },
+    {
+      "published_utc": "2026-07-23T15:04:56Z",
+      "day": "2026-07-23",
+      "content_id": "bgp-2026-07-23-spell-use-case-spell-srd-2024-heal-84b1af1f6770",
+      "publish_hash": "9934801341e8cb0b33ae8eb65788dc6ad952634cb87654f4482f86c58f61e242",
+      "youtube_video_id": "6y-I5FffV8Q",
+      "youtube_url": "https://www.youtube.com/watch?v=6y-I5FffV8Q",
+      "video_sha256": "9b3eeacb73f86c7b287dcd61f2aaca690c1474dfe9ca6a4cad924b2ff6efaf89",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-23.mp4",
+      "fingerprint": {
+        "day": "2026-07-23",
+        "category": "spell_use_case",
+        "angle": "common_misplay",
+        "content_id": "bgp-2026-07-23-spell-use-case-spell-srd-2024-heal-84b1af1f6770",
+        "canonical_hash": "84b1af1f67701e5dddd64d10260af22a30bac6cfb14126b8134f823d81bce455",
+        "script_id": "1bf8f88c5b20e50210cbd5521d2ca9469656e3c84b089ce97d6b0510551ec6b5",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_heal",
+        "fact_name": "Heal",
+        "hook": "Heal restores 70 Hit Points and ends Blinded, Deafened, and Poisoned conditions instantly.",
+        "body": "Casting Heal requires an action and targets one creature within 60 feet. The common error is casting it reactively without considering its full potential impact. Heal's utility extends beyond hit point restoration; it can remove debilitating conditions that might otherwise cost multiple actions to address. Optimal play involves timing its use to negate these conditions at a critical moment, potentially altering the course of combat.",
+        "cta": "DMs: Use Heal when 70 hit points and condition removal can prevent your party from wasting multiple actions on recovery.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-23.mp4",
+        "video_sha256": "9b3eeacb73f86c7b287dcd61f2aaca690c1474dfe9ca6a4cad924b2ff6efaf89"
+      }
     }
   ]
 }

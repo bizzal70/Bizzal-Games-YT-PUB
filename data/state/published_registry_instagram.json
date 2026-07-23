@@ -477,6 +477,51 @@
       "hook": "Magic Circle requires Focus to maintain.",
       "body": "Magic Circle creates a near-sized cube centered on the caster, preventing a named creature type from attacking or casting hostile spells for as long as Focus is maintained. Breaking Focus ends the protection immediately, leaving the caster vulnerable. Ensure the caster remains undisturbed to leverage the circle for strategic positioning or negotiation without interruption.",
       "cta": "GMs: Keep the caster's Focus uninterrupted; one slip and that Magic Circle's gone, leaving them wide open."
+    },
+    {
+      "published_utc": "2026-07-23T15:00:22Z",
+      "day": "2026-07-23",
+      "system": "dcc",
+      "content_id": "bgp-2026-07-23-encounter-seed-creature-175-262055e47555",
+      "instagram_post_id": "18120950041866671",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "852f2e220f18de892fe27816663fba65aa2e22eeddfcf766ce284ffacb9cf197",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-23.mp4",
+      "fact_name": "Laulich",
+      "category": "encounter_seed",
+      "hook": "Laulich is perfect for a playful encounter that can still punish bad habits.",
+      "body": "The magic suppression field prevents all spellcasting within 60 feet, nullifying spells regardless of caster level or spell type. Casting spells within this range results in wasted actions. Engaging Laulich from outside the field's range or using non-magical tactics is more effective. Laulich's madness gaze (2/day) requires a Will save, with failure causing confusion for 1d4 rounds, often disrupting coordinated plans.",
+      "cta": "Judges: Force the players to exploit the terrain to stay beyond Laulich's 60-foot magic suppression field or waste their spells."
+    },
+    {
+      "published_utc": "2026-07-23T15:06:24Z",
+      "day": "2026-07-23",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-23-spell-use-case-spell-srd-2024-heal-84b1af1f6770",
+      "instagram_post_id": "18109650254065854",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9b3eeacb73f86c7b287dcd61f2aaca690c1474dfe9ca6a4cad924b2ff6efaf89",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-23.mp4",
+      "fact_name": "Heal",
+      "category": "spell_use_case",
+      "hook": "Heal restores 70 Hit Points and ends Blinded, Deafened, and Poisoned conditions instantly.",
+      "body": "Casting Heal requires an action and targets one creature within 60 feet. The common error is casting it reactively without considering its full potential impact. Heal's utility extends beyond hit point restoration; it can remove debilitating conditions that might otherwise cost multiple actions to address. Optimal play involves timing its use to negate these conditions at a critical moment, potentially altering the course of combat.",
+      "cta": "DMs: Use Heal when 70 hit points and condition removal can prevent your party from wasting multiple actions on recovery."
+    },
+    {
+      "published_utc": "2026-07-23T15:15:32Z",
+      "day": "2026-07-23",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-07-23-class-spotlight-class-7-1b97ffd18a19",
+      "instagram_post_id": "17864217291640390",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "75f895558ac855665ee206a65296e0a8b80ab1567b19c4f231d665fae63f2ccb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-23.mp4",
+      "fact_name": "Witch",
+      "category": "class_spotlight",
+      "hook": "The Witch's Familiar allows spells to originate from its location, not yours.",
+      "body": "With 1d4 hit dice and leather armor, the Witch is fragile and must avoid frontline combat. The Familiar can be revived by sacrificing 1d4 HP, which is often underestimated as a strategic resource. Players commonly misuse the Familiar by keeping it too close, negating its utility as a remote spell source. Position the Familiar strategically to maximize spell range and maintain distance from threats.",
+      "cta": "GMs: Remind players the Familiar's range is their spell range; keep it out of harm's way for maximum utility."
     }
   ]
 }

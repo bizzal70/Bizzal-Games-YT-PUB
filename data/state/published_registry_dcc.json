@@ -208,6 +208,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-22.mp4",
         "video_sha256": "b637f0a746693edcd0116648b99bce0c3579f9b30b4a2a11940a6b2251da8b12"
       }
+    },
+    {
+      "published_utc": "2026-07-23T14:59:37Z",
+      "day": "2026-07-23",
+      "content_id": "bgp-2026-07-23-encounter-seed-creature-175-262055e47555",
+      "publish_hash": "b3d73cac2b33e6fc348f45a08a3792455968f74bea8dff01aa2e483587fcc54b",
+      "youtube_video_id": "kOqyUPAYsWE",
+      "youtube_url": "https://www.youtube.com/watch?v=kOqyUPAYsWE",
+      "video_sha256": "852f2e220f18de892fe27816663fba65aa2e22eeddfcf766ce284ffacb9cf197",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-23.mp4",
+      "fingerprint": {
+        "day": "2026-07-23",
+        "category": "encounter_seed",
+        "angle": "terrain_feature",
+        "content_id": "bgp-2026-07-23-encounter-seed-creature-175-262055e47555",
+        "canonical_hash": "262055e47555742e7365a2a46b37e4cc02347b05ec152137d31a54c4262b6719",
+        "script_id": "659aaa2ea432d6af073066e959970c7998fb3d592be52edacead9a206e1f4bd8",
+        "fact_kind": "creature",
+        "fact_pk": 175,
+        "fact_name": "Laulich",
+        "hook": "Laulich is perfect for a playful encounter that can still punish bad habits.",
+        "body": "The magic suppression field prevents all spellcasting within 60 feet, nullifying spells regardless of caster level or spell type. Casting spells within this range results in wasted actions. Engaging Laulich from outside the field's range or using non-magical tactics is more effective. Laulich's madness gaze (2/day) requires a Will save, with failure causing confusion for 1d4 rounds, often disrupting coordinated plans.",
+        "cta": "Judges: Force the players to exploit the terrain to stay beyond Laulich's 60-foot magic suppression field or waste their spells.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-23.mp4",
+        "video_sha256": "852f2e220f18de892fe27816663fba65aa2e22eeddfcf766ce284ffacb9cf197"
+      }
     }
   ]
 }
