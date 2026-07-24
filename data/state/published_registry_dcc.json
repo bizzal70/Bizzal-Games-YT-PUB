@@ -234,6 +234,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-23.mp4",
         "video_sha256": "852f2e220f18de892fe27816663fba65aa2e22eeddfcf766ce284ffacb9cf197"
       }
+    },
+    {
+      "published_utc": "2026-07-24T14:46:41Z",
+      "day": "2026-07-24",
+      "content_id": "bgp-2026-07-24-class-spotlight-class-1-ec4ad51ede25",
+      "publish_hash": "fd8ae43ce66ad1c80a403997223de597c21386b563478aa8c18a722e32e1fb3d",
+      "youtube_video_id": "sHaWMLMPgKU",
+      "youtube_url": "https://www.youtube.com/watch?v=sHaWMLMPgKU",
+      "video_sha256": "2f361bf9f457c92f96871705a330c053703387e20ef1a05a022a2a9e6e91bb6a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-24.mp4",
+      "fingerprint": {
+        "day": "2026-07-24",
+        "category": "class_spotlight",
+        "angle": "wizard_risk",
+        "content_id": "bgp-2026-07-24-class-spotlight-class-1-ec4ad51ede25",
+        "canonical_hash": "ec4ad51ede25864f555d8b94f51a9a0cdfcf0feaa6af9110ca076d4cce88e5ee",
+        "script_id": "979f7e4b51e90bd6ad89fe6fa57a4497a6152d2d351f099539f477b032984352",
+        "fact_kind": "class",
+        "fact_pk": 1,
+        "fact_name": "Warrior",
+        "hook": "Warriors execute Mighty Deeds without requiring a saving throw or additional roll.",
+        "body": "Every attack by a Warrior can include a Mighty Deed, such as a trip or disarm, which succeeds if the attack hits and the action die shows 3 or higher. This mechanic requires no saving throw or resource expenditure, yet players often forget to declare a Deed before rolling. Consistent use of Mighty Deeds in every combat maximizes the Warrior's effectiveness, leveraging the free utility without relying on luck.",
+        "cta": "Judges: Drill them until they declare a Mighty Deed every attack; it's not optional, it's the Warrior's bread and butter.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-24.mp4",
+        "video_sha256": "2f361bf9f457c92f96871705a330c053703387e20ef1a05a022a2a9e6e91bb6a"
+      }
     }
   ]
 }

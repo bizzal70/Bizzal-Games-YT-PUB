@@ -194,5 +194,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-07-24": {
+    "class_spotlight": {
+      "angle": "wizard_risk",
+      "voice": "grim_referee",
+      "tone": "neutral",
+      "persona": "class_mentor",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

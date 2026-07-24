@@ -282,5 +282,15 @@
       ],
       "tts_voice_id": "nova"
     }
+  },
+  "2026-07-24": {
+    "monster_tactic": {
+      "angle": "common_mistake",
+      "voice": "torchbearer_ref",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

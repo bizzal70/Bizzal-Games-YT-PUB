@@ -522,6 +522,21 @@
       "hook": "The Witch's Familiar allows spells to originate from its location, not yours.",
       "body": "With 1d4 hit dice and leather armor, the Witch is fragile and must avoid frontline combat. The Familiar can be revived by sacrificing 1d4 HP, which is often underestimated as a strategic resource. Players commonly misuse the Familiar by keeping it too close, negating its utility as a remote spell source. Position the Familiar strategically to maximize spell range and maintain distance from threats.",
       "cta": "GMs: Remind players the Familiar's range is their spell range; keep it out of harm's way for maximum utility."
+    },
+    {
+      "published_utc": "2026-07-24T14:56:54Z",
+      "day": "2026-07-24",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-24-rules-ruling-rule-srd-2024-combat-playing-on-a-grid-5ad37d09f970",
+      "instagram_post_id": "18043139192800084",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d2be8d8197094094e81d9d5705234bc820840eb00b55f8f62867ce00384648f0",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-24.mp4",
+      "fact_name": "Playing on a Grid",
+      "category": "rules_ruling",
+      "hook": "Playing on a Grid means each square represents 5 feet.",
+      "body": "The common mistake when Playing on a Grid is prioritizing speed over clarity, leading to misinterpretations of movement. Each square on the grid equals 5 feet, and movement should be calculated square by square, not foot by foot. This prevents disputes over distances and ensures consistent rulings. Clear rulings now prevent arguments later.",
+      "cta": "DMs: Enforce 5-foot square movement to avoid disputes and keep your game from devolving into a geometry lesson."
     }
   ]
 }

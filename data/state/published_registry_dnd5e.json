@@ -831,6 +831,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-23.mp4",
         "video_sha256": "9b3eeacb73f86c7b287dcd61f2aaca690c1474dfe9ca6a4cad924b2ff6efaf89"
       }
+    },
+    {
+      "published_utc": "2026-07-24T14:54:41Z",
+      "day": "2026-07-24",
+      "content_id": "bgp-2026-07-24-rules-ruling-rule-srd-2024-combat-playing-on-a-grid-5ad37d09f970",
+      "publish_hash": "e6c3a60e157f647948ef93f1e40519d3cd930a3f3da6291575ff9d406529b411",
+      "youtube_video_id": "iUox9x1BqlM",
+      "youtube_url": "https://www.youtube.com/watch?v=iUox9x1BqlM",
+      "video_sha256": "d2be8d8197094094e81d9d5705234bc820840eb00b55f8f62867ce00384648f0",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-24.mp4",
+      "fingerprint": {
+        "day": "2026-07-24",
+        "category": "rules_ruling",
+        "angle": "common_table_mistake",
+        "content_id": "bgp-2026-07-24-rules-ruling-rule-srd-2024-combat-playing-on-a-grid-5ad37d09f970",
+        "canonical_hash": "5ad37d09f9709c5bb80fda878f3fe842bf16de698497c6fe48790571e8ef5653",
+        "script_id": "21fa00a70bc86286454f4c244e00ccb341c19f84691b1a16f52e74824c76cf48",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_combat_playing-on-a-grid",
+        "fact_name": "Playing on a Grid",
+        "hook": "Playing on a Grid means each square represents 5 feet.",
+        "body": "The common mistake when Playing on a Grid is prioritizing speed over clarity, leading to misinterpretations of movement. Each square on the grid equals 5 feet, and movement should be calculated square by square, not foot by foot. This prevents disputes over distances and ensures consistent rulings. Clear rulings now prevent arguments later.",
+        "cta": "DMs: Enforce 5-foot square movement to avoid disputes and keep your game from devolving into a geometry lesson.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-24.mp4",
+        "video_sha256": "d2be8d8197094094e81d9d5705234bc820840eb00b55f8f62867ce00384648f0"
+      }
     }
   ]
 }

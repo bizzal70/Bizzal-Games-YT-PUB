@@ -274,5 +274,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-07-24": {
+    "rules_ruling": {
+      "angle": "common_table_mistake",
+      "voice": "friendly_vet",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

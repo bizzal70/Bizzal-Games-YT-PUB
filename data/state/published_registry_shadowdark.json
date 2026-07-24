@@ -572,6 +572,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-23.mp4",
         "video_sha256": "75f895558ac855665ee206a65296e0a8b80ab1567b19c4f231d665fae63f2ccb"
       }
+    },
+    {
+      "published_utc": "2026-07-24T15:01:13Z",
+      "day": "2026-07-24",
+      "content_id": "bgp-2026-07-24-monster-tactic-creature-191-98f19d91a2df",
+      "publish_hash": "85f3d19b79ccd614756ad430b7f10082a48e2278348e039d133baadb402b6d13",
+      "youtube_video_id": "2aunaMUiG7s",
+      "youtube_url": "https://www.youtube.com/watch?v=2aunaMUiG7s",
+      "video_sha256": "56ae6900d81957f413f6fe78012ca2a585f69d348bfec5fcb426332b4bb95f7d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-24.mp4",
+      "fingerprint": {
+        "day": "2026-07-24",
+        "category": "monster_tactic",
+        "angle": "common_mistake",
+        "content_id": "bgp-2026-07-24-monster-tactic-creature-191-98f19d91a2df",
+        "canonical_hash": "98f19d91a2df156b2780be6c676bdad56faa67f7eb152d13fb898d09a771eefc",
+        "script_id": "7ae7fb4d79601b505529021d4761719ed1b80127c8ab76a9bf2536296032ebfb",
+        "fact_kind": "creature",
+        "fact_pk": 191,
+        "fact_name": "Smilodon",
+        "hook": "Yes, Smilodon looks harmless - until the table underestimates it and gives it free turns.",
+        "body": "Ignoring positioning against a Smilodon allows it to leverage its 'near' movement to close gaps and secure both attacks. With an AC of 12 and 14 hit points, it can withstand a few hits while dishing out significant damage. Underestimating its ability to exploit poor spacing leads to unnecessary damage. Maintaining distance and controlling engagement range is crucial to mitigate its attack potential.",
+        "cta": "Players: laugh first, then respect turn economy before this joke encounter snowballs.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-24.mp4",
+        "video_sha256": "56ae6900d81957f413f6fe78012ca2a585f69d348bfec5fcb426332b4bb95f7d"
+      }
     }
   ]
 }
