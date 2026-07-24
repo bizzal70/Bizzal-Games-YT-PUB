@@ -155,6 +155,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-18.mp4",
         "video_sha256": "dabed9e39cd1ae36fb38507e7ba608f26c229a570e200e4a3c73fddf9c8926da"
       }
+    },
+    {
+      "published_utc": "2026-07-24T17:53:00Z",
+      "day": "2026-07-24",
+      "content_id": "",
+      "publish_hash": "762b8ae9a3e9ea401aadb80510f08328d0fa3c34c363e480dd59920f90eda776",
+      "youtube_video_id": "T68wZZE980c",
+      "youtube_url": "https://www.youtube.com/watch?v=T68wZZE980c",
+      "video_sha256": "a291f46823b9a6a20e021c604f92df0022779802036dc59db11b49545639624a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-24.mp4",
+      "fingerprint": {
+        "day": "2026-07-24",
+        "category": "monster_tactic",
+        "angle": "deep_dive",
+        "content_id": "",
+        "canonical_hash": "",
+        "script_id": "210c6a31ef50628d3017abc42dcc93c96815ac418ace970c7f5e344ae74b51db",
+        "fact_kind": "creature",
+        "fact_pk": 15,
+        "fact_name": "Hellhound",
+        "hook": "Hellhound's loyalty: morale never breaks with master nearby",
+        "body": "In the world of Dungeon Crawl Classics RPG, the Hellhound is a formidable creature that players may encounter. With a respectable hit dice of 5 and an armor class of 16, these creatures are not to be underestimated. Known for their fiery abilities and unwavering loyalty to their master, Hellhounds bring unique challenges to any adventurer. In this deep dive, we will explore their abilities, tactics, and how to effectively incorporate them into your game.\n\nFire Breath and Damage. One of the most notable abilities of the Hellhound is its fire breath. This attack can be used once per round and affects a 10-foot cone, dealing 3d6 fire damage. Players have a chance to reduce this damage by making a Reflex saving throw with a DC of 13 for half damage. This ability can be devastating if players are grouped together, making positioning crucial during encounters. Understanding the area of effect and timing of this attack can help Dungeon Masters create challenging and dynamic combat scenarios.\n\nFire Immunity. Hellhounds are completely immune to fire, which can be a significant tactical advantage in combat. This immunity allows them to move through flames and other fire-based hazards without taking damage, making them ideal for environments where fire is prevalent. Players should be wary of using fire-based spells or attacks against a Hellhound, as they will have no effect. Instead, focusing on physical attacks or other elements can be more effective in overcoming these fiery beasts.\n\nSensing Invisible or Ethereal Creatures. Another unique ability of the Hellhound is its capacity to sense invisible or ethereal creatures by their heat. This makes them particularly useful in detecting hidden or sneaky foes that rely on invisibility to gain an advantage. For players, this means that trying to hide from a Hellhound using invisibility might not be as effective. Dungeon Masters can use this ability to create scenarios where Hellhounds are employed as guards or trackers, adding an extra layer of challenge for stealthy characters.\n\nLoyalty and Morale. Hellhounds are known for their loyalty to their master, a trait that significantly impacts their behavior in combat. As long as their master is within 60 feet, their morale never breaks. This unwavering loyalty can make them relentless opponents, as they will not flee or surrender as long as their master is nearby. Dungeon Masters can use this trait to create encounters where Hellhounds act as dedicated protectors, adding depth to the relationship between the creature and its master.\n\nCombat Tactics. When it comes to combat, Hellhounds are swift and deadly. With a movement speed of 40 feet, they can close the distance quickly, making it difficult for players to keep them at bay. Their primary attack is a bite with a +4 to hit, dealing 1d6 damage plus fire damage. This combination of speed and power makes them formidable opponents in close quarters. Dungeon Masters should consider using Hellhounds in packs to overwhelm players, utilizing their speed and fire breath to control the battlefield.\n\nHellhounds are a versatile and challenging creature in the Dungeon Crawl Classics RPG. Their combination of fire-based abilities, loyalty, and combat prowess makes them a worthy adversary for any adventuring party. Whether used as guards, trackers, or combatants, Hellhounds add depth and excitement to any campaign. Consider incorporating them into your next session to test your players' strategy and adaptability. Dive into the rules and unleash the Hellhounds in your game!",
+        "cta": "Subscribe for weekly tabletop RPG deep dives. Follow Bizzal Games on YouTube and Instagram.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-24.mp4",
+        "video_sha256": "a291f46823b9a6a20e021c604f92df0022779802036dc59db11b49545639624a"
+      }
     }
   ]
 }

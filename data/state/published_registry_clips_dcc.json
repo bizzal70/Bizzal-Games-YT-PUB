@@ -129,6 +129,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-18-dcc-clip3.mp4",
         "video_sha256": "e789fcf477d3af7cea3466d81b245a55673d62eef9ccb8a12dec223d2a30c511"
       }
+    },
+    {
+      "published_utc": "2026-07-24T17:55:37Z",
+      "day": "2026-07-24-dcc-clip1",
+      "content_id": "clip:e97c0177b40b3b4e",
+      "publish_hash": "41f7c18938236d0a11a2402800651d3662472123064ea565d757abafd6153d3a",
+      "youtube_video_id": "nBHTIZeGips",
+      "youtube_url": "https://www.youtube.com/watch?v=nBHTIZeGips",
+      "video_sha256": "697e96533a09b6a04b411f35260018d6f7c199656bf22e081071d5cc8017e93a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-24-dcc-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-07-24-dcc-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:e97c0177b40b3b4e",
+        "canonical_hash": "",
+        "script_id": "e97c0177b40b3b4e8d14f4f136941ea3c51161657cd8215ab2c57f464932cd75",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Hellhound's fire breath targets a 10-foot cone",
+        "hook": "Hellhound's fire breath targets a 10-foot cone",
+        "body": "Hellhounds unleash a fiery breath once per round, covering a 10-foot cone and dealing 3d6 fire damage. A Reflex save DC 13 halves the damage. Positioning is crucial to avoid this attack's devastating impact.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-24-dcc-clip1.mp4",
+        "video_sha256": "697e96533a09b6a04b411f35260018d6f7c199656bf22e081071d5cc8017e93a"
+      }
+    },
+    {
+      "published_utc": "2026-07-24T17:57:23Z",
+      "day": "2026-07-24-dcc-clip2",
+      "content_id": "clip:c536bdbc58c5e48d",
+      "publish_hash": "b8994dc14a0b6ca9ef2af819f9e22642c9e96566f9bebdd2c4acde71b80d4986",
+      "youtube_video_id": "h-5x8EUruQk",
+      "youtube_url": "https://www.youtube.com/watch?v=h-5x8EUruQk",
+      "video_sha256": "58d6c53db3a49f1285bbe5d4c66f7b5d9bc72420ac64dda86e4d46567be1ee0a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-24-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-07-24-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:c536bdbc58c5e48d",
+        "canonical_hash": "",
+        "script_id": "c536bdbc58c5e48dd6146cc3e9e7e770eb70934448829a4fdb13277a6c096d6e",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Hellhounds are immune to all fire damage",
+        "hook": "Hellhounds are immune to all fire damage",
+        "body": "Hellhounds take no damage from fire, allowing them to move through flames unharmed. Fire-based spells or attacks do nothing against them. Use physical attacks or other elements to defeat these fiery creatures.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-24-dcc-clip2.mp4",
+        "video_sha256": "58d6c53db3a49f1285bbe5d4c66f7b5d9bc72420ac64dda86e4d46567be1ee0a"
+      }
+    },
+    {
+      "published_utc": "2026-07-24T17:59:34Z",
+      "day": "2026-07-24-dcc-clip3",
+      "content_id": "clip:5bc9b76bbd3b46aa",
+      "publish_hash": "fa53732e3e1bd6cf523e0d5dee25a149233a0d8af7545fc943f6a13d295aa4bf",
+      "youtube_video_id": "KwumtUOUpQ8",
+      "youtube_url": "https://www.youtube.com/watch?v=KwumtUOUpQ8",
+      "video_sha256": "ec20b5f095a4ed6749625290169aa0c1874bfdd63f3fc0a6bfb618e88079a0d1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-24-dcc-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-07-24-dcc-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:5bc9b76bbd3b46aa",
+        "canonical_hash": "",
+        "script_id": "5bc9b76bbd3b46aa8be172cbaf60dd6a17602b298f225341af871ecfd39e77a8",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Hellhounds sense invisible foes by their heat",
+        "hook": "Hellhounds sense invisible foes by their heat",
+        "body": "Hellhounds detect invisible or ethereal creatures through their heat, making invisibility ineffective against them. Dungeon Masters can use this ability to challenge stealthy characters, employing Hellhounds as guards or trackers.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-24-dcc-clip3.mp4",
+        "video_sha256": "ec20b5f095a4ed6749625290169aa0c1874bfdd63f3fc0a6bfb618e88079a0d1"
+      }
     }
   ]
 }

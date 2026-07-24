@@ -1627,6 +1627,50 @@
       "video_id": "2aunaMUiG7s",
       "day": "2026-07-24",
       "published_at": "2026-07-24T15:01:13+00:00"
+    },
+    {
+      "content_key": "1c2fe1c2dde9687e77d7baa6bedbaa64b8d20de1a0d3b8bf43c826ef63dfc8ec",
+      "token_text": "break hellhound loyalty master morale nearby never",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Hellhound's loyalty: morale never breaks with master nearby #dcc",
+      "video_id": "T68wZZE980c",
+      "day": "2026-07-24",
+      "published_at": "2026-07-24T17:53:00+00:00"
+    },
+    {
+      "content_key": "a54d20f79e0358a813124166d8d7b501c41abd6d9ce26ec7adb5fc06efc89a26",
+      "token_text": "10 breath cone fire foot hellhound target",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Hellhound's fire breath targets a 10-foot cone #dcc",
+      "video_id": "nBHTIZeGips",
+      "day": "2026-07-24-dcc-clip1",
+      "published_at": "2026-07-24T17:55:37+00:00"
+    },
+    {
+      "content_key": "ec4cc16e648fe44929f3c18f35fd1d774c51e1f3492f3e602935d7cae05c5d71",
+      "token_text": "all damage fire hellhound immune",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Hellhounds are immune to all fire damage #dcc",
+      "video_id": "h-5x8EUruQk",
+      "day": "2026-07-24-dcc-clip2",
+      "published_at": "2026-07-24T17:57:23+00:00"
+    },
+    {
+      "content_key": "e2f1edb586f42b2827e93cf8a0fbaffe08e9abc6eb052a40a0863fbada03c534",
+      "token_text": "foes heat hellhound invisible sense",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Hellhounds sense invisible foes by their heat #dcc",
+      "video_id": "KwumtUOUpQ8",
+      "day": "2026-07-24-dcc-clip3",
+      "published_at": "2026-07-24T17:59:34+00:00"
     }
   ]
 }
