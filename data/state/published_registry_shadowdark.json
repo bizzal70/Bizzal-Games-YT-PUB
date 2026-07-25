@@ -598,6 +598,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-24.mp4",
         "video_sha256": "56ae6900d81957f413f6fe78012ca2a585f69d348bfec5fcb426332b4bb95f7d"
       }
+    },
+    {
+      "published_utc": "2026-07-25T14:49:00Z",
+      "day": "2026-07-25",
+      "content_id": "bgp-2026-07-25-rules-ruling-rule-2-3abdec473c21",
+      "publish_hash": "d3f794ce7bceb1ecad813eea94500e6b85c7806f5fe76a50f242402e9eb92a5d",
+      "youtube_video_id": "CBxIjIe7-O0",
+      "youtube_url": "https://www.youtube.com/watch?v=CBxIjIe7-O0",
+      "video_sha256": "837b8d5c1f5962b5072d047ef7a48dfbbf62195b4827570aa096302a8153e090",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-25.mp4",
+      "fingerprint": {
+        "day": "2026-07-25",
+        "category": "rules_ruling",
+        "angle": "fast_ruling",
+        "content_id": "bgp-2026-07-25-rules-ruling-rule-2-3abdec473c21",
+        "canonical_hash": "3abdec473c2190e5b42fcb5675def14998b94f1f8b28ac7a4cdb012c4036d861",
+        "script_id": "8c91a1a4b8ebf213fa6ee415399730b9a318817acc7f9ec763cad3a08ea3f14a",
+        "fact_kind": "rule",
+        "fact_pk": 2,
+        "fact_name": "Difficulty Class",
+        "hook": "Difficulty Class determines success or failure with a single roll.",
+        "body": "Difficulty Class: Easy DC 9, Normal DC 12, Hard DC 15, Extreme DC 18. Characters roll d20 plus relevant stat modifier against the DC. Misjudging intent before rolling leads to unnecessary disputes. Establishing intent, trigger, and outcome before rolling ensures clarity and expedites resolution.",
+        "cta": "GMs: Establish intent, trigger, and outcome before rolling against DC 12 to avoid pointless arguments.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-25.mp4",
+        "video_sha256": "837b8d5c1f5962b5072d047ef7a48dfbbf62195b4827570aa096302a8153e090"
+      }
     }
   ]
 }

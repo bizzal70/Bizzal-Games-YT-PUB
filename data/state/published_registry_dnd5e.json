@@ -857,6 +857,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-24.mp4",
         "video_sha256": "d2be8d8197094094e81d9d5705234bc820840eb00b55f8f62867ce00384648f0"
       }
+    },
+    {
+      "published_utc": "2026-07-25T14:43:56Z",
+      "day": "2026-07-25",
+      "content_id": "bgp-2026-07-25-item-spotlight-item-srd-2024-weapon-of-warning-rapier-0e42bb7207ca",
+      "publish_hash": "41904de25c915fde86057492f25f3f4cb007b44d5212022449238ff3119acf88",
+      "youtube_video_id": "f5gzoyvx5Vc",
+      "youtube_url": "https://www.youtube.com/watch?v=f5gzoyvx5Vc",
+      "video_sha256": "e7cbaf03d6cd2aa5ee422218d7dbe72854a8b0c6acd352fa985e3dd7197b48ec",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-25.mp4",
+      "fingerprint": {
+        "day": "2026-07-25",
+        "category": "item_spotlight",
+        "angle": "best_user",
+        "content_id": "bgp-2026-07-25-item-spotlight-item-srd-2024-weapon-of-warning-rapier-0e42bb7207ca",
+        "canonical_hash": "0e42bb7207ca900caf29ddf4b47eb6c535ee5d81c18f339ef29a662030b59104",
+        "script_id": "efbb838fa9adc8bdaed43dbc5e75ae1cbe8f17ef5e8f17737dc7c2e9aa970bcc",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_weapon-of-warning-rapier",
+        "fact_name": "Weapon of Warning (Rapier)",
+        "hook": "Weapon of Warning (Rapier): humble gear with main-character energy when the table gets creative.",
+        "body": "The Weapon of Warning (Rapier) wakes allies from natural sleep when combat starts but not from magical sleep. Its range for granting Advantage on Initiative is 30 feet, which requires precise positioning. Keeping allies within this range before combat ensures they benefit from the bonus. Use this to secure a tactical position before hostilities begin.",
+        "cta": "DMs: Position the party within 30 feet of the Weapon of Warning (Rapier) to ensure Advantage on Initiative rolls.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-25.mp4",
+        "video_sha256": "e7cbaf03d6cd2aa5ee422218d7dbe72854a8b0c6acd352fa985e3dd7197b48ec"
+      }
     }
   ]
 }

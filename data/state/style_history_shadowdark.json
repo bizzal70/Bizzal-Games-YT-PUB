@@ -292,5 +292,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-07-25": {
+    "rules_ruling": {
+      "angle": "fast_ruling",
+      "voice": "grim_warden",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "nova"
+    }
   }
 }

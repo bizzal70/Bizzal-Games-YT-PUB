@@ -537,6 +537,51 @@
       "hook": "Playing on a Grid means each square represents 5 feet.",
       "body": "The common mistake when Playing on a Grid is prioritizing speed over clarity, leading to misinterpretations of movement. Each square on the grid equals 5 feet, and movement should be calculated square by square, not foot by foot. This prevents disputes over distances and ensures consistent rulings. Clear rulings now prevent arguments later.",
       "cta": "DMs: Enforce 5-foot square movement to avoid disputes and keep your game from devolving into a geometry lesson."
+    },
+    {
+      "published_utc": "2026-07-25T14:40:09Z",
+      "day": "2026-07-25",
+      "system": "dcc",
+      "content_id": "bgp-2026-07-25-rules-myth-rule-21-7bcaf50e801b",
+      "instagram_post_id": "18131088310723012",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "2626423dc02d8610a14013f3c5db9f344082a8ccdac5417f9512a56460105777",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-25.mp4",
+      "fact_name": "Healing",
+      "category": "rules_myth",
+      "hook": "Healing restores 1 HP per night while adventuring, 2 HP with full bed rest.",
+      "body": "Wounds mend with rest but never exceed the natural maximum. Critical-hit effects, like a speed penalty from a wounded kneecap, heal only when their associated damage heals. Assuming critical effects heal independently leads to persistent penalties. Ensuring damage is fully healed avoids lingering effects.",
+      "cta": "Judges: Remind them that ignoring bed rest means dragging that bum knee through every encounter until it's fully healed."
+    },
+    {
+      "published_utc": "2026-07-25T14:45:23Z",
+      "day": "2026-07-25",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-25-item-spotlight-item-srd-2024-weapon-of-warning-rapier-0e42bb7207ca",
+      "instagram_post_id": "18129895675712450",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "e7cbaf03d6cd2aa5ee422218d7dbe72854a8b0c6acd352fa985e3dd7197b48ec",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-25.mp4",
+      "fact_name": "Weapon of Warning (Rapier)",
+      "category": "item_spotlight",
+      "hook": "Weapon of Warning (Rapier): humble gear with main-character energy when the table gets creative.",
+      "body": "The Weapon of Warning (Rapier) wakes allies from natural sleep when combat starts but not from magical sleep. Its range for granting Advantage on Initiative is 30 feet, which requires precise positioning. Keeping allies within this range before combat ensures they benefit from the bonus. Use this to secure a tactical position before hostilities begin.",
+      "cta": "DMs: Position the party within 30 feet of the Weapon of Warning (Rapier) to ensure Advantage on Initiative rolls."
+    },
+    {
+      "published_utc": "2026-07-25T14:50:15Z",
+      "day": "2026-07-25",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-07-25-rules-ruling-rule-2-3abdec473c21",
+      "instagram_post_id": "18116176516715042",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "837b8d5c1f5962b5072d047ef7a48dfbbf62195b4827570aa096302a8153e090",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-25.mp4",
+      "fact_name": "Difficulty Class",
+      "category": "rules_ruling",
+      "hook": "Difficulty Class determines success or failure with a single roll.",
+      "body": "Difficulty Class: Easy DC 9, Normal DC 12, Hard DC 15, Extreme DC 18. Characters roll d20 plus relevant stat modifier against the DC. Misjudging intent before rolling leads to unnecessary disputes. Establishing intent, trigger, and outcome before rolling ensures clarity and expedites resolution.",
+      "cta": "GMs: Establish intent, trigger, and outcome before rolling against DC 12 to avoid pointless arguments."
     }
   ]
 }

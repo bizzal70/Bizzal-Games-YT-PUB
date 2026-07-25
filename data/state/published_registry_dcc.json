@@ -260,6 +260,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-24.mp4",
         "video_sha256": "2f361bf9f457c92f96871705a330c053703387e20ef1a05a022a2a9e6e91bb6a"
       }
+    },
+    {
+      "published_utc": "2026-07-25T14:39:26Z",
+      "day": "2026-07-25",
+      "content_id": "bgp-2026-07-25-rules-myth-rule-21-7bcaf50e801b",
+      "publish_hash": "0cf41547b97988e64a6b5473ce6a60f2226b89c9cff3644992fa811c625c6ae0",
+      "youtube_video_id": "yMs8ZK0QTOo",
+      "youtube_url": "https://www.youtube.com/watch?v=yMs8ZK0QTOo",
+      "video_sha256": "2626423dc02d8610a14013f3c5db9f344082a8ccdac5417f9512a56460105777",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-25.mp4",
+      "fingerprint": {
+        "day": "2026-07-25",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-07-25-rules-myth-rule-21-7bcaf50e801b",
+        "canonical_hash": "7bcaf50e801b6986adb0714d02d1a34e17f9a6817a56b9dcab53173f50a00bde",
+        "script_id": "01e851f357a9540eb32301c94fe94541ed61aa8264863e301b0ad6ad7e5cc7df",
+        "fact_kind": "rule",
+        "fact_pk": 21,
+        "fact_name": "Healing",
+        "hook": "Healing restores 1 HP per night while adventuring, 2 HP with full bed rest.",
+        "body": "Wounds mend with rest but never exceed the natural maximum. Critical-hit effects, like a speed penalty from a wounded kneecap, heal only when their associated damage heals. Assuming critical effects heal independently leads to persistent penalties. Ensuring damage is fully healed avoids lingering effects.",
+        "cta": "Judges: Remind them that ignoring bed rest means dragging that bum knee through every encounter until it's fully healed.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-25.mp4",
+        "video_sha256": "2626423dc02d8610a14013f3c5db9f344082a8ccdac5417f9512a56460105777"
+      }
     }
   ]
 }

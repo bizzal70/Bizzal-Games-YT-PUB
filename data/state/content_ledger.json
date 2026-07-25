@@ -1671,6 +1671,72 @@
       "video_id": "KwumtUOUpQ8",
       "day": "2026-07-24-dcc-clip3",
       "published_at": "2026-07-24T17:59:34+00:00"
+    },
+    {
+      "content_key": "b7e39cad5ccd2ef7e184deb462912914e7c3430da222e929e0bf53ba10c408ef",
+      "token_text": "adventuring bed full healing hp night rest restore",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Healing restores 1 HP per night while adventuring, 2 HP with full bed rest #dcc",
+      "video_id": "yMs8ZK0QTOo",
+      "day": "2026-07-25",
+      "published_at": "2026-07-25T14:39:26+00:00"
+    },
+    {
+      "content_key": "68e2998f6de68eb40fc18944200a8fe94210f8a6dc9057351d8bd320eeed2e1a",
+      "token_text": "adventuring bed full healing hp night rest restore",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Healing restores 1 HP per night while adventuring, 2 HP with full bed rest.",
+      "video_id": "18131088310723012",
+      "day": "2026-07-25",
+      "published_at": "2026-07-25T14:40:09+00:00"
+    },
+    {
+      "content_key": "323aa9f16cea4fc6a24230f7930352f19085694e206a046529c0aa9432e88eaa",
+      "token_text": "character creative energy gear gets humble main rapier table warning weapon",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Weapon of Warning (Rapier): humble gear with main-character energy #dnd5e",
+      "video_id": "f5gzoyvx5Vc",
+      "day": "2026-07-25",
+      "published_at": "2026-07-25T14:43:56+00:00"
+    },
+    {
+      "content_key": "bd5a7a151be46a9e1c9a4a1fd965c03a6eb87bf9c45d8bd1d4c2f450ab7786b6",
+      "token_text": "character creative energy gear gets humble main rapier table warning weapon",
+      "system_id": "dnd5e",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Weapon of Warning (Rapier): humble gear with main-character energy when the table gets creative.",
+      "video_id": "18129895675712450",
+      "day": "2026-07-25",
+      "published_at": "2026-07-25T14:45:23+00:00"
+    },
+    {
+      "content_key": "d92530a1a6582c4c34a8968832f4ebf0324097ac685ccf0b8346e479ae7e2aae",
+      "token_text": "class determine difficulty failure roll single success",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Difficulty Class determines success or failure with a single roll #shadowdark",
+      "video_id": "CBxIjIe7-O0",
+      "day": "2026-07-25",
+      "published_at": "2026-07-25T14:49:00+00:00"
+    },
+    {
+      "content_key": "218e6516f4a65f1850512c993bbffe9066c1b3c33390602f6380b72cd0145a02",
+      "token_text": "class determine difficulty failure roll single success",
+      "system_id": "shadowdark",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Difficulty Class determines success or failure with a single roll.",
+      "video_id": "18116176516715042",
+      "day": "2026-07-25",
+      "published_at": "2026-07-25T14:50:15+00:00"
     }
   ]
 }

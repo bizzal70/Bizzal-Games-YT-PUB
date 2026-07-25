@@ -286,5 +286,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-07-25": {
+    "item_spotlight": {
+      "angle": "best_user",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }
