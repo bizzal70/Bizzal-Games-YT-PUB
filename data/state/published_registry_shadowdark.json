@@ -624,6 +624,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-25.mp4",
         "video_sha256": "837b8d5c1f5962b5072d047ef7a48dfbbf62195b4827570aa096302a8153e090"
       }
+    },
+    {
+      "published_utc": "2026-07-26T14:55:41Z",
+      "day": "2026-07-26",
+      "content_id": "bgp-2026-07-26-item-spotlight-item-45-9fee6f6d072b",
+      "publish_hash": "cb28c735c7a5e7ced14cc16358cb4bff745efa85a367313851953c7eaeb500e4",
+      "youtube_video_id": "WFPvkTN2KSY",
+      "youtube_url": "https://www.youtube.com/watch?v=WFPvkTN2KSY",
+      "video_sha256": "94363efb01ae30af9ee717bd20fa071d704bce2249df5b8949e5ac81c5f3c7cd",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-26.mp4",
+      "fingerprint": {
+        "day": "2026-07-26",
+        "category": "item_spotlight",
+        "angle": "best_user",
+        "content_id": "bgp-2026-07-26-item-spotlight-item-45-9fee6f6d072b",
+        "canonical_hash": "9fee6f6d072b79fdd3521533c971ec527667d20845d78228fc0186cf294477d0",
+        "script_id": "a8f583a4028faaaad4dfb3d23922e4af426bb83ada9870058f62b2de15033037",
+        "fact_kind": "item",
+        "fact_pk": 45,
+        "fact_name": "Necklace Of Charm",
+        "hook": "The Necklace Of Charm sets your Charisma stat to 18 (+4) while worn.",
+        "body": "The Necklace Of Charm overrides your Charisma to 18, replacing any existing bonuses or penalties. This means characters with high Charisma gain no benefit, as their stat is effectively capped. Giving this to the character with the lowest Charisma optimizes the party's overall effectiveness.",
+        "cta": "GMs: Hand the Necklace Of Charm to the party's charisma-challenged member; their Charisma becomes 18, no questions asked.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-26.mp4",
+        "video_sha256": "94363efb01ae30af9ee717bd20fa071d704bce2249df5b8949e5ac81c5f3c7cd"
+      }
     }
   ]
 }

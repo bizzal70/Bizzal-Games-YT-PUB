@@ -304,5 +304,17 @@
       ],
       "tts_voice_id": "nova"
     }
+  },
+  "2026-07-26": {
+    "item_spotlight": {
+      "angle": "best_user",
+      "voice": "torchbearer_ref",
+      "tone": "dry",
+      "persona": "dungeon_gear_mentor",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "coral"
+    }
   }
 }

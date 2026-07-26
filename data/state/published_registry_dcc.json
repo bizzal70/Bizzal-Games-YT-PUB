@@ -286,6 +286,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-25.mp4",
         "video_sha256": "2626423dc02d8610a14013f3c5db9f344082a8ccdac5417f9512a56460105777"
       }
+    },
+    {
+      "published_utc": "2026-07-26T14:45:11Z",
+      "day": "2026-07-26",
+      "content_id": "bgp-2026-07-26-monster-tactic-creature-169-bd70a58a0653",
+      "publish_hash": "969833e324f2e0e6d38b84f195f7c6bb6c8990d3b293946bbe0533c5371ab700",
+      "youtube_video_id": "vm5eAxycD0s",
+      "youtube_url": "https://www.youtube.com/watch?v=vm5eAxycD0s",
+      "video_sha256": "4686bb3a44511954b89854023c4dfa47ea99427d9054a05950a38293b5558a52",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-26.mp4",
+      "fingerprint": {
+        "day": "2026-07-26",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-07-26-monster-tactic-creature-169-bd70a58a0653",
+        "canonical_hash": "bd70a58a065359503fde85420e18ef4ae8cdc5c998df054226795b0a5148fb55",
+        "script_id": "26f246d05dbc6954a8c4b6af9ca7bfda7c1028af183c89b9a82164447b3f841a",
+        "fact_kind": "creature",
+        "fact_pk": 169,
+        "fact_name": "Kaundyuk",
+        "hook": "Yes, Kaundyuk looks harmless - until the table underestimates it and gives it free turns.",
+        "body": "With a bite attack at +8 dealing 1d8 damage plus poison and two claw attacks at +8 for 1d8+2 each, Kaundyuk can inflict significant damage if left unchecked. Its critical range of 19-20 with a DN/d6 crit die increases the odds of high-impact hits. Focusing on its 6d12 hit dice misses the real danger: the ability to consistently land multiple high-damage attacks. Disrupting its action economy immediately is more effective than attempting to outlast its barrage.",
+        "cta": "Players: laugh first, then respect turn economy before this joke encounter snowballs.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-26.mp4",
+        "video_sha256": "4686bb3a44511954b89854023c4dfa47ea99427d9054a05950a38293b5558a52"
+      },
+      "tone_lint_violation": "vague filler phrase: maximize its attack potential"
     }
   ]
 }

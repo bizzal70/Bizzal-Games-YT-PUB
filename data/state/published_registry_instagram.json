@@ -582,6 +582,51 @@
       "hook": "Difficulty Class determines success or failure with a single roll.",
       "body": "Difficulty Class: Easy DC 9, Normal DC 12, Hard DC 15, Extreme DC 18. Characters roll d20 plus relevant stat modifier against the DC. Misjudging intent before rolling leads to unnecessary disputes. Establishing intent, trigger, and outcome before rolling ensures clarity and expedites resolution.",
       "cta": "GMs: Establish intent, trigger, and outcome before rolling against DC 12 to avoid pointless arguments."
+    },
+    {
+      "published_utc": "2026-07-26T14:46:08Z",
+      "day": "2026-07-26",
+      "system": "dcc",
+      "content_id": "bgp-2026-07-26-monster-tactic-creature-169-bd70a58a0653",
+      "instagram_post_id": "18029162126836809",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "4686bb3a44511954b89854023c4dfa47ea99427d9054a05950a38293b5558a52",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-26.mp4",
+      "fact_name": "Kaundyuk",
+      "category": "monster_tactic",
+      "hook": "Yes, Kaundyuk looks harmless - until the table underestimates it and gives it free turns.",
+      "body": "With a bite attack at +8 dealing 1d8 damage plus poison and two claw attacks at +8 for 1d8+2 each, Kaundyuk can inflict significant damage if left unchecked. Its critical range of 19-20 with a DN/d6 crit die increases the odds of high-impact hits. Focusing on its 6d12 hit dice misses the real danger: the ability to consistently land multiple high-damage attacks. Disrupting its action economy immediately is more effective than attempting to outlast its barrage.",
+      "cta": "Players: laugh first, then respect turn economy before this joke encounter snowballs."
+    },
+    {
+      "published_utc": "2026-07-26T14:52:07Z",
+      "day": "2026-07-26",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-26-encounter-seed-creature-srd-2024-adult-blue-dragon-a1213abad170",
+      "instagram_post_id": "17962883067155840",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "23cd81a81f19721b1f25f099cd338682108392337d049e419de82393a14e665b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-26.mp4",
+      "fact_name": "Adult Blue Dragon",
+      "category": "encounter_seed",
+      "hook": "Light tone, real consequences: build the scene around Adult Blue Dragon and table overconfidence.",
+      "body": "Lightning Breath deals 66 (12d10) lightning damage in a 90-foot line; it recharges on a roll of 5-6. Underestimating the dragon's 80-foot fly speed combined with its 40-foot burrow speed leads to poor positioning and wasted actions. Assuming the dragon will stay grounded or visible results in tactical errors. Using terrain to limit its mobility and force it into disadvantageous positions is crucial.",
+      "cta": "DMs: Use the dragon's 80-foot fly speed to exploit players' poor positioning; force them to respect its mobility or suffer."
+    },
+    {
+      "published_utc": "2026-07-26T14:56:38Z",
+      "day": "2026-07-26",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-07-26-item-spotlight-item-45-9fee6f6d072b",
+      "instagram_post_id": "18115010606480886",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "94363efb01ae30af9ee717bd20fa071d704bce2249df5b8949e5ac81c5f3c7cd",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-26.mp4",
+      "fact_name": "Necklace Of Charm",
+      "category": "item_spotlight",
+      "hook": "The Necklace Of Charm sets your Charisma stat to 18 (+4) while worn.",
+      "body": "The Necklace Of Charm overrides your Charisma to 18, replacing any existing bonuses or penalties. This means characters with high Charisma gain no benefit, as their stat is effectively capped. Giving this to the character with the lowest Charisma optimizes the party's overall effectiveness.",
+      "cta": "GMs: Hand the Necklace Of Charm to the party's charisma-challenged member; their Charisma becomes 18, no questions asked."
     }
   ]
 }

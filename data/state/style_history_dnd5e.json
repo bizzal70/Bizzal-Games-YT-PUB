@@ -298,5 +298,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-07-26": {
+    "encounter_seed": {
+      "angle": "terrain_feature",
+      "voice": "rules_lawyer",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

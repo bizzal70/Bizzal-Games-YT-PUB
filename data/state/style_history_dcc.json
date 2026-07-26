@@ -214,5 +214,15 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-07-26": {
+    "monster_tactic": {
+      "angle": "how_it_wins",
+      "voice": "grim_referee",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

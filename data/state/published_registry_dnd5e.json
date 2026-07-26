@@ -883,6 +883,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-25.mp4",
         "video_sha256": "e7cbaf03d6cd2aa5ee422218d7dbe72854a8b0c6acd352fa985e3dd7197b48ec"
       }
+    },
+    {
+      "published_utc": "2026-07-26T14:51:17Z",
+      "day": "2026-07-26",
+      "content_id": "bgp-2026-07-26-encounter-seed-creature-srd-2024-adult-blue-dragon-a1213abad170",
+      "publish_hash": "9c9cc508af4fc8f79b9af78796cac029e3f556b546a0a51d300ed56927fd79eb",
+      "youtube_video_id": "Dj1UQSsVe0o",
+      "youtube_url": "https://www.youtube.com/watch?v=Dj1UQSsVe0o",
+      "video_sha256": "23cd81a81f19721b1f25f099cd338682108392337d049e419de82393a14e665b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-26.mp4",
+      "fingerprint": {
+        "day": "2026-07-26",
+        "category": "encounter_seed",
+        "angle": "terrain_feature",
+        "content_id": "bgp-2026-07-26-encounter-seed-creature-srd-2024-adult-blue-dragon-a1213abad170",
+        "canonical_hash": "a1213abad17030e392087d8d64d80041ef75e9d2d71419a1cb801b3101098150",
+        "script_id": "3b96689e32b547e418c2cea95e208fb530f662e2d9d0411d253923293d6d724b",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_adult-blue-dragon",
+        "fact_name": "Adult Blue Dragon",
+        "hook": "Light tone, real consequences: build the scene around Adult Blue Dragon and table overconfidence.",
+        "body": "Lightning Breath deals 66 (12d10) lightning damage in a 90-foot line; it recharges on a roll of 5-6. Underestimating the dragon's 80-foot fly speed combined with its 40-foot burrow speed leads to poor positioning and wasted actions. Assuming the dragon will stay grounded or visible results in tactical errors. Using terrain to limit its mobility and force it into disadvantageous positions is crucial.",
+        "cta": "DMs: Use the dragon's 80-foot fly speed to exploit players' poor positioning; force them to respect its mobility or suffer.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-26.mp4",
+        "video_sha256": "23cd81a81f19721b1f25f099cd338682108392337d049e419de82393a14e665b"
+      }
     }
   ]
 }
