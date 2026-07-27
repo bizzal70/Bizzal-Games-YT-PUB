@@ -1,0 +1,76 @@
+name: pull channel stats (temp)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -q google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+      - name: Materialize YouTube OAuth token
+        env:
+          BIZZAL_YT_TOKEN_JSON: ${{ secrets.BIZZAL_YT_TOKEN_JSON }}
+        run: |
+          mkdir -p .secrets
+          printf '%s' "$BIZZAL_YT_TOKEN_JSON" > .secrets/youtube_token.json
+      - name: Pull full channel stats
+        run: |
+          python - <<'PYEOF'
+          import json, re
+          from google.oauth2.credentials import Credentials
+          from google.auth.transport.requests import Request
+          from googleapiclient.discovery import build
+
+          SCOPES = ["https://www.googleapis.com/auth/youtube.readonly",
+                    "https://www.googleapis.com/auth/youtube.force-ssl"]
+          creds = Credentials.from_authorized_user_file(".secrets/youtube_token.json", SCOPES)
+          creds.refresh(Request())
+          yt = build("youtube", "v3", credentials=creds)
+
+          ch = yt.channels().list(part="contentDetails,statistics,snippet", mine=True).execute()
+          chinfo = ch["items"][0]
+          print("CHANNEL_STATS", json.dumps(chinfo["statistics"]))
+          uploads = chinfo["contentDetails"]["relatedPlaylists"]["uploads"]
+
+          ids, token = [], None
+          while True:
+              r = yt.playlistItems().list(part="snippet", playlistId=uploads, maxResults=50, pageToken=token).execute()
+              ids += [i["snippet"]["resourceId"]["videoId"] for i in r.get("items", [])]
+              token = r.get("nextPageToken")
+              if not token:
+                  break
+
+          def parse_dur(d):
+              m = re.match(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", d)
+              if not m: return 0
+              h, mi, s = (int(x) if x else 0 for x in m.groups())
+              return h*3600 + mi*60 + s
+
+          rows = []
+          for i in range(0, len(ids), 50):
+              d = yt.videos().list(part="snippet,statistics,contentDetails,status", id=",".join(ids[i:i+50])).execute()
+              for it in d.get("items", []):
+                  sn, st, cd = it["snippet"], it.get("statistics", {}), it["contentDetails"]
+                  rows.append({
+                      "id": it["id"],
+                      "title": sn["title"],
+                      "publishedAt": sn["publishedAt"],
+                      "views": int(st.get("viewCount", 0)),
+                      "likes": int(st.get("likeCount", 0)) if "likeCount" in st else None,
+                      "comments": int(st.get("commentCount", 0)) if "commentCount" in st else None,
+                      "duration_s": parse_dur(cd["duration"]),
+                      "privacy": it["status"].get("privacyStatus"),
+                  })
+          print("VIDEO_ROWS_JSON_START")
+          print(json.dumps(rows))
+          print("VIDEO_ROWS_JSON_END")
+          PYEOF
