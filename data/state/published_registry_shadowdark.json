@@ -650,6 +650,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-26.mp4",
         "video_sha256": "94363efb01ae30af9ee717bd20fa071d704bce2249df5b8949e5ac81c5f3c7cd"
       }
+    },
+    {
+      "published_utc": "2026-07-27T15:20:32Z",
+      "day": "2026-07-27",
+      "content_id": "bgp-2026-07-27-encounter-seed-creature-126-ad405188c271",
+      "publish_hash": "048b7052ae7e57427579adfb8cf0bf95e05f4cc45e181441fc51747c6ac7b727",
+      "youtube_video_id": "XdYObxLTOlw",
+      "youtube_url": "https://www.youtube.com/watch?v=XdYObxLTOlw",
+      "video_sha256": "c4262fb92c64767e5703bd4b56fd6e3be0e1269aa65919b48881b6b7155d9918",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-27.mp4",
+      "fingerprint": {
+        "day": "2026-07-27",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-07-27-encounter-seed-creature-126-ad405188c271",
+        "canonical_hash": "ad405188c2719aa4fa72b04cc3f95fac2488c30630e5fef06565921523d7f477",
+        "script_id": "b82d44bf214c8435baa30d2986ee207ad9ae8727d0538827c37950017d37fb3c",
+        "fact_kind": "creature",
+        "fact_pk": 126,
+        "fact_name": "Kraken",
+        "hook": "Kraken is perfect for a playful encounter that can still punish bad habits.",
+        "body": "The Kraken's storm effect creates violently turbulent seas in a 1-mile radius for 2d4 rounds. Ignoring the risk of capsizing can lead to disastrous consequences when the ship capsizes mid-combat. Preparing for potential capsizing or avoiding the storm entirely is critical when engaging the Kraken.",
+        "cta": "GMs: Make them roll a DEX save DC 15 each round or watch their ship capsize in the Kraken's storm.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-27.mp4",
+        "video_sha256": "c4262fb92c64767e5703bd4b56fd6e3be0e1269aa65919b48881b6b7155d9918"
+      }
     }
   ]
 }

@@ -909,6 +909,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-26.mp4",
         "video_sha256": "23cd81a81f19721b1f25f099cd338682108392337d049e419de82393a14e665b"
       }
+    },
+    {
+      "published_utc": "2026-07-27T15:16:03Z",
+      "day": "2026-07-27",
+      "content_id": "bgp-2026-07-27-rules-myth-rule-srd-2024-exploration-hiding-f9ab03ba68bf",
+      "publish_hash": "a85a4b3e24946cb015961d1d48ce4249bf714d49d26d9c5b82270bbbd7d7f9e5",
+      "youtube_video_id": "3sessI1UkKY",
+      "youtube_url": "https://www.youtube.com/watch?v=3sessI1UkKY",
+      "video_sha256": "9ea07c097db013d2aec3d8c35622316472fa5a688b2539efb62cf53ac83997ec",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-27.mp4",
+      "fingerprint": {
+        "day": "2026-07-27",
+        "category": "rules_myth",
+        "angle": "dm_callout",
+        "content_id": "bgp-2026-07-27-rules-myth-rule-srd-2024-exploration-hiding-f9ab03ba68bf",
+        "canonical_hash": "f9ab03ba68bfbc82f6fa6a9f1363c68014c57a609f97bd63234491e79106fc6f",
+        "script_id": "da55a4f45fea04f44b8c1fc83a404809eba7037e27c752b58dc8a89b91ca76b9",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_exploration_hiding",
+        "fact_name": "Hiding",
+        "hook": "Hiding requires the DM to determine when circumstances allow it.",
+        "body": "Hiding depends on environmental conditions and DM discretion, not just a Stealth check. Many assume hiding is always an option, overlooking line of sight and cover requirements. Clear communication from the DM on visibility and obstructions is essential to avoid disputes. Consistency in rulings maintains game flow and player understanding.",
+        "cta": "DMs: Clarify that hiding requires both cover and a successful Stealth check, not just a whim or wish.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-27.mp4",
+        "video_sha256": "9ea07c097db013d2aec3d8c35622316472fa5a688b2539efb62cf53ac83997ec"
+      }
     }
   ]
 }

@@ -627,6 +627,51 @@
       "hook": "The Necklace Of Charm sets your Charisma stat to 18 (+4) while worn.",
       "body": "The Necklace Of Charm overrides your Charisma to 18, replacing any existing bonuses or penalties. This means characters with high Charisma gain no benefit, as their stat is effectively capped. Giving this to the character with the lowest Charisma optimizes the party's overall effectiveness.",
       "cta": "GMs: Hand the Necklace Of Charm to the party's charisma-challenged member; their Charisma becomes 18, no questions asked."
+    },
+    {
+      "published_utc": "2026-07-27T15:12:44Z",
+      "day": "2026-07-27",
+      "system": "dcc",
+      "content_id": "bgp-2026-07-27-spell-use-case-spell-127-e4e58a86c50e",
+      "instagram_post_id": "17856795831693243",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "19735a683663452f4b4f19a835307bc3534680f43a46e8d9d60f0270db7021b1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-27.mp4",
+      "fact_name": "Fly",
+      "category": "spell_use_case",
+      "hook": "Fly drops you mid-air if the spell ends unexpectedly.",
+      "body": "Fly is a 3rd-level wizard spell with a range of self or touch, and its duration is determined by the spell check result. Misjudging the duration and speed can lead to abrupt falls when the spell ends. Half speed applies when climbing, double when diving, and it's halved if heavily loaded. Cast Fly when the risk of falling is minimal, such as near the ground or with a backup plan in place.",
+      "cta": "Judges: Remind them Fly's spell check determines duration - cast it low to the ground unless they enjoy plummeting."
+    },
+    {
+      "published_utc": "2026-07-27T15:17:03Z",
+      "day": "2026-07-27",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-27-rules-myth-rule-srd-2024-exploration-hiding-f9ab03ba68bf",
+      "instagram_post_id": "17987939849840564",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9ea07c097db013d2aec3d8c35622316472fa5a688b2539efb62cf53ac83997ec",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-27.mp4",
+      "fact_name": "Hiding",
+      "category": "rules_myth",
+      "hook": "Hiding requires the DM to determine when circumstances allow it.",
+      "body": "Hiding depends on environmental conditions and DM discretion, not just a Stealth check. Many assume hiding is always an option, overlooking line of sight and cover requirements. Clear communication from the DM on visibility and obstructions is essential to avoid disputes. Consistency in rulings maintains game flow and player understanding.",
+      "cta": "DMs: Clarify that hiding requires both cover and a successful Stealth check, not just a whim or wish."
+    },
+    {
+      "published_utc": "2026-07-27T15:21:14Z",
+      "day": "2026-07-27",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-07-27-encounter-seed-creature-126-ad405188c271",
+      "instagram_post_id": "18017036600914781",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c4262fb92c64767e5703bd4b56fd6e3be0e1269aa65919b48881b6b7155d9918",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-27.mp4",
+      "fact_name": "Kraken",
+      "category": "encounter_seed",
+      "hook": "Kraken is perfect for a playful encounter that can still punish bad habits.",
+      "body": "The Kraken's storm effect creates violently turbulent seas in a 1-mile radius for 2d4 rounds. Ignoring the risk of capsizing can lead to disastrous consequences when the ship capsizes mid-combat. Preparing for potential capsizing or avoiding the storm entirely is critical when engaging the Kraken.",
+      "cta": "GMs: Make them roll a DEX save DC 15 each round or watch their ship capsize in the Kraken's storm."
     }
   ]
 }

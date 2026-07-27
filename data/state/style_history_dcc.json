@@ -224,5 +224,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-07-27": {
+    "spell_use_case": {
+      "angle": "corruption_risk",
+      "voice": "chaos_herald",
+      "tone": "gritty",
+      "persona": "chaos_arcane_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "fable"
+    }
   }
 }

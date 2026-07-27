@@ -313,6 +313,32 @@
         "video_sha256": "4686bb3a44511954b89854023c4dfa47ea99427d9054a05950a38293b5558a52"
       },
       "tone_lint_violation": "vague filler phrase: maximize its attack potential"
+    },
+    {
+      "published_utc": "2026-07-27T15:11:56Z",
+      "day": "2026-07-27",
+      "content_id": "bgp-2026-07-27-spell-use-case-spell-127-e4e58a86c50e",
+      "publish_hash": "f1119f6618009dc8c90a5f958da355bebaf97de17836fd6e0504c1d8a35dbf4d",
+      "youtube_video_id": "WOCeLJPycjQ",
+      "youtube_url": "https://www.youtube.com/watch?v=WOCeLJPycjQ",
+      "video_sha256": "19735a683663452f4b4f19a835307bc3534680f43a46e8d9d60f0270db7021b1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-27.mp4",
+      "fingerprint": {
+        "day": "2026-07-27",
+        "category": "spell_use_case",
+        "angle": "corruption_risk",
+        "content_id": "bgp-2026-07-27-spell-use-case-spell-127-e4e58a86c50e",
+        "canonical_hash": "e4e58a86c50e8ac39f190457ccae2626bcebe90b58d5afcba0b0fb4b93d6b37b",
+        "script_id": "f4d5bf358f0b6d556f3b58b0d6ccb520796e345b204521ad9fd6ec394b8ec3d0",
+        "fact_kind": "spell",
+        "fact_pk": 127,
+        "fact_name": "Fly",
+        "hook": "Fly drops you mid-air if the spell ends unexpectedly.",
+        "body": "Fly is a 3rd-level wizard spell with a range of self or touch, and its duration is determined by the spell check result. Misjudging the duration and speed can lead to abrupt falls when the spell ends. Half speed applies when climbing, double when diving, and it's halved if heavily loaded. Cast Fly when the risk of falling is minimal, such as near the ground or with a backup plan in place.",
+        "cta": "Judges: Remind them Fly's spell check determines duration - cast it low to the ground unless they enjoy plummeting.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-27.mp4",
+        "video_sha256": "19735a683663452f4b4f19a835307bc3534680f43a46e8d9d60f0270db7021b1"
+      }
     }
   ]
 }
