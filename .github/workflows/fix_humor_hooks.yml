@@ -1,0 +1,112 @@
+name: fix broken humor-lane hooks (temp)
+
+on:
+  workflow_dispatch:
+    inputs:
+      execute:
+        description: 'Set "true" to actually update titles/descriptions. Default is a dry run.'
+        required: false
+        default: "false"
+
+permissions:
+  contents: read
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -q google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+      - name: Materialize YouTube OAuth token
+        env:
+          BIZZAL_YT_TOKEN_JSON: ${{ secrets.BIZZAL_YT_TOKEN_JSON }}
+        run: |
+          mkdir -p .secrets
+          printf '%s' "$BIZZAL_YT_TOKEN_JSON" > .secrets/youtube_token.json
+      - name: Replace broken humor-lane hooks in title + description
+        env:
+          EXECUTE: ${{ github.event.inputs.execute }}
+        run: |
+          python - <<'PYEOF'
+          import json, os
+          from google.oauth2.credentials import Credentials
+          from google.auth.transport.requests import Request
+          from googleapiclient.discovery import build
+
+          EXECUTE = (os.environ.get("EXECUTE") or "").strip().lower() == "true"
+
+          # 34 flagged items -- their fixture-schema field-name mismatch made
+          # low_dc_profile() misclassify EVERY creature as "low-threat" (cr always
+          # defaulted to 0.0), so these shipped with a "comic relief"/"playful
+          # encounter" hook regardless of the real subject (several are Ancient
+          # Dragons). Kill switch landed separately; this fixes the live metadata.
+          ROWS = [{"sys": "dnd5e", "tier": "short", "vid": "jqAsmvryWK4", "day": "2026-06-30", "hook": "Acid Splash looks low-stakes until smart timing makes it absurdly useful.", "category": "spell_use_case", "name": "Acid Splash"}, {"sys": "dnd5e", "tier": "short", "vid": "txy115A4zZY", "day": "2026-06-30", "hook": "Acid Splash looks low-stakes until smart timing makes it absurdly useful.", "category": "spell_use_case", "name": "Acid Splash"}, {"sys": "dnd5e", "tier": "short", "vid": "JI0O6bULfuE", "day": "2026-06-30", "hook": "Acid Splash looks low-stakes until smart timing makes it absurdly useful.", "category": "spell_use_case", "name": "Acid Splash"}, {"sys": "dnd5e", "tier": "short", "vid": "plm4o8PA00Q", "day": "2026-06-30", "hook": "Acid Splash looks low-stakes until smart timing makes it absurdly useful.", "category": "spell_use_case", "name": "Acid Splash"}, {"sys": "dnd5e", "tier": "short", "vid": "iiELs79IUIU", "day": "2026-06-30", "hook": "Acid Splash looks low-stakes until smart timing makes it absurdly useful.", "category": "spell_use_case", "name": "Acid Splash"}, {"sys": "dnd5e", "tier": "short", "vid": "xgdD8RVAQfc", "day": "2026-06-30", "hook": "Acid Splash looks low-stakes until smart timing makes it absurdly useful.", "category": "spell_use_case", "name": "Acid Splash"}, {"sys": "dnd5e", "tier": "short", "vid": "gINu6h8PYm8", "day": "2026-06-30", "hook": "Alarm looks low-stakes until smart timing makes it absurdly useful.", "category": "spell_use_case", "name": "Alarm"}, {"sys": "dnd5e", "tier": "short", "vid": "UsjIJ52HOnY", "day": "2026-07-02", "hook": "Hand Crossbow (+2): humble gear with main-character energy when the table gets creative.", "category": "item_spotlight", "name": "Hand Crossbow (+2)"}, {"sys": "dnd5e", "tier": "short", "vid": "SjW6c-K2mK4", "day": "2026-07-03", "hook": "Use Ancient Black Dragon as 'comic relief' that quietly pressures the party's decisions.", "category": "encounter_seed", "name": "Ancient Black Dragon"}, {"sys": "dnd5e", "tier": "short", "vid": "rIXm-OkTBfs", "day": "2026-07-03", "hook": "Ancient Blue Dragon is perfect for a playful encounter that can still punish bad habits.", "category": "encounter_seed", "name": "Ancient Blue Dragon"}, {"sys": "dnd5e", "tier": "short", "vid": "psslMIzeWdA", "day": "2026-07-03", "hook": "Use Ancient Brass Dragon as 'comic relief' that quietly pressures the party's decisions.", "category": "encounter_seed", "name": "Ancient Brass Dragon"}, {"sys": "dnd5e", "tier": "short", "vid": "O7KWF86qKfY", "day": "2026-07-03", "hook": "Light tone, real consequences: build the scene around Ancient Bronze Dragon and table overconfidence.", "category": "encounter_seed", "name": "Ancient Bronze Dragon"}, {"sys": "dnd5e", "tier": "short", "vid": "K3fDoAw6UFg", "day": "2026-07-03", "hook": "Light tone, real consequences: build the scene around Ancient Copper Dragon and table overconfidence.", "category": "encounter_seed", "name": "Ancient Copper Dragon"}, {"sys": "dnd5e", "tier": "short", "vid": "UTLYvwyKLV8", "day": "2026-07-03", "hook": "Use Ancient Gold Dragon as 'comic relief' that quietly pressures the party's decisions.", "category": "encounter_seed", "name": "Ancient Gold Dragon"}, {"sys": "dnd5e", "tier": "short", "vid": "yJvTVEln03U", "day": "2026-07-03", "hook": "Use Ancient Green Dragon as 'comic relief' that quietly pressures the party's decisions.", "category": "encounter_seed", "name": "Ancient Green Dragon"}, {"sys": "dnd5e", "tier": "short", "vid": "GDpAjfWpDzY", "day": "2026-07-03", "hook": "Ancient Red Dragon is perfect for a playful encounter that can still punish bad habits.", "category": "encounter_seed", "name": "Ancient Red Dragon"}, {"sys": "dnd5e", "tier": "short", "vid": "ryKnwo0LPb8", "day": "2026-07-06", "hook": "Low-threat on paper, high-chaos at the table: Bugbear Stalker.", "category": "monster_tactic", "name": "Bugbear Stalker"}, {"sys": "dnd5e", "tier": "short", "vid": "JrK3LeBvCFg", "day": "2026-07-07", "hook": "Word of Radiance is the spell people joke about - right before it saves a turn cycle.", "category": "spell_use_case", "name": "Word of Radiance"}, {"sys": "dnd5e", "tier": "short", "vid": "d2wbE3pQGto", "day": "2026-07-15", "hook": "Vulture is the classic 'easy fight' that gets weird fast if players autopilot.", "category": "monster_tactic", "name": "Vulture"}, {"sys": "dnd5e", "tier": "short", "vid": "DkMFXh2yoj8", "day": "2026-07-19", "hook": "Use Ogre Chain Brute as 'comic relief' that quietly pressures the party's decisions.", "category": "encounter_seed", "name": "Ogre Chain Brute"}, {"sys": "dnd5e", "tier": "short", "vid": "7r4G1-auTas", "day": "2026-07-22", "hook": "Gold Dragon Wyrmling is the classic 'easy fight' that gets weird fast if players autopilot.", "category": "monster_tactic", "name": "Gold Dragon Wyrmling"}, {"sys": "dnd5e", "tier": "short", "vid": "f5gzoyvx5Vc", "day": "2026-07-25", "hook": "Weapon of Warning (Rapier): humble gear with main-character energy when the table gets creative.", "category": "item_spotlight", "name": "Weapon of Warning (Rapier)"}, {"sys": "dnd5e", "tier": "short", "vid": "Dj1UQSsVe0o", "day": "2026-07-26", "hook": "Light tone, real consequences: build the scene around Adult Blue Dragon and table overconfidence.", "category": "encounter_seed", "name": "Adult Blue Dragon"}, {"sys": "shadowdark", "tier": "short", "vid": "cuwZJjTMV3s", "day": "2026-07-02", "hook": "Golem, Iron is perfect for a playful encounter that can still punish bad habits.", "category": "encounter_seed", "name": "Golem, Iron"}, {"sys": "shadowdark", "tier": "short", "vid": "hCDrAamCYug", "day": "2026-07-06", "hook": "Yes, Cubi Devil looks harmless - until the table underestimates it and gives it free turns.", "category": "monster_tactic", "name": "Cubi Devil"}, {"sys": "shadowdark", "tier": "short", "vid": "967ZX_gNpng", "day": "2026-07-17", "hook": "Yes, Assassin looks harmless - until the table underestimates it and gives it free turns.", "category": "monster_tactic", "name": "Assassin"}, {"sys": "shadowdark", "tier": "short", "vid": "bJ9qAebf-bY", "day": "2026-07-20", "hook": "Use Mastiff as 'comic relief' that quietly pressures the party's decisions.", "category": "encounter_seed", "name": "Mastiff"}, {"sys": "shadowdark", "tier": "short", "vid": "2aunaMUiG7s", "day": "2026-07-24", "hook": "Yes, Smilodon looks harmless - until the table underestimates it and gives it free turns.", "category": "monster_tactic", "name": "Smilodon"}, {"sys": "shadowdark", "tier": "short", "vid": "XdYObxLTOlw", "day": "2026-07-27", "hook": "Kraken is perfect for a playful encounter that can still punish bad habits.", "category": "encounter_seed", "name": "Kraken"}, {"sys": "dcc", "tier": "short", "vid": "Ie9M_q_MHdw", "day": "2026-07-07", "hook": "Cantrip looks low-stakes until smart timing makes it absurdly useful.", "category": "spell_use_case", "name": "Cantrip"}, {"sys": "dcc", "tier": "short", "vid": "YNQo4-7fV44", "day": "2026-07-16", "hook": "Light tone, real consequences: build the scene around Cacophony Golem and table overconfidence.", "category": "encounter_seed", "name": "Cacophony Golem"}, {"sys": "dcc", "tier": "short", "vid": "sQXVIIbWbng", "day": "2026-07-19", "hook": "Low-threat on paper, high-chaos at the table: Hellseeker Cockatrice.", "category": "monster_tactic", "name": "Hellseeker Cockatrice"}, {"sys": "dcc", "tier": "short", "vid": "kOqyUPAYsWE", "day": "2026-07-23", "hook": "Laulich is perfect for a playful encounter that can still punish bad habits.", "category": "encounter_seed", "name": "Laulich"}, {"sys": "dcc", "tier": "short", "vid": "vm5eAxycD0s", "day": "2026-07-26", "hook": "Yes, Kaundyuk looks harmless - until the table underestimates it and gives it free turns.", "category": "monster_tactic", "name": "Kaundyuk"}]
+
+          SYSTEM_LABEL = {"dnd5e": "D&D 5e", "shadowdark": "Shadowdark", "dcc": "DCC"}
+
+          SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
+                    "https://www.googleapis.com/auth/youtube.readonly",
+                    "https://www.googleapis.com/auth/youtube.force-ssl"]
+          creds = Credentials.from_authorized_user_file(".secrets/youtube_token.json", SCOPES)
+          creds.refresh(Request())
+          yt = build("youtube", "v3", credentials=creds)
+
+          ids = [r["vid"] for r in ROWS if r.get("vid")]
+          found = {}
+          for i in range(0, len(ids), 50):
+              resp = yt.videos().list(part="snippet", id=",".join(ids[i:i+50])).execute()
+              for it in resp.get("items", []):
+                  found[it["id"]] = it
+
+          plan = []
+          for r in ROWS:
+              vid = r.get("vid")
+              it = found.get(vid)
+              if not it:
+                  print(f"  !! NOT FOUND: {vid} ({r.get('name')})")
+                  continue
+              sn = it["snippet"]
+              old_title = sn.get("title", "")
+              old_desc = sn.get("description", "")
+              name = r.get("name") or "Daily RPG Tip"
+              category = r.get("category") or "rpg_short"
+              category_label_title = category.replace("_", " ").title()
+              category_label_plain = category.replace("_", " ")
+              sys_label = SYSTEM_LABEL.get(r.get("sys", ""), "TTRPG")
+
+              new_title = f"{name} • {category_label_title}"[:100]
+              keyword_line = " · ".join([b for b in (name, sys_label, category_label_plain) if b])
+              new_desc = old_desc.replace(r["hook"], keyword_line) if r.get("hook") else old_desc
+
+              plan.append((vid, sn, old_title, new_title, old_desc != new_desc, new_desc))
+
+          print(f"\n{len(plan)} videos to update | {len(ids) - len(found)} not found\n")
+          for vid, sn, old_t, new_t, desc_changed, _ in plan:
+              print(f"  {vid}")
+              print(f"    title: {old_t!r}")
+              print(f"        -> {new_t!r}")
+              print(f"    description hook replaced: {desc_changed}")
+
+          if not EXECUTE:
+              print("\nDRY RUN -- nothing changed. Re-run with execute=true to apply.")
+          else:
+              done = 0
+              for vid, sn, old_t, new_t, desc_changed, new_desc in plan:
+                  try:
+                      body = {"id": vid, "snippet": {
+                          "title": new_t,
+                          "description": new_desc,
+                          "categoryId": sn.get("categoryId", "20"),
+                          "tags": sn.get("tags", []),
+                      }}
+                      yt.videos().update(part="snippet", body=body).execute()
+                      done += 1
+                      print(f"  updated {vid}")
+                  except Exception as exc:
+                      print(f"  FAILED {vid}: {exc}")
+              print(f"\nDONE: {done}/{len(plan)} updated")
+          PYEOF
