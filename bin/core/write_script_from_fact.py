@@ -473,7 +473,17 @@ def split_sentences(text: str) -> list:
 
 
 def low_dc_humor_enabled() -> bool:
-    return env_true("BIZZAL_ENABLE_LOW_DC_HUMOR", True)
+    """Default OFF (2026-07-27). The detector this gated on was broken: it
+    checked field names (challenge_rating/hit_points/armor_class) that do not
+    exist in ANY system's real fixture schema (dnd5e stores challenge_rating_decimal;
+    shadowdark stores hp/ac/lv; dcc has no CR-equivalent at all). Every lookup
+    silently defaulted to 0.0, so `cr <= 0.25` was always true -- EVERY creature,
+    including Ancient Dragons (CR 17-24), was flagged 'low-threat' and got a
+    'comic relief'/'playful encounter' hook. 48 of 135 published items shipped
+    with this factually backwards framing before it was caught. Off by default
+    until the detector is rebuilt against each system's real schema.
+    """
+    return env_true("BIZZAL_ENABLE_LOW_DC_HUMOR", False)
 
 
 def parse_number(value, default: float = 0.0) -> float:
