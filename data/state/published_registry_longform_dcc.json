@@ -181,6 +181,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-24.mp4",
         "video_sha256": "a291f46823b9a6a20e021c604f92df0022779802036dc59db11b49545639624a"
       }
+    },
+    {
+      "published_utc": "2026-07-27T18:04:05Z",
+      "day": "2026-07-27",
+      "content_id": "",
+      "publish_hash": "3f7ca9fa123f9f899973e72ed590cae8d900b04cebae6d4792c7f57f0c308acd",
+      "youtube_video_id": "s7n2gqgSa2Y",
+      "youtube_url": "https://www.youtube.com/watch?v=s7n2gqgSa2Y",
+      "video_sha256": "c1104ea5e02cc92400b8789bd502155de0812e0d8772c82e141889cf30eb7374",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-27.mp4",
+      "fingerprint": {
+        "day": "2026-07-27",
+        "category": "monster_tactic",
+        "angle": "deep_dive",
+        "content_id": "",
+        "canonical_hash": "",
+        "script_id": "baf67c5da52fbf709156186ffb226ec7ae46de8f8715dcf9fa77a2783a5a6d0b",
+        "fact_kind": "creature",
+        "fact_pk": 131,
+        "fact_name": "Prime Barbshell Clam",
+        "hook": "Prime Barbshell Clam's 50-foot harpoon grapple",
+        "body": "The Prime Barbshell Clam is a unique creature in the Dungeon Crawl Classics RPG, offering a mix of ranged and melee threats. With a hit dice of 8d10 and an armor class of 19, this creature can pose a significant challenge to adventurers. Its primary attack is a fleshy harpoon with a range of 50 feet, capable of dealing 3d6 damage and grappling its target. In this deep dive, we'll explore its mechanics, tactics, and how to effectively engage with it at your table.\n\nUnderstanding the Harpoon Attack. The Prime Barbshell Clam's main offensive capability is its fleshy harpoon attack. This attack has a range of 50 feet and comes with a +5 to hit. On a successful hit, it deals 3d6 damage and grapples the target. The grappling effect is crucial, as it can immobilize a character, making them vulnerable to further attacks. It's important for players to note the range, as positioning can be key to avoiding this attack. The harpoon's ability to grapple also means that characters with high Dexterity or abilities that improve their Reflex saves may have an advantage in avoiding or breaking free from this attack.\n\nStrategic Movement. The Prime Barbshell Clam has a movement speed of only 10 feet, which is relatively slow. This limitation can be exploited by players who maintain a safe distance. However, the clam's ability to attack at range with its harpoon means that simply staying out of melee range is not enough. Players should use terrain and obstacles to break line of sight, forcing the clam to reposition. The slow movement also means that if the clam is forced to move, it may have to sacrifice its action dice for movement, reducing its offensive potential for that round.\n\nAction Economy and Dice. With 2d20 action dice, the Prime Barbshell Clam has the potential to make multiple attacks or take multiple actions in a single round. This can make it a formidable opponent, as it can potentially attack twice with its harpoon or use a combination of its special abilities like 'reel' and 'crush'. Players should be prepared for this versatility, and consider strategies that disrupt the clam's action economy, such as forcing it to make saving throws or using abilities that limit its actions.\n\nDefensive Capabilities. The Prime Barbshell Clam's armor class of 19 makes it a tough nut to crack. Characters with high attack bonuses or abilities that bypass armor class will be more effective against it. Its Fortitude save is particularly high at +8, making it resistant to effects that target this save. However, its Reflex save is +0, indicating a vulnerability to area effects and attacks that require a Reflex save. Players should leverage spells and abilities that target this weakness to maximize their effectiveness.\n\nSpecial Abilities: Reel and Crush. In addition to its harpoon attack, the Prime Barbshell Clam has two special abilities: 'reel' and 'crush'. The 'reel' ability likely allows it to draw grappled targets closer, while 'crush' could be a powerful melee attack or condition applied to grappled foes. Understanding these abilities is crucial for players, as they can turn a seemingly manageable situation into a dire one. Players should be cautious when approaching a grappled ally, as the clam may use these abilities to deal significant damage or further incapacitate them.\n\nThe Prime Barbshell Clam is a creature that rewards tactical play and punishes complacency. Its combination of ranged attacks, grappling, and special abilities make it a formidable opponent. Players and GMs alike should be aware of its strengths and weaknesses to fully enjoy encounters with this unique creature. For your next session, consider how you might incorporate these elements into your strategy. Dive deeper into the Dungeon Crawl Classics RPG by exploring other creatures and their unique mechanics.",
+        "cta": "Subscribe for weekly tabletop RPG deep dives. Follow Bizzal Games on YouTube and Instagram.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-27.mp4",
+        "video_sha256": "c1104ea5e02cc92400b8789bd502155de0812e0d8772c82e141889cf30eb7374"
+      }
     }
   ]
 }

@@ -207,6 +207,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-24-dcc-clip3.mp4",
         "video_sha256": "ec20b5f095a4ed6749625290169aa0c1874bfdd63f3fc0a6bfb618e88079a0d1"
       }
+    },
+    {
+      "published_utc": "2026-07-27T18:13:00Z",
+      "day": "2026-07-27-dcc-clip2",
+      "content_id": "clip:18b13cac27b0e5d9",
+      "publish_hash": "6b7db2e1d1c826a0643c3a4e3ef07f0477fdc0afd798d16e82db66d921bef8d3",
+      "youtube_video_id": "VUVNP6yNK1A",
+      "youtube_url": "https://www.youtube.com/watch?v=VUVNP6yNK1A",
+      "video_sha256": "06a9a5613b67aa14bed68413110e951bd4e1b09ab5a1c25fe1f418604e655d17",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-27-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-07-27-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:18b13cac27b0e5d9",
+        "canonical_hash": "",
+        "script_id": "18b13cac27b0e5d9834be15bdb47603e576a95fe06355e2b75865d3df5f632f3",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Prime Barbshell Clam's Reflex save is a weak spot",
+        "hook": "Prime Barbshell Clam's Reflex save is a weak spot",
+        "body": "With a Reflex save of +0, the Prime Barbshell Clam is vulnerable to area effects and Reflex-based attacks. Target this weakness with spells and abilities to maximize your effectiveness against its high armor class of 19.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-27-dcc-clip2.mp4",
+        "video_sha256": "06a9a5613b67aa14bed68413110e951bd4e1b09ab5a1c25fe1f418604e655d17"
+      }
     }
   ]
 }

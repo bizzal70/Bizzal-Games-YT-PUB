@@ -1869,6 +1869,28 @@
       "video_id": "18017036600914781",
       "day": "2026-07-27",
       "published_at": "2026-07-27T15:21:14+00:00"
+    },
+    {
+      "content_key": "e82c44cce6686e1060b87d9e9b3d095ff573cac8428f8452af8715ebdfa09455",
+      "token_text": "50 barbshell clam foot grapple harpoon prime",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Prime Barbshell Clam's 50-foot harpoon grapple #dcc",
+      "video_id": "s7n2gqgSa2Y",
+      "day": "2026-07-27",
+      "published_at": "2026-07-27T18:04:05+00:00"
+    },
+    {
+      "content_key": "c54441d85027e9184f2ea7bcf6a90c1e7244b98a286eeb95a210d737530a240a",
+      "token_text": "barbshell clam prime reflex save spot weak",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Prime Barbshell Clam's Reflex save is a weak spot #dcc",
+      "video_id": "VUVNP6yNK1A",
+      "day": "2026-07-27-dcc-clip2",
+      "published_at": "2026-07-27T18:13:00+00:00"
     }
   ]
 }
