@@ -1244,6 +1244,20 @@ def build_content_contract(atom: dict, script_id: str, script: dict, fact: dict,
 # ---------------- Item scripts ----------------
 
 def build_item_body(angle: str, fields: dict):
+    """Item body: real desc + real per-system fields only. NEVER invent what the
+    item does.
+
+    FIXED 2026-07-27: this used to append hardcoded flavor text written for one
+    specific hauling/rigging item ("lift a portcullis", "an anchor point... in a
+    cramped tunnel", "turn one strong PC into a whole crew") to EVERY item
+    regardless of what it actually is. The AI polish pass rewrites hook/body/cta
+    rather than replacing them outright, so it preserved that false theme while
+    swapping in the real item name -- shipping claims like a Hand Crossbow being
+    "used to lift or move objects" and a Barrier Tattoo needing "an anchor point"
+    (a tattoo). Confirmed on 2 of 7 published item shorts. Replaced with generic,
+    non-fabricating transitions; all specifics now come only from desc/benefit/
+    bonus/curse/stats, which are real per-item fields.
+    """
     angle = {
         "best_user": "clever_use",
         "dm_counterplay": "drawback_watchout",
@@ -1251,34 +1265,40 @@ def build_item_body(angle: str, fields: dict):
 
     desc = (fields.get("desc") or "").strip()
     stats = fmt_stats_item(fields)
+    # shadowdark/dcc items carry benefit/bonus/curse instead of cost/weight/category
+    benefit = (fields.get("benefit") or "").strip()
+    bonus = (fields.get("bonus") or "").strip()
+    curse = (fields.get("curse") or "").strip()
 
     if angle == "story_hook":
         bits = []
         if desc: bits.append(desc)
-        bits.append("In play: use it to turn one strong PC into a whole crew—hauling gates, dragging statues, or lifting a buddy out of a pit.")
+        if benefit: bits.append(f"Benefit: {benefit}")
+        if bonus: bits.append(f"Bonus: {bonus}")
         if stats: bits.append(stats)
         return " ".join(bits)
 
     if angle == "clever_use":
         bits = []
         if desc: bits.append(desc)
-        bits.append("Clever uses: lift a portcullis just enough to squeeze under, haul a chest across a trapped hallway from cover, or rig a ‘poor man’s elevator’ in a shaft.")
-        bits.append("Rule of thumb: if you can anchor it, you can move it.")
+        if benefit: bits.append(f"Benefit: {benefit}")
+        bits.append("The clever use is timing it to the exact moment its real effect changes the outcome, not forcing it into every scene.")
         if stats: bits.append(stats)
         return " ".join(bits)
 
     if angle == "drawback_watchout":
         bits = []
         if desc: bits.append(desc)
-        bits.append("It needs an anchor point, time to rig, and space to work. In a cramped tunnel or mid-combat? Good luck.")
-        bits.append("DM tip: ask ‘where is it anchored?’ and ‘who is holding tension?’—that’s where the tension lives.")
+        if curse: bits.append(f"Downside: {curse}")
+        bits.append("Know the exact condition, cost, or limit before relying on it mid-fight.")
         if stats: bits.append(stats)
         return " ".join(bits)
 
     bits = []
     if desc: bits.append(desc)
+    if benefit and not desc: bits.append(f"Benefit: {benefit}")
     if stats: bits.append(stats)
-    bits.append("Use this when the party can solve positioning before they solve damage.")
+    bits.append("Use it when its real mechanical effect solves the problem in front of you, not as a default.")
     return " ".join(bits)
 
 # ---------------- Monster scripts ----------------
@@ -1659,7 +1679,9 @@ def is_concentration(fields: dict) -> bool:
 def spell_anchor(fields: dict):
     lvl = fields.get("level")
     school = fields.get("school") or fields.get("spell_school") or ""
-    rng = sstr(fields.get("range"))
+    # real field is "range_text" in every system's fixture (dnd5e/shadowdark/dcc);
+    # "range" doesn't exist anywhere, so this always silently returned "" before.
+    rng = sstr(fields.get("range_text") or fields.get("range"))
     dur = sstr(fields.get("duration"))
     conc = is_concentration(fields)
 
@@ -1708,7 +1730,7 @@ def spell_anchor(fields: dict):
 
 def spell_nuggets(angle: str, fields: dict):
     nuggets = []
-    rng = sstr(fields.get("range")).lower()
+    rng = sstr(fields.get("range_text") or fields.get("range")).lower()
     dur = sstr(fields.get("duration")).lower()
     desc = sstr(fields.get("desc")).lower()
 
