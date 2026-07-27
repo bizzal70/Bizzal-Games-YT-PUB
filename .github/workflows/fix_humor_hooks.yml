@@ -32,7 +32,7 @@ jobs:
           EXECUTE: ${{ github.event.inputs.execute }}
         run: |
           python - <<'PYEOF'
-          import json, os
+          import json, os, re
           from google.oauth2.credentials import Credentials
           from google.auth.transport.requests import Request
           from googleapiclient.discovery import build
@@ -78,7 +78,12 @@ jobs:
               category_label_plain = category.replace("_", " ")
               sys_label = SYSTEM_LABEL.get(r.get("sys", ""), "TTRPG")
 
-              new_title = f"{name} • {category_label_title}"[:100]
+              # Preserve any existing hashtag suffix on the live title (retro-tag /
+              # older upload tags like "#dnd #ttrpg #shorts") -- only replace the
+              # descriptive portion, never drop discovery tags.
+              tagm = re.search(r"(\s*(?:#\w+\s*)+)$", old_title)
+              suffix = (" " + tagm.group(1).strip()) if tagm else ""
+              new_title = (f"{name} • {category_label_title}"[:100 - len(suffix)] + suffix)[:100]
               keyword_line = " · ".join([b for b in (name, sys_label, category_label_plain) if b])
               new_desc = old_desc.replace(r["hook"], keyword_line) if r.get("hook") else old_desc
 
