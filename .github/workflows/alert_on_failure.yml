@@ -1,0 +1,62 @@
+name: Alert on pipeline failure
+
+# Watches the two scheduled content pipelines. A silent failure here is exactly
+# what turned into a 6-day outage on 2026-07-08..07-14 (fixed only after the
+# gap was noticed a week later, right after the channel's best-performing
+# week). This closes that gap: the FIRST failed run opens (or comments on) one
+# tracking issue per workflow, and the next success auto-closes it. No new
+# secrets needed -- GitHub already emails repo watchers on new issues.
+
+on:
+  workflow_run:
+    workflows: ["Daily content pipeline", "Long-form daily pipeline"]
+    types: [completed]
+
+permissions:
+  issues: write
+
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report failure or close out recovery
+        env:
+          GH_TOKEN: ${{ github.token }}
+          WF_NAME: ${{ github.event.workflow_run.name }}
+          WF_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          WF_URL: ${{ github.event.workflow_run.html_url }}
+          WF_CREATED: ${{ github.event.workflow_run.created_at }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -u
+          LABEL="pipeline-failure"
+          TITLE="🔴 ${WF_NAME} is failing"
+
+          gh label create "$LABEL" --color "d73a4a" --description "Open scheduled-pipeline failure" 2>/dev/null || true
+
+          EXISTING="$(gh issue list --repo "$REPO" --label "$LABEL" --state open \
+                        --search "in:title \"${WF_NAME}\"" --json number --jq '.[0].number // empty')"
+
+          if [ "$WF_CONCLUSION" = "failure" ]; then
+            if [ -n "$EXISTING" ]; then
+              gh issue comment "$EXISTING" --repo "$REPO" \
+                --body "Still failing: ${WF_URL} (run at ${WF_CREATED})"
+              echo "commented on existing issue #$EXISTING"
+            else
+              gh issue create --repo "$REPO" --title "$TITLE" --label "$LABEL" \
+                --body "**${WF_NAME}** just failed.
+
+          Run: ${WF_URL}
+          Started: ${WF_CREATED}
+
+          This issue stays open and gets a comment on every further failed run. It closes itself automatically the next time ${WF_NAME} succeeds. If this drags on, that's today's silent-outage risk made visible instead of discovered a week later."
+              echo "opened new failure issue"
+            fi
+          elif [ "$WF_CONCLUSION" = "success" ] && [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --repo "$REPO" \
+              --body "✅ ${WF_NAME} succeeded again: ${WF_URL} — closing."
+            gh issue close "$EXISTING" --repo "$REPO"
+            echo "closed recovered issue #$EXISTING"
+          else
+            echo "conclusion=${WF_CONCLUSION}; nothing to do"
+          fi
