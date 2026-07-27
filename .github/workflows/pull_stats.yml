@@ -70,7 +70,12 @@ jobs:
                       "duration_s": parse_dur(cd["duration"]),
                       "privacy": it["status"].get("privacyStatus"),
                   })
-          print("VIDEO_ROWS_JSON_START")
-          print(json.dumps(rows))
-          print("VIDEO_ROWS_JSON_END")
+          print("VIDEO_ROWS_CSV_START")
+          import csv, io
+          buf = io.StringIO()
+          w = csv.writer(buf)
+          for r in rows:
+              w.writerow([r["id"], r["publishedAt"], r["views"], r["likes"], r["comments"], r["duration_s"], r["privacy"], r["title"]])
+          print(buf.getvalue())
+          print("VIDEO_ROWS_CSV_END")
           PYEOF
