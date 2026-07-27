@@ -1,6 +1,94 @@
 [
   {
     "system": "dnd5e",
+    "title": "Jimothy the Raccoon: A D&D Creature Feature",
+    "angle": "Explore the unique stats and abilities of Jimothy, the official D&D raccoon.",
+    "rationale": "The official D&D stats for Jimothy the raccoon are generating buzz among fans.",
+    "fixture_hint": "creature",
+    "search_keyword": "Seattle-based wild raccoon 'Jimothy' gets official D&D stats",
+    "created_date": "2026-07-27",
+    "status": "pending",
+    "brief_id": "1c00bd4e3b36"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Thief of Princes: A Free Adventure Deep Dive",
+    "angle": "Analyze mechanics and narrative hooks in the free 'Thief of Princes' adventure.",
+    "rationale": "The release of a free D&D adventure is drawing attention from the community.",
+    "fixture_hint": "rule",
+    "search_keyword": "Download free adventure Thief of Princes!",
+    "created_date": "2026-07-27",
+    "status": "pending",
+    "brief_id": "eef062a95a0f"
+  },
+  {
+    "system": "dnd5e",
+    "title": "World of Warcraft Leaks: What It Means for D&D",
+    "angle": "Discuss potential new mechanics inspired by the upcoming World of Warcraft D&D product.",
+    "rationale": "Leaked news about a World of Warcraft-themed D&D product has fans speculating.",
+    "fixture_hint": "rule",
+    "search_keyword": "Dungeons & Dragons’ next major product announcement leaks--and it's WORLD OF WARCRAFT",
+    "created_date": "2026-07-27",
+    "status": "pending",
+    "brief_id": "ee6ce877a982"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Cloaks and Daggers: Shadowdark's Stealth Mechanics",
+    "angle": "Delve into how Shadowdark's rules handle stealth and intrigue.",
+    "rationale": "The focus on cloaks and daggers highlights a community interest in stealth gameplay.",
+    "fixture_hint": "rule",
+    "search_keyword": "Cloaks and daggers at your gaming table",
+    "created_date": "2026-07-27",
+    "status": "pending",
+    "brief_id": "4129f5bbc661"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Arcane Factions: New Dynamics in Shadowdark",
+    "angle": "Explore the impact of new arcane factions on Shadowdark's gameplay.",
+    "rationale": "Recent news on arcane factions is sparking discussions about gameplay changes.",
+    "fixture_hint": "rule",
+    "search_keyword": "Preview the arcane factions and backgrounds from Arcana Unleashed",
+    "created_date": "2026-07-27",
+    "status": "pending",
+    "brief_id": "078d1ff09f6f"
+  },
+  {
+    "system": "dcc",
+    "title": "Lovecraftian Horrors: DCC's New Monster Mechanics",
+    "angle": "Focus on integrating Lovecraftian creatures into Dungeon Crawl Classics adventures.",
+    "rationale": "The community's interest in Lovecraftian themes is on the rise.",
+    "fixture_hint": "creature",
+    "search_keyword": "Chaosium's new book on Lovecraft's INNSMOUTH is the definitive guide",
+    "created_date": "2026-07-27",
+    "status": "pending",
+    "brief_id": "2c77cd6794a4"
+  },
+  {
+    "system": "dcc",
+    "title": "Thief of Princes: DCC Conversion Tactics",
+    "angle": "Tips for adapting the 'Thief of Princes' adventure into DCC campaigns.",
+    "rationale": "The 'Thief of Princes' free adventure is popular and ripe for conversion.",
+    "fixture_hint": "rule",
+    "search_keyword": "Download free adventure Thief of Princes!",
+    "created_date": "2026-07-27",
+    "status": "pending",
+    "brief_id": "375c753e7ce9"
+  },
+  {
+    "system": "dcc",
+    "title": "Chaos and Mayhem: DCC's Approach to RPG Evolution",
+    "angle": "Analyze how Dungeon Crawl Classics embraces chaos and mayhem in its mechanics.",
+    "rationale": "Discussions on RPG evolution are trending, and DCC's chaotic style fits the theme.",
+    "fixture_hint": "rule",
+    "search_keyword": "RPG Evolution: A Spoonful of Sugar Helps the Mayhem Go Down",
+    "created_date": "2026-07-27",
+    "status": "pending",
+    "brief_id": "5114bd718164"
+  },
+  {
+    "system": "dnd5e",
     "title": "Marvel Multiverse Meets D&D: A Godzilla Encounter",
     "angle": "Explore how to integrate Godzilla into your D&D campaign as a colossal creature encounter.",
     "rationale": "With Godzilla joining Marvel Multiverse Roleplaying, players might be inspired to bring similar titans into D&D.",
