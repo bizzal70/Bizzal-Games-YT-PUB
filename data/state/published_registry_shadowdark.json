@@ -676,6 +676,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-27.mp4",
         "video_sha256": "c4262fb92c64767e5703bd4b56fd6e3be0e1269aa65919b48881b6b7155d9918"
       }
+    },
+    {
+      "published_utc": "2026-07-28T15:20:17Z",
+      "day": "2026-07-28",
+      "content_id": "bgp-2026-07-28-rules-myth-rule-7-8c1a9ca5c928",
+      "publish_hash": "353f3726d6440ad045a42ac3dd4c249350573c571645a843bcf3c921f7c505dd",
+      "youtube_video_id": "cYZjnSap0CI",
+      "youtube_url": "https://www.youtube.com/watch?v=cYZjnSap0CI",
+      "video_sha256": "bf39a2f568b05e23909f2cb1f5dc64caf81e5e1766da6a440606612c7a31f373",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-28.mp4",
+      "fingerprint": {
+        "day": "2026-07-28",
+        "category": "rules_myth",
+        "angle": "quick_example",
+        "content_id": "bgp-2026-07-28-rules-myth-rule-7-8c1a9ca5c928",
+        "canonical_hash": "8c1a9ca5c92865052e6d39948e2967a7adeb32bc93bef9c8bdbae661dd4b13b4",
+        "script_id": "fcccddf7267212aec92a4e6e17ab7bb60c998eb10fa72f8ff4d48952e9e86d9e",
+        "fact_kind": "rule",
+        "fact_pk": 7,
+        "fact_name": "Morale",
+        "hook": "Morale checks trigger at half losses or when a strong ally falls.",
+        "body": "Monsters make a morale check with DC 15 Wisdom when half their number are defeated or a powerful ally falls. Failure results in fleeing or surrendering. Skipping this step leads to unnecessary debates. Enforce it consistently to keep the game moving.",
+        "cta": "GMs: Roll a DC 15 Wisdom check for morale at half losses or a fallen ally; skip it and expect chaos.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-28.mp4",
+        "video_sha256": "bf39a2f568b05e23909f2cb1f5dc64caf81e5e1766da6a440606612c7a31f373"
+      }
     }
   ]
 }

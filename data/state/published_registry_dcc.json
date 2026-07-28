@@ -339,6 +339,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-27.mp4",
         "video_sha256": "19735a683663452f4b4f19a835307bc3534680f43a46e8d9d60f0270db7021b1"
       }
+    },
+    {
+      "published_utc": "2026-07-28T15:00:37Z",
+      "day": "2026-07-28",
+      "content_id": "bgp-2026-07-28-rules-ruling-rule-3-d705350b85ce",
+      "publish_hash": "c32f3c4a82891e0612275227738ceabe63615d2ac9ff4a10456a0e98112e668d",
+      "youtube_video_id": "hD7xKOIMk9s",
+      "youtube_url": "https://www.youtube.com/watch?v=hD7xKOIMk9s",
+      "video_sha256": "543a0bf1d01b73e62d2e3d42a84958ba429de8fd96e8564432d3d46b2fee7945",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-28.mp4",
+      "fingerprint": {
+        "day": "2026-07-28",
+        "category": "rules_ruling",
+        "angle": "saving_throw_type",
+        "content_id": "bgp-2026-07-28-rules-ruling-rule-3-d705350b85ce",
+        "canonical_hash": "d705350b85ce93dde987037f4c6bd5a0d7d8a9ce5602cbdc2c8dfaaba23cd222",
+        "script_id": "00ba230ec545eddca400c98f0f60a581b4a0a8eada8db8073c8979bc8ee5b67b",
+        "fact_kind": "rule",
+        "fact_pk": 3,
+        "fact_name": "Mighty Deeds of Arms",
+        "hook": "Mighty Deeds of Arms require no saving throw or opposed roll.",
+        "body": "Mighty Deeds of Arms allow Warriors and Dwarves to declare a Deed before attacking, such as tripping or disarming, which succeeds if the attack hits and the Deed die shows 3 or higher. The Deed die, which scales from d3 to d10+, determines the Deed's effectiveness. Many assume an opposed roll or saving throw is needed, but none is required. Consistent rulings on Deed declarations streamline gameplay and avoid disputes.",
+        "cta": "Judges: Enforce that Mighty Deeds need no saving throw; just a hit and a Deed die of 3 or more.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-28.mp4",
+        "video_sha256": "543a0bf1d01b73e62d2e3d42a84958ba429de8fd96e8564432d3d46b2fee7945"
+      }
     }
   ]
 }

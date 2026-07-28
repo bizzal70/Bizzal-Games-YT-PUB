@@ -935,6 +935,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-27.mp4",
         "video_sha256": "9ea07c097db013d2aec3d8c35622316472fa5a688b2539efb62cf53ac83997ec"
       }
+    },
+    {
+      "published_utc": "2026-07-28T15:13:02Z",
+      "day": "2026-07-28",
+      "content_id": "bgp-2026-07-28-class-spotlight-class-tashas-cauldron-path-of-wild-magic-cc67b2d3d72c",
+      "publish_hash": "9f8fe3ae3eab753eec9055f41acb1471bb403814e0676fd55ba054c8cf1b633f",
+      "youtube_video_id": "zvsd7_MtTUA",
+      "youtube_url": "https://www.youtube.com/watch?v=zvsd7_MtTUA",
+      "video_sha256": "220708a0355d1454e8474b951bf489f1518a6d6301f4bfe6d95a2479a854e851",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-28.mp4",
+      "fingerprint": {
+        "day": "2026-07-28",
+        "category": "class_spotlight",
+        "angle": "party_role_pivot",
+        "content_id": "bgp-2026-07-28-class-spotlight-class-tashas-cauldron-path-of-wild-magic-cc67b2d3d72c",
+        "canonical_hash": "cc67b2d3d72c2c7b10d65e83eac315b5e02c97fa72cc3d71286f7724216b0571",
+        "script_id": "e7e9dba943dab684562bf4a245f9d2614a7b917d945cdfee7740974d017c159f",
+        "fact_kind": "class",
+        "fact_pk": "tashas-cauldron_path-of-wild-magic",
+        "fact_name": "Path of Wild Magic",
+        "hook": "Path of Wild Magic triggers random magical effects while raging.",
+        "body": "Magic Awareness at 3rd level allows detection of spells or magic items within 60 feet as an action, limited by proficiency bonus uses per long rest. Attempting detection in combat wastes an action when actions are limited. Use it during exploration to gather information without sacrificing combat efficiency. Role pivoting requires clear communication to prevent over-investment in setup or finishing moves.",
+        "cta": "DMs: Signal the Path of Wild Magic pivot by declaring your action economy shift from Magic Awareness to rage-induced chaos.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-28.mp4",
+        "video_sha256": "220708a0355d1454e8474b951bf489f1518a6d6301f4bfe6d95a2479a854e851"
+      }
     }
   ]
 }

@@ -236,5 +236,15 @@
       ],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-07-28": {
+    "rules_ruling": {
+      "angle": "saving_throw_type",
+      "voice": "chaos_herald",
+      "tone": "neutral",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "fable"
+    }
   }
 }

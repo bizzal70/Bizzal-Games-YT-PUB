@@ -672,6 +672,51 @@
       "hook": "Kraken is perfect for a playful encounter that can still punish bad habits.",
       "body": "The Kraken's storm effect creates violently turbulent seas in a 1-mile radius for 2d4 rounds. Ignoring the risk of capsizing can lead to disastrous consequences when the ship capsizes mid-combat. Preparing for potential capsizing or avoiding the storm entirely is critical when engaging the Kraken.",
       "cta": "GMs: Make them roll a DEX save DC 15 each round or watch their ship capsize in the Kraken's storm."
+    },
+    {
+      "published_utc": "2026-07-28T15:01:36Z",
+      "day": "2026-07-28",
+      "system": "dcc",
+      "content_id": "bgp-2026-07-28-rules-ruling-rule-3-d705350b85ce",
+      "instagram_post_id": "17916733956430199",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "543a0bf1d01b73e62d2e3d42a84958ba429de8fd96e8564432d3d46b2fee7945",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-28.mp4",
+      "fact_name": "Mighty Deeds of Arms",
+      "category": "rules_ruling",
+      "hook": "Mighty Deeds of Arms require no saving throw or opposed roll.",
+      "body": "Mighty Deeds of Arms allow Warriors and Dwarves to declare a Deed before attacking, such as tripping or disarming, which succeeds if the attack hits and the Deed die shows 3 or higher. The Deed die, which scales from d3 to d10+, determines the Deed's effectiveness. Many assume an opposed roll or saving throw is needed, but none is required. Consistent rulings on Deed declarations streamline gameplay and avoid disputes.",
+      "cta": "Judges: Enforce that Mighty Deeds need no saving throw; just a hit and a Deed die of 3 or more."
+    },
+    {
+      "published_utc": "2026-07-28T15:13:46Z",
+      "day": "2026-07-28",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-28-class-spotlight-class-tashas-cauldron-path-of-wild-magic-cc67b2d3d72c",
+      "instagram_post_id": "17899332699475761",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "220708a0355d1454e8474b951bf489f1518a6d6301f4bfe6d95a2479a854e851",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-28.mp4",
+      "fact_name": "Path of Wild Magic",
+      "category": "class_spotlight",
+      "hook": "Path of Wild Magic triggers random magical effects while raging.",
+      "body": "Magic Awareness at 3rd level allows detection of spells or magic items within 60 feet as an action, limited by proficiency bonus uses per long rest. Attempting detection in combat wastes an action when actions are limited. Use it during exploration to gather information without sacrificing combat efficiency. Role pivoting requires clear communication to prevent over-investment in setup or finishing moves.",
+      "cta": "DMs: Signal the Path of Wild Magic pivot by declaring your action economy shift from Magic Awareness to rage-induced chaos."
+    },
+    {
+      "published_utc": "2026-07-28T15:21:17Z",
+      "day": "2026-07-28",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-07-28-rules-myth-rule-7-8c1a9ca5c928",
+      "instagram_post_id": "18014676758879742",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "bf39a2f568b05e23909f2cb1f5dc64caf81e5e1766da6a440606612c7a31f373",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-28.mp4",
+      "fact_name": "Morale",
+      "category": "rules_myth",
+      "hook": "Morale checks trigger at half losses or when a strong ally falls.",
+      "body": "Monsters make a morale check with DC 15 Wisdom when half their number are defeated or a powerful ally falls. Failure results in fleeing or surrendering. Skipping this step leads to unnecessary debates. Enforce it consistently to keep the game moving.",
+      "cta": "GMs: Roll a DC 15 Wisdom check for morale at half losses or a fallen ally; skip it and expect chaos."
     }
   ]
 }

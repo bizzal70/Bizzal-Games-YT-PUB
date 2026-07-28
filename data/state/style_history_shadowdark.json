@@ -326,5 +326,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-07-28": {
+    "rules_myth": {
+      "angle": "quick_example",
+      "voice": "torchbearer_ref",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

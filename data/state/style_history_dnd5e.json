@@ -322,5 +322,15 @@
       ],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-07-28": {
+    "class_spotlight": {
+      "angle": "party_role_pivot",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "class_mentor",
+      "spice": [],
+      "tts_voice_id": "alloy"
+    }
   }
 }
