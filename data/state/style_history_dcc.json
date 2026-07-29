@@ -246,5 +246,17 @@
       "spice": [],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-07-29": {
+    "item_spotlight": {
+      "angle": "clever_use",
+      "voice": "grim_referee",
+      "tone": "gritty",
+      "persona": "dungeon_gear_mentor",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

@@ -365,6 +365,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-28.mp4",
         "video_sha256": "543a0bf1d01b73e62d2e3d42a84958ba429de8fd96e8564432d3d46b2fee7945"
       }
+    },
+    {
+      "published_utc": "2026-07-29T14:56:06Z",
+      "day": "2026-07-29",
+      "content_id": "bgp-2026-07-29-item-spotlight-item-8-18e776f64b0e",
+      "publish_hash": "715c18ee7f7ec4c158dfe9fd249c4f1a90e03635595f72df5907b666dc8b07cd",
+      "youtube_video_id": "fEn8ONVZqbA",
+      "youtube_url": "https://www.youtube.com/watch?v=fEn8ONVZqbA",
+      "video_sha256": "5502a4ab929367bfc48d7cbf6f46e3f56f31d4b38d48c6e5d1118a7c66f14b53",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-29.mp4",
+      "fingerprint": {
+        "day": "2026-07-29",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-07-29-item-spotlight-item-8-18e776f64b0e",
+        "canonical_hash": "18e776f64b0e1d3d6d4f6b31240ebcd16a9daf8333342e3bf9874fdf88b86f67",
+        "script_id": "bfe35ff3d9ead884394acdce19a08c650abd403358552a3c3335c3bbee784d3e",
+        "fact_kind": "item",
+        "fact_pk": 8,
+        "fact_name": "Boots of Mist-Stepping",
+        "hook": "Boots of Mist-Stepping allow movement through 30 feet of air as mist, once per day.",
+        "body": "The effect lasts 1 round and requires materializing in an unoccupied space. Players frequently misuse this by activating it without clear destination, risking wasted turns. The practical application is using it to bypass obstacles or reposition strategically before engagement, not during it. Misuse leads to unnecessary exposure and damage from failed Fortitude saves (DC 11) causing 1d3 damage over 1d4 rounds.",
+        "cta": "Judges: Have them use the Boots of Mist-Stepping to bypass obstacles pre-combat, avoiding the Fort DC 11 curse mid-battle.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-29.mp4",
+        "video_sha256": "5502a4ab929367bfc48d7cbf6f46e3f56f31d4b38d48c6e5d1118a7c66f14b53"
+      }
     }
   ]
 }

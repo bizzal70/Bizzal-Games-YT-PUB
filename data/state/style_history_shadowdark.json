@@ -338,5 +338,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-07-29": {
+    "spell_use_case": {
+      "angle": "dm_twist",
+      "voice": "strict_referee",
+      "tone": "dry",
+      "persona": "arcane_survival_coach",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "nova"
+    }
   }
 }

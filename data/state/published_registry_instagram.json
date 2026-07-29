@@ -717,6 +717,51 @@
       "hook": "Morale checks trigger at half losses or when a strong ally falls.",
       "body": "Monsters make a morale check with DC 15 Wisdom when half their number are defeated or a powerful ally falls. Failure results in fleeing or surrendering. Skipping this step leads to unnecessary debates. Enforce it consistently to keep the game moving.",
       "cta": "GMs: Roll a DC 15 Wisdom check for morale at half losses or a fallen ally; skip it and expect chaos."
+    },
+    {
+      "published_utc": "2026-07-29T14:57:07Z",
+      "day": "2026-07-29",
+      "system": "dcc",
+      "content_id": "bgp-2026-07-29-item-spotlight-item-8-18e776f64b0e",
+      "instagram_post_id": "18213631132338800",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "5502a4ab929367bfc48d7cbf6f46e3f56f31d4b38d48c6e5d1118a7c66f14b53",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-29.mp4",
+      "fact_name": "Boots of Mist-Stepping",
+      "category": "item_spotlight",
+      "hook": "Boots of Mist-Stepping allow movement through 30 feet of air as mist, once per day.",
+      "body": "The effect lasts 1 round and requires materializing in an unoccupied space. Players frequently misuse this by activating it without clear destination, risking wasted turns. The practical application is using it to bypass obstacles or reposition strategically before engagement, not during it. Misuse leads to unnecessary exposure and damage from failed Fortitude saves (DC 11) causing 1d3 damage over 1d4 rounds.",
+      "cta": "Judges: Have them use the Boots of Mist-Stepping to bypass obstacles pre-combat, avoiding the Fort DC 11 curse mid-battle."
+    },
+    {
+      "published_utc": "2026-07-29T15:07:59Z",
+      "day": "2026-07-29",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-29-monster-tactic-creature-srd-2024-awakened-tree-5310290ae6b1",
+      "instagram_post_id": "17938642281323029",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9dee5e3bcc7ae414660d9fa4076f3bd066f8821160ce829f317fc518d4db2447",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-29.mp4",
+      "fact_name": "Awakened Tree",
+      "category": "monster_tactic",
+      "hook": "Awakened Tree has a Strength score of 19 and a Slam attack that deals 3d6 + 4 bludgeoning damage.",
+      "body": "With an Armor Class of 13 and 59 hit points, the Awakened Tree withstands attacks from low-level parties. Its 20-foot movement speed limits its mobility, but the Slam attack can force opponents to engage on its terms. Attempts to incapacitate it often fail due to its Constitution score of 15, which bolsters its saving throws against such effects. Exploiting its low Dexterity of 6 can limit its effectiveness through area control spells.",
+      "cta": "DMs: Place the Awakened Tree in dense forest terrain to mitigate its 20-foot speed and maximize its 3d6 + 4 Slam attack."
+    },
+    {
+      "published_utc": "2026-07-29T15:13:14Z",
+      "day": "2026-07-29",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-07-29-spell-use-case-spell-55-e6241ba83df3",
+      "instagram_post_id": "18110986510788470",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "636c4f81c6692541227aee7140a26aa5ca69673b977ef7b00b92e2c43f0aace7",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-29.mp4",
+      "fact_name": "Passwall",
+      "category": "spell_use_case",
+      "hook": "Passwall creates a temporary tunnel for 5 rounds in a barrier you touch.",
+      "body": "Passwall's range is Close, and it lasts for 5 rounds, allowing a tunnel of your height in a straight line up to near distance. Casting Passwall strictly for combat positioning within the grid misses its potential for bypassing obstacles or accessing hidden areas. Casting it to gain strategic information or access can influence the environment beyond mere movement.",
+      "cta": "GMs: Force them to use Passwall's 5-round window to bypass obstacles, not just shuffle around the grid."
     }
   ]
 }

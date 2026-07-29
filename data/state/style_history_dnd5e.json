@@ -332,5 +332,17 @@
       "spice": [],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-07-29": {
+    "monster_tactic": {
+      "angle": "how_it_wins",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "tactical_analyst",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "sage"
+    }
   }
 }

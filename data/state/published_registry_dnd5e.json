@@ -961,6 +961,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-28.mp4",
         "video_sha256": "220708a0355d1454e8474b951bf489f1518a6d6301f4bfe6d95a2479a854e851"
       }
+    },
+    {
+      "published_utc": "2026-07-29T15:05:58Z",
+      "day": "2026-07-29",
+      "content_id": "bgp-2026-07-29-monster-tactic-creature-srd-2024-awakened-tree-5310290ae6b1",
+      "publish_hash": "36c59c2855ece59d777e5eee208da07923172a257a1ee1884928d74eddc76f79",
+      "youtube_video_id": "xskRZfy8Vpc",
+      "youtube_url": "https://www.youtube.com/watch?v=xskRZfy8Vpc",
+      "video_sha256": "9dee5e3bcc7ae414660d9fa4076f3bd066f8821160ce829f317fc518d4db2447",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-29.mp4",
+      "fingerprint": {
+        "day": "2026-07-29",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-07-29-monster-tactic-creature-srd-2024-awakened-tree-5310290ae6b1",
+        "canonical_hash": "5310290ae6b1141be48da80e0a018aaaf3e74ae7ffbe25e8e25c86ec18320cfd",
+        "script_id": "c71616d92c4bffaaa7f9d80afebc16c2e821ffe1e433ca20604659b31665d10b",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_awakened-tree",
+        "fact_name": "Awakened Tree",
+        "hook": "Awakened Tree has a Strength score of 19 and a Slam attack that deals 3d6 + 4 bludgeoning damage.",
+        "body": "With an Armor Class of 13 and 59 hit points, the Awakened Tree withstands attacks from low-level parties. Its 20-foot movement speed limits its mobility, but the Slam attack can force opponents to engage on its terms. Attempts to incapacitate it often fail due to its Constitution score of 15, which bolsters its saving throws against such effects. Exploiting its low Dexterity of 6 can limit its effectiveness through area control spells.",
+        "cta": "DMs: Place the Awakened Tree in dense forest terrain to mitigate its 20-foot speed and maximize its 3d6 + 4 Slam attack.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-29.mp4",
+        "video_sha256": "9dee5e3bcc7ae414660d9fa4076f3bd066f8821160ce829f317fc518d4db2447"
+      }
     }
   ]
 }

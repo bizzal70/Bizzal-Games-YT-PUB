@@ -702,6 +702,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-28.mp4",
         "video_sha256": "bf39a2f568b05e23909f2cb1f5dc64caf81e5e1766da6a440606612c7a31f373"
       }
+    },
+    {
+      "published_utc": "2026-07-29T15:12:28Z",
+      "day": "2026-07-29",
+      "content_id": "bgp-2026-07-29-spell-use-case-spell-55-e6241ba83df3",
+      "publish_hash": "6eba95b5c83dd81b711220a8ae330b5575543ad33cbe70b8d8c1880b85469c46",
+      "youtube_video_id": "nmXdTvpsmcU",
+      "youtube_url": "https://www.youtube.com/watch?v=nmXdTvpsmcU",
+      "video_sha256": "636c4f81c6692541227aee7140a26aa5ca69673b977ef7b00b92e2c43f0aace7",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-29.mp4",
+      "fingerprint": {
+        "day": "2026-07-29",
+        "category": "spell_use_case",
+        "angle": "dm_twist",
+        "content_id": "bgp-2026-07-29-spell-use-case-spell-55-e6241ba83df3",
+        "canonical_hash": "e6241ba83df31c036381b4d038c404bc78d5ad4b0b1af7c8880c8178139b4e33",
+        "script_id": "87bba335f02f64701d6bff78f3ab3e54a5bb70e8ff6d96365307007159a45650",
+        "fact_kind": "spell",
+        "fact_pk": 55,
+        "fact_name": "Passwall",
+        "hook": "Passwall creates a temporary tunnel for 5 rounds in a barrier you touch.",
+        "body": "Passwall's range is Close, and it lasts for 5 rounds, allowing a tunnel of your height in a straight line up to near distance. Casting Passwall strictly for combat positioning within the grid misses its potential for bypassing obstacles or accessing hidden areas. Casting it to gain strategic information or access can influence the environment beyond mere movement.",
+        "cta": "GMs: Force them to use Passwall's 5-round window to bypass obstacles, not just shuffle around the grid.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-29.mp4",
+        "video_sha256": "636c4f81c6692541227aee7140a26aa5ca69673b977ef7b00b92e2c43f0aace7"
+      }
     }
   ]
 }
