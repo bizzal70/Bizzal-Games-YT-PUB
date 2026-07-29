@@ -2023,6 +2023,39 @@
       "video_id": "18110986510788470",
       "day": "2026-07-29",
       "published_at": "2026-07-29T15:13:14+00:00"
+    },
+    {
+      "content_key": "acbb8f7d66ef8d121e9f84d24fd35e368eeb229156ad3c5afe7ba23662b392e5",
+      "token_text": "based chant duration focu hidden reveal threat",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Chant reveals hidden threats with focus-based duration #shadowdark",
+      "video_id": "RhdmT0aSFnU",
+      "day": "2026-07-29",
+      "published_at": "2026-07-29T17:53:21+00:00"
+    },
+    {
+      "content_key": "514ea21adc757ceb17385c9774ed37d6df0aaad4c9af18c25c688ecacfcc7487",
+      "token_text": "any break damage focu seer shadowdark",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Seer focus breaks with any damage in Shadowdark",
+      "video_id": "J64O9lsTGtc",
+      "day": "2026-07-29-shadowdark-clip1",
+      "published_at": "2026-07-29T17:55:34+00:00"
+    },
+    {
+      "content_key": "28d05b3ce63a4f0b473e609e126a42b0e304197a9813c9f2e3d0e4e903c1b3a2",
+      "token_text": "chant hidden threat wasted without",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Chant is wasted without hidden threats #shadowdark",
+      "video_id": "mh-VGRoD9us",
+      "day": "2026-07-29-shadowdark-clip2",
+      "published_at": "2026-07-29T17:57:06+00:00"
     }
   ]
 }

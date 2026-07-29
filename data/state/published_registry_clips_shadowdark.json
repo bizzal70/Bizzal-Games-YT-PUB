@@ -77,6 +77,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-07-20-shadowdark-clip3.mp4",
         "video_sha256": "c0e5cc08ec213702572b2c54e3c980f113addf8411a50f7254fefd7726b2f2c5"
       }
+    },
+    {
+      "published_utc": "2026-07-29T17:55:34Z",
+      "day": "2026-07-29-shadowdark-clip1",
+      "content_id": "clip:50225c34a117e8d1",
+      "publish_hash": "d4a4394dc6fd9b0aaf20193d97194443c387e06e7c0a35e9e47027696c2dba6f",
+      "youtube_video_id": "J64O9lsTGtc",
+      "youtube_url": "https://www.youtube.com/watch?v=J64O9lsTGtc",
+      "video_sha256": "b9d0fe7100ba8d824662df5d05ade1cc9a2db1961ac390d4053ae3f6eb54b631",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-07-29-shadowdark-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-07-29-shadowdark-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:50225c34a117e8d1",
+        "canonical_hash": "",
+        "script_id": "50225c34a117e8d1c9b9e7d9d25d6660bfc58bc15dad5fb408d846c0a54783db",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Seer focus breaks with any damage in Shadowdark",
+        "hook": "Seer focus breaks with any damage in Shadowdark",
+        "body": "In Shadowdark RPG, maintaining focus for 'Chant' is critical. Focus breaks if the Seer takes any damage, casts another spell, or loses concentration. Position the Seer safely and coordinate with the party to protect their focus.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-07-29-shadowdark-clip1.mp4",
+        "video_sha256": "b9d0fe7100ba8d824662df5d05ade1cc9a2db1961ac390d4053ae3f6eb54b631"
+      }
+    },
+    {
+      "published_utc": "2026-07-29T17:57:06Z",
+      "day": "2026-07-29-shadowdark-clip2",
+      "content_id": "clip:65554b68bb092cdf",
+      "publish_hash": "6b3f7b71b2909e820f7d055fe3a8a70e92a19668d0b18161d784faad01b10ace",
+      "youtube_video_id": "mh-VGRoD9us",
+      "youtube_url": "https://www.youtube.com/watch?v=mh-VGRoD9us",
+      "video_sha256": "d8835131d7cf3dc064e6bdad730ccf656b0886a90cc6d0c1cbc41715614b9101",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-07-29-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-07-29-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:65554b68bb092cdf",
+        "canonical_hash": "",
+        "script_id": "65554b68bb092cdf304d21224ad0807ec6236c6097ce4280537c0da1f4b8149b",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Chant is wasted without hidden threats",
+        "hook": "Chant is wasted without hidden threats",
+        "body": "A common mistake with 'Chant' is casting it when no hidden threats are present. This wastes a valuable spell slot. Use 'Chant' strategically when invisible enemies or hidden traps are likely to maximize its effectiveness.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-07-29-shadowdark-clip2.mp4",
+        "video_sha256": "d8835131d7cf3dc064e6bdad730ccf656b0886a90cc6d0c1cbc41715614b9101"
+      }
     }
   ]
 }

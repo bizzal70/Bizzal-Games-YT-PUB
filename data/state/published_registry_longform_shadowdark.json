@@ -25,6 +25,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_shadowdark/by_day/2026-07-20.mp4",
         "video_sha256": "aa6d0838106c9ae09481e2b7a176a35948f6b685a0d78e42586dfa559ab00799"
       }
+    },
+    {
+      "published_utc": "2026-07-29T17:53:21Z",
+      "day": "2026-07-29",
+      "content_id": "",
+      "publish_hash": "788445678150b176ea933658f70121ff79802112f24ecf96797983a673b35b71",
+      "youtube_video_id": "RhdmT0aSFnU",
+      "youtube_url": "https://www.youtube.com/watch?v=RhdmT0aSFnU",
+      "video_sha256": "5576be0567399f7938f854a599ef31e0a05b829e0005bc740dd9f524787e7979",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_shadowdark/by_day/2026-07-29.mp4",
+      "fingerprint": {
+        "day": "2026-07-29",
+        "category": "spell_use_case",
+        "angle": "deep_dive",
+        "content_id": "",
+        "canonical_hash": "",
+        "script_id": "e1260010d782ab34439c8ae7a311f35f7fc112dac7848cf4c6890f3310f92ea9",
+        "fact_kind": "spell",
+        "fact_pk": 111,
+        "fact_name": "Chant",
+        "hook": "Chant reveals hidden threats with focus-based duration",
+        "body": "Today, we're diving deep into the spell 'Chant' from the Shadowdark RPG. This spell is a Tier 1 ability available to the Seer class, found on a cursed scroll. 'Chant' allows the caster to see all invisible and hidden things for as long as they maintain focus. We'll explore the nuances of this spell, its tactical applications, and common pitfalls to avoid when using it in your game.\n\nUnderstanding 'Chant'. The spell 'Chant' is a Tier 1 spell exclusive to the Seer class in Shadowdark RPG. It originates from a cursed scroll, categorized as 'cursed-scroll-3'. The primary effect of this spell is the ability to see all invisible and hidden things, but only as long as the caster maintains focus. This focus-based duration means that any interruption can end the spell prematurely, making it essential for players to manage their actions carefully to maximize its benefits.\n\nTactical Applications. 'Chant' provides a significant advantage in situations where invisible or hidden threats are present. As a Seer, using this spell can turn the tide in encounters against foes relying on stealth or invisibility. The ability to see hidden traps or secret doors can also be a game-changer in exploration scenarios. Players should consider casting 'Chant' before entering areas known for ambushes or when suspecting the presence of hidden enemies. This proactive approach can save the party from potential surprises and hazards.\n\nMaintaining Focus. Maintaining focus is crucial when using 'Chant'. In Shadowdark RPG, focus can be interrupted by taking damage, casting another spell, or losing concentration for any reason. Players should be aware of these risks and plan accordingly. Positioning the Seer away from immediate threats can help maintain focus. Additionally, coordinating with the party to protect the Seer can ensure the spell's effects last as long as needed. Understanding the mechanics of focus will help players use 'Chant' more effectively.\n\nCommon Misplays. One common misplay with 'Chant' is underestimating the importance of maintaining focus. Players may inadvertently break focus by engaging in other actions or failing to protect themselves from damage. Another mistake is casting 'Chant' without a clear understanding of its tactical value. Players should avoid using the spell in situations where there are no apparent invisible or hidden threats, as this can waste a valuable spell slot. Proper timing and situational awareness are key to avoiding these pitfalls.\n\nGM Considerations. For GMs, 'Chant' can introduce interesting dynamics into the game. Consider how the ability to see invisible and hidden things might affect your encounter designs. You can challenge players by incorporating layers of deception or misdirection that require more than just visibility to solve. Additionally, balancing encounters to ensure that 'Chant' doesn't trivialize stealth-based challenges is crucial. By understanding how players might use this spell, GMs can create more engaging and dynamic sessions.\n\nIn conclusion, 'Chant' is a versatile spell that can significantly impact gameplay when used effectively. By understanding its mechanics and tactical applications, both players and GMs can enhance their Shadowdark RPG experience. Remember to maintain focus and time your casts wisely to maximize the spell's potential. Check out our channel for more in-depth Shadowdark RPG content and tips.",
+        "cta": "Subscribe for weekly tabletop RPG deep dives. Follow Bizzal Games on YouTube and Instagram.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_shadowdark/by_day/2026-07-29.mp4",
+        "video_sha256": "5576be0567399f7938f854a599ef31e0a05b829e0005bc740dd9f524787e7979"
+      }
     }
   ]
 }
