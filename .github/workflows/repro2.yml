@@ -1,0 +1,56 @@
+name: repro encoding bug 2 - checkout bytes (temp)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repro:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Check for gitattributes / encoding filters
+        run: |
+          echo "=== .gitattributes (if any) ==="
+          find . -name ".gitattributes" -exec echo {} \; -exec cat {} \;
+          echo "=== git config relevant to encoding ==="
+          git config --list | grep -i "encoding\|autocrlf\|filter" || echo "(none set)"
+      - name: Dump raw on-disk bytes of the checked-out file around the middot literal
+        run: |
+          python3 - <<'PYEOF'
+          raw = open("bin/upload/upload_youtube.py", "rb").read()
+          idx = raw.find(b'.join(keyword_bits)')
+          chunk = raw[idx-30:idx+5]
+          print("ON-DISK bytes around keyword_line literal:", chunk)
+          try:
+              print("decodes as utf-8 to:", chunk.decode("utf-8"))
+          except Exception as e:
+              print("utf-8 decode failed:", e)
+
+          # full md5 for exact comparison
+          import hashlib
+          print("file sha256:", hashlib.sha256(raw).hexdigest())
+          print("file size:", len(raw))
+          PYEOF
+      - name: Now import and call the function, dumping the STRING's raw bytes at each stage
+        run: |
+          python3 - <<'PYEOF'
+          import sys
+          sys.path.insert(0, "bin/upload")
+          sys.path.insert(0, "bin/core")
+
+          # Read the function's actual compiled string constant directly via bytecode/co_consts
+          import upload_youtube as uy
+          import dis
+
+          consts = uy.build_description.__code__.co_consts
+          for c in consts:
+              if isinstance(c, str) and ("·" in c or "▶" in c or "—" in c):
+                  print("FOUND clean-looking const in co_consts:", repr(c), c.encode("utf-8"))
+              if isinstance(c, str) and "Â" in c:
+                  print("FOUND ALREADY-MOJIBAKE const in co_consts:", repr(c), c.encode("utf-8"))
+          PYEOF
+      - name: Commit nothing (diagnostic only)
+        run: echo done
