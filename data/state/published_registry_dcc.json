@@ -391,6 +391,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-29.mp4",
         "video_sha256": "5502a4ab929367bfc48d7cbf6f46e3f56f31d4b38d48c6e5d1118a7c66f14b53"
       }
+    },
+    {
+      "published_utc": "2026-07-30T14:56:30Z",
+      "day": "2026-07-30",
+      "content_id": "bgp-2026-07-30-encounter-seed-creature-171-60689171c8eb",
+      "publish_hash": "389cfc55ee492b6204c0fdb3fb63d1953fa2d40a28e568a681c36221444e9215",
+      "youtube_video_id": "RVmPQdj54sI",
+      "youtube_url": "https://www.youtube.com/watch?v=RVmPQdj54sI",
+      "video_sha256": "05b5f3576b3b88703607208fac98cc76fc12e5eb1e7b89a2ba1a47e183ef4b87",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-30.mp4",
+      "fingerprint": {
+        "day": "2026-07-30",
+        "category": "encounter_seed",
+        "angle": "twist",
+        "content_id": "bgp-2026-07-30-encounter-seed-creature-171-60689171c8eb",
+        "canonical_hash": "60689171c8ebe32dbef843fb2956c26c829c16fa4573ade880c3149e8db4e18a",
+        "script_id": "9df9d5b97c2f0427531cb56c68613740c1cde99546c4bf7e631b3213619f47c8",
+        "fact_kind": "creature",
+        "fact_pk": 171,
+        "fact_name": "Kobold Avatar",
+        "hook": "Use Kobold Avatar as an encounter seed with clear stakes and one hard decision about save resources now or spend big to control tempo.",
+        "body": "Kobold Avatar has 12d12 hit dice and an armor class of 17, making it more resilient than typical kobolds. Its fiendish greatsword deals 1d10+5 damage plus firebrand, which is often underestimated. The nightmare of dead generations ability can be used once per day, creating a tactical shift that players frequently overlook. Optimal strategy involves preparing for this ability's activation and adapting tactics accordingly, rather than committing all resources too early.",
+        "cta": "Judges: When the Kobold Avatar's nightmare of dead generations triggers, remind them to save their best spells for after it hits.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-30.mp4",
+        "video_sha256": "05b5f3576b3b88703607208fac98cc76fc12e5eb1e7b89a2ba1a47e183ef4b87"
+      }
     }
   ]
 }

@@ -258,5 +258,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-07-30": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "grim_referee",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

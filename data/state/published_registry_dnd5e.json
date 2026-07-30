@@ -987,6 +987,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-29.mp4",
         "video_sha256": "9dee5e3bcc7ae414660d9fa4076f3bd066f8821160ce829f317fc518d4db2447"
       }
+    },
+    {
+      "published_utc": "2026-07-30T15:02:24Z",
+      "day": "2026-07-30",
+      "content_id": "bgp-2026-07-30-spell-use-case-spell-xanathars-guide-green-flame-blade-11165e44186b",
+      "publish_hash": "47570950bcb11a1c4a5dc940486b2783327793fdea67a794e39dfa034c0d5ac1",
+      "youtube_video_id": "rQt2VWH0DFA",
+      "youtube_url": "https://www.youtube.com/watch?v=rQt2VWH0DFA",
+      "video_sha256": "96a82cf5597345ce097b600cd14d2b1e5afd0f7613c73e7fe1b7b8cf04664b71",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-30.mp4",
+      "fingerprint": {
+        "day": "2026-07-30",
+        "category": "spell_use_case",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-07-30-spell-use-case-spell-xanathars-guide-green-flame-blade-11165e44186b",
+        "canonical_hash": "11165e44186b0787e872f5515b775ce5c49d7945a9fbae880d57c533a18d07b7",
+        "script_id": "b090e968504a3b23bf8c0b5befbf0d633b3c3dcf13194deb99de75c999c61293",
+        "fact_kind": "spell",
+        "fact_pk": "xanathars-guide_green-flame-blade",
+        "fact_name": "Green-Flame Blade",
+        "hook": "Green-Flame Blade has a range of 5 feet and affects two targets.",
+        "body": "Green-Flame Blade is a cantrip that requires an action to cast and targets one creature within 5 feet. On a successful melee attack, fire damage equal to the spellcasting modifier leaps to a second creature within 5 feet of the primary target. Many players forget that the secondary target must be within 5 feet of the first, not the caster. Optimal use involves positioning to ensure both targets are within range, maximizing damage output without wasting the spell's potential.",
+        "cta": "DMs: Remind them the secondary target for Green-Flame Blade must be within 5 feet of the primary target, not the caster.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-30.mp4",
+        "video_sha256": "96a82cf5597345ce097b600cd14d2b1e5afd0f7613c73e7fe1b7b8cf04664b71"
+      }
     }
   ]
 }

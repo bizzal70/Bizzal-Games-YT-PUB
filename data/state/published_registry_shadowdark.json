@@ -728,6 +728,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-29.mp4",
         "video_sha256": "636c4f81c6692541227aee7140a26aa5ca69673b977ef7b00b92e2c43f0aace7"
       }
+    },
+    {
+      "published_utc": "2026-07-30T15:07:29Z",
+      "day": "2026-07-30",
+      "content_id": "bgp-2026-07-30-class-spotlight-class-4-8f2064800017",
+      "publish_hash": "db9aab4de4d4d4cfe1e674b66be9e09d0f5923eed051abf8adf8b22b8e1df94f",
+      "youtube_video_id": "5-pQFMK3dcs",
+      "youtube_url": "https://www.youtube.com/watch?v=5-pQFMK3dcs",
+      "video_sha256": "d302e31dc986aee21ea58a67589147cf0b1b2c261bd9290ee56fbf77cf2ebbbe",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-30.mp4",
+      "fingerprint": {
+        "day": "2026-07-30",
+        "category": "class_spotlight",
+        "angle": "early_power_spike",
+        "content_id": "bgp-2026-07-30-class-spotlight-class-4-8f2064800017",
+        "canonical_hash": "8f20648000177176f8a0577812fcb8130beabab192e4c1bc9d10f99b520d2f51",
+        "script_id": "3caf5bf1b6dc6d42a25bd0f242805e4aaf692e4b94b546afb9a6557213a36a2c",
+        "fact_kind": "class",
+        "fact_pk": 4,
+        "fact_name": "Wizard",
+        "hook": "Wizard's power spike occurs at the level where spell tiers unlock.",
+        "body": "With 1d4 hit dice, Wizards are fragile and rely on intelligence for spellcasting. Misjudging the power curve by focusing on high-damage spells without planning for spell slots leads to inefficiency. The Mishap table penalizes reckless casting, so careful spell selection and timing are crucial. Prioritize spells that maximize utility and control to effectively leverage early power spikes.",
+        "cta": "GMs: At level 3, when Wizards unlock second-tier spells, ensure players prioritize utility spells over raw damage for survival.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-30.mp4",
+        "video_sha256": "d302e31dc986aee21ea58a67589147cf0b1b2c261bd9290ee56fbf77cf2ebbbe"
+      }
     }
   ]
 }

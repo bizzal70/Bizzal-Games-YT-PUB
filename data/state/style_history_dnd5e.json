@@ -344,5 +344,15 @@
       ],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-07-30": {
+    "spell_use_case": {
+      "angle": "dm_counterplay",
+      "voice": "rules_lawyer",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [],
+      "tts_voice_id": "sage"
+    }
   }
 }

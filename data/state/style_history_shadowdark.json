@@ -350,5 +350,17 @@
       ],
       "tts_voice_id": "nova"
     }
+  },
+  "2026-07-30": {
+    "class_spotlight": {
+      "angle": "early_power_spike",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "class_mentor",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

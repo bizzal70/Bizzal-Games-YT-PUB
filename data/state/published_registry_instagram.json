@@ -762,6 +762,51 @@
       "hook": "Passwall creates a temporary tunnel for 5 rounds in a barrier you touch.",
       "body": "Passwall's range is Close, and it lasts for 5 rounds, allowing a tunnel of your height in a straight line up to near distance. Casting Passwall strictly for combat positioning within the grid misses its potential for bypassing obstacles or accessing hidden areas. Casting it to gain strategic information or access can influence the environment beyond mere movement.",
       "cta": "GMs: Force them to use Passwall's 5-round window to bypass obstacles, not just shuffle around the grid."
+    },
+    {
+      "published_utc": "2026-07-30T14:57:30Z",
+      "day": "2026-07-30",
+      "system": "dcc",
+      "content_id": "bgp-2026-07-30-encounter-seed-creature-171-60689171c8eb",
+      "instagram_post_id": "17937601374304313",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "05b5f3576b3b88703607208fac98cc76fc12e5eb1e7b89a2ba1a47e183ef4b87",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-30.mp4",
+      "fact_name": "Kobold Avatar",
+      "category": "encounter_seed",
+      "hook": "Use Kobold Avatar as an encounter seed with clear stakes and one hard decision about save resources now or spend big to control tempo.",
+      "body": "Kobold Avatar has 12d12 hit dice and an armor class of 17, making it more resilient than typical kobolds. Its fiendish greatsword deals 1d10+5 damage plus firebrand, which is often underestimated. The nightmare of dead generations ability can be used once per day, creating a tactical shift that players frequently overlook. Optimal strategy involves preparing for this ability's activation and adapting tactics accordingly, rather than committing all resources too early.",
+      "cta": "Judges: When the Kobold Avatar's nightmare of dead generations triggers, remind them to save their best spells for after it hits."
+    },
+    {
+      "published_utc": "2026-07-30T15:03:24Z",
+      "day": "2026-07-30",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-07-30-spell-use-case-spell-xanathars-guide-green-flame-blade-11165e44186b",
+      "instagram_post_id": "17946902862250589",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "96a82cf5597345ce097b600cd14d2b1e5afd0f7613c73e7fe1b7b8cf04664b71",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-30.mp4",
+      "fact_name": "Green-Flame Blade",
+      "category": "spell_use_case",
+      "hook": "Green-Flame Blade has a range of 5 feet and affects two targets.",
+      "body": "Green-Flame Blade is a cantrip that requires an action to cast and targets one creature within 5 feet. On a successful melee attack, fire damage equal to the spellcasting modifier leaps to a second creature within 5 feet of the primary target. Many players forget that the secondary target must be within 5 feet of the first, not the caster. Optimal use involves positioning to ensure both targets are within range, maximizing damage output without wasting the spell's potential.",
+      "cta": "DMs: Remind them the secondary target for Green-Flame Blade must be within 5 feet of the primary target, not the caster."
+    },
+    {
+      "published_utc": "2026-07-30T15:08:17Z",
+      "day": "2026-07-30",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-07-30-class-spotlight-class-4-8f2064800017",
+      "instagram_post_id": "18132205483628403",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d302e31dc986aee21ea58a67589147cf0b1b2c261bd9290ee56fbf77cf2ebbbe",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-30.mp4",
+      "fact_name": "Wizard",
+      "category": "class_spotlight",
+      "hook": "Wizard's power spike occurs at the level where spell tiers unlock.",
+      "body": "With 1d4 hit dice, Wizards are fragile and rely on intelligence for spellcasting. Misjudging the power curve by focusing on high-damage spells without planning for spell slots leads to inefficiency. The Mishap table penalizes reckless casting, so careful spell selection and timing are crucial. Prioritize spells that maximize utility and control to effectively leverage early power spikes.",
+      "cta": "GMs: At level 3, when Wizards unlock second-tier spells, ensure players prioritize utility spells over raw damage for survival."
     }
   ]
 }
