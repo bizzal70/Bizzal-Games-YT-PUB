@@ -1026,7 +1026,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             "Return strict JSON object with keys: hook, body, cta.",
             "Do not invent mechanics, stats, or proper nouns that aren't in the input.",
             "fact_name must appear somewhere in the output.",
-            "Hook: one dry declarative sentence. The single most surprising mechanical fact here (never open the hook with 'Players often') — stated as fact, not question.",
+            "Hook: one dry declarative sentence. The single most surprising mechanical fact here (never open the hook with 'Players often') — stated as fact, not question. Do NOT recite a raw stat line — frame the fact around what it means at the table: the consequence, the mistake it causes, or why it catches players off guard. BAD: 'Awakened Tree has a Strength score of 19 and a Slam attack that deals 3d6 + 4.' GOOD: 'Awakened Tree's Slam hits harder than most parties expect at this level — 3d6 + 4 catches low-AC characters off guard.'",
             "Body: 2-4 sentences. Draw from fact_mechanics — use the actual duration, range, concentration flag, damage dice, saving throw type, or class list. Name the specific mechanical interaction. Name the common mistake with a concrete example. Then name the better line of play. BANNED OPENERS (never start any sentence with these): 'Players often', 'The smart play is', 'Smart play involves', 'The common mistake is'. Lead with the mechanic, the number, or the consequence, and vary sentence structure across hook/body/cta. BAD: 'players often overlook the strategic advantage.' GOOD: 'Alter Self lasts 1 hour with concentration — most players burn it right before combat and lose it on the first failed Constitution save. The move is casting it at the start of an infiltration, before any rolls happen.' Be that specific.",
             "CTA: one sentence. The exact condition or setup where this mechanic pays off — named precisely.",
             "No vague generalization. 'Players miss the strategic advantage' is forbidden. 'Players cast this before a long rest and waste the 8-hour duration' is correct.",
@@ -1092,6 +1092,9 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
         if is_generic_hook(out.get("hook", "")):
             out["hook"] = clean_ai_style_text(script.get("hook", ""), segment="hook")
             ai_diag("AI script hook reverted by anti-generic gate")
+        if is_statdump_hook(out.get("hook", "")):
+            out["hook"] = clean_ai_style_text(script.get("hook", ""), segment="hook")
+            ai_diag("AI script hook reverted by anti-statdump gate")
         if is_generic_cta(out.get("cta", "")):
             out["cta"] = clean_ai_style_text(script.get("cta", ""), segment="cta")
             ai_diag("AI script CTA reverted by anti-generic gate")
@@ -1486,6 +1489,21 @@ def is_generic_hook(text: str) -> bool:
         "unleash the power",
     ]
     return any(b in t for b in bad)
+
+
+def is_statdump_hook(text: str) -> bool:
+    """Catch a hook that recites a raw stat line instead of framing a consequence,
+    e.g. 'X has a Strength score of 19 and a Slam attack that deals 3d6 + 4.'
+    is_generic_hook() only screens cheerleading filler, not this failure mode.
+    """
+    t = (text or "").strip()
+    if not t:
+        return False
+    if re.search(r"\bhas an?\b.{0,40}\bscore of\b", t, re.IGNORECASE):
+        return True
+    if re.search(r"\bdeals?\b\s+\d+d\d+", t, re.IGNORECASE):
+        return True
+    return False
 
 
 def is_generic_cta(text: str) -> bool:
