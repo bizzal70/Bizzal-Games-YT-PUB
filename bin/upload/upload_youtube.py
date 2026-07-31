@@ -167,7 +167,14 @@ def _hook_fragment(hook: str, limit: int = 80) -> str:
     frag = re.sub(r"^(?:yes|no|and|but|so),?\s+", "", frag, flags=re.IGNORECASE).strip()
     frag = frag.rstrip(".!,;: ")
     if len(frag) > limit:
-        frag = frag[:limit].rsplit(" ", 1)[0].rstrip(".!,;: ")
+        # Prefer trimming at a comma clause-break within the limit over a blind
+        # word-boundary cut, which can leave a technically-valid but incomplete-
+        # reading fragment (e.g. "...once per" instead of "...as mist").
+        comma_split = re.split(r",\s+", frag[:limit], maxsplit=1)
+        if len(comma_split) > 1 and len(comma_split[0]) >= 20:
+            frag = comma_split[0].rstrip(".!,;: ")
+        else:
+            frag = frag[:limit].rsplit(" ", 1)[0].rstrip(".!,;: ")
     return frag
 
 
@@ -189,7 +196,9 @@ def build_title(atom: dict, day: str) -> str:
         title = frag
     else:
         title = f"{name} • {category}"
-    return title[:100]
+    if len(title) > 100:
+        title = title[:100].rsplit(" ", 1)[0].rstrip(".!,;: ")
+    return title
 
 
 def build_description(atom: dict, day: str) -> str:
@@ -639,7 +648,12 @@ def main() -> int:
     _tag = system_title_tag(content_profile(atom))
     if _tag.lstrip("#").lower() not in title.lower():
         _candidate = f"{title} {_tag}"
-        title = _candidate if len(_candidate) <= 100 else f"{title[:100 - len(_tag) - 2].rstrip()} {_tag}"
+        if len(_candidate) <= 100:
+            title = _candidate
+        else:
+            budget = 100 - len(_tag) - 1
+            trimmed = title[:budget].rsplit(" ", 1)[0].rstrip(".!,;: ")
+            title = f"{trimmed} {_tag}"
     print(f"[upload_youtube] title: {title}")
 
     # --- Duplicate guard: ONE ledger across Shorts / long-form / clips -------
