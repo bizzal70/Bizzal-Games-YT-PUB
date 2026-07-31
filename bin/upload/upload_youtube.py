@@ -244,6 +244,10 @@ def build_description(atom: dict, day: str) -> str:
     ]
     if playlist_url:
         lines.append(f"📺 More rulings: {playlist_url}")
+    source_video_id = (atom.get("source_video_id") or "").strip()
+    if source_video_id:
+        watch = f"https://www.youtube.com/watch?v={source_video_id}"
+        lines.append(f"▶ Full breakdown ({system_label}): {watch}")
     lines += [
         "",
         "Follow Bizzal Games:",
