@@ -1,0 +1,95 @@
+name: backfill title truncation fix (temp)
+
+on:
+  workflow_dispatch:
+    inputs:
+      execute:
+        description: 'Set "true" to actually update. Default is a dry run.'
+        required: false
+        default: "false"
+
+permissions:
+  contents: read
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -q google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+      - name: Materialize YouTube OAuth token
+        env:
+          BIZZAL_YT_TOKEN_JSON: ${{ secrets.BIZZAL_YT_TOKEN_JSON }}
+        run: |
+          mkdir -p .secrets
+          printf '%s' "$BIZZAL_YT_TOKEN_JSON" > .secrets/youtube_token.json
+      - name: Backfill the two confirmed truncated titles
+        env:
+          EXECUTE: ${{ github.event.inputs.execute }}
+        run: |
+          python - <<'PY'
+          import os
+          from google.oauth2.credentials import Credentials
+          from google.auth.transport.requests import Request
+          from googleapiclient.discovery import build
+
+          EXECUTE = (os.environ.get("EXECUTE") or "").strip().lower() == "true"
+
+          # EXACT ids only -- both confirmed via the actual live build_title() +
+          # title_lint pipeline, cross-checked against real live titles.
+          TARGETS = {
+              "fEn8ONVZqbA": "Boots of Mist-Stepping allow movement through 30 feet of air as mist #dcc",
+              "JYftz0TNIzw": "Unseen Attackers and Targets impose Disadvantage on attack rolls against unseen #dnd5e",
+          }
+
+          SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
+                    "https://www.googleapis.com/auth/youtube.readonly",
+                    "https://www.googleapis.com/auth/youtube.force-ssl"]
+          creds = Credentials.from_authorized_user_file(".secrets/youtube_token.json", SCOPES)
+          creds.refresh(Request())
+          yt = build("youtube", "v3", credentials=creds)
+
+          ids = list(TARGETS)
+          resp = yt.videos().list(part="snippet", id=",".join(ids)).execute()
+          found = {it["id"]: it for it in resp.get("items", [])}
+
+          missing = [v for v in ids if v not in found]
+          for v in missing:
+              print(f"  !! NOT FOUND: {v}")
+
+          plan = []
+          for v in ids:
+              it = found.get(v)
+              if not it:
+                  continue
+              cur_title = it["snippet"]["title"]
+              new_title = TARGETS[v]
+              print(f"  {v}")
+              print(f"    current: {cur_title!r}")
+              print(f"    new:     {new_title!r}")
+              if cur_title != new_title:
+                  plan.append((v, it, new_title))
+              else:
+                  print("    (already matches, skipping)")
+
+          print(f"\n{len(plan)} to update | {len(found)-len(plan)} already correct | {len(missing)} missing")
+
+          if not EXECUTE:
+              print("\nDRY RUN -- nothing changed. Re-run with execute=true to apply.")
+          else:
+              done = 0
+              for v, it, new_title in plan:
+                  snippet = it["snippet"]
+                  snippet["title"] = new_title
+                  try:
+                      yt.videos().update(part="snippet", body={"id": v, "snippet": snippet}).execute()
+                      done += 1
+                      print(f"  updated {v}")
+                  except Exception as exc:
+                      print(f"  FAILED {v}: {exc}")
+              print(f"\nDONE: {done}/{len(plan)} updated")
+          PY
