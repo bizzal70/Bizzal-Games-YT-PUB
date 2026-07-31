@@ -12,6 +12,17 @@ Two checks per item:
      false-positives on real zine classes like "Desert Rider"), so it is shown
      for review only -- never a standalone verdict.
 
+Clips (tier=="clip") are excluded from check 1: make_clips_from_longform.py stores
+the clip's hook sentence in fact_name, not an entity name (fact_pk is null), so the
+token match was comparing a whole sentence against single-entity fixture names and
+false-flagging real clips (confirmed: 8 of 17 published clips false-flagged, incl.
+real content like Hellhound and Black Pudding). Cross-referencing to the parent
+long-form video's fact_name was considered but long-form entries frequently have an
+empty fact_name too (a long-form script can synthesize multiple facts, not one
+entity), so there is no reliable entity name to check clips against -- check 1 is
+skipped for clips (det=None) rather than checking the wrong thing. Checks against
+IP hits and the advisory canon check still run for clips.
+
 Confabulated content shows up as IP hits or NOT-IN-FIXTURES; those are the hard
 flags. A canon-only flag is a "human, double-check this one" note.
 
@@ -105,7 +116,9 @@ def main():
         if not vid:
             return
         ip_ok, hits = content_safety.scan_text(f"{name}\n{text}")
-        det = grounded_name(name, tsets[sysid]) if name else None
+        # Clips store the hook sentence in fact_name, not an entity name -- see
+        # module docstring. The deterministic entity-name check does not apply.
+        det = grounded_name(name, tsets[sysid]) if (name and tier != "clip") else None
         v = content_safety.canon_check(text, LABEL[sysid], reference=digests[sysid]) if text else None
         rows.append({"sys": sysid, "tier": tier, "vid": vid, "name": name,
                      "ip_ok": ip_ok, "ip": hits, "det": det,
