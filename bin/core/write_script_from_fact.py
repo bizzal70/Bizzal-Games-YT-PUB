@@ -996,6 +996,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             val = val[:300] + "…"
         fact_mechanics[key] = val
 
+    _angle = atom.get("angle") or ""
     prompt = {
         "task": (
             "Rewrite hook/body/cta as a dry mechanical observation for someone who already read the manual. "
@@ -1007,7 +1008,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             + (f" Spice modifier: {spice_instruction}" if spice_instruction else "")
         ),
         "category": atom.get("category") or "",
-        "angle": atom.get("angle") or "",
+        "angle": _angle,
         "fact_name": fact_name,
         "kind": fact.get("kind") or "",
         "fact_mechanics": fact_mechanics,
@@ -1037,7 +1038,17 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
             "No theatrical setup: no 'Picture this', 'Who knew', 'Suddenly', 'Watch as', 'It's about the story'.",
             "When pdf_flavor_snippet is provided, extract a specific mechanical detail from it — not flavor.",
             "No markdown.",
-        ],
+        ] + ([
+            "This angle (party_role_pivot) is a two-state pivot: the subject has one feature/mode it "
+            "starts in and switches to another under a trigger condition. The hook must name BOTH states "
+            "in one sentence, not just one feature in isolation — state the starting mode and what it "
+            "switches into. Do NOT let the hook describe only one feature while the body describes a "
+            "different, unrelated feature with no bridge between them; the body must explicitly connect "
+            "back to the pivot named in the hook. "
+            "BAD hook (names only one side): 'Path of Wild Magic triggers random magical effects while "
+            "raging.' GOOD hook (names both sides of the pivot): 'Path of Wild Magic trades battlefield "
+            "magic detection for chaotic random effects the moment the Barbarian rages.'",
+        ] if _angle == "party_role_pivot" else []),
     }
 
     payload = {
