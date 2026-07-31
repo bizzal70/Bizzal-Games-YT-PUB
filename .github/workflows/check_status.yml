@@ -1,0 +1,85 @@
+name: check confabulated content status (temp, read-only)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -q google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+      - name: Materialize YouTube OAuth token
+        env:
+          BIZZAL_YT_TOKEN_JSON: ${{ secrets.BIZZAL_YT_TOKEN_JSON }}
+        run: |
+          mkdir -p .secrets
+          printf '%s' "$BIZZAL_YT_TOKEN_JSON" > .secrets/youtube_token.json
+      - name: List current privacy status (READ ONLY, no updates)
+        run: |
+          python - <<'PY'
+          from google.oauth2.credentials import Credentials
+          from google.auth.transport.requests import Request
+          from googleapiclient.discovery import build
+
+          TARGETS = {
+              # Godzilla set (2026-07-22)
+              "Spsl-LoNlSU": "godzilla LF",
+              "wLrrQilVRJE": "godzilla clip 1",
+              "j0nIwXGr8dk": "godzilla clip 2",
+              "qxZFL_RvMsY": "godzilla clip 3",
+              # Shadowdark Summoner set (2026-07-20)
+              "BHX0I5dEuys": "summoner LF",
+              "kkBXYhfLRBQ": "summoner clip 1",
+              "aaxltSAGJzg": "summoner clip 2",
+              "r5c5W-kWLDI": "summoner clip 3",
+              # DCC set (2026-07-16..18)
+              "GX69-Bzs8TU": "dcc LF deathbringer items",
+              "Q0KX14YQ2RA": "dcc LF vintage spells",
+              "cOzR7vNgnrE": "dcc LF clownish evolution",
+              "crW_l0OTWFc": "dcc LF deathbringer crowdfunding",
+              "LiVi7EacWl4": "dcc LF clown class",
+              "KzxPM9JbqzA": "dcc LF deathbringer project",
+              "bOHPLFcg3-4": "dcc clip",
+              "-NuyB4CZu4g": "dcc clip",
+              "60B2q3darKI": "dcc clip",
+              "25YmGgsgzoo": "dcc clip",
+              "3fuBqFwAU6I": "dcc clip",
+          }
+
+          SCOPES = ["https://www.googleapis.com/auth/youtube.readonly"]
+          creds = Credentials.from_authorized_user_file(".secrets/youtube_token.json", SCOPES)
+          creds.refresh(Request())
+          yt = build("youtube", "v3", credentials=creds)
+
+          ids = list(TARGETS)
+          # batch in groups of 50 (API limit); we have 19, one call is enough
+          resp = yt.videos().list(part="snippet,status", id=",".join(ids)).execute()
+          found = {it["id"]: it for it in resp.get("items", [])}
+
+          missing = [v for v in ids if v not in found]
+
+          print("STATUS_CSV_START")
+          print("video_id,label,privacy_status,title")
+          for v in ids:
+              it = found.get(v)
+              if not it:
+                  print(f"{v},{TARGETS[v]},MISSING_OR_DELETED,")
+                  continue
+              st = it["status"].get("privacyStatus", "?")
+              title = it["snippet"]["title"].replace(",", ";")
+              print(f"{v},{TARGETS[v]},{st},{title}")
+          print("STATUS_CSV_END")
+
+          still_public = [v for v in ids if found.get(v, {}).get("status", {}).get("privacyStatus") == "public"]
+          print(f"\nSUMMARY: {len(found)} found, {len(missing)} missing/deleted, {len(still_public)} STILL PUBLIC")
+          if still_public:
+              print("STILL PUBLIC:", ", ".join(still_public))
+          PY
