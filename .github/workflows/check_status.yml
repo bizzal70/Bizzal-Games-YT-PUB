@@ -30,6 +30,7 @@ jobs:
           from googleapiclient.discovery import build
 
           TARGETS = {
+              "h-5x8EUruQk": "SANITY CHECK known-good real clip",
               # Godzilla set (2026-07-22)
               "Spsl-LoNlSU": "godzilla LF",
               "wLrrQilVRJE": "godzilla clip 1",
