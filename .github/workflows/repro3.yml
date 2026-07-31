@@ -1,0 +1,39 @@
+name: repro encoding bug 3 - compare checkout vs contents-api bytes (temp)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repro:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Compute sha256 of the checked-out file, byte for byte
+        run: |
+          sha256sum bin/upload/upload_youtube.py
+          wc -c bin/upload/upload_youtube.py
+          echo "---"
+          python3 -c "
+          raw = open('bin/upload/upload_youtube.py','rb').read()
+          idx = raw.find(b'.join(keyword_bits)')
+          print('checkout bytes around literal:', raw[idx-25:idx])
+          "
+      - name: Fetch the SAME file via the GitHub contents API from inside this runner too
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/${{ github.repository }}/contents/bin/upload/upload_youtube.py --jq .content | base64 -d > api_fetched.py
+          sha256sum api_fetched.py
+          wc -c api_fetched.py
+          echo "---"
+          python3 -c "
+          raw = open('api_fetched.py','rb').read()
+          idx = raw.find(b'.join(keyword_bits)')
+          print('API-fetched bytes around literal:', raw[idx-25:idx])
+          "
+      - name: Diff the two byte-for-byte
+        run: |
+          diff bin/upload/upload_youtube.py api_fetched.py && echo "IDENTICAL" || echo "DIFFERENT -- see diff above"
