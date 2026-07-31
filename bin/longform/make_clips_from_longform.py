@@ -22,6 +22,7 @@ from urllib import request
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../core"))
 import script_quality
+import content_safety
 
 
 def _norm(s: str) -> str:
@@ -185,6 +186,7 @@ def main():
 
     out_dir = os.path.join(REPO_ROOT, f"data/atoms_clips_{system_id}/validated")
     os.makedirs(out_dir, exist_ok=True)
+    srd_ref = content_safety.srd_digest(system_id, REPO_ROOT)
     written = []
     kept = 0
     for i, clip in enumerate(clips[:n], start=1):
@@ -199,6 +201,28 @@ def main():
         if _norm(hook) == _norm(title):
             print(f"[make_clips] clip {i} DROPPED: restates the long-form title")
             continue
+
+        # Content-safety gate: the clip rewrite is an LLM free to embellish
+        # beyond the (already fixture-grounded) source long-form section, so
+        # it needs the SAME defense-in-depth as the long-form root generator
+        # (make_longform_atom.py) -- not just an editorial quality score.
+        # Deterministic IP/wrong-system scan: fails CLOSED (a hit drops the clip).
+        _safe, _hits = content_safety.scan_text(f"{hook}\n{body}")
+        if not _safe:
+            print(f"[make_clips] clip {i} DROPPED: content safety {_hits}")
+            continue
+
+        # Advisory SRD-grounded canon fact-check (same posture as long-form:
+        # logs the verdict by default; hard-block only via
+        # BIZZAL_CANON_HARD_BLOCK=1, since the judge false-positives on real
+        # niche/expansion content).
+        _canon = content_safety.canon_check(f"{hook}\n{body}", sys_label, reference=srd_ref)
+        if _canon.available:
+            print(f"[make_clips] clip {i} canon grounded={_canon.grounded} "
+                  f"verdict={_canon.verdict!r}")
+            if not _canon.grounded and os.environ.get("BIZZAL_CANON_HARD_BLOCK") == "1":
+                print(f"[make_clips] clip {i} DROPPED: canon check failed -- {_canon.verdict}")
+                continue
 
         # Editorial gate: a weak clip is worse than no clip -- it is a whole
         # extra upload competing for the same audience. Fails OPEN.
