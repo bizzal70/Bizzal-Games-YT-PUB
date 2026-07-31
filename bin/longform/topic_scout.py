@@ -13,7 +13,7 @@ Outputs:
 
 Usage: python bin/longform/topic_scout.py [--day YYYY-MM-DD]
 """
-import sys, os, re, json, hashlib, argparse
+import sys, os, json, hashlib, argparse
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../core"))
 
 from datetime import datetime, UTC
@@ -21,6 +21,7 @@ from urllib import request, error as url_error
 import xml.etree.ElementTree as ET
 
 import system_config
+import content_safety
 
 REPO_ROOT   = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 QUEUE_PATH  = os.path.join(REPO_ROOT, "data", "longform", "topic_queue.json")
@@ -99,39 +100,14 @@ YT_SEARCH_QUERIES = [
 # brand trust. The denylist is the primary, high-precision guard; the crossover
 # words are a small net for novel IP the denylist has not seen yet.
 # --------------------------------------------------------------------------- #
-_BLOCKED_TERMS = {
-    # non-TTRPG franchises / protected IP (never a legitimate video subject)
-    "godzilla", "kaiju", "marvel", "avengers", "dc comics", "batman", "superman",
-    "pokemon", "pokémon", "star wars", "star trek", "lord of the rings",
-    "tolkien", "the witcher", "warhammer", "elden ring", "dark souls", "zelda",
-    "mario", "minecraft", "fortnite", "harry potter", "disney",
-    "game of thrones", "one piece", "naruto", "dragon ball", "sonic the",
-    "halo", "call of duty",
-    # other commercial TTRPGs we do NOT cover (confabulation risk if forced in)
-    "pathfinder", "daggerheart", "dragonbane", "mausritter", "mothership",
-    "call of cthulhu", "vampire the masquerade", "world of darkness",
-    "cyberpunk", "blades in the dark", "mork borg", "mörk borg",
-    "numenera", "savage worlds", "gurps", "fate core", "starfinder",
-    "lancer", "traveller",
-}
-
-# high-precision crossover framing ("X Meets D&D") -- a net for IP the denylist
-# has not enumerated. Kept narrow: broad verb patterns ("integrate X into your
-# game") false-positive on legitimate in-system topics.
-_CROSSOVER_RE = re.compile(r"\b(meets|crossover|cross[- ]over|mash[- ]?up|versus)\b", re.I)
-
-
+# The denylist + crossover pattern used to be duplicated here; now this guard
+# delegates to the single shared implementation in content_safety.py so the
+# scout front door and the long-form/clips hard-block can never drift out of
+# sync with each other.
+# --------------------------------------------------------------------------- #
 def brief_is_safe(brief: dict) -> tuple[bool, str]:
     """(ok, reason). ok=False => do not queue. See module guard notes above."""
-    blob = " ".join(str(brief.get(k, "")) for k in
-                    ("title", "angle", "rationale", "search_keyword")).lower()
-    for term in _BLOCKED_TERMS:
-        if re.search(r"(?<![a-z])" + re.escape(term) + r"(?![a-z])", blob):
-            return False, f"blocked property/system: {term!r}"
-    m = _CROSSOVER_RE.search(blob)
-    if m:
-        return False, f"crossover framing: {m.group(0)!r}"
-    return True, ""
+    return content_safety.brief_is_safe(brief)
 
 
 
