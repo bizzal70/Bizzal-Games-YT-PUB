@@ -1,0 +1,33 @@
+name: fetch live titles for backfill (temp, read-only)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -q google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+      - name: Materialize YouTube OAuth token
+        env:
+          BIZZAL_YT_TOKEN_JSON: ${{ secrets.BIZZAL_YT_TOKEN_JSON }}
+        run: |
+          mkdir -p .secrets
+          printf '%s' "$BIZZAL_YT_TOKEN_JSON" > .secrets/youtube_token.json
+      - name: Fetch live titles (READ ONLY)
+        run: python3 _tmp_fetch_live_titles.py
+      - name: Commit output
+        run: |
+          git config user.name "verify-bot"
+          git config user.email "verify-bot@users.noreply.github.com"
+          git add _tmp_live_titles.json
+          git commit -m "temp: live titles output"
+          git push
