@@ -2122,6 +2122,28 @@
       "video_id": "18132205483628403",
       "day": "2026-07-30",
       "published_at": "2026-07-30T15:08:17+00:00"
+    },
+    {
+      "content_key": "56e4961793ad745a61a04d26a2823ac4f089e2400d212cf24df76bd3a78bafc6",
+      "token_text": "1d4 adds attack damage dreadful fey once psychic strike turn wanderer",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Fey Wanderer's Dreadful Strikes adds 1d4 psychic damage once per turn #dnd5e",
+      "video_id": "FJP7pQEuu58",
+      "day": "2026-07-31-regen-fey-wanderer",
+      "published_at": "2026-07-31T02:15:34+00:00"
+    },
+    {
+      "content_key": "10de14bad072dce05224110e21641c7387a5859608db2654ee21146c06365f89",
+      "token_text": "3d6 ac awakened catche character expect harder hits level low most partie slam tree",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Awakened Tree's Slam hits harder than most parties expect at this level #dnd5e",
+      "video_id": "EJNz3HLJ2ZU",
+      "day": "2026-07-31-regen-awakened-tree",
+      "published_at": "2026-07-31T02:18:50+00:00"
     }
   ]
 }

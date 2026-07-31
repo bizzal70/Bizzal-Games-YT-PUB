@@ -1013,6 +1013,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-07-30.mp4",
         "video_sha256": "96a82cf5597345ce097b600cd14d2b1e5afd0f7613c73e7fe1b7b8cf04664b71"
       }
+    },
+    {
+      "published_utc": "2026-07-31T02:15:34Z",
+      "day": "2026-07-31-regen-fey-wanderer",
+      "content_id": "bgp-2026-07-31-regen-fey-wanderer-class-spotlight-class-tashas-cauldron-fey-wanderer-256e2da3b14f",
+      "publish_hash": "a4d97de853895e233e75ca38f57d7fa8d2a7263ea2775dddb83f67dc68e50379",
+      "youtube_video_id": "FJP7pQEuu58",
+      "youtube_url": "https://www.youtube.com/watch?v=FJP7pQEuu58",
+      "video_sha256": "da19f9066a6fbfecab2cb4b2dce7cef316446d3167046ad764986fb0918f8fe4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_regen_fey-wanderer/by_day/2026-07-31-regen-fey-wanderer.mp4",
+      "fingerprint": {
+        "day": "2026-07-31-regen-fey-wanderer",
+        "category": "class_spotlight",
+        "angle": "subclass_identity",
+        "content_id": "bgp-2026-07-31-regen-fey-wanderer-class-spotlight-class-tashas-cauldron-fey-wanderer-256e2da3b14f",
+        "canonical_hash": "256e2da3b14f7f9f6664eeecf3ace1b08755a185778e08171132c0700e6707a8",
+        "script_id": "68e9e3748a5b9eb5ed38beb2297fa8f55d663b7535ee5c64a4286f07d6aaa569",
+        "fact_kind": "class",
+        "fact_pk": "tashas-cauldron_fey-wanderer",
+        "fact_name": "Fey Wanderer",
+        "hook": "Fey Wanderer's Dreadful Strikes adds 1d4 psychic damage once per turn, not per attack.",
+        "body": "Dreadful Strikes at 3rd level adds 1d4 psychic damage on a weapon hit once per turn, which doesn't stack with Hunter's Mark. Players mistakenly apply it to every attack, but it's a single bonus per turn. Consistent damage comes from leveraging this on every turn, not from hoping for high rolls.",
+        "cta": "DMs: Remind players Dreadful Strikes is once per turn; enforce it to maintain balance and focus their strategy.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_regen_fey-wanderer/by_day/2026-07-31-regen-fey-wanderer.mp4",
+        "video_sha256": "da19f9066a6fbfecab2cb4b2dce7cef316446d3167046ad764986fb0918f8fe4"
+      }
+    },
+    {
+      "published_utc": "2026-07-31T02:18:50Z",
+      "day": "2026-07-31-regen-awakened-tree",
+      "content_id": "bgp-2026-07-31-regen-awakened-tree-monster-tactic-creature-srd-2024-awakened-tree-61c1db7a186b",
+      "publish_hash": "aff9404e96059caefe673c0dd5be4e0ed5a3e6400d10f029343532507d077e51",
+      "youtube_video_id": "EJNz3HLJ2ZU",
+      "youtube_url": "https://www.youtube.com/watch?v=EJNz3HLJ2ZU",
+      "video_sha256": "fb77ad6244fcd21225ac2076c6277ec321d1e9dad0af10c8851a05326ea1c121",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_regen_awakened-tree/by_day/2026-07-31-regen-awakened-tree.mp4",
+      "fingerprint": {
+        "day": "2026-07-31-regen-awakened-tree",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-07-31-regen-awakened-tree-monster-tactic-creature-srd-2024-awakened-tree-61c1db7a186b",
+        "canonical_hash": "61c1db7a186b0f43edbf3f943aec5d522cb1e666f5229b87c34b9219f91383b6",
+        "script_id": "58dcee28a181170f5bb8dd115c377d0557bbe8230de91969ef67c81a4122df4d",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_awakened-tree",
+        "fact_name": "Awakened Tree",
+        "hook": "Awakened Tree's Slam hits harder than most parties expect at this level - 3d6 + 4 catches low-AC characters.",
+        "body": "With an Armor Class of 13 and 59 hit points, the Awakened Tree can absorb a surprising amount of punishment for a Challenge Rating 2 creature. Its Slam attack, dealing 3d6 + 4 bludgeoning damage, can quickly turn the tide against characters who underestimate its offensive capabilities. The mistake is assuming its slow 20-foot movement makes it harmless; positioning it strategically to exploit its reach can punish poor party placement. Treating it as a stationary threat rather than a mobile one is the smarter play.",
+        "cta": "DMs: Position the Awakened Tree to exploit its 10-foot reach and catch low-AC characters with its 3d6 + 4 Slam.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_regen_awakened-tree/by_day/2026-07-31-regen-awakened-tree.mp4",
+        "video_sha256": "fb77ad6244fcd21225ac2076c6277ec321d1e9dad0af10c8851a05326ea1c121"
+      }
     }
   ]
 }
