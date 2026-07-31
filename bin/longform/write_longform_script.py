@@ -242,15 +242,16 @@ def main():
         blocks.append(script["outro"].strip())
     script["hook"] = (script.get("youtube_title") or fact.get("name") or "").strip()
     script["body"] = "\n\n".join(blocks)
-    script["cta"] = ("Subscribe for weekly tabletop RPG deep dives. "
-                     "Follow Bizzal Games on YouTube and Instagram.")
+    script["cta"] = ("Subscribe for new tabletop RPG deep dives every Monday, "
+                     "Wednesday, and Friday. Follow Bizzal Games on YouTube and Instagram.")
 
     atom["script"] = script
     atom["script_id"] = script_id
     atom["title"] = fact.get("name")
     atom["youtube_title"] = script.get("youtube_title", fact.get("name", ""))
     _desc = (script.get("youtube_description", "") or "").rstrip()
-    _links = (f"\n\nSubscribe on YouTube: {YT_CHANNEL_URL} ({YT_CHANNEL_HANDLE})"
+    _links = (f"\n\nSubscribe for new tabletop RPG deep dives -- every Monday, Wednesday, and Friday."
+              f"\nSubscribe on YouTube: {YT_CHANNEL_URL} ({YT_CHANNEL_HANDLE})"
               f"\nInstagram: {IG_URL} ({IG_HANDLE})"
               f"\n\nMore TTRPG rules & rulings -- It's Already Written:"
               f"\n{WRITTEN_BLOG_URL} - {WRITTEN_X_HANDLE} on X")
