@@ -4,6 +4,7 @@ from datetime import datetime
 from urllib import request, error
 
 import system_config
+import content_safety
 
 SYSTEM_ID = os.environ.get("BIZZAL_SYSTEM_ID", "").strip()
 if not SYSTEM_ID:
@@ -2174,6 +2175,15 @@ def main():
     for key in ("hook", "body", "cta"):
         script[key] = clean_script_text(script.get(key, ""))
 
+    # Shorts are grounded by construction (every atom starts from a real
+    # fact_pk) so a wrong-topic subject can't happen the way it did for
+    # long-form -- but the AI polish step below rewrites prose freely and
+    # is not otherwise constrained against mentioning third-party IP or an
+    # off-system property in passing. Keep the pre-polish, deterministic
+    # script (built straight from the attached fact) as a known-safe
+    # fallback in case the polished version ever trips the scan below.
+    _pre_polish_script = dict(script)
+
     script = maybe_ai_polish_script(atom, fact, style, script)
     atom["script"] = script
 
@@ -2184,6 +2194,26 @@ def main():
     script = apply_low_dc_humor_lane(atom, fact, script, day=day)
 
     full_text = f"{script.get('hook','').strip()}\n{script.get('body','').strip()}\n{script.get('cta','').strip()}\n"
+
+    # Content-safety net: deterministic IP/wrong-system scan, same denylist
+    # that hard-blocks long-form and clips. Cheap and always-on -- run it
+    # before the (API-dependent) editorial gate below. On a hit, fall back
+    # to the pre-polish deterministic script rather than refusing to
+    # publish outright, since that fallback is grounded by construction and
+    # virtually never trips this scan itself.
+    _safe, _hits = content_safety.scan_text(full_text)
+    if not _safe:
+        print(f"[write_script_from_fact] content safety hit on AI-polished script "
+              f"{_hits} -- reverting to pre-polish deterministic script", file=sys.stderr)
+        for key in ("hook", "body", "cta"):
+            script[key] = _pre_polish_script.get(key, "")
+        atom["script"] = script
+        full_text = f"{script.get('hook','').strip()}\n{script.get('body','').strip()}\n{script.get('cta','').strip()}\n"
+        _safe2, _hits2 = content_safety.scan_text(full_text)
+        if not _safe2:
+            print(f"[write_script_from_fact] SAFETY GATE: fallback script also flagged "
+                  f"{_hits2}; refusing to publish", file=sys.stderr)
+            sys.exit(21)
 
     # Editorial gate. Shorts are the format that actually performs, so they get
     # the same bar as long-form. Calibrated on real content: published Shorts
