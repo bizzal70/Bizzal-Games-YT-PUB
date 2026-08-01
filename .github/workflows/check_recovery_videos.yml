@@ -1,0 +1,50 @@
+name: check pipeline-recovery videos (temp, read-only)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -q google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+      - name: Materialize YouTube OAuth token
+        env:
+          BIZZAL_YT_TOKEN_JSON: ${{ secrets.BIZZAL_YT_TOKEN_JSON }}
+        run: |
+          mkdir -p .secrets
+          printf '%s' "$BIZZAL_YT_TOKEN_JSON" > .secrets/youtube_token.json
+      - name: Check the 3 new videos (READ ONLY)
+        run: |
+          python - <<'PY'
+          from google.oauth2.credentials import Credentials
+          from google.auth.transport.requests import Request
+          from googleapiclient.discovery import build
+
+          IDS = {"b2UD4J7ydoQ": "dnd5e", "B7_czbE26A8": "shadowdark", "FaBCWWQ9Ujk": "dcc"}
+
+          SCOPES = ["https://www.googleapis.com/auth/youtube.readonly"]
+          creds = Credentials.from_authorized_user_file(".secrets/youtube_token.json", SCOPES)
+          creds.refresh(Request())
+          yt = build("youtube", "v3", credentials=creds)
+
+          resp = yt.videos().list(part="snippet,status", id=",".join(IDS)).execute()
+          found = {it["id"]: it for it in resp.get("items", [])}
+
+          print("CHECK_START")
+          for v, sysid in IDS.items():
+              it = found.get(v)
+              if not it:
+                  print(f"{v} ({sysid}): MISSING")
+                  continue
+              print(f"{v} ({sysid}): privacy={it['status'].get('privacyStatus')} title={it['snippet']['title']!r}")
+          print("CHECK_END")
+          PY
