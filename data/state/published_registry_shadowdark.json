@@ -754,6 +754,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-07-30.mp4",
         "video_sha256": "d302e31dc986aee21ea58a67589147cf0b1b2c261bd9290ee56fbf77cf2ebbbe"
       }
+    },
+    {
+      "published_utc": "2026-08-01T20:29:54Z",
+      "day": "2026-08-01",
+      "content_id": "bgp-2026-08-01-rules-ruling-rule-6-de63e45ae090",
+      "publish_hash": "3b8791ef388a468545240466c02845634a7dbaaf0995d40ccce8db505eac8e15",
+      "youtube_video_id": "B7_czbE26A8",
+      "youtube_url": "https://www.youtube.com/watch?v=B7_czbE26A8",
+      "video_sha256": "42c412bc5fe253eb82d69daf6c1c3fc293baafd800a0e3f84f909e8a091655d5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-01.mp4",
+      "fingerprint": {
+        "day": "2026-08-01",
+        "category": "rules_ruling",
+        "angle": "common_table_mistake",
+        "content_id": "bgp-2026-08-01-rules-ruling-rule-6-de63e45ae090",
+        "canonical_hash": "de63e45ae0908ba52a303a799f929ba1254d428b8dd13f568a33cc85716687e0",
+        "script_id": "4797d36d0ad7f0e37524b5f80723d8484ca4234f4899be5bd1855fe2d2d6bcc2",
+        "fact_kind": "rule",
+        "fact_pk": 6,
+        "fact_name": "Backstab",
+        "hook": "Backstab requires the target to be unaware of the attack for extra damage to apply.",
+        "body": "Backstab grants an extra weapon die of damage when a thief hits an unaware target, plus additional dice equal to half the thief's level, rounded down. Rushed rulings often overlook the necessity for the target to be genuinely unaware, leading to disputes. Ensuring the target is truly surprised or otherwise unaware before rolling for damage is critical for proper application.",
+        "cta": "GMs: Confirm the target's genuine unawareness before allowing the thief to roll extra damage dice for Backstab.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-01.mp4",
+        "video_sha256": "42c412bc5fe253eb82d69daf6c1c3fc293baafd800a0e3f84f909e8a091655d5"
+      }
     }
   ]
 }

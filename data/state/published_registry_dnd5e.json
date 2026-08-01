@@ -1065,6 +1065,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_regen_awakened-tree/by_day/2026-07-31-regen-awakened-tree.mp4",
         "video_sha256": "fb77ad6244fcd21225ac2076c6277ec321d1e9dad0af10c8851a05326ea1c121"
       }
+    },
+    {
+      "published_utc": "2026-08-01T20:25:40Z",
+      "day": "2026-08-01",
+      "content_id": "bgp-2026-08-01-item-spotlight-item-srd-2024-staff-of-frost-aec851b15c12",
+      "publish_hash": "1b2d2e3f17f3909b04ed5f20599814fe9294be8a04658c47f8a16dbf9e2acc54",
+      "youtube_video_id": "b2UD4J7ydoQ",
+      "youtube_url": "https://www.youtube.com/watch?v=b2UD4J7ydoQ",
+      "video_sha256": "a73513672c4481720a8e785f49d78d71855dabd897febed34ab78d9d64aad587",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-01.mp4",
+      "fingerprint": {
+        "day": "2026-08-01",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-08-01-item-spotlight-item-srd-2024-staff-of-frost-aec851b15c12",
+        "canonical_hash": "aec851b15c1284c8683ca409188ee0a455479e3c11ef86a234ab07cfed960d79",
+        "script_id": "fe472328d56bbf3133ec4cf618cdb0f807fdbeb86d16ff66acc91a928a3c3153",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_staff-of-frost",
+        "fact_name": "Staff of Frost",
+        "hook": "Staff of Frost's 10 charges can swing an encounter if used wisely.",
+        "body": "Resistance to cold damage from holding the Staff of Frost is a passive benefit that doesn't require charges. The staff's 10 charges allow casting Cone of Cold (5 charges), Fog Cloud (1 charge), Ice Storm (4 charges), or Wall of Ice (4 charges). It regains 1d6 + 4 charges at dawn, so plan around this recharge rate. Expending the last charge risks destruction on a roll of 1, making timing crucial - use it when the outcome hinges on its power, not as a first resort.",
+        "cta": "DMs: Use Fog Cloud's 1-charge cost to obscure a path or escape route, conserving the Staff of Frost's power for critical moments.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-01.mp4",
+        "video_sha256": "a73513672c4481720a8e785f49d78d71855dabd897febed34ab78d9d64aad587"
+      }
     }
   ]
 }

@@ -807,6 +807,51 @@
       "hook": "Wizard's power spike occurs at the level where spell tiers unlock.",
       "body": "With 1d4 hit dice, Wizards are fragile and rely on intelligence for spellcasting. Misjudging the power curve by focusing on high-damage spells without planning for spell slots leads to inefficiency. The Mishap table penalizes reckless casting, so careful spell selection and timing are crucial. Prioritize spells that maximize utility and control to effectively leverage early power spikes.",
       "cta": "GMs: At level 3, when Wizards unlock second-tier spells, ensure players prioritize utility spells over raw damage for survival."
+    },
+    {
+      "published_utc": "2026-08-01T20:21:22Z",
+      "day": "2026-08-01",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-01-rules-myth-rule-23-3e24ed4a237e",
+      "instagram_post_id": "18109974818317351",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "b91cc4d087d174577258a10eea33aeebe7b0c8772a297b5ce4ca35f6d8b91043",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-01.mp4",
+      "fact_name": "Alignment",
+      "category": "rules_myth",
+      "hook": "Alignment in DCC is about cosmic allegiance, not personal morality.",
+      "body": "Alignment dictates which supernatural forces a character aligns with: Law, Neutrality, or Chaos. It affects clerical spells, patron relationships, and magic item interactions. Treating it as a moral compass results in inconsistent gameplay with supernatural consequences. Consistent play means aligning character choices with their cosmic allegiance, ensuring predictable interactions with spells and items.",
+      "cta": "Judges: Enforce alignment as cosmic allegiance, not morality, to ensure consistent spell and item interactions."
+    },
+    {
+      "published_utc": "2026-08-01T20:26:26Z",
+      "day": "2026-08-01",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-01-item-spotlight-item-srd-2024-staff-of-frost-aec851b15c12",
+      "instagram_post_id": "18094581083570918",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "a73513672c4481720a8e785f49d78d71855dabd897febed34ab78d9d64aad587",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-01.mp4",
+      "fact_name": "Staff of Frost",
+      "category": "item_spotlight",
+      "hook": "Staff of Frost's 10 charges can swing an encounter if used wisely.",
+      "body": "Resistance to cold damage from holding the Staff of Frost is a passive benefit that doesn't require charges. The staff's 10 charges allow casting Cone of Cold (5 charges), Fog Cloud (1 charge), Ice Storm (4 charges), or Wall of Ice (4 charges). It regains 1d6 + 4 charges at dawn, so plan around this recharge rate. Expending the last charge risks destruction on a roll of 1, making timing crucial - use it when the outcome hinges on its power, not as a first resort.",
+      "cta": "DMs: Use Fog Cloud's 1-charge cost to obscure a path or escape route, conserving the Staff of Frost's power for critical moments."
+    },
+    {
+      "published_utc": "2026-08-01T20:30:40Z",
+      "day": "2026-08-01",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-01-rules-ruling-rule-6-de63e45ae090",
+      "instagram_post_id": "18090458747437316",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "42c412bc5fe253eb82d69daf6c1c3fc293baafd800a0e3f84f909e8a091655d5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-01.mp4",
+      "fact_name": "Backstab",
+      "category": "rules_ruling",
+      "hook": "Backstab requires the target to be unaware of the attack for extra damage to apply.",
+      "body": "Backstab grants an extra weapon die of damage when a thief hits an unaware target, plus additional dice equal to half the thief's level, rounded down. Rushed rulings often overlook the necessity for the target to be genuinely unaware, leading to disputes. Ensuring the target is truly surprised or otherwise unaware before rolling for damage is critical for proper application.",
+      "cta": "GMs: Confirm the target's genuine unawareness before allowing the thief to roll extra damage dice for Backstab."
     }
   ]
 }

@@ -417,6 +417,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-07-30.mp4",
         "video_sha256": "05b5f3576b3b88703607208fac98cc76fc12e5eb1e7b89a2ba1a47e183ef4b87"
       }
+    },
+    {
+      "published_utc": "2026-08-01T20:20:20Z",
+      "day": "2026-08-01",
+      "content_id": "bgp-2026-08-01-rules-myth-rule-23-3e24ed4a237e",
+      "publish_hash": "5874023e2f293e14abb978119a0a3ffc3a0837b6a4ad62309dd1b497a05639e7",
+      "youtube_video_id": "FaBCWWQ9Ujk",
+      "youtube_url": "https://www.youtube.com/watch?v=FaBCWWQ9Ujk",
+      "video_sha256": "b91cc4d087d174577258a10eea33aeebe7b0c8772a297b5ce4ca35f6d8b91043",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-01.mp4",
+      "fingerprint": {
+        "day": "2026-08-01",
+        "category": "rules_myth",
+        "angle": "judge_callout",
+        "content_id": "bgp-2026-08-01-rules-myth-rule-23-3e24ed4a237e",
+        "canonical_hash": "3e24ed4a237e5e92e7362452778209642ea7cda76032945ef48bca768262ec41",
+        "script_id": "5e7f956a8e1deddfbb429a8ff26dfab98877f0e69a2bb21f7ac761819986bcd7",
+        "fact_kind": "rule",
+        "fact_pk": 23,
+        "fact_name": "Alignment",
+        "hook": "Alignment in DCC is about cosmic allegiance, not personal morality.",
+        "body": "Alignment dictates which supernatural forces a character aligns with: Law, Neutrality, or Chaos. It affects clerical spells, patron relationships, and magic item interactions. Treating it as a moral compass results in inconsistent gameplay with supernatural consequences. Consistent play means aligning character choices with their cosmic allegiance, ensuring predictable interactions with spells and items.",
+        "cta": "Judges: Enforce alignment as cosmic allegiance, not morality, to ensure consistent spell and item interactions.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-01.mp4",
+        "video_sha256": "b91cc4d087d174577258a10eea33aeebe7b0c8772a297b5ce4ca35f6d8b91043"
+      }
     }
   ]
 }

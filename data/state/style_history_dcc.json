@@ -268,5 +268,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-01": {
+    "rules_myth": {
+      "angle": "judge_callout",
+      "voice": "grim_referee",
+      "tone": "neutral",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

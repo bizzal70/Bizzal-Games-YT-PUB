@@ -2144,6 +2144,72 @@
       "video_id": "EJNz3HLJ2ZU",
       "day": "2026-07-31-regen-awakened-tree",
       "published_at": "2026-07-31T02:18:50+00:00"
+    },
+    {
+      "content_key": "13d335c4cf3a337418a295194f828c1dc3e389cf19a65b833a35ba59b6b3d29d",
+      "token_text": "about alignment allegiance cosmic dcc morality personal",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Alignment in DCC is about cosmic allegiance, not personal morality",
+      "video_id": "FaBCWWQ9Ujk",
+      "day": "2026-08-01",
+      "published_at": "2026-08-01T20:20:20+00:00"
+    },
+    {
+      "content_key": "ba5d170d31f0c8dca096b1a07e297667cc405342eee11c26c47664d4a92f5007",
+      "token_text": "about alignment allegiance cosmic dcc morality personal",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Alignment in DCC is about cosmic allegiance, not personal morality.",
+      "video_id": "18109974818317351",
+      "day": "2026-08-01",
+      "published_at": "2026-08-01T20:21:22+00:00"
+    },
+    {
+      "content_key": "6371a21cf669092c4c6a5fb2a39b79de608dcaffb1dbf55e660c671e5b890beb",
+      "token_text": "10 charge encounter frost staff swing used wisely",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Staff of Frost's 10 charges can swing an encounter if used wisely #dnd5e",
+      "video_id": "b2UD4J7ydoQ",
+      "day": "2026-08-01",
+      "published_at": "2026-08-01T20:25:40+00:00"
+    },
+    {
+      "content_key": "08600374fb4c8b1c7e18a2f8efae5060d027c4aec4bd921820d7a104c9ec3519",
+      "token_text": "10 charge encounter frost staff swing used wisely",
+      "system_id": "dnd5e",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Staff of Frost's 10 charges can swing an encounter if used wisely.",
+      "video_id": "18094581083570918",
+      "day": "2026-08-01",
+      "published_at": "2026-08-01T20:26:26+00:00"
+    },
+    {
+      "content_key": "f87038fb8bc29ce54dfe1ac3337d81f594b1312de23fb30d4080ac263588c39a",
+      "token_text": "apply attack backstab damage extra require target unaware",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Backstab requires the target to be unaware of the attack for extra damage #shadowdark",
+      "video_id": "B7_czbE26A8",
+      "day": "2026-08-01",
+      "published_at": "2026-08-01T20:29:54+00:00"
+    },
+    {
+      "content_key": "49a6c3a8d0fd6741486d42fea8df7e4f1a9fd505f858d60d0030b0996cf17749",
+      "token_text": "apply attack backstab damage extra require target unaware",
+      "system_id": "shadowdark",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Backstab requires the target to be unaware of the attack for extra damage to apply.",
+      "video_id": "18090458747437316",
+      "day": "2026-08-01",
+      "published_at": "2026-08-01T20:30:40+00:00"
     }
   ]
 }

@@ -362,5 +362,15 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-01": {
+    "rules_ruling": {
+      "angle": "common_table_mistake",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }
