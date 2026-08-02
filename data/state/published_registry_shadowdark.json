@@ -780,6 +780,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-01.mp4",
         "video_sha256": "42c412bc5fe253eb82d69daf6c1c3fc293baafd800a0e3f84f909e8a091655d5"
       }
+    },
+    {
+      "published_utc": "2026-08-02T14:48:46Z",
+      "day": "2026-08-02",
+      "content_id": "bgp-2026-08-02-item-spotlight-item-42-e3ebd19a740e",
+      "publish_hash": "9e98ba3d812c2f905cbbfcaf891a649d835f95da46ab5fa9e79759202e3250b1",
+      "youtube_video_id": "vBt2QOuWcV4",
+      "youtube_url": "https://www.youtube.com/watch?v=vBt2QOuWcV4",
+      "video_sha256": "4a69ef54c9fbd8deae5e7c04326d17e8907f10cc08014134cab23f5045d14849",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-02.mp4",
+      "fingerprint": {
+        "day": "2026-08-02",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-08-02-item-spotlight-item-42-e3ebd19a740e",
+        "canonical_hash": "e3ebd19a740e1928197f156239ff39050fd979f3833f6f24b52906a345f7f1d5",
+        "script_id": "f83e9835dd5a54e86e4b2e4ed6fe612974054ac169276c88cdc5fb50bdc9d6b1",
+        "fact_kind": "item",
+        "fact_pk": 42,
+        "fact_name": "Memnon's Entropic Armor",
+        "hook": "Memnon's Entropic Armor nullifies non-magical weapons for a single turn.",
+        "body": "Once per day, activating Memnon's Entropic Armor means all non-magical weapons that hit you until your next turn are destroyed and deal no damage. Many players activate this on minor threats, missing its potential impact. Timing it during a round with multiple incoming attacks maximizes the number of weapons turned to dust.",
+        "cta": "GMs: Remind players to activate Memnon's Entropic Armor when facing multiple non-magical attacks in one round for maximum effect.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-02.mp4",
+        "video_sha256": "4a69ef54c9fbd8deae5e7c04326d17e8907f10cc08014134cab23f5045d14849"
+      }
     }
   ]
 }

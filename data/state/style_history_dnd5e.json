@@ -366,5 +366,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-08-02": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "rules_lawyer",
+      "tone": "heroic",
+      "persona": "dm_story_coach",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "sage"
+    }
   }
 }

@@ -443,6 +443,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-01.mp4",
         "video_sha256": "b91cc4d087d174577258a10eea33aeebe7b0c8772a297b5ce4ca35f6d8b91043"
       }
+    },
+    {
+      "published_utc": "2026-08-02T14:40:23Z",
+      "day": "2026-08-02",
+      "content_id": "bgp-2026-08-02-monster-tactic-creature-409-424bb01d1005",
+      "publish_hash": "713d72ad8c348a8acbc050c01021588557e714c590dae0894936707408d8d013",
+      "youtube_video_id": "PMHXNWXOtC4",
+      "youtube_url": "https://www.youtube.com/watch?v=PMHXNWXOtC4",
+      "video_sha256": "fadebb60142389e9df74b07272cb314d2c93abf4e8c93b6f8209ba8f7f3da1dd",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-02.mp4",
+      "fingerprint": {
+        "day": "2026-08-02",
+        "category": "monster_tactic",
+        "angle": "terrain_synergy",
+        "content_id": "bgp-2026-08-02-monster-tactic-creature-409-424bb01d1005",
+        "canonical_hash": "424bb01d1005986e8588330624ae1e450f6b927cfabac474c181f04c8dd516ec",
+        "script_id": "7bb27812e072f12f553737d59dda4ae0638e65759fe89dec806dfc9bb43146fa",
+        "fact_kind": "creature",
+        "fact_pk": 409,
+        "fact_name": "Ice Lurker",
+        "hook": "Ice Lurker's camouflage grants a +10 bonus to hide when mimicking frozen water.",
+        "body": "Ice Lurker's pseudopod attack deals 2d6 damage with a +5 melee bonus, catching parties off guard due to its hidden position. Immunity to non-magical, non-bludgeoning weapons and cold renders many attacks ineffective, while vulnerability to fire and heat allows for double damage. Exploiting terrain with fire-based spells or abilities can quickly turn the tide.",
+        "cta": "Judges: Remind the party that fire spells deal double damage to Ice Lurkers, so maybe stop hoarding those torches.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-02.mp4",
+        "video_sha256": "fadebb60142389e9df74b07272cb314d2c93abf4e8c93b6f8209ba8f7f3da1dd"
+      }
     }
   ]
 }

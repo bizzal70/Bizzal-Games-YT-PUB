@@ -1091,6 +1091,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-01.mp4",
         "video_sha256": "a73513672c4481720a8e785f49d78d71855dabd897febed34ab78d9d64aad587"
       }
+    },
+    {
+      "published_utc": "2026-08-02T14:44:52Z",
+      "day": "2026-08-02",
+      "content_id": "bgp-2026-08-02-encounter-seed-creature-srd-2024-tyrannosaurus-rex-b97bb5e7bbb3",
+      "publish_hash": "075bc6afe9634d1874e7e3885d2c03f4047461286c167b72c509a71b813adf54",
+      "youtube_video_id": "LUn-oqQYDGE",
+      "youtube_url": "https://www.youtube.com/watch?v=LUn-oqQYDGE",
+      "video_sha256": "3dc4838b76d4276e2e66e27e29e9cd56f98b826b465869aea47f3bcf537f8285",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-02.mp4",
+      "fingerprint": {
+        "day": "2026-08-02",
+        "category": "encounter_seed",
+        "angle": "twist",
+        "content_id": "bgp-2026-08-02-encounter-seed-creature-srd-2024-tyrannosaurus-rex-b97bb5e7bbb3",
+        "canonical_hash": "b97bb5e7bbb35e84120cd22a91ea8a68298dd92713a8c934b9237626332ecf6b",
+        "script_id": "165219a90584c970f1ec514aaa962733093f3b9ec63c2cd82f06e08a50d659b9",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_tyrannosaurus-rex",
+        "fact_name": "Tyrannosaurus Rex",
+        "hook": "Open with stakes, then let Tyrannosaurus Rex pressure the table into a costly decision.",
+        "body": "With an Armor Class of 13 and 136 hit points, the Tyrannosaurus Rex isn't just a damage sponge; its 50-foot speed lets it close gaps quickly. Multiattack allows it to make a bite attack and a tail attack in the same turn, meaning it can target multiple players or focus on one with devastating effect. Focusing solely on its bite neglects the tail's reach and impact. Prioritizing movement and positioning to avoid both attacks can mitigate its threat.",
+        "cta": "DMs: Force players to adapt by having the T. Rex prioritize its 50-foot movement to isolate stragglers before multiattacking.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-02.mp4",
+        "video_sha256": "3dc4838b76d4276e2e66e27e29e9cd56f98b826b465869aea47f3bcf537f8285"
+      }
     }
   ]
 }

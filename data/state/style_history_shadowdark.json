@@ -372,5 +372,15 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-02": {
+    "item_spotlight": {
+      "angle": "clever_use",
+      "voice": "grim_warden",
+      "tone": "dry",
+      "persona": "dungeon_gear_mentor",
+      "spice": [],
+      "tts_voice_id": "nova"
+    }
   }
 }
