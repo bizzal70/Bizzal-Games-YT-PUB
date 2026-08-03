@@ -1,4 +1,25 @@
 #!/usr/bin/env python3
+
+"""Generate the on-screen narration script for a daily Bizzal Games Short.
+
+Given the day's atom (produced upstream by attach_fact.py) -- which carries a
+single grounded fact (a spell, creature, item, rule, or class) plus the chosen
+category, angle, style, and voice -- this module deterministically builds a
+hook / body / CTA, optionally polishes the prose with an LLM (gpt-4o-mini by
+default), and writes the finished script back into the atom in place.
+
+Design notes:
+- Deterministic by construction: every string starts from the attached fact,
+  so the pre-polish script is always a known-safe fallback if AI polish trips
+  the IP / off-system content-safety scan.
+- Dispatch on (category, kind) happens in main(); the build_*_body and
+  build_*_cta helpers are the per-content-type generators.
+- Env flags (BIZZAL_ENABLE_AI*, BIZZAL_REQUIRE_*, ...) toggle the optional
+  polish / flavor lanes; all fail open so a missing key never blocks a render.
+
+Run via bin/core/system_env.sh <system_id>; requires BIZZAL_SYSTEM_ID.
+"""
+
 import hashlib, json, os, sys, re
 from datetime import datetime
 from urllib import request
@@ -57,6 +78,7 @@ def _first_offsystem_term(text: str):
 
 
 def resolve_incoming_dir() -> str:
+    """Return the directory holding incoming atom files (BIZZAL_ATOM_INCOMING_DIR override, else data/atoms/incoming under the repo root)."""
     val = (os.getenv("BIZZAL_ATOM_INCOMING_DIR") or "").strip()
     if not val:
         return os.path.join(REPO_ROOT, "data", "atoms", "incoming")
@@ -66,26 +88,32 @@ def resolve_incoming_dir() -> str:
 
 
 def atom_path() -> str:
+    """Return the full path to today's atom file (<incoming_dir>/<BIZZAL_DAY or today>.json)."""
     day = (os.getenv("BIZZAL_DAY") or "").strip() or datetime.now().strftime("%Y-%m-%d")
     return os.path.join(resolve_incoming_dir(), day + ".json")
 
 def load_json(p):
+    """Load and return the JSON object at path `p`."""
     with open(p, "r", encoding="utf-8") as f:
         return json.load(f)
 
 def load_yaml(_p=None):
+    """Return this system's style rules from system_config. `_p` is ignored, kept for call-site compatibility."""
     return system_config.load_style_rules(SYSTEM_ID)
 
 def atomic_write_json(p, obj):
+    """Write `obj` as pretty JSON to `p` atomically via a temp file plus os.replace."""
     tmp = p + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(obj, f, indent=2, ensure_ascii=False); f.write("\n")
     os.replace(tmp, p)
 
 def sha256_text(s: str) -> str:
+    """Return the hex SHA-256 digest of string `s`."""
     return hashlib.sha256(s.encode("utf-8")).hexdigest()
 
 def money_str(cost_str: str):
+    """Format a numeric cost string as '<n> gp', or None if it is not numeric."""
     try:
         v = float(cost_str)
         return f"{int(v)} gp" if v.is_integer() else f"{v:g} gp"
@@ -93,6 +121,7 @@ def money_str(cost_str: str):
         return None
 
 def fmt_stats_item(fields: dict):
+    """Build a ' | '-joined stat line (Cost / Weight / Category) from an item's fields; '' if none present."""
     cost = money_str(fields.get("cost") or "")
     weight = fields.get("weight")
     category = fields.get("category")
@@ -103,6 +132,7 @@ def fmt_stats_item(fields: dict):
     return " | ".join(stats) if stats else ""
 
 def pick_voice_lines(style_cfg, voice_name, category, name, angle="", day=""):
+    """Pick a deterministic (hook, cta) pair from the voice's category-specific pools, falling back to generic pools then hardcoded defaults."""
     voices = (style_cfg.get("voices") or {})
     voice = voices.get(voice_name) or voices.get("friendly_vet") or {}
 
@@ -120,6 +150,7 @@ def pick_voice_lines(style_cfg, voice_name, category, name, angle="", day=""):
     return hook, cta
 
 def canonical_category(category: str) -> str:
+    """Normalize a category alias (e.g. gm_tip, class_spotlight) to its canonical category id."""
     aliases = {
         "gm_tip": "rules_ruling",
         "roleplaying_tip": "character_micro_tip",
@@ -132,6 +163,7 @@ def canonical_category(category: str) -> str:
 
 
 def canonical_angle(category: str, angle: str) -> str:
+    """Normalize an angle alias to its canonical angle id for the given category."""
     a = (angle or "").strip().lower()
     c = (category or "").strip().lower()
 
@@ -160,12 +192,14 @@ def canonical_angle(category: str, angle: str) -> str:
 
 
 def slugify(s: str) -> str:
+    """Lowercase, hyphenate, and strip `s` to a URL/id-safe slug ('na' if empty)."""
     txt = re.sub(r"[^a-zA-Z0-9]+", "-", (s or "").strip().lower())
     txt = re.sub(r"-+", "-", txt).strip("-")
     return txt or "na"
 
 
 def creature_context(name: str, fields: dict) -> dict:
+    """Infer a light narrative context (arena / choice / pressure) for a creature from its name and fields, used to ground encounter hooks and CTAs."""
     nm = (name or "").lower()
     ctype = sstr(fields.get("type") or fields.get("creature_type") or "").lower()
     habitat = sstr(fields.get("environment") or fields.get("habitat") or "").lower()
@@ -216,6 +250,11 @@ def creature_context(name: str, fields: dict) -> dict:
 
 
 def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields: dict, default_cta: str, day: str = "") -> str:
+    """Build a category- and angle-appropriate director's CTA ('DMs: ...').
+
+    Grounded in the fact where possible and deterministic per
+    (day, category, angle, name); falls back to `default_cta`.
+    """
     c = canonical_category(category)
     a = canonical_angle(c, angle)
     fallback = (default_cta or "DMs: run it with intent and reward smart play.").strip()
@@ -459,6 +498,7 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
 
 
 def env_true(name: str, default: bool = False) -> bool:
+    """Return the boolean value of env var `name` (1/true/yes/y/on), or `default` if unset."""
     raw = os.getenv(name)
     if raw is None:
         return default
@@ -466,6 +506,7 @@ def env_true(name: str, default: bool = False) -> bool:
 
 
 def split_sentences(text: str) -> list:
+    """Split `text` into a list of trimmed sentences on ./!/? boundaries."""
     txt = re.sub(r"\s+", " ", (text or "").strip())
     if not txt:
         return []
@@ -488,6 +529,7 @@ def low_dc_humor_enabled() -> bool:
 
 
 def parse_number(value, default: float = 0.0) -> float:
+    """Parse `value` (int, float, or fraction string like '1/2') to a float, returning `default` on failure."""
     if value is None:
         return default
     s = str(value).strip().lower()
@@ -509,6 +551,7 @@ def parse_number(value, default: float = 0.0) -> float:
 
 
 def extract_dc_values(text: str) -> list:
+    """Return every difficulty-class integer (e.g. 'DC 13') found in `text`."""
     t = sstr(text)
     if not t:
         return []
@@ -522,6 +565,7 @@ def extract_dc_values(text: str) -> list:
 
 
 def low_dc_profile(fact: dict) -> tuple[bool, str]:
+    """Classify whether a fact is a low-stakes subject (weak creature / trivial DC / cheap item) and return (is_low, reason) for the humor lane."""
     kind = (fact.get("kind") or "").strip().lower()
     fields = fact.get("fields") or {}
 
@@ -554,6 +598,11 @@ def low_dc_profile(fact: dict) -> tuple[bool, str]:
 
 
 def apply_low_dc_humor_lane(atom: dict, fact: dict, script: dict, day: str = "") -> dict:
+    """Optionally rewrite the script into the low-DC humor lane for trivially
+    weak subjects (gated by low_dc_humor_enabled()).
+
+    Returns the script unchanged when the lane is off or the fact is not low-stakes.
+    """
     if not low_dc_humor_enabled():
         return script
 
@@ -606,18 +655,22 @@ def apply_low_dc_humor_lane(atom: dict, fact: dict, script: dict, day: str = "")
 
 
 def pdf_flavor_required() -> bool:
+    """True if BIZZAL_REQUIRE_PDF_FLAVOR forces the SRD-PDF flavor snippet to be present."""
     return env_true("BIZZAL_REQUIRE_PDF_FLAVOR", False)
 
 
 def numeric_lock_required() -> bool:
+    """True if BIZZAL_REQUIRE_NUMERIC_LOCK forces stat numbers to survive AI polish."""
     return env_true("BIZZAL_REQUIRE_NUMERIC_LOCK", False)
 
 
 def is_numeric_token(token: str) -> bool:
+    """True if `token` is a bare integer or decimal."""
     return bool(re.fullmatch(r"\d+(?:\.\d+)?", (token or "").strip()))
 
 
 def pdf_flavor_keywords(snippet: str, fact_name: str) -> set:
+    """Extract salient content keywords from an SRD PDF snippet, minus stopwords and the fact's own name."""
     txt = (snippet or "").lower()
     name_tokens = set(re.findall(r"[a-z]{3,}", (fact_name or "").lower()))
     stop = {
@@ -632,6 +685,7 @@ def pdf_flavor_keywords(snippet: str, fact_name: str) -> set:
 
 
 def ai_references_pdf_flavor(text: str, snippet: str, fact_name: str) -> bool:
+    """True if `text` uses at least one keyword from the SRD flavor snippet (or if there is nothing to check)."""
     if not snippet:
         return True
     keys = pdf_flavor_keywords(snippet, fact_name)
@@ -642,6 +696,11 @@ def ai_references_pdf_flavor(text: str, snippet: str, fact_name: str) -> bool:
 
 
 def maybe_pdf_flavor_snippet(atom: dict, fact: dict) -> str:
+    """Return a short grounding snippet pulled from the system SRD PDF for this fact.
+
+    Returns '' when the feature is off (BIZZAL_ENABLE_PDF_FLAVOR) or the PDF
+    path is unavailable.
+    """
     if not env_true("BIZZAL_ENABLE_PDF_FLAVOR", False):
         ai_diag("PDF flavor disabled (BIZZAL_ENABLE_PDF_FLAVOR=0)")
         return ""
@@ -697,6 +756,12 @@ def maybe_pdf_flavor_snippet(atom: dict, fact: dict) -> str:
 
 
 def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> str:
+    """Optionally rewrite the CTA with the LLM for punch while keeping it grounded
+    and on-voice.
+
+    Returns the original CTA if AI is disabled, the key is missing/placeholder,
+    or the rewrite fails a guard.
+    """
     current_cta = (script.get("cta") or "").strip()
     if not current_cta:
         return current_cta
@@ -855,6 +920,7 @@ def maybe_ai_polish_cta(atom: dict, fact: dict, style: dict, script: dict) -> st
 def locked_tokens(script: dict, fact: dict) -> list:
     # Only lock the fact name — numbers are allowed to drop when the AI rewrites
     # scenario-first. Stat recitation is the problem we're solving, not preserving.
+    """Return the tokens (currently the fact name) that must survive AI polish verbatim."""
     tokens = set()
     name = (fact.get("name") or (fact.get("fields") or {}).get("name") or "").strip()
     if name:
@@ -938,6 +1004,12 @@ def _first_style_violation(text: str):
 
 
 def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) -> dict:
+    """Optionally rewrite hook/body/CTA with the LLM (gpt-4o-mini) for tighter prose.
+
+    Enforces voice/style guards, banned openers, locked tokens, and the optional
+    numeric / PDF-flavor locks. Fails open to the deterministic script if AI is
+    disabled, the key is missing, or any guard rejects the rewrite.
+    """
     if not env_true("BIZZAL_ENABLE_AI_SCRIPT", True):
         ai_diag("AI script polish off (BIZZAL_ENABLE_AI_SCRIPT=0)")
         return script
@@ -1195,6 +1267,7 @@ def maybe_ai_polish_script(atom: dict, fact: dict, style: dict, script: dict) ->
 
 
 def build_content_contract(atom: dict, script_id: str, script: dict, fact: dict, style: dict):
+    """Assemble the stable content/episode identity block (ids, slugs, month) written into the atom for downstream dedup and publishing."""
     day = atom.get("day") or datetime.now().strftime("%Y-%m-%d")
     month_id = day[:7]
     category = slugify(atom.get("category") or "")
@@ -1318,6 +1391,7 @@ def build_item_body(angle: str, fields: dict):
 
 # ---------------- Monster scripts ----------------
 def has_trait(traits: list, needle: str) -> bool:
+    """True if a trait named `needle` (case-insensitive) is present in `traits`."""
     n = (needle or "").strip().lower()
     for tr in traits or []:
         if (tr.get("name") or "").strip().lower() == n:
@@ -1327,6 +1401,7 @@ def has_trait(traits: list, needle: str) -> bool:
 def tactic_nugget(angle: str, traits: list) -> str:
     # Add small, grounded “expert” lines based on well-known trait mechanics.
     # Keep these short; this is Shorts content.
+    """Return a short expert tactics line keyed to a well-known trait (e.g. Pack Tactics) and the angle, or '' if none applies."""
     if has_trait(traits, "Pack Tactics"):
         if angle == "how_it_wins":
             return "Pack Tactics means it wants adjacency—swarm one target and farm advantage."
@@ -1338,6 +1413,7 @@ def tactic_nugget(angle: str, traits: list) -> str:
 
 
 def short(s: str, n=160, add_ellipsis=True):
+    """Truncate `s` to about `n` characters, preferring a sentence then word boundary; optionally append an ellipsis."""
     s = re.sub(r"\s+", " ", (s or "").strip())
     if len(s) <= n:
         return s
@@ -1372,6 +1448,7 @@ def short(s: str, n=160, add_ellipsis=True):
 
 
 def deterministic_pick(options, seed_key: str):
+    """Pick one option from `options` deterministically by hashing `seed_key` ('' if empty)."""
     opts = [o for o in (options or []) if str(o).strip()]
     if not opts:
         return ""
@@ -1380,10 +1457,12 @@ def deterministic_pick(options, seed_key: str):
 
 
 def ai_diag_enabled() -> bool:
+    """True when AI diagnostic logging is on (DEBUG_RENDER or BIZZAL_AI_DIAG)."""
     return env_true("DEBUG_RENDER", False) or env_true("BIZZAL_AI_DIAG", False)
 
 
 def looks_like_placeholder_key(api_key: str) -> bool:
+    """True if `api_key` is empty or an obvious placeholder (YOUR_..., REPLACE_ME, PASTE, sk-xxxxx)."""
     k = (api_key or "").strip()
     if not k:
         return True
@@ -1393,10 +1472,12 @@ def looks_like_placeholder_key(api_key: str) -> bool:
 
 
 def ai_diag(msg: str):
+    """Print an AI-diagnostic line to stderr when diagnostics are enabled."""
     if ai_diag_enabled():
         print(f"[write_script_from_fact] {msg}", file=sys.stderr)
 
 def clean_script_text(s: str) -> str:
+    """Collapse whitespace and normalize Unicode punctuation to ASCII (prevents mojibake in the DB and TTS)."""
     txt = re.sub(r"\s+", " ", (s or "").strip())
     if not txt:
         return ""
@@ -1419,6 +1500,7 @@ def clean_script_text(s: str) -> str:
 
 
 def clean_ai_style_text(s: str, segment: str = "body") -> str:
+    """Clean AI output and strip known cliche openers/phrases for the given segment (hook/body/cta)."""
     txt = clean_script_text(s)
     if not txt:
         return txt
@@ -1484,6 +1566,7 @@ def clean_ai_style_text(s: str, segment: str = "body") -> str:
 
 
 def is_generic_hook(text: str) -> bool:
+    """True if the hook matches a known list of generic/filler openers."""
     t = (text or "").strip().lower()
     bad = [
         "explore the moral dilemma",
@@ -1519,6 +1602,7 @@ def is_statdump_hook(text: str) -> bool:
 
 
 def is_generic_cta(text: str) -> bool:
+    """True if the CTA matches a known list of generic/filler calls to action."""
     t = (text or "").strip().lower()
     bad = [
         "create a tense environment",
@@ -1536,6 +1620,7 @@ def is_generic_cta(text: str) -> bool:
 
 def sstr(v) -> str:
     # safe string for fields that might be int/float/None/list
+    """Safe-stringify `v` ('' for None, str unchanged, everything else via str())."""
     if v is None:
         return ""
     if isinstance(v, str):
@@ -1546,6 +1631,7 @@ def sstr(v) -> str:
 
 def dedupe_prefixed_lines(lines):
     # Keeps at most one line per prefix like "Misplay:" / "DM twist:" etc.
+    """Drop blank and duplicate lines, using the text before a ':' as the dedup key."""
     seen = set()
     out = []
     for s in lines:
@@ -1563,6 +1649,7 @@ def dedupe_prefixed_lines(lines):
 
 def creature_anchor(fields: dict):
     # Try common fields; if missing, we just skip.
+    """Build a compact 'AC x | HP y | Speed z' stat anchor from a creature's fields."""
     ac = fields.get("armor_class")
     hp = fields.get("hit_points")
     spd = fields.get("speed") or fields.get("walk")  # depending on dataset
@@ -1577,6 +1664,7 @@ def creature_anchor(fields: dict):
 
 def pick_notable_trait(traits: list):
     # prefer non-empty desc and "type" not empty
+    """Return the first trait with both a name and description (else the first trait, else None)."""
     for t in traits or []:
         if (t.get("name") or "").strip() and (t.get("desc") or "").strip():
             return t
@@ -1584,10 +1672,12 @@ def pick_notable_trait(traits: list):
 
 def pick_actions(actions: list, k=2):
     # prefer "attack" style or anything with a desc
+    """Return up to `k` usable actions (those with a name and a description)."""
     good = [a for a in (actions or []) if (a.get("name") or "").strip() and (a.get("desc") or "").strip()]
     return good[:k]
 
 def build_monster_body(angle: str, fields: dict, traits: list, actions: list, attacks: list, day: str = ""):
+    """Build the body prose for a monster_tactic Short from the creature's fields/traits/actions, keyed to the angle."""
     angle = {
         "how_to_counter": "counterplay",
         "terrain_synergy": "how_it_wins",
@@ -1698,6 +1788,7 @@ def is_concentration(fields: dict) -> bool:
     # Do NOT scan freeform `desc` -- other systems (e.g. DCC) mention the plain
     # word "concentration" inside spell-check result text, which would falsely
     # inject 5e concentration framing into non-5e copy.
+    """True if the spell fields indicate a Concentration spell."""
     v = fields.get("concentration")
     if isinstance(v, bool):
         return v
@@ -1707,6 +1798,7 @@ def is_concentration(fields: dict) -> bool:
     dur = sstr(fields.get("duration")).lower()
     return "concentration" in dur
 def spell_anchor(fields: dict):
+    """Build a compact 'level | school | range | duration [| Concentration]' anchor from a spell's fields."""
     lvl = fields.get("level")
     school = fields.get("school") or fields.get("spell_school") or ""
     # real field is "range_text" in every system's fixture (dnd5e/shadowdark/dcc);
@@ -1759,6 +1851,7 @@ def spell_anchor(fields: dict):
 
 
 def spell_nuggets(angle: str, fields: dict):
+    """Return up to two short, angle-appropriate expert lines about a spell (e.g. Concentration timing)."""
     nuggets = []
     rng = sstr(fields.get("range_text") or fields.get("range")).lower()
     dur = sstr(fields.get("duration")).lower()
@@ -1791,6 +1884,7 @@ def spell_nuggets(angle: str, fields: dict):
     return nuggets[:2]
 
 def build_spell_body(angle: str, fields: dict):
+    """Build the body prose for a spell_use_case Short, keyed to the angle."""
     angle = {
         "combo_pairing": "best_moment",
         "upcast_tip": "best_moment",
@@ -1834,6 +1928,7 @@ def build_spell_body(angle: str, fields: dict):
     return " ".join(bits)
 
 def build_rule_body(angle: str, fields: dict):
+    """Build the body prose for a rules_ruling / rules_myth Short, keyed to the angle."""
     name = fields.get("name") or "Rule"
     desc = short(fields.get("desc") or fields.get("text") or fields.get("content") or "", 220, add_ellipsis=False)
     angle = (angle or "").strip().lower()
@@ -1866,6 +1961,7 @@ def build_rule_body(angle: str, fields: dict):
     return " ".join(bits)
 
 def build_class_body(angle: str, fields: dict):
+    """Build the body prose for a character_micro_tip Short, keyed to the angle."""
     name = fields.get("name") or "This class"
     desc = short(fields.get("desc") or fields.get("description") or "", 220, add_ellipsis=False)
     angle = (angle or "").strip().lower()
@@ -1900,6 +1996,7 @@ def build_class_body(angle: str, fields: dict):
     return " ".join(bits)
 
 def build_encounter_body(angle: str, fields: dict, traits: list, actions: list, day: str = ""):
+    """Build the body prose for an encounter_seed Short, keyed to the angle."""
     name = fields.get("name") or "This encounter anchor"
     anchor = creature_anchor(fields)
     angle = (angle or "").strip().lower()
@@ -1959,6 +2056,7 @@ def build_encounter_body(angle: str, fields: dict, traits: list, actions: list, 
     return " ".join(bits)
 
 def build_encounter_hook(angle: str, fields: dict, day: str = "") -> str:
+    """Build a grounded, angle-appropriate encounter hook for a creature, deterministic per (day, angle, name)."""
     name = fields.get("name") or "This encounter"
     a = (angle or "").strip().lower()
     ctx = creature_context(name, fields)
@@ -1994,6 +2092,7 @@ def build_encounter_hook(angle: str, fields: dict, day: str = "") -> str:
     ], f"hook|{day}|encounter_seed|{a}|{name}")
 
 def should_force_encounter_hook(hook: str, angle: str) -> bool:
+    """True if an encounter hook is empty, generic, or leaks gear/flavor and should be replaced by a built one."""
     t = (hook or "").strip().lower()
     if not t:
         return True
@@ -2021,6 +2120,7 @@ def should_force_encounter_hook(hook: str, angle: str) -> bool:
     return False
 
 def enforce_encounter_hook_guard(atom: dict, fact: dict, script: dict, day: str = "") -> dict:
+    """Replace a weak encounter hook with a deterministically built one; no-op for non-encounter/creature atoms."""
     category = canonical_category(atom.get("category"))
     kind = (fact.get("kind") or "").strip().lower()
     angle = atom.get("angle") or ""
@@ -2036,6 +2136,7 @@ def enforce_encounter_hook_guard(atom: dict, fact: dict, script: dict, day: str 
     return script
 
 def build_encounter_cta(angle: str, fields: dict, day: str = "") -> str:
+    """Build a grounded, angle-appropriate director's CTA for an encounter, deterministic per (day, angle, name)."""
     name = fields.get("name") or "this encounter"
     a = (angle or "").strip().lower()
     ctx = creature_context(name, fields)
@@ -2076,6 +2177,7 @@ def build_encounter_cta(angle: str, fields: dict, day: str = "") -> str:
     ], f"cta_guard|{day}|encounter_seed|{a}|{name}")
 
 def should_force_encounter_cta(cta: str, angle: str) -> bool:
+    """True if an encounter CTA is empty or generic and should be replaced by a built one."""
     t = (cta or "").strip().lower()
     a = (angle or "").strip().lower()
     if not t:
@@ -2096,6 +2198,7 @@ def should_force_encounter_cta(cta: str, angle: str) -> bool:
     return False
 
 def enforce_encounter_cta_guard(atom: dict, fact: dict, script: dict, day: str = "") -> dict:
+    """Replace a weak encounter CTA with a deterministically built one; no-op for non-encounter/creature atoms."""
     category = canonical_category(atom.get("category"))
     kind = (fact.get("kind") or "").strip().lower()
     angle = atom.get("angle") or ""
@@ -2111,6 +2214,18 @@ def enforce_encounter_cta_guard(atom: dict, fact: dict, script: dict, day: str =
     return script
 
 def main():
+    """Entry point: generate today's script and write it back into the atom.
+
+    Loads the day's atom, dispatches on (category, kind) to the matching
+    deterministic build_*_body / CTA generators, cleans the text, then runs the
+    optional AI polish and the encounter / low-DC guards. The polished script
+    must clear a deterministic content-safety scan (reverting to the pre-polish
+    script, then exit 21 if even that trips) and an editorial quality gate
+    (exit 20 below the score floor, fails open if unavailable). On success,
+    stamps script_id + content contract and atomically rewrites the atom,
+    printing its path. Exits 2/3/4 for missing system id / fact / unsupported
+    category.
+    """
     path = atom_path()
     atom = load_json(path)
 
