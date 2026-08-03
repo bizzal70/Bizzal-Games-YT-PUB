@@ -286,7 +286,6 @@ def new_atom(day_str: str):
     }
 
 def clear_irrelevant_picks(atom: dict):
-    cat = (atom.get("category") or "").lower()
     picks = atom.get("picks", {})
     # Default: clear everything, then the picker will set the right pk
     for k in list(picks.keys()):
