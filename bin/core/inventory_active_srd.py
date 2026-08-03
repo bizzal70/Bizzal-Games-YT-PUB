@@ -3,7 +3,7 @@ import json
 import os
 import hashlib
 from datetime import datetime, timezone
-from collections import Counter, defaultdict
+from collections import Counter
 
 import sys
 
@@ -45,7 +45,7 @@ def main():
     }
 
     md_lines = []
-    md_lines.append(f"# ACTIVE_WOTC_SRD Inventory")
+    md_lines.append("# ACTIVE_WOTC_SRD Inventory")
     md_lines.append(f"- Generated (UTC): {inventory['generated_utc']}")
     md_lines.append(f"- Path: `{inventory['active_srd_path']}`")
     md_lines.append(f"- JSON files: {inventory['file_count']}")
