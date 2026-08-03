@@ -26,7 +26,6 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../core"))
 from datetime import datetime, UTC
 
 import content_safety
-import system_config
 from reference_paths import resolve_active_srd_path
 
 SYSTEM_ID = os.environ.get("BIZZAL_SYSTEM_ID", "").strip()
