@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import hashlib, json, os, sys, re
 from datetime import datetime
-from urllib import request, error
+from urllib import request
 
 import system_config
 import content_safety
@@ -224,9 +224,9 @@ def build_contextual_cta(category: str, angle: str, kind: str, name: str, fields
         ctx = creature_context(name, fields)
         if a == "moral_choice":
             return deterministic_pick([
-                f"DMs: by round 2, force this call—protect people now or finish the objective before the cost spikes.",
-                f"DMs: make the table choose fast: secure the objective, or spend turns protecting who gets caught in the fallout.",
-                f"DMs: present two valid wins, then require a sacrifice—save everyone or end the threat quickly, not both.",
+                "DMs: by round 2, force this call—protect people now or finish the objective before the cost spikes.",
+                "DMs: make the table choose fast: secure the objective, or spend turns protecting who gets caught in the fallout.",
+                "DMs: present two valid wins, then require a sacrifice—save everyone or end the threat quickly, not both.",
             ], f"cta|{day}|{c}|{a}|{name}")
         if a == "time_pressure":
             return deterministic_pick([
@@ -2043,16 +2043,16 @@ def build_encounter_cta(angle: str, fields: dict, day: str = "") -> str:
 
     if a == "moral_choice":
         return deterministic_pick([
-            f"DMs: by round 2, force a hard choice—protect people now or secure the objective before losses escalate.",
-            f"DMs: make them choose what they can live with: save everyone at higher risk, or end the threat before collateral climbs.",
-            f"DMs: write two good outcomes and require one sacrifice; this scene should not allow a clean, total win.",
+            "DMs: by round 2, force a hard choice—protect people now or secure the objective before losses escalate.",
+            "DMs: make them choose what they can live with: save everyone at higher risk, or end the threat before collateral climbs.",
+            "DMs: write two good outcomes and require one sacrifice; this scene should not allow a clean, total win.",
         ], f"cta_guard|{day}|encounter_seed|{a}|{name}")
 
     if a == "time_pressure":
         return deterministic_pick([
             f"DMs: keep a visible timer and make each delay worsen {pressure}.",
-            f"DMs: charge interest every round so indecision costs more than bad rolls.",
-            f"DMs: announce the clock up front, then make every late turn materially worse.",
+            "DMs: charge interest every round so indecision costs more than bad rolls.",
+            "DMs: announce the clock up front, then make every late turn materially worse.",
         ], f"cta_guard|{day}|encounter_seed|{a}|{name}")
 
     if a == "terrain_feature":
