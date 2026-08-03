@@ -290,5 +290,17 @@
       "spice": [],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-08-03": {
+    "spell_use_case": {
+      "angle": "patron_invoke",
+      "voice": "chaos_herald",
+      "tone": "gritty",
+      "persona": "chaos_arcane_coach",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

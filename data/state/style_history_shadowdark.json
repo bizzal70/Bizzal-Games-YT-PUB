@@ -382,5 +382,15 @@
       "spice": [],
       "tts_voice_id": "nova"
     }
+  },
+  "2026-08-03": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "strict_referee",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "fable"
+    }
   }
 }

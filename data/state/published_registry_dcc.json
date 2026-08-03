@@ -469,6 +469,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-02.mp4",
         "video_sha256": "fadebb60142389e9df74b07272cb314d2c93abf4e8c93b6f8209ba8f7f3da1dd"
       }
+    },
+    {
+      "published_utc": "2026-08-03T15:11:44Z",
+      "day": "2026-08-03",
+      "content_id": "bgp-2026-08-03-spell-use-case-spell-108-7deb206062c9",
+      "publish_hash": "92ec36b670c6ea971a73b18961ec140aecf240e0b07fac01a382a67efe4a4c95",
+      "youtube_video_id": "8ZgEMeuM_b8",
+      "youtube_url": "https://www.youtube.com/watch?v=8ZgEMeuM_b8",
+      "video_sha256": "1e36c0c1de6259db78f9eb54252a1188d44608252ee2c145e3d343ebd9a3e2b5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-03.mp4",
+      "fingerprint": {
+        "day": "2026-08-03",
+        "category": "spell_use_case",
+        "angle": "patron_invoke",
+        "content_id": "bgp-2026-08-03-spell-use-case-spell-108-7deb206062c9",
+        "canonical_hash": "7deb206062c9849282de251df4b1e785f03743964d7aee9d09a7c1a3b8fd513d",
+        "script_id": "8aeac3a5624f5b01e5b0960057ace870796503d5781f83b326e3b3caf2cf86bd",
+        "fact_kind": "spell",
+        "fact_pk": 108,
+        "fact_name": "Read Magic",
+        "hook": "Read Magic doesn't trigger magical text, but lets you comprehend it safely.",
+        "body": "Read Magic requires a spell check to decode magical text within 5 feet, with a duration that varies based on the complexity of the writing. Misunderstanding its use as a simple damage spell is common; it doesn't deal damage but allows safe reading of scrolls, tomes, or inscriptions without triggering them. The reverse effect, obfuscate magic, can hide text from other readers, making it a strategic option for protecting information.",
+        "cta": "Judges: Make them roll a spell check to decode magical text within 5 feet, avoiding the usual fireworks.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-03.mp4",
+        "video_sha256": "1e36c0c1de6259db78f9eb54252a1188d44608252ee2c145e3d343ebd9a3e2b5"
+      }
     }
   ]
 }

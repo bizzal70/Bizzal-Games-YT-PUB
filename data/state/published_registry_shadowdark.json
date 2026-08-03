@@ -806,6 +806,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-02.mp4",
         "video_sha256": "4a69ef54c9fbd8deae5e7c04326d17e8907f10cc08014134cab23f5045d14849"
       }
+    },
+    {
+      "published_utc": "2026-08-03T15:18:03Z",
+      "day": "2026-08-03",
+      "content_id": "bgp-2026-08-03-encounter-seed-creature-199-adb1d365b7a4",
+      "publish_hash": "af020da0a2fa9d389b0f335abd49e1de27e6da119bec2a399c8631f7e6ed3cff",
+      "youtube_video_id": "7SepCscMhCw",
+      "youtube_url": "https://www.youtube.com/watch?v=7SepCscMhCw",
+      "video_sha256": "d1fbbe3246ad29c34832394416e82d12f6dc6cef52f1c497474022353959afdb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-03.mp4",
+      "fingerprint": {
+        "day": "2026-08-03",
+        "category": "encounter_seed",
+        "angle": "twist",
+        "content_id": "bgp-2026-08-03-encounter-seed-creature-199-adb1d365b7a4",
+        "canonical_hash": "adb1d365b7a48afc6a3eebff24b44ea64dac6ff1e979c902d76132acaec45d02",
+        "script_id": "f5e1e03de21b84de2b0c10a3c941b241cab386b3ea98179f1ee169db53c50866",
+        "fact_kind": "creature",
+        "fact_pk": 199,
+        "fact_name": "Swarm Spider",
+        "hook": "Open with stakes, then let Swarm Spider pressure the table into a costly decision.",
+        "body": "Swarm Spider has an AC of 13 and 9 hit points, which makes it deceptively fragile, but its real threat is the poison from its bite. The DC 12 Constitution save for paralysis can incapacitate a character for 1d4 rounds, often leading players to underestimate the risk of engaging without backup. The mistake is focusing solely on its low hit points; the correct approach is ensuring multiple attacks per round to quickly eliminate the threat before paralysis takes effect.",
+        "cta": "GMs: Force players to roll DC 12 Constitution saves when bitten; remind them paralysis isn't just an inconvenience.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-03.mp4",
+        "video_sha256": "d1fbbe3246ad29c34832394416e82d12f6dc6cef52f1c497474022353959afdb"
+      }
     }
   ]
 }

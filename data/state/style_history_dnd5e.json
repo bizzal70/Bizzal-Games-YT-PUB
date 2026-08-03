@@ -378,5 +378,17 @@
       ],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-08-03": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

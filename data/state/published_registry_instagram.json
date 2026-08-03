@@ -897,6 +897,36 @@
       "hook": "Memnon's Entropic Armor nullifies non-magical weapons for a single turn.",
       "body": "Once per day, activating Memnon's Entropic Armor means all non-magical weapons that hit you until your next turn are destroyed and deal no damage. Many players activate this on minor threats, missing its potential impact. Timing it during a round with multiple incoming attacks maximizes the number of weapons turned to dust.",
       "cta": "GMs: Remind players to activate Memnon's Entropic Armor when facing multiple non-magical attacks in one round for maximum effect."
+    },
+    {
+      "published_utc": "2026-08-03T15:13:26Z",
+      "day": "2026-08-03",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-03-spell-use-case-spell-108-7deb206062c9",
+      "instagram_post_id": "17957263851189801",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "1e36c0c1de6259db78f9eb54252a1188d44608252ee2c145e3d343ebd9a3e2b5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-03.mp4",
+      "fact_name": "Read Magic",
+      "category": "spell_use_case",
+      "hook": "Read Magic doesn't trigger magical text, but lets you comprehend it safely.",
+      "body": "Read Magic requires a spell check to decode magical text within 5 feet, with a duration that varies based on the complexity of the writing. Misunderstanding its use as a simple damage spell is common; it doesn't deal damage but allows safe reading of scrolls, tomes, or inscriptions without triggering them. The reverse effect, obfuscate magic, can hide text from other readers, making it a strategic option for protecting information.",
+      "cta": "Judges: Make them roll a spell check to decode magical text within 5 feet, avoiding the usual fireworks."
+    },
+    {
+      "published_utc": "2026-08-03T15:19:47Z",
+      "day": "2026-08-03",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-03-encounter-seed-creature-199-adb1d365b7a4",
+      "instagram_post_id": "18167951305456445",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d1fbbe3246ad29c34832394416e82d12f6dc6cef52f1c497474022353959afdb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-03.mp4",
+      "fact_name": "Swarm Spider",
+      "category": "encounter_seed",
+      "hook": "Open with stakes, then let Swarm Spider pressure the table into a costly decision.",
+      "body": "Swarm Spider has an AC of 13 and 9 hit points, which makes it deceptively fragile, but its real threat is the poison from its bite. The DC 12 Constitution save for paralysis can incapacitate a character for 1d4 rounds, often leading players to underestimate the risk of engaging without backup. The mistake is focusing solely on its low hit points; the correct approach is ensuring multiple attacks per round to quickly eliminate the threat before paralysis takes effect.",
+      "cta": "GMs: Force players to roll DC 12 Constitution saves when bitten; remind them paralysis isn't just an inconvenience."
     }
   ]
 }
