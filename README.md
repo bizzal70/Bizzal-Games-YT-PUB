@@ -33,12 +33,12 @@ All system config (topic spine, category weights, tones, voices, personas) lives
 ## Shorts pipeline (daily)
 
 ```
-Topic scout → Fact pick → Script (GPT-4o) → Render (ffmpeg) → Publish (YouTube + Instagram)
+Topic scout → Fact pick → Script (GPT-4o-mini) → Render (ffmpeg) → Publish (YouTube + Instagram)
 ```
 
 1. **Topic scout** — picks a category and angle from the weekly spine (DB-driven per system)
 2. **Fact pick** — selects a spell, creature, item, rule, or class from SRD fixture files
-3. **Script** — GPT-4o writes a ~90-word RTFM-tone hook / body / CTA
+3. **Script** — `gpt-4o-mini` writes a ~90-word RTFM-tone hook / body / CTA (model set by `BIZZAL_OPENAI_MODEL`, default `gpt-4o-mini`; long-form defaults to `gpt-4o`)
 4. **Render** — ffmpeg assembles:
    - AI TTS narration (OpenAI)
    - AI background art per screen (Replicate / Flux) — style controlled by `BIZZAL_BG_STYLE`
@@ -133,6 +133,8 @@ docs/                       Architecture, deployment, and runbooks
 | `topic_scout.yml` | 9pm MT Sunday | Populates `topic_queue.json` for the week |
 | `monthly.yml` | 1st of month | Compiles month's Shorts into a compilation |
 | `ig_metrics.yml` | 11:30 UTC daily | Read-only Instagram insights → `data/metrics/instagram.json` (consumed by [Audit_User_Agent](https://github.com/bizzal70/Audit_User_Agent)) |
+| `content_audit.yml` | Scheduled + manual | SRD fact-check audit of generated content |
+| `alert_on_failure.yml` | On pipeline-run failure | Alerts when a scheduled pipeline run fails |
 | `reauth_youtube.yml` | Manual | Refreshes `BIZZAL_YT_TOKEN_JSON` secret when OAuth expires |
 | `check_secrets.yml` | Manual | Verifies required secrets are present |
 | `dump_db_migrations.yml` | Manual | Exports Supabase migrations |
