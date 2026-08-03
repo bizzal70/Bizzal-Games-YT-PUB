@@ -25,6 +25,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dnd5e/by_day/2026-07-22.mp4",
         "video_sha256": "bfe17f0ec65a817af0aa2844abaa79f2e0d8db7100517cb109835b0275537929"
       }
+    },
+    {
+      "published_utc": "2026-08-03T17:55:31Z",
+      "day": "2026-08-03",
+      "content_id": "",
+      "publish_hash": "e00a2fe8984531490ebd70eb0dc4bbc92c97a44e038afa2c0266dfcd8dba9084",
+      "youtube_video_id": "E1MY6XFKhQo",
+      "youtube_url": "https://www.youtube.com/watch?v=E1MY6XFKhQo",
+      "video_sha256": "b330f8e350f9e846c0eeaee0609a9d2f211a5b542ef890ac4e41cbe701333388",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dnd5e/by_day/2026-08-03.mp4",
+      "fingerprint": {
+        "day": "2026-08-03",
+        "category": "character_micro_tip",
+        "angle": "deep_dive",
+        "content_id": "",
+        "canonical_hash": "",
+        "script_id": "977b996c1584fb00846de2af05f15a8c950947a13d8e4e97a3025f06cab6a794",
+        "fact_kind": "class",
+        "fact_pk": "tashas-cauldron_artificer",
+        "fact_name": "Artificer",
+        "hook": "Artificer: Infuse Item Power Spike at Level 2",
+        "body": "The Artificer class in D&D 5e (2024 rules) is a master of invention, blending ingenuity with magic to bring out extraordinary capabilities in objects. Originating from Tasha's Cauldron of Everything, this class offers unique mechanics that set it apart from other spellcasters. From the ability to infuse mundane items with magical properties to a spellcasting system based on Intelligence, the Artificer provides a versatile and inventive playstyle. Let's delve into the specifics of what makes the Artificer a distinct and intriguing choice for players.\n\nMagical Tinkering at Level 1. At the first level, Artificers gain access to the Magical Tinkering feature. This ability allows them to imbue nonmagical objects with minor magical properties. While the specific properties aren't detailed in our data, this feature provides a creative outlet for players to interact with their environment. It's important to note that the effectiveness of Magical Tinkering is limited by the player's imagination and the DM's discretion. This feature can be used to create simple distractions or to enhance role-playing scenarios, emphasizing the Artificer's role as a master of innovation and creativity.\n\nIntelligence-Based Spellcasting. The Artificer's spellcasting relies on Intelligence, setting it apart from other classes that might use Wisdom or Charisma. This focus on Intelligence aligns with the class's theme of invention and discovery. Players should prioritize boosting their Intelligence score to maximize their spellcasting potential. This also means that Artificers can capitalize on spells that require Intelligence saving throws or checks, allowing them to excel in situations where mental acuity is key. The choice of spells can reflect the Artificer's inventive nature, often involving utility and support rather than direct damage.\n\nInfuse Item: A Level 2 Power Spike. At the second level, Artificers unlock the Infuse Item feature, allowing them to learn and apply Artificer Infusions. These infusions include options like enhanced arcane focus, enhanced defense, and homunculus servant. Players can infuse items after a long rest, with the number of infusions limited to half the Artificer's level. This mechanic offers strategic depth, as players must decide which infusions to prepare based on upcoming challenges. Infusions can significantly enhance the party's capabilities, making the Artificer a valuable asset in both combat and exploration scenarios.\n\nChoosing Your Path at Level 3. By the third level, Artificers face a pivotal choice that will shape their character's development. While the specifics of this choice aren't detailed in our data, it's typically where players select a subclass or specialization. This decision often reflects the Artificer's personal interests and strengths, further defining their role within the party. Players should consider their preferred playstyle and the needs of their group when making this choice, ensuring that their Artificer complements the party's dynamics and objectives.\n\nCommon Misplays and Optimization Tips. One common misplay with Artificers is neglecting their Intelligence score, which is crucial for effective spellcasting. Players should also avoid over-relying on infusions without considering their tactical applications. It's essential to plan infusions based on the party's immediate needs and the challenges ahead. Additionally, players should leverage the Artificer's versatility by preparing a balanced mix of offensive, defensive, and utility spells. Understanding the action economy is vital, as Artificers can often juggle multiple roles within a single encounter, from support to frontline combat.\n\nThe Artificer class offers a unique blend of magic and invention, making it a compelling choice for players who enjoy creativity and strategic depth. By understanding and optimizing their abilities, Artificers can significantly enhance their party's effectiveness in various situations. If you're ready to explore the intricate mechanics of this inventive class, consider diving into a campaign as an Artificer. For more insights and strategies on mastering D&D classes, subscribe to our channel and hit the notification bell.",
+        "cta": "Subscribe for new tabletop RPG deep dives every Monday, Wednesday, and Friday. Follow Bizzal Games on YouTube and Instagram.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dnd5e/by_day/2026-08-03.mp4",
+        "video_sha256": "b330f8e350f9e846c0eeaee0609a9d2f211a5b542ef890ac4e41cbe701333388"
+      }
     }
   ]
 }
