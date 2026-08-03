@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import argparse
 import os
-import shlex
 import socket
 import ssl
 import subprocess
