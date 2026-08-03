@@ -17,7 +17,7 @@ import sys, os, json, hashlib, argparse
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../core"))
 
 from datetime import datetime, UTC
-from urllib import request, error as url_error
+from urllib import request
 import xml.etree.ElementTree as ET
 
 import system_config
