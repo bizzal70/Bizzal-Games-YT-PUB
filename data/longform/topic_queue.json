@@ -1,6 +1,105 @@
 [
   {
     "system": "dnd5e",
+    "title": "Dark Sun's Return: Mature Themes in D&D 2027",
+    "angle": "Explore how the mature-rated setting will handle themes like slavery and survival.",
+    "rationale": "The return of Dark Sun as a mature setting is a major announcement from Gen Con.",
+    "fixture_hint": "rule",
+    "search_keyword": "Dark Sun returns in 2027 as Dungeons & Dragons' first mature rated setting",
+    "created_date": "2026-08-03",
+    "status": "pending",
+    "brief_id": "0b871b9ada37"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Championing the Seasons: D&D's New Adventure Structure",
+    "angle": "Dive into how D&D's seasonal structure will influence campaign planning and storytelling.",
+    "rationale": "D&D's new roadmap with seasonal themes is a hot topic from Gen Con.",
+    "fixture_hint": "rule",
+    "search_keyword": "The new D&D roadmap brings seasons of Champions, Survival, Sword & Sorcery, and Rebellion",
+    "created_date": "2026-08-03",
+    "status": "pending",
+    "brief_id": "bc163d7d5834"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Greyhawk's Witch Queen: A 2027 Adventure Breakdown",
+    "angle": "Analyze the key elements and challenges of the 'Crown of the Witch Queen' adventure.",
+    "rationale": "The announcement of the Greyhawk adventure for 2027 is generating buzz.",
+    "fixture_hint": "creature",
+    "search_keyword": "Greyhawk: Crown of the Witch Queen announced as 2027 adventure",
+    "created_date": "2026-08-03",
+    "status": "pending",
+    "brief_id": "f6b5b167ba6c"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Summoner's Secrets Unveiled: New Shadowdark Mechanics",
+    "angle": "Detail the new summoning mechanics and their impact on gameplay.",
+    "rationale": "Recent updates to Shadowdark include significant changes to summoning.",
+    "fixture_hint": "rule",
+    "search_keyword": "Summoning Secrets: Shadowdark's Summoner Mechanics",
+    "created_date": "2026-08-03",
+    "status": "pending",
+    "brief_id": "7d586140ebb4"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Stealth Unlocked: Shadowdark’s New Cloak Abilities",
+    "angle": "Examine how new stealth mechanics can change player tactics.",
+    "rationale": "Shadowdark's stealth mechanics are a current focus of community discussion.",
+    "fixture_hint": "rule",
+    "search_keyword": "Cloaks and Daggers: Shadowdark's Stealth Mechanics",
+    "created_date": "2026-08-03",
+    "status": "pending",
+    "brief_id": "1532ba6bd717"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Arcane Overhaul: Shadowdark's Revolutionary Factions",
+    "angle": "Explore the influence of new arcane factions on the game world.",
+    "rationale": "Shadowdark's focus on new arcane factions is capturing player interest.",
+    "fixture_hint": "rule",
+    "search_keyword": "Arcane Factions: New Dynamics in Shadowdark",
+    "created_date": "2026-08-03",
+    "status": "pending",
+    "brief_id": "e07623f78f2c"
+  },
+  {
+    "system": "dcc",
+    "title": "Chaos Incarnate: DCC's New Monster Mechanics",
+    "angle": "Analyze the unpredictable nature of new monster abilities in DCC.",
+    "rationale": "DCC's focus on new monster mechanics aligns with the RPG community's interest in evolution.",
+    "fixture_hint": "creature",
+    "search_keyword": "Lovecraftian Horrors: DCC's New Monster Mechanics",
+    "created_date": "2026-08-03",
+    "status": "pending",
+    "brief_id": "0863c2aeaa8f"
+  },
+  {
+    "system": "dcc",
+    "title": "Fiends Unleashed: DCC's Approach to Monster Mayhem",
+    "angle": "Discuss the design philosophy behind DCC's monster encounters.",
+    "rationale": "DCC's monster mayhem is a hot topic due to recent community discussions.",
+    "fixture_hint": "creature",
+    "search_keyword": "Fiends & Foes: DCC's Monster Mayhem",
+    "created_date": "2026-08-03",
+    "status": "pending",
+    "brief_id": "9ee1f90919c7"
+  },
+  {
+    "system": "dcc",
+    "title": "Deathbringer's Legacy: Impact on DCC Adventures",
+    "angle": "Detail how the Deathbringer class reshapes player strategies and adventure design.",
+    "rationale": "The Deathbringer class's influence on DCC is a current topic of interest.",
+    "fixture_hint": "class",
+    "search_keyword": "Deathbringer's Legacy in Dungeon Crawl Classics",
+    "created_date": "2026-08-03",
+    "status": "pending",
+    "brief_id": "9a87f1b2c9f8"
+  },
+  {
+    "system": "dnd5e",
     "title": "Jimothy the Raccoon: A D&D Creature Feature",
     "angle": "Explore the unique stats and abilities of Jimothy, the official D&D raccoon.",
     "rationale": "The official D&D stats for Jimothy the raccoon are generating buzz among fans.",
