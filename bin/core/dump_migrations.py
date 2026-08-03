@@ -4,7 +4,7 @@ Dumps all Supabase config tables as SQL INSERT statements.
 Writes output to db/migrations/0002_baseline_seed_data.sql
 Run inside GitHub Actions where BIZZAL_DB_URL is available.
 """
-import os, sys, json
+import os, json
 import psycopg
 from pathlib import Path
 
