@@ -30,7 +30,6 @@ Usage:
 import argparse
 import json
 import os
-import sys
 
 # category -> (target file, mechanical field allow-list). "name" is always kept;
 # "document" is stamped by this script. Keep in sync with the reference fixtures
