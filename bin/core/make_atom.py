@@ -170,7 +170,7 @@ def run(cmd, check=True):
     env = os.environ.copy()
     r = subprocess.run(cmd, cwd=REPO_ROOT, env=env)
     if check and r.returncode != 0:
-        die(f"[make_atom] command failed ({r.returncode}): {' '.join(cmd)}")
+        die(f"[make_atom] command failed ({r.returncode}): {' '.join(cmd)}", code=r.returncode)
     return r.returncode
 
 def has_exec(path_rel: str) -> bool:
