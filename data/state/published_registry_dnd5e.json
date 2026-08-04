@@ -1143,6 +1143,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-03.mp4",
         "video_sha256": "11282c301f08b1ed3568899900cf42401c2ed68b339fed84bce2dcfb2d86ce5c"
       }
+    },
+    {
+      "published_utc": "2026-08-04T15:04:53Z",
+      "day": "2026-08-04",
+      "content_id": "bgp-2026-08-04-class-spotlight-class-srd-2024-monk-eb169083171b",
+      "publish_hash": "3afeae653597c1b33ea7f29faa0b4149a22ff5299bc2963149225df4d546e6f2",
+      "youtube_video_id": "QvZmlvjJjnM",
+      "youtube_url": "https://www.youtube.com/watch?v=QvZmlvjJjnM",
+      "video_sha256": "2fe91bd84e71a69c8b2c2550241e0d596db2f2178a55efe5e08d2fa3f8bc0467",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-04.mp4",
+      "fingerprint": {
+        "day": "2026-08-04",
+        "category": "class_spotlight",
+        "angle": "early_power_spike",
+        "content_id": "bgp-2026-08-04-class-spotlight-class-srd-2024-monk-eb169083171b",
+        "canonical_hash": "eb169083171b413ee22e80e1042231e9dc6749e3d7f34553874d108ca28d2fdc",
+        "script_id": "33aa9213fe335f7b4b71c57a1109590b25739bbd56f80470b27f769883d8f60a",
+        "fact_kind": "class",
+        "fact_pk": "srd-2024_monk",
+        "fact_name": "Monk",
+        "hook": "Monk's early power spike relies on repeatable actions rather than single-turn damage bursts.",
+        "body": "Monks, with their D8 hit dice and no reliance on spellcasting, achieve an early power spike by maximizing their action economy through features like Flurry of Blows. Focusing on single high-damage attacks misses the Monk's strength in consistent multi-attack turns. Leveraging the Monk's Dexterity and Wisdom saving throws maintains mobility and control, ensuring each turn is impactful and sustainable.",
+        "cta": "DMs: Plan two sessions ahead to exploit the Monk's Flurry of Blows for sustained multi-attack efficiency; see page 49.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-04.mp4",
+        "video_sha256": "2fe91bd84e71a69c8b2c2550241e0d596db2f2178a55efe5e08d2fa3f8bc0467"
+      }
     }
   ]
 }

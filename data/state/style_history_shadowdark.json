@@ -392,5 +392,15 @@
       "spice": [],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-08-04": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "strict_referee",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "nova"
+    }
   }
 }

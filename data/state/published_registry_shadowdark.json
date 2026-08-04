@@ -832,6 +832,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-03.mp4",
         "video_sha256": "d1fbbe3246ad29c34832394416e82d12f6dc6cef52f1c497474022353959afdb"
       }
+    },
+    {
+      "published_utc": "2026-08-04T15:08:54Z",
+      "day": "2026-08-04",
+      "content_id": "bgp-2026-08-04-rules-myth-rule-3-eab13840f64d",
+      "publish_hash": "37b373f021a763185b3a99ab1dae98b2cf20686cc18439870916edc896f3e4b9",
+      "youtube_video_id": "9kBukO4Kbso",
+      "youtube_url": "https://www.youtube.com/watch?v=9kBukO4Kbso",
+      "video_sha256": "23a3384c83c9800fd3f4fc29efe30541497af12fbd9c562316d56621f750d61f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-04.mp4",
+      "fingerprint": {
+        "day": "2026-08-04",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-08-04-rules-myth-rule-3-eab13840f64d",
+        "canonical_hash": "eab13840f64d17707db152b2a0af97a36607e613f2c30befecad9a5b403bdd72",
+        "script_id": "6c35a574cbec31cb2243639f75eea840048f4819c94dbd115590131665f98313",
+        "fact_kind": "rule",
+        "fact_pk": 3,
+        "fact_name": "Focus Spells",
+        "hook": "Focus Spells require concentration, blocking other focus spells and risking interruption from damage.",
+        "body": "Focus Spells last only as long as concentration is maintained, which means any damage taken forces a DC 12 Constitution check to avoid losing focus. Casting another focus spell immediately ends the first one, a detail often missed. Optimal use involves careful timing and positioning to minimize damage risk and maintain focus for as long as needed.",
+        "cta": "GMs: Enforce the DC 12 Constitution check for focus spells to remind players that damage risks their concentration.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-04.mp4",
+        "video_sha256": "23a3384c83c9800fd3f4fc29efe30541497af12fbd9c562316d56621f750d61f"
+      },
+      "tone_lint_violation": "off-system vocabulary: concentration"
     }
   ]
 }

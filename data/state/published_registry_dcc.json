@@ -495,6 +495,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-03.mp4",
         "video_sha256": "1e36c0c1de6259db78f9eb54252a1188d44608252ee2c145e3d343ebd9a3e2b5"
       }
+    },
+    {
+      "published_utc": "2026-08-04T15:00:02Z",
+      "day": "2026-08-04",
+      "content_id": "bgp-2026-08-04-rules-ruling-rule-15-f40282f00d12",
+      "publish_hash": "2dea3084e2a8a0e206e0708032b0d5ed0dd8eb37c0944c233ba9822304d9dd6d",
+      "youtube_video_id": "6vYRrisX35I",
+      "youtube_url": "https://www.youtube.com/watch?v=6vYRrisX35I",
+      "video_sha256": "8b9366beaea5344019f686d78307d02c4b9ff6b021a4a7f828f868ef9a40e742",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-04.mp4",
+      "fingerprint": {
+        "day": "2026-08-04",
+        "category": "rules_ruling",
+        "angle": "dice_chain_use",
+        "content_id": "bgp-2026-08-04-rules-ruling-rule-15-f40282f00d12",
+        "canonical_hash": "f40282f00d128ce406aa25f128812f9288f5c7355d22c98ee767cad5d47aea53",
+        "script_id": "bd912ba07309d176f80de106c16b9e6e971d0e32ed3ae5e48e5a4c2a68e98cda",
+        "fact_kind": "rule",
+        "fact_pk": 15,
+        "fact_name": "Regaining Spells",
+        "hook": "Regaining Spells hinges on whether a spell is 'lost' or 'not lost' after each casting.",
+        "body": "Each spell-check result dictates if a spell is 'lost', meaning it can't be cast again without rest or ritual. Low rolls can quickly deplete a caster's arsenal, leaving them with no options in the middle of a dungeon crawl. Consecutive low rolls can result in an empty spellbook precisely when spells are needed most. Managing spell usage with an eye on potential 'lost' results is crucial for maintaining magical resources throughout the day.",
+        "cta": "Judges: Remind casters that a string of low rolls means their spellbook's empty, so plan for failure before it happens.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-04.mp4",
+        "video_sha256": "8b9366beaea5344019f686d78307d02c4b9ff6b021a4a7f828f868ef9a40e742"
+      }
     }
   ]
 }

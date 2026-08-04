@@ -942,6 +942,51 @@
       "hook": "Rope is more versatile than most weapons in the dark.",
       "body": "Adventuring Equipment provides utility beyond combat. A Ladder extends reach to places that are otherwise inaccessible, and a Torch's 20-foot bright light radius uncovers hidden details. Arguments arise when players overlook these mechanics. Consistent, text-driven rulings prevent disputes.",
       "cta": "DMs: Remind players a 50-foot rope can save them more often than a +1 sword if they use it wisely."
+    },
+    {
+      "published_utc": "2026-08-04T15:01:18Z",
+      "day": "2026-08-04",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-04-rules-ruling-rule-15-f40282f00d12",
+      "instagram_post_id": "18139109530594992",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "8b9366beaea5344019f686d78307d02c4b9ff6b021a4a7f828f868ef9a40e742",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-04.mp4",
+      "fact_name": "Regaining Spells",
+      "category": "rules_ruling",
+      "hook": "Regaining Spells hinges on whether a spell is 'lost' or 'not lost' after each casting.",
+      "body": "Each spell-check result dictates if a spell is 'lost', meaning it can't be cast again without rest or ritual. Low rolls can quickly deplete a caster's arsenal, leaving them with no options in the middle of a dungeon crawl. Consecutive low rolls can result in an empty spellbook precisely when spells are needed most. Managing spell usage with an eye on potential 'lost' results is crucial for maintaining magical resources throughout the day.",
+      "cta": "Judges: Remind casters that a string of low rolls means their spellbook's empty, so plan for failure before it happens."
+    },
+    {
+      "published_utc": "2026-08-04T15:05:36Z",
+      "day": "2026-08-04",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-04-class-spotlight-class-srd-2024-monk-eb169083171b",
+      "instagram_post_id": "17867449815637799",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "2fe91bd84e71a69c8b2c2550241e0d596db2f2178a55efe5e08d2fa3f8bc0467",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-04.mp4",
+      "fact_name": "Monk",
+      "category": "class_spotlight",
+      "hook": "Monk's early power spike relies on repeatable actions rather than single-turn damage bursts.",
+      "body": "Monks, with their D8 hit dice and no reliance on spellcasting, achieve an early power spike by maximizing their action economy through features like Flurry of Blows. Focusing on single high-damage attacks misses the Monk's strength in consistent multi-attack turns. Leveraging the Monk's Dexterity and Wisdom saving throws maintains mobility and control, ensuring each turn is impactful and sustainable.",
+      "cta": "DMs: Plan two sessions ahead to exploit the Monk's Flurry of Blows for sustained multi-attack efficiency; see page 49."
+    },
+    {
+      "published_utc": "2026-08-04T15:09:56Z",
+      "day": "2026-08-04",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-04-rules-myth-rule-3-eab13840f64d",
+      "instagram_post_id": "18021480923902935",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "23a3384c83c9800fd3f4fc29efe30541497af12fbd9c562316d56621f750d61f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-04.mp4",
+      "fact_name": "Focus Spells",
+      "category": "rules_myth",
+      "hook": "Focus Spells require concentration, blocking other focus spells and risking interruption from damage.",
+      "body": "Focus Spells last only as long as concentration is maintained, which means any damage taken forces a DC 12 Constitution check to avoid losing focus. Casting another focus spell immediately ends the first one, a detail often missed. Optimal use involves careful timing and positioning to minimize damage risk and maintain focus for as long as needed.",
+      "cta": "GMs: Enforce the DC 12 Constitution check for focus spells to remind players that damage risks their concentration."
     }
   ]
 }
