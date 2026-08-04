@@ -1117,6 +1117,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-02.mp4",
         "video_sha256": "3dc4838b76d4276e2e66e27e29e9cd56f98b826b465869aea47f3bcf537f8285"
       }
+    },
+    {
+      "published_utc": "2026-08-04T02:04:56Z",
+      "day": "2026-08-03",
+      "content_id": "bgp-2026-08-03-rules-myth-rule-srd-2024-exploration-adventuring-equipment-350612201b45",
+      "publish_hash": "2e0d6b41af001f1678ad3d5fdc0fccb1831f590c38e31cd09d103bbefd0773ee",
+      "youtube_video_id": "EqSt72QWOQM",
+      "youtube_url": "https://www.youtube.com/watch?v=EqSt72QWOQM",
+      "video_sha256": "11282c301f08b1ed3568899900cf42401c2ed68b339fed84bce2dcfb2d86ce5c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-03.mp4",
+      "fingerprint": {
+        "day": "2026-08-03",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-08-03-rules-myth-rule-srd-2024-exploration-adventuring-equipment-350612201b45",
+        "canonical_hash": "350612201b45f4b02d3349b2072d1d106753c2cc6c176009159f5f30a9dd7889",
+        "script_id": "3ab0f503cef2e8e0cc6b09fdcb9a82f688c48cd2a26d91fd4d8a7082b443decd",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_exploration_adventuring-equipment",
+        "fact_name": "Adventuring Equipment",
+        "hook": "Rope is more versatile than most weapons in the dark.",
+        "body": "Adventuring Equipment provides utility beyond combat. A Ladder extends reach to places that are otherwise inaccessible, and a Torch's 20-foot bright light radius uncovers hidden details. Arguments arise when players overlook these mechanics. Consistent, text-driven rulings prevent disputes.",
+        "cta": "DMs: Remind players a 50-foot rope can save them more often than a +1 sword if they use it wisely.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-03.mp4",
+        "video_sha256": "11282c301f08b1ed3568899900cf42401c2ed68b339fed84bce2dcfb2d86ce5c"
+      }
     }
   ]
 }

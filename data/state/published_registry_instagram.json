@@ -927,6 +927,21 @@
       "hook": "Open with stakes, then let Swarm Spider pressure the table into a costly decision.",
       "body": "Swarm Spider has an AC of 13 and 9 hit points, which makes it deceptively fragile, but its real threat is the poison from its bite. The DC 12 Constitution save for paralysis can incapacitate a character for 1d4 rounds, often leading players to underestimate the risk of engaging without backup. The mistake is focusing solely on its low hit points; the correct approach is ensuring multiple attacks per round to quickly eliminate the threat before paralysis takes effect.",
       "cta": "GMs: Force players to roll DC 12 Constitution saves when bitten; remind them paralysis isn't just an inconvenience."
+    },
+    {
+      "published_utc": "2026-08-04T02:05:40Z",
+      "day": "2026-08-03",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-03-rules-myth-rule-srd-2024-exploration-adventuring-equipment-350612201b45",
+      "instagram_post_id": "18411832285155519",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "11282c301f08b1ed3568899900cf42401c2ed68b339fed84bce2dcfb2d86ce5c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-03.mp4",
+      "fact_name": "Adventuring Equipment",
+      "category": "rules_myth",
+      "hook": "Rope is more versatile than most weapons in the dark.",
+      "body": "Adventuring Equipment provides utility beyond combat. A Ladder extends reach to places that are otherwise inaccessible, and a Torch's 20-foot bright light radius uncovers hidden details. Arguments arise when players overlook these mechanics. Consistent, text-driven rulings prevent disputes.",
+      "cta": "DMs: Remind players a 50-foot rope can save them more often than a +1 sword if they use it wisely."
     }
   ]
 }
