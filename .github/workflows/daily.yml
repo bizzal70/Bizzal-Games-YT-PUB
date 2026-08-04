@@ -167,6 +167,7 @@ jobs:
             bin/core/make_atom.py \
             bin/core/run_daily_cloud_cron.sh \
             bin/core/run_daily_for_system.sh \
+            bin/core/archive_render_to_storage.sh \
             bin/render/synthesize_bg_image_replicate.py \
             bin/render/synthesize_music_replicate.py \
             bin/upload/upload_youtube.py \
