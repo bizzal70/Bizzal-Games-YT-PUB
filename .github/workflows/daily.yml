@@ -105,22 +105,26 @@ jobs:
             echo "proceed=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          # Catchup: if past 8am MT and no registry entry for today,
-          # GitHub likely missed the 8am cron -- allow this run to fill in.
+          # Catchup: retry only the systems actually missing today's registry
+          # entry, not the whole day. A partial failure (e.g. one system's
+          # script rejected by the quality gate) must not be masked just
+          # because the other systems already published today.
           if [ "${hour}" -gt "08" ] 2>/dev/null; then
-            ran_today=false
-            for reg in data/state/published_registry_dnd5e.json data/state/published_registry_shadowdark.json data/state/published_registry_dcc.json; do
-              if [ -f "${reg}" ] && grep -q "\"day\": \"${today}\"" "${reg}"; then
-                ran_today=true
-                break
+            missing=""
+            for sys in dnd5e shadowdark dcc; do
+              reg="data/state/published_registry_${sys}.json"
+              if [ ! -f "${reg}" ] || ! grep -q "\"day\": \"${today}\"" "${reg}"; then
+                missing="${missing}${sys},"
               fi
             done
-            if [ "${ran_today}" = "false" ]; then
-              echo "catchup: past 8am MT, no registry entry for ${today} -- proceeding"
+            missing="${missing%,}"
+            if [ -n "${missing}" ]; then
+              echo "catchup: past 8am MT, missing today's entry for: ${missing} -- proceeding"
               echo "proceed=true" >> "$GITHUB_OUTPUT"
+              echo "missing_systems=${missing}" >> "$GITHUB_OUTPUT"
               exit 0
             fi
-            echo "already ran today (${today}); skipping duplicate scheduled trigger"
+            echo "already ran today (${today}) for all systems; skipping duplicate scheduled trigger"
           else
             echo "before 8am MT (${hour}); skipping early scheduled trigger"
           fi
@@ -171,7 +175,7 @@ jobs:
       - name: Run daily pipeline
         if: steps.guard.outputs.proceed == 'true'
         env:
-          BIZZAL_CLOUD_SYSTEMS: ${{ github.event.inputs.systems || 'all' }}
+          BIZZAL_CLOUD_SYSTEMS: ${{ github.event.inputs.systems || steps.guard.outputs.missing_systems || 'all' }}
           BIZZAL_YT_PRIVACY: ${{ github.event.inputs.privacy || 'public' }}
           # dry_run: generate + render but skip the YouTube upload entirely.
           BIZZAL_SKIP_PUBLISH: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
