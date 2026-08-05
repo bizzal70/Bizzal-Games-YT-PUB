@@ -50,12 +50,30 @@ def collect(limit: int = 12) -> list[dict] | None:
     for m in media["data"]:
         mid = m.get("id")
         is_video = m.get("media_type") == "VIDEO"
-        metric = (
-            "reach,likes,comments,saved,shares,views"
-            if is_video
-            else "reach,likes,comments,saved"
-        )
-        ins = _get(f"{mid}/insights", {"metric": metric, "access_token": token}) or {}
+        vals: dict = {}
+        if is_video:
+            # ig_reels_avg_watch_time is the metric that actually explains a
+            # reach-without-engagement pattern (retention/scroll-past vs. a
+            # caption/CTA problem) -- reach/likes/comments/saved/shares/views
+            # alone can't distinguish the two. Try it first, but the insights
+            # endpoint rejects the WHOLE request if one metric is invalid for
+            # this media/product type or API version, so fall back to the
+            # known-working set rather than losing everything over one addition.
+            ins = _get(
+                f"{mid}/insights",
+                {"metric": "reach,likes,comments,saved,shares,views,ig_reels_avg_watch_time",
+                 "access_token": token},
+            )
+            if ins is None:
+                ins = _get(
+                    f"{mid}/insights",
+                    {"metric": "reach,likes,comments,saved,shares,views", "access_token": token},
+                ) or {}
+        else:
+            ins = _get(
+                f"{mid}/insights",
+                {"metric": "reach,likes,comments,saved", "access_token": token},
+            ) or {}
         vals = {
             d.get("name"): (d.get("values", [{}]) or [{}])[0].get("value")
             for d in ins.get("data", [])
@@ -75,6 +93,7 @@ def collect(limit: int = 12) -> list[dict] | None:
                 "saved": vals.get("saved"),
                 "shares": vals.get("shares"),
                 "views": vals.get("views"),
+                "avg_watch_time_sec": vals.get("ig_reels_avg_watch_time"),
             }
         )
     return posts
