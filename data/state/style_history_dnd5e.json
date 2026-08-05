@@ -400,5 +400,15 @@
       "spice": [],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-08-05": {
+    "monster_tactic": {
+      "angle": "counterplay",
+      "voice": "friendly_vet",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "alloy"
+    }
   }
 }

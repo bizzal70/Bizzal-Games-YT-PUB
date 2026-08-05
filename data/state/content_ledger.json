@@ -2419,6 +2419,72 @@
       "video_id": "18021480923902935",
       "day": "2026-08-04",
       "published_at": "2026-08-04T15:09:56+00:00"
+    },
+    {
+      "content_key": "eae9a2d3c71f945ed26b181b911e571266d85dc3295c037868a9f2d826a715d7",
+      "token_text": "disruption first level priority staff",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "First-level priority: Staff of Disruption #dcc",
+      "video_id": "9EPO4RLLY0g",
+      "day": "2026-08-05",
+      "published_at": "2026-08-05T14:57:14+00:00"
+    },
+    {
+      "content_key": "4b946db3ab143fabe3452e003d6c3da4fef8c3fcef155997c6f38188604d1a97",
+      "token_text": "disruption first level priority staff",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "First-level priority: Staff of Disruption.",
+      "video_id": "17939071857299873",
+      "day": "2026-08-05",
+      "published_at": "2026-08-05T14:57:59+00:00"
+    },
+    {
+      "content_key": "bb39554632b1b9b3d2f59575812e7feb680fc8cd10a55942761d168881c1aa23",
+      "token_text": "15 ac attack deflect expected goblin level low more often warrior",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Goblin Warrior's AC 15 often deflects more attacks than expected at low levels #dnd5e",
+      "video_id": "IuyCfhM5nDk",
+      "day": "2026-08-05",
+      "published_at": "2026-08-05T15:01:31+00:00"
+    },
+    {
+      "content_key": "286c3725943e1d60296918e6b4f27117f659df8e408e1c3175e4804b87c07cf9",
+      "token_text": "15 ac attack deflect expected goblin level low more often warrior",
+      "system_id": "dnd5e",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Goblin Warrior's AC 15 often deflects more attacks than expected at low levels.",
+      "video_id": "18166784662457636",
+      "day": "2026-08-05",
+      "published_at": "2026-08-05T15:02:31+00:00"
+    },
+    {
+      "content_key": "e59a6cf3d48c5067194ec695221af6f8a05468c971db760c45c78a042ab527ee",
+      "token_text": "change damage dimension door instant output positioning range self teleport",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Dimension Door's instant self-range teleport changes positioning #shadowdark",
+      "video_id": "MBGxXBRR7CU",
+      "day": "2026-08-05",
+      "published_at": "2026-08-05T15:06:01+00:00"
+    },
+    {
+      "content_key": "0bbff58d4320ce2125630a32974994f7e1b9811aeaf688db2d5d85a34d434faa",
+      "token_text": "change damage dimension door instant output positioning range self teleport",
+      "system_id": "shadowdark",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Dimension Door's instant self-range teleport changes positioning, not damage output.",
+      "video_id": "17949479991219622",
+      "day": "2026-08-05",
+      "published_at": "2026-08-05T15:07:02+00:00"
     }
   ]
 }

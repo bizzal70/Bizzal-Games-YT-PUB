@@ -1169,6 +1169,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-04.mp4",
         "video_sha256": "2fe91bd84e71a69c8b2c2550241e0d596db2f2178a55efe5e08d2fa3f8bc0467"
       }
+    },
+    {
+      "published_utc": "2026-08-05T15:01:31Z",
+      "day": "2026-08-05",
+      "content_id": "bgp-2026-08-05-monster-tactic-creature-srd-2024-goblin-warrior-9174d3aab6b2",
+      "publish_hash": "7e904ee58f749d706fcc77c00c9a7f8b629d5c6a3bc1b1501f0673b2d3130526",
+      "youtube_video_id": "IuyCfhM5nDk",
+      "youtube_url": "https://www.youtube.com/watch?v=IuyCfhM5nDk",
+      "video_sha256": "bf398c0fd864f6b0a7a9057179610badfbae58aa5d4a9f0771a26d9012c47c59",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-05.mp4",
+      "fingerprint": {
+        "day": "2026-08-05",
+        "category": "monster_tactic",
+        "angle": "counterplay",
+        "content_id": "bgp-2026-08-05-monster-tactic-creature-srd-2024-goblin-warrior-9174d3aab6b2",
+        "canonical_hash": "9174d3aab6b2a553b8d9077516bde6672c51025ffa648078de0c93b2dcf7eb36",
+        "script_id": "b351014f24dfc65c61e5fd0b23a171d462ca56e562a59db276e60ff7f6f3d728",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_goblin-warrior",
+        "fact_name": "Goblin Warrior",
+        "hook": "Goblin Warrior's AC 15 often deflects more attacks than expected at low levels.",
+        "body": "With an Armor Class of 15 and only 10 hit points, the Goblin Warrior relies on avoiding hits rather than absorbing them. Its high Dexterity and Stealth bonus (+6) allow it to remain elusive, often catching players off guard with its ability to reposition. The mistake is focusing on damage output without first controlling its movement and visibility. Denying its mobility and isolating it from allies reduces its effectiveness significantly.",
+        "cta": "DMs: Use difficult terrain or spells like Entangle to pin the Goblin Warrior down and negate its AC advantage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-05.mp4",
+        "video_sha256": "bf398c0fd864f6b0a7a9057179610badfbae58aa5d4a9f0771a26d9012c47c59"
+      }
     }
   ]
 }

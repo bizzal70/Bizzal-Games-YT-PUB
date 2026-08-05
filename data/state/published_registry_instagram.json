@@ -987,6 +987,51 @@
       "hook": "Focus Spells require concentration, blocking other focus spells and risking interruption from damage.",
       "body": "Focus Spells last only as long as concentration is maintained, which means any damage taken forces a DC 12 Constitution check to avoid losing focus. Casting another focus spell immediately ends the first one, a detail often missed. Optimal use involves careful timing and positioning to minimize damage risk and maintain focus for as long as needed.",
       "cta": "GMs: Enforce the DC 12 Constitution check for focus spells to remind players that damage risks their concentration."
+    },
+    {
+      "published_utc": "2026-08-05T14:57:59Z",
+      "day": "2026-08-05",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-05-item-spotlight-item-6-0875770a9107",
+      "instagram_post_id": "17939071857299873",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "a615514136772227d4b9c44226b3855ceaad38d2e859a6d820332efcb311ad75",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-05.mp4",
+      "fact_name": "Staff of Disruption",
+      "category": "item_spotlight",
+      "hook": "First-level priority: Staff of Disruption.",
+      "body": "The Staff of Disruption grants a +2 to attack and damage, turning undead on a hit as if a cleric rolled an 18 on Turn Unholy. On a natural 20 against undead, the target is destroyed outright. It vibrates to detect undead within 30 feet, which can compromise stealth. Clerics of chaos take 1d6 damage per round when holding it, a penalty that can be lethal if ignored.",
+      "cta": "Judges: Remind your clerics of chaos that holding the Staff of Disruption costs them 1d6 damage per round."
+    },
+    {
+      "published_utc": "2026-08-05T15:02:31Z",
+      "day": "2026-08-05",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-05-monster-tactic-creature-srd-2024-goblin-warrior-9174d3aab6b2",
+      "instagram_post_id": "18166784662457636",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "bf398c0fd864f6b0a7a9057179610badfbae58aa5d4a9f0771a26d9012c47c59",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-05.mp4",
+      "fact_name": "Goblin Warrior",
+      "category": "monster_tactic",
+      "hook": "Goblin Warrior's AC 15 often deflects more attacks than expected at low levels.",
+      "body": "With an Armor Class of 15 and only 10 hit points, the Goblin Warrior relies on avoiding hits rather than absorbing them. Its high Dexterity and Stealth bonus (+6) allow it to remain elusive, often catching players off guard with its ability to reposition. The mistake is focusing on damage output without first controlling its movement and visibility. Denying its mobility and isolating it from allies reduces its effectiveness significantly.",
+      "cta": "DMs: Use difficult terrain or spells like Entangle to pin the Goblin Warrior down and negate its AC advantage."
+    },
+    {
+      "published_utc": "2026-08-05T15:07:02Z",
+      "day": "2026-08-05",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-05-spell-use-case-spell-22-830a92b0ed95",
+      "instagram_post_id": "17949479991219622",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "16f17a0987c353762223577fb6ea8424b33129e50f49360394c3f6a1510c1e57",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-05.mp4",
+      "fact_name": "Dimension Door",
+      "category": "spell_use_case",
+      "hook": "Dimension Door's instant self-range teleport changes positioning, not damage output.",
+      "body": "Dimension Door is a 4th-tier spell with an instant duration and self range. It teleports you and one willing creature to a visible point. Misuse occurs when it's cast for minor tactical repositioning. Instead, use it to solve immediate strategic problems, like bypassing obstacles or escaping a critical threat.",
+      "cta": "GMs: Enforce Dimension Door's 500-foot range limit to ensure players use it for strategic escapes, not trivial repositioning."
     }
   ]
 }

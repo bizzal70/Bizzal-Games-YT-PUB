@@ -314,5 +314,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-05": {
+    "item_spotlight": {
+      "angle": "drawback_watchout",
+      "voice": "survival_coach",
+      "tone": "neutral",
+      "persona": "dungeon_gear_mentor",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

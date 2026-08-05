@@ -521,6 +521,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-04.mp4",
         "video_sha256": "8b9366beaea5344019f686d78307d02c4b9ff6b021a4a7f828f868ef9a40e742"
       }
+    },
+    {
+      "published_utc": "2026-08-05T14:57:14Z",
+      "day": "2026-08-05",
+      "content_id": "bgp-2026-08-05-item-spotlight-item-6-0875770a9107",
+      "publish_hash": "9c55dc139ca0ae223c727c594e39ebaf84f868591d047dcb53db27eb3192cc54",
+      "youtube_video_id": "9EPO4RLLY0g",
+      "youtube_url": "https://www.youtube.com/watch?v=9EPO4RLLY0g",
+      "video_sha256": "a615514136772227d4b9c44226b3855ceaad38d2e859a6d820332efcb311ad75",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-05.mp4",
+      "fingerprint": {
+        "day": "2026-08-05",
+        "category": "item_spotlight",
+        "angle": "drawback_watchout",
+        "content_id": "bgp-2026-08-05-item-spotlight-item-6-0875770a9107",
+        "canonical_hash": "0875770a91079bbcead8f8222b23d5e3c03fa2253cec5553ac11272967cf1e24",
+        "script_id": "69ff9a5dc8ebdaba128e9c40585f631cfb0a5dfe6aaf9ce9bd8172a71f7fd33f",
+        "fact_kind": "item",
+        "fact_pk": 6,
+        "fact_name": "Staff of Disruption",
+        "hook": "First-level priority: Staff of Disruption.",
+        "body": "The Staff of Disruption grants a +2 to attack and damage, turning undead on a hit as if a cleric rolled an 18 on Turn Unholy. On a natural 20 against undead, the target is destroyed outright. It vibrates to detect undead within 30 feet, which can compromise stealth. Clerics of chaos take 1d6 damage per round when holding it, a penalty that can be lethal if ignored.",
+        "cta": "Judges: Remind your clerics of chaos that holding the Staff of Disruption costs them 1d6 damage per round.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-05.mp4",
+        "video_sha256": "a615514136772227d4b9c44226b3855ceaad38d2e859a6d820332efcb311ad75"
+      }
     }
   ]
 }

@@ -859,6 +859,32 @@
         "video_sha256": "23a3384c83c9800fd3f4fc29efe30541497af12fbd9c562316d56621f750d61f"
       },
       "tone_lint_violation": "off-system vocabulary: concentration"
+    },
+    {
+      "published_utc": "2026-08-05T15:06:01Z",
+      "day": "2026-08-05",
+      "content_id": "bgp-2026-08-05-spell-use-case-spell-22-830a92b0ed95",
+      "publish_hash": "4891c573fe13c2621b24194ec235f27ba6636e10a22b20f5aaca18a3e84700b2",
+      "youtube_video_id": "MBGxXBRR7CU",
+      "youtube_url": "https://www.youtube.com/watch?v=MBGxXBRR7CU",
+      "video_sha256": "16f17a0987c353762223577fb6ea8424b33129e50f49360394c3f6a1510c1e57",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-05.mp4",
+      "fingerprint": {
+        "day": "2026-08-05",
+        "category": "spell_use_case",
+        "angle": "best_moment",
+        "content_id": "bgp-2026-08-05-spell-use-case-spell-22-830a92b0ed95",
+        "canonical_hash": "830a92b0ed95aff6572c448bee578089e817bde66b879a7979bc4bb9186f0b7a",
+        "script_id": "e5565ac66dca07d2a4f9fd294c0ec4d2685aa8c947f15eec78acb7d2acf96554",
+        "fact_kind": "spell",
+        "fact_pk": 22,
+        "fact_name": "Dimension Door",
+        "hook": "Dimension Door's instant self-range teleport changes positioning, not damage output.",
+        "body": "Dimension Door is a 4th-tier spell with an instant duration and self range. It teleports you and one willing creature to a visible point. Misuse occurs when it's cast for minor tactical repositioning. Instead, use it to solve immediate strategic problems, like bypassing obstacles or escaping a critical threat.",
+        "cta": "GMs: Enforce Dimension Door's 500-foot range limit to ensure players use it for strategic escapes, not trivial repositioning.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-05.mp4",
+        "video_sha256": "16f17a0987c353762223577fb6ea8424b33129e50f49360394c3f6a1510c1e57"
+      }
     }
   ]
 }

@@ -402,5 +402,17 @@
       "spice": [],
       "tts_voice_id": "nova"
     }
+  },
+  "2026-08-05": {
+    "spell_use_case": {
+      "angle": "best_moment",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "arcane_survival_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }
