@@ -2485,6 +2485,50 @@
       "video_id": "17949479991219622",
       "day": "2026-08-05",
       "published_at": "2026-08-05T15:07:02+00:00"
+    },
+    {
+      "content_key": "46e27401b098253e7178deaa1ce2d8fbb02586ebceb74679717e699daa1bcac7",
+      "token_text": "heating mechanic melting metal salamander weapon",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Salamander's Metal Heating: Weapon Melting Mechanics #dcc",
+      "video_id": "Q4cAFixD804",
+      "day": "2026-08-05",
+      "published_at": "2026-08-05T17:53:17+00:00"
+    },
+    {
+      "content_key": "2b425d8b5b311805e54f3baecf791062d92ea1ee97c7f121a469c7714f1b9f35",
+      "token_text": "attack constrict damage deal fire ongoing salamander",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Salamander's Constrict Attack deals ongoing fire damage #dcc",
+      "video_id": "l_u9174ZHg0",
+      "day": "2026-08-05-dcc-clip1",
+      "published_at": "2026-08-05T17:55:21+00:00"
+    },
+    {
+      "content_key": "8a6a7aef15f34bdf937011d2942a3c1b48540e3ef7328308ba281fe49a30096c",
+      "token_text": "attack based fire immunity negate salamander",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Salamander's fire immunity negates fire-based attacks #dcc",
+      "video_id": "0FHL4fzrCfs",
+      "day": "2026-08-05-dcc-clip2",
+      "published_at": "2026-08-05T17:56:51+00:00"
+    },
+    {
+      "content_key": "06eaca2f10fb8b51c50f96fb644d5fd31aaa02b023e70d000e7dab188f20d37d",
+      "token_text": "melt metal salamander striking weapon",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Metal weapons melt when striking a Salamander #dcc",
+      "video_id": "mc4Q8NNa5jo",
+      "day": "2026-08-05-dcc-clip3",
+      "published_at": "2026-08-05T17:58:29+00:00"
     }
   ]
 }

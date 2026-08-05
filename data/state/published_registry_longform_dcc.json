@@ -207,6 +207,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-07-27.mp4",
         "video_sha256": "c1104ea5e02cc92400b8789bd502155de0812e0d8772c82e141889cf30eb7374"
       }
+    },
+    {
+      "published_utc": "2026-08-05T17:53:17Z",
+      "day": "2026-08-05",
+      "content_id": "",
+      "publish_hash": "75294ce694f44ae2323c4163716195399ff9149ea6d1aa01722b2b7a3fd3f552",
+      "youtube_video_id": "Q4cAFixD804",
+      "youtube_url": "https://www.youtube.com/watch?v=Q4cAFixD804",
+      "video_sha256": "e37c5dce795b11e69767f036754bddf892bfeb5e4094102c12f2d73e1b55f7ba",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-08-05.mp4",
+      "fingerprint": {
+        "day": "2026-08-05",
+        "category": "monster_tactic",
+        "angle": "deep_dive",
+        "content_id": "",
+        "canonical_hash": "",
+        "script_id": "ff45c4bea3a249629ca1fdb8edc2eba8dd3b61c39102a06ae86d328a042a6206",
+        "fact_kind": "creature",
+        "fact_pk": 26,
+        "fact_name": "Salamander (Fire)",
+        "hook": "Salamander's Metal Heating: Weapon Melting Mechanics",
+        "body": "Today, we're diving into the fiery world of the Salamander from the Dungeon Crawl Classics RPG. This creature is not just a formidable opponent with its impressive hit dice and attack capabilities, but it also possesses unique abilities that can challenge even the most seasoned adventurers. From its fire immunity to its heat aura, understanding how to effectively use and counter a Salamander is crucial for both players and Game Masters. Let's explore the intricacies of this blazing creature.\n\nHit Dice and Armor Class. The Salamander boasts 8 hit dice, making it a robust creature that can withstand significant damage before being defeated. Its armor class of 16 means that players will need to roll relatively high to land a successful attack. In the context of Dungeon Crawl Classics, where hit dice often determine a creature's durability, the Salamander is a tough adversary. Game Masters should consider this when planning encounters, as it can sustain multiple rounds of combat, potentially outlasting weaker party members.\n\nAttack Capabilities. The Salamander is equipped with two primary attacks: a spear attack and a constrict attack, both with a +6 to hit. The spear deals 1d8 damage plus additional fire damage, while the constrict attack inflicts 2d6 fire damage. The constrict attack is particularly dangerous because it can continue to deal damage in subsequent rounds if the target fails a Fortitude saving throw against DC 14. This mechanic encourages strategic gameplay, where players must prioritize escaping the constriction or risk ongoing damage.\n\nFire Immunity and Heat Aura. A defining feature of the Salamander is its fire immunity, which negates any fire-based attacks or spells. This immunity forces players to think creatively and rely on non-fire damage types. Additionally, the Salamander's heat aura deals 1d6 fire damage to all creatures within 5 feet each round. This ability can quickly whittle down the hit points of players who engage in melee combat, making ranged attacks or magical strategies more appealing options.\n\nMetal Heating. One of the more unique abilities of the Salamander is its metal heating property. When a metal weapon strikes a Salamander, it only inflicts 1 point of damage as the weapon begins to melt. Furthermore, the caster of the attack takes 1d6 fire damage. This ability can significantly alter combat dynamics, as players must decide whether to risk their weapons and health for minimal damage. It also adds a layer of resource management, as melted weapons may need replacement or repair.\n\nTactical Considerations. When facing a Salamander, players and Game Masters alike must consider several tactical elements. For players, avoiding melee range can mitigate the effects of the heat aura and constrict attacks. Utilizing spells or ranged weapons that do not rely on metal can also be advantageous. For Game Masters, the Salamander's abilities can be used to create challenging encounters that test players' adaptability and resourcefulness. Positioning the Salamander in environments where its fire abilities are most effective can further enhance the difficulty of the encounter.\n\nThe Salamander in Dungeon Crawl Classics is a creature that demands respect and strategic planning. Whether you're a player looking to overcome this fiery foe or a Game Master aiming to challenge your party, understanding its abilities and mechanics is key. Dive deeper into your rulebooks, prepare your tactics, and face the Salamander with confidence. For more insights and strategies on Dungeon Crawl Classics creatures, subscribe to our channel and explore our other deep dives.",
+        "cta": "Subscribe for new tabletop RPG deep dives every Monday, Wednesday, and Friday. Follow Bizzal Games on YouTube and Instagram.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_dcc/by_day/2026-08-05.mp4",
+        "video_sha256": "e37c5dce795b11e69767f036754bddf892bfeb5e4094102c12f2d73e1b55f7ba"
+      }
     }
   ]
 }

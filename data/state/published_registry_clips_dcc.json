@@ -233,6 +233,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-07-27-dcc-clip2.mp4",
         "video_sha256": "06a9a5613b67aa14bed68413110e951bd4e1b09ab5a1c25fe1f418604e655d17"
       }
+    },
+    {
+      "published_utc": "2026-08-05T17:55:21Z",
+      "day": "2026-08-05-dcc-clip1",
+      "content_id": "clip:e327302552883740",
+      "publish_hash": "5a94b8b8f1a8cd669a1e91cf36a1548f841c6769442259a5b81ae953c993a851",
+      "youtube_video_id": "l_u9174ZHg0",
+      "youtube_url": "https://www.youtube.com/watch?v=l_u9174ZHg0",
+      "video_sha256": "e0e2f4094c97a392a4fcaae542efab148e50fc132d9ddb350e33b742ae4c76b6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-08-05-dcc-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-08-05-dcc-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:e327302552883740",
+        "canonical_hash": "",
+        "script_id": "e327302552883740c70289d3d4aca09030937b8af2830e3654278122f342b70e",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Salamander's Constrict Attack deals ongoing fire damage",
+        "hook": "Salamander's Constrict Attack deals ongoing fire damage",
+        "body": "The Salamander's constrict attack deals 2d6 fire damage. If the target fails a DC 14 Fortitude save, they take damage in subsequent rounds. Players must escape quickly or face continuous fire damage.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-08-05-dcc-clip1.mp4",
+        "video_sha256": "e0e2f4094c97a392a4fcaae542efab148e50fc132d9ddb350e33b742ae4c76b6"
+      }
+    },
+    {
+      "published_utc": "2026-08-05T17:56:51Z",
+      "day": "2026-08-05-dcc-clip2",
+      "content_id": "clip:65fb8dc75fdec083",
+      "publish_hash": "e182a881b86d1a8cd7f6a25734eaa743b1650da2ee0c3beb2a6530dae13acc22",
+      "youtube_video_id": "0FHL4fzrCfs",
+      "youtube_url": "https://www.youtube.com/watch?v=0FHL4fzrCfs",
+      "video_sha256": "6a7af39ad85abe88bb9cf1890c1abe6c506cb07230c42957ae442153244eb0e0",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-08-05-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-08-05-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:65fb8dc75fdec083",
+        "canonical_hash": "",
+        "script_id": "65fb8dc75fdec083e2a74e2dc705b57b7be64ae9b825d1e91ff8eac57a732da4",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Salamander's fire immunity negates fire-based attacks",
+        "hook": "Salamander's fire immunity negates fire-based attacks",
+        "body": "The Salamander is immune to all fire-based attacks and spells. This forces players to use non-fire damage types. Its heat aura adds 1d6 fire damage to nearby creatures, discouraging melee combat.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-08-05-dcc-clip2.mp4",
+        "video_sha256": "6a7af39ad85abe88bb9cf1890c1abe6c506cb07230c42957ae442153244eb0e0"
+      }
+    },
+    {
+      "published_utc": "2026-08-05T17:58:29Z",
+      "day": "2026-08-05-dcc-clip3",
+      "content_id": "clip:0950d6ef15bf4523",
+      "publish_hash": "c34e5f6de64e2d869c7c67b883a19246c224c8d63b2244a05ef13878d2a7cbe2",
+      "youtube_video_id": "mc4Q8NNa5jo",
+      "youtube_url": "https://www.youtube.com/watch?v=mc4Q8NNa5jo",
+      "video_sha256": "78c9a6e5a6a74747f7cf3b44e2ecf0b7bd873641d19c160cf5eaa6b4a3187ca4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-08-05-dcc-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-08-05-dcc-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:0950d6ef15bf4523",
+        "canonical_hash": "",
+        "script_id": "0950d6ef15bf4523ee1161fb3c422221ced31dc942c9d59f6cf18b7b4de02a51",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Metal weapons melt when striking a Salamander",
+        "hook": "Metal weapons melt when striking a Salamander",
+        "body": "When a metal weapon hits a Salamander, it deals just 1 damage and begins to melt. The attacker takes 1d6 fire damage. Players must balance risk and reward when using metal weapons.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-08-05-dcc-clip3.mp4",
+        "video_sha256": "78c9a6e5a6a74747f7cf3b44e2ecf0b7bd873641d19c160cf5eaa6b4a3187ca4"
+      }
     }
   ]
 }
