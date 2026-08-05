@@ -219,6 +219,9 @@ def build_description(atom: dict, day: str) -> str:
     angle = (atom.get("angle") or "").strip()
     profile = content_profile(atom)
     hashtags = hashtags_for(profile)["desc"]
+    topic_tag = extract_topic_tag(f"{hook} {body}")
+    if topic_tag and topic_tag not in hashtags:
+        hashtags = f"{hashtags} {topic_tag}"
 
     # Line 2: keyword-front-loaded summary for search (name + system + topic).
     system_label = {"dnd5e": "D&D 5e", "shadowdark": "Shadowdark", "dcc": "DCC"}.get(
@@ -305,6 +308,33 @@ _HASHTAGS_FALLBACK = {
 
 def hashtags_for(profile: str) -> dict:
     return _HASHTAGS.get(profile, _HASHTAGS_FALLBACK)
+
+
+# A small, low-risk set of topic keywords -> an extra, more specific
+# description hashtag. Supplements (never replaces) the static per-system set,
+# and never touches the title tag (kept minimal on purpose -- see
+# system_title_tag's own comment on why). YouTube's own ranking leans more on
+# watch time/retention than hashtag matching, so this is a minor assist.
+_TOPIC_TAGS = [
+    ("spell", "#Spells"),
+    ("saving throw", "#SavingThrow"),
+    ("trap", "#DungeonTraps"),
+    ("magic item", "#MagicItems"),
+    ("encounter", "#Encounter"),
+    ("combat", "#Combat"),
+    ("dragon", "#Dragons"),
+    ("undead", "#Undead"),
+    ("class feature", "#ClassBuild"),
+    ("multiclass", "#Multiclass"),
+]
+
+
+def extract_topic_tag(text: str) -> str | None:
+    low = f" {text.lower()} "
+    for kw, tag in _TOPIC_TAGS:
+        if kw in low:
+            return tag
+    return None
 
 
 def content_profile(atom: dict) -> str:
