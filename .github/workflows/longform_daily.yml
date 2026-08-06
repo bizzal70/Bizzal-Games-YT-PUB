@@ -102,6 +102,12 @@ jobs:
       BIZZAL_ENABLE_BG_IMAGE: "1"
       BIZZAL_ENABLE_BG_MUSIC: "1"
       BIZZAL_BG_MUSIC_GAIN: "0.20"
+      # Viewer feedback (same as daily.yml): background music too loud to
+      # hear the narration. render_atom.sh's sidechain-ducking ratio defaults
+      # to a mild 2.0 (typical voice-over ducking is 4-10+); gain was already
+      # lowered here and the complaint persisted, pointing at duck strength
+      # rather than baseline volume as the real lever.
+      BIZZAL_BG_DUCK_RATIO: "6.0"
       BIZZAL_TTS_SPEED: "0.92"
       BIZZAL_BRAND_ICON_SIZE: "100"
 
