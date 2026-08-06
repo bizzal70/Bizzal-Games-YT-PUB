@@ -1195,6 +1195,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-05.mp4",
         "video_sha256": "bf398c0fd864f6b0a7a9057179610badfbae58aa5d4a9f0771a26d9012c47c59"
       }
+    },
+    {
+      "published_utc": "2026-08-06T15:00:08Z",
+      "day": "2026-08-06",
+      "content_id": "bgp-2026-08-06-spell-use-case-spell-srd-2024-dominate-monster-121c89926b26",
+      "publish_hash": "98a2fa60c608828a4ad7d20dc65e825f69427c9962fc4b890f035476f4f72111",
+      "youtube_video_id": "iCqtQYJvb3k",
+      "youtube_url": "https://www.youtube.com/watch?v=iCqtQYJvb3k",
+      "video_sha256": "3114b5c5421c366cc1182fa9ac27bc73d19db91728c82b62855bfbce32def3d2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-06.mp4",
+      "fingerprint": {
+        "day": "2026-08-06",
+        "category": "spell_use_case",
+        "angle": "upcast_tip",
+        "content_id": "bgp-2026-08-06-spell-use-case-spell-srd-2024-dominate-monster-121c89926b26",
+        "canonical_hash": "121c89926b26860a373b6bf74f1b48c13ac4203a64e655f10e8e9de2a9f649d2",
+        "script_id": "22d41f1d9ccd0ea94278d9952f6bd2602a4f3e25e4b2b4556f75f32b19d0e88e",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_dominate-monster",
+        "fact_name": "Dominate Monster",
+        "hook": "Dominate Monster extends to 8 hours with a 9th-level spell slot, but timing is critical for maintaining.",
+        "body": "Dominate Monster requires concentration for up to 1 hour, or 8 hours if upcast to 9th level. Casting it when concentration is likely to break, such as during direct combat, results in a wasted spell slot. The spell's value lies in altering the action economy by removing a key threat from the battlefield temporarily. This is not a damage spell but a control tool.",
+        "cta": "DMs: Upcast Dominate Monster to 9th level only when you can maintain concentration for 8 hours, not during chaotic combat.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-06.mp4",
+        "video_sha256": "3114b5c5421c366cc1182fa9ac27bc73d19db91728c82b62855bfbce32def3d2"
+      }
     }
   ]
 }

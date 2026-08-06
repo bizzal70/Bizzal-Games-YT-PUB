@@ -547,6 +547,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-05.mp4",
         "video_sha256": "a615514136772227d4b9c44226b3855ceaad38d2e859a6d820332efcb311ad75"
       }
+    },
+    {
+      "published_utc": "2026-08-06T14:55:24Z",
+      "day": "2026-08-06",
+      "content_id": "bgp-2026-08-06-encounter-seed-creature-396-54f1a250254f",
+      "publish_hash": "d934b4695c32736ae8c7f410feb9e57965be100affaafd94c5ab1b4f88d873eb",
+      "youtube_video_id": "TtLCgTN_uMI",
+      "youtube_url": "https://www.youtube.com/watch?v=TtLCgTN_uMI",
+      "video_sha256": "73f5575caffc974381c385abcf11ecae96ae84c49ca85108b352479e4fee5f92",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-06.mp4",
+      "fingerprint": {
+        "day": "2026-08-06",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-08-06-encounter-seed-creature-396-54f1a250254f",
+        "canonical_hash": "54f1a250254f15378a368ad6848130b1d07b178de83adb480f35ca42776bc2e7",
+        "script_id": "3b208b6cb75318f5116ee1947ec18ceb6ca62b86c1956b17df9da6d9339e5ce5",
+        "fact_kind": "creature",
+        "fact_pk": 396,
+        "fact_name": "Peerer",
+        "hook": "Frame Peerer as a scene where priorities collide and every win has a price.",
+        "body": "Peerer's eye rays are its primary attack, but with an armor class of 10, it is easily hit by most attacks. Its movement of 20' makes it struggle to reposition quickly, leaving it susceptible to ranged fire attacks. Acting as a fey sentinel, it triggers an alarm when intruders are near. Exploiting its fire vulnerability before it can alert others prevents escalation.",
+        "cta": "Judges: Hit the Peerer with fire attacks first; its double damage vulnerability will silence its alarm before trouble starts.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-06.mp4",
+        "video_sha256": "73f5575caffc974381c385abcf11ecae96ae84c49ca85108b352479e4fee5f92"
+      }
     }
   ]
 }

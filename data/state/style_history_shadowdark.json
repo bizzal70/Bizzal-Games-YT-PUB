@@ -414,5 +414,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-06": {
+    "class_spotlight": {
+      "angle": "party_role_pivot",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "class_mentor",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

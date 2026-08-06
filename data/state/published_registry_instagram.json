@@ -1032,6 +1032,51 @@
       "hook": "Dimension Door's instant self-range teleport changes positioning, not damage output.",
       "body": "Dimension Door is a 4th-tier spell with an instant duration and self range. It teleports you and one willing creature to a visible point. Misuse occurs when it's cast for minor tactical repositioning. Instead, use it to solve immediate strategic problems, like bypassing obstacles or escaping a critical threat.",
       "cta": "GMs: Enforce Dimension Door's 500-foot range limit to ensure players use it for strategic escapes, not trivial repositioning."
+    },
+    {
+      "published_utc": "2026-08-06T14:56:40Z",
+      "day": "2026-08-06",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-06-encounter-seed-creature-396-54f1a250254f",
+      "instagram_post_id": "18089634983643443",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "73f5575caffc974381c385abcf11ecae96ae84c49ca85108b352479e4fee5f92",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-06.mp4",
+      "fact_name": "Peerer",
+      "category": "encounter_seed",
+      "hook": "Frame Peerer as a scene where priorities collide and every win has a price.",
+      "body": "Peerer's eye rays are its primary attack, but with an armor class of 10, it is easily hit by most attacks. Its movement of 20' makes it struggle to reposition quickly, leaving it susceptible to ranged fire attacks. Acting as a fey sentinel, it triggers an alarm when intruders are near. Exploiting its fire vulnerability before it can alert others prevents escalation.",
+      "cta": "Judges: Hit the Peerer with fire attacks first; its double damage vulnerability will silence its alarm before trouble starts."
+    },
+    {
+      "published_utc": "2026-08-06T15:00:53Z",
+      "day": "2026-08-06",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-06-spell-use-case-spell-srd-2024-dominate-monster-121c89926b26",
+      "instagram_post_id": "18057902816601539",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "3114b5c5421c366cc1182fa9ac27bc73d19db91728c82b62855bfbce32def3d2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-06.mp4",
+      "fact_name": "Dominate Monster",
+      "category": "spell_use_case",
+      "hook": "Dominate Monster extends to 8 hours with a 9th-level spell slot, but timing is critical for maintaining.",
+      "body": "Dominate Monster requires concentration for up to 1 hour, or 8 hours if upcast to 9th level. Casting it when concentration is likely to break, such as during direct combat, results in a wasted spell slot. The spell's value lies in altering the action economy by removing a key threat from the battlefield temporarily. This is not a damage spell but a control tool.",
+      "cta": "DMs: Upcast Dominate Monster to 9th level only when you can maintain concentration for 8 hours, not during chaotic combat."
+    },
+    {
+      "published_utc": "2026-08-06T15:06:04Z",
+      "day": "2026-08-06",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-06-class-spotlight-class-2-debcc4abaf53",
+      "instagram_post_id": "18139849666570447",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "1d48a4506a3bad411b1bb920e7b829dab3a4647aaa72e5cc5d372f26726183eb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-06.mp4",
+      "fact_name": "Priest",
+      "category": "class_spotlight",
+      "hook": "Priest switches from support to pressure when leveraging Turn Undead after setting up with divine spells.",
+      "body": "Priests wield a range of weapons and armor, but their primary strength lies in divine casting and Turn Undead. Misusing Priests by focusing solely on healing neglects the strategic shift to offensive pressure. Turn Undead can disrupt undead threats, creating openings for the party to capitalize on. Effective play involves balancing initial support with timely aggression, especially when the board state changes in the party's favor.",
+      "cta": "GMs: When undead swarm, remind the Priest to leverage Turn Undead and shift from healing to breaking the horde."
     }
   ]
 }

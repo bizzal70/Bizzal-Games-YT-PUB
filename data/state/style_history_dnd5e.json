@@ -410,5 +410,17 @@
       "spice": [],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-08-06": {
+    "spell_use_case": {
+      "angle": "upcast_tip",
+      "voice": "gritty_dm",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

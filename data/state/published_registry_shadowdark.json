@@ -885,6 +885,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-05.mp4",
         "video_sha256": "16f17a0987c353762223577fb6ea8424b33129e50f49360394c3f6a1510c1e57"
       }
+    },
+    {
+      "published_utc": "2026-08-06T15:05:04Z",
+      "day": "2026-08-06",
+      "content_id": "bgp-2026-08-06-class-spotlight-class-2-debcc4abaf53",
+      "publish_hash": "0d901515738c815fe8072a83660011f85d55650bde3f9cc1069b06bfaab2d785",
+      "youtube_video_id": "UnlBl-YZcZE",
+      "youtube_url": "https://www.youtube.com/watch?v=UnlBl-YZcZE",
+      "video_sha256": "1d48a4506a3bad411b1bb920e7b829dab3a4647aaa72e5cc5d372f26726183eb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-06.mp4",
+      "fingerprint": {
+        "day": "2026-08-06",
+        "category": "class_spotlight",
+        "angle": "party_role_pivot",
+        "content_id": "bgp-2026-08-06-class-spotlight-class-2-debcc4abaf53",
+        "canonical_hash": "debcc4abaf53859c07ca038d5c1008b178d8670e67056ac56382bd3e74c63b56",
+        "script_id": "7e05ecc6fe03e6f192ce14259f75b643e2410c78574d7e7dd0c5498911f68bb0",
+        "fact_kind": "class",
+        "fact_pk": 2,
+        "fact_name": "Priest",
+        "hook": "Priest switches from support to pressure when leveraging Turn Undead after setting up with divine spells.",
+        "body": "Priests wield a range of weapons and armor, but their primary strength lies in divine casting and Turn Undead. Misusing Priests by focusing solely on healing neglects the strategic shift to offensive pressure. Turn Undead can disrupt undead threats, creating openings for the party to capitalize on. Effective play involves balancing initial support with timely aggression, especially when the board state changes in the party's favor.",
+        "cta": "GMs: When undead swarm, remind the Priest to leverage Turn Undead and shift from healing to breaking the horde.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-06.mp4",
+        "video_sha256": "1d48a4506a3bad411b1bb920e7b829dab3a4647aaa72e5cc5d372f26726183eb"
+      }
     }
   ]
 }
