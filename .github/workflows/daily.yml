@@ -73,12 +73,16 @@ jobs:
       BIZZAL_ENABLE_BG_MUSIC: "1"
       BIZZAL_BG_MUSIC_GAIN: "0.25"
       # Viewer feedback: background music too loud to hear the narration.
-      # The sidechain-ducking ratio in render_atom.sh defaults to a mild 2.0
-      # (typical voice-over ducking is 4-10+), so music was not dropping
-      # enough during speech even though the baseline gain was already
-      # lowered from the script's own 0.42 default. Strengthening duck
-      # instead of gain further, since gain alone did not fix it.
-      BIZZAL_BG_DUCK_RATIO: "6.0"
+      # Researched voice-over ducking best practice (Sound On Sound,
+      # StrongMocha): ratio >=4:1 for intelligibility, fast attack so it
+      # engages before a word starts, and release long enough that music
+      # does not pop back up during mid-sentence breath pauses -- that
+      # release parameter is what actually makes ducking feel smooth
+      # instead of "jarring", so it is raised above the script default
+      # alongside a strong-but-not-extreme ratio.
+      BIZZAL_BG_DUCK_RATIO: "5.0"
+      BIZZAL_BG_DUCK_ATTACK_MS: "30"
+      BIZZAL_BG_DUCK_RELEASE_MS: "700"
       # Visual style preset: bw_rtfm | color_cinematic | random
       BIZZAL_BG_STYLE: "bw_rtfm"
       # Pacing & render quality
