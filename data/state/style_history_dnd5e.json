@@ -422,5 +422,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-07": {
+    "rules_ruling": {
+      "angle": "fast_ruling",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "sage"
+    }
   }
 }

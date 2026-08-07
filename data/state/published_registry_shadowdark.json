@@ -911,6 +911,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-06.mp4",
         "video_sha256": "1d48a4506a3bad411b1bb920e7b829dab3a4647aaa72e5cc5d372f26726183eb"
       }
+    },
+    {
+      "published_utc": "2026-08-07T14:42:18Z",
+      "day": "2026-08-07",
+      "content_id": "bgp-2026-08-07-monster-tactic-creature-18-12abef66f1b6",
+      "publish_hash": "6e4ad5ddce10e9b4678dda1d1b1e4924f914051d3497c8ebb06f59f3a9f95517",
+      "youtube_video_id": "rvIw_pCfSG4",
+      "youtube_url": "https://www.youtube.com/watch?v=rvIw_pCfSG4",
+      "video_sha256": "c9bcb660382fd514d4acd6b16aef53c77ed7b853f42f2f6d9578b4772fb2dbca",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-07.mp4",
+      "fingerprint": {
+        "day": "2026-08-07",
+        "category": "monster_tactic",
+        "angle": "common_mistake",
+        "content_id": "bgp-2026-08-07-monster-tactic-creature-18-12abef66f1b6",
+        "canonical_hash": "12abef66f1b6b14dfacb8e67ddd6d9aee956f19292097169157fc5847d3f9c91",
+        "script_id": "9b0392172b8d9ea54f804fe97039c155773d70f30ec21744c7ff20a848b50d27",
+        "fact_kind": "creature",
+        "fact_pk": 18,
+        "fact_name": "Giant Bat",
+        "hook": "Giant Bat's near flying movement allows it to reposition and strike before most parties can react.",
+        "body": "With an AC of 12 and 9 hit points, the Giant Bat is not durable, but its +2 bite attack (1d6 damage) can quickly become a problem if ignored. Players underestimate its mobility, allowing it to exploit poor positioning and attack vulnerable targets. Correct play involves prioritizing its elimination or using terrain to limit its movement options.",
+        "cta": "GMs: Exploit the Giant Bat's near flying movement to target the party's rear, punishing any gaps in their formation.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-07.mp4",
+        "video_sha256": "c9bcb660382fd514d4acd6b16aef53c77ed7b853f42f2f6d9578b4772fb2dbca"
+      }
     }
   ]
 }

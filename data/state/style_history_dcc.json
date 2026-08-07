@@ -336,5 +336,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-07": {
+    "class_spotlight": {
+      "angle": "wizard_risk",
+      "voice": "chaos_herald",
+      "tone": "gritty",
+      "persona": "class_mentor",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

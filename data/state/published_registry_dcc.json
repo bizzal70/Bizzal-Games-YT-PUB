@@ -573,6 +573,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-06.mp4",
         "video_sha256": "73f5575caffc974381c385abcf11ecae96ae84c49ca85108b352479e4fee5f92"
       }
+    },
+    {
+      "published_utc": "2026-08-07T14:31:29Z",
+      "day": "2026-08-07",
+      "content_id": "bgp-2026-08-07-class-spotlight-class-2-6e7d08a3b0c1",
+      "publish_hash": "03d1b874c00d227558ff28fdfb7577f242be1003847e028c342edaf6a8a5174c",
+      "youtube_video_id": "K0VxCFLduLI",
+      "youtube_url": "https://www.youtube.com/watch?v=K0VxCFLduLI",
+      "video_sha256": "cfa06b5135e3eb3827cc818b54e2010cbcf113719d09e04b6545efec22a8e8c6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-07.mp4",
+      "fingerprint": {
+        "day": "2026-08-07",
+        "category": "class_spotlight",
+        "angle": "wizard_risk",
+        "content_id": "bgp-2026-08-07-class-spotlight-class-2-6e7d08a3b0c1",
+        "canonical_hash": "6e7d08a3b0c16bd283aa4b90c68d84d985032ea6ccf2e049e6e89862349989ba",
+        "script_id": "2676a0764dbaa4514e6c8b1b14146a330123d30d8f2de3c2848554c02fa8a2d6",
+        "fact_kind": "class",
+        "fact_pk": 2,
+        "fact_name": "Wizard",
+        "hook": "Wizards lose a spell permanently on a natural 1 during a spell check, which players often overlook in their.",
+        "body": "Wizards cast spells using a spell check: d20 + Intelligence modifier + caster level, with results determined by each spell's unique table. A natural 1 on this roll means the spell is lost forever and triggers a roll on the corruption table, which can permanently alter the character. This risk can leave wizards without key spells when failures accumulate. Consistent performance relies on understanding and managing these risks rather than banking on high rolls.",
+        "cta": "Judges: Remind your wizards that a natural 1 means losing spells forever; they should keep a backup plan ready.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-07.mp4",
+        "video_sha256": "cfa06b5135e3eb3827cc818b54e2010cbcf113719d09e04b6545efec22a8e8c6"
+      }
     }
   ]
 }

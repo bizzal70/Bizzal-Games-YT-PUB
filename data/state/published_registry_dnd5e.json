@@ -1221,6 +1221,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-06.mp4",
         "video_sha256": "3114b5c5421c366cc1182fa9ac27bc73d19db91728c82b62855bfbce32def3d2"
       }
+    },
+    {
+      "published_utc": "2026-08-07T14:37:08Z",
+      "day": "2026-08-07",
+      "content_id": "bgp-2026-08-07-rules-ruling-rule-srd-2024-d20-tests-ability-checks-62169b01a380",
+      "publish_hash": "71ba9d592dabbeebae68fa06ed73204e86c7b2494b7fc704a018452ac5504168",
+      "youtube_video_id": "JCl7YVclhJo",
+      "youtube_url": "https://www.youtube.com/watch?v=JCl7YVclhJo",
+      "video_sha256": "1171b9a5cb96861d8c8cf7f1e3c6bae81ea1d72051e254c03ed3d4c252b52e28",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-07.mp4",
+      "fingerprint": {
+        "day": "2026-08-07",
+        "category": "rules_ruling",
+        "angle": "fast_ruling",
+        "content_id": "bgp-2026-08-07-rules-ruling-rule-srd-2024-d20-tests-ability-checks-62169b01a380",
+        "canonical_hash": "62169b01a380bfa2cff69a7226e6948714352aeb48bdbdb86ebcf086aac64693",
+        "script_id": "aabc77402eca633bb9192b4b393de84e39bdafe137d809a3b786765d58d76b5d",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_d20-tests_ability-checks",
+        "fact_name": "Ability Checks",
+        "hook": "Ability Checks resolve with a single roll and a single ruling, avoiding prolonged debates.",
+        "body": "An ability check uses a d20 roll plus the relevant ability modifier to overcome challenges. The mechanic is often misused when players attempt to stack multiple checks for a single task, which can slow down gameplay. Resolve each check with one roll and one clear outcome to maintain the game's pace. Avoid allowing multiple attempts for the same challenge unless circumstances have changed.",
+        "cta": "DMs: Resolve each ability check with one d20 roll and decision to prevent gameplay from bogging down in endless debates.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-07.mp4",
+        "video_sha256": "1171b9a5cb96861d8c8cf7f1e3c6bae81ea1d72051e254c03ed3d4c252b52e28"
+      }
     }
   ]
 }

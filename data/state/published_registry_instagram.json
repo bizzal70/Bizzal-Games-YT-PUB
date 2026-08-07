@@ -1077,6 +1077,51 @@
       "hook": "Priest switches from support to pressure when leveraging Turn Undead after setting up with divine spells.",
       "body": "Priests wield a range of weapons and armor, but their primary strength lies in divine casting and Turn Undead. Misusing Priests by focusing solely on healing neglects the strategic shift to offensive pressure. Turn Undead can disrupt undead threats, creating openings for the party to capitalize on. Effective play involves balancing initial support with timely aggression, especially when the board state changes in the party's favor.",
       "cta": "GMs: When undead swarm, remind the Priest to leverage Turn Undead and shift from healing to breaking the horde."
+    },
+    {
+      "published_utc": "2026-08-07T14:33:17Z",
+      "day": "2026-08-07",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-07-class-spotlight-class-2-6e7d08a3b0c1",
+      "instagram_post_id": "17885440215456795",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "cfa06b5135e3eb3827cc818b54e2010cbcf113719d09e04b6545efec22a8e8c6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-07.mp4",
+      "fact_name": "Wizard",
+      "category": "class_spotlight",
+      "hook": "Wizards lose a spell permanently on a natural 1 during a spell check, which players often overlook in their.",
+      "body": "Wizards cast spells using a spell check: d20 + Intelligence modifier + caster level, with results determined by each spell's unique table. A natural 1 on this roll means the spell is lost forever and triggers a roll on the corruption table, which can permanently alter the character. This risk can leave wizards without key spells when failures accumulate. Consistent performance relies on understanding and managing these risks rather than banking on high rolls.",
+      "cta": "Judges: Remind your wizards that a natural 1 means losing spells forever; they should keep a backup plan ready."
+    },
+    {
+      "published_utc": "2026-08-07T14:38:10Z",
+      "day": "2026-08-07",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-07-rules-ruling-rule-srd-2024-d20-tests-ability-checks-62169b01a380",
+      "instagram_post_id": "17951384922219927",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "1171b9a5cb96861d8c8cf7f1e3c6bae81ea1d72051e254c03ed3d4c252b52e28",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-07.mp4",
+      "fact_name": "Ability Checks",
+      "category": "rules_ruling",
+      "hook": "Ability Checks resolve with a single roll and a single ruling, avoiding prolonged debates.",
+      "body": "An ability check uses a d20 roll plus the relevant ability modifier to overcome challenges. The mechanic is often misused when players attempt to stack multiple checks for a single task, which can slow down gameplay. Resolve each check with one roll and one clear outcome to maintain the game's pace. Avoid allowing multiple attempts for the same challenge unless circumstances have changed.",
+      "cta": "DMs: Resolve each ability check with one d20 roll and decision to prevent gameplay from bogging down in endless debates."
+    },
+    {
+      "published_utc": "2026-08-07T14:43:03Z",
+      "day": "2026-08-07",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-07-monster-tactic-creature-18-12abef66f1b6",
+      "instagram_post_id": "17938219563335353",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c9bcb660382fd514d4acd6b16aef53c77ed7b853f42f2f6d9578b4772fb2dbca",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-07.mp4",
+      "fact_name": "Giant Bat",
+      "category": "monster_tactic",
+      "hook": "Giant Bat's near flying movement allows it to reposition and strike before most parties can react.",
+      "body": "With an AC of 12 and 9 hit points, the Giant Bat is not durable, but its +2 bite attack (1d6 damage) can quickly become a problem if ignored. Players underestimate its mobility, allowing it to exploit poor positioning and attack vulnerable targets. Correct play involves prioritizing its elimination or using terrain to limit its movement options.",
+      "cta": "GMs: Exploit the Giant Bat's near flying movement to target the party's rear, punishing any gaps in their formation."
     }
   ]
 }
