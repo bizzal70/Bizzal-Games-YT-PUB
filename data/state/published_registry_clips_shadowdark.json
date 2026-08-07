@@ -129,6 +129,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-07-29-shadowdark-clip2.mp4",
         "video_sha256": "d8835131d7cf3dc064e6bdad730ccf656b0886a90cc6d0c1cbc41715614b9101"
       }
+    },
+    {
+      "published_utc": "2026-08-07T17:39:01Z",
+      "day": "2026-08-07-shadowdark-clip1",
+      "content_id": "clip:9ebbb97bf4b35041",
+      "publish_hash": "c47d53429b019cc541471a6490770cf7a94f7a2912e9d304b6b67c8e550347a7",
+      "youtube_video_id": "70div-RcvsE",
+      "youtube_url": "https://www.youtube.com/watch?v=70div-RcvsE",
+      "video_sha256": "c2ee0c719b30a9f06f20985fa694481ed5cb92f092ec3518e9c3f162c6ef3292",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-07-shadowdark-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-08-07-shadowdark-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:9ebbb97bf4b35041",
+        "canonical_hash": "",
+        "script_id": "9ebbb97bf4b35041058e2d43c47bb6a062bb135f10fa147d5bd3bea1a4de7c49",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Frog Rain can hit allies too",
+        "hook": "Frog Rain can hit allies too",
+        "body": "Frog Rain's area effect damages all within a 'near cube,' friend or foe. Ensure allies are clear before casting. Positioning is critical; use the spell's 'Far' range to keep safe while impacting enemies.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-07-shadowdark-clip1.mp4",
+        "video_sha256": "c2ee0c719b30a9f06f20985fa694481ed5cb92f092ec3518e9c3f162c6ef3292"
+      }
+    },
+    {
+      "published_utc": "2026-08-07T17:40:22Z",
+      "day": "2026-08-07-shadowdark-clip2",
+      "content_id": "clip:b6ccf1740cd37d8e",
+      "publish_hash": "b1c74533aa3021c8e630c0665899eda4cbef7b8a99e4992c3a2e2621a98bee7e",
+      "youtube_video_id": "ipnBY632UVY",
+      "youtube_url": "https://www.youtube.com/watch?v=ipnBY632UVY",
+      "video_sha256": "b2c8aea3c665d67f4b2a8152a2f0b80c68b7c5da10900f4c4d1f806815ccdd88",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-07-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-08-07-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:b6ccf1740cd37d8e",
+        "canonical_hash": "",
+        "script_id": "b6ccf1740cd37d8ed338a5647bcecb3c81008fe3ea9108d63dbaec169c9453e5",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Maximize Frog Rain's range to stay safe",
+        "hook": "Maximize Frog Rain's range to stay safe",
+        "body": "Frog Rain has a 'Far' range, allowing it to be cast from a significant distance. Use this to stay out of enemy counterattack range. Ensure you are maximizing distance while keeping enemies within the 'near cube' effect.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-07-shadowdark-clip2.mp4",
+        "video_sha256": "b2c8aea3c665d67f4b2a8152a2f0b80c68b7c5da10900f4c4d1f806815ccdd88"
+      }
+    },
+    {
+      "published_utc": "2026-08-07T17:41:36Z",
+      "day": "2026-08-07-shadowdark-clip3",
+      "content_id": "clip:44bc18d5e5ec7394",
+      "publish_hash": "2278da4c27098eb34a6686f871ef8a57e9c192a11761c87cb34f32b527d2643c",
+      "youtube_video_id": "Qv58dI2FjvE",
+      "youtube_url": "https://www.youtube.com/watch?v=Qv58dI2FjvE",
+      "video_sha256": "cbfe1c37337768700d126849dc8be5892b404292e0adc64cc83c0144c2d2fac0",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-07-shadowdark-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-08-07-shadowdark-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:44bc18d5e5ec7394",
+        "canonical_hash": "",
+        "script_id": "44bc18d5e5ec7394d3603aa3d0626eb167459f202045f3ed8c0905d5add692ad",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Coordinate Frog Rain with movement spells",
+        "hook": "Coordinate Frog Rain with movement spells",
+        "body": "Combine Frog Rain with movement control spells to trap enemies in its area. Coordinate with allies to push or pull foes into the 'near cube.' Timing is key for maximizing damage during crucial combat moments.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-07-shadowdark-clip3.mp4",
+        "video_sha256": "cbfe1c37337768700d126849dc8be5892b404292e0adc64cc83c0144c2d2fac0"
+      }
     }
   ]
 }

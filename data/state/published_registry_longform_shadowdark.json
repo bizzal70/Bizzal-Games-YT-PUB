@@ -51,6 +51,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_shadowdark/by_day/2026-07-29.mp4",
         "video_sha256": "5576be0567399f7938f854a599ef31e0a05b829e0005bc740dd9f524787e7979"
       }
+    },
+    {
+      "published_utc": "2026-08-07T17:37:24Z",
+      "day": "2026-08-07",
+      "content_id": "",
+      "publish_hash": "164a38aba0e07710fea64decf064184c56bdb14672da695e8923d54914b3a955",
+      "youtube_video_id": "QuUnrkhe3Rw",
+      "youtube_url": "https://www.youtube.com/watch?v=QuUnrkhe3Rw",
+      "video_sha256": "0b9e90b1616b49c00ab3f70d71a50d60e3717fdb7e94a0ecd632cf953553ec61",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_shadowdark/by_day/2026-08-07.mp4",
+      "fingerprint": {
+        "day": "2026-08-07",
+        "category": "spell_use_case",
+        "angle": "deep_dive",
+        "content_id": "",
+        "canonical_hash": "",
+        "script_id": "fa5c16268e25d8f7b0393965dc63860871b1627f4396c26d6f7d33a759b02f92",
+        "fact_kind": "spell",
+        "fact_pk": 86,
+        "fact_name": "Frog Rain",
+        "hook": "Frog Rain: Strategic Use of a Near Cube at Far Range",
+        "body": "In today's video, we're diving into the spell 'Frog Rain' from the Shadowdark RPG. This is a tier 2 spell exclusively available to the Witch class, originating from the cursed-scroll-1 source. With its unique area of effect and damage potential, Frog Rain offers strategic possibilities for players who know how to wield it effectively. We'll explore the mechanics, tactical applications, and potential pitfalls to avoid when using this spell at your table.\n\nUnderstanding the Spell Mechanics. Frog Rain is a tier 2 spell that belongs to the Witch class in Shadowdark RPG. Its range is classified as 'Far,' allowing it to be cast from a significant distance, making it a versatile option for targeting enemies that are not immediately nearby. The spell's effect is to deal 1d6 damage to all creatures within a 'near cube' at the specified range. This means that any creature caught within this area will take damage, regardless of their allegiance. The spell's classification as 'Instant' means its effects occur immediately upon casting, with no lingering effects or ongoing damage to consider.\n\nTactical Applications. The tactical use of Frog Rain lies in its ability to affect multiple targets simultaneously. Given its area of effect, it can be particularly effective in situations where enemies are clustered together. However, players should be cautious about friendly fire, as the spell does not discriminate between allies and enemies. Positioning is key; casting Frog Rain from a distance allows the Witch to remain out of immediate danger while still impacting the battlefield. Consider using this spell to disrupt enemy formations or to soften up a group of foes before engaging in melee combat.\n\nCommon Misplays and How to Avoid Them. One common misplay with Frog Rain is underestimating its indiscriminate nature. Players may inadvertently damage their own party members if they're not careful with positioning. Always ensure that allies are outside the 'near cube' area of effect before casting. Another potential pitfall is failing to maximize the spell's range. Remember that 'Far' allows for significant distance, so take advantage of this to remain safe from enemy counterattacks. Lastly, don't forget to consider the spell's damage output; while 1d6 can be impactful against multiple targets, it may not be sufficient against heavily armored foes.\n\nIntegrating Frog Rain into Your Strategy. Successfully integrating Frog Rain into your strategy involves understanding its strengths and limitations. As a Witch, you may have access to other spells that can complement Frog Rain. For instance, combining it with spells that control or restrict movement can help ensure enemies remain within the area of effect. Additionally, using Frog Rain in conjunction with other party members' abilities can amplify its effectiveness. Coordinate with allies who can push or pull enemies into the designated area, maximizing the damage dealt. Remember, the spell's instant nature means timing is crucial; use it at pivotal moments in combat for maximum impact.\n\nEdge Cases and Special Considerations. While the core mechanics of Frog Rain are straightforward, there are some edge cases to consider. For example, in environments where terrain or obstacles might obscure line of sight, ensure that the target area is clearly visible to avoid wasted spells. Additionally, be mindful of any game rules that might affect spell casting, such as conditions that impose disadvantage on ranged attacks. These can impact the effectiveness of Frog Rain. Lastly, remember that the spell's damage is determined by a single 1d6 roll, so results can be variable. Prepare for both high and low damage outcomes when planning your strategy.\n\nFrog Rain is a versatile spell with the potential to turn the tide of battle when used strategically. By understanding its mechanics and integrating it effectively into your tactics, you can maximize its impact on the battlefield. Always be mindful of positioning and potential collateral damage to ensure the best results. If you're ready to add Frog Rain to your Witch's arsenal, consider how it fits into your overall strategy. For more insights into Shadowdark RPG spells and tactics, be sure to subscribe and join us for our next deep dive.",
+        "cta": "Subscribe for new tabletop RPG deep dives every Monday, Wednesday, and Friday. Follow Bizzal Games on YouTube and Instagram.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_shadowdark/by_day/2026-08-07.mp4",
+        "video_sha256": "0b9e90b1616b49c00ab3f70d71a50d60e3717fdb7e94a0ecd632cf953553ec61"
+      }
     }
   ]
 }

@@ -2661,6 +2661,50 @@
       "video_id": "17938219563335353",
       "day": "2026-08-07",
       "published_at": "2026-08-07T14:43:03+00:00"
+    },
+    {
+      "content_key": "885285761bf578eab59c59148035cf23d2f1254e4c4133758d1084710b016266",
+      "token_text": "cube far frog near rain range strategic use",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Frog Rain: Strategic Use of a Near Cube at Far Range #shadowdark",
+      "video_id": "QuUnrkhe3Rw",
+      "day": "2026-08-07",
+      "published_at": "2026-08-07T17:37:24+00:00"
+    },
+    {
+      "content_key": "e5cd26985ac37d6a5f2380df562fcefc1118fa6a7f7b6864e783a9c7f8310166",
+      "token_text": "allie frog hit rain too",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Frog Rain can hit allies too #shadowdark",
+      "video_id": "70div-RcvsE",
+      "day": "2026-08-07-shadowdark-clip1",
+      "published_at": "2026-08-07T17:39:01+00:00"
+    },
+    {
+      "content_key": "18e8bb7acebb9d42f440172ddb73d647da7235bdb9b3f00f8cdb96174f13e719",
+      "token_text": "frog maximize rain range safe stay",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Maximize Frog Rain's range to stay safe #shadowdark",
+      "video_id": "ipnBY632UVY",
+      "day": "2026-08-07-shadowdark-clip2",
+      "published_at": "2026-08-07T17:40:22+00:00"
+    },
+    {
+      "content_key": "4ef2c41b6d4222636ce80cc4fd96824b3b32c4b0c5f31e21b66ac698b37c6acd",
+      "token_text": "coordinate frog movement rain spell",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Coordinate Frog Rain with movement spells #shadowdark",
+      "video_id": "Qv58dI2FjvE",
+      "day": "2026-08-07-shadowdark-clip3",
+      "published_at": "2026-08-07T17:41:36+00:00"
     }
   ]
 }
