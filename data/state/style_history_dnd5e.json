@@ -432,5 +432,15 @@
       "spice": [],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-08-08": {
+    "item_spotlight": {
+      "angle": "dm_counterplay",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [],
+      "tts_voice_id": "alloy"
+    }
   }
 }

@@ -1247,6 +1247,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-07.mp4",
         "video_sha256": "1171b9a5cb96861d8c8cf7f1e3c6bae81ea1d72051e254c03ed3d4c252b52e28"
       }
+    },
+    {
+      "published_utc": "2026-08-08T14:24:48Z",
+      "day": "2026-08-08",
+      "content_id": "bgp-2026-08-08-item-spotlight-item-srd-2024-case-crossbow-bolt-0c3005d34be0",
+      "publish_hash": "690c7af5a2510e897c91cf337530cbdabbec47511a39eb44830777c571036b18",
+      "youtube_video_id": "sToNaldwCUk",
+      "youtube_url": "https://www.youtube.com/watch?v=sToNaldwCUk",
+      "video_sha256": "afc17a3a9c77dea52f8b9da0c4f8e0d456b53bf194b84b2129395c862b530e9b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-08.mp4",
+      "fingerprint": {
+        "day": "2026-08-08",
+        "category": "item_spotlight",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-08-08-item-spotlight-item-srd-2024-case-crossbow-bolt-0c3005d34be0",
+        "canonical_hash": "0c3005d34be05fd61ae3591ff63089884d164792470635bf24a144be2db6bd1a",
+        "script_id": "5c102f613ca42614ac3cbbf409327d08bfdc23b6280cdba5bb7a5a96e6159d8d",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_case-crossbow-bolt",
+        "fact_name": "Crossbow Bolt Case",
+        "hook": "The Crossbow Bolt Case holds exactly 20 bolts, but players often forget its weight of 1 pound when calculating.",
+        "body": "This adventuring gear costs 1 gp and has no armor class or hit points, making it a non-factor in combat durability. Its immunity to poison and psychic damage is irrelevant since it doesn't take damage. The mistake is treating it as weightless when managing inventory. Correct play involves factoring its 1-pound weight into total carrying capacity to avoid unexpected penalties.",
+        "cta": "DMs: Remind players to count the Crossbow Bolt Case's 1-pound weight in their inventory to avoid encumbrance penalties.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-08.mp4",
+        "video_sha256": "afc17a3a9c77dea52f8b9da0c4f8e0d456b53bf194b84b2129395c862b530e9b"
+      }
     }
   ]
 }

@@ -434,5 +434,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-08": {
+    "rules_ruling": {
+      "angle": "edge_case",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

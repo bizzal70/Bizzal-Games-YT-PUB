@@ -937,6 +937,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-07.mp4",
         "video_sha256": "c9bcb660382fd514d4acd6b16aef53c77ed7b853f42f2f6d9578b4772fb2dbca"
       }
+    },
+    {
+      "published_utc": "2026-08-08T14:28:50Z",
+      "day": "2026-08-08",
+      "content_id": "bgp-2026-08-08-rules-ruling-rule-11-378badd5ca17",
+      "publish_hash": "48c0721ab95cd9e3e602530a8c4986df8d87c38c42bcc7b6175aefbf97887d82",
+      "youtube_video_id": "BC5Gzjl1bRo",
+      "youtube_url": "https://www.youtube.com/watch?v=BC5Gzjl1bRo",
+      "video_sha256": "04e909aa36e37e79aa2b8d5be160a31b8637b4130dd2fe615d363ee0967a02ad",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-08.mp4",
+      "fingerprint": {
+        "day": "2026-08-08",
+        "category": "rules_ruling",
+        "angle": "edge_case",
+        "content_id": "bgp-2026-08-08-rules-ruling-rule-11-378badd5ca17",
+        "canonical_hash": "378badd5ca178b4ef12c351d50b0587ee9aab85cab69d3311f9ee293d1f3ce08",
+        "script_id": "3dd6df3ce1e95dcf0575311d84f77e076cf3639ba8ac532ef44228804ec16790",
+        "fact_kind": "rule",
+        "fact_pk": 11,
+        "fact_name": "Turn Undead",
+        "hook": "Turn Undead functions as a spell but doesn't count toward known spells.",
+        "body": "Turn Undead requires a roll to determine the highest level of undead affected, who then flee for 2d4 rounds. Missteps occur when players overlook that it operates outside of known spell limits, treating it as a limited resource when it's not. The real advantage is leveraging it in encounters where undead levels are uncertain, maximizing its utility without reservation.",
+        "cta": "GMs: Enforce Turn Undead's roll for highest undead level affected; it's not a limited spell, so use it freely.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-08.mp4",
+        "video_sha256": "04e909aa36e37e79aa2b8d5be160a31b8637b4130dd2fe615d363ee0967a02ad"
+      }
     }
   ]
 }

@@ -1122,6 +1122,51 @@
       "hook": "Giant Bat's near flying movement allows it to reposition and strike before most parties can react.",
       "body": "With an AC of 12 and 9 hit points, the Giant Bat is not durable, but its +2 bite attack (1d6 damage) can quickly become a problem if ignored. Players underestimate its mobility, allowing it to exploit poor positioning and attack vulnerable targets. Correct play involves prioritizing its elimination or using terrain to limit its movement options.",
       "cta": "GMs: Exploit the Giant Bat's near flying movement to target the party's rear, punishing any gaps in their formation."
+    },
+    {
+      "published_utc": "2026-08-08T14:21:24Z",
+      "day": "2026-08-08",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-08-rules-myth-rule-22-5ad17f8a1ee5",
+      "instagram_post_id": "18544565122072294",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9810f3105a1e595b6e7b02840389855b8b28a57da17b0e9d3f25d7522f2233af",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-08.mp4",
+      "fact_name": "Skill Checks",
+      "category": "rules_myth",
+      "hook": "An untrained Skill Check only rolls 1d10, not 1d20, catching players off guard with lower success rates.",
+      "body": "Skill Checks hinge on whether a character's past trade aligns with the task at hand; trained skills roll 1d20 plus an ability modifier, while untrained ones only roll 1d10. This distinction means that players who assume a flat d20 for all checks will consistently overestimate their odds. Recognizing which skills are trained based on a character's 0-level occupation is crucial for setting realistic expectations and optimizing attempts.",
+      "cta": "Judges: Remind players that untrained skill checks roll 1d10, not 1d20, to curb their overconfidence."
+    },
+    {
+      "published_utc": "2026-08-08T14:25:34Z",
+      "day": "2026-08-08",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-08-item-spotlight-item-srd-2024-case-crossbow-bolt-0c3005d34be0",
+      "instagram_post_id": "17899207629356526",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "afc17a3a9c77dea52f8b9da0c4f8e0d456b53bf194b84b2129395c862b530e9b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-08.mp4",
+      "fact_name": "Crossbow Bolt Case",
+      "category": "item_spotlight",
+      "hook": "The Crossbow Bolt Case holds exactly 20 bolts, but players often forget its weight of 1 pound when calculating.",
+      "body": "This adventuring gear costs 1 gp and has no armor class or hit points, making it a non-factor in combat durability. Its immunity to poison and psychic damage is irrelevant since it doesn't take damage. The mistake is treating it as weightless when managing inventory. Correct play involves factoring its 1-pound weight into total carrying capacity to avoid unexpected penalties.",
+      "cta": "DMs: Remind players to count the Crossbow Bolt Case's 1-pound weight in their inventory to avoid encumbrance penalties."
+    },
+    {
+      "published_utc": "2026-08-08T14:29:50Z",
+      "day": "2026-08-08",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-08-rules-ruling-rule-11-378badd5ca17",
+      "instagram_post_id": "18094458344527735",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "04e909aa36e37e79aa2b8d5be160a31b8637b4130dd2fe615d363ee0967a02ad",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-08.mp4",
+      "fact_name": "Turn Undead",
+      "category": "rules_ruling",
+      "hook": "Turn Undead functions as a spell but doesn't count toward known spells.",
+      "body": "Turn Undead requires a roll to determine the highest level of undead affected, who then flee for 2d4 rounds. Missteps occur when players overlook that it operates outside of known spell limits, treating it as a limited resource when it's not. The real advantage is leveraging it in encounters where undead levels are uncertain, maximizing its utility without reservation.",
+      "cta": "GMs: Enforce Turn Undead's roll for highest undead level affected; it's not a limited spell, so use it freely."
     }
   ]
 }

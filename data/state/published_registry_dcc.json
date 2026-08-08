@@ -599,6 +599,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-07.mp4",
         "video_sha256": "cfa06b5135e3eb3827cc818b54e2010cbcf113719d09e04b6545efec22a8e8c6"
       }
+    },
+    {
+      "published_utc": "2026-08-08T14:20:23Z",
+      "day": "2026-08-08",
+      "content_id": "bgp-2026-08-08-rules-myth-rule-22-5ad17f8a1ee5",
+      "publish_hash": "93bb27af2b16f6101eb7decc4bb709d8f96b9dfea75bce5c103d74ee266f3021",
+      "youtube_video_id": "Z3YDV-KUkb4",
+      "youtube_url": "https://www.youtube.com/watch?v=Z3YDV-KUkb4",
+      "video_sha256": "9810f3105a1e595b6e7b02840389855b8b28a57da17b0e9d3f25d7522f2233af",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-08.mp4",
+      "fingerprint": {
+        "day": "2026-08-08",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-08-08-rules-myth-rule-22-5ad17f8a1ee5",
+        "canonical_hash": "5ad17f8a1ee5ffa362870c4744665af9b99b649ac251edd46193c87916c3296c",
+        "script_id": "bf5812cd9594a3cc87fcf2ff9fc4bf3d227b289cc667ef040fdacf6ce0a856d7",
+        "fact_kind": "rule",
+        "fact_pk": 22,
+        "fact_name": "Skill Checks",
+        "hook": "An untrained Skill Check only rolls 1d10, not 1d20, catching players off guard with lower success rates.",
+        "body": "Skill Checks hinge on whether a character's past trade aligns with the task at hand; trained skills roll 1d20 plus an ability modifier, while untrained ones only roll 1d10. This distinction means that players who assume a flat d20 for all checks will consistently overestimate their odds. Recognizing which skills are trained based on a character's 0-level occupation is crucial for setting realistic expectations and optimizing attempts.",
+        "cta": "Judges: Remind players that untrained skill checks roll 1d10, not 1d20, to curb their overconfidence.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-08.mp4",
+        "video_sha256": "9810f3105a1e595b6e7b02840389855b8b28a57da17b0e9d3f25d7522f2233af"
+      }
     }
   ]
 }
