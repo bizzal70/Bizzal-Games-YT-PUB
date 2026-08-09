@@ -442,5 +442,15 @@
       "spice": [],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-08-09": {
+    "encounter_seed": {
+      "angle": "time_pressure",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

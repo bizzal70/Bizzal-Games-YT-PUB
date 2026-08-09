@@ -625,6 +625,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-08.mp4",
         "video_sha256": "9810f3105a1e595b6e7b02840389855b8b28a57da17b0e9d3f25d7522f2233af"
       }
+    },
+    {
+      "published_utc": "2026-08-09T14:21:10Z",
+      "day": "2026-08-09",
+      "content_id": "bgp-2026-08-09-monster-tactic-creature-333-4f9f083f48bd",
+      "publish_hash": "866408e8031bae2579ed28ac87cfc7504940eb0f5d4bf438c37cb97a65fe194d",
+      "youtube_video_id": "pxMaOMQljCc",
+      "youtube_url": "https://www.youtube.com/watch?v=pxMaOMQljCc",
+      "video_sha256": "b0ba739ef56a3aee75881b8aa6cdb76cd8b273fc966fb093d1ea8c6da4ea7293",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-09.mp4",
+      "fingerprint": {
+        "day": "2026-08-09",
+        "category": "monster_tactic",
+        "angle": "dungeon_level_fit",
+        "content_id": "bgp-2026-08-09-monster-tactic-creature-333-4f9f083f48bd",
+        "canonical_hash": "4f9f083f48bd166432e304b073a142df40ec9288bd946d26749bbc6b6c97752b",
+        "script_id": "bc4d6630d4ea10f638d510b5adc903e8484a4aa95c5e68c8ca69b8734fa0b816",
+        "fact_kind": "creature",
+        "fact_pk": 333,
+        "fact_name": "Hellthorn",
+        "hook": "Hellthorn's tendril attack combines 1d6 damage with a grapple and poison sap that drains 1d4 Stamina.",
+        "body": "Hellthorn's 10d12 hit dice and AC 20 make it a formidable opponent, especially when its 0' movement suggests it will hold a position rather than pursue. Its tendril attack not only deals damage but also grapples and poisons, which can quickly debilitate a party's frontline. Many players underestimate the cumulative impact of the poison sap's Stamina drain, leading to weakened saves and reduced effectiveness. Prioritizing ranged attacks and avoiding the Hellthorn's reach can mitigate its pressure.",
+        "cta": "Judges: Plant the Hellthorn in a narrow corridor; its 0' movement and tendrils will punish any fool who tries to rush past.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-09.mp4",
+        "video_sha256": "b0ba739ef56a3aee75881b8aa6cdb76cd8b273fc966fb093d1ea8c6da4ea7293"
+      }
     }
   ]
 }

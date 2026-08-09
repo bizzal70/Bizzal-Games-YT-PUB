@@ -2771,6 +2771,72 @@
       "video_id": "18094458344527735",
       "day": "2026-08-08",
       "published_at": "2026-08-08T14:29:50+00:00"
+    },
+    {
+      "content_key": "64e5a1d11b601876352ed9d4237abc9b447c3c0795a1fc8554ce6953cafb9b73",
+      "token_text": "1d4 1d6 attack combine damage drain grapple hellthorn poison sap stamina tendril",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Hellthorn's tendril attack combines 1d6 damage with a grapple and poison sap #dcc",
+      "video_id": "pxMaOMQljCc",
+      "day": "2026-08-09",
+      "published_at": "2026-08-09T14:21:10+00:00"
+    },
+    {
+      "content_key": "5a40d3fbfa687583fefa208c6c38db56aedc2a938775b5bf053d28c446983da1",
+      "token_text": "1d4 1d6 attack combine damage drain grapple hellthorn poison sap stamina tendril",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Hellthorn's tendril attack combines 1d6 damage with a grapple and poison sap that drains 1d4 Stamina.",
+      "video_id": "18089268311638793",
+      "day": "2026-08-09",
+      "published_at": "2026-08-09T14:22:38+00:00"
+    },
+    {
+      "content_key": "49b08fcb72a4e51cd17669a783da59d30a45e04b6a460b8b5ab43948763f3105",
+      "token_text": "bronze certainty dragon encounter frame must party so speed timer trade young",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Frame a Young Bronze Dragon encounter with a timer so the party must trade #dnd5e",
+      "video_id": "rrdxfl4BxUM",
+      "day": "2026-08-09",
+      "published_at": "2026-08-09T14:27:09+00:00"
+    },
+    {
+      "content_key": "9fb75addd544e5c347249ab229ecbe52e243ebb464bd8b6ab2710b426315a705",
+      "token_text": "bronze certainty dragon encounter frame must party so speed timer trade young",
+      "system_id": "dnd5e",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Frame a Young Bronze Dragon encounter with a timer so the party must trade certainty for speed.",
+      "video_id": "18138213121505131",
+      "day": "2026-08-09",
+      "published_at": "2026-08-09T14:28:07+00:00"
+    },
+    {
+      "content_key": "257c71da46e6065093c88314f21a0e90a872534d6663bc89478e83d7708572fd",
+      "token_text": "10 daily hat hound last only round transformation",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Hat Of The Hound's transformation lasts only 10 rounds daily #shadowdark",
+      "video_id": "y7xvOi2q7ew",
+      "day": "2026-08-09",
+      "published_at": "2026-08-09T14:31:19+00:00"
+    },
+    {
+      "content_key": "7e7eaea64a6e84c49b1ef149cdd2ec1fe581d7044e96000965cc0faad017ea1e",
+      "token_text": "10 daily hat hound last only round transformation",
+      "system_id": "shadowdark",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Hat Of The Hound's transformation lasts only 10 rounds daily.",
+      "video_id": "18108161159056726",
+      "day": "2026-08-09",
+      "published_at": "2026-08-09T14:32:17+00:00"
     }
   ]
 }

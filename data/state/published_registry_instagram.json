@@ -1167,6 +1167,51 @@
       "hook": "Turn Undead functions as a spell but doesn't count toward known spells.",
       "body": "Turn Undead requires a roll to determine the highest level of undead affected, who then flee for 2d4 rounds. Missteps occur when players overlook that it operates outside of known spell limits, treating it as a limited resource when it's not. The real advantage is leveraging it in encounters where undead levels are uncertain, maximizing its utility without reservation.",
       "cta": "GMs: Enforce Turn Undead's roll for highest undead level affected; it's not a limited spell, so use it freely."
+    },
+    {
+      "published_utc": "2026-08-09T14:22:38Z",
+      "day": "2026-08-09",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-09-monster-tactic-creature-333-4f9f083f48bd",
+      "instagram_post_id": "18089268311638793",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "b0ba739ef56a3aee75881b8aa6cdb76cd8b273fc966fb093d1ea8c6da4ea7293",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-09.mp4",
+      "fact_name": "Hellthorn",
+      "category": "monster_tactic",
+      "hook": "Hellthorn's tendril attack combines 1d6 damage with a grapple and poison sap that drains 1d4 Stamina.",
+      "body": "Hellthorn's 10d12 hit dice and AC 20 make it a formidable opponent, especially when its 0' movement suggests it will hold a position rather than pursue. Its tendril attack not only deals damage but also grapples and poisons, which can quickly debilitate a party's frontline. Many players underestimate the cumulative impact of the poison sap's Stamina drain, leading to weakened saves and reduced effectiveness. Prioritizing ranged attacks and avoiding the Hellthorn's reach can mitigate its pressure.",
+      "cta": "Judges: Plant the Hellthorn in a narrow corridor; its 0' movement and tendrils will punish any fool who tries to rush past."
+    },
+    {
+      "published_utc": "2026-08-09T14:28:07Z",
+      "day": "2026-08-09",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-09-encounter-seed-creature-srd-2024-young-bronze-dragon-b3c1b4fb7673",
+      "instagram_post_id": "18138213121505131",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "dd3931226ea10a7e243e95650e1eb3c86395446d9ce210d4ed8a5e41f3d1d20b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-09.mp4",
+      "fact_name": "Young Bronze Dragon",
+      "category": "encounter_seed",
+      "hook": "Frame a Young Bronze Dragon encounter with a timer so the party must trade certainty for speed.",
+      "body": "Lightning Breath recharges on a 5-6, creating a consistent threat that forces players to spread out or suffer high damage. Multiattack combines a bite and two claw attacks, exploiting any positioning errors. With AC 17 and 142 HP, the dragon can withstand several rounds of focus fire, making time management crucial. Failing to press the advantage when the dragon recharges its breath weapon can lead to significant resource loss.",
+      "cta": "DMs: Remind players that the Young Bronze Dragon's Lightning Breath recharges on a 5-6; spread out to avoid a 60-foot line of 10d10 damage."
+    },
+    {
+      "published_utc": "2026-08-09T14:32:17Z",
+      "day": "2026-08-09",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-09-item-spotlight-item-31-79f8100b0b1f",
+      "instagram_post_id": "18108161159056726",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "1d4aacf6d027ddadfb28875cd6398ad742b8e34a22466cf9caf1f38c4e218822",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-09.mp4",
+      "fact_name": "Hat Of The Hound",
+      "category": "item_spotlight",
+      "hook": "Hat Of The Hound's transformation lasts only 10 rounds daily.",
+      "body": "Transforming into a mastiff with Hat Of The Hound is limited to 10 rounds per day, and your gear transforms with you. Many players activate this ability too early, depleting it before truly impactful situations arise. Delaying its use until it can decisively change the outcome of a significant challenge maximizes its effectiveness.",
+      "cta": "GMs: Hold the Hat Of The Hound's 10-round transformation for when a mastiff's speed or scent can turn the tide."
     }
   ]
 }

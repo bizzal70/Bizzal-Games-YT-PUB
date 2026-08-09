@@ -963,6 +963,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-08.mp4",
         "video_sha256": "04e909aa36e37e79aa2b8d5be160a31b8637b4130dd2fe615d363ee0967a02ad"
       }
+    },
+    {
+      "published_utc": "2026-08-09T14:31:19Z",
+      "day": "2026-08-09",
+      "content_id": "bgp-2026-08-09-item-spotlight-item-31-79f8100b0b1f",
+      "publish_hash": "e93941ca639092457bfd5ba0403cb3fa4276f0a4bde7f9edd3b2d3d0890d991f",
+      "youtube_video_id": "y7xvOi2q7ew",
+      "youtube_url": "https://www.youtube.com/watch?v=y7xvOi2q7ew",
+      "video_sha256": "1d4aacf6d027ddadfb28875cd6398ad742b8e34a22466cf9caf1f38c4e218822",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-09.mp4",
+      "fingerprint": {
+        "day": "2026-08-09",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-08-09-item-spotlight-item-31-79f8100b0b1f",
+        "canonical_hash": "79f8100b0b1f9ef1024084749b12e5e4efc9bac9741f4cdf960f6334d2c2f552",
+        "script_id": "27c87d0863ad54341874aa4ef8fc04fe057f4b586a566db344bfe24dce65159e",
+        "fact_kind": "item",
+        "fact_pk": 31,
+        "fact_name": "Hat Of The Hound",
+        "hook": "Hat Of The Hound's transformation lasts only 10 rounds daily.",
+        "body": "Transforming into a mastiff with Hat Of The Hound is limited to 10 rounds per day, and your gear transforms with you. Many players activate this ability too early, depleting it before truly impactful situations arise. Delaying its use until it can decisively change the outcome of a significant challenge maximizes its effectiveness.",
+        "cta": "GMs: Hold the Hat Of The Hound's 10-round transformation for when a mastiff's speed or scent can turn the tide.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-09.mp4",
+        "video_sha256": "1d4aacf6d027ddadfb28875cd6398ad742b8e34a22466cf9caf1f38c4e218822"
+      },
+      "tone_lint_violation": "vague filler phrase: maximizes its effectiveness"
     }
   ]
 }

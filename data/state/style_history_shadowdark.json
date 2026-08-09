@@ -446,5 +446,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-09": {
+    "item_spotlight": {
+      "angle": "clever_use",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "dungeon_gear_mentor",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

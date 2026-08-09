@@ -1273,6 +1273,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-08.mp4",
         "video_sha256": "afc17a3a9c77dea52f8b9da0c4f8e0d456b53bf194b84b2129395c862b530e9b"
       }
+    },
+    {
+      "published_utc": "2026-08-09T14:27:09Z",
+      "day": "2026-08-09",
+      "content_id": "bgp-2026-08-09-encounter-seed-creature-srd-2024-young-bronze-dragon-b3c1b4fb7673",
+      "publish_hash": "0df15b15d9b00c4f0df25e684704c8821d48d21822f6adbbe907c01e6b818040",
+      "youtube_video_id": "rrdxfl4BxUM",
+      "youtube_url": "https://www.youtube.com/watch?v=rrdxfl4BxUM",
+      "video_sha256": "dd3931226ea10a7e243e95650e1eb3c86395446d9ce210d4ed8a5e41f3d1d20b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-09.mp4",
+      "fingerprint": {
+        "day": "2026-08-09",
+        "category": "encounter_seed",
+        "angle": "time_pressure",
+        "content_id": "bgp-2026-08-09-encounter-seed-creature-srd-2024-young-bronze-dragon-b3c1b4fb7673",
+        "canonical_hash": "b3c1b4fb7673fc0eacbdff2290056922549af29a52fa89986ca55d7c0a2a5266",
+        "script_id": "5705f2b6f939e9c9f66fa823e8c34d1e26dc102fac150d34c660d8ec30b95e96",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_young-bronze-dragon",
+        "fact_name": "Young Bronze Dragon",
+        "hook": "Frame a Young Bronze Dragon encounter with a timer so the party must trade certainty for speed.",
+        "body": "Lightning Breath recharges on a 5-6, creating a consistent threat that forces players to spread out or suffer high damage. Multiattack combines a bite and two claw attacks, exploiting any positioning errors. With AC 17 and 142 HP, the dragon can withstand several rounds of focus fire, making time management crucial. Failing to press the advantage when the dragon recharges its breath weapon can lead to significant resource loss.",
+        "cta": "DMs: Remind players that the Young Bronze Dragon's Lightning Breath recharges on a 5-6; spread out to avoid a 60-foot line of 10d10 damage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-09.mp4",
+        "video_sha256": "dd3931226ea10a7e243e95650e1eb3c86395446d9ce210d4ed8a5e41f3d1d20b"
+      }
     }
   ]
 }

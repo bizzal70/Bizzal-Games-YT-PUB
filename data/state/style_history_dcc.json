@@ -358,5 +358,15 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-09": {
+    "monster_tactic": {
+      "angle": "dungeon_level_fit",
+      "voice": "grim_referee",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }
