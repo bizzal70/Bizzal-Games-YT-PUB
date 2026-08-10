@@ -1,6 +1,83 @@
 [
   {
     "system": "dnd5e",
+    "title": "D&D Icons: Reviving Classic Creators",
+    "angle": "Exploring how the new 'D&D Icons' line is bringing back classic creators and what it means for the game.",
+    "rationale": "The announcement of the 'D&D Icons' line is creating buzz by promising to merge classic elements with new creativity.",
+    "fixture_hint": "rule",
+    "search_keyword": "Dungeons & Dragons Icons line announced",
+    "created_date": "2026-08-10",
+    "status": "pending",
+    "brief_id": "6b4e053bc5d5"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Mischief Monsters: A Shadowdark Playstyle Shift",
+    "angle": "Examining how the new monsters introduced at Gen Con can change player strategies in Shadowdark.",
+    "rationale": "With Gen Con news highlighting new releases, Shadowdark's roster of creatures is expanding.",
+    "fixture_hint": "creature",
+    "search_keyword": "Gen Con grows to 74,000 attendees, remains world's second largest tabletop gaming convention",
+    "created_date": "2026-08-10",
+    "status": "pending",
+    "brief_id": "519c88822afa"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's New Soundtrack: Immersion Through Music",
+    "angle": "How the 'Witch of the Dark Castle' soundtrack enhances gameplay and atmosphere in Shadowdark.",
+    "rationale": "The release of the Veritas Tales soundtrack adds a new dimension to Shadowdark's immersive experience.",
+    "fixture_hint": "item",
+    "search_keyword": "Veritas Tales: Witch of the Dark Castle Original Soundtrack from Basiscape is now available",
+    "created_date": "2026-08-10",
+    "status": "pending",
+    "brief_id": "27dedd8ddc02"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Credit Where It's Due: Shadowdark's Creator Collaborations",
+    "angle": "Investigating the impact of fair creator recognition on Shadowdark's evolving game mechanics.",
+    "rationale": "The conversation around giving creators due credit has implications for Shadowdark's development.",
+    "fixture_hint": "rule",
+    "search_keyword": "Giving creators their due credit: better practices for publishers, awards, and media",
+    "created_date": "2026-08-10",
+    "status": "pending",
+    "brief_id": "38b1cb9b9f28"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Diana Jones Award: What It Means for Play",
+    "angle": "Exploring how winning the Diana Jones Award impacts the perception and play of Dungeon Crawl Classics.",
+    "rationale": "Mischief Toy Store's award win at a major event puts a spotlight on DCC's unique appeal.",
+    "fixture_hint": "rule",
+    "search_keyword": "Mischief Toy Store wins 2026's Diana Jones Award",
+    "created_date": "2026-08-10",
+    "status": "pending",
+    "brief_id": "d9bb071f11e0"
+  },
+  {
+    "system": "dcc",
+    "title": "New DCC Spell Mechanics: A Deeper Dive",
+    "angle": "Analyzing the latest spell updates from DCC and how they challenge traditional casting methods.",
+    "rationale": "Recent news at Gen Con suggests evolving systems within DCC that could reshape spellcasting.",
+    "fixture_hint": "spell",
+    "search_keyword": "Gen Con grows to 74,000 attendees, remains world's second largest tabletop gaming convention",
+    "created_date": "2026-08-10",
+    "status": "pending",
+    "brief_id": "1d1d5972025a"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Iconic Monsters: New Designs Unveiled",
+    "angle": "A close look at the latest monster designs in DCC and their tactical implications.",
+    "rationale": "With DCC's monsters gaining attention post-Gen Con, their impact on gameplay is worth exploring.",
+    "fixture_hint": "creature",
+    "search_keyword": "Congratulations to 2026 ENnies Winners!",
+    "created_date": "2026-08-10",
+    "status": "pending",
+    "brief_id": "1ff76557ef24"
+  },
+  {
+    "system": "dnd5e",
     "title": "Dark Sun's Return: Mature Themes in D&D 2027",
     "angle": "Explore how the mature-rated setting will handle themes like slavery and survival.",
     "rationale": "The return of Dark Sun as a mature setting is a major announcement from Gen Con.",
