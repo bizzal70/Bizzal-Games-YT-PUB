@@ -2881,6 +2881,39 @@
       "video_id": "18120424916308646",
       "day": "2026-08-10",
       "published_at": "2026-08-10T14:41:17+00:00"
+    },
+    {
+      "content_key": "18bc859f4ec036ad33096751e576a0c31db9eeab35e66a016d03c208ccd466e0",
+      "token_text": "centipede explained mechanic paralyzing poison swarm",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Swarm Centipede: Paralyzing Poison Mechanics Explained #shadowdark",
+      "video_id": "JNfYArdNUL4",
+      "day": "2026-08-10",
+      "published_at": "2026-08-10T17:41:49+00:00"
+    },
+    {
+      "content_key": "1e877b275d853e82c65cec9ce8f6d755cd2770c9a14d287dbbac97d211ecbb26",
+      "token_text": "12 centipede dc failed paralyze save swarm",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Swarm Centipede paralyzes with failed DC 12 save #shadowdark",
+      "video_id": "fEJWLfyIcdU",
+      "day": "2026-08-10-shadowdark-clip1",
+      "published_at": "2026-08-10T17:43:49+00:00"
+    },
+    {
+      "content_key": "66f461761c65be1f0147c9c19fdcab35c647cc5e502530451390ad3ca561970c",
+      "token_text": "attack centipede mental swarm vulnerable",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Swarm Centipede is vulnerable to mental attacks #shadowdark",
+      "video_id": "kA2lCqnqgnE",
+      "day": "2026-08-10-shadowdark-clip2",
+      "published_at": "2026-08-10T17:45:16+00:00"
     }
   ]
 }

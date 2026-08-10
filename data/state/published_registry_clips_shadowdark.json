@@ -207,6 +207,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-07-shadowdark-clip3.mp4",
         "video_sha256": "cbfe1c37337768700d126849dc8be5892b404292e0adc64cc83c0144c2d2fac0"
       }
+    },
+    {
+      "published_utc": "2026-08-10T17:43:49Z",
+      "day": "2026-08-10-shadowdark-clip1",
+      "content_id": "clip:fed36049ff7c48e6",
+      "publish_hash": "46f4f325a62dc0b885af0c5ea15f12d2d454533563ad685a342e173c7ab6c357",
+      "youtube_video_id": "fEJWLfyIcdU",
+      "youtube_url": "https://www.youtube.com/watch?v=fEJWLfyIcdU",
+      "video_sha256": "0c6d10a21ba225f5ea9204895436836cdc533fac2d73d687e3c589fd5c533582",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-10-shadowdark-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-08-10-shadowdark-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:fed36049ff7c48e6",
+        "canonical_hash": "",
+        "script_id": "fed36049ff7c48e66e1d36402653d59e49bfa70eb2ab921e5e69672f616ae629",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Swarm Centipede paralyzes with failed DC 12 save",
+        "hook": "Swarm Centipede paralyzes with failed DC 12 save",
+        "body": "When bitten by a Swarm Centipede, a failed DC 12 Constitution save means you're paralyzed for 1d4 rounds. This paralysis stops actions and reactions, making you vulnerable in combat. Plan to boost Constitution saves or use advantage-granting abilities.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-10-shadowdark-clip1.mp4",
+        "video_sha256": "0c6d10a21ba225f5ea9204895436836cdc533fac2d73d687e3c589fd5c533582"
+      }
+    },
+    {
+      "published_utc": "2026-08-10T17:45:16Z",
+      "day": "2026-08-10-shadowdark-clip2",
+      "content_id": "clip:4cb1823b14c4ec8d",
+      "publish_hash": "213b52c5b0c2d02d8c163c783ee00f8055a5c049e36f80df40b84f9a3ad177e2",
+      "youtube_video_id": "kA2lCqnqgnE",
+      "youtube_url": "https://www.youtube.com/watch?v=kA2lCqnqgnE",
+      "video_sha256": "b0643284d26c50446f0bb1eb9571b791978ac3e7da2bafaf022697e7110025a8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-10-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-08-10-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:4cb1823b14c4ec8d",
+        "canonical_hash": "",
+        "script_id": "4cb1823b14c4ec8d2d9bc471d2589f2a66c407e23e242ebd155abb95ca9135ee",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Swarm Centipede is vulnerable to mental attacks",
+        "hook": "Swarm Centipede is vulnerable to mental attacks",
+        "body": "Despite its poison, the Swarm Centipede has low mental defenses. With negative intelligence, wisdom, and charisma, it's vulnerable to spells targeting these stats. Exploit this by using spells or tactics that focus on its mental weaknesses.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-10-shadowdark-clip2.mp4",
+        "video_sha256": "b0643284d26c50446f0bb1eb9571b791978ac3e7da2bafaf022697e7110025a8"
+      }
     }
   ]
 }

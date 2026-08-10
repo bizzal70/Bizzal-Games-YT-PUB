@@ -77,6 +77,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_shadowdark/by_day/2026-08-07.mp4",
         "video_sha256": "0b9e90b1616b49c00ab3f70d71a50d60e3717fdb7e94a0ecd632cf953553ec61"
       }
+    },
+    {
+      "published_utc": "2026-08-10T17:41:49Z",
+      "day": "2026-08-10",
+      "content_id": "",
+      "publish_hash": "39fd2030ceaa3005e8a4df4fddacf11c5f72470875584677b6be3732a8f3b58c",
+      "youtube_video_id": "JNfYArdNUL4",
+      "youtube_url": "https://www.youtube.com/watch?v=JNfYArdNUL4",
+      "video_sha256": "649712621fbc17c04cb70727adb80e93f9a7a2b9176aff050c04c902b2e3b08d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_shadowdark/by_day/2026-08-10.mp4",
+      "fingerprint": {
+        "day": "2026-08-10",
+        "category": "monster_tactic",
+        "angle": "deep_dive",
+        "content_id": "",
+        "canonical_hash": "",
+        "script_id": "815bc021425f69336269edb9e419ad805c589e777d33f99fdd4a0051973752c7",
+        "fact_kind": "creature",
+        "fact_pk": 33,
+        "fact_name": "Swarm Centipede",
+        "hook": "Swarm Centipede: Paralyzing Poison Mechanics Explained",
+        "body": "The Swarm Centipede is a level 4 creature in the Shadowdark RPG, known for its paralyzing poison and climbing ability. With an armor class of 11 and 18 hit points, it's a challenging adversary for adventurers. Its main attack is a bite that deals 1d4 damage plus poison, requiring a DC 12 Constitution saving throw to avoid paralysis. In this video, we'll explore the Swarm Centipede's strengths, weaknesses, and how to effectively use or counter it in your campaigns.\n\nUnderstanding the Swarm Centipede's Attacks. The Swarm Centipede's primary attack is its bite, which has a +1 to hit and deals 1d4 damage. However, the real threat comes from its poison. When a creature is bitten, it must succeed on a DC 12 Constitution saving throw or be paralyzed for 1d4 rounds. This paralysis can be a game-changer in combat, as it renders the target unable to take actions or reactions. Players and Game Masters should be aware of the implications of this condition, especially in encounters where multiple creatures can take advantage of a paralyzed target.\n\nExploiting the Swarm Centipede's Weaknesses. Despite its dangerous poison, the Swarm Centipede has notable weaknesses. With a low armor class of 11, it's relatively easy to hit, and its negative strength modifier means it doesn't deal much physical damage. Additionally, its intelligence, wisdom, and charisma scores are all significantly negative, making it vulnerable to spells and abilities that target these attributes. Players can exploit these weaknesses by using spells or tactics that capitalize on its low mental defenses, effectively neutralizing its threat before it can paralyze the party.\n\nMovement and Positioning Strategies. The Swarm Centipede's movement is described as 'near' with climbing ability, suggesting it can navigate vertical surfaces with ease. This makes it an ideal ambusher in environments with ample vertical terrain, such as caves or ruins. Game Masters should use this mobility to create dynamic encounters where the centipede can strike from unexpected angles. Conversely, players should be vigilant about their surroundings and consider using ranged attacks or spells to keep the centipede at bay, minimizing the risk of being bitten and paralyzed.\n\nManaging the Poison Effect. The poison effect of the Swarm Centipede is its most dangerous feature. A failed DC 12 Constitution saving throw results in paralysis for 1d4 rounds, which can significantly alter the tide of battle. Players should prioritize boosting their Constitution saves or using spells and abilities that grant advantage on saving throws. Additionally, having a plan to deal with paralyzed allies, such as using healing spells or items that can break the condition, is crucial. Game Masters should balance encounters to account for this potent ability, ensuring that it remains a challenge without being overwhelming.\n\nRole in Campaigns and Storytelling. Incorporating the Swarm Centipede into a campaign can add a layer of tension and challenge. Its natural habitat and climbing ability make it suitable for encounters in dungeons, forests, or abandoned structures. As a neutral-aligned creature, it can be used in various narrative roles, from a simple obstacle to a key element in a larger plot. Game Masters can use the centipede to highlight the dangers of a particular environment, or as a test of the party's ability to handle status conditions. Its presence can serve as a reminder of the unpredictable nature of the Shadowdark world.\n\nThe Swarm Centipede is a formidable opponent that tests a party's ability to handle paralysis and exploit weaknesses. Whether you're a player or a Game Master, understanding its mechanics can enhance your Shadowdark RPG experience. Remember to consider its climbing ability and the impact of its poison when planning encounters. If you enjoyed this deep dive, be sure to subscribe for more insights into the creatures and mechanics of Shadowdark RPG.",
+        "cta": "Subscribe for new tabletop RPG deep dives every Monday, Wednesday, and Friday. Follow Bizzal Games on YouTube and Instagram.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_longform_shadowdark/by_day/2026-08-10.mp4",
+        "video_sha256": "649712621fbc17c04cb70727adb80e93f9a7a2b9176aff050c04c902b2e3b08d"
+      }
     }
   ]
 }
