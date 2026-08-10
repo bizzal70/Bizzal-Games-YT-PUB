@@ -1299,6 +1299,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-09.mp4",
         "video_sha256": "dd3931226ea10a7e243e95650e1eb3c86395446d9ce210d4ed8a5e41f3d1d20b"
       }
+    },
+    {
+      "published_utc": "2026-08-10T14:40:33Z",
+      "day": "2026-08-10",
+      "content_id": "bgp-2026-08-10-rules-myth-rule-srd-2024-proficiency-equipment-proficiencies-ea1ff806b772",
+      "publish_hash": "c3428a3d13861d41bb67f83814e02416f0c7b4ad2cc0f7992e28b781eeba71c1",
+      "youtube_video_id": "VJFC_9zHinM",
+      "youtube_url": "https://www.youtube.com/watch?v=VJFC_9zHinM",
+      "video_sha256": "6a682a371416bc16d244335e65cec25d6ddd1681f70342d272265b1a4ff95d4b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-10.mp4",
+      "fingerprint": {
+        "day": "2026-08-10",
+        "category": "rules_myth",
+        "angle": "quick_example",
+        "content_id": "bgp-2026-08-10-rules-myth-rule-srd-2024-proficiency-equipment-proficiencies-ea1ff806b772",
+        "canonical_hash": "ea1ff806b772bc311bc1929d879f61fa262f27664d70e10e23c2f33dd97ca69a",
+        "script_id": "3ae85549eaf1c4de928d9e0e15b962b9a889e0e8fb4989e8cf15e34669317a40",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_proficiency_equipment-proficiencies",
+        "fact_name": "Equipment Proficiencies",
+        "hook": "Equipment Proficiencies determine which weapons and tools a character can use effectively without penalty.",
+        "body": "Equipment Proficiencies are divided into weapons and tools, and a character's class and background dictate these proficiencies. Mistakes arise when players assume proficiency with all weapons or tools, leading to penalties on attack rolls or checks. Clarifying a character's specific proficiencies prevents these errors and ensures optimal use of equipment in gameplay.",
+        "cta": "DMs: Confirm each character's equipment proficiencies at creation to avoid penalties on attack rolls or checks later.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-10.mp4",
+        "video_sha256": "6a682a371416bc16d244335e65cec25d6ddd1681f70342d272265b1a4ff95d4b"
+      }
     }
   ]
 }

@@ -452,5 +452,15 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-08-10": {
+    "rules_myth": {
+      "angle": "quick_example",
+      "voice": "friendly_vet",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

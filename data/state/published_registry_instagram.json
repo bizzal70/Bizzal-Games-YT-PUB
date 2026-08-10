@@ -1212,6 +1212,36 @@
       "hook": "Hat Of The Hound's transformation lasts only 10 rounds daily.",
       "body": "Transforming into a mastiff with Hat Of The Hound is limited to 10 rounds per day, and your gear transforms with you. Many players activate this ability too early, depleting it before truly impactful situations arise. Delaying its use until it can decisively change the outcome of a significant challenge maximizes its effectiveness.",
       "cta": "GMs: Hold the Hat Of The Hound's 10-round transformation for when a mastiff's speed or scent can turn the tide."
+    },
+    {
+      "published_utc": "2026-08-10T14:37:15Z",
+      "day": "2026-08-10",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-10-spell-use-case-spell-117-258a2ac4d5db",
+      "instagram_post_id": "17949121242034493",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "07aa02d004fbc86f3d0ed4d070379982ee6b55d95f73df810e27ea7a126796f7",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-10.mp4",
+      "fact_name": "Ray of Enfeeblement",
+      "category": "spell_use_case",
+      "hook": "Ray of Enfeeblement requires at least 1 point of spellburn to cast, catching many wizards off guard.",
+      "body": "With a range of 150 feet and an instantaneous duration, Ray of Enfeeblement can drastically alter an encounter by draining a target's Strength. The spell's effectiveness hinges on the wizard's spell check, with higher results causing more significant and longer-lasting Strength reduction. The common oversight is casting it purely for damage, missing the strategic opportunity to incapacitate a key target. Optimal use involves targeting foes with high Strength reliance, turning them into helpless masses at zero Strength.",
+      "cta": "Judges: Make them burn at least 1 point of spellburn and target the muscle-bound brute, not the cannon fodder."
+    },
+    {
+      "published_utc": "2026-08-10T14:41:17Z",
+      "day": "2026-08-10",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-10-rules-myth-rule-srd-2024-proficiency-equipment-proficiencies-ea1ff806b772",
+      "instagram_post_id": "18120424916308646",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "6a682a371416bc16d244335e65cec25d6ddd1681f70342d272265b1a4ff95d4b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-10.mp4",
+      "fact_name": "Equipment Proficiencies",
+      "category": "rules_myth",
+      "hook": "Equipment Proficiencies determine which weapons and tools a character can use effectively without penalty.",
+      "body": "Equipment Proficiencies are divided into weapons and tools, and a character's class and background dictate these proficiencies. Mistakes arise when players assume proficiency with all weapons or tools, leading to penalties on attack rolls or checks. Clarifying a character's specific proficiencies prevents these errors and ensures optimal use of equipment in gameplay.",
+      "cta": "DMs: Confirm each character's equipment proficiencies at creation to avoid penalties on attack rolls or checks later."
     }
   ]
 }

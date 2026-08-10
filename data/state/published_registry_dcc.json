@@ -651,6 +651,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-09.mp4",
         "video_sha256": "b0ba739ef56a3aee75881b8aa6cdb76cd8b273fc966fb093d1ea8c6da4ea7293"
       }
+    },
+    {
+      "published_utc": "2026-08-10T14:36:29Z",
+      "day": "2026-08-10",
+      "content_id": "bgp-2026-08-10-spell-use-case-spell-117-258a2ac4d5db",
+      "publish_hash": "0839f948b14bfe514456b988c686003dc89901d22295250e842cb58c4b399348",
+      "youtube_video_id": "8VorE1SzQAQ",
+      "youtube_url": "https://www.youtube.com/watch?v=8VorE1SzQAQ",
+      "video_sha256": "07aa02d004fbc86f3d0ed4d070379982ee6b55d95f73df810e27ea7a126796f7",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-10.mp4",
+      "fingerprint": {
+        "day": "2026-08-10",
+        "category": "spell_use_case",
+        "angle": "corruption_risk",
+        "content_id": "bgp-2026-08-10-spell-use-case-spell-117-258a2ac4d5db",
+        "canonical_hash": "258a2ac4d5dba22f9662d58b35f94018203aaf1edc8d088490da3e7a0817d5e5",
+        "script_id": "30d3ff91146e2e0dba79f04489a0c75ab3d5bbb4943778952a1d44a7978bf93c",
+        "fact_kind": "spell",
+        "fact_pk": 117,
+        "fact_name": "Ray of Enfeeblement",
+        "hook": "Ray of Enfeeblement requires at least 1 point of spellburn to cast, catching many wizards off guard.",
+        "body": "With a range of 150 feet and an instantaneous duration, Ray of Enfeeblement can drastically alter an encounter by draining a target's Strength. The spell's effectiveness hinges on the wizard's spell check, with higher results causing more significant and longer-lasting Strength reduction. The common oversight is casting it purely for damage, missing the strategic opportunity to incapacitate a key target. Optimal use involves targeting foes with high Strength reliance, turning them into helpless masses at zero Strength.",
+        "cta": "Judges: Make them burn at least 1 point of spellburn and target the muscle-bound brute, not the cannon fodder.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-10.mp4",
+        "video_sha256": "07aa02d004fbc86f3d0ed4d070379982ee6b55d95f73df810e27ea7a126796f7"
+      }
     }
   ]
 }

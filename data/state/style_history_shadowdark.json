@@ -456,5 +456,15 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-10": {
+    "encounter_seed": {
+      "angle": "three_beats",
+      "voice": "torchbearer_ref",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }
