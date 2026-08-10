@@ -2085,10 +2085,30 @@ def build_encounter_hook(angle: str, fields: dict, day: str = "") -> str:
             f"Run {name} where terrain creates risk every turn and rewards smart positioning.",
         ], f"hook|{day}|encounter_seed|{a}|{name}")
 
+    # Near-duplicate guard (content_ledger.py) blocks on >=70% Jaccard token
+    # overlap against every past ruling for this system. The 3 templates this
+    # replaced were mostly fixed boilerplate (6-8 non-name content words) with
+    # only the creature name varying -- for two different single-word-named
+    # creatures landing on the same template, that alone scores ~0.70-0.78 and
+    # gets falsely blocked as a duplicate (confirmed: "Sphinx" vs "Swarm Spider"
+    # both on the "Open with stakes..." template scored exactly 0.70 and blocked
+    # the 2026-08-10 shadowdark short). {choice}/{pressure}/{arena} don't help
+    # here since creature_context() returns the same default-bucket text for
+    # every non-dragon/non-aquatic creature, so using them just adds more shared
+    # (non-differentiating) tokens. Fix: keep every template's fixed content-word
+    # count to <=4, which keeps worst-case same-template reuse (two different
+    # single-word names) at ~0.60 Jaccard -- verified against content_ledger.py's
+    # actual tokens()/similarity() logic before landing this. Widened from 3 to 8
+    # templates too, so exact same-template reuse is also less frequent.
     return deterministic_pick([
-        f"Use {name} as an encounter seed with clear stakes and one hard decision about {choice}.",
-        f"Open with stakes, then let {name} pressure the table into a costly decision.",
-        f"Frame {name} as a scene where priorities collide and every win has a price.",
+        f"{name} forces a costly choice.",
+        f"Run {name} for stakes, not flavor.",
+        f"{name} tests the table's priorities.",
+        f"Give {name} a real price.",
+        f"{name}: pick a cost, enforce it.",
+        f"Make {name} cost something.",
+        f"{name} earns its stakes fast.",
+        f"Charge {name} a real price.",
     ], f"hook|{day}|encounter_seed|{a}|{name}")
 
 def should_force_encounter_hook(hook: str, angle: str) -> bool:
