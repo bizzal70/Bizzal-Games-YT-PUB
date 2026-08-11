@@ -990,6 +990,32 @@
         "video_sha256": "1d4aacf6d027ddadfb28875cd6398ad742b8e34a22466cf9caf1f38c4e218822"
       },
       "tone_lint_violation": "vague filler phrase: maximizes its effectiveness"
+    },
+    {
+      "published_utc": "2026-08-11T14:54:04Z",
+      "day": "2026-08-11",
+      "content_id": "bgp-2026-08-11-rules-myth-rule-7-cedad7f47345",
+      "publish_hash": "59e050a1ce32b646940cd560dd0bac12d82bd0c594a70b396aadac84297e4832",
+      "youtube_video_id": "Gk6cDvsQmrs",
+      "youtube_url": "https://www.youtube.com/watch?v=Gk6cDvsQmrs",
+      "video_sha256": "954f5011b9fb35ad9affc1c0f5204f8b7ef65b6dbcdd3b0d3c5564830905faba",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-11.mp4",
+      "fingerprint": {
+        "day": "2026-08-11",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-08-11-rules-myth-rule-7-cedad7f47345",
+        "canonical_hash": "cedad7f47345879c958a788f29f9705f016e89373a69ad8f2419045c07629dc0",
+        "script_id": "e14bc5ac21f533876bd2db83cc5bcb535d85a63284ef0043829d3310c774d98d",
+        "fact_kind": "rule",
+        "fact_pk": 7,
+        "fact_name": "Morale",
+        "hook": "Morale checks occur when half a monster group is defeated or a key ally falls.",
+        "body": "Morale requires a DC 15 Wisdom check when these conditions are met. Failure results in monsters fleeing or surrendering, which can abruptly shift combat dynamics. Applying morale checks correctly prevents disputes and ensures encounters end predictably.",
+        "cta": "GMs: Enforce a DC 15 Wisdom check for morale when half the monsters fall; watch your players scramble.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-11.mp4",
+        "video_sha256": "954f5011b9fb35ad9affc1c0f5204f8b7ef65b6dbcdd3b0d3c5564830905faba"
+      }
     }
   ]
 }

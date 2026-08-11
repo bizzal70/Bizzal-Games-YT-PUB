@@ -380,5 +380,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-08-11": {
+    "rules_ruling": {
+      "angle": "luck_burn_timing",
+      "voice": "chaos_herald",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "fable"
+    }
   }
 }

@@ -1325,6 +1325,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-10.mp4",
         "video_sha256": "6a682a371416bc16d244335e65cec25d6ddd1681f70342d272265b1a4ff95d4b"
       }
+    },
+    {
+      "published_utc": "2026-08-11T14:45:12Z",
+      "day": "2026-08-11",
+      "content_id": "bgp-2026-08-11-class-spotlight-class-tashas-cauldron-alchemist-35a61235b4c5",
+      "publish_hash": "031772559cdff3f6d5b0cb3474b764bc4ac90e82c2034edce115455a344fa748",
+      "youtube_video_id": "ufDI36x3bJE",
+      "youtube_url": "https://www.youtube.com/watch?v=ufDI36x3bJE",
+      "video_sha256": "81060001c803d299b4cb3323f2a6b387b3aed7634004a314c7435363e782faa2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-11.mp4",
+      "fingerprint": {
+        "day": "2026-08-11",
+        "category": "class_spotlight",
+        "angle": "subclass_identity",
+        "content_id": "bgp-2026-08-11-class-spotlight-class-tashas-cauldron-alchemist-35a61235b4c5",
+        "canonical_hash": "35a61235b4c5fc7b00680bfb99887d1fff8519ef440e6e989ce5731bf2911892",
+        "script_id": "8fa91a3eebcd17c970f40970ba0af7089dc3ac3aa9d93896190e2e4fcd582b9a",
+        "fact_kind": "class",
+        "fact_pk": "tashas-cauldron_alchemist",
+        "fact_name": "Alchemist",
+        "hook": "Alchemist's Supplies cost 50 GP and weigh 8 pounds, which often gets overlooked until encumbrance matters.",
+        "body": "Alchemist's subclass features hinge on potions, acids, and transmutational brews, yet players often dilute their build by chasing multiple roles. Healing word provides immediate support with a 60-foot range, while Melf's acid arrow delivers consistent damage over two rounds. Flaming sphere offers control with its 5-foot radius and requires concentration, a detail that clashes with other concentration spells. Strong turns are built on repeatable actions, not on split-focus builds.",
+        "cta": "DMs: Remind players that Alchemist's Supplies weigh 8 pounds and to focus on spells like Healing Word for primary role consistency.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-11.mp4",
+        "video_sha256": "81060001c803d299b4cb3323f2a6b387b3aed7634004a314c7435363e782faa2"
+      }
     }
   ]
 }

@@ -466,5 +466,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-11": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

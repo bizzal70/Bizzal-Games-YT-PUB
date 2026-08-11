@@ -677,6 +677,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-10.mp4",
         "video_sha256": "07aa02d004fbc86f3d0ed4d070379982ee6b55d95f73df810e27ea7a126796f7"
       }
+    },
+    {
+      "published_utc": "2026-08-11T14:35:25Z",
+      "day": "2026-08-11",
+      "content_id": "bgp-2026-08-11-rules-ruling-rule-18-63f6c428724d",
+      "publish_hash": "c05f4bb807c1e6530d442fbe56b67e20c270d6ff102016496051352905dd6a79",
+      "youtube_video_id": "UGSwuhZy9xg",
+      "youtube_url": "https://www.youtube.com/watch?v=UGSwuhZy9xg",
+      "video_sha256": "01f435dae6f210f28748537837fc31b25a1be6590eb44989a47bf0d044e00559",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-11.mp4",
+      "fingerprint": {
+        "day": "2026-08-11",
+        "category": "rules_ruling",
+        "angle": "luck_burn_timing",
+        "content_id": "bgp-2026-08-11-rules-ruling-rule-18-63f6c428724d",
+        "canonical_hash": "63f6c428724d3b8eb4e8d79dc414588eb0201a35eac04858fadb32a292ff716b",
+        "script_id": "055f011e1974d602cebd6c850a6dcf681485cd13cdfeb208fcabb837f7ce107a",
+        "fact_kind": "rule",
+        "fact_pk": 18,
+        "fact_name": "Fumbles",
+        "hook": "Fumbles punish high Luck scores, making them riskier than expected.",
+        "body": "A natural 1 on an attack roll leads to a fumble, resulting in an automatic miss and a roll on the fumble table. The fumble table is more punishing with heavier armor, using a larger die for nastier outcomes. Only warriors and dwarves can burn 1 Luck to cancel the fumble roll, but high Luck scores increase the severity of fumbles. Overvaluing Luck can lead players to expect it to mitigate fumbles when it actually exacerbates them.",
+        "cta": "Judges: Remind warriors and dwarves they can burn 1 Luck to cancel fumbles, but heavier armor means bigger, nastier consequences.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-11.mp4",
+        "video_sha256": "01f435dae6f210f28748537837fc31b25a1be6590eb44989a47bf0d044e00559"
+      }
     }
   ]
 }
