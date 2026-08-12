@@ -26,6 +26,13 @@ REPO_ROOT    = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 SYSTEM_ID    = os.environ.get("BIZZAL_SYSTEM_ID", "").strip()
 OPENAI_KEY   = os.environ.get("BIZZAL_OPENAI_API_KEY", "")
 OPENAI_MODEL = os.environ.get("BIZZAL_OPENAI_MODEL", "gpt-4o")
+# The prompt asks for "~1,400 words" but that's guidance, not an instruction
+# with teeth -- nothing enforced it, so the model was free to undershoot (and
+# did: confirmed published long-form videos were landing at ~5 minutes / ~700
+# words, about half the target, since the only hard check was ">=3 sections,
+# non-empty"). Floor set a bit under the ~1,400 target to leave the model room
+# without accepting a rewrite that's barely longer than a Short's script.
+MIN_WORDS    = int(os.environ.get("BIZZAL_LONGFORM_MIN_WORDS", "1100"))
 
 SYSTEM_LABELS = {"dnd5e": "D&D 5e (2024 rules)", "shadowdark": "Shadowdark RPG",
                  "dcc": "Dungeon Crawl Classics RPG"}
@@ -165,6 +172,9 @@ def _generate_and_validate(fact, system_id) -> dict:
             raise ValueError(f"script missing key: {k}")
     if not isinstance(script.get("sections"), list) or len(script["sections"]) < 3:
         raise ValueError(f"need >= 3 sections, got {len(script.get('sections', []))}")
+    wc = len(_narration_text(script).split())
+    if wc < MIN_WORDS:
+        raise ValueError(f"narration too short: {wc} words (need >= {MIN_WORDS})")
     return script
 
 
@@ -256,7 +266,9 @@ def main():
               f"\n\nMore TTRPG rules & rulings -- It's Already Written:"
               f"\n{WRITTEN_BLOG_URL} - {WRITTEN_X_HANDLE} on X")
     atom["youtube_description"] = (_desc + _links).strip()
-    atom["word_count"] = script.get("word_count", 0)
+    # Real count, not the model's self-reported one -- that's the same soft
+    # target the model was undershooting before the MIN_WORDS floor existed.
+    atom["word_count"] = len(_narration_text(script).split())
     atom["updated_at"] = datetime.now(UTC).isoformat(timespec="seconds").replace("+00:00", "Z")
 
     atomic_write_json(atom_path, atom)
