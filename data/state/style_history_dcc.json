@@ -390,5 +390,15 @@
       "spice": [],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-08-12": {
+    "item_spotlight": {
+      "angle": "loot_priority",
+      "voice": "chaos_herald",
+      "tone": "gritty",
+      "persona": "dungeon_gear_mentor",
+      "spice": [],
+      "tts_voice_id": "fable"
+    }
   }
 }

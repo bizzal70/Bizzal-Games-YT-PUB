@@ -703,6 +703,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-11.mp4",
         "video_sha256": "01f435dae6f210f28748537837fc31b25a1be6590eb44989a47bf0d044e00559"
       }
+    },
+    {
+      "published_utc": "2026-08-12T14:36:26Z",
+      "day": "2026-08-12",
+      "content_id": "bgp-2026-08-12-item-spotlight-item-19-c5c8f2aaf5cf",
+      "publish_hash": "6df9c3031ae9d9efa95a434352af3b3314c564f7dda78706f364e461053b102d",
+      "youtube_video_id": "lpDf4LIZUf8",
+      "youtube_url": "https://www.youtube.com/watch?v=lpDf4LIZUf8",
+      "video_sha256": "ce5e5c87ad54852b92140ee6df7954f2f182f06b74da9b1e38db72043ee494e5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-12.mp4",
+      "fingerprint": {
+        "day": "2026-08-12",
+        "category": "item_spotlight",
+        "angle": "loot_priority",
+        "content_id": "bgp-2026-08-12-item-spotlight-item-19-c5c8f2aaf5cf",
+        "canonical_hash": "c5c8f2aaf5cfa955074707aaed2f5bb79530187ec269039ac28efd234439768a",
+        "script_id": "396a8baaed61d1dbed612fbccf0038a937e7fed160dee9bcbe1d30d0c800603f",
+        "fact_kind": "item",
+        "fact_pk": 19,
+        "fact_name": "Armor-breaker Weapon",
+        "hook": "Armor-breaker Weapon destroys armor on any critical hit, removing the opponent's AC for the rest of the fight.",
+        "body": "This weapon's critical hit effect strips an opponent's armor, leaving them vulnerable and significantly lowering their AC. The mistake is treating it like a simple damage boost rather than a tactical tool. Using it against heavily armored foes can shift the tide of battle by making them easier targets for the entire party.",
+        "cta": "Judges: Aim for the toughest armor with the Armor-breaker Weapon; a crit strips their AC, making them easy prey.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-12.mp4",
+        "video_sha256": "ce5e5c87ad54852b92140ee6df7954f2f182f06b74da9b1e38db72043ee494e5"
+      }
     }
   ]
 }

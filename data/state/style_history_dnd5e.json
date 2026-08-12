@@ -474,5 +474,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-12": {
+    "monster_tactic": {
+      "angle": "common_mistake",
+      "voice": "friendly_vet",
+      "tone": "dry",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }
