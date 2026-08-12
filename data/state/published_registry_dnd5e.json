@@ -1351,6 +1351,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-11.mp4",
         "video_sha256": "81060001c803d299b4cb3323f2a6b387b3aed7634004a314c7435363e782faa2"
       }
+    },
+    {
+      "published_utc": "2026-08-12T15:25:32Z",
+      "day": "2026-08-12",
+      "content_id": "bgp-2026-08-12-monster-tactic-creature-srd-2024-wererat-35b130e6c91d",
+      "publish_hash": "e60479f29df08e1e5cead20ceda280aecd5afd59d532ec3c54c29f492d468dc8",
+      "youtube_video_id": "k4rPt_JbKA4",
+      "youtube_url": "https://www.youtube.com/watch?v=k4rPt_JbKA4",
+      "video_sha256": "b0159ed3c6bd47d8a30fdafd4465e7e124d787de71c1c929477174f5dd809598",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-12.mp4",
+      "fingerprint": {
+        "day": "2026-08-12",
+        "category": "monster_tactic",
+        "angle": "common_mistake",
+        "content_id": "bgp-2026-08-12-monster-tactic-creature-srd-2024-wererat-35b130e6c91d",
+        "canonical_hash": "35b130e6c91db71d2e494cf45986923911ad09861343f422851ec39fba38715e",
+        "script_id": "156bbf56dd314f3c8341d7f23123f30e6370500db67f130c112d6c1ff6ad6b24",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_wererat",
+        "fact_name": "Wererat",
+        "hook": "Wererat's Bite attack can spread lycanthropy, a detail overlooked in combat planning.",
+        "body": "With an Armor Class of 13 and 60 hit points, Wererat's resilience is often underestimated. The Bite attack's potential to spread lycanthropy can derail party plans if not anticipated. Its Hand Crossbow allows for effective ranged attacks, maintaining distance while dealing damage. Exploiting its low Charisma saving throw (-1) can mitigate its threat level when engaged from range.",
+        "cta": "DMs: Remind your players that a Wererat's Bite attack can spread lycanthropy, so keep them at range with its low Charisma save (-1).",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-12.mp4",
+        "video_sha256": "b0159ed3c6bd47d8a30fdafd4465e7e124d787de71c1c929477174f5dd809598"
+      }
     }
   ]
 }

@@ -1016,6 +1016,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-11.mp4",
         "video_sha256": "954f5011b9fb35ad9affc1c0f5204f8b7ef65b6dbcdd3b0d3c5564830905faba"
       }
+    },
+    {
+      "published_utc": "2026-08-12T15:30:54Z",
+      "day": "2026-08-12",
+      "content_id": "bgp-2026-08-12-spell-use-case-spell-92-3fa45c36f527",
+      "publish_hash": "c3c367e2b05c84d5a9082abc6c431c1c83b2e0b22f9250c359a378638207f4e1",
+      "youtube_video_id": "aKrxQAr149w",
+      "youtube_url": "https://www.youtube.com/watch?v=aKrxQAr149w",
+      "video_sha256": "d2456df9427ee4302f1330c421ffcc7781f720855ded27ad7f4362a11d325a6c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-12.mp4",
+      "fingerprint": {
+        "day": "2026-08-12",
+        "category": "spell_use_case",
+        "angle": "dm_twist",
+        "content_id": "bgp-2026-08-12-spell-use-case-spell-92-3fa45c36f527",
+        "canonical_hash": "3fa45c36f52778889a06298b4b51c3074ddd951d07c3968ba4424d0e247c68f4",
+        "script_id": "fbd07a7157bcb092534e2269dc6e86971efd5e74edc38c14ddf4325897826fea",
+        "fact_kind": "spell",
+        "fact_pk": 92,
+        "fact_name": "Mother Of Night",
+        "hook": "Mother Of Night can drag a failed caster into The Nightfall, not just fizzle.",
+        "body": "Mother Of Night is a tier 5 spell with a range of Self and an instant duration. It's not just a wish; it's a gamble with high stakes. A failed cast results in being pulled into The Nightfall until appeasement, rather than merely wasting a turn. Casting this spell is best when the consequences of failure can be managed or mitigated, rather than in desperation.",
+        "cta": "GMs: Only let them cast Mother Of Night when they have a plan for appeasing The Nightfall if they fail.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-12.mp4",
+        "video_sha256": "d2456df9427ee4302f1330c421ffcc7781f720855ded27ad7f4362a11d325a6c"
+      }
     }
   ]
 }

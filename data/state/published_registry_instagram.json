@@ -1257,6 +1257,36 @@
       "hook": "Armor-breaker Weapon destroys armor on any critical hit, removing the opponent's AC for the rest of the fight.",
       "body": "This weapon's critical hit effect strips an opponent's armor, leaving them vulnerable and significantly lowering their AC. The mistake is treating it like a simple damage boost rather than a tactical tool. Using it against heavily armored foes can shift the tide of battle by making them easier targets for the entire party.",
       "cta": "Judges: Aim for the toughest armor with the Armor-breaker Weapon; a crit strips their AC, making them easy prey."
+    },
+    {
+      "published_utc": "2026-08-12T15:27:07Z",
+      "day": "2026-08-12",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-12-monster-tactic-creature-srd-2024-wererat-35b130e6c91d",
+      "instagram_post_id": "18129068095671879",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "b0159ed3c6bd47d8a30fdafd4465e7e124d787de71c1c929477174f5dd809598",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-12.mp4",
+      "fact_name": "Wererat",
+      "category": "monster_tactic",
+      "hook": "Wererat's Bite attack can spread lycanthropy, a detail overlooked in combat planning.",
+      "body": "With an Armor Class of 13 and 60 hit points, Wererat's resilience is often underestimated. The Bite attack's potential to spread lycanthropy can derail party plans if not anticipated. Its Hand Crossbow allows for effective ranged attacks, maintaining distance while dealing damage. Exploiting its low Charisma saving throw (-1) can mitigate its threat level when engaged from range.",
+      "cta": "DMs: Remind your players that a Wererat's Bite attack can spread lycanthropy, so keep them at range with its low Charisma save (-1)."
+    },
+    {
+      "published_utc": "2026-08-12T15:31:41Z",
+      "day": "2026-08-12",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-12-spell-use-case-spell-92-3fa45c36f527",
+      "instagram_post_id": "18134197984626748",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d2456df9427ee4302f1330c421ffcc7781f720855ded27ad7f4362a11d325a6c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-12.mp4",
+      "fact_name": "Mother Of Night",
+      "category": "spell_use_case",
+      "hook": "Mother Of Night can drag a failed caster into The Nightfall, not just fizzle.",
+      "body": "Mother Of Night is a tier 5 spell with a range of Self and an instant duration. It's not just a wish; it's a gamble with high stakes. A failed cast results in being pulled into The Nightfall until appeasement, rather than merely wasting a turn. Casting this spell is best when the consequences of failure can be managed or mitigated, rather than in desperation.",
+      "cta": "GMs: Only let them cast Mother Of Night when they have a plan for appeasing The Nightfall if they fail."
     }
   ]
 }
