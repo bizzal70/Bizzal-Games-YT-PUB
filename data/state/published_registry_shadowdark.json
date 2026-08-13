@@ -1042,6 +1042,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-12.mp4",
         "video_sha256": "d2456df9427ee4302f1330c421ffcc7781f720855ded27ad7f4362a11d325a6c"
       }
+    },
+    {
+      "published_utc": "2026-08-13T14:45:05Z",
+      "day": "2026-08-13",
+      "content_id": "bgp-2026-08-13-class-spotlight-class-10-28c5911e948a",
+      "publish_hash": "cdcec2195ccd347421417707a5a26a30db17396bac17d74bb1abbd63f0cd0c63",
+      "youtube_video_id": "IIv_m9YgifY",
+      "youtube_url": "https://www.youtube.com/watch?v=IIv_m9YgifY",
+      "video_sha256": "acdc034a53f49d4d4fd8a26002ecc374fb777cf533eb29153a5df59e523e5f2d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-13.mp4",
+      "fingerprint": {
+        "day": "2026-08-13",
+        "category": "class_spotlight",
+        "angle": "early_power_spike",
+        "content_id": "bgp-2026-08-13-class-spotlight-class-10-28c5911e948a",
+        "canonical_hash": "28c5911e948a6dbe95ac33e7be023bf16e694ac0b3e6cd459f681953b6b326b1",
+        "script_id": "df77246f39364a1d3f7172181c4b3be97de5c62e70949a5d3438f9a7fdad95d4",
+        "fact_kind": "class",
+        "fact_pk": 10,
+        "fact_name": "Ras-Godai",
+        "hook": "Ras-Godai's Smoke Step allows three near teleports per day as a free action, catching players off guard.",
+        "body": "Ras-Godai's Assassin talent grants advantage on sneak and hide checks and doubles damage against unaware foes, creating a significant early-game threat. Ignoring the power spike at the first level where these abilities combine effectively can lead to suboptimal play. Focusing on Dexterity and leveraging Smoke Step for positioning maximizes control over combat tempo. Missing these synergies results in overlooked opportunities.",
+        "cta": "GMs: Exploit Ras-Godai's Smoke Step to reposition and strike unaware foes with doubled damage; don't let them waste this early advantage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-13.mp4",
+        "video_sha256": "acdc034a53f49d4d4fd8a26002ecc374fb777cf533eb29153a5df59e523e5f2d"
+      },
+      "tone_lint_violation": "vague filler phrase: suboptimal play"
     }
   ]
 }

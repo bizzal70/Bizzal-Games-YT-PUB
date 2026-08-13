@@ -1377,6 +1377,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-12.mp4",
         "video_sha256": "b0159ed3c6bd47d8a30fdafd4465e7e124d787de71c1c929477174f5dd809598"
       }
+    },
+    {
+      "published_utc": "2026-08-13T14:40:37Z",
+      "day": "2026-08-13",
+      "content_id": "bgp-2026-08-13-spell-use-case-spell-srd-2024-unseen-servant-b96fffdf83f2",
+      "publish_hash": "54d98700e20a309b339ad0df966a1e22cb6772c0002cf313dd357b630f0c0e43",
+      "youtube_video_id": "9TrO_Rq0EpU",
+      "youtube_url": "https://www.youtube.com/watch?v=9TrO_Rq0EpU",
+      "video_sha256": "ca82025b3675301839dd2bef2c0633b6473683a6480b59b2379e5f0d7ca57c08",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-13.mp4",
+      "fingerprint": {
+        "day": "2026-08-13",
+        "category": "spell_use_case",
+        "angle": "combo_pairing",
+        "content_id": "bgp-2026-08-13-spell-use-case-spell-srd-2024-unseen-servant-b96fffdf83f2",
+        "canonical_hash": "b96fffdf83f2559a7fe98b97fd4daf881114f9171bf9d1da1fed409d0ced4d98",
+        "script_id": "42129189e9992cd0d9036fc249fc28c743d428fdf92ec13b34741191e1cb849b",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_unseen-servant",
+        "fact_name": "Unseen Servant",
+        "hook": "Unseen Servant's utility is often underestimated due to its non-combat nature.",
+        "body": "Unseen Servant is a 1st-level conjuration spell with a range of 60 feet and a duration of 1 hour. It creates an invisible, mindless, shapeless force that can perform simple tasks at your command. Misuse occurs when players focus on combat applications rather than utility. Effective use involves leveraging its ability to manipulate objects and perform tasks to solve situational problems outside of combat.",
+        "cta": "DMs: Use Unseen Servant to trigger Faerie Fire traps or fetch items, keeping players focused on more pressing threats.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-13.mp4",
+        "video_sha256": "ca82025b3675301839dd2bef2c0633b6473683a6480b59b2379e5f0d7ca57c08"
+      }
     }
   ]
 }

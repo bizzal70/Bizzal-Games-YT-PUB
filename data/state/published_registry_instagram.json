@@ -1287,6 +1287,21 @@
       "hook": "Mother Of Night can drag a failed caster into The Nightfall, not just fizzle.",
       "body": "Mother Of Night is a tier 5 spell with a range of Self and an instant duration. It's not just a wish; it's a gamble with high stakes. A failed cast results in being pulled into The Nightfall until appeasement, rather than merely wasting a turn. Casting this spell is best when the consequences of failure can be managed or mitigated, rather than in desperation.",
       "cta": "GMs: Only let them cast Mother Of Night when they have a plan for appeasing The Nightfall if they fail."
+    },
+    {
+      "published_utc": "2026-08-13T14:46:04Z",
+      "day": "2026-08-13",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-13-class-spotlight-class-10-28c5911e948a",
+      "instagram_post_id": "18110352017092595",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "acdc034a53f49d4d4fd8a26002ecc374fb777cf533eb29153a5df59e523e5f2d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-13.mp4",
+      "fact_name": "Ras-Godai",
+      "category": "class_spotlight",
+      "hook": "Ras-Godai's Smoke Step allows three near teleports per day as a free action, catching players off guard.",
+      "body": "Ras-Godai's Assassin talent grants advantage on sneak and hide checks and doubles damage against unaware foes, creating a significant early-game threat. Ignoring the power spike at the first level where these abilities combine effectively can lead to suboptimal play. Focusing on Dexterity and leveraging Smoke Step for positioning maximizes control over combat tempo. Missing these synergies results in overlooked opportunities.",
+      "cta": "GMs: Exploit Ras-Godai's Smoke Step to reposition and strike unaware foes with doubled damage; don't let them waste this early advantage."
     }
   ]
 }

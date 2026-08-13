@@ -400,5 +400,17 @@
       "spice": [],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-08-13": {
+    "encounter_seed": {
+      "angle": "terrain_feature",
+      "voice": "chaos_herald",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "fable"
+    }
   }
 }

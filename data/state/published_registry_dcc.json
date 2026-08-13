@@ -729,6 +729,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-12.mp4",
         "video_sha256": "ce5e5c87ad54852b92140ee6df7954f2f182f06b74da9b1e38db72043ee494e5"
       }
+    },
+    {
+      "published_utc": "2026-08-13T14:36:14Z",
+      "day": "2026-08-13",
+      "content_id": "bgp-2026-08-13-encounter-seed-creature-246-8ae1676b4579",
+      "publish_hash": "28424c04869ee4490aef19db7d0e45f60a0433754d3dec0f753752b1ff348650",
+      "youtube_video_id": "RxnKfVx-_H4",
+      "youtube_url": "https://www.youtube.com/watch?v=RxnKfVx-_H4",
+      "video_sha256": "21567340ba63590ec51df54485f8334fcdd048e3169ddd20e2561e5230368e9c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-13.mp4",
+      "fingerprint": {
+        "day": "2026-08-13",
+        "category": "encounter_seed",
+        "angle": "terrain_feature",
+        "content_id": "bgp-2026-08-13-encounter-seed-creature-246-8ae1676b4579",
+        "canonical_hash": "8ae1676b457968201002fdda920a802e281197309c609b86654183094168b25d",
+        "script_id": "a476238883806bcf868023ecdc47259e2573a4e9584bea1ab4fd17da103800f2",
+        "fact_kind": "creature",
+        "fact_pk": 246,
+        "fact_name": "Fissure Wasp Architect",
+        "hook": "Run Fissure Wasp Architect where terrain creates risk every turn and rewards smart positioning.",
+        "body": "Spit glue has a +4 missile fire attack that can lock down movement, creating a tactical nightmare when combined with difficult terrain. Ignoring the glue's threat often leads to halved movement, triggered by failing a simple DC 10 Fort save. Baiting the Wasp into wasting this attack or leveraging ranged attacks to avoid close encounters is a more effective strategy.",
+        "cta": "Judges: Use the Wasp's spit glue to trap PCs in narrow passages, forcing them to deal with halved movement and sticky situations.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-13.mp4",
+        "video_sha256": "21567340ba63590ec51df54485f8334fcdd048e3169ddd20e2561e5230368e9c"
+      },
+      "tone_lint_violation": "vague filler phrase: often leads to"
     }
   ]
 }
