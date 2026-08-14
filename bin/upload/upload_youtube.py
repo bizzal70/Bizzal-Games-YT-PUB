@@ -315,17 +315,21 @@ def hashtags_for(profile: str) -> dict:
 # and never touches the title tag (kept minimal on purpose -- see
 # system_title_tag's own comment on why). YouTube's own ranking leans more on
 # watch time/retention than hashtag matching, so this is a minor assist.
+# Lowercase to match the static per-system hashtag set (#dnd5e, #shadowdark,
+# #osr, ...) -- these used to be TitleCase (#Spells, #SavingThrow, ...) and
+# stood out as an obviously auto-generated tag next to the curated set,
+# flagged in the 2026-08-14 content review.
 _TOPIC_TAGS = [
-    ("spell", "#Spells"),
-    ("saving throw", "#SavingThrow"),
-    ("trap", "#DungeonTraps"),
-    ("magic item", "#MagicItems"),
-    ("encounter", "#Encounter"),
-    ("combat", "#Combat"),
-    ("dragon", "#Dragons"),
-    ("undead", "#Undead"),
-    ("class feature", "#ClassBuild"),
-    ("multiclass", "#Multiclass"),
+    ("spell", "#spells"),
+    ("saving throw", "#savingthrow"),
+    ("trap", "#dungeontraps"),
+    ("magic item", "#magicitems"),
+    ("encounter", "#encounter"),
+    ("combat", "#combat"),
+    ("dragon", "#dragons"),
+    ("undead", "#undead"),
+    ("class feature", "#classbuild"),
+    ("multiclass", "#multiclass"),
 ]
 
 
