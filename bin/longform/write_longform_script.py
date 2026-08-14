@@ -32,7 +32,7 @@ OPENAI_MODEL = os.environ.get("BIZZAL_OPENAI_MODEL", "gpt-4o")
 # words, about half the target, since the only hard check was ">=3 sections,
 # non-empty"). Floor set a bit under the ~1,400 target to leave the model room
 # without accepting a rewrite that's barely longer than a Short's script.
-MIN_WORDS    = int(os.environ.get("BIZZAL_LONGFORM_MIN_WORDS", "1100"))
+MIN_WORDS    = int(os.environ.get("BIZZAL_LONGFORM_MIN_WORDS", "1200"))
 
 SYSTEM_LABELS = {"dnd5e": "D&D 5e (2024 rules)", "shadowdark": "Shadowdark RPG",
                  "dcc": "Dungeon Crawl Classics RPG"}
@@ -117,14 +117,26 @@ HARD RULES (a violation makes the video worthless):
   but only real rules you are confident are official. Never invent a rule.
 - Never introduce a different game system or any third-party franchise.
 - Teach: tactics, common misplays, edge cases, and how a GM/player actually uses
-  this at the table. Depth over breadth -- go deeper on the real material rather
-  than padding with invented specifics.
+  this at the table. Go deeper on the real material rather than inventing
+  specifics -- depth means MORE genuine coverage (more misplays, more edge
+  cases, more concrete examples from the data), not a shorter script.
+
+LENGTH -- THIS IS A HARD REQUIREMENT, NOT A SUGGESTION:
+- Total narration (intro + all section bodies + outro) MUST be AT LEAST 1,200
+  words. A script under 1,200 words will be programmatically rejected and you
+  will be asked to write it again -- so do not undershoot "to be safe" or
+  because you think the subject is covered; write the full length every time.
+- Structure: intro (~75 words) -> 6-8 body sections (~180-220 words EACH,
+  every section a distinct real aspect: a mechanic, a common misplay, an edge
+  case, a tactical use, a comparison to a related option) -> outro (~100 words
+  ending in a concrete CTA). 6-8 sections at ~200 words each is how you reach
+  1,200+ words -- if you are unsure you have enough real material for 6
+  sections, pull another genuine angle from the data (a different action, a
+  different interaction, a different table scenario) rather than writing fewer
+  or shorter sections.
 
 STYLE:
 - RTFM tone: fact-based, wry, no theatrical openers, no "picture this", no hype.
-- Intro (~75 words) -> 4-6 body sections (~200 words each, each a distinct real
-  aspect of the subject) -> outro (~75 words ending in a concrete CTA).
-- Target ~1,400 words.
 - youtube_title: the real subject name + one concrete, often counterintuitive
   ruling from the data. Declarative, <=70 chars, no colon-hype, no hashtags.
   Good: "Gold Dragon Wyrmling punishes autopilot with a 15-foot cone".
@@ -132,9 +144,9 @@ STYLE:
 Return ONLY valid JSON (no markdown), this exact schema:
 {{
   "intro": "intro text (~75 words)",
-  "sections": [{{"heading": "short heading", "body": "section text (~200 words)"}}],
-  "outro": "outro text (~75 words, ends with a specific CTA)",
-  "word_count": <int>,
+  "sections": [{{"heading": "short heading", "body": "section text (180-220 words)"}}],
+  "outro": "outro text (~100 words, ends with a specific CTA)",
+  "word_count": <int, must be your ACTUAL total word count, and must be >= 1200>,
   "youtube_title": "subject + concrete ruling, <=70 chars, no hashtags",
   "youtube_description": "150-200 words: first line the single most specific real ruling from the data (dry, no hype), then the concrete mechanics covered, end with 5-8 relevant hashtags"
 }}"""
@@ -147,7 +159,7 @@ def call_openai(prompt: str) -> str:
         "model": OPENAI_MODEL,
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.5,
-        "max_tokens": 3000,
+        "max_tokens": 4000,
     }).encode("utf-8")
     req = request.Request("https://api.openai.com/v1/chat/completions", data=payload,
                           headers={"Authorization": f"Bearer {OPENAI_KEY}",
