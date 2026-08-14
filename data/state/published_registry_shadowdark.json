@@ -1069,6 +1069,32 @@
         "video_sha256": "acdc034a53f49d4d4fd8a26002ecc374fb777cf533eb29153a5df59e523e5f2d"
       },
       "tone_lint_violation": "vague filler phrase: suboptimal play"
+    },
+    {
+      "published_utc": "2026-08-14T14:41:46Z",
+      "day": "2026-08-14",
+      "content_id": "bgp-2026-08-14-monster-tactic-creature-196-3b4d7486bf9d",
+      "publish_hash": "015f53a75d495d7549aa53ebebd0e6f59bc738abde1340df73adc16d87543b90",
+      "youtube_video_id": "Jm_sx8r3Tz0",
+      "youtube_url": "https://www.youtube.com/watch?v=Jm_sx8r3Tz0",
+      "video_sha256": "f56a72f9f6a5d8484f702dc0c51009e6c23bc54f3831fa6b5f2bdc1aaa52e6f4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-14.mp4",
+      "fingerprint": {
+        "day": "2026-08-14",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-08-14-monster-tactic-creature-196-3b4d7486bf9d",
+        "canonical_hash": "3b4d7486bf9d76b88012defc7c7ec5a7686ddda42118f23c0d4a8e1d733299cd",
+        "script_id": "373ffaec885742399cc914a548408eb226bb5547ddfc270904b7c2d584ab6e52",
+        "fact_kind": "creature",
+        "fact_pk": 196,
+        "fact_name": "Sphinx",
+        "hook": "Sphinx's Roar can paralyze all creatures within far range for up to 4 rounds, locking down entire parties.",
+        "body": "Roar replaces all of Sphinx's attacks, requiring a DC 18 Charisma save to avoid paralysis for 1d4 rounds. A failed save leads to multiple rounds of inaction, often crippling the party's ability to respond. Time Bend compounds this by freezing a near target for 1d4 rounds with a DC 14 Wisdom save. Effective counterplay involves spreading out to minimize the impact of Roar and prioritizing Wisdom saves to resist Time Bend.",
+        "cta": "GMs: Start with Roar to paralyze the party, then use Time Bend on the nearest threat to keep them frozen.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-14.mp4",
+        "video_sha256": "f56a72f9f6a5d8484f702dc0c51009e6c23bc54f3831fa6b5f2bdc1aaa52e6f4"
+      }
     }
   ]
 }

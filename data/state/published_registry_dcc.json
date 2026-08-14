@@ -756,6 +756,32 @@
         "video_sha256": "21567340ba63590ec51df54485f8334fcdd048e3169ddd20e2561e5230368e9c"
       },
       "tone_lint_violation": "vague filler phrase: often leads to"
+    },
+    {
+      "published_utc": "2026-08-14T14:31:23Z",
+      "day": "2026-08-14",
+      "content_id": "bgp-2026-08-14-class-spotlight-class-5-36e5db4c2a93",
+      "publish_hash": "ebce29087ae4b40a677c9623d2e4d10fbaf1e956827662ae99ccee7a835f2cb4",
+      "youtube_video_id": "yjY_oyA2ObM",
+      "youtube_url": "https://www.youtube.com/watch?v=yjY_oyA2ObM",
+      "video_sha256": "3f1d432f260a6db0a91f2cd63c79af5f3c8da6c5614ce3ebf2727fc6d04173e4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-14.mp4",
+      "fingerprint": {
+        "day": "2026-08-14",
+        "category": "class_spotlight",
+        "angle": "level_1_survival",
+        "content_id": "bgp-2026-08-14-class-spotlight-class-5-36e5db4c2a93",
+        "canonical_hash": "36e5db4c2a93790ab5089daec7d9c3c7fd7ed45703dcd42942c155c4ba958307",
+        "script_id": "21a443c36e16dbdfb8789ff9cbc4a5cf2f2b7be94644790fc2b1e8d95920c007",
+        "fact_kind": "class",
+        "fact_pk": 5,
+        "fact_name": "Dwarf",
+        "hook": "Dwarf's Shield Brother action grants an adjacent ally +2 AC by body-blocking.",
+        "body": "Dwarf uses a 1d10 hit die and a d20 action die, making them durable and reliable in combat. Their Mighty Deeds of Arms cap at a d14, not a d16, which means they excel at consistent, moderate impact rather than rare high spikes. Fortitude saves get a +2 bonus, enhancing their resilience against physical threats. Detecting underground features on a d6 can reveal hidden paths or traps, changing the course of exploration.",
+        "cta": "Judges: When your squishy wizard's about to get skewered, have the Dwarf use Shield Brother for that +2 AC buffer.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-14.mp4",
+        "video_sha256": "3f1d432f260a6db0a91f2cd63c79af5f3c8da6c5614ce3ebf2727fc6d04173e4"
+      }
     }
   ]
 }

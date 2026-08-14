@@ -496,5 +496,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-08-14": {
+    "rules_ruling": {
+      "angle": "common_table_mistake",
+      "voice": "friendly_vet",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

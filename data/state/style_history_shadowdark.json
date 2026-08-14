@@ -500,5 +500,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-08-14": {
+    "monster_tactic": {
+      "angle": "how_it_wins",
+      "voice": "torchbearer_ref",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

@@ -1302,6 +1302,51 @@
       "hook": "Ras-Godai's Smoke Step allows three near teleports per day as a free action, catching players off guard.",
       "body": "Ras-Godai's Assassin talent grants advantage on sneak and hide checks and doubles damage against unaware foes, creating a significant early-game threat. Ignoring the power spike at the first level where these abilities combine effectively can lead to suboptimal play. Focusing on Dexterity and leveraging Smoke Step for positioning maximizes control over combat tempo. Missing these synergies results in overlooked opportunities.",
       "cta": "GMs: Exploit Ras-Godai's Smoke Step to reposition and strike unaware foes with doubled damage; don't let them waste this early advantage."
+    },
+    {
+      "published_utc": "2026-08-14T14:32:25Z",
+      "day": "2026-08-14",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-14-class-spotlight-class-5-36e5db4c2a93",
+      "instagram_post_id": "18072206750457129",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "3f1d432f260a6db0a91f2cd63c79af5f3c8da6c5614ce3ebf2727fc6d04173e4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-14.mp4",
+      "fact_name": "Dwarf",
+      "category": "class_spotlight",
+      "hook": "Dwarf's Shield Brother action grants an adjacent ally +2 AC by body-blocking.",
+      "body": "Dwarf uses a 1d10 hit die and a d20 action die, making them durable and reliable in combat. Their Mighty Deeds of Arms cap at a d14, not a d16, which means they excel at consistent, moderate impact rather than rare high spikes. Fortitude saves get a +2 bonus, enhancing their resilience against physical threats. Detecting underground features on a d6 can reveal hidden paths or traps, changing the course of exploration.",
+      "cta": "Judges: When your squishy wizard's about to get skewered, have the Dwarf use Shield Brother for that +2 AC buffer."
+    },
+    {
+      "published_utc": "2026-08-14T14:37:04Z",
+      "day": "2026-08-14",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-14-rules-ruling-rule-srd-2024-combat-making-an-attack-d17b8a466bd1",
+      "instagram_post_id": "18005425085972313",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "73f17a0f14ab21695a83f873121ff5157f04f471f6f2ad7f45c6f016127a486d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-14.mp4",
+      "fact_name": "Making an Attack",
+      "category": "rules_ruling",
+      "hook": "Making an Attack allows multiple actions to trigger an attack, not just the Attack action itself.",
+      "body": "Speed over clarity creates confusion. Making an Attack includes the Attack action, but also certain Bonus Actions and Reactions. Each of these can lead to an attack, whether melee or ranged. Consistent rulings prevent future disputes.",
+      "cta": "DMs: Clarify that making an attack includes the Attack action, certain Bonus Actions, and Reactions to avoid future disputes."
+    },
+    {
+      "published_utc": "2026-08-14T14:42:46Z",
+      "day": "2026-08-14",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-14-monster-tactic-creature-196-3b4d7486bf9d",
+      "instagram_post_id": "17942775654296925",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "f56a72f9f6a5d8484f702dc0c51009e6c23bc54f3831fa6b5f2bdc1aaa52e6f4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-14.mp4",
+      "fact_name": "Sphinx",
+      "category": "monster_tactic",
+      "hook": "Sphinx's Roar can paralyze all creatures within far range for up to 4 rounds, locking down entire parties.",
+      "body": "Roar replaces all of Sphinx's attacks, requiring a DC 18 Charisma save to avoid paralysis for 1d4 rounds. A failed save leads to multiple rounds of inaction, often crippling the party's ability to respond. Time Bend compounds this by freezing a near target for 1d4 rounds with a DC 14 Wisdom save. Effective counterplay involves spreading out to minimize the impact of Roar and prioritizing Wisdom saves to resist Time Bend.",
+      "cta": "GMs: Start with Roar to paralyze the party, then use Time Bend on the nearest threat to keep them frozen."
     }
   ]
 }

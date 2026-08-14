@@ -1403,6 +1403,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-13.mp4",
         "video_sha256": "ca82025b3675301839dd2bef2c0633b6473683a6480b59b2379e5f0d7ca57c08"
       }
+    },
+    {
+      "published_utc": "2026-08-14T14:36:04Z",
+      "day": "2026-08-14",
+      "content_id": "bgp-2026-08-14-rules-ruling-rule-srd-2024-combat-making-an-attack-d17b8a466bd1",
+      "publish_hash": "226d6b91ec037b2f3a3d6956022252919abe3cf4c5a868ee1ac7b2c5264c2398",
+      "youtube_video_id": "RN_FnBSZ2Hw",
+      "youtube_url": "https://www.youtube.com/watch?v=RN_FnBSZ2Hw",
+      "video_sha256": "73f17a0f14ab21695a83f873121ff5157f04f471f6f2ad7f45c6f016127a486d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-14.mp4",
+      "fingerprint": {
+        "day": "2026-08-14",
+        "category": "rules_ruling",
+        "angle": "common_table_mistake",
+        "content_id": "bgp-2026-08-14-rules-ruling-rule-srd-2024-combat-making-an-attack-d17b8a466bd1",
+        "canonical_hash": "d17b8a466bd13631e424d1e1cf2d542de131c65f27397e8c87a12e29401f824a",
+        "script_id": "1c8268c442bf042c04fd46056482ff04d93e76dc892a930310d8a22991efb7af",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_combat_making-an-attack",
+        "fact_name": "Making an Attack",
+        "hook": "Making an Attack allows multiple actions to trigger an attack, not just the Attack action itself.",
+        "body": "Speed over clarity creates confusion. Making an Attack includes the Attack action, but also certain Bonus Actions and Reactions. Each of these can lead to an attack, whether melee or ranged. Consistent rulings prevent future disputes.",
+        "cta": "DMs: Clarify that making an attack includes the Attack action, certain Bonus Actions, and Reactions to avoid future disputes.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-14.mp4",
+        "video_sha256": "73f17a0f14ab21695a83f873121ff5157f04f471f6f2ad7f45c6f016127a486d"
+      }
     }
   ]
 }
