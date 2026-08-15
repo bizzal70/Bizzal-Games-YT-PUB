@@ -782,6 +782,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-14.mp4",
         "video_sha256": "3f1d432f260a6db0a91f2cd63c79af5f3c8da6c5614ce3ebf2727fc6d04173e4"
       }
+    },
+    {
+      "published_utc": "2026-08-15T14:13:47Z",
+      "day": "2026-08-15",
+      "content_id": "bgp-2026-08-15-rules-myth-rule-20-fdcf5dd195f1",
+      "publish_hash": "8eff3a6fbdd22e32d01155f0c071ce75a66aa30e2ac73dd63de6777070d86a32",
+      "youtube_video_id": "Xd1htIb0-h8",
+      "youtube_url": "https://www.youtube.com/watch?v=Xd1htIb0-h8",
+      "video_sha256": "463a5c1fd995b6606369f92b428a2431b3f0ac4ab9ef5da1fa92055089918e5b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-15.mp4",
+      "fingerprint": {
+        "day": "2026-08-15",
+        "category": "rules_myth",
+        "angle": "why_people_get_it_wrong",
+        "content_id": "bgp-2026-08-15-rules-myth-rule-20-fdcf5dd195f1",
+        "canonical_hash": "fdcf5dd195f18e19afa821a39c96aa90212d66ca1884fa61de9f708bc806e609",
+        "script_id": "e54650a707f3f365944a10996f867a63a8c1c10c59493e4d8454b01cc5ab801d",
+        "fact_kind": "rule",
+        "fact_pk": 20,
+        "fact_name": "Morale",
+        "hook": "Morale checks bypass player control - only monsters, retainers, and NPCs roll when the first of a group falls.",
+        "body": "Morale checks do not apply to player characters; their actions remain under player control. Only monsters, retainers, and NPCs roll morale when the first of their group falls, when half are down, or when a lone foe is badly hurt. Incorrectly applying morale to PCs disrupts the game flow and undermines player agency. Correct application focuses on NPC reactions without unnecessary dice rolls.",
+        "cta": "Judges: Keep morale checks for monsters and NPCs; player characters never roll them, preserving their decision-making autonomy.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-15.mp4",
+        "video_sha256": "463a5c1fd995b6606369f92b428a2431b3f0ac4ab9ef5da1fa92055089918e5b"
+      }
     }
   ]
 }

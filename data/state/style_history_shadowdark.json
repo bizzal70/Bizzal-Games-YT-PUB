@@ -510,5 +510,15 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-15": {
+    "rules_ruling": {
+      "angle": "fast_ruling",
+      "voice": "strict_referee",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "nova"
+    }
   }
 }

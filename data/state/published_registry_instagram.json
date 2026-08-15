@@ -1347,6 +1347,21 @@
       "hook": "Sphinx's Roar can paralyze all creatures within far range for up to 4 rounds, locking down entire parties.",
       "body": "Roar replaces all of Sphinx's attacks, requiring a DC 18 Charisma save to avoid paralysis for 1d4 rounds. A failed save leads to multiple rounds of inaction, often crippling the party's ability to respond. Time Bend compounds this by freezing a near target for 1d4 rounds with a DC 14 Wisdom save. Effective counterplay involves spreading out to minimize the impact of Roar and prioritizing Wisdom saves to resist Time Bend.",
       "cta": "GMs: Start with Roar to paralyze the party, then use Time Bend on the nearest threat to keep them frozen."
+    },
+    {
+      "published_utc": "2026-08-15T14:14:48Z",
+      "day": "2026-08-15",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-15-rules-myth-rule-20-fdcf5dd195f1",
+      "instagram_post_id": "18439898386125772",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "463a5c1fd995b6606369f92b428a2431b3f0ac4ab9ef5da1fa92055089918e5b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-15.mp4",
+      "fact_name": "Morale",
+      "category": "rules_myth",
+      "hook": "Morale checks bypass player control - only monsters, retainers, and NPCs roll when the first of a group falls.",
+      "body": "Morale checks do not apply to player characters; their actions remain under player control. Only monsters, retainers, and NPCs roll morale when the first of their group falls, when half are down, or when a lone foe is badly hurt. Incorrectly applying morale to PCs disrupts the game flow and undermines player agency. Correct application focuses on NPC reactions without unnecessary dice rolls.",
+      "cta": "Judges: Keep morale checks for monsters and NPCs; player characters never roll them, preserving their decision-making autonomy."
     }
   ]
 }

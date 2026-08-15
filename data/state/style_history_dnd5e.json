@@ -508,5 +508,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-08-15": {
+    "item_spotlight": {
+      "angle": "drawback_watchout",
+      "voice": "gritty_dm",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }
