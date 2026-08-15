@@ -1429,6 +1429,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-14.mp4",
         "video_sha256": "73f17a0f14ab21695a83f873121ff5157f04f471f6f2ad7f45c6f016127a486d"
       }
+    },
+    {
+      "published_utc": "2026-08-15T15:07:46Z",
+      "day": "2026-08-15",
+      "content_id": "bgp-2026-08-15-item-spotlight-item-srd-2024-shortsword-plus-1-a2cd4cdd528f",
+      "publish_hash": "ec871d038b5f99fc2aa2c25bd63c6eee5a9b057e021dffd52f439f7efbe52dc1",
+      "youtube_video_id": "czfg94ApKJg",
+      "youtube_url": "https://www.youtube.com/watch?v=czfg94ApKJg",
+      "video_sha256": "dae53e07aece28dd2814ca016114ce7e1c3a9e24a3d179f6b8e8ec25ea37a1fb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-15.mp4",
+      "fingerprint": {
+        "day": "2026-08-15",
+        "category": "item_spotlight",
+        "angle": "drawback_watchout",
+        "content_id": "bgp-2026-08-15-item-spotlight-item-srd-2024-shortsword-plus-1-a2cd4cdd528f",
+        "canonical_hash": "a2cd4cdd528f079c7af96ba87376c5c9061ecca2989f3e4b52ed3fead3cdb949",
+        "script_id": "b711e329b3bfb71ed65fdb128a7fbf2e26bc2d415d7e46a7efd5ce796a0f3dce",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_shortsword-plus-1",
+        "fact_name": "Shortsword (+1)",
+        "hook": "Shortsword (+1) often gets overestimated - the bonus is only +1 to attack and damage rolls.",
+        "body": "Shortsword (+1) provides a +1 bonus to attack and damage rolls, which is modest for an uncommon weapon. Overreliance on this bonus can lead to neglecting tactical positioning and teamwork. It doesn't replace the need for strategic play, and assuming it can carry a fight is a misstep.",
+        "cta": "Players: Remember, a +1 bonus won't save you from poor positioning or bad teamwork - plan your moves, don't just swing.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-15.mp4",
+        "video_sha256": "dae53e07aece28dd2814ca016114ce7e1c3a9e24a3d179f6b8e8ec25ea37a1fb"
+      }
     }
   ]
 }

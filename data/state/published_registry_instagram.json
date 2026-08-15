@@ -1362,6 +1362,21 @@
       "hook": "Morale checks bypass player control - only monsters, retainers, and NPCs roll when the first of a group falls.",
       "body": "Morale checks do not apply to player characters; their actions remain under player control. Only monsters, retainers, and NPCs roll morale when the first of their group falls, when half are down, or when a lone foe is badly hurt. Incorrectly applying morale to PCs disrupts the game flow and undermines player agency. Correct application focuses on NPC reactions without unnecessary dice rolls.",
       "cta": "Judges: Keep morale checks for monsters and NPCs; player characters never roll them, preserving their decision-making autonomy."
+    },
+    {
+      "published_utc": "2026-08-15T15:08:49Z",
+      "day": "2026-08-15",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-15-item-spotlight-item-srd-2024-shortsword-plus-1-a2cd4cdd528f",
+      "instagram_post_id": "18074905805371270",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "dae53e07aece28dd2814ca016114ce7e1c3a9e24a3d179f6b8e8ec25ea37a1fb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-15.mp4",
+      "fact_name": "Shortsword (+1)",
+      "category": "item_spotlight",
+      "hook": "Shortsword (+1) often gets overestimated - the bonus is only +1 to attack and damage rolls.",
+      "body": "Shortsword (+1) provides a +1 bonus to attack and damage rolls, which is modest for an uncommon weapon. Overreliance on this bonus can lead to neglecting tactical positioning and teamwork. It doesn't replace the need for strategic play, and assuming it can carry a fight is a misstep.",
+      "cta": "Players: Remember, a +1 bonus won't save you from poor positioning or bad teamwork - plan your moves, don't just swing."
     }
   ]
 }
