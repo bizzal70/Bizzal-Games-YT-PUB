@@ -1392,6 +1392,21 @@
       "hook": "Giant Centipede earns its stakes fast.",
       "body": "Giant Centipede's bite requires a DC 11 Constitution saving throw to avoid taking 3d6 poison damage. Underestimating this due to its low challenge rating of 0. 25 often leads to unnecessary damage. Prioritizing high Constitution saves or using ranged attacks can mitigate the risk. Its blindsight up to 30 feet allows it to detect hidden creatures, making reliance on stealth alone insufficient.",
       "cta": "DMs: Exploit the Giant Centipede's blindsight (30 ft. ) to negate invisibility and darkness tricks; remind them it's on page 349."
+    },
+    {
+      "published_utc": "2026-08-16T15:11:53Z",
+      "day": "2026-08-16",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-16-monster-tactic-creature-319-1ad9672a7037",
+      "instagram_post_id": "18137540143609757",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c3098959999f333b3ba3c3f7cf44785e5a357bc351cd418e159df76d03459171",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-16.mp4",
+      "fact_name": "Grim Goir",
+      "category": "monster_tactic",
+      "hook": "Grim Goir's bleeding effect is more dangerous than expected - 1d6 damage per round until healed.",
+      "body": "Grim Goir's claw attack inflicts bleeding that deals 1d6 damage per round, which continues until healed unless a DC 15 Fortitude save is made. This ongoing damage can quickly become overwhelming if not addressed immediately. Prioritize healing or saving against the bleeding effect to mitigate its impact. Denying the Grim Goir's ability to exploit its blood frenzy and bloodlust is crucial; control its movement and focus fire to eliminate one target at a time.",
+      "cta": "Judges: Force a DC 15 Fort save early to halt Grim Goir's bleeding, or watch them bleed out while it frenzies."
     }
   ]
 }

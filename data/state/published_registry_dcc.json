@@ -808,6 +808,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-15.mp4",
         "video_sha256": "463a5c1fd995b6606369f92b428a2431b3f0ac4ab9ef5da1fa92055089918e5b"
       }
+    },
+    {
+      "published_utc": "2026-08-16T15:10:56Z",
+      "day": "2026-08-16",
+      "content_id": "bgp-2026-08-16-monster-tactic-creature-319-1ad9672a7037",
+      "publish_hash": "766dd8f550748b710af4ec907e9cb98b38be26a4b3b240b808d3ef737f7ddad6",
+      "youtube_video_id": "GAV2__gAHcs",
+      "youtube_url": "https://www.youtube.com/watch?v=GAV2__gAHcs",
+      "video_sha256": "c3098959999f333b3ba3c3f7cf44785e5a357bc351cd418e159df76d03459171",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-16.mp4",
+      "fingerprint": {
+        "day": "2026-08-16",
+        "category": "monster_tactic",
+        "angle": "how_to_counter",
+        "content_id": "bgp-2026-08-16-monster-tactic-creature-319-1ad9672a7037",
+        "canonical_hash": "1ad9672a703726a10cc3bb04e54bd64844509f7a42addd711df61e2e40b1eff6",
+        "script_id": "610514589c04699a5070697a1203c91ccc77ad0343661855f601cab52e6a6a1b",
+        "fact_kind": "creature",
+        "fact_pk": 319,
+        "fact_name": "Grim Goir",
+        "hook": "Grim Goir's bleeding effect is more dangerous than expected - 1d6 damage per round until healed.",
+        "body": "Grim Goir's claw attack inflicts bleeding that deals 1d6 damage per round, which continues until healed unless a DC 15 Fortitude save is made. This ongoing damage can quickly become overwhelming if not addressed immediately. Prioritize healing or saving against the bleeding effect to mitigate its impact. Denying the Grim Goir's ability to exploit its blood frenzy and bloodlust is crucial; control its movement and focus fire to eliminate one target at a time.",
+        "cta": "Judges: Force a DC 15 Fort save early to halt Grim Goir's bleeding, or watch them bleed out while it frenzies.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-16.mp4",
+        "video_sha256": "c3098959999f333b3ba3c3f7cf44785e5a357bc351cd418e159df76d03459171"
+      }
     }
   ]
 }
