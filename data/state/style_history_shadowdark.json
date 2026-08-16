@@ -520,5 +520,15 @@
       "spice": [],
       "tts_voice_id": "nova"
     }
+  },
+  "2026-08-16": {
+    "item_spotlight": {
+      "angle": "best_user",
+      "voice": "torchbearer_ref",
+      "tone": "gritty",
+      "persona": "dungeon_gear_mentor",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

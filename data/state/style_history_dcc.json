@@ -436,5 +436,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-08-16": {
+    "monster_tactic": {
+      "angle": "how_to_counter",
+      "voice": "survival_coach",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

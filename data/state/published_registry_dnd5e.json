@@ -1455,6 +1455,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-15.mp4",
         "video_sha256": "dae53e07aece28dd2814ca016114ce7e1c3a9e24a3d179f6b8e8ec25ea37a1fb"
       }
+    },
+    {
+      "published_utc": "2026-08-16T14:16:02Z",
+      "day": "2026-08-16",
+      "content_id": "bgp-2026-08-16-encounter-seed-creature-srd-2024-giant-centipede-344afc3b74ec",
+      "publish_hash": "0e2e871ceb52866124a26d4bb72a377cccad2a7871cbb10546e836c4a1ee6985",
+      "youtube_video_id": "F-7rkWtI-70",
+      "youtube_url": "https://www.youtube.com/watch?v=F-7rkWtI-70",
+      "video_sha256": "039b4d66a102b60ea938543ae8948a317fe153891ee86fb02ce59c97bbc5cd01",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-16.mp4",
+      "fingerprint": {
+        "day": "2026-08-16",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-08-16-encounter-seed-creature-srd-2024-giant-centipede-344afc3b74ec",
+        "canonical_hash": "344afc3b74ec5002b4a1a50ac0d2f14d4c92d9938e72826b556643f45537f218",
+        "script_id": "981f882a2677f2727e3354c285722d811d8c6c3c10ed3083235cbb3263f9e114",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_giant-centipede",
+        "fact_name": "Giant Centipede",
+        "hook": "Giant Centipede earns its stakes fast.",
+        "body": "Giant Centipede's bite requires a DC 11 Constitution saving throw to avoid taking 3d6 poison damage. Underestimating this due to its low challenge rating of 0. 25 often leads to unnecessary damage. Prioritizing high Constitution saves or using ranged attacks can mitigate the risk. Its blindsight up to 30 feet allows it to detect hidden creatures, making reliance on stealth alone insufficient.",
+        "cta": "DMs: Exploit the Giant Centipede's blindsight (30 ft. ) to negate invisibility and darkness tricks; remind them it's on page 349.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-16.mp4",
+        "video_sha256": "039b4d66a102b60ea938543ae8948a317fe153891ee86fb02ce59c97bbc5cd01"
+      },
+      "tone_lint_violation": "vague filler phrase: often leads to"
     }
   ]
 }

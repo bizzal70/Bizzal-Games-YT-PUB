@@ -520,5 +520,15 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-16": {
+    "encounter_seed": {
+      "angle": "three_beats",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "alloy"
+    }
   }
 }

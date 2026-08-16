@@ -1377,6 +1377,21 @@
       "hook": "Shortsword (+1) often gets overestimated - the bonus is only +1 to attack and damage rolls.",
       "body": "Shortsword (+1) provides a +1 bonus to attack and damage rolls, which is modest for an uncommon weapon. Overreliance on this bonus can lead to neglecting tactical positioning and teamwork. It doesn't replace the need for strategic play, and assuming it can carry a fight is a misstep.",
       "cta": "Players: Remember, a +1 bonus won't save you from poor positioning or bad teamwork - plan your moves, don't just swing."
+    },
+    {
+      "published_utc": "2026-08-16T14:17:03Z",
+      "day": "2026-08-16",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-16-encounter-seed-creature-srd-2024-giant-centipede-344afc3b74ec",
+      "instagram_post_id": "17901818808474509",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "039b4d66a102b60ea938543ae8948a317fe153891ee86fb02ce59c97bbc5cd01",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-16.mp4",
+      "fact_name": "Giant Centipede",
+      "category": "encounter_seed",
+      "hook": "Giant Centipede earns its stakes fast.",
+      "body": "Giant Centipede's bite requires a DC 11 Constitution saving throw to avoid taking 3d6 poison damage. Underestimating this due to its low challenge rating of 0. 25 often leads to unnecessary damage. Prioritizing high Constitution saves or using ranged attacks can mitigate the risk. Its blindsight up to 30 feet allows it to detect hidden creatures, making reliance on stealth alone insufficient.",
+      "cta": "DMs: Exploit the Giant Centipede's blindsight (30 ft. ) to negate invisibility and darkness tricks; remind them it's on page 349."
     }
   ]
 }
