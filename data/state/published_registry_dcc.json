@@ -834,6 +834,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-16.mp4",
         "video_sha256": "c3098959999f333b3ba3c3f7cf44785e5a357bc351cd418e159df76d03459171"
       }
+    },
+    {
+      "published_utc": "2026-08-17T15:16:08Z",
+      "day": "2026-08-17",
+      "content_id": "bgp-2026-08-17-spell-use-case-spell-95-f850dcf8ad44",
+      "publish_hash": "d741c18a6a53008d310bd3b2314f0544a2770b08836b5effe1759f3d383ab17d",
+      "youtube_video_id": "oMi3Bn3AHEQ",
+      "youtube_url": "https://www.youtube.com/watch?v=oMi3Bn3AHEQ",
+      "video_sha256": "34301675981297ca5c84a7d361deaea911029b74c62ddfdd4f7924ae03dd62eb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-17.mp4",
+      "fingerprint": {
+        "day": "2026-08-17",
+        "category": "spell_use_case",
+        "angle": "catastrophic_failure",
+        "content_id": "bgp-2026-08-17-spell-use-case-spell-95-f850dcf8ad44",
+        "canonical_hash": "f850dcf8ad44e2e6c0a52a8e46391a147e8702fc0715322d769fbfdc54098619",
+        "script_id": "1e3b3e27574cd0f66026f2ede5730612844bb685a76a6ae21c1ddab39566d7a0",
+        "fact_kind": "spell",
+        "fact_pk": 95,
+        "fact_name": "Hepsoj's Fecund Fungi",
+        "hook": "Hepsoj's Fecund Fungi shifts encounter dynamics more than it deals direct damage - its effects vary.",
+        "body": "Hepsoj's Fecund Fungi, a 5th-level wizard spell, has a range of 100' plus 20' per caster level, with a variable duration and effects based on the spell check. Misuse occurs when focusing solely on damage rather than its ability to alter the battlefield with effects like choking clouds or restraining growths. Invoking a lesser result than rolled allows for tactical flexibility, often overlooked in the heat of combat. Prioritizing timing and target selection over raw damage output maximizes its utility.",
+        "cta": "Judges: Remind them to invoke a lesser result for tactical flexibility, not just raw damage, when using Hepsoj's Fecund Fungi.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-17.mp4",
+        "video_sha256": "34301675981297ca5c84a7d361deaea911029b74c62ddfdd4f7924ae03dd62eb"
+      },
+      "tone_lint_violation": "vague filler phrase: often overlooked"
     }
   ]
 }

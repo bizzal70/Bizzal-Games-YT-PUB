@@ -1482,6 +1482,33 @@
         "video_sha256": "039b4d66a102b60ea938543ae8948a317fe153891ee86fb02ce59c97bbc5cd01"
       },
       "tone_lint_violation": "vague filler phrase: often leads to"
+    },
+    {
+      "published_utc": "2026-08-17T15:10:02Z",
+      "day": "2026-08-17",
+      "content_id": "bgp-2026-08-17-rules-myth-rule-srd-2024-damage-and-healing-damage-types-f25d481afcb1",
+      "publish_hash": "06432ad13861b587b533be28d6720687d75003f55c3b80e180b83acaa77e54c8",
+      "youtube_video_id": "ZTbym0CWT1g",
+      "youtube_url": "https://www.youtube.com/watch?v=ZTbym0CWT1g",
+      "video_sha256": "32d34000e5042fb430ff7a214814badb093730e9b25dac7da196849c970f98fa",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-17.mp4",
+      "fingerprint": {
+        "day": "2026-08-17",
+        "category": "rules_myth",
+        "angle": "why_people_get_it_wrong",
+        "content_id": "bgp-2026-08-17-rules-myth-rule-srd-2024-damage-and-healing-damage-types-f25d481afcb1",
+        "canonical_hash": "f25d481afcb1cd6f86b2c3d8ed899e17c3eca403ac1b96c5f0f53f742f9141dc",
+        "script_id": "856940fc7961f4f3b7c2000096e7468e8d5f27421145a536d1f836264aacce59",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_damage-and-healing_damage-types",
+        "fact_name": "Damage Types",
+        "hook": "Damage Types have no rules of their own - they depend on other mechanics like Resistance and Immunity.",
+        "body": "Damage Types, listed in the \"Rules Glossary, \" lack inherent rules but interact with mechanics such as Resistance and Immunity. Misunderstandings occur when players assume these types cause effects independently, like believing Fire damage ignites objects without explicit rules. Properly identifying how other mechanics rely on Damage Types prevents unnecessary disputes.",
+        "cta": "DMs: Remind players that the 16 Damage Types don't ignite or freeze anything without specific rules like Resistance or Immunity.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-17.mp4",
+        "video_sha256": "32d34000e5042fb430ff7a214814badb093730e9b25dac7da196849c970f98fa"
+      },
+      "tone_lint_violation": "vague filler phrase: Misunderstandings occur when players assume these types cause"
     }
   ]
 }

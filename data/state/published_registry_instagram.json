@@ -1422,6 +1422,21 @@
       "hook": "Use Gargoyle as a values test: give the table two wins, then make them choose which one they can actually keep.",
       "body": "Gargoyle has an Armor Class of 16 and can fly, making it difficult to hit for lower-level parties. Its two claw attacks at +3 each dealing 1d6 damage can quickly wear down unprepared groups. Non-magical attacks are ineffective due to its impervious talent. Focusing on magical solutions or bypassing it entirely is advisable when resources are scarce.",
       "cta": "DMs: make them choose what they can live with: save everyone at higher risk, or end the threat before collateral climbs."
+    },
+    {
+      "published_utc": "2026-08-17T15:10:59Z",
+      "day": "2026-08-17",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-17-rules-myth-rule-srd-2024-damage-and-healing-damage-types-f25d481afcb1",
+      "instagram_post_id": "18264364921306124",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "32d34000e5042fb430ff7a214814badb093730e9b25dac7da196849c970f98fa",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-17.mp4",
+      "fact_name": "Damage Types",
+      "category": "rules_myth",
+      "hook": "Damage Types have no rules of their own - they depend on other mechanics like Resistance and Immunity.",
+      "body": "Damage Types, listed in the \"Rules Glossary, \" lack inherent rules but interact with mechanics such as Resistance and Immunity. Misunderstandings occur when players assume these types cause effects independently, like believing Fire damage ignites objects without explicit rules. Properly identifying how other mechanics rely on Damage Types prevents unnecessary disputes.",
+      "cta": "DMs: Remind players that the 16 Damage Types don't ignite or freeze anything without specific rules like Resistance or Immunity."
     }
   ]
 }
