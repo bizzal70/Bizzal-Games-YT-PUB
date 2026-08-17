@@ -1,6 +1,94 @@
 [
   {
     "system": "dnd5e",
+    "title": "Dragonlance's War Wizard: Power Unleashed",
+    "angle": "Explore the mechanics and potential of the War Wizard subclass in Dragonlance.",
+    "rationale": "The recent review of Dragonlance: War Wizard makes this a timely exploration.",
+    "fixture_hint": "class",
+    "search_keyword": "Dragonlance: War Wizard review",
+    "created_date": "2026-08-17",
+    "status": "pending",
+    "brief_id": "0c468f817dc6"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Feywild Intrigues: The Feywild Job Mechanics",
+    "angle": "Dive into the unique rules and challenges presented in The Feywild Job.",
+    "rationale": "The review of The Feywild Job highlights its relevance and intrigue.",
+    "fixture_hint": "rule",
+    "search_keyword": "The Feywild Job review",
+    "created_date": "2026-08-17",
+    "status": "pending",
+    "brief_id": "1bccd3da5ff3"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Inventory Woes: Managing D&D's In-Game Economy",
+    "angle": "Analyze the impact of in-game economy rules in light of Paizo's inventory issues.",
+    "rationale": "Paizo's inventory challenges spark conversation about game economics.",
+    "fixture_hint": "rule",
+    "search_keyword": "Paizo may finally get its inventory back from bankrupt Diamond",
+    "created_date": "2026-08-17",
+    "status": "pending",
+    "brief_id": "8e937336592e"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Unions in RPGs: How Shadowdark Empowers Characters",
+    "angle": "Discuss how Shadowdark's group dynamics mirror real-world unionization trends.",
+    "rationale": "Unionization news at Rowan, Rook and Decard prompts this timely discussion.",
+    "fixture_hint": "rule",
+    "search_keyword": "Workers at British RPG publisher Rowan, Rook and Decard form union",
+    "created_date": "2026-08-17",
+    "status": "pending",
+    "brief_id": "f56ff4177b71"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark’s Ultimate Horror Spellbook",
+    "angle": "Examine the new horror-themed spells that enhance the Shadowdark experience.",
+    "rationale": "The RPG crowdfunding news about Ultimate Horrors inspires this focus.",
+    "fixture_hint": "spell",
+    "search_keyword": "RPG Crowdfunding News – Deadlands, Ultimate Horrors, Forgotten Foes, and more",
+    "created_date": "2026-08-17",
+    "status": "pending",
+    "brief_id": "3dcac33fb163"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Kickstarter Dynamics: Shadowdark's Crowdfunding Success Story",
+    "angle": "Analyze how Shadowdark's mechanics have adapted to successful Kickstarter campaigns.",
+    "rationale": "Current discussions about TTRPG Kickstarter trends make this a hot topic.",
+    "fixture_hint": "rule",
+    "search_keyword": "On TTRPG Kickstarters, merchandise, and 600% markups",
+    "created_date": "2026-08-17",
+    "status": "pending",
+    "brief_id": "1c6599c4fcfc"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Spell Evolution: What’s New in 2026",
+    "angle": "Investigate new spell mechanics that have evolved in DCC over recent years.",
+    "rationale": "Recent headlines about RPG evolution call for a look at DCC's spell development.",
+    "fixture_hint": "spell",
+    "search_keyword": "RPG Evolution: What's New Pussycat?",
+    "created_date": "2026-08-17",
+    "status": "pending",
+    "brief_id": "b7e53bf14b03"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Markup Mechanics: Balancing the Costs of Magic",
+    "angle": "Analyze how DCC's magic system deals with cost and power balance.",
+    "rationale": "The discussion on 600% markups in TTRPGs makes this a timely examination.",
+    "fixture_hint": "rule",
+    "search_keyword": "On TTRPG Kickstarters, merchandise, and 600% markups",
+    "created_date": "2026-08-17",
+    "status": "pending",
+    "brief_id": "8bf43bc13685"
+  },
+  {
+    "system": "dnd5e",
     "title": "D&D Icons: Reviving Classic Creators",
     "angle": "Exploring how the new 'D&D Icons' line is bringing back classic creators and what it means for the game.",
     "rationale": "The announcement of the 'D&D Icons' line is creating buzz by promising to merge classic elements with new creativity.",
