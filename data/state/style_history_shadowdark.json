@@ -530,5 +530,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-17": {
+    "encounter_seed": {
+      "angle": "moral_choice",
+      "voice": "torchbearer_ref",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "fable"
+    }
   }
 }

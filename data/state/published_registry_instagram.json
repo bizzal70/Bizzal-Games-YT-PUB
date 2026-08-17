@@ -1407,6 +1407,21 @@
       "hook": "Grim Goir's bleeding effect is more dangerous than expected - 1d6 damage per round until healed.",
       "body": "Grim Goir's claw attack inflicts bleeding that deals 1d6 damage per round, which continues until healed unless a DC 15 Fortitude save is made. This ongoing damage can quickly become overwhelming if not addressed immediately. Prioritize healing or saving against the bleeding effect to mitigate its impact. Denying the Grim Goir's ability to exploit its blood frenzy and bloodlust is crucial; control its movement and focus fire to eliminate one target at a time.",
       "cta": "Judges: Force a DC 15 Fort save early to halt Grim Goir's bleeding, or watch them bleed out while it frenzies."
+    },
+    {
+      "published_utc": "2026-08-17T14:27:23Z",
+      "day": "2026-08-17",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-17-encounter-seed-creature-82-6a417da66b95",
+      "instagram_post_id": "18340680478271276",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "2f6b171f55d760617b1c146d78bcb9de2750e658cc1be50140cb004efbcb4c50",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-17.mp4",
+      "fact_name": "Gargoyle",
+      "category": "encounter_seed",
+      "hook": "Use Gargoyle as a values test: give the table two wins, then make them choose which one they can actually keep.",
+      "body": "Gargoyle has an Armor Class of 16 and can fly, making it difficult to hit for lower-level parties. Its two claw attacks at +3 each dealing 1d6 damage can quickly wear down unprepared groups. Non-magical attacks are ineffective due to its impervious talent. Focusing on magical solutions or bypassing it entirely is advisable when resources are scarce.",
+      "cta": "DMs: make them choose what they can live with: save everyone at higher risk, or end the threat before collateral climbs."
     }
   ]
 }

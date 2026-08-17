@@ -1095,6 +1095,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-14.mp4",
         "video_sha256": "f56a72f9f6a5d8484f702dc0c51009e6c23bc54f3831fa6b5f2bdc1aaa52e6f4"
       }
+    },
+    {
+      "published_utc": "2026-08-17T14:26:29Z",
+      "day": "2026-08-17",
+      "content_id": "bgp-2026-08-17-encounter-seed-creature-82-6a417da66b95",
+      "publish_hash": "76dcc7c953fdb9a228cea2a793f024902a4ed0f24fc4bf8196d92a8cd3b96897",
+      "youtube_video_id": "gQHsq1CBCwg",
+      "youtube_url": "https://www.youtube.com/watch?v=gQHsq1CBCwg",
+      "video_sha256": "2f6b171f55d760617b1c146d78bcb9de2750e658cc1be50140cb004efbcb4c50",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-17.mp4",
+      "fingerprint": {
+        "day": "2026-08-17",
+        "category": "encounter_seed",
+        "angle": "moral_choice",
+        "content_id": "bgp-2026-08-17-encounter-seed-creature-82-6a417da66b95",
+        "canonical_hash": "6a417da66b954810c7bc4621f2c1e63bbacef31cc6a7dbff0189b3e319d6c27d",
+        "script_id": "c6795c3612e90f8b34ac5b1449d8a3afbc142f748bd0d964ea7320e4c2a4480f",
+        "fact_kind": "creature",
+        "fact_pk": 82,
+        "fact_name": "Gargoyle",
+        "hook": "Use Gargoyle as a values test: give the table two wins, then make them choose which one they can actually keep.",
+        "body": "Gargoyle has an Armor Class of 16 and can fly, making it difficult to hit for lower-level parties. Its two claw attacks at +3 each dealing 1d6 damage can quickly wear down unprepared groups. Non-magical attacks are ineffective due to its impervious talent. Focusing on magical solutions or bypassing it entirely is advisable when resources are scarce.",
+        "cta": "DMs: make them choose what they can live with: save everyone at higher risk, or end the threat before collateral climbs.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-17.mp4",
+        "video_sha256": "2f6b171f55d760617b1c146d78bcb9de2750e658cc1be50140cb004efbcb4c50"
+      }
     }
   ]
 }

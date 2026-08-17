@@ -530,5 +530,15 @@
       "spice": [],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-08-17": {
+    "rules_myth": {
+      "angle": "why_people_get_it_wrong",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }
