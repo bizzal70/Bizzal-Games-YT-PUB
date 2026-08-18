@@ -1509,6 +1509,33 @@
         "video_sha256": "32d34000e5042fb430ff7a214814badb093730e9b25dac7da196849c970f98fa"
       },
       "tone_lint_violation": "vague filler phrase: Misunderstandings occur when players assume these types cause"
+    },
+    {
+      "published_utc": "2026-08-18T14:26:45Z",
+      "day": "2026-08-18",
+      "content_id": "bgp-2026-08-18-class-spotlight-class-tashas-cauldron-clockwork-soul-391125850538",
+      "publish_hash": "9e18b9f75bf9d56c5a1c6ff1e401fe9a8815044e46c89adb620915b15afe63f7",
+      "youtube_video_id": "l7eGSpM1Su0",
+      "youtube_url": "https://www.youtube.com/watch?v=l7eGSpM1Su0",
+      "video_sha256": "05df5fc472ae69c89341b06c8b5f5fe56a807e3dae12ec88b4932b9446428192",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-18.mp4",
+      "fingerprint": {
+        "day": "2026-08-18",
+        "category": "class_spotlight",
+        "angle": "progression_trap",
+        "content_id": "bgp-2026-08-18-class-spotlight-class-tashas-cauldron-clockwork-soul-391125850538",
+        "canonical_hash": "3911258505386ab8f2a81f97a56d8dae5d72ce01ee7dbdcf67638e0a1b8ec822",
+        "script_id": "a156454352c4c9046a22a702cfa34804eb3e75858a07849c588f1ed8e6c815e5",
+        "fact_kind": "class",
+        "fact_pk": "tashas-cauldron_clockwork-soul",
+        "fact_name": "Clockwork Soul",
+        "hook": "Clockwork Soul's spell list is deceptively robust - always prepared, never a wasted slot.",
+        "body": "Clockwork Magic at 1st level ensures spells like alarm and protection from evil and good are always prepared. Delaying these core spells for flashier options often results in neglecting consistent utility. Dead levels are costly; focus on repeatable actions over one-off spikes. Core spells like dispel magic and lesser restoration offer reliable solutions across encounters.",
+        "cta": "DMs: Stick to Clockwork Magic's always-prepared spells like dispel magic; flashy spells won't save you from dead levels.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-18.mp4",
+        "video_sha256": "05df5fc472ae69c89341b06c8b5f5fe56a807e3dae12ec88b4932b9446428192"
+      },
+      "tone_lint_violation": "vague filler phrase: often results in"
     }
   ]
 }

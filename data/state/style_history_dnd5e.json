@@ -540,5 +540,17 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-18": {
+    "class_spotlight": {
+      "angle": "progression_trap",
+      "voice": "gritty_dm",
+      "tone": "heroic",
+      "persona": "class_mentor",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

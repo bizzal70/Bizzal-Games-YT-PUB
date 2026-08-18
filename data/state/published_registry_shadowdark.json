@@ -1121,6 +1121,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-17.mp4",
         "video_sha256": "2f6b171f55d760617b1c146d78bcb9de2750e658cc1be50140cb004efbcb4c50"
       }
+    },
+    {
+      "published_utc": "2026-08-18T14:32:41Z",
+      "day": "2026-08-18",
+      "content_id": "bgp-2026-08-18-rules-myth-rule-9-25f9749ba04e",
+      "publish_hash": "48c296ee1b18d090c13ca9be63fe829a447d1431b8efc38aab2dfd68cd4e1149",
+      "youtube_video_id": "dceYXW7JMMs",
+      "youtube_url": "https://www.youtube.com/watch?v=dceYXW7JMMs",
+      "video_sha256": "756bb4f615c199bd37f16a29b04201d0076d12db7307c59c403e6f7b0c361ef0",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-18.mp4",
+      "fingerprint": {
+        "day": "2026-08-18",
+        "category": "rules_myth",
+        "angle": "quick_example",
+        "content_id": "bgp-2026-08-18-rules-myth-rule-9-25f9749ba04e",
+        "canonical_hash": "25f9749ba04e27061f2ca175f1968f404fb627daed694c2e1fc956b7448fafc0",
+        "script_id": "5b83e6cced1c20635cfd1dc73eb9749faebdd7306fc9e3384106932a77861ce9",
+        "fact_kind": "rule",
+        "fact_pk": 9,
+        "fact_name": "Encumbrance and Gear Slots",
+        "hook": "Encumbrance and Gear Slots catch players off guard - exceeding slots imposes disadvantage on physical checks.",
+        "body": "Characters have gear slots equal to their Strength score, with a minimum of 10 slots. Each item typically occupies 1 slot unless specified otherwise. Exceeding your gear slots results in disadvantage on physical ability checks, which can severely impact performance in critical situations. Consistent enforcement of this rule ensures players manage their inventory wisely and avoid penalties.",
+        "cta": "GMs: Hand the fighter an eleventh sword and watch them struggle with disadvantage on their next climb check.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-18.mp4",
+        "video_sha256": "756bb4f615c199bd37f16a29b04201d0076d12db7307c59c403e6f7b0c361ef0"
+      }
     }
   ]
 }

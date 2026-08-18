@@ -1437,6 +1437,51 @@
       "hook": "Damage Types have no rules of their own - they depend on other mechanics like Resistance and Immunity.",
       "body": "Damage Types, listed in the \"Rules Glossary, \" lack inherent rules but interact with mechanics such as Resistance and Immunity. Misunderstandings occur when players assume these types cause effects independently, like believing Fire damage ignites objects without explicit rules. Properly identifying how other mechanics rely on Damage Types prevents unnecessary disputes.",
       "cta": "DMs: Remind players that the 16 Damage Types don't ignite or freeze anything without specific rules like Resistance or Immunity."
+    },
+    {
+      "published_utc": "2026-08-18T14:22:55Z",
+      "day": "2026-08-18",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-18-rules-ruling-rule-7-4a4847c4889f",
+      "instagram_post_id": "18441008476125042",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "3eb3e9f11dbdb12fa5c79fc5e32ca15aa2dd3bd22eb35faaf3daebeeb15566e8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-18.mp4",
+      "fact_name": "Patron Bond and Invoke Patron",
+      "category": "rules_ruling",
+      "hook": "Patron Bond and Invoke Patron can rewrite a wizard's personality - patron taint accumulates with each bond.",
+      "body": "Wizards and Elves use Patron Bond to connect with a patron like a demon lord or elder deity. This bond grants access to Invoke Patron and unique patron spells. Invoke Patron always has an effect, but the result varies based on the patron's current mood, which can be influenced by the wizard's service. Each bond increases the risk of accumulating patron taint, altering the wizard's personality over time. Many players overlook how this taint can stack and impact character behavior long-term. Managing patron relationships carefully is crucial to maintaining control over the character's development.",
+      "cta": "Judges: Enforce patron taint accumulation with each bond to remind players that their wizards' personalities are at stake."
+    },
+    {
+      "published_utc": "2026-08-18T14:28:12Z",
+      "day": "2026-08-18",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-18-class-spotlight-class-tashas-cauldron-clockwork-soul-391125850538",
+      "instagram_post_id": "18108458771159036",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "05df5fc472ae69c89341b06c8b5f5fe56a807e3dae12ec88b4932b9446428192",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-18.mp4",
+      "fact_name": "Clockwork Soul",
+      "category": "class_spotlight",
+      "hook": "Clockwork Soul's spell list is deceptively robust - always prepared, never a wasted slot.",
+      "body": "Clockwork Magic at 1st level ensures spells like alarm and protection from evil and good are always prepared. Delaying these core spells for flashier options often results in neglecting consistent utility. Dead levels are costly; focus on repeatable actions over one-off spikes. Core spells like dispel magic and lesser restoration offer reliable solutions across encounters.",
+      "cta": "DMs: Stick to Clockwork Magic's always-prepared spells like dispel magic; flashy spells won't save you from dead levels."
+    },
+    {
+      "published_utc": "2026-08-18T14:34:06Z",
+      "day": "2026-08-18",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-18-rules-myth-rule-9-25f9749ba04e",
+      "instagram_post_id": "18124893178811119",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "756bb4f615c199bd37f16a29b04201d0076d12db7307c59c403e6f7b0c361ef0",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-18.mp4",
+      "fact_name": "Encumbrance and Gear Slots",
+      "category": "rules_myth",
+      "hook": "Encumbrance and Gear Slots catch players off guard - exceeding slots imposes disadvantage on physical checks.",
+      "body": "Characters have gear slots equal to their Strength score, with a minimum of 10 slots. Each item typically occupies 1 slot unless specified otherwise. Exceeding your gear slots results in disadvantage on physical ability checks, which can severely impact performance in critical situations. Consistent enforcement of this rule ensures players manage their inventory wisely and avoid penalties.",
+      "cta": "GMs: Hand the fighter an eleventh sword and watch them struggle with disadvantage on their next climb check."
     }
   ]
 }

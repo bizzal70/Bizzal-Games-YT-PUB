@@ -861,6 +861,32 @@
         "video_sha256": "34301675981297ca5c84a7d361deaea911029b74c62ddfdd4f7924ae03dd62eb"
       },
       "tone_lint_violation": "vague filler phrase: often overlooked"
+    },
+    {
+      "published_utc": "2026-08-18T14:21:40Z",
+      "day": "2026-08-18",
+      "content_id": "bgp-2026-08-18-rules-ruling-rule-7-4a4847c4889f",
+      "publish_hash": "c3779104402767631011b42fe601a07a1cad9152d841c1ba15999c36ff4b4a1e",
+      "youtube_video_id": "iBRr_m3uWRk",
+      "youtube_url": "https://www.youtube.com/watch?v=iBRr_m3uWRk",
+      "video_sha256": "3eb3e9f11dbdb12fa5c79fc5e32ca15aa2dd3bd22eb35faaf3daebeeb15566e8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-18.mp4",
+      "fingerprint": {
+        "day": "2026-08-18",
+        "category": "rules_ruling",
+        "angle": "dice_chain_use",
+        "content_id": "bgp-2026-08-18-rules-ruling-rule-7-4a4847c4889f",
+        "canonical_hash": "4a4847c4889fd70c227bd5c45c633dfafe966210c51298f369f046b748b50017",
+        "script_id": "332b22885149c4b0af75027eebdc098647f913c72256876084d6984411ec501c",
+        "fact_kind": "rule",
+        "fact_pk": 7,
+        "fact_name": "Patron Bond and Invoke Patron",
+        "hook": "Patron Bond and Invoke Patron can rewrite a wizard's personality - patron taint accumulates with each bond.",
+        "body": "Wizards and Elves use Patron Bond to connect with a patron like a demon lord or elder deity. This bond grants access to Invoke Patron and unique patron spells. Invoke Patron always has an effect, but the result varies based on the patron's current mood, which can be influenced by the wizard's service. Each bond increases the risk of accumulating patron taint, altering the wizard's personality over time. Many players overlook how this taint can stack and impact character behavior long-term. Managing patron relationships carefully is crucial to maintaining control over the character's development.",
+        "cta": "Judges: Enforce patron taint accumulation with each bond to remind players that their wizards' personalities are at stake.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-18.mp4",
+        "video_sha256": "3eb3e9f11dbdb12fa5c79fc5e32ca15aa2dd3bd22eb35faaf3daebeeb15566e8"
+      }
     }
   ]
 }

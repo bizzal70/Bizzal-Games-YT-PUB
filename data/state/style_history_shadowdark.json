@@ -542,5 +542,17 @@
       ],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-08-18": {
+    "rules_myth": {
+      "angle": "quick_example",
+      "voice": "torchbearer_ref",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }
