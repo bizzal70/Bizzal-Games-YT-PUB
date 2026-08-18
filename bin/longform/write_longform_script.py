@@ -33,6 +33,12 @@ OPENAI_MODEL = os.environ.get("BIZZAL_OPENAI_MODEL", "gpt-4o")
 # non-empty"). Floor set a bit under the ~1,400 target to leave the model room
 # without accepting a rewrite that's barely longer than a Short's script.
 MIN_WORDS    = int(os.environ.get("BIZZAL_LONGFORM_MIN_WORDS", "1200"))
+# gpt-4o reliably drafts ~900-1,080 words for these subjects -- just under the
+# floor -- so cold regeneration kept failing (nothing published 8/14+). Instead
+# of discarding a good-but-short draft, we hand it back and ask the model to
+# EXPAND it to clear the floor (models expand an existing draft far more reliably
+# than they hit a length target cold). This many expand passes per attempt:
+EXPAND_TRIES = int(os.environ.get("BIZZAL_LONGFORM_EXPAND_TRIES", "3"))
 
 SYSTEM_LABELS = {"dnd5e": "D&D 5e (2024 rules)", "shadowdark": "Shadowdark RPG",
                  "dcc": "Dungeon Crawl Classics RPG"}
@@ -168,8 +174,10 @@ def call_openai(prompt: str) -> str:
         return json.loads(r.read())["choices"][0]["message"]["content"].strip()
 
 
-def _generate_and_validate(fact, system_id) -> dict:
-    raw = call_openai(build_prompt(fact, system_id))
+def _parse_script(raw: str) -> dict:
+    """Strip code fences, parse JSON, enforce STRUCTURE (keys + >=3 sections).
+    Word count is enforced by the caller so a short-but-valid draft can be
+    expanded rather than discarded."""
     clean = raw.strip()
     if clean.startswith("```"):
         clean = "\n".join(clean.split("\n")[1:])
@@ -184,10 +192,56 @@ def _generate_and_validate(fact, system_id) -> dict:
             raise ValueError(f"script missing key: {k}")
     if not isinstance(script.get("sections"), list) or len(script["sections"]) < 3:
         raise ValueError(f"need >= 3 sections, got {len(script.get('sections', []))}")
-    wc = len(_narration_text(script).split())
-    if wc < MIN_WORDS:
-        raise ValueError(f"narration too short: {wc} words (need >= {MIN_WORDS})")
     return script
+
+
+def _generate_structure(fact, system_id) -> dict:
+    """One cold generation, structure-validated (word count handled by caller)."""
+    return _parse_script(call_openai(build_prompt(fact, system_id)))
+
+
+def _expand_script(script: dict, current_wc: int) -> dict:
+    """Hand a short-but-valid draft back to the model to lengthen past the floor
+    by DEEPENING real material, not padding. Models expand an existing draft far
+    more reliably than they hit a length target cold."""
+    target = MIN_WORDS + 120
+    prompt = (
+        f"Below is a long-form narration script in JSON. It is only {current_wc} "
+        f"words, but it must be AT LEAST {MIN_WORDS} words. Rewrite it to about "
+        f"{target} words by DEEPENING the existing body sections and adding 1-2 "
+        "more sections if needed -- with real, specific mechanical detail, concrete "
+        "examples, edge cases, interactions, and comparisons drawn from the subject. "
+        "Do NOT pad with fluff, filler, repetition, throat-clearing, or hype. Keep "
+        "the SAME JSON shape and keys, the same voice, and the same intro and "
+        "outro/CTA intent. Return ONLY the JSON object.\n\n"
+        + json.dumps(script, ensure_ascii=False)
+    )
+    return _parse_script(call_openai(prompt))
+
+
+def _generate_with_expand(fact, system_id) -> dict:
+    """Generate a structure-valid draft; if it's under the word floor, expand it
+    (up to EXPAND_TRIES passes) instead of throwing it away. Raises ValueError if
+    it still can't clear the floor -- the caller counts that as a failed attempt."""
+    candidate = _generate_structure(fact, system_id)
+    wc = len(_narration_text(candidate).split())
+    passes = 0
+    while wc < MIN_WORDS and passes < EXPAND_TRIES:
+        passes += 1
+        print(f"[write_longform_script] draft {wc}w < {MIN_WORDS}; expand pass {passes}/{EXPAND_TRIES}...")
+        expanded = _expand_script(candidate, wc)
+        new_wc = len(_narration_text(expanded).split())
+        # keep the expansion only if it actually grew (guard against a bad rewrite)
+        if new_wc > wc:
+            candidate, wc = expanded, new_wc
+        else:
+            print(f"[write_longform_script] expand pass {passes} did not grow ({new_wc}w); stopping")
+            break
+    if wc < MIN_WORDS:
+        raise ValueError(f"narration too short: {wc} words (need >= {MIN_WORDS}) after {passes} expand pass(es)")
+    if passes:
+        print(f"[write_longform_script] expanded to {wc}w (>= {MIN_WORDS})")
+    return candidate
 
 
 def _narration_text(script) -> str:
@@ -218,7 +272,7 @@ def main():
     for attempt in range(1, attempts + 1):
         print(f"[write_longform_script] {OPENAI_MODEL} attempt {attempt}/{attempts}...")
         try:
-            candidate = _generate_and_validate(fact, SYSTEM_ID)
+            candidate = _generate_with_expand(fact, SYSTEM_ID)
         except Exception as exc:
             print(f"[write_longform_script] attempt {attempt} rejected: {exc}")
             continue
