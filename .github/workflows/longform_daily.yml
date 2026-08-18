@@ -169,13 +169,27 @@ jobs:
           BIZZAL_SKIP_PUBLISH: ${{ github.event.inputs.dry_run == 'true' && '1' || '0' }}
         run: |
           IFS=',' read -ra SYSTEMS <<< "$BIZZAL_CLOUD_SYSTEMS"
+          fail=0; total=0
           for sys in "${SYSTEMS[@]}"; do
             sys="$(echo "$sys" | tr -d ' ')"
+            [ -z "$sys" ] && continue
+            total=$((total+1))
             echo "=== longform: $sys ==="
-            bin/longform/run_longform_for_system.sh "$sys" || {
-              echo "WARNING: longform failed for $sys (non-fatal)"
-            }
+            if ! bin/longform/run_longform_for_system.sh "$sys"; then
+              echo "WARNING: longform failed for $sys"
+              fail=$((fail+1))
+            fi
           done
+          # Fail the run when EVERY system failed (nothing published) so the
+          # run goes red and alert_on_failure fires. Previously this step
+          # swallowed all failures as "non-fatal" and reported green, which is
+          # how the word-count-floor breakage published nothing for a week
+          # while every run still looked successful. Partial success (one of
+          # several systems) still proceeds.
+          if [ "$total" -gt 0 ] && [ "$fail" -ge "$total" ]; then
+            echo "::error::long-form produced nothing -- all $total system(s) failed"
+            exit 1
+          fi
 
       - name: Generate + publish Shorts clips from the long-form
         if: github.event.inputs.make_clips != 'false'
