@@ -225,7 +225,10 @@ def post_prediction(token: str, model_slug: str, payload: dict, attempts: int):
             return http_json("POST", url, token, payload, timeout=90), None
         except error.HTTPError as exc:
             detail = exc.read().decode("utf-8", errors="ignore")
-            if exc.code == 429 and attempt < max(1, attempts):
+            # Retry on rate-limit (429) AND transient server errors (5xx) --
+            # a 500 on submit is a Replicate hiccup, not a bad request.
+            retryable = exc.code == 429 or 500 <= exc.code < 600
+            if retryable and attempt < max(1, attempts):
                 wait_sec = 12
                 try:
                     parsed = json.loads(detail)
@@ -233,7 +236,7 @@ def post_prediction(token: str, model_slug: str, payload: dict, attempts: int):
                 except Exception:
                     pass
                 wait_sec = max(3, min(60, wait_sec))
-                print(f"[bgimg] rate-limited model={model_slug}; retrying in {wait_sec}s ({attempt}/{attempts})", file=sys.stderr)
+                print(f"[bgimg] create {exc.code} model={model_slug}; retrying in {wait_sec}s ({attempt}/{attempts})", file=sys.stderr)
                 time.sleep(wait_sec)
                 continue
             return None, (exc.code, detail)
@@ -399,6 +402,8 @@ def wait_for_prediction(token: str, pred: dict, timeout_sec: int):
     started = time.time()
     url = f"https://api.replicate.com/v1/predictions/{pred_id}"
     status = pred.get("status")
+    poll_errs = 0
+    max_poll_errs = int(os.getenv("BIZZAL_REPLICATE_POLL_MAX_ERRORS", "30"))
     while status not in {"succeeded", "failed", "canceled"}:
         if time.time() - started > timeout_sec:
             return None, "prediction timed out"
@@ -406,8 +411,17 @@ def wait_for_prediction(token: str, pred: dict, timeout_sec: int):
         try:
             pred = http_json("GET", url, token, None, timeout=60)
             status = pred.get("status")
+            poll_errs = 0
         except Exception as exc:
-            return None, f"polling failed: {exc}"
+            # A 500 on the STATUS poll does NOT mean the image failed -- the
+            # prediction is still running server-side. Abandoning it here was
+            # the main cause of long-form losing an image and tripping the
+            # render quality gate. Keep re-polling the same prediction (with
+            # growing backoff, bounded by timeout_sec) instead of giving up.
+            poll_errs += 1
+            if poll_errs >= max_poll_errs:
+                return None, f"polling failed {poll_errs}x: {exc}"
+            time.sleep(min(15, 2 * poll_errs))
 
     if status != "succeeded":
         err = pred.get("error")
@@ -476,9 +490,11 @@ def main() -> int:
         print(json.dumps({"models": deduped_models, "payloads": payload_variants}, indent=2, ensure_ascii=False))
         return 0
 
-    attempts = int(os.getenv("BIZZAL_REPLICATE_IMAGE_CREATE_ATTEMPTS", "3"))
+    attempts = int(os.getenv("BIZZAL_REPLICATE_IMAGE_CREATE_ATTEMPTS", "4"))
     timeout_sec = int(os.getenv("BIZZAL_REPLICATE_IMAGE_TIMEOUT_SEC", "300"))
-    candidate_attempts = int(os.getenv("BIZZAL_BG_IMAGE_CANDIDATE_ATTEMPTS", "4"))
+    # More whole-prediction attempts to outlast an intermittent Replicate wobble
+    # (each failed image otherwise trips the render's per-screen quality gate).
+    candidate_attempts = int(os.getenv("BIZZAL_BG_IMAGE_CANDIDATE_ATTEMPTS", "6"))
     ocr_unavailable_warned = False
     anatomy_unavailable_warned = False
 
@@ -511,7 +527,7 @@ def main() -> int:
                 file=sys.stderr,
             )
             if candidate_idx < candidate_attempts - 1:
-                time.sleep(3 + candidate_idx * 2)
+                time.sleep(min(30, 5 + candidate_idx * 4))
                 continue
             print(
                 f"[bgimg] ERROR: all {candidate_attempts} prediction attempts failed; "
