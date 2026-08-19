@@ -887,6 +887,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-18.mp4",
         "video_sha256": "3eb3e9f11dbdb12fa5c79fc5e32ca15aa2dd3bd22eb35faaf3daebeeb15566e8"
       }
+    },
+    {
+      "published_utc": "2026-08-19T14:20:12Z",
+      "day": "2026-08-19",
+      "content_id": "bgp-2026-08-19-item-spotlight-item-21-66b6c3ab75e7",
+      "publish_hash": "dbcc988316eac0dedcc6f69ebb250658a43459b848075db26baa91e17beabcc1",
+      "youtube_video_id": "S6YKf7rxJKo",
+      "youtube_url": "https://www.youtube.com/watch?v=S6YKf7rxJKo",
+      "video_sha256": "3ed4b56364faf74d95c4f3479d5afcebed3608e7a50a29fae0a86f475a6ac74d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-19.mp4",
+      "fingerprint": {
+        "day": "2026-08-19",
+        "category": "item_spotlight",
+        "angle": "best_user",
+        "content_id": "bgp-2026-08-19-item-spotlight-item-21-66b6c3ab75e7",
+        "canonical_hash": "66b6c3ab75e77acdb6cf89e82d59b1124507bcdbff2fce70b18847560b3acbe0",
+        "script_id": "45754e64b80de6a9371ab2c722298db261fefc66f536da5289a21e927f68cfbc",
+        "fact_kind": "item",
+        "fact_pk": 21,
+        "fact_name": "Throwing Blade",
+        "hook": "Throwing Blade's return feature catches players off guard - it always flies back to the wielder's hand after.",
+        "body": "Throwing Blade is a magic sword that can be thrown up to 20 feet as a ranged attack. It returns to the wielder's hand immediately after the throw, ensuring the weapon is never lost. Misuse occurs when it's forced into every combat scenario. The real advantage is using it to solve obstacles before combat begins, bypassing problems without engaging directly.",
+        "cta": "Judges: Identify one obstacle this session where Throwing Blade's 20-foot range solves a problem without swinging swords.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-19.mp4",
+        "video_sha256": "3ed4b56364faf74d95c4f3479d5afcebed3608e7a50a29fae0a86f475a6ac74d"
+      }
     }
   ]
 }

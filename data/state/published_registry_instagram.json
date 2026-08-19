@@ -1482,6 +1482,51 @@
       "hook": "Encumbrance and Gear Slots catch players off guard - exceeding slots imposes disadvantage on physical checks.",
       "body": "Characters have gear slots equal to their Strength score, with a minimum of 10 slots. Each item typically occupies 1 slot unless specified otherwise. Exceeding your gear slots results in disadvantage on physical ability checks, which can severely impact performance in critical situations. Consistent enforcement of this rule ensures players manage their inventory wisely and avoid penalties.",
       "cta": "GMs: Hand the fighter an eleventh sword and watch them struggle with disadvantage on their next climb check."
+    },
+    {
+      "published_utc": "2026-08-19T14:21:15Z",
+      "day": "2026-08-19",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-19-item-spotlight-item-21-66b6c3ab75e7",
+      "instagram_post_id": "18611171002001688",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "3ed4b56364faf74d95c4f3479d5afcebed3608e7a50a29fae0a86f475a6ac74d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-19.mp4",
+      "fact_name": "Throwing Blade",
+      "category": "item_spotlight",
+      "hook": "Throwing Blade's return feature catches players off guard - it always flies back to the wielder's hand after.",
+      "body": "Throwing Blade is a magic sword that can be thrown up to 20 feet as a ranged attack. It returns to the wielder's hand immediately after the throw, ensuring the weapon is never lost. Misuse occurs when it's forced into every combat scenario. The real advantage is using it to solve obstacles before combat begins, bypassing problems without engaging directly.",
+      "cta": "Judges: Identify one obstacle this session where Throwing Blade's 20-foot range solves a problem without swinging swords."
+    },
+    {
+      "published_utc": "2026-08-19T14:26:07Z",
+      "day": "2026-08-19",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-19-monster-tactic-creature-srd-2024-harpy-d25ae4151d19",
+      "instagram_post_id": "17905260174499534",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "a826afa99168470581b4fa4878b0a729489922b3ab4cac3e1610dad3e3ab4eec",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-19.mp4",
+      "fact_name": "Harpy",
+      "category": "monster_tactic",
+      "hook": "Harpy's Luring Song catches parties off guard - Wisdom save DC 11 is deceptively low.",
+      "body": "Luring Song requires a DC 11 Wisdom saving throw. It's easy to dismiss as low, but when multiple party members fail, the Harpy's advantage compounds. The Harpy's AC is only 11, but its flight speed of 40 feet allows it to maintain distance while the song does its work. Deny the Harpy its setup by breaking line of sight or using silence effects to counter the song's range.",
+      "cta": "DMs: Use a Silence spell to nullify the Harpy's Luring Song and force it into melee, exploiting its low AC of 11."
+    },
+    {
+      "published_utc": "2026-08-19T14:34:19Z",
+      "day": "2026-08-19",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-19-spell-use-case-spell-17-bf5c83bc5c5d",
+      "instagram_post_id": "17891298384414656",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c0e9e67fe8f6c8aa7b23f5690aef1b48146ddbeb735095b628b9b6511f6e9b9a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-19.mp4",
+      "fact_name": "Control Water",
+      "category": "spell_use_case",
+      "hook": "Control Water shapes entire lakes - 100 feet wide and deep.",
+      "body": "Control Water has a range of Far and lasts as long as focus is maintained. Many players overlook its utility outside of combat. Redirecting a river can reveal hidden paths or create obstacles. Use it to manipulate terrain for tactical advantages beyond direct damage.",
+      "cta": "GMs: Use Control Water's 100-foot reach to flood a passage, forcing them to rethink their route or drown."
     }
   ]
 }

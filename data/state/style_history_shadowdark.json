@@ -554,5 +554,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-08-19": {
+    "spell_use_case": {
+      "angle": "dm_twist",
+      "voice": "torchbearer_ref",
+      "tone": "dry",
+      "persona": "arcane_survival_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

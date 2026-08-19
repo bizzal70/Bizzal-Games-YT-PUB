@@ -552,5 +552,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-19": {
+    "monster_tactic": {
+      "angle": "counterplay",
+      "voice": "gritty_dm",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

@@ -1536,6 +1536,32 @@
         "video_sha256": "05df5fc472ae69c89341b06c8b5f5fe56a807e3dae12ec88b4932b9446428192"
       },
       "tone_lint_violation": "vague filler phrase: often results in"
+    },
+    {
+      "published_utc": "2026-08-19T14:25:22Z",
+      "day": "2026-08-19",
+      "content_id": "bgp-2026-08-19-monster-tactic-creature-srd-2024-harpy-d25ae4151d19",
+      "publish_hash": "9ea5d1dd8ca5e011cbfd4eaf1924116dc97fdf202114f1dc60fd07d63d0ba109",
+      "youtube_video_id": "qX0-QMoUmTA",
+      "youtube_url": "https://www.youtube.com/watch?v=qX0-QMoUmTA",
+      "video_sha256": "a826afa99168470581b4fa4878b0a729489922b3ab4cac3e1610dad3e3ab4eec",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-19.mp4",
+      "fingerprint": {
+        "day": "2026-08-19",
+        "category": "monster_tactic",
+        "angle": "counterplay",
+        "content_id": "bgp-2026-08-19-monster-tactic-creature-srd-2024-harpy-d25ae4151d19",
+        "canonical_hash": "d25ae4151d19ba490ef0028d8518d97f91d646def055c32f90e3af1edaae8496",
+        "script_id": "2f2cb4849ddaa2e7ecf5ae521ebb8651039e1ec48f3d62764164196145c82898",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_harpy",
+        "fact_name": "Harpy",
+        "hook": "Harpy's Luring Song catches parties off guard - Wisdom save DC 11 is deceptively low.",
+        "body": "Luring Song requires a DC 11 Wisdom saving throw. It's easy to dismiss as low, but when multiple party members fail, the Harpy's advantage compounds. The Harpy's AC is only 11, but its flight speed of 40 feet allows it to maintain distance while the song does its work. Deny the Harpy its setup by breaking line of sight or using silence effects to counter the song's range.",
+        "cta": "DMs: Use a Silence spell to nullify the Harpy's Luring Song and force it into melee, exploiting its low AC of 11.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-19.mp4",
+        "video_sha256": "a826afa99168470581b4fa4878b0a729489922b3ab4cac3e1610dad3e3ab4eec"
+      }
     }
   ]
 }

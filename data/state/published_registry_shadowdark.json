@@ -1147,6 +1147,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-18.mp4",
         "video_sha256": "756bb4f615c199bd37f16a29b04201d0076d12db7307c59c403e6f7b0c361ef0"
       }
+    },
+    {
+      "published_utc": "2026-08-19T14:33:18Z",
+      "day": "2026-08-19",
+      "content_id": "bgp-2026-08-19-spell-use-case-spell-17-bf5c83bc5c5d",
+      "publish_hash": "869a53cfa0138508914cf7506a8cd896f6397b5a4cae213b7228c8537332cf4e",
+      "youtube_video_id": "fFcD0b_yEN8",
+      "youtube_url": "https://www.youtube.com/watch?v=fFcD0b_yEN8",
+      "video_sha256": "c0e9e67fe8f6c8aa7b23f5690aef1b48146ddbeb735095b628b9b6511f6e9b9a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-19.mp4",
+      "fingerprint": {
+        "day": "2026-08-19",
+        "category": "spell_use_case",
+        "angle": "dm_twist",
+        "content_id": "bgp-2026-08-19-spell-use-case-spell-17-bf5c83bc5c5d",
+        "canonical_hash": "bf5c83bc5c5d42a515a4d4197a8375a467ff4c5d95f0d1a6061067be80d07054",
+        "script_id": "68679c941a42d9c10affc431dd51b2694b979c88cdde86d9a1ce5b09af9fc201",
+        "fact_kind": "spell",
+        "fact_pk": 17,
+        "fact_name": "Control Water",
+        "hook": "Control Water shapes entire lakes - 100 feet wide and deep.",
+        "body": "Control Water has a range of Far and lasts as long as focus is maintained. Many players overlook its utility outside of combat. Redirecting a river can reveal hidden paths or create obstacles. Use it to manipulate terrain for tactical advantages beyond direct damage.",
+        "cta": "GMs: Use Control Water's 100-foot reach to flood a passage, forcing them to rethink their route or drown.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-19.mp4",
+        "video_sha256": "c0e9e67fe8f6c8aa7b23f5690aef1b48146ddbeb735095b628b9b6511f6e9b9a"
+      }
     }
   ]
 }

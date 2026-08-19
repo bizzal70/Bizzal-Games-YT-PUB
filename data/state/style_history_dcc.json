@@ -468,5 +468,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-19": {
+    "item_spotlight": {
+      "angle": "best_user",
+      "voice": "survival_coach",
+      "tone": "gritty",
+      "persona": "dungeon_gear_mentor",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }
