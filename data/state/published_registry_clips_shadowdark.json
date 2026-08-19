@@ -259,6 +259,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-10-shadowdark-clip2.mp4",
         "video_sha256": "b0643284d26c50446f0bb1eb9571b791978ac3e7da2bafaf022697e7110025a8"
       }
+    },
+    {
+      "published_utc": "2026-08-19T23:00:16Z",
+      "day": "2026-08-19-shadowdark-clip1",
+      "content_id": "clip:55892e10dd2106df",
+      "publish_hash": "3b9ea4e903c38bbbe10809c72c683957759177e9283a1fa8f9ff6ac7dc1c81f8",
+      "youtube_video_id": "g-rE9O0q94U",
+      "youtube_url": "https://www.youtube.com/watch?v=g-rE9O0q94U",
+      "video_sha256": "68b2054e794543883fa94381b5ae7818ab49921b4daba6bb6768d956c8b60cac",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-19-shadowdark-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-08-19-shadowdark-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:55892e10dd2106df",
+        "canonical_hash": "",
+        "script_id": "55892e10dd2106dfe618d3eaa6a5ef71bef8dda0ac85846f0e39764f26226d6a",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Detect Thoughts can alert your target",
+        "hook": "Detect Thoughts can alert your target",
+        "body": "When casting Detect Thoughts, the target can resist with a Wisdom check against your last spellcasting check. If they succeed, they become aware of your intrusion and the spell ends. This adds a risk of alerting the target.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-19-shadowdark-clip1.mp4",
+        "video_sha256": "68b2054e794543883fa94381b5ae7818ab49921b4daba6bb6768d956c8b60cac"
+      }
+    },
+    {
+      "published_utc": "2026-08-19T23:02:00Z",
+      "day": "2026-08-19-shadowdark-clip2",
+      "content_id": "clip:4e452abb7a5c88c6",
+      "publish_hash": "eed765b911ac3caf44467701ff02b8c2c1d02d46c84f5b8056ed7c52d1fcd75b",
+      "youtube_video_id": "1EO9N3e5HKM",
+      "youtube_url": "https://www.youtube.com/watch?v=1EO9N3e5HKM",
+      "video_sha256": "919b90014814664df199f5bdba415ca8a67efe3f084c74115b202b121ed32fb8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-19-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-08-19-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:4e452abb7a5c88c6",
+        "canonical_hash": "",
+        "script_id": "4e452abb7a5c88c6e394c387416093d75aef862d8635f41e5ee680e5edcc3dd9",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Detect Thoughts' range is 'Near'",
+        "hook": "Detect Thoughts' range is 'Near'",
+        "body": "In Shadowdark RPG, Detect Thoughts has a range defined as 'Near,' generally a few dozen feet. Wizards must position themselves strategically, often requiring stealth, to avoid detection while casting within this range.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-19-shadowdark-clip2.mp4",
+        "video_sha256": "919b90014814664df199f5bdba415ca8a67efe3f084c74115b202b121ed32fb8"
+      }
+    },
+    {
+      "published_utc": "2026-08-19T23:03:40Z",
+      "day": "2026-08-19-shadowdark-clip3",
+      "content_id": "clip:44ae78cba4bed45b",
+      "publish_hash": "e2d5410d45a33cd6b29b89eb846433e2e5ddac72c8f56e95841ebf759e160728",
+      "youtube_video_id": "eP05F8jyfBw",
+      "youtube_url": "https://www.youtube.com/watch?v=eP05F8jyfBw",
+      "video_sha256": "5075df53a5fb577d999d5e961b633e0514b302b2c9b08b9fb8382d6d9f06971b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-19-shadowdark-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-08-19-shadowdark-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:44ae78cba4bed45b",
+        "canonical_hash": "",
+        "script_id": "44ae78cba4bed45bab6778bff13694cc6632f9d89f965889187887e9306ad467",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Target's Wisdom can end Detect Thoughts",
+        "hook": "Target's Wisdom can end Detect Thoughts",
+        "body": "Detect Thoughts can be disrupted if the target succeeds on a Wisdom check against the caster's last spellcasting check. This not only ends the spell but also alerts the target to the mental intrusion.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-19-shadowdark-clip3.mp4",
+        "video_sha256": "5075df53a5fb577d999d5e961b633e0514b302b2c9b08b9fb8382d6d9f06971b"
+      }
     }
   ]
 }

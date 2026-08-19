@@ -3398,6 +3398,50 @@
       "video_id": "17891298384414656",
       "day": "2026-08-19",
       "published_at": "2026-08-19T14:34:19+00:00"
+    },
+    {
+      "content_key": "588b12de034bc386f074a2713352ba8b35c1ab8230ee8c21c320410007c10871",
+      "token_text": "alerting detect risk target thought",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Detect Thoughts: Risk of Alerting Your Target #shadowdark",
+      "video_id": "znWV0R1y2OU",
+      "day": "2026-08-19",
+      "published_at": "2026-08-19T22:58:28+00:00"
+    },
+    {
+      "content_key": "5e3c41ddfb69b193df42ff4e99de0c652d6e03208686c12b75e969e2f9bdbed7",
+      "token_text": "alert detect target thought",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Detect Thoughts can alert your target #shadowdark",
+      "video_id": "g-rE9O0q94U",
+      "day": "2026-08-19-shadowdark-clip1",
+      "published_at": "2026-08-19T23:00:16+00:00"
+    },
+    {
+      "content_key": "87be40e6ea46aa1fbf6bff568f0b954a9c0ce4359efbb2e301d373b35b1e2c15",
+      "token_text": "detect near range thought",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Detect Thoughts' range is 'Near' #shadowdark",
+      "video_id": "1EO9N3e5HKM",
+      "day": "2026-08-19-shadowdark-clip2",
+      "published_at": "2026-08-19T23:02:00+00:00"
+    },
+    {
+      "content_key": "ba6ac1716936a64d3088a3cd4f47c72eb402dc8bb5152d2b9967775a25607748",
+      "token_text": "detect end target thought wisdom",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Target's Wisdom can end Detect Thoughts #shadowdark",
+      "video_id": "eP05F8jyfBw",
+      "day": "2026-08-19-shadowdark-clip3",
+      "published_at": "2026-08-19T23:03:40+00:00"
     }
   ]
 }
