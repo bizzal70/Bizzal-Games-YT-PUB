@@ -3442,6 +3442,17 @@
       "video_id": "eP05F8jyfBw",
       "day": "2026-08-19-shadowdark-clip3",
       "published_at": "2026-08-19T23:03:40+00:00"
+    },
+    {
+      "content_key": "4026cfa18f9deb21a6f8b8b977d0dd2af06870b6c94785e2866aba055ffc88dc",
+      "token_text": "bard charisma dexterity mastering save",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Bard: Mastering Charisma and Dexterity Saves #dnd5e",
+      "video_id": "oH73hE6oExo",
+      "day": "2026-08-19",
+      "published_at": "2026-08-20T00:02:39+00:00"
     }
   ]
 }
