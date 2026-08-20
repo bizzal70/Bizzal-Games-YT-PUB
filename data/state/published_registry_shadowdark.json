@@ -1173,6 +1173,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-19.mp4",
         "video_sha256": "c0e9e67fe8f6c8aa7b23f5690aef1b48146ddbeb735095b628b9b6511f6e9b9a"
       }
+    },
+    {
+      "published_utc": "2026-08-20T14:31:39Z",
+      "day": "2026-08-20",
+      "content_id": "bgp-2026-08-20-class-spotlight-class-5-944b5b2caa6a",
+      "publish_hash": "fad2166502607b8b8bea803989239cc3640dc40b1f4affd359a9ccb68ffd4d48",
+      "youtube_video_id": "wsaW2wLJCuY",
+      "youtube_url": "https://www.youtube.com/watch?v=wsaW2wLJCuY",
+      "video_sha256": "612feccdaa022ea58330b3ec76968f19d6d5567b81eebba0ea5e6baa4ce1b68a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-20.mp4",
+      "fingerprint": {
+        "day": "2026-08-20",
+        "category": "class_spotlight",
+        "angle": "party_role_pivot",
+        "content_id": "bgp-2026-08-20-class-spotlight-class-5-944b5b2caa6a",
+        "canonical_hash": "944b5b2caa6a32b8cc8b1769879c01bf33ed06103b5c740c571b831eb0226c20",
+        "script_id": "763bbd0d8bc6138980ceee5f4804507ac7eceb2c99b7b769e406490f8a79bf02",
+        "fact_kind": "class",
+        "fact_pk": 5,
+        "fact_name": "Cursed Knight of St. Ydris",
+        "hook": "In the dark, Cursed Knight of St. Ydris matters.",
+        "body": "Role pivot for Cursed Knight of St. Ydris: decide when to switch from setup to closer so the party doesn't over-invest in one lane. Strong turns come from repeatable decisions, not lucky spikes.",
+        "cta": "Players: Use Demonic Possession early, then switch to witch spells when the enemy's defenses crumple - stop leaning on luck.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-20.mp4",
+        "video_sha256": "612feccdaa022ea58330b3ec76968f19d6d5567b81eebba0ea5e6baa4ce1b68a"
+      }
     }
   ]
 }

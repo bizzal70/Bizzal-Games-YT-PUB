@@ -564,5 +564,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-20": {
+    "spell_use_case": {
+      "angle": "best_moment",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "alloy"
+    }
   }
 }

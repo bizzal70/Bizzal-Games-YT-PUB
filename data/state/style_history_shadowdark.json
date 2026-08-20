@@ -566,5 +566,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-08-20": {
+    "class_spotlight": {
+      "angle": "party_role_pivot",
+      "voice": "grim_warden",
+      "tone": "dry",
+      "persona": "class_mentor",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

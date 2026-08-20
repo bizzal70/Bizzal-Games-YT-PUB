@@ -913,6 +913,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-19.mp4",
         "video_sha256": "3ed4b56364faf74d95c4f3479d5afcebed3608e7a50a29fae0a86f475a6ac74d"
       }
+    },
+    {
+      "published_utc": "2026-08-20T14:22:46Z",
+      "day": "2026-08-20",
+      "content_id": "bgp-2026-08-20-encounter-seed-creature-536-06a45d1bf481",
+      "publish_hash": "d1a8c7e4d961a5720cba832766f060e29234e3c10db66dad65a9e6d2ec1e5910",
+      "youtube_video_id": "qOvyEYp6ViQ",
+      "youtube_url": "https://www.youtube.com/watch?v=qOvyEYp6ViQ",
+      "video_sha256": "e6daecd43064557908fe2b44b8e3178bec90a7298290f7e6486c9961bb84b710",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-20.mp4",
+      "fingerprint": {
+        "day": "2026-08-20",
+        "category": "encounter_seed",
+        "angle": "twist",
+        "content_id": "bgp-2026-08-20-encounter-seed-creature-536-06a45d1bf481",
+        "canonical_hash": "06a45d1bf481c2bf114b904e0196e9035d7a673cfab8d53c86b956f198858d27",
+        "script_id": "15597ab3f0ea4177fe444271d0f2a85c439f9b87c438c5f138acef7dd6869354",
+        "fact_kind": "creature",
+        "fact_pk": 536,
+        "fact_name": "Itinerant Grasper",
+        "hook": "Itinerant Grasper tests the table's priorities.",
+        "body": "With 6d20 action dice, the Itinerant Grasper can overwhelm targets with multiple attacks, but no more than three per target. Its magic resistance often leads players to waste spell slots, expecting instant success. Instead, focus on physical attacks or abilities that don't rely on magic. The grapple effect from its clawed-hand attack can lock down characters, so prioritize mobility or ranged tactics to avoid becoming an easy target.",
+        "cta": "Judges: When the spellcasters get too comfortable, introduce the Itinerant Grasper's 50% magic resistance to remind them of their hubris.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-20.mp4",
+        "video_sha256": "e6daecd43064557908fe2b44b8e3178bec90a7298290f7e6486c9961bb84b710"
+      }
     }
   ]
 }

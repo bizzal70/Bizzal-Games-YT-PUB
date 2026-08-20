@@ -1562,6 +1562,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-19.mp4",
         "video_sha256": "a826afa99168470581b4fa4878b0a729489922b3ab4cac3e1610dad3e3ab4eec"
       }
+    },
+    {
+      "published_utc": "2026-08-20T14:28:02Z",
+      "day": "2026-08-20",
+      "content_id": "bgp-2026-08-20-spell-use-case-spell-srd-2024-major-image-3ecd9db7730d",
+      "publish_hash": "640e6dbc8cb54a5f9429e46a46c70fa0a3e9a4074084575f17983949da609fdd",
+      "youtube_video_id": "1iZai8jGBEw",
+      "youtube_url": "https://www.youtube.com/watch?v=1iZai8jGBEw",
+      "video_sha256": "49363f4800549b4dadb66a75882ea70366dd874d219075c7bad03c3778815398",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-20.mp4",
+      "fingerprint": {
+        "day": "2026-08-20",
+        "category": "spell_use_case",
+        "angle": "best_moment",
+        "content_id": "bgp-2026-08-20-spell-use-case-spell-srd-2024-major-image-3ecd9db7730d",
+        "canonical_hash": "3ecd9db7730d129f45b86fb6a2ebbfc9c3da4ca87f4ca6f9f706a95c08756bdd",
+        "script_id": "ad292c97d3c60bfe535ff3963546bc34bb4e42658899d84dcb160d5aa321891d",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_major-image",
+        "fact_name": "Major Image",
+        "hook": "Major Image shifts the action economy more than players expect - it can remove a turn entirely.",
+        "body": "Major Image creates a 20-foot cube illusion within 120 feet for up to 10 minutes with concentration. Casting it at the wrong moment often leads to losing concentration when it's unprotected. The real value is in using it to disrupt enemy actions, not just for visual flair. Cast it to neutralize a threat for a turn, then capitalize on the opening.",
+        "cta": "DMs: Use Major Image to create a 20-foot cube illusion that forces enemy casters to waste actions on Investigation checks.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-20.mp4",
+        "video_sha256": "49363f4800549b4dadb66a75882ea70366dd874d219075c7bad03c3778815398"
+      },
+      "tone_lint_violation": "vague filler phrase: often leads to"
     }
   ]
 }
