@@ -576,5 +576,15 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-21": {
+    "monster_tactic": {
+      "angle": "common_mistake",
+      "voice": "torchbearer_ref",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

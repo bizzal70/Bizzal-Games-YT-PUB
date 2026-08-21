@@ -939,6 +939,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-20.mp4",
         "video_sha256": "e6daecd43064557908fe2b44b8e3178bec90a7298290f7e6486c9961bb84b710"
       }
+    },
+    {
+      "published_utc": "2026-08-21T14:19:41Z",
+      "day": "2026-08-21",
+      "content_id": "bgp-2026-08-21-class-spotlight-class-6-57aa74409fb0",
+      "publish_hash": "b16441be3a2802b205d6b9873ff9c18859008e1125bc037e56d418387ffe04d3",
+      "youtube_video_id": "6hNLZ_CmNeo",
+      "youtube_url": "https://www.youtube.com/watch?v=6hNLZ_CmNeo",
+      "video_sha256": "c0a5771e6e48f257c1946603fbfc44fd05ac7421db0c2e477a6cd93deaf74455",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-21.mp4",
+      "fingerprint": {
+        "day": "2026-08-21",
+        "category": "class_spotlight",
+        "angle": "class_identity",
+        "content_id": "bgp-2026-08-21-class-spotlight-class-6-57aa74409fb0",
+        "canonical_hash": "57aa74409fb0cebd9bc80661c68e6e934d7e59f982430d34672f16817e0df918",
+        "script_id": "b4c6ff56cbdb1be2412642bf3d28e09b7636a425fab937f9c73ecad4639ffe28",
+        "fact_kind": "class",
+        "fact_pk": 6,
+        "fact_name": "Elf",
+        "hook": "Judge's call: Elf.",
+        "body": "Character tip: Elf. Elves combine warrior and wizard abilities but excel at neither. They use a d20 action die, can make melee attacks AND cast spells in the same turn (the only class with this). Strong turns come from repeatable decisions, not lucky spikes.",
+        "cta": "Judges: Drill them on using the d20 action die for melee and spellcasting each turn until it's second nature.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-21.mp4",
+        "video_sha256": "c0a5771e6e48f257c1946603fbfc44fd05ac7421db0c2e477a6cd93deaf74455"
+      }
     }
   ]
 }

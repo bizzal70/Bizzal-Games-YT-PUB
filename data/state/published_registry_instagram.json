@@ -1572,6 +1572,51 @@
       "hook": "In the dark, Cursed Knight of St. Ydris matters.",
       "body": "Role pivot for Cursed Knight of St. Ydris: decide when to switch from setup to closer so the party doesn't over-invest in one lane. Strong turns come from repeatable decisions, not lucky spikes.",
       "cta": "Players: Use Demonic Possession early, then switch to witch spells when the enemy's defenses crumple - stop leaning on luck."
+    },
+    {
+      "published_utc": "2026-08-21T14:20:26Z",
+      "day": "2026-08-21",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-21-class-spotlight-class-6-57aa74409fb0",
+      "instagram_post_id": "18340845238254774",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c0a5771e6e48f257c1946603fbfc44fd05ac7421db0c2e477a6cd93deaf74455",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-21.mp4",
+      "fact_name": "Elf",
+      "category": "class_spotlight",
+      "hook": "Judge's call: Elf.",
+      "body": "Character tip: Elf. Elves combine warrior and wizard abilities but excel at neither. They use a d20 action die, can make melee attacks AND cast spells in the same turn (the only class with this). Strong turns come from repeatable decisions, not lucky spikes.",
+      "cta": "Judges: Drill them on using the d20 action die for melee and spellcasting each turn until it's second nature."
+    },
+    {
+      "published_utc": "2026-08-21T14:24:38Z",
+      "day": "2026-08-21",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-21-rules-ruling-rule-srd-2024-combat-movement-and-position-a6fee6b50a22",
+      "instagram_post_id": "18125689486765108",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "8ec822540b31eb8ab77bc88281e7dc61042d98acb2822055a3bda68f158bc0bd",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-21.mp4",
+      "fact_name": "Movement and Position",
+      "category": "rules_ruling",
+      "hook": "Movement often surprises players with its flexibility - climbing, crawling, jumping.",
+      "body": "Movement and Position rules allow a creature to move a distance up to its Speed on its turn, using various types of movement like climbing or swimming. DMs frequently apply these rules inconsistently between players and monsters, leading to disputes. Consistent rulings prevent arguments and ensure fair play. Enforce the same movement rules for both allies and enemies, regardless of the situation.",
+      "cta": "DMs: Enforce the same climbing, crawling, and jumping rules for both players and monsters to avoid the usual disputes."
+    },
+    {
+      "published_utc": "2026-08-21T14:29:22Z",
+      "day": "2026-08-21",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-21-monster-tactic-creature-215-1441a443b536",
+      "instagram_post_id": "18438192607122310",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c711ca5ad3839daa86ad3cf25cfd5f81ec406f6217ef78ad7124cff93c130b16",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-21.mp4",
+      "fact_name": "Wizard Viperian",
+      "category": "monster_tactic",
+      "hook": "Wizard Viperian's Focus ability disrupts spellcasters more than expected - it imposes disadvantage on all.",
+      "body": "The Wizard Viperian's Focus ability imposes disadvantage on all spellcasting checks for enemies within near range. This can cripple a party reliant on magic if they stay too close. Many players fail to reposition to avoid this effect, allowing the Viperian to control the battlefield. Effective counterplay involves maintaining distance and forcing the Viperian to move, disrupting its ability to apply Focus consistently.",
+      "cta": "GMs: Use Focus when players cluster; their failure to spread out is your opportunity to disrupt their spellcasting."
     }
   ]
 }

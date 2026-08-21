@@ -1199,6 +1199,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-20.mp4",
         "video_sha256": "612feccdaa022ea58330b3ec76968f19d6d5567b81eebba0ea5e6baa4ce1b68a"
       }
+    },
+    {
+      "published_utc": "2026-08-21T14:28:20Z",
+      "day": "2026-08-21",
+      "content_id": "bgp-2026-08-21-monster-tactic-creature-215-1441a443b536",
+      "publish_hash": "a3dc8c3c51fc157f662ba5feb4ae264ced3aa6caa993b7aa33b510e03348b0c2",
+      "youtube_video_id": "vQ5ISVjeyYM",
+      "youtube_url": "https://www.youtube.com/watch?v=vQ5ISVjeyYM",
+      "video_sha256": "c711ca5ad3839daa86ad3cf25cfd5f81ec406f6217ef78ad7124cff93c130b16",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-21.mp4",
+      "fingerprint": {
+        "day": "2026-08-21",
+        "category": "monster_tactic",
+        "angle": "common_mistake",
+        "content_id": "bgp-2026-08-21-monster-tactic-creature-215-1441a443b536",
+        "canonical_hash": "1441a443b53628a236026d5ff1da33e366bcbb8538bdc0d24c095f99f8608e82",
+        "script_id": "808b5641a6215cc1a0cb501d6cf368751ee03d116fe600d6aa48d070db78dfdd",
+        "fact_kind": "creature",
+        "fact_pk": 215,
+        "fact_name": "Wizard Viperian",
+        "hook": "Wizard Viperian's Focus ability disrupts spellcasters more than expected - it imposes disadvantage on all.",
+        "body": "The Wizard Viperian's Focus ability imposes disadvantage on all spellcasting checks for enemies within near range. This can cripple a party reliant on magic if they stay too close. Many players fail to reposition to avoid this effect, allowing the Viperian to control the battlefield. Effective counterplay involves maintaining distance and forcing the Viperian to move, disrupting its ability to apply Focus consistently.",
+        "cta": "GMs: Use Focus when players cluster; their failure to spread out is your opportunity to disrupt their spellcasting.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-21.mp4",
+        "video_sha256": "c711ca5ad3839daa86ad3cf25cfd5f81ec406f6217ef78ad7124cff93c130b16"
+      }
     }
   ]
 }

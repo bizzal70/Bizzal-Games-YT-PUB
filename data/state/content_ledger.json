@@ -3519,6 +3519,72 @@
       "video_id": "18119781941304241",
       "day": "2026-08-20",
       "published_at": "2026-08-20T14:33:12+00:00"
+    },
+    {
+      "content_key": "123936b29bfda16e3323eb640172498179eb3573b9c0c2476c82bbc6dc708e8d",
+      "token_text": "call elf judge",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Judge's call: Elf #dcc",
+      "video_id": "6hNLZ_CmNeo",
+      "day": "2026-08-21",
+      "published_at": "2026-08-21T14:19:41+00:00"
+    },
+    {
+      "content_key": "59113e8567a130ab155de4a797cea522e61415dc8a24b6b4b1e509f79cf3e29b",
+      "token_text": "call elf judge",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Judge's call: Elf.",
+      "video_id": "18340845238254774",
+      "day": "2026-08-21",
+      "published_at": "2026-08-21T14:20:26+00:00"
+    },
+    {
+      "content_key": "7e634fcd4d97d773e9c062e4a3d595bc521453ce27b916c831b5b03e8d3d30c5",
+      "token_text": "climbing crawling flexibility jumping movement often player surprise",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Movement and Position: Movement often surprises players with its flexibility #dnd5e",
+      "video_id": "evINcF9EpBg",
+      "day": "2026-08-21",
+      "published_at": "2026-08-21T14:23:54+00:00"
+    },
+    {
+      "content_key": "81d53bc48c060a23bb85d9655d4f47b4816dc62bd411d437202e4f92c15fd792",
+      "token_text": "climbing crawling flexibility jumping movement often player surprise",
+      "system_id": "dnd5e",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Movement often surprises players with its flexibility - climbing, crawling, jumping.",
+      "video_id": "18125689486765108",
+      "day": "2026-08-21",
+      "published_at": "2026-08-21T14:24:38+00:00"
+    },
+    {
+      "content_key": "254c32e789b0d2b2746e8aa75f403822e06f9d694ba5d1e430d433e3b9925cdf",
+      "token_text": "ability all disadvantage disrupt expected focu impose more spellcaster viperian wizard",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Wizard Viperian's Focus ability disrupts spellcasters more than expected #shadowdark",
+      "video_id": "vQ5ISVjeyYM",
+      "day": "2026-08-21",
+      "published_at": "2026-08-21T14:28:20+00:00"
+    },
+    {
+      "content_key": "fe64f51519df4a5bb0c286a3b327a3efb99dea20d4b1a59e9d6e1b2540827341",
+      "token_text": "ability all disadvantage disrupt expected focu impose more spellcaster viperian wizard",
+      "system_id": "shadowdark",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Wizard Viperian's Focus ability disrupts spellcasters more than expected - it imposes disadvantage on all.",
+      "video_id": "18438192607122310",
+      "day": "2026-08-21",
+      "published_at": "2026-08-21T14:29:22+00:00"
     }
   ]
 }

@@ -576,5 +576,17 @@
       ],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-08-21": {
+    "rules_ruling": {
+      "angle": "dm_fairness_tip",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

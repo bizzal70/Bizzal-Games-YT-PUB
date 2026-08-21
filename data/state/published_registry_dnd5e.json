@@ -1589,6 +1589,32 @@
         "video_sha256": "49363f4800549b4dadb66a75882ea70366dd874d219075c7bad03c3778815398"
       },
       "tone_lint_violation": "vague filler phrase: often leads to"
+    },
+    {
+      "published_utc": "2026-08-21T14:23:54Z",
+      "day": "2026-08-21",
+      "content_id": "bgp-2026-08-21-rules-ruling-rule-srd-2024-combat-movement-and-position-a6fee6b50a22",
+      "publish_hash": "1d028b6a44b94b75ee7d3e1b67fbc43673b692b55cdce2e7e304a7accd99c41f",
+      "youtube_video_id": "evINcF9EpBg",
+      "youtube_url": "https://www.youtube.com/watch?v=evINcF9EpBg",
+      "video_sha256": "8ec822540b31eb8ab77bc88281e7dc61042d98acb2822055a3bda68f158bc0bd",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-21.mp4",
+      "fingerprint": {
+        "day": "2026-08-21",
+        "category": "rules_ruling",
+        "angle": "dm_fairness_tip",
+        "content_id": "bgp-2026-08-21-rules-ruling-rule-srd-2024-combat-movement-and-position-a6fee6b50a22",
+        "canonical_hash": "a6fee6b50a22df605c838da6ca3f227a75184648fd5660c7ae7940f3176e1a85",
+        "script_id": "59147d573714aa8959aec4fc45a805a3e8c9a40a1487d0c3456f07ee34d39556",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_combat_movement-and-position",
+        "fact_name": "Movement and Position",
+        "hook": "Movement often surprises players with its flexibility - climbing, crawling, jumping.",
+        "body": "Movement and Position rules allow a creature to move a distance up to its Speed on its turn, using various types of movement like climbing or swimming. DMs frequently apply these rules inconsistently between players and monsters, leading to disputes. Consistent rulings prevent arguments and ensure fair play. Enforce the same movement rules for both allies and enemies, regardless of the situation.",
+        "cta": "DMs: Enforce the same climbing, crawling, and jumping rules for both players and monsters to avoid the usual disputes.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-21.mp4",
+        "video_sha256": "8ec822540b31eb8ab77bc88281e7dc61042d98acb2822055a3bda68f158bc0bd"
+      }
     }
   ]
 }
