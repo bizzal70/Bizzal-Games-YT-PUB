@@ -77,6 +77,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-07-22-dnd5e-clip3.mp4",
         "video_sha256": "23afe4fd79d8e4996b86200153f68014fce88fe03536e1a295579de169e3ced1"
       }
+    },
+    {
+      "published_utc": "2026-08-21T18:10:23Z",
+      "day": "2026-08-21-dnd5e-clip1",
+      "content_id": "clip:c8c97bdc949046d8",
+      "publish_hash": "8aa0daaacb1d4641efcfd4b1a1220dc5fd9a197a388fdd06a3d6893467007f77",
+      "youtube_video_id": "kAUXwY0VtgM",
+      "youtube_url": "https://www.youtube.com/watch?v=kAUXwY0VtgM",
+      "video_sha256": "d743ccbb1d462ff3d63b148a8a4df8f9e084ca84443e234a33dd3beb1a06e8de",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-08-21-dnd5e-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-08-21-dnd5e-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:c8c97bdc949046d8",
+        "canonical_hash": "",
+        "script_id": "c8c97bdc949046d8efa76f197cb895c84b041d16f6cff799191e958b6f44313e",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Psi-Bolstered Knack needs proficiency",
+        "hook": "Psi-Bolstered Knack needs proficiency",
+        "body": "Psi-Bolstered Knack lets you reroll a failed ability check, but only if you're proficient in that skill or tool. Misusing it on non-proficient checks wastes resources. Always know your proficiencies to maximize this ability's potential.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-08-21-dnd5e-clip1.mp4",
+        "video_sha256": "d743ccbb1d462ff3d63b148a8a4df8f9e084ca84443e234a33dd3beb1a06e8de"
+      }
+    },
+    {
+      "published_utc": "2026-08-21T18:11:55Z",
+      "day": "2026-08-21-dnd5e-clip2",
+      "content_id": "clip:fdfcb282f1dbc21b",
+      "publish_hash": "830e3432db972f2219f67796c3d79c121e8cc61f44562c6498a09bd70e664429",
+      "youtube_video_id": "EG__c7hhWWs",
+      "youtube_url": "https://www.youtube.com/watch?v=EG__c7hhWWs",
+      "video_sha256": "055b82a6544b4ca9935cca9829be7259dbc51830ac28f1932437fa84587edc38",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-08-21-dnd5e-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-08-21-dnd5e-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:fdfcb282f1dbc21b",
+        "canonical_hash": "",
+        "script_id": "fdfcb282f1dbc21b9bf09fd909aacb61d42f0a12a0398eaf3cd161e08d2e6797",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Psychic Whispers has a 1-mile limit",
+        "hook": "Psychic Whispers has a 1-mile limit",
+        "body": "Psychic Whispers lets you communicate telepathically with allies, but remember the 1-mile range limit. This ability is perfect for stealth missions, but ensure your team is within range to avoid miscommunication during crucial moments.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-08-21-dnd5e-clip2.mp4",
+        "video_sha256": "055b82a6544b4ca9935cca9829be7259dbc51830ac28f1932437fa84587edc38"
+      }
+    },
+    {
+      "published_utc": "2026-08-21T18:13:20Z",
+      "day": "2026-08-21-dnd5e-clip3",
+      "content_id": "clip:f4dd3cfb0f0d493a",
+      "publish_hash": "305d9dd72d30e25090a7fe726a71f90b7691d329169f3bf2d5d67bddce2bd89d",
+      "youtube_video_id": "S_fpH27m8Wo",
+      "youtube_url": "https://www.youtube.com/watch?v=S_fpH27m8Wo",
+      "video_sha256": "d7f0329f61c348d6ecf758af730991f6d061d810cb365647cb529ceb2e786850",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-08-21-dnd5e-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-08-21-dnd5e-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:f4dd3cfb0f0d493a",
+        "canonical_hash": "",
+        "script_id": "f4dd3cfb0f0d493a2a70500c9d0e3430f286fc78f91a7a289a2a43fc231a7725",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Psychic Blades bypass physical armor",
+        "hook": "Psychic Blades bypass physical armor",
+        "body": "Psychic Blades deal psychic damage, ideal against high AC foes. They're finesse weapons, so Sneak Attack can apply. Be cautious of psychic-resistant enemies; have a backup plan or weapon for those encounters.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-08-21-dnd5e-clip3.mp4",
+        "video_sha256": "d7f0329f61c348d6ecf758af730991f6d061d810cb365647cb529ceb2e786850"
+      }
     }
   ]
 }

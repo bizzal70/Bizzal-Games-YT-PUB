@@ -3585,6 +3585,50 @@
       "video_id": "18438192607122310",
       "day": "2026-08-21",
       "published_at": "2026-08-21T14:29:22+00:00"
+    },
+    {
+      "content_key": "e1a425b8cd6c0f34bb6a6760ee32dc374b77fdf3e2ddfe72e039bcca17382d5e",
+      "token_text": "5e mastering power psionic soulknife",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Soulknife: Mastering Psionic Power in D&D 5e #dnd5e",
+      "video_id": "EB_QAU7Iurg",
+      "day": "2026-08-21",
+      "published_at": "2026-08-21T18:08:35+00:00"
+    },
+    {
+      "content_key": "a265da66fed61f5cfa37b506d754d4ac375b02fe9118dc1d485838e5f92743c8",
+      "token_text": "bolstered knack need proficiency psi",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Psi-Bolstered Knack needs proficiency #dnd5e",
+      "video_id": "kAUXwY0VtgM",
+      "day": "2026-08-21-dnd5e-clip1",
+      "published_at": "2026-08-21T18:10:23+00:00"
+    },
+    {
+      "content_key": "bdfe00b4107eafdcedc0501d4d87bc0f7ac32d0fc29eff2207e7badc0f62e0cd",
+      "token_text": "has limit mile psychic whisper",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Psychic Whispers has a 1-mile limit #dnd5e",
+      "video_id": "EG__c7hhWWs",
+      "day": "2026-08-21-dnd5e-clip2",
+      "published_at": "2026-08-21T18:11:55+00:00"
+    },
+    {
+      "content_key": "e590dacb27ebe39d81b841d56447cf3a544b0edb7eecb08d22d8c4e68cb75369",
+      "token_text": "armor blade bypass physical psychic",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Psychic Blades bypass physical armor #dnd5e",
+      "video_id": "S_fpH27m8Wo",
+      "day": "2026-08-21-dnd5e-clip3",
+      "published_at": "2026-08-21T18:13:20+00:00"
     }
   ]
 }
