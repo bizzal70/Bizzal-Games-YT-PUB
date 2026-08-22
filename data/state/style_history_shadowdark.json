@@ -586,5 +586,15 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-22": {
+    "rules_ruling": {
+      "angle": "edge_case",
+      "voice": "strict_referee",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "coral"
+    }
   }
 }

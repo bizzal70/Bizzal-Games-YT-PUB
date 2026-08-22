@@ -965,6 +965,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-21.mp4",
         "video_sha256": "c0a5771e6e48f257c1946603fbfc44fd05ac7421db0c2e477a6cd93deaf74455"
       }
+    },
+    {
+      "published_utc": "2026-08-22T14:12:58Z",
+      "day": "2026-08-22",
+      "content_id": "bgp-2026-08-22-rules-myth-rule-16-0ff78ac5b60f",
+      "publish_hash": "8959350782bc175032f8a40d823f1ed5be52bbf54ede575f26288946ba3ca70e",
+      "youtube_video_id": "HsPjZdoEiNI",
+      "youtube_url": "https://www.youtube.com/watch?v=HsPjZdoEiNI",
+      "video_sha256": "9aa4546d9562eaa67cec778e71a56468258d00c810f208202745e7a19fb2c52c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-22.mp4",
+      "fingerprint": {
+        "day": "2026-08-22",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-08-22-rules-myth-rule-16-0ff78ac5b60f",
+        "canonical_hash": "0ff78ac5b60f825d74fc8a3eb4cd911791808d5035bd06b0e58755981b1ada99",
+        "script_id": "abe04dda301187742742b235cbdcf82a3aede9973ba9e043db18ac992f8ea328",
+        "fact_kind": "rule",
+        "fact_pk": 16,
+        "fact_name": "Turn Unholy",
+        "hook": "Turn Unholy affects only the weakest unholy creatures on a failed check - failure increases deity disapproval.",
+        "body": "Turn Unholy requires a cleric to make a spell check against the targets' HD, with results varying from minor disruption to outright destruction of undead and demons. Misjudging the impact of a failed check leads to increased deity disapproval, just like any other failed cleric action. Understanding when the risk of failure is worth the potential gain is crucial, especially against more powerful foes where success is uncertain.",
+        "cta": "Judges: Only attempt Turn Unholy when the cleric's spell check can reliably exceed the target's HD, or expect deity disapproval.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-22.mp4",
+        "video_sha256": "9aa4546d9562eaa67cec778e71a56468258d00c810f208202745e7a19fb2c52c"
+      }
     }
   ]
 }

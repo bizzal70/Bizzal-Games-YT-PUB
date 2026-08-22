@@ -3629,6 +3629,72 @@
       "video_id": "S_fpH27m8Wo",
       "day": "2026-08-21-dnd5e-clip3",
       "published_at": "2026-08-21T18:13:20+00:00"
+    },
+    {
+      "content_key": "080f9eb86999d4f6d178ef610d9feb5e2aed49236552537222d4144784870337",
+      "token_text": "affect check creature deity disapproval failed failure increase only turn unholy weakest",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Turn Unholy affects only the weakest unholy creatures on a failed check #dcc",
+      "video_id": "HsPjZdoEiNI",
+      "day": "2026-08-22",
+      "published_at": "2026-08-22T14:12:58+00:00"
+    },
+    {
+      "content_key": "3a71ab3770465bf5745245d587c2dffd456c41e6d302a4f9a26ce14cb1d4c4ed",
+      "token_text": "affect check creature deity disapproval failed failure increase only turn unholy weakest",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Turn Unholy affects only the weakest unholy creatures on a failed check - failure increases deity disapproval.",
+      "video_id": "18081488366439760",
+      "day": "2026-08-22",
+      "published_at": "2026-08-22T14:14:18+00:00"
+    },
+    {
+      "content_key": "a881bbff26848b39d1134e02bf161795c397e11143f4ca6719cef5b22a5fd6a0",
+      "token_text": "attack bonu damage determine grant javelin rarity roll",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Javelin (+1) grants a bonus to attack and damage rolls #dnd5e",
+      "video_id": "o8pMdXJNb1Y",
+      "day": "2026-08-22",
+      "published_at": "2026-08-22T14:18:44+00:00"
+    },
+    {
+      "content_key": "91a0c221ecefbd54a577b8f17a1ef8c025082a7723153e84e5966187a86a0759",
+      "token_text": "attack bonu damage determine grant javelin rarity roll",
+      "system_id": "dnd5e",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Javelin (+1) grants a bonus to attack and damage rolls - the rarity determines the bonus.",
+      "video_id": "18069870692729896",
+      "day": "2026-08-22",
+      "published_at": "2026-08-22T14:20:00+00:00"
+    },
+    {
+      "content_key": "be1e50ad387ff501b9eadcb40ba0ff8799d650768538882265252016883f6eef",
+      "token_text": "10 catch d6 encounter guard minute occur off partie random roll they",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Random Encounters catch parties off guard #shadowdark",
+      "video_id": "UhjQf8eZ27E",
+      "day": "2026-08-22",
+      "published_at": "2026-08-22T14:24:08+00:00"
+    },
+    {
+      "content_key": "0b7925afdf77abf40c33299e69a2aeef97f8d4484a58b11599a72c902372bcb0",
+      "token_text": "10 catch d6 encounter guard minute occur off partie random roll they",
+      "system_id": "shadowdark",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Random Encounters catch parties off guard - they occur every 10 minutes on a d6 roll of 1.",
+      "video_id": "18031749086839614",
+      "day": "2026-08-22",
+      "published_at": "2026-08-22T14:24:56+00:00"
     }
   ]
 }

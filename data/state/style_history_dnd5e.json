@@ -588,5 +588,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-22": {
+    "item_spotlight": {
+      "angle": "dm_counterplay",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

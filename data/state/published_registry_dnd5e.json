@@ -1615,6 +1615,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-21.mp4",
         "video_sha256": "8ec822540b31eb8ab77bc88281e7dc61042d98acb2822055a3bda68f158bc0bd"
       }
+    },
+    {
+      "published_utc": "2026-08-22T14:18:44Z",
+      "day": "2026-08-22",
+      "content_id": "bgp-2026-08-22-item-spotlight-item-srd-2024-javelin-plus-1-60a03b5f7231",
+      "publish_hash": "b17e3112314827ce65e01f3934711d02edcbdef02fdb3449e10533945b23e3d3",
+      "youtube_video_id": "o8pMdXJNb1Y",
+      "youtube_url": "https://www.youtube.com/watch?v=o8pMdXJNb1Y",
+      "video_sha256": "454df810a64d4861c6c47fbfc0c7cc8a870ff0e3d79b255ae0a339c5ed0da0e4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-22.mp4",
+      "fingerprint": {
+        "day": "2026-08-22",
+        "category": "item_spotlight",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-08-22-item-spotlight-item-srd-2024-javelin-plus-1-60a03b5f7231",
+        "canonical_hash": "60a03b5f7231723e9d6d2327fef8fdd12a85af2dab5cdb873ab38af14bf54926",
+        "script_id": "c9c3b658b17cb3ce54949f2df1851f2503211ca34faa13da11519b5e8b0397ae",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_javelin-plus-1",
+        "fact_name": "Javelin (+1)",
+        "hook": "Javelin (+1) grants a bonus to attack and damage rolls - the rarity determines the bonus.",
+        "body": "This magic weapon provides a bonus to both attack and damage rolls, contingent on its rarity. As an uncommon weapon, it offers a modest boost. Many players neglect to apply this bonus during combat, resulting in missed opportunities for increased damage. Verify the rarity and corresponding bonus before entering combat to ensure maximum effectiveness.",
+        "cta": "DMs: Remind players to add the +1 bonus to both attack and damage rolls with the Javelin (+1) before combat starts.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-22.mp4",
+        "video_sha256": "454df810a64d4861c6c47fbfc0c7cc8a870ff0e3d79b255ae0a339c5ed0da0e4"
+      }
     }
   ]
 }

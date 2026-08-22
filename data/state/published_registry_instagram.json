@@ -1617,6 +1617,51 @@
       "hook": "Wizard Viperian's Focus ability disrupts spellcasters more than expected - it imposes disadvantage on all.",
       "body": "The Wizard Viperian's Focus ability imposes disadvantage on all spellcasting checks for enemies within near range. This can cripple a party reliant on magic if they stay too close. Many players fail to reposition to avoid this effect, allowing the Viperian to control the battlefield. Effective counterplay involves maintaining distance and forcing the Viperian to move, disrupting its ability to apply Focus consistently.",
       "cta": "GMs: Use Focus when players cluster; their failure to spread out is your opportunity to disrupt their spellcasting."
+    },
+    {
+      "published_utc": "2026-08-22T14:14:18Z",
+      "day": "2026-08-22",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-22-rules-myth-rule-16-0ff78ac5b60f",
+      "instagram_post_id": "18081488366439760",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9aa4546d9562eaa67cec778e71a56468258d00c810f208202745e7a19fb2c52c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-22.mp4",
+      "fact_name": "Turn Unholy",
+      "category": "rules_myth",
+      "hook": "Turn Unholy affects only the weakest unholy creatures on a failed check - failure increases deity disapproval.",
+      "body": "Turn Unholy requires a cleric to make a spell check against the targets' HD, with results varying from minor disruption to outright destruction of undead and demons. Misjudging the impact of a failed check leads to increased deity disapproval, just like any other failed cleric action. Understanding when the risk of failure is worth the potential gain is crucial, especially against more powerful foes where success is uncertain.",
+      "cta": "Judges: Only attempt Turn Unholy when the cleric's spell check can reliably exceed the target's HD, or expect deity disapproval."
+    },
+    {
+      "published_utc": "2026-08-22T14:20:00Z",
+      "day": "2026-08-22",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-22-item-spotlight-item-srd-2024-javelin-plus-1-60a03b5f7231",
+      "instagram_post_id": "18069870692729896",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "454df810a64d4861c6c47fbfc0c7cc8a870ff0e3d79b255ae0a339c5ed0da0e4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-22.mp4",
+      "fact_name": "Javelin (+1)",
+      "category": "item_spotlight",
+      "hook": "Javelin (+1) grants a bonus to attack and damage rolls - the rarity determines the bonus.",
+      "body": "This magic weapon provides a bonus to both attack and damage rolls, contingent on its rarity. As an uncommon weapon, it offers a modest boost. Many players neglect to apply this bonus during combat, resulting in missed opportunities for increased damage. Verify the rarity and corresponding bonus before entering combat to ensure maximum effectiveness.",
+      "cta": "DMs: Remind players to add the +1 bonus to both attack and damage rolls with the Javelin (+1) before combat starts."
+    },
+    {
+      "published_utc": "2026-08-22T14:24:56Z",
+      "day": "2026-08-22",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-22-rules-ruling-rule-12-0ebd654c9301",
+      "instagram_post_id": "18031749086839614",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "f02bd83992456b0f91a14183141694b016e3d24ffb30fe1a3e879a2a63f0dfbd",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-22.mp4",
+      "fact_name": "Random Encounters",
+      "category": "rules_ruling",
+      "hook": "Random Encounters catch parties off guard - they occur every 10 minutes on a d6 roll of 1.",
+      "body": "Every 10 minutes in the Shadowdark, roll a d6 for Random Encounters. On a roll of 1, a random encounter occurs. Resource management and light tracking are critical to avoid being unprepared for these encounters. Establishing a clear order of operations for these checks prevents arguments and ensures consistent adjudication.",
+      "cta": "GMs: Roll a d6 every 10 minutes; a 1 means a random encounter - keep your players' torches burning and ready."
     }
   ]
 }

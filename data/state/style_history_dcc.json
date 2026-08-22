@@ -500,5 +500,15 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-22": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "grim_referee",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

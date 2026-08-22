@@ -1225,6 +1225,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-21.mp4",
         "video_sha256": "c711ca5ad3839daa86ad3cf25cfd5f81ec406f6217ef78ad7124cff93c130b16"
       }
+    },
+    {
+      "published_utc": "2026-08-22T14:24:08Z",
+      "day": "2026-08-22",
+      "content_id": "bgp-2026-08-22-rules-ruling-rule-12-0ebd654c9301",
+      "publish_hash": "9393482f199c40f7662337e66f681e42e383fcf0f97fce44bca5d527a02d1578",
+      "youtube_video_id": "UhjQf8eZ27E",
+      "youtube_url": "https://www.youtube.com/watch?v=UhjQf8eZ27E",
+      "video_sha256": "f02bd83992456b0f91a14183141694b016e3d24ffb30fe1a3e879a2a63f0dfbd",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-22.mp4",
+      "fingerprint": {
+        "day": "2026-08-22",
+        "category": "rules_ruling",
+        "angle": "edge_case",
+        "content_id": "bgp-2026-08-22-rules-ruling-rule-12-0ebd654c9301",
+        "canonical_hash": "0ebd654c930129f4a72b7c9ea9bbaaf5ce6f57dd66dbd290d3bc654104dbe842",
+        "script_id": "3cc24f5fe40a37345d01897088f05d02fdf933113a1481d96951b1133048dfd6",
+        "fact_kind": "rule",
+        "fact_pk": 12,
+        "fact_name": "Random Encounters",
+        "hook": "Random Encounters catch parties off guard - they occur every 10 minutes on a d6 roll of 1.",
+        "body": "Every 10 minutes in the Shadowdark, roll a d6 for Random Encounters. On a roll of 1, a random encounter occurs. Resource management and light tracking are critical to avoid being unprepared for these encounters. Establishing a clear order of operations for these checks prevents arguments and ensures consistent adjudication.",
+        "cta": "GMs: Roll a d6 every 10 minutes; a 1 means a random encounter - keep your players' torches burning and ready.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-22.mp4",
+        "video_sha256": "f02bd83992456b0f91a14183141694b016e3d24ffb30fe1a3e879a2a63f0dfbd"
+      }
     }
   ]
 }
