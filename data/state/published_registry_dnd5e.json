@@ -1641,6 +1641,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-22.mp4",
         "video_sha256": "454df810a64d4861c6c47fbfc0c7cc8a870ff0e3d79b255ae0a339c5ed0da0e4"
       }
+    },
+    {
+      "published_utc": "2026-08-23T14:19:17Z",
+      "day": "2026-08-23",
+      "content_id": "bgp-2026-08-23-encounter-seed-creature-srd-2024-sphinx-of-valor-484b54b06fbb",
+      "publish_hash": "296a8bf74bb9ea145e1a9020de194a87aa214c2e3b94fefb7b5b1b4a8ef206ef",
+      "youtube_video_id": "edz1o375zc4",
+      "youtube_url": "https://www.youtube.com/watch?v=edz1o375zc4",
+      "video_sha256": "0ec74adcc11c2bb108b37009c1d0221f93c5f9d9394db368ceb67ac422cbc893",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-23.mp4",
+      "fingerprint": {
+        "day": "2026-08-23",
+        "category": "encounter_seed",
+        "angle": "time_pressure",
+        "content_id": "bgp-2026-08-23-encounter-seed-creature-srd-2024-sphinx-of-valor-484b54b06fbb",
+        "canonical_hash": "484b54b06fbb199a28ad11ce8a2ca75bcd0050d4e0a028b9009149ab56721aec",
+        "script_id": "a838b5bbfc44c4f277283883d41138f150b154f80149613e7c6398d6ecb2797e",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_sphinx-of-valor",
+        "fact_name": "Sphinx of Valor",
+        "hook": "Frame a Sphinx of Valor encounter with a timer so the party must trade certainty for speed.",
+        "body": "The Sphinx of Valor's Arcane Prowl ability applies pressure by forcing players to make decisions under time constraints. With an Armor Class of 17 and 199 hit points, it can sustain engagement while players struggle to reposition. Its condition immunities to charmed and frightened often lead players to waste spells. Optimal play involves leveraging its 60 feet fly speed to control the battlefield and push players into costly decisions.",
+        "cta": "DMs: Set a visible 10-round countdown timer to highlight the Sphinx of Valor's Arcane Prowl and force decisive player actions.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-23.mp4",
+        "video_sha256": "0ec74adcc11c2bb108b37009c1d0221f93c5f9d9394db368ceb67ac422cbc893"
+      }
     }
   ]
 }

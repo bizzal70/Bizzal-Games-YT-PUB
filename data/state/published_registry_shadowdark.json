@@ -1251,6 +1251,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-22.mp4",
         "video_sha256": "f02bd83992456b0f91a14183141694b016e3d24ffb30fe1a3e879a2a63f0dfbd"
       }
+    },
+    {
+      "published_utc": "2026-08-23T14:23:45Z",
+      "day": "2026-08-23",
+      "content_id": "bgp-2026-08-23-item-spotlight-item-34-cb7e6b1a4ff2",
+      "publish_hash": "73be5e4706f9f68ddd33045f79fb1b3f2a0a6ffc8d1c521cef22a02243872fee",
+      "youtube_video_id": "FN3LU15pgmg",
+      "youtube_url": "https://www.youtube.com/watch?v=FN3LU15pgmg",
+      "video_sha256": "2b9a1f198ec0fe8a5cdc4bfc8b98038d5b893b811007d045498158e05f97d123",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-23.mp4",
+      "fingerprint": {
+        "day": "2026-08-23",
+        "category": "item_spotlight",
+        "angle": "best_user",
+        "content_id": "bgp-2026-08-23-item-spotlight-item-34-cb7e6b1a4ff2",
+        "canonical_hash": "cb7e6b1a4ff2b89c8702f6d0c1e804a63f2f6e263673d857054dc205e80182c6",
+        "script_id": "d36328d76138cf4b6c06ff6157d57b9cecad3176cb477dcf8078ba29c8c04792",
+        "fact_kind": "item",
+        "fact_pk": 34,
+        "fact_name": "Hourglass Of The Black Sands",
+        "hook": "Hourglass Of The Black Sands extends spell duration unpredictably - 1d4 rounds longer once per day.",
+        "body": "The Hourglass Of The Black Sands can extend a spell's effects by 1d4 rounds, but only once per day. Activating it on spells with negligible ongoing effects wastes its potential. Optimal use occurs when extending a spell's impact directly alters the encounter's dynamics, such as prolonging a crucial control or buff spell during combat.",
+        "cta": "GMs: Use the Hourglass Of The Black Sands to extend a critical spell by 1d4 rounds when it matters most.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-23.mp4",
+        "video_sha256": "2b9a1f198ec0fe8a5cdc4bfc8b98038d5b893b811007d045498158e05f97d123"
+      }
     }
   ]
 }

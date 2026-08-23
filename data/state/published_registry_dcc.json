@@ -991,6 +991,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-22.mp4",
         "video_sha256": "9aa4546d9562eaa67cec778e71a56468258d00c810f208202745e7a19fb2c52c"
       }
+    },
+    {
+      "published_utc": "2026-08-23T14:14:02Z",
+      "day": "2026-08-23",
+      "content_id": "bgp-2026-08-23-monster-tactic-creature-483-3e997215fd9e",
+      "publish_hash": "367cccb81f82989ad8d657210603d4c273e821a4ab901682ea8c2287fc605097",
+      "youtube_video_id": "Gvsmir0YYAw",
+      "youtube_url": "https://www.youtube.com/watch?v=Gvsmir0YYAw",
+      "video_sha256": "0af1cf3426190c35943a1e99c9f0d34f572ef7a58e60c69d5e5fa05cfb295029",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-23.mp4",
+      "fingerprint": {
+        "day": "2026-08-23",
+        "category": "monster_tactic",
+        "angle": "death_roll_odds",
+        "content_id": "bgp-2026-08-23-monster-tactic-creature-483-3e997215fd9e",
+        "canonical_hash": "3e997215fd9ee0e94de845b8ad224dcecaf5d08f710c22d92aedf2883f7be360",
+        "script_id": "1091636bce7677c1ccab304bbbbd4d0303c102264529500d15c08967d57e9786",
+        "fact_kind": "creature",
+        "fact_pk": 483,
+        "fact_name": "Tendrilagon",
+        "hook": "Tendrilagon's camouflage is more effective than players expect - +10 to hide checks in hay.",
+        "body": "Tendrilagon's 12d12 hit dice make it a formidable opponent, especially when combined with its ability to hide with a +10 bonus in hay. This often leads players to underestimate its initial position. The creature's blindsight at 60' negates most stealth approaches, forcing players to reconsider their tactics. Fire vulnerability, dealing double damage, is the key weakness that most overlook while focusing on its high melee damage potential.",
+        "cta": "Judges: Remind them the Tendrilagon takes double damage from fire - if they can't remember that, they deserve to be swallowed whole.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-23.mp4",
+        "video_sha256": "0af1cf3426190c35943a1e99c9f0d34f572ef7a58e60c69d5e5fa05cfb295029"
+      }
     }
   ]
 }

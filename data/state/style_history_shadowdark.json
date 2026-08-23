@@ -596,5 +596,17 @@
       "spice": [],
       "tts_voice_id": "coral"
     }
+  },
+  "2026-08-23": {
+    "item_spotlight": {
+      "angle": "best_user",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "dungeon_gear_mentor",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

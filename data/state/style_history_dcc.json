@@ -510,5 +510,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-23": {
+    "monster_tactic": {
+      "angle": "death_roll_odds",
+      "voice": "survival_coach",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

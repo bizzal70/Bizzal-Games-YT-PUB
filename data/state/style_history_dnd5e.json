@@ -600,5 +600,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-23": {
+    "encounter_seed": {
+      "angle": "time_pressure",
+      "voice": "gritty_dm",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

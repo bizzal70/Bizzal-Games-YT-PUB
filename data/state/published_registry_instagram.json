@@ -1662,6 +1662,51 @@
       "hook": "Random Encounters catch parties off guard - they occur every 10 minutes on a d6 roll of 1.",
       "body": "Every 10 minutes in the Shadowdark, roll a d6 for Random Encounters. On a roll of 1, a random encounter occurs. Resource management and light tracking are critical to avoid being unprepared for these encounters. Establishing a clear order of operations for these checks prevents arguments and ensures consistent adjudication.",
       "cta": "GMs: Roll a d6 every 10 minutes; a 1 means a random encounter - keep your players' torches burning and ready."
+    },
+    {
+      "published_utc": "2026-08-23T14:14:50Z",
+      "day": "2026-08-23",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-23-monster-tactic-creature-483-3e997215fd9e",
+      "instagram_post_id": "18042563963810823",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "0af1cf3426190c35943a1e99c9f0d34f572ef7a58e60c69d5e5fa05cfb295029",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-23.mp4",
+      "fact_name": "Tendrilagon",
+      "category": "monster_tactic",
+      "hook": "Tendrilagon's camouflage is more effective than players expect - +10 to hide checks in hay.",
+      "body": "Tendrilagon's 12d12 hit dice make it a formidable opponent, especially when combined with its ability to hide with a +10 bonus in hay. This often leads players to underestimate its initial position. The creature's blindsight at 60' negates most stealth approaches, forcing players to reconsider their tactics. Fire vulnerability, dealing double damage, is the key weakness that most overlook while focusing on its high melee damage potential.",
+      "cta": "Judges: Remind them the Tendrilagon takes double damage from fire - if they can't remember that, they deserve to be swallowed whole."
+    },
+    {
+      "published_utc": "2026-08-23T14:20:04Z",
+      "day": "2026-08-23",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-23-encounter-seed-creature-srd-2024-sphinx-of-valor-484b54b06fbb",
+      "instagram_post_id": "18230996941319082",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "0ec74adcc11c2bb108b37009c1d0221f93c5f9d9394db368ceb67ac422cbc893",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-23.mp4",
+      "fact_name": "Sphinx of Valor",
+      "category": "encounter_seed",
+      "hook": "Frame a Sphinx of Valor encounter with a timer so the party must trade certainty for speed.",
+      "body": "The Sphinx of Valor's Arcane Prowl ability applies pressure by forcing players to make decisions under time constraints. With an Armor Class of 17 and 199 hit points, it can sustain engagement while players struggle to reposition. Its condition immunities to charmed and frightened often lead players to waste spells. Optimal play involves leveraging its 60 feet fly speed to control the battlefield and push players into costly decisions.",
+      "cta": "DMs: Set a visible 10-round countdown timer to highlight the Sphinx of Valor's Arcane Prowl and force decisive player actions."
+    },
+    {
+      "published_utc": "2026-08-23T14:25:04Z",
+      "day": "2026-08-23",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-23-item-spotlight-item-34-cb7e6b1a4ff2",
+      "instagram_post_id": "18134497360619579",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "2b9a1f198ec0fe8a5cdc4bfc8b98038d5b893b811007d045498158e05f97d123",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-23.mp4",
+      "fact_name": "Hourglass Of The Black Sands",
+      "category": "item_spotlight",
+      "hook": "Hourglass Of The Black Sands extends spell duration unpredictably - 1d4 rounds longer once per day.",
+      "body": "The Hourglass Of The Black Sands can extend a spell's effects by 1d4 rounds, but only once per day. Activating it on spells with negligible ongoing effects wastes its potential. Optimal use occurs when extending a spell's impact directly alters the encounter's dynamics, such as prolonging a crucial control or buff spell during combat.",
+      "cta": "GMs: Use the Hourglass Of The Black Sands to extend a critical spell by 1d4 rounds when it matters most."
     }
   ]
 }
