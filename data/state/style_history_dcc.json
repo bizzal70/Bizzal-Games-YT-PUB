@@ -522,5 +522,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-24": {
+    "spell_use_case": {
+      "angle": "corruption_risk",
+      "voice": "grim_referee",
+      "tone": "gritty",
+      "persona": "chaos_arcane_coach",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

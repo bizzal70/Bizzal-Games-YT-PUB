@@ -1017,6 +1017,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-23.mp4",
         "video_sha256": "0af1cf3426190c35943a1e99c9f0d34f572ef7a58e60c69d5e5fa05cfb295029"
       }
+    },
+    {
+      "published_utc": "2026-08-24T14:25:25Z",
+      "day": "2026-08-24",
+      "content_id": "bgp-2026-08-24-spell-use-case-spell-78-8dd3ea25b5c5",
+      "publish_hash": "9fee505724128d6512cd2cfb0b5578ac9ea17907ee85b7e89c35aaa0920243c3",
+      "youtube_video_id": "4qxbIyW1ecc",
+      "youtube_url": "https://www.youtube.com/watch?v=4qxbIyW1ecc",
+      "video_sha256": "0ba18ee8fced96353470b3080e8dd2e1fd141c7e5d8b8d84caaaecfd9a784c6c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-24.mp4",
+      "fingerprint": {
+        "day": "2026-08-24",
+        "category": "spell_use_case",
+        "angle": "corruption_risk",
+        "content_id": "bgp-2026-08-24-spell-use-case-spell-78-8dd3ea25b5c5",
+        "canonical_hash": "8dd3ea25b5c566a058803b70b4fcd7c9dc7333748ef6d7409016d9d99f78a9fa",
+        "script_id": "04d2e943115ec4ee992d8b4907e94ba84a4ee4601edcc110cd1ae2648d59a37a",
+        "fact_kind": "spell",
+        "fact_pk": 78,
+        "fact_name": "Monster Summoning",
+        "hook": "Monster Summoning surprises with its risk of turning foes - a botched control roll can make the summoned.",
+        "body": "Monster Summoning is a 2nd-level wizard spell with a range of 20 feet and a variable duration. The effect depends on a spell check after drawing a pentacle, influencing the creature's power, obedience, and duration. A common oversight is summoning without considering the control roll risk, which can backfire and turn the summoned being against the caster. Timing the spell to alter the encounter state, rather than just for damage, leverages its true potential.",
+        "cta": "Judges: Use Monster Summoning's 20-foot range to shift the encounter's balance, but remember a failed control roll invites chaos.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-24.mp4",
+        "video_sha256": "0ba18ee8fced96353470b3080e8dd2e1fd141c7e5d8b8d84caaaecfd9a784c6c"
+      }
     }
   ]
 }

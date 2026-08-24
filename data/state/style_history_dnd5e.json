@@ -610,5 +610,17 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-24": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "sage"
+    }
   }
 }

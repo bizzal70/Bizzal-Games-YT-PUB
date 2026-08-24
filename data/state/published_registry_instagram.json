@@ -1707,6 +1707,51 @@
       "hook": "Hourglass Of The Black Sands extends spell duration unpredictably - 1d4 rounds longer once per day.",
       "body": "The Hourglass Of The Black Sands can extend a spell's effects by 1d4 rounds, but only once per day. Activating it on spells with negligible ongoing effects wastes its potential. Optimal use occurs when extending a spell's impact directly alters the encounter's dynamics, such as prolonging a crucial control or buff spell during combat.",
       "cta": "GMs: Use the Hourglass Of The Black Sands to extend a critical spell by 1d4 rounds when it matters most."
+    },
+    {
+      "published_utc": "2026-08-24T14:26:26Z",
+      "day": "2026-08-24",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-24-spell-use-case-spell-78-8dd3ea25b5c5",
+      "instagram_post_id": "18052160273569333",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "0ba18ee8fced96353470b3080e8dd2e1fd141c7e5d8b8d84caaaecfd9a784c6c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-24.mp4",
+      "fact_name": "Monster Summoning",
+      "category": "spell_use_case",
+      "hook": "Monster Summoning surprises with its risk of turning foes - a botched control roll can make the summoned.",
+      "body": "Monster Summoning is a 2nd-level wizard spell with a range of 20 feet and a variable duration. The effect depends on a spell check after drawing a pentacle, influencing the creature's power, obedience, and duration. A common oversight is summoning without considering the control roll risk, which can backfire and turn the summoned being against the caster. Timing the spell to alter the encounter state, rather than just for damage, leverages its true potential.",
+      "cta": "Judges: Use Monster Summoning's 20-foot range to shift the encounter's balance, but remember a failed control roll invites chaos."
+    },
+    {
+      "published_utc": "2026-08-24T14:32:20Z",
+      "day": "2026-08-24",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-24-rules-myth-rule-srd-2024-the-six-abilities-ability-scores-a908b4cc9624",
+      "instagram_post_id": "18238365463314123",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c7685da1c579bc77cd54128c4fa7f77dc62454375cca036e81ec3d26b64246a6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-24.mp4",
+      "fact_name": "Ability Scores",
+      "category": "rules_myth",
+      "hook": "Ability Scores often mislead players into thinking higher is always better - the modifier.",
+      "body": "Ability Scores range from 1 to 20 for most characters, with modifiers derived from the score dictating success in checks and saving throws. Players frequently overemphasize the score itself, rather than the +1 to +5 modifier it provides. Optimal play focuses on how these modifiers interact with proficiency bonuses and advantage, not just raw scores.",
+      "cta": "DMs: Remind players that a +3 modifier from a 16 Dexterity is more impactful than the score itself."
+    },
+    {
+      "published_utc": "2026-08-24T14:37:09Z",
+      "day": "2026-08-24",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-24-encounter-seed-creature-17-1730a7b44255",
+      "instagram_post_id": "18140242366601473",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "5843fd1372048a18f7b4009144a9956aed70b35261738479fefc47c9f3e95f4b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-24.mp4",
+      "fact_name": "Basilisk",
+      "category": "encounter_seed",
+      "hook": "Basilisk earns its stakes fast.",
+      "body": "Basilisk's gaze or touch triggers a DC 15 Constitution save to avoid petrification. Players frequently underestimate the need for high Constitution saves and get caught unprepared. Avoid direct eye contact and maintain distance to minimize risk. Prioritize ranged attacks to exploit its low Dexterity score of 1.",
+      "cta": "GMs: Remind them that a DC 15 CON save means petrification isn't just a possibility - it's a probability."
     }
   ]
 }

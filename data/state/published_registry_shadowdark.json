@@ -1277,6 +1277,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-23.mp4",
         "video_sha256": "2b9a1f198ec0fe8a5cdc4bfc8b98038d5b893b811007d045498158e05f97d123"
       }
+    },
+    {
+      "published_utc": "2026-08-24T14:36:23Z",
+      "day": "2026-08-24",
+      "content_id": "bgp-2026-08-24-encounter-seed-creature-17-1730a7b44255",
+      "publish_hash": "a7616dfd60ae5f79815307e8cc8ce285c44cdf811b780027afb0918970577e84",
+      "youtube_video_id": "uiEdCn-Q04U",
+      "youtube_url": "https://www.youtube.com/watch?v=uiEdCn-Q04U",
+      "video_sha256": "5843fd1372048a18f7b4009144a9956aed70b35261738479fefc47c9f3e95f4b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-24.mp4",
+      "fingerprint": {
+        "day": "2026-08-24",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-08-24-encounter-seed-creature-17-1730a7b44255",
+        "canonical_hash": "1730a7b44255068cd655b7c05798686a23d545aad2429e3195c82617bcf82916",
+        "script_id": "a9b9eba72234ef3a122559fd37eeb8fd8636fe7c7ba63aa9dc2dbacde426e46a",
+        "fact_kind": "creature",
+        "fact_pk": 17,
+        "fact_name": "Basilisk",
+        "hook": "Basilisk earns its stakes fast.",
+        "body": "Basilisk's gaze or touch triggers a DC 15 Constitution save to avoid petrification. Players frequently underestimate the need for high Constitution saves and get caught unprepared. Avoid direct eye contact and maintain distance to minimize risk. Prioritize ranged attacks to exploit its low Dexterity score of 1.",
+        "cta": "GMs: Remind them that a DC 15 CON save means petrification isn't just a possibility - it's a probability.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-24.mp4",
+        "video_sha256": "5843fd1372048a18f7b4009144a9956aed70b35261738479fefc47c9f3e95f4b"
+      }
     }
   ]
 }

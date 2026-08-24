@@ -1667,6 +1667,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-23.mp4",
         "video_sha256": "0ec74adcc11c2bb108b37009c1d0221f93c5f9d9394db368ceb67ac422cbc893"
       }
+    },
+    {
+      "published_utc": "2026-08-24T14:31:36Z",
+      "day": "2026-08-24",
+      "content_id": "bgp-2026-08-24-rules-myth-rule-srd-2024-the-six-abilities-ability-scores-a908b4cc9624",
+      "publish_hash": "54a410f779728661c850fb4e0c6f31ab3f1f248fca1c5463c8d0871c6b4b613c",
+      "youtube_video_id": "AkS9GMi7pvs",
+      "youtube_url": "https://www.youtube.com/watch?v=AkS9GMi7pvs",
+      "video_sha256": "c7685da1c579bc77cd54128c4fa7f77dc62454375cca036e81ec3d26b64246a6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-24.mp4",
+      "fingerprint": {
+        "day": "2026-08-24",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-08-24-rules-myth-rule-srd-2024-the-six-abilities-ability-scores-a908b4cc9624",
+        "canonical_hash": "a908b4cc9624531608e4fe6bb043619e606c29b472366c79bd4e9bda33975a0f",
+        "script_id": "d0662438f6577a7fccf9943915ff25ef1b1be5fbfc07b338635d646803f9b51d",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_the-six-abilities_ability-scores",
+        "fact_name": "Ability Scores",
+        "hook": "Ability Scores often mislead players into thinking higher is always better - the modifier.",
+        "body": "Ability Scores range from 1 to 20 for most characters, with modifiers derived from the score dictating success in checks and saving throws. Players frequently overemphasize the score itself, rather than the +1 to +5 modifier it provides. Optimal play focuses on how these modifiers interact with proficiency bonuses and advantage, not just raw scores.",
+        "cta": "DMs: Remind players that a +3 modifier from a 16 Dexterity is more impactful than the score itself.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-24.mp4",
+        "video_sha256": "c7685da1c579bc77cd54128c4fa7f77dc62454375cca036e81ec3d26b64246a6"
+      }
     }
   ]
 }

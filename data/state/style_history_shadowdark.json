@@ -608,5 +608,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-24": {
+    "encounter_seed": {
+      "angle": "three_beats",
+      "voice": "strict_referee",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }
