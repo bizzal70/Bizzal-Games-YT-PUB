@@ -3827,6 +3827,39 @@
       "video_id": "18140242366601473",
       "day": "2026-08-24",
       "published_at": "2026-08-24T14:37:09+00:00"
+    },
+    {
+      "content_key": "a3ce6822af65720a818f2af734362a6ae0c822ffe686e651184fdfdad8c306a6",
+      "token_text": "arcane archer arrow infuse magic",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Arcane Archer: Infuse Arrows with Magic #dnd5e",
+      "video_id": "88mv2GEjsE0",
+      "day": "2026-08-24",
+      "published_at": "2026-08-24T18:13:08+00:00"
+    },
+    {
+      "content_key": "6b82137d9e3395605d7601c6e95fa0b91743cc5ffac04ebace2a3568d1e64762",
+      "token_text": "arcane limited rest short shot uses",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Arcane Shot uses are limited per short rest #dnd5e",
+      "video_id": "1GpBVR4Z8BQ",
+      "day": "2026-08-24-dnd5e-clip1",
+      "published_at": "2026-08-24T18:15:40+00:00"
+    },
+    {
+      "content_key": "976e9b108f924891ed26bb69e89017e904ca2a40ef79e2595841c18abfd99405",
+      "token_text": "action additional arcane no require shot",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Arcane Shots require no additional action #dnd5e",
+      "video_id": "n4u9yXFVTls",
+      "day": "2026-08-24-dnd5e-clip2",
+      "published_at": "2026-08-24T18:17:19+00:00"
     }
   ]
 }

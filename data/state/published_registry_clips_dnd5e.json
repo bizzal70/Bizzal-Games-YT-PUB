@@ -155,6 +155,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-08-21-dnd5e-clip3.mp4",
         "video_sha256": "d7f0329f61c348d6ecf758af730991f6d061d810cb365647cb529ceb2e786850"
       }
+    },
+    {
+      "published_utc": "2026-08-24T18:15:40Z",
+      "day": "2026-08-24-dnd5e-clip1",
+      "content_id": "clip:35134f7f2b0750f1",
+      "publish_hash": "14a05d0365515fd3a9a282dc2ad35d268d0bffa73d9b3803b21a2d5b189e8b41",
+      "youtube_video_id": "1GpBVR4Z8BQ",
+      "youtube_url": "https://www.youtube.com/watch?v=1GpBVR4Z8BQ",
+      "video_sha256": "a1194379c01966913a29d528263200d3a687e46f97e64038b5d9ddb8b6844aeb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-08-24-dnd5e-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-08-24-dnd5e-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:35134f7f2b0750f1",
+        "canonical_hash": "",
+        "script_id": "35134f7f2b0750f134cb9d9fa8893b151604c94899b0bba8ae7a29405d01ff64",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Arcane Shot uses are limited per short rest",
+        "hook": "Arcane Shot uses are limited per short rest",
+        "body": "Arcane Archers can use Arcane Shot options only twice per short rest. This means strategic timing is crucial. Save these powerful shots for pivotal combat moments to maximize their impact, like disrupting enemy formations or removing key threats.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-08-24-dnd5e-clip1.mp4",
+        "video_sha256": "a1194379c01966913a29d528263200d3a687e46f97e64038b5d9ddb8b6844aeb"
+      }
+    },
+    {
+      "published_utc": "2026-08-24T18:17:19Z",
+      "day": "2026-08-24-dnd5e-clip2",
+      "content_id": "clip:2f7567b3dcd3bc0a",
+      "publish_hash": "b40576479114a014650778ea8fa82741d96fc9e89e011d1d1770ad547fb53fcc",
+      "youtube_video_id": "n4u9yXFVTls",
+      "youtube_url": "https://www.youtube.com/watch?v=n4u9yXFVTls",
+      "video_sha256": "6b931dad64f5ca5669c640140a59c1e2b9e222a1033f3434add87fefc420b549",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-08-24-dnd5e-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-08-24-dnd5e-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:2f7567b3dcd3bc0a",
+        "canonical_hash": "",
+        "script_id": "2f7567b3dcd3bc0a1e24edcc30c395519cf89f1f237ff90a2ffaa027df9fe146",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Arcane Shots require no additional action",
+        "hook": "Arcane Shots require no additional action",
+        "body": "Arcane Shots are part of the Attack action, so they require no extra action to use. This allows Arcane Archers to seamlessly integrate magical effects into their regular attacks, maintaining action economy while enhancing combat versatility.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-08-24-dnd5e-clip2.mp4",
+        "video_sha256": "6b931dad64f5ca5669c640140a59c1e2b9e222a1033f3434add87fefc420b549"
+      }
     }
   ]
 }
