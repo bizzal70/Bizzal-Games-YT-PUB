@@ -1,6 +1,94 @@
 [
   {
     "system": "dnd5e",
+    "title": "Mind Flayer Transformation: The New Underdark Twist",
+    "angle": "Explore the mechanics and implications of transforming into a mind flayer as a player character.",
+    "rationale": "Dungeons & Dragons is currently playtesting new Underdark options, including this transformation.",
+    "fixture_hint": "class",
+    "search_keyword": "Dungeons & Dragons is playtesting new Underdark options, including a player-focused transformation into a mind flayer",
+    "created_date": "2026-08-24",
+    "status": "pending",
+    "brief_id": "10c8cb953db0"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Dark Sun Revamp: Navigating Controversial Changes",
+    "angle": "Examine how the 5.5e Dark Sun setting is handling potentially controversial elements.",
+    "rationale": "The community is discussing potential changes to Dark Sun in the upcoming 5.5e release.",
+    "fixture_hint": "rule",
+    "search_keyword": "Is the 5.5e Dark Sun going to remove controversial aspects of the setting?",
+    "created_date": "2026-08-24",
+    "status": "pending",
+    "brief_id": "f92cfb7db263"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Underdark's New Arsenal: Mind Flayer Gear",
+    "angle": "Dive into the new items and equipment available for adventurers in the Underdark.",
+    "rationale": "With new Underdark options being playtested, interest in related gear is high.",
+    "fixture_hint": "item",
+    "search_keyword": "Dungeons & Dragons is playtesting new Underdark options, including a player-focused transformation into a mind flayer",
+    "created_date": "2026-08-24",
+    "status": "pending",
+    "brief_id": "f23a0cc82aeb"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Detective Magic: Merryshire's New Spellbook",
+    "angle": "Analyze the mechanics and magical mysteries in Gareth Ryder-Hanrahan's Merryshire Detective Club.",
+    "rationale": "The community is buzzing about the detective elements introduced in Merryshire Detective Club.",
+    "fixture_hint": "spell",
+    "search_keyword": "Solving murders with Gareth Ryder-Hanrahan’s Merryshire Detective Club",
+    "created_date": "2026-08-24",
+    "status": "pending",
+    "brief_id": "b19d491155b9"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Rune-Crafting: Unveiling Dwarven Secrets",
+    "angle": "Discover the intricacies of rune magic and its impact on dwarven culture in Shadowdark.",
+    "rationale": "A new tome focusing on dwarves, runes, and mines has sparked community interest.",
+    "fixture_hint": "spell",
+    "search_keyword": "Tome for dwarves, runes, mines, and monsters",
+    "created_date": "2026-08-24",
+    "status": "pending",
+    "brief_id": "7b825848eecb"
+  },
+  {
+    "system": "shadowdark",
+    "title": "The Ultimate Horror: Shadowdark's Latest Creature",
+    "angle": "Break down the stats and strategies for dealing with Shadowdark's new horror creature.",
+    "rationale": "Recent discussions about horror elements in RPGs make this a timely topic.",
+    "fixture_hint": "creature",
+    "search_keyword": "Get your TTRPG Odyssey fix with these crowdfunders",
+    "created_date": "2026-08-24",
+    "status": "pending",
+    "brief_id": "d5dd8db8a448"
+  },
+  {
+    "system": "dcc",
+    "title": "Rune Magic: DCC's Newest Spell Evolution",
+    "angle": "Explore how rune magic is expanding the spellcasting landscape in Dungeon Crawl Classics.",
+    "rationale": "Recent news highlights the growing interest in rune-related content.",
+    "fixture_hint": "spell",
+    "search_keyword": "Tome for dwarves, runes, mines, and monsters",
+    "created_date": "2026-08-24",
+    "status": "pending",
+    "brief_id": "1c54d07af6a8"
+  },
+  {
+    "system": "dcc",
+    "title": "Union Mechanics: How DCC Empowers the Collective",
+    "angle": "Review the new union mechanics and their impact on gameplay in Dungeon Crawl Classics.",
+    "rationale": "News about unionization in the RPG industry is relevant and topical.",
+    "fixture_hint": "rule",
+    "search_keyword": "Workers at British RPG publisher Rowan, Rook and Decard form union",
+    "created_date": "2026-08-24",
+    "status": "pending",
+    "brief_id": "368b61ff2808"
+  },
+  {
+    "system": "dnd5e",
     "title": "Dragonlance's War Wizard: Power Unleashed",
     "angle": "Explore the mechanics and potential of the War Wizard subclass in Dragonlance.",
     "rationale": "The recent review of Dragonlance: War Wizard makes this a timely exploration.",
