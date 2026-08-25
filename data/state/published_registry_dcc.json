@@ -1043,6 +1043,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-24.mp4",
         "video_sha256": "0ba18ee8fced96353470b3080e8dd2e1fd141c7e5d8b8d84caaaecfd9a784c6c"
       }
+    },
+    {
+      "published_utc": "2026-08-25T14:25:17Z",
+      "day": "2026-08-25",
+      "content_id": "bgp-2026-08-25-rules-ruling-rule-4-343ee03ef818",
+      "publish_hash": "410d334af9407f0ce112efc80c2d0c79b34ce5267fe779d7fe75d55249ed5baf",
+      "youtube_video_id": "Ps0GjYKirnA",
+      "youtube_url": "https://www.youtube.com/watch?v=Ps0GjYKirnA",
+      "video_sha256": "38db11148d4bc725d937824a254e8619ec6726b5801b76f6a6ed6160c9e0ba5d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-25.mp4",
+      "fingerprint": {
+        "day": "2026-08-25",
+        "category": "rules_ruling",
+        "angle": "saving_throw_type",
+        "content_id": "bgp-2026-08-25-rules-ruling-rule-4-343ee03ef818",
+        "canonical_hash": "343ee03ef818d03dc982a61b4a764baed148c7783a30b08ad27886e719e0004e",
+        "script_id": "2f16000a78abd7925f2410a435989ca87d5bdd6fa23bdbfe9bee9b87e824d81d",
+        "fact_kind": "rule",
+        "fact_pk": 4,
+        "fact_name": "Spell Check",
+        "hook": "Spell Check results surprise many - under 12 usually fails, but you keep the spell unless you roll a natural.",
+        "body": "Spell Check uses d20 + ability modifier (Int for wizards, Personality for clerics) + caster level against the spell's unique result table. A failed check doesn't mean losing the spell, except on a natural 1. This allows casters to attempt spells multiple times without losing them, encouraging riskier casting strategies.",
+        "cta": "Judges: Remind them that a Spell Check under 12 usually fails, but they can keep trying unless they roll a natural 1.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-25.mp4",
+        "video_sha256": "38db11148d4bc725d937824a254e8619ec6726b5801b76f6a6ed6160c9e0ba5d"
+      }
     }
   ]
 }

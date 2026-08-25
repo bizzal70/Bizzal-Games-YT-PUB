@@ -622,5 +622,17 @@
       ],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-08-25": {
+    "class_spotlight": {
+      "angle": "subclass_identity",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "class_mentor",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "alloy"
+    }
   }
 }

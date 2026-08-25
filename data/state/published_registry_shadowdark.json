@@ -1303,6 +1303,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-24.mp4",
         "video_sha256": "5843fd1372048a18f7b4009144a9956aed70b35261738479fefc47c9f3e95f4b"
       }
+    },
+    {
+      "published_utc": "2026-08-25T14:30:26Z",
+      "day": "2026-08-25",
+      "content_id": "bgp-2026-08-25-rules-myth-rule-1-4708cfdd6b96",
+      "publish_hash": "7406dc07607215f078da02e3cdaaf41b0e2bc49dde98f438d30b0a9d34dad199",
+      "youtube_video_id": "mWbiOB-VejU",
+      "youtube_url": "https://www.youtube.com/watch?v=mWbiOB-VejU",
+      "video_sha256": "ebfacf0d2a3b4e18ef590f3e67523d31b3c6ce29b56f9d9ab04db2b65d1c5c9e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-25.mp4",
+      "fingerprint": {
+        "day": "2026-08-25",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-08-25-rules-myth-rule-1-4708cfdd6b96",
+        "canonical_hash": "4708cfdd6b965ace0f04444da0283a00f761fba32ee7f8b1745895d13295a582",
+        "script_id": "ec46812de610865b2d81f2064e6a2f513e3aa593615c8caf6c6cea9545296c84",
+        "fact_kind": "rule",
+        "fact_pk": 1,
+        "fact_name": "Advantage and Disadvantage",
+        "hook": "Advantage and Disadvantage can simplify decision-making - they do not stack, ever.",
+        "body": "Advantage and Disadvantage involve rolling two d20s and taking the better or worse result, respectively. Multiple sources of advantage or disadvantage do not stack; having one source is equivalent to having many. They cancel each other out, leaving a single roll if both are present. Applying this consistently prevents unnecessary complexity and ensures clear outcomes.",
+        "cta": "GMs: Enforce the rule - advantage and disadvantage never stack; they cancel each other out, leaving just one roll.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-25.mp4",
+        "video_sha256": "ebfacf0d2a3b4e18ef590f3e67523d31b3c6ce29b56f9d9ab04db2b65d1c5c9e"
+      }
     }
   ]
 }
