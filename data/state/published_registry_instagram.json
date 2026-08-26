@@ -1782,6 +1782,51 @@
       "hook": "Advantage and Disadvantage can simplify decision-making - they do not stack, ever.",
       "body": "Advantage and Disadvantage involve rolling two d20s and taking the better or worse result, respectively. Multiple sources of advantage or disadvantage do not stack; having one source is equivalent to having many. They cancel each other out, leaving a single roll if both are present. Applying this consistently prevents unnecessary complexity and ensures clear outcomes.",
       "cta": "GMs: Enforce the rule - advantage and disadvantage never stack; they cancel each other out, leaving just one roll."
+    },
+    {
+      "published_utc": "2026-08-26T14:27:25Z",
+      "day": "2026-08-26",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-26-item-spotlight-item-3-33de7b087150",
+      "instagram_post_id": "18090157868158546",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "50bbdc2f9ab572aeb8e5f57e0d1215df9bdf50d4904be18e9544a39f76b40c1d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-26.mp4",
+      "fact_name": "Potion of Giant Strength",
+      "category": "item_spotlight",
+      "hook": "Potion of Giant Strength's drawback surprises many - 1d3 Strength drained after the effect ends.",
+      "body": "For 1 turn, the Potion of Giant Strength sets Strength to 20, granting a +4 modifier to all Strength rolls and melee damage. Additionally, the attack die improves two steps, which many overlook in the heat of battle. After the effect ends, 1d3 points of Strength are drained until the next long rest, often leaving characters unexpectedly weakened. Optimal use involves timing consumption for a decisive combat round, not a prolonged engagement.",
+      "cta": "Judges: Hand this out when a player needs that +4 Strength boost to turn the tide, but remind them of the 1d3 Strength drain."
+    },
+    {
+      "published_utc": "2026-08-26T14:33:36Z",
+      "day": "2026-08-26",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-26-monster-tactic-creature-srd-2024-mimic-7c9abda649ba",
+      "instagram_post_id": "18559639225079265",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "91da9bcac2bd3e2b3a5bc1b87be2c5d8966957e505e8febbaa9aff15cbc97861",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-26.mp4",
+      "fact_name": "Mimic",
+      "category": "monster_tactic",
+      "hook": "Mimic's Adhesive trait surprises players who touch it - they become Grappled.",
+      "body": "Mimic's Armor Class is 12 and it has 58 hit points, making it vulnerable to focus-fire tactics. Its movement speed is only 20 feet, so maintaining distance is effective. The Adhesive trait activates when in Object Form, grappling any Huge or smaller creature that touches it, which players often overlook. Use terrain to avoid contact and remove its turns from the board with coordinated attacks.",
+      "cta": "DMs: Remind players that a Mimic's Adhesive trait grapples on contact; use ranged attacks to exploit its 12 AC and 20-foot speed."
+    },
+    {
+      "published_utc": "2026-08-26T14:38:01Z",
+      "day": "2026-08-26",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-26-spell-use-case-spell-25-91439456312d",
+      "instagram_post_id": "18000548906795463",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "6abc07690b906e123b1fb3d80cf4ccafd4e243b73dac1456775f685ed1bf71f9",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-26.mp4",
+      "fact_name": "Divine Vengeance",
+      "category": "spell_use_case",
+      "hook": "Divine Vengeance often gets misused for its spectacle - its 10-round duration demands tactical foresight.",
+      "body": "Divine Vengeance is a tier 5 spell with a range of Self and a 10-round duration. Misplay occurs when it's cast without a clear tactical objective, wasting its potential. Its real value lies in its ability to force enemy movement or disrupt actions. Optimal use involves planning its activation to change battlefield dynamics or swiftly conclude combat.",
+      "cta": "GMs: Before casting Divine Vengeance, make them state their tactical plan to exploit its 10-round duration effectively."
     }
   ]
 }

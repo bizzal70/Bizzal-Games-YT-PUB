@@ -634,5 +634,15 @@
       ],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-08-26": {
+    "monster_tactic": {
+      "angle": "counterplay",
+      "voice": "rules_lawyer",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "sage"
+    }
   }
 }

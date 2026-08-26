@@ -1693,6 +1693,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-24.mp4",
         "video_sha256": "c7685da1c579bc77cd54128c4fa7f77dc62454375cca036e81ec3d26b64246a6"
       }
+    },
+    {
+      "published_utc": "2026-08-26T14:32:20Z",
+      "day": "2026-08-26",
+      "content_id": "bgp-2026-08-26-monster-tactic-creature-srd-2024-mimic-7c9abda649ba",
+      "publish_hash": "f6835a8ed0fa993f57d294bc1e3d236b077df1f3227fdae0e752f527aaf798ec",
+      "youtube_video_id": "D6IzQpLvRFY",
+      "youtube_url": "https://www.youtube.com/watch?v=D6IzQpLvRFY",
+      "video_sha256": "91da9bcac2bd3e2b3a5bc1b87be2c5d8966957e505e8febbaa9aff15cbc97861",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-26.mp4",
+      "fingerprint": {
+        "day": "2026-08-26",
+        "category": "monster_tactic",
+        "angle": "counterplay",
+        "content_id": "bgp-2026-08-26-monster-tactic-creature-srd-2024-mimic-7c9abda649ba",
+        "canonical_hash": "7c9abda649ba153ffaabfce84949ee789ce880198e1acf9100431d79c015e91f",
+        "script_id": "d517bd7327699bc898add11bacf6db7510c7fc07a523479793f5d7073a34297d",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_mimic",
+        "fact_name": "Mimic",
+        "hook": "Mimic's Adhesive trait surprises players who touch it - they become Grappled.",
+        "body": "Mimic's Armor Class is 12 and it has 58 hit points, making it vulnerable to focus-fire tactics. Its movement speed is only 20 feet, so maintaining distance is effective. The Adhesive trait activates when in Object Form, grappling any Huge or smaller creature that touches it, which players often overlook. Use terrain to avoid contact and remove its turns from the board with coordinated attacks.",
+        "cta": "DMs: Remind players that a Mimic's Adhesive trait grapples on contact; use ranged attacks to exploit its 12 AC and 20-foot speed.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-26.mp4",
+        "video_sha256": "91da9bcac2bd3e2b3a5bc1b87be2c5d8966957e505e8febbaa9aff15cbc97861"
+      }
     }
   ]
 }

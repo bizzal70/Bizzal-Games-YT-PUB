@@ -1069,6 +1069,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-25.mp4",
         "video_sha256": "38db11148d4bc725d937824a254e8619ec6726b5801b76f6a6ed6160c9e0ba5d"
       }
+    },
+    {
+      "published_utc": "2026-08-26T14:25:53Z",
+      "day": "2026-08-26",
+      "content_id": "bgp-2026-08-26-item-spotlight-item-3-33de7b087150",
+      "publish_hash": "057a0ac642760573c5d0570cad12e8d8e7c0b499c7ece097e2a6e5c1508a02b3",
+      "youtube_video_id": "37yWTZoQznY",
+      "youtube_url": "https://www.youtube.com/watch?v=37yWTZoQznY",
+      "video_sha256": "50bbdc2f9ab572aeb8e5f57e0d1215df9bdf50d4904be18e9544a39f76b40c1d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-26.mp4",
+      "fingerprint": {
+        "day": "2026-08-26",
+        "category": "item_spotlight",
+        "angle": "story_hook",
+        "content_id": "bgp-2026-08-26-item-spotlight-item-3-33de7b087150",
+        "canonical_hash": "33de7b087150815287191218c9eca32d346617797d526c5cbd20924e177b8029",
+        "script_id": "ea34b54e12c909991d52afff21d13b5dcbc73b9f2deb12166d5cd33df37377c9",
+        "fact_kind": "item",
+        "fact_pk": 3,
+        "fact_name": "Potion of Giant Strength",
+        "hook": "Potion of Giant Strength's drawback surprises many - 1d3 Strength drained after the effect ends.",
+        "body": "For 1 turn, the Potion of Giant Strength sets Strength to 20, granting a +4 modifier to all Strength rolls and melee damage. Additionally, the attack die improves two steps, which many overlook in the heat of battle. After the effect ends, 1d3 points of Strength are drained until the next long rest, often leaving characters unexpectedly weakened. Optimal use involves timing consumption for a decisive combat round, not a prolonged engagement.",
+        "cta": "Judges: Hand this out when a player needs that +4 Strength boost to turn the tide, but remind them of the 1d3 Strength drain.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-26.mp4",
+        "video_sha256": "50bbdc2f9ab572aeb8e5f57e0d1215df9bdf50d4904be18e9544a39f76b40c1d"
+      }
     }
   ]
 }

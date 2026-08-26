@@ -544,5 +544,17 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-08-26": {
+    "item_spotlight": {
+      "angle": "story_hook",
+      "voice": "grim_referee",
+      "tone": "neutral",
+      "persona": "dungeon_gear_mentor",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

@@ -1329,6 +1329,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-25.mp4",
         "video_sha256": "ebfacf0d2a3b4e18ef590f3e67523d31b3c6ce29b56f9d9ab04db2b65d1c5c9e"
       }
+    },
+    {
+      "published_utc": "2026-08-26T14:37:18Z",
+      "day": "2026-08-26",
+      "content_id": "bgp-2026-08-26-spell-use-case-spell-25-91439456312d",
+      "publish_hash": "c0f455c0ac30eec8477d1875ee84271f4d3d84747c3bba8a49be477dbefa7cda",
+      "youtube_video_id": "gIs-95CdnCw",
+      "youtube_url": "https://www.youtube.com/watch?v=gIs-95CdnCw",
+      "video_sha256": "6abc07690b906e123b1fb3d80cf4ccafd4e243b73dac1456775f685ed1bf71f9",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-26.mp4",
+      "fingerprint": {
+        "day": "2026-08-26",
+        "category": "spell_use_case",
+        "angle": "common_misplay",
+        "content_id": "bgp-2026-08-26-spell-use-case-spell-25-91439456312d",
+        "canonical_hash": "91439456312d02ca6b478e20d323462e8b4b7f9bd4cfd7e79f8d82f986dc70c5",
+        "script_id": "491a39320bf95a3f1396a79acfd004e0201977f9df35dd92cba21bacac4d3343",
+        "fact_kind": "spell",
+        "fact_pk": 25,
+        "fact_name": "Divine Vengeance",
+        "hook": "Divine Vengeance often gets misused for its spectacle - its 10-round duration demands tactical foresight.",
+        "body": "Divine Vengeance is a tier 5 spell with a range of Self and a 10-round duration. Misplay occurs when it's cast without a clear tactical objective, wasting its potential. Its real value lies in its ability to force enemy movement or disrupt actions. Optimal use involves planning its activation to change battlefield dynamics or swiftly conclude combat.",
+        "cta": "GMs: Before casting Divine Vengeance, make them state their tactical plan to exploit its 10-round duration effectively.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-26.mp4",
+        "video_sha256": "6abc07690b906e123b1fb3d80cf4ccafd4e243b73dac1456775f685ed1bf71f9"
+      }
     }
   ]
 }
