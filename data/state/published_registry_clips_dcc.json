@@ -311,6 +311,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-08-05-dcc-clip3.mp4",
         "video_sha256": "78c9a6e5a6a74747f7cf3b44e2ecf0b7bd873641d19c160cf5eaa6b4a3187ca4"
       }
+    },
+    {
+      "published_utc": "2026-08-26T18:47:12Z",
+      "day": "2026-08-26-dcc-clip1",
+      "content_id": "clip:d8a09d91618824cd",
+      "publish_hash": "4bf9882b1de8f7ea582714799f6513521928d9b23cc4a07072e7021c4080747b",
+      "youtube_video_id": "_XV2XtF_YwA",
+      "youtube_url": "https://www.youtube.com/watch?v=_XV2XtF_YwA",
+      "video_sha256": "7b41fa39e9f876106f29acf3d0a5b691b095b2e4a8510186d9dd54b6b099d820",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-08-26-dcc-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-08-26-dcc-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:d8a09d91618824cd",
+        "canonical_hash": "",
+        "script_id": "d8a09d91618824cd578773f6fa1d29946a89e8ed19a7b1a434903f622e9d3ff9",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Planar Step's infinite range requires a high spell check",
+        "hook": "Planar Step's infinite range requires a high spell check",
+        "body": "Planar Step's infinite range hinges on a d20 spell check. Low rolls can trap wizards in unwanted locations, like lava fields instead of grassy plains. Achieving the desired destination demands a high spell check result.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-08-26-dcc-clip1.mp4",
+        "video_sha256": "7b41fa39e9f876106f29acf3d0a5b691b095b2e4a8510186d9dd54b6b099d820"
+      }
+    },
+    {
+      "published_utc": "2026-08-26T18:48:36Z",
+      "day": "2026-08-26-dcc-clip2",
+      "content_id": "clip:d6e838c43d612f24",
+      "publish_hash": "a8e3504c6e829098fd1e834386fc6c1b738e865458af33529dcb837e28d567e3",
+      "youtube_video_id": "D6XbMxd17Zg",
+      "youtube_url": "https://www.youtube.com/watch?v=D6XbMxd17Zg",
+      "video_sha256": "155c4b263f596b13d0a5367de3a9e3c794c0be5c93e0f9e6b82b2ddc961b6769",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-08-26-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-08-26-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:d6e838c43d612f24",
+        "canonical_hash": "",
+        "script_id": "d6e838c43d612f24af89bc6a854857d95ad93e120258ac86c9de38670669f307",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Planar Step's Will save complicates targeting foes",
+        "hook": "Planar Step's Will save complicates targeting foes",
+        "body": "Planar Step includes a Will save for unwilling targets. If the target succeeds, the spell fails to relocate them. Wizards must account for this save when planning to teleport enemies.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-08-26-dcc-clip2.mp4",
+        "video_sha256": "155c4b263f596b13d0a5367de3a9e3c794c0be5c93e0f9e6b82b2ddc961b6769"
+      }
     }
   ]
 }

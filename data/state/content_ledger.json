@@ -3970,6 +3970,39 @@
       "video_id": "18000548906795463",
       "day": "2026-08-26",
       "published_at": "2026-08-26T14:38:01+00:00"
+    },
+    {
+      "content_key": "431ccc0b0ed520686eefd9c39f506c427d6e511b518f83b1b1e64596b0623842",
+      "token_text": "careful infinite planar planning range require step",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Planar Step: Infinite Range Requires Careful Planning #dcc",
+      "video_id": "pJ3VL38wPZg",
+      "day": "2026-08-26",
+      "published_at": "2026-08-26T18:45:24+00:00"
+    },
+    {
+      "content_key": "3ac588af243c375e3263a8dbb09adced9317074cc74798b3cfafc9e4ca2b6070",
+      "token_text": "check high infinite planar range require spell step",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Planar Step's infinite range requires a high spell check #dcc",
+      "video_id": "_XV2XtF_YwA",
+      "day": "2026-08-26-dcc-clip1",
+      "published_at": "2026-08-26T18:47:12+00:00"
+    },
+    {
+      "content_key": "da3819c886e1a55041634c27ef0819af83f72cc2443ed281808d658c7efa5d19",
+      "token_text": "complicate foes planar save step targeting",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Planar Step's Will save complicates targeting foes #dcc",
+      "video_id": "D6XbMxd17Zg",
+      "day": "2026-08-26-dcc-clip2",
+      "published_at": "2026-08-26T18:48:36+00:00"
     }
   ]
 }
