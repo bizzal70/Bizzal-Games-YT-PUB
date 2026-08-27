@@ -556,5 +556,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-27": {
+    "encounter_seed": {
+      "angle": "three_beats",
+      "voice": "survival_coach",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

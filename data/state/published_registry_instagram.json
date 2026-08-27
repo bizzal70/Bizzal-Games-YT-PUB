@@ -1827,6 +1827,51 @@
       "hook": "Divine Vengeance often gets misused for its spectacle - its 10-round duration demands tactical foresight.",
       "body": "Divine Vengeance is a tier 5 spell with a range of Self and a 10-round duration. Misplay occurs when it's cast without a clear tactical objective, wasting its potential. Its real value lies in its ability to force enemy movement or disrupt actions. Optimal use involves planning its activation to change battlefield dynamics or swiftly conclude combat.",
       "cta": "GMs: Before casting Divine Vengeance, make them state their tactical plan to exploit its 10-round duration effectively."
+    },
+    {
+      "published_utc": "2026-08-27T17:54:49Z",
+      "day": "2026-08-27",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-27-spell-use-case-spell-srd-2024-mass-suggestion-87f864fce2aa",
+      "instagram_post_id": "18067867913734400",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9217613d426d6d285c37ded404499416a001e66606e7da5bdefe2f0f7c0ebf33",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-27.mp4",
+      "fact_name": "Mass Suggestion",
+      "category": "spell_use_case",
+      "hook": "Mass Suggestion's duration surprises many - it stretches to 366 days with a 9th-level spell slot.",
+      "body": "Mass Suggestion affects up to twelve creatures within 60 feet for 24 hours, but using a higher-level slot extends this significantly. Many players waste it on creatures with high Wisdom saves, reducing its impact. The spell excels when used on targets with low Wisdom or when the extended duration can change long-term dynamics.",
+      "cta": "DMs: Use a 9th-level slot for Mass Suggestion to control campaign dynamics for 366 days, not just for a quick fix."
+    },
+    {
+      "published_utc": "2026-08-27T17:59:29Z",
+      "day": "2026-08-27",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-27-class-spotlight-class-3-155ae0a07f3b",
+      "instagram_post_id": "17892186522671241",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "151f900e377f6f51910541f5b18a2f98fff7a903fd708da6fd6f322590dc5503",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-27.mp4",
+      "fact_name": "Thief",
+      "category": "class_spotlight",
+      "hook": "Thief's early power spike surprises players - Backstab at 2x damage output from the shadows.",
+      "body": "Thief's Backstab doubles damage when attacking from surprise, but players often miss the setup by rushing into combat. The key talent is Thievery, allowing for deft maneuvers and resource gains. Early planning around dexterity-based actions maximizes the Thief's potential. Prioritize stealth and positioning over direct confrontation.",
+      "cta": "GMs: Remind players that Backstab requires surprise; have them plan stealthy approaches to double damage early on."
+    },
+    {
+      "published_utc": "2026-08-27T18:05:44Z",
+      "day": "2026-08-27",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-27-encounter-seed-creature-42-c7b880333e41",
+      "instagram_post_id": "18131649217708709",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "7dd8f730bb9657596b71c2216a978862deb98897b15bfda23806ba0c0afccc77",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-27.mp4",
+      "fact_name": "Cave Fisher",
+      "category": "encounter_seed",
+      "hook": "Cave Fisher forces a costly choice.",
+      "body": "Cave Fishers use a filament trap that shoots 60 feet, requiring a Fortitude DC 12 save or the target becomes stuck. Once stuck, the target must make a Strength DC 16 check to break free, a task many underestimate. The creature's ability to reel in a stuck target 10 feet per round adds pressure, especially in confined spaces. Avoiding difficult terrain on rock or cave surfaces, Cave Fishers can reposition quickly, making them a greater threat in numbers.",
+      "cta": "Judges: Position Cave Fishers in narrow tunnels where their 60' filaments can entangle the party in just two rounds."
     }
   ]
 }

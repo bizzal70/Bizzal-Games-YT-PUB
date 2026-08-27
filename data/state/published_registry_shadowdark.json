@@ -1355,6 +1355,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-26.mp4",
         "video_sha256": "6abc07690b906e123b1fb3d80cf4ccafd4e243b73dac1456775f685ed1bf71f9"
       }
+    },
+    {
+      "published_utc": "2026-08-27T17:58:43Z",
+      "day": "2026-08-27",
+      "content_id": "bgp-2026-08-27-class-spotlight-class-3-155ae0a07f3b",
+      "publish_hash": "c2b310f3ecb7ba850b8405bbe52d96d2306b7cfb52a6c8e513f18c7ebcc67506",
+      "youtube_video_id": "0JggC9hzSHM",
+      "youtube_url": "https://www.youtube.com/watch?v=0JggC9hzSHM",
+      "video_sha256": "151f900e377f6f51910541f5b18a2f98fff7a903fd708da6fd6f322590dc5503",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-27.mp4",
+      "fingerprint": {
+        "day": "2026-08-27",
+        "category": "class_spotlight",
+        "angle": "early_power_spike",
+        "content_id": "bgp-2026-08-27-class-spotlight-class-3-155ae0a07f3b",
+        "canonical_hash": "155ae0a07f3b771989e84cdd56b57bcc783d961333f45e1c5c0a0ca21abf57aa",
+        "script_id": "91921f9c1615f47954be0868260e49294b1a4f297fb76a9fa2772af7e522981e",
+        "fact_kind": "class",
+        "fact_pk": 3,
+        "fact_name": "Thief",
+        "hook": "Thief's early power spike surprises players - Backstab at 2x damage output from the shadows.",
+        "body": "Thief's Backstab doubles damage when attacking from surprise, but players often miss the setup by rushing into combat. The key talent is Thievery, allowing for deft maneuvers and resource gains. Early planning around dexterity-based actions maximizes the Thief's potential. Prioritize stealth and positioning over direct confrontation.",
+        "cta": "GMs: Remind players that Backstab requires surprise; have them plan stealthy approaches to double damage early on.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-27.mp4",
+        "video_sha256": "151f900e377f6f51910541f5b18a2f98fff7a903fd708da6fd6f322590dc5503"
+      }
     }
   ]
 }

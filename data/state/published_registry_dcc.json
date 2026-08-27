@@ -1095,6 +1095,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-26.mp4",
         "video_sha256": "50bbdc2f9ab572aeb8e5f57e0d1215df9bdf50d4904be18e9544a39f76b40c1d"
       }
+    },
+    {
+      "published_utc": "2026-08-27T18:04:27Z",
+      "day": "2026-08-27",
+      "content_id": "bgp-2026-08-27-encounter-seed-creature-42-c7b880333e41",
+      "publish_hash": "c51eceb74e89650d0e832620355273afa549d67419a06fb96dd632ccef1fc038",
+      "youtube_video_id": "Oj04Jm1LMP4",
+      "youtube_url": "https://www.youtube.com/watch?v=Oj04Jm1LMP4",
+      "video_sha256": "7dd8f730bb9657596b71c2216a978862deb98897b15bfda23806ba0c0afccc77",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-27.mp4",
+      "fingerprint": {
+        "day": "2026-08-27",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-08-27-encounter-seed-creature-42-c7b880333e41",
+        "canonical_hash": "c7b880333e41bba6c7161fca4ab0847b61d0bae724c6dfec9b8c4d5560859987",
+        "script_id": "54ff507facc823892d5621c455869ce02883bee995ee312324b84b494a3cda34",
+        "fact_kind": "creature",
+        "fact_pk": 42,
+        "fact_name": "Cave Fisher",
+        "hook": "Cave Fisher forces a costly choice.",
+        "body": "Cave Fishers use a filament trap that shoots 60 feet, requiring a Fortitude DC 12 save or the target becomes stuck. Once stuck, the target must make a Strength DC 16 check to break free, a task many underestimate. The creature's ability to reel in a stuck target 10 feet per round adds pressure, especially in confined spaces. Avoiding difficult terrain on rock or cave surfaces, Cave Fishers can reposition quickly, making them a greater threat in numbers.",
+        "cta": "Judges: Position Cave Fishers in narrow tunnels where their 60' filaments can entangle the party in just two rounds.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-27.mp4",
+        "video_sha256": "7dd8f730bb9657596b71c2216a978862deb98897b15bfda23806ba0c0afccc77"
+      }
     }
   ]
 }

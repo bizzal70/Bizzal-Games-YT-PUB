@@ -644,5 +644,17 @@
       "spice": [],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-08-27": {
+    "spell_use_case": {
+      "angle": "upcast_tip",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }
