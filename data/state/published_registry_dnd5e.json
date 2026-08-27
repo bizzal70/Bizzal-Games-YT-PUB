@@ -1719,6 +1719,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-26.mp4",
         "video_sha256": "91da9bcac2bd3e2b3a5bc1b87be2c5d8966957e505e8febbaa9aff15cbc97861"
       }
+    },
+    {
+      "published_utc": "2026-08-27T18:35:39Z",
+      "day": "2026-08-27",
+      "content_id": "bgp-2026-08-27-spell-use-case-spell-srd-2024-mass-suggestion-993eab2d295f",
+      "publish_hash": "ea8f083cd5f30647586b2a8bc2dd876e91136f1ea7edecb4bd25f38cf9ec402f",
+      "youtube_video_id": "ujZZEOTHz1w",
+      "youtube_url": "https://www.youtube.com/watch?v=ujZZEOTHz1w",
+      "video_sha256": "960ae05ead80fa1a63289f79517ac06ca96a229b87f6a790cafaf83896034527",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-27.mp4",
+      "fingerprint": {
+        "day": "2026-08-27",
+        "category": "spell_use_case",
+        "angle": "upcast_tip",
+        "content_id": "bgp-2026-08-27-spell-use-case-spell-srd-2024-mass-suggestion-993eab2d295f",
+        "canonical_hash": "993eab2d295fe7d9ac755546a489aa5b1d0ab9a69a3bf99851afa45f216f8cf8",
+        "script_id": "cd6ce410f03b53ace0fcf7181e0e1f71013b6dc4b7a8040a028c332f66e97f4e",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_mass-suggestion",
+        "fact_name": "Mass Suggestion",
+        "hook": "Mass Suggestion's duration surprises many - it extends to 366 days at 9th level.",
+        "body": "Mass Suggestion allows you to suggest a course of activity to up to twelve creatures within 60 feet, lasting 24 hours at its base level. Targeting creatures with high Wisdom saves leads to wasted slots. Upcasting it extends the duration, turning a temporary solution into a long-term shift in control.",
+        "cta": "DMs: Use a 9th-level slot to keep those twelve creatures under your thumb for a year, not just a day.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-27.mp4",
+        "video_sha256": "960ae05ead80fa1a63289f79517ac06ca96a229b87f6a790cafaf83896034527"
+      }
     }
   ]
 }
