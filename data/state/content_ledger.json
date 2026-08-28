@@ -4135,6 +4135,39 @@
       "video_id": "18173434051437844",
       "day": "2026-08-28",
       "published_at": "2026-08-28T18:21:48+00:00"
+    },
+    {
+      "content_key": "1df5bf135d8239ed414de0647197f7f97e9b6a575b62ea5857b4d46891b8f2e8",
+      "token_text": "attack cast ends invisibility target",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Invisibility: Ends if Target Attacks or Casts #shadowdark",
+      "video_id": "2IYE3taOfHc",
+      "day": "2026-08-28",
+      "published_at": "2026-08-28T20:52:38+00:00"
+    },
+    {
+      "content_key": "692d37007d6179112aca8c9c47d3a249af074d6246acf49b1c92be9062138ee1",
+      "token_text": "doesn invisibility silence target",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Invisibility doesn't silence the target #shadowdark",
+      "video_id": "xp7kRAmK2as",
+      "day": "2026-08-28-shadowdark-clip2",
+      "published_at": "2026-08-28T20:56:15+00:00"
+    },
+    {
+      "content_key": "ea72a7f10081b9c0a370f2657b60584b14b60f17fb46a0cff0e8f3cf3959ec4e",
+      "token_text": "become dropped invisibility object visible",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Dropped objects become visible from invisibility #shadowdark",
+      "video_id": "ev9YNHMTMH0",
+      "day": "2026-08-28-shadowdark-clip3",
+      "published_at": "2026-08-28T20:57:52+00:00"
     }
   ]
 }

@@ -337,6 +337,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-19-shadowdark-clip3.mp4",
         "video_sha256": "5075df53a5fb577d999d5e961b633e0514b302b2c9b08b9fb8382d6d9f06971b"
       }
+    },
+    {
+      "published_utc": "2026-08-28T20:56:15Z",
+      "day": "2026-08-28-shadowdark-clip2",
+      "content_id": "clip:3fb1d84e4176d383",
+      "publish_hash": "0ef307f53d2671d3995634fa2e96d3f2fc36848a2e2a169b4012baf13c34beae",
+      "youtube_video_id": "xp7kRAmK2as",
+      "youtube_url": "https://www.youtube.com/watch?v=xp7kRAmK2as",
+      "video_sha256": "1b118fa5cfe4ef06a588984d2113efb42948f028fe9a72d12e9b2f06b4011caa",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-28-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-08-28-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:3fb1d84e4176d383",
+        "canonical_hash": "",
+        "script_id": "3fb1d84e4176d3835e630e9877fa999e87c46b8fe3ee0041d6e44b923c142601",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Invisibility doesn't silence the target",
+        "hook": "Invisibility doesn't silence the target",
+        "body": "While the Invisibility spell makes a creature unseen, it does not silence them. An invisible creature can still make noise, potentially alerting nearby enemies. This is crucial when planning stealthy maneuvers.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-28-shadowdark-clip2.mp4",
+        "video_sha256": "1b118fa5cfe4ef06a588984d2113efb42948f028fe9a72d12e9b2f06b4011caa"
+      }
+    },
+    {
+      "published_utc": "2026-08-28T20:57:52Z",
+      "day": "2026-08-28-shadowdark-clip3",
+      "content_id": "clip:0f89699f660ff1f9",
+      "publish_hash": "7e4cb941fedab0a869f44364a0fdd3bcd7b2d83dd69061f215ab593efcebaf12",
+      "youtube_video_id": "ev9YNHMTMH0",
+      "youtube_url": "https://www.youtube.com/watch?v=ev9YNHMTMH0",
+      "video_sha256": "65164ee53ac2e8f4846a860166b2be7e28ef9cba091900ada3dbb8365090ca71",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-28-shadowdark-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-08-28-shadowdark-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:0f89699f660ff1f9",
+        "canonical_hash": "",
+        "script_id": "0f89699f660ff1f955dc72c228ff2bb3d1c8acbfcb3929783e18ccebac335a66",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Dropped objects become visible from invisibility",
+        "hook": "Dropped objects become visible from invisibility",
+        "body": "In Shadowdark, objects held by an invisible creature are also invisible. However, if these objects are dropped or thrown, they become visible again. This can reveal the invisible creature's position if not handled carefully.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-28-shadowdark-clip3.mp4",
+        "video_sha256": "65164ee53ac2e8f4846a860166b2be7e28ef9cba091900ada3dbb8365090ca71"
+      }
     }
   ]
 }
