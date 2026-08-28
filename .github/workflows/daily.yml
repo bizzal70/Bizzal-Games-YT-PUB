@@ -100,6 +100,21 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
+      - name: Refresh to latest main (scheduled triggers can pin a stale commit)
+        run: |
+          # This workflow's two DST-safety crons (14:00/15:00 UTC) share a
+          # concurrency group, so the second waits for the first to finish
+          # before it actually starts running. The checkout above pins
+          # whatever commit was HEAD when the cron *fired*, not when the job
+          # finally executes after sitting queued -- so the guard step below
+          # can read a stale registry. Confirmed real duplicate YouTube
+          # upload from this (2026-08-27, dnd5e): the first cron published
+          # and committed the registry at 18:05 UTC, but the second cron's
+          # guard, still on its stale pinned checkout, reported that same-day
+          # entry missing at 18:31 UTC and republished. Re-sync to the true
+          # current main right before the guard reads the registry.
+          git fetch origin main
+          git reset --hard origin/main
       - name: DST-safe 8am-MT guard (scheduled runs only)
         id: guard
         run: |
