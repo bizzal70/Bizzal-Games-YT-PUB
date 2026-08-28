@@ -21,6 +21,7 @@ import argparse
 import hashlib
 import json
 import os
+import subprocess
 import sys
 import time
 from datetime import datetime, timezone
@@ -85,6 +86,35 @@ def cover_image_path_for_day(repo_root: Path, day: str) -> Path | None:
         by_day_dir = repo_root / by_day_dir
     cover = by_day_dir / f"{day}.bg.png"
     return cover if cover.is_file() else None
+
+
+def extract_cover_frame(video_path: Path, at_sec: float) -> Path | None:
+    """Grab a real frame from the rendered video for the Reels cover.
+
+    The old cover was the bare background image (cover_image_path_for_day) --
+    never touched by ffmpeg's drawtext filters, so it never shows the hook
+    text. Combined with the deliberately dark/monochrome bw_rtfm art style,
+    that blank cover reads as a black flash to viewers scrolling past the
+    post before playback buffers (confirmed via a real screenshot of the
+    feed). The hook text itself draws at full opacity from t=0 with no
+    fade-in and stays up for at least 4s (HOOK_MIN in render_atom.sh), so
+    any frame past ~1s is safe -- this mirrors what YouTube already gets for
+    free from its own auto-thumbnail-from-frame behavior. Fails soft: a
+    missing ffmpeg binary or any extraction error just falls back to the
+    old bg-image cover, never blocks the publish.
+    """
+    out_path = video_path.with_name(f"{video_path.stem}.cover.png")
+    try:
+        subprocess.run(
+            ["ffmpeg", "-y", "-ss", str(at_sec), "-i", str(video_path),
+             "-frames:v", "1", str(out_path)],
+            check=True, capture_output=True, timeout=30,
+        )
+        if out_path.is_file() and out_path.stat().st_size > 0:
+            return out_path
+    except Exception as exc:
+        eprint(f"WARN: cover frame extraction failed (non-fatal): {exc}")
+    return None
 
 
 def ig_registry_path(repo_root: Path) -> Path:
@@ -402,11 +432,16 @@ def main() -> int:
         eprint(f"ERROR: unable to load atom for day {day}: {exc}")
         return 3
 
-    cover_path = cover_image_path_for_day(repo_root, day)
+    cover_frame_sec = float(os.getenv("BIZZAL_IG_COVER_FRAME_SEC", "1.0"))
+    cover_path = extract_cover_frame(video_path, cover_frame_sec)
     if cover_path:
-        print(f"[upload_instagram] cover image found: {cover_path.name}")
+        print(f"[upload_instagram] cover image: extracted frame at {cover_frame_sec}s (includes hook text)")
     else:
-        print("[upload_instagram] no cover image found; Instagram will auto-select a frame")
+        cover_path = cover_image_path_for_day(repo_root, day)
+        if cover_path:
+            print(f"[upload_instagram] cover image: {cover_path.name} (raw background, no hook text -- frame extraction failed)")
+        else:
+            print("[upload_instagram] no cover image found; Instagram will auto-select a frame")
 
     video_sha = sha256_file(video_path)
     content_id = str(((atom.get("content") or {}).get("content_id") or "")).strip()
