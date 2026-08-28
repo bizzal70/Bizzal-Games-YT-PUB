@@ -1745,6 +1745,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-27.mp4",
         "video_sha256": "960ae05ead80fa1a63289f79517ac06ca96a229b87f6a790cafaf83896034527"
       }
+    },
+    {
+      "published_utc": "2026-08-28T18:09:42Z",
+      "day": "2026-08-28",
+      "content_id": "bgp-2026-08-28-rules-ruling-rule-srd-2024-d20-tests-saving-throw-23b56de3d623",
+      "publish_hash": "def44923318512845b6e56ff79c1cbfc889ed4a5e4e1ce2b6092b20498011679",
+      "youtube_video_id": "i-U2o6dCmio",
+      "youtube_url": "https://www.youtube.com/watch?v=i-U2o6dCmio",
+      "video_sha256": "6017d6fa1ac23df01e2a8444efdfcada57bd781f13c0c38322b183df6e432a23",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-28.mp4",
+      "fingerprint": {
+        "day": "2026-08-28",
+        "category": "rules_ruling",
+        "angle": "edge_case",
+        "content_id": "bgp-2026-08-28-rules-ruling-rule-srd-2024-d20-tests-saving-throw-23b56de3d623",
+        "canonical_hash": "23b56de3d623037446e34321801c780086c9b0883becbdb734052ef2b2622b6a",
+        "script_id": "7063717b6860acbedc45e98a0570d348f67b411b1508cc2c0d4173ec58423aff",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_d20-tests_saving-throw",
+        "fact_name": "Saving Throws",
+        "hook": "Saving Throws often surprise DMs - check order of operations before adjudicating.",
+        "body": "A saving throw is an attempt to resist a threat like a spell or trap. Order of operations is crucial: resolve the save before applying damage or effects. Missteps here lead to disputes. State the sequence clearly to prevent confusion.",
+        "cta": "DMs: Announce the saving throw before damage or effects - 6 Saving Throws, remember - avoiding disputes by sticking to the sequence.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-28.mp4",
+        "video_sha256": "6017d6fa1ac23df01e2a8444efdfcada57bd781f13c0c38322b183df6e432a23"
+      }
     }
   ]
 }

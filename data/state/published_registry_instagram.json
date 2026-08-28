@@ -1872,6 +1872,51 @@
       "hook": "Cave Fisher forces a costly choice.",
       "body": "Cave Fishers use a filament trap that shoots 60 feet, requiring a Fortitude DC 12 save or the target becomes stuck. Once stuck, the target must make a Strength DC 16 check to break free, a task many underestimate. The creature's ability to reel in a stuck target 10 feet per round adds pressure, especially in confined spaces. Avoiding difficult terrain on rock or cave surfaces, Cave Fishers can reposition quickly, making them a greater threat in numbers.",
       "cta": "Judges: Position Cave Fishers in narrow tunnels where their 60' filaments can entangle the party in just two rounds."
+    },
+    {
+      "published_utc": "2026-08-28T18:10:29Z",
+      "day": "2026-08-28",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-28-rules-ruling-rule-srd-2024-d20-tests-saving-throw-23b56de3d623",
+      "instagram_post_id": "17872767285632956",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "6017d6fa1ac23df01e2a8444efdfcada57bd781f13c0c38322b183df6e432a23",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-28.mp4",
+      "fact_name": "Saving Throws",
+      "category": "rules_ruling",
+      "hook": "Saving Throws often surprise DMs - check order of operations before adjudicating.",
+      "body": "A saving throw is an attempt to resist a threat like a spell or trap. Order of operations is crucial: resolve the save before applying damage or effects. Missteps here lead to disputes. State the sequence clearly to prevent confusion.",
+      "cta": "DMs: Announce the saving throw before damage or effects - 6 Saving Throws, remember - avoiding disputes by sticking to the sequence."
+    },
+    {
+      "published_utc": "2026-08-28T18:16:03Z",
+      "day": "2026-08-28",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-28-monster-tactic-creature-242-c6d9f76a9c35",
+      "instagram_post_id": "18131446432649913",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "b1771bd1f38b34e548acfeefeb1da2fdb966fd3fc39d01361e063a7cfe9a3972",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-28.mp4",
+      "fact_name": "Dunefiend",
+      "category": "monster_tactic",
+      "hook": "Dunefiend's Howl disrupts resting parties - it affects those in far range with a DC check.",
+      "body": "Dunefiend can attack twice with its Tear at +4 for 1d8 damage, or choose to use its Howl to target resting creatures in far range. The mistake is letting it survive long enough to use Howl, which disrupts rest and forces a DC check. Prioritize eliminating it before it can exploit this ability, especially when resting is crucial for resource management.",
+      "cta": "GMs: Interrupt their rest with the Dunefiend's Howl from far range, forcing a DC check and disrupting recovery."
+    },
+    {
+      "published_utc": "2026-08-28T18:21:48Z",
+      "day": "2026-08-28",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-28-class-spotlight-class-3-3952d30c3878",
+      "instagram_post_id": "18173434051437844",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "b97e7a281a6155aaff600da991253263ff9217b8e75fe7536f3dc37913d888cc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-28.mp4",
+      "fact_name": "Cleric",
+      "category": "class_spotlight",
+      "hook": "Cleric spells hinge on divine favor - every failed spell check adds 1 point of deity disapproval.",
+      "body": "Clerics cast spells using a roll of d20 plus Personality modifier and caster level, but every failed check increases deity disapproval by 1. This disapproval widens the range of future failures and can lead to penalties like losing spells or requiring penance. Many players overlook that healing is a spell check, not a guaranteed action. Consistent performance comes from managing disapproval and using repeatable decisions rather than relying on luck.",
+      "cta": "Judges: Remind them every failed spell check adds to disapproval; their deity's patience isn't infinite, and neither is their luck."
     }
   ]
 }

@@ -566,5 +566,15 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-28": {
+    "class_spotlight": {
+      "angle": "level_1_survival",
+      "voice": "survival_coach",
+      "tone": "neutral",
+      "persona": "class_mentor",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

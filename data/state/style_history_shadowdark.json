@@ -652,5 +652,15 @@
       ],
       "tts_voice_id": "coral"
     }
+  },
+  "2026-08-28": {
+    "monster_tactic": {
+      "angle": "how_it_wins",
+      "voice": "torchbearer_ref",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "fable"
+    }
   }
 }

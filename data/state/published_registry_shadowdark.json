@@ -1381,6 +1381,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-27.mp4",
         "video_sha256": "151f900e377f6f51910541f5b18a2f98fff7a903fd708da6fd6f322590dc5503"
       }
+    },
+    {
+      "published_utc": "2026-08-28T18:14:33Z",
+      "day": "2026-08-28",
+      "content_id": "bgp-2026-08-28-monster-tactic-creature-242-c6d9f76a9c35",
+      "publish_hash": "af6ff62cc3687d5a8c5b2e03681413e7c44dd736a346ba9b83ff9c2f45263589",
+      "youtube_video_id": "S1nZ3HTGgkQ",
+      "youtube_url": "https://www.youtube.com/watch?v=S1nZ3HTGgkQ",
+      "video_sha256": "b1771bd1f38b34e548acfeefeb1da2fdb966fd3fc39d01361e063a7cfe9a3972",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-28.mp4",
+      "fingerprint": {
+        "day": "2026-08-28",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-08-28-monster-tactic-creature-242-c6d9f76a9c35",
+        "canonical_hash": "c6d9f76a9c3566b1b91686dbfaa218ab9b802af65a56ad668b89b42a35303c89",
+        "script_id": "f336d5b66ce8238308a7c4f3f4e7b63004cf4bc54492ff5cc18870a431e74b90",
+        "fact_kind": "creature",
+        "fact_pk": 242,
+        "fact_name": "Dunefiend",
+        "hook": "Dunefiend's Howl disrupts resting parties - it affects those in far range with a DC check.",
+        "body": "Dunefiend can attack twice with its Tear at +4 for 1d8 damage, or choose to use its Howl to target resting creatures in far range. The mistake is letting it survive long enough to use Howl, which disrupts rest and forces a DC check. Prioritize eliminating it before it can exploit this ability, especially when resting is crucial for resource management.",
+        "cta": "GMs: Interrupt their rest with the Dunefiend's Howl from far range, forcing a DC check and disrupting recovery.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-28.mp4",
+        "video_sha256": "b1771bd1f38b34e548acfeefeb1da2fdb966fd3fc39d01361e063a7cfe9a3972"
+      }
     }
   ]
 }

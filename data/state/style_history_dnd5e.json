@@ -656,5 +656,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-28": {
+    "rules_ruling": {
+      "angle": "edge_case",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "sage"
+    }
   }
 }

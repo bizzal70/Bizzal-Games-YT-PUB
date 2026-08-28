@@ -1121,6 +1121,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-27.mp4",
         "video_sha256": "7dd8f730bb9657596b71c2216a978862deb98897b15bfda23806ba0c0afccc77"
       }
+    },
+    {
+      "published_utc": "2026-08-28T18:20:47Z",
+      "day": "2026-08-28",
+      "content_id": "bgp-2026-08-28-class-spotlight-class-3-3952d30c3878",
+      "publish_hash": "9425683dd981ed573a9ddb955ce4ff6bdade92bbbcf9817cb3c7f19d658b01f6",
+      "youtube_video_id": "A6jpsDCvIOE",
+      "youtube_url": "https://www.youtube.com/watch?v=A6jpsDCvIOE",
+      "video_sha256": "b97e7a281a6155aaff600da991253263ff9217b8e75fe7536f3dc37913d888cc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-28.mp4",
+      "fingerprint": {
+        "day": "2026-08-28",
+        "category": "class_spotlight",
+        "angle": "level_1_survival",
+        "content_id": "bgp-2026-08-28-class-spotlight-class-3-3952d30c3878",
+        "canonical_hash": "3952d30c3878691396e7df534b992ef37bd8a956e1e902359028a2056d4dccb8",
+        "script_id": "c8ebb5f9eb5343cb8784f719b3b2bb669cb04552b90edcfd4f6023a035141e1f",
+        "fact_kind": "class",
+        "fact_pk": 3,
+        "fact_name": "Cleric",
+        "hook": "Cleric spells hinge on divine favor - every failed spell check adds 1 point of deity disapproval.",
+        "body": "Clerics cast spells using a roll of d20 plus Personality modifier and caster level, but every failed check increases deity disapproval by 1. This disapproval widens the range of future failures and can lead to penalties like losing spells or requiring penance. Many players overlook that healing is a spell check, not a guaranteed action. Consistent performance comes from managing disapproval and using repeatable decisions rather than relying on luck.",
+        "cta": "Judges: Remind them every failed spell check adds to disapproval; their deity's patience isn't infinite, and neither is their luck.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-28.mp4",
+        "video_sha256": "b97e7a281a6155aaff600da991253263ff9217b8e75fe7536f3dc37913d888cc"
+      }
     }
   ]
 }
