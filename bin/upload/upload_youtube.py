@@ -216,7 +216,6 @@ def build_description(atom: dict, day: str) -> str:
     name = (fact.get("name") or "").strip()
     category = (atom.get("category") or "").strip()
     category_label = category.replace("_", " ")
-    angle = (atom.get("angle") or "").strip()
     profile = content_profile(atom)
     hashtags = hashtags_for(profile)["desc"]
     topic_tag = extract_topic_tag(f"{hook} {body}")
@@ -259,9 +258,6 @@ def build_description(atom: dict, day: str) -> str:
         "",
         "📖 More TTRPG rules & rulings — It's Already Written:",
         "https://bizzal70.github.io/itsalreadywritten/ · @ItsAlrdyWritten on X",
-        "",
-        f"category: {category}",
-        f"angle: {angle}",
         "",
         hashtags,
     ]
