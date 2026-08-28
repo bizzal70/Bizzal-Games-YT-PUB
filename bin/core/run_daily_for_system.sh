@@ -79,11 +79,38 @@ run_inner() {
   fi
 
   echo "[run_daily_for_system:$SYSTEM_ID] publish YouTube (day=$day)..."
+  # Explicit capture, not bare `set -e` reliance: run_inner is invoked as
+  # `if run_inner; then` in the outer block below, and under POSIX/bash
+  # semantics `errexit` is SUSPENDED for the whole duration of a function
+  # called as an `if` condition, even though `set -e` is re-declared at the
+  # top of this function. Confirmed real incident from this: a transient
+  # SSL error failed the YouTube upload (upload_youtube.py correctly
+  # returned exit 4), but execution silently continued to the Instagram
+  # publish below and the whole run still reported status=success -- same
+  # pattern the render step above already avoids by capturing its own rc.
+  local _yt_rc=0
+  set +e
   python "$REPO_ROOT/bin/upload/upload_youtube.py" --day "$day"
+  _yt_rc=$?
+  set -e
+  if [[ $_yt_rc -ne 0 ]]; then
+    echo "[run_daily_for_system:$SYSTEM_ID] YouTube publish failed (rc=$_yt_rc); not proceeding to Instagram"
+    return $_yt_rc
+  fi
 
   if [[ -n "${BIZZAL_IG_ACCESS_TOKEN:-}" ]]; then
     echo "[run_daily_for_system:$SYSTEM_ID] publish Instagram (day=$day)..."
+    # Same explicit-capture reasoning as the YouTube step above -- an IG
+    # failure must not be silently absorbed by the broken set -e semantics.
+    local _ig_rc=0
+    set +e
     python "$REPO_ROOT/bin/upload/upload_instagram.py" --day "$day"
+    _ig_rc=$?
+    set -e
+    if [[ $_ig_rc -ne 0 ]]; then
+      echo "[run_daily_for_system:$SYSTEM_ID] Instagram publish failed (rc=$_ig_rc)"
+      return $_ig_rc
+    fi
   else
     echo "[run_daily_for_system:$SYSTEM_ID] BIZZAL_IG_ACCESS_TOKEN not set; skipping Instagram"
   fi
