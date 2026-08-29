@@ -576,5 +576,15 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-08-29": {
+    "rules_myth": {
+      "angle": "quick_example",
+      "voice": "survival_coach",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

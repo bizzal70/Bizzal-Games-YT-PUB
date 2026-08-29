@@ -1407,6 +1407,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-28.mp4",
         "video_sha256": "b1771bd1f38b34e548acfeefeb1da2fdb966fd3fc39d01361e063a7cfe9a3972"
       }
+    },
+    {
+      "published_utc": "2026-08-29T14:31:54Z",
+      "day": "2026-08-29",
+      "content_id": "bgp-2026-08-29-rules-ruling-rule-5-9cf21d95544b",
+      "publish_hash": "8f9ce34031d4cd8a1ea8d3c5284290d99e562c30a505f05e7295d45996398773",
+      "youtube_video_id": "AI76X5-oS7U",
+      "youtube_url": "https://www.youtube.com/watch?v=AI76X5-oS7U",
+      "video_sha256": "466f5a21cec1ebdc2757cb33864dc6bfe9e908a6f247942c211902d293c7610b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-29.mp4",
+      "fingerprint": {
+        "day": "2026-08-29",
+        "category": "rules_ruling",
+        "angle": "fast_ruling",
+        "content_id": "bgp-2026-08-29-rules-ruling-rule-5-9cf21d95544b",
+        "canonical_hash": "9cf21d95544b3b9b713965f51712dc0892dd361919e55c6e7346eaebbbbbce82",
+        "script_id": "271482aaca16f9bd924638d9ae53949000257f6e476ff92f6832808f891d877d",
+        "fact_kind": "rule",
+        "fact_pk": 5,
+        "fact_name": "Spell Casting Check",
+        "hook": "Torchlight briefing: Spell Casting Check.",
+        "body": "Fast ruling for Spell Casting Check: decide intent, then resolve with one clear call. To cast a spell, roll d20 + relevant stat modifier vs DC 10 + spell tier. On a failure the spell doesn't fire but the slot is consumed. Critical failure triggers a mishap (Wizard only). Clear rulings now save argument time later.",
+        "cta": "Use a fast ruling pattern: intent, trigger, outcome, done.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-29.mp4",
+        "video_sha256": "466f5a21cec1ebdc2757cb33864dc6bfe9e908a6f247942c211902d293c7610b"
+      }
     }
   ]
 }

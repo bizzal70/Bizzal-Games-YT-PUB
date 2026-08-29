@@ -1771,6 +1771,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-28.mp4",
         "video_sha256": "6017d6fa1ac23df01e2a8444efdfcada57bd781f13c0c38322b183df6e432a23"
       }
+    },
+    {
+      "published_utc": "2026-08-29T14:27:31Z",
+      "day": "2026-08-29",
+      "content_id": "bgp-2026-08-29-item-spotlight-item-srd-2024-nine-lives-stealer-heavy-crossbow-f951cec02c1d",
+      "publish_hash": "a27468fc97d8fbd2c2d1977b9dfa3d34101979757028413e39b9d39b6e2bc25a",
+      "youtube_video_id": "5MxTkzW-wQ4",
+      "youtube_url": "https://www.youtube.com/watch?v=5MxTkzW-wQ4",
+      "video_sha256": "871106f8593ba3cd1e86573f07d8c2fb902df59492e11c30cf2083cc56e7b05c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-29.mp4",
+      "fingerprint": {
+        "day": "2026-08-29",
+        "category": "item_spotlight",
+        "angle": "best_user",
+        "content_id": "bgp-2026-08-29-item-spotlight-item-srd-2024-nine-lives-stealer-heavy-crossbow-f951cec02c1d",
+        "canonical_hash": "f951cec02c1d2b9be1cbef3b5570a437685c186a201828d4c49e588504928674",
+        "script_id": "e5415795547b61806a172372e449d49935b6ca5479fc7dfa5a1b248463594524",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_nine-lives-stealer-heavy-crossbow",
+        "fact_name": "Nine Lives Stealer (Heavy Crossbow)",
+        "hook": "Nine Lives Stealer's instant kill potential only triggers on a natural 20 - DC 15 Constitution save required.",
+        "body": "The Nine Lives Stealer (Heavy Crossbow) grants a +2 bonus to attack and damage rolls. Its life-stealing ability activates on a natural 20, forcing a DC 15 Constitution saving throw to avoid instant death, but only for creatures with fewer than 100 Hit Points. Constructs and undead automatically succeed on this save. Misuse occurs when players attempt to rely on the instant kill against targets that are immune or have high Hit Points, wasting its charges. Reserve its use for critical moments against vulnerable targets to ensure charges are spent effectively.",
+        "cta": "DMs: Save the Nine Lives Stealer's charges for when a creature with fewer than 100 HP fails the DC 15 Constitution save.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-29.mp4",
+        "video_sha256": "871106f8593ba3cd1e86573f07d8c2fb902df59492e11c30cf2083cc56e7b05c"
+      }
     }
   ]
 }

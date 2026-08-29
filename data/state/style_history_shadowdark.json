@@ -662,5 +662,17 @@
       "spice": [],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-08-29": {
+    "rules_ruling": {
+      "angle": "fast_ruling",
+      "voice": "torchbearer_ref",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

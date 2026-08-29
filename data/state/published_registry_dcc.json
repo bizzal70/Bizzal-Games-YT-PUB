@@ -1147,6 +1147,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-28.mp4",
         "video_sha256": "b97e7a281a6155aaff600da991253263ff9217b8e75fe7536f3dc37913d888cc"
       }
+    },
+    {
+      "published_utc": "2026-08-29T14:21:26Z",
+      "day": "2026-08-29",
+      "content_id": "bgp-2026-08-29-rules-myth-rule-25-56b117c014bc",
+      "publish_hash": "eb04ac6cd48ec82c6a6fcad03722a3418b005ec18578e353d16d5ec293865d28",
+      "youtube_video_id": "EfQi_UYFvQo",
+      "youtube_url": "https://www.youtube.com/watch?v=EfQi_UYFvQo",
+      "video_sha256": "9a60d18faeeb8b34622b90330301c1f3f3a32b495a936ee215bdd0156a48484b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-29.mp4",
+      "fingerprint": {
+        "day": "2026-08-29",
+        "category": "rules_myth",
+        "angle": "quick_example",
+        "content_id": "bgp-2026-08-29-rules-myth-rule-25-56b117c014bc",
+        "canonical_hash": "56b117c014bc02ec39a7ae339aa3a7bde2f9f373c49a2b004331313e5b8c745c",
+        "script_id": "fec14acd136ee60c067701a972fec4a2239075fabf17e5890ab195e460713a88",
+        "fact_kind": "rule",
+        "fact_pk": 25,
+        "fact_name": "Ability Score Loss",
+        "hook": "Ability Score Loss can disable a character entirely - hitting 0 in any score has catastrophic effects.",
+        "body": "Ability Score Loss occurs when certain attacks drain ability scores, and reaching 0 in any score is debilitating: 0 Strength or Agility prevents movement, 0 Stamina causes unconsciousness, 0 Personality or Intelligence results in incoherence, and 0 Luck leads to constant mishaps. This condition heals slowly over time, not immediately. Ignoring the long-term impact of losing ability points often leads to dire consequences, as it isn't just temporary hit point loss. Prioritize avoiding these attacks and consider retreat or defensive action when ability scores are at risk.",
+        "cta": "Judges: Have a ghoul drain 2 Strength to show them how quickly immobility becomes a real threat.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-29.mp4",
+        "video_sha256": "9a60d18faeeb8b34622b90330301c1f3f3a32b495a936ee215bdd0156a48484b"
+      },
+      "tone_lint_violation": "vague filler phrase: often leads to"
     }
   ]
 }

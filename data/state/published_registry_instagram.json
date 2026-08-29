@@ -1917,6 +1917,51 @@
       "hook": "Cleric spells hinge on divine favor - every failed spell check adds 1 point of deity disapproval.",
       "body": "Clerics cast spells using a roll of d20 plus Personality modifier and caster level, but every failed check increases deity disapproval by 1. This disapproval widens the range of future failures and can lead to penalties like losing spells or requiring penance. Many players overlook that healing is a spell check, not a guaranteed action. Consistent performance comes from managing disapproval and using repeatable decisions rather than relying on luck.",
       "cta": "Judges: Remind them every failed spell check adds to disapproval; their deity's patience isn't infinite, and neither is their luck."
+    },
+    {
+      "published_utc": "2026-08-29T14:22:46Z",
+      "day": "2026-08-29",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-29-rules-myth-rule-25-56b117c014bc",
+      "instagram_post_id": "18147183451542272",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9a60d18faeeb8b34622b90330301c1f3f3a32b495a936ee215bdd0156a48484b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-29.mp4",
+      "fact_name": "Ability Score Loss",
+      "category": "rules_myth",
+      "hook": "Ability Score Loss can disable a character entirely - hitting 0 in any score has catastrophic effects.",
+      "body": "Ability Score Loss occurs when certain attacks drain ability scores, and reaching 0 in any score is debilitating: 0 Strength or Agility prevents movement, 0 Stamina causes unconsciousness, 0 Personality or Intelligence results in incoherence, and 0 Luck leads to constant mishaps. This condition heals slowly over time, not immediately. Ignoring the long-term impact of losing ability points often leads to dire consequences, as it isn't just temporary hit point loss. Prioritize avoiding these attacks and consider retreat or defensive action when ability scores are at risk.",
+      "cta": "Judges: Have a ghoul drain 2 Strength to show them how quickly immobility becomes a real threat."
+    },
+    {
+      "published_utc": "2026-08-29T14:28:29Z",
+      "day": "2026-08-29",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-29-item-spotlight-item-srd-2024-nine-lives-stealer-heavy-crossbow-f951cec02c1d",
+      "instagram_post_id": "18123826201847287",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "871106f8593ba3cd1e86573f07d8c2fb902df59492e11c30cf2083cc56e7b05c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-29.mp4",
+      "fact_name": "Nine Lives Stealer (Heavy Crossbow)",
+      "category": "item_spotlight",
+      "hook": "Nine Lives Stealer's instant kill potential only triggers on a natural 20 - DC 15 Constitution save required.",
+      "body": "The Nine Lives Stealer (Heavy Crossbow) grants a +2 bonus to attack and damage rolls. Its life-stealing ability activates on a natural 20, forcing a DC 15 Constitution saving throw to avoid instant death, but only for creatures with fewer than 100 Hit Points. Constructs and undead automatically succeed on this save. Misuse occurs when players attempt to rely on the instant kill against targets that are immune or have high Hit Points, wasting its charges. Reserve its use for critical moments against vulnerable targets to ensure charges are spent effectively.",
+      "cta": "DMs: Save the Nine Lives Stealer's charges for when a creature with fewer than 100 HP fails the DC 15 Constitution save."
+    },
+    {
+      "published_utc": "2026-08-29T14:32:54Z",
+      "day": "2026-08-29",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-29-rules-ruling-rule-5-9cf21d95544b",
+      "instagram_post_id": "17896568970665883",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "466f5a21cec1ebdc2757cb33864dc6bfe9e908a6f247942c211902d293c7610b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-29.mp4",
+      "fact_name": "Spell Casting Check",
+      "category": "rules_ruling",
+      "hook": "Torchlight briefing: Spell Casting Check.",
+      "body": "Fast ruling for Spell Casting Check: decide intent, then resolve with one clear call. To cast a spell, roll d20 + relevant stat modifier vs DC 10 + spell tier. On a failure the spell doesn't fire but the slot is consumed. Critical failure triggers a mishap (Wizard only). Clear rulings now save argument time later.",
+      "cta": "Use a fast ruling pattern: intent, trigger, outcome, done."
     }
   ]
 }
