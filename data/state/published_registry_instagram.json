@@ -1962,6 +1962,51 @@
       "hook": "Torchlight briefing: Spell Casting Check.",
       "body": "Fast ruling for Spell Casting Check: decide intent, then resolve with one clear call. To cast a spell, roll d20 + relevant stat modifier vs DC 10 + spell tier. On a failure the spell doesn't fire but the slot is consumed. Critical failure triggers a mishap (Wizard only). Clear rulings now save argument time later.",
       "cta": "Use a fast ruling pattern: intent, trigger, outcome, done."
+    },
+    {
+      "published_utc": "2026-08-30T14:21:58Z",
+      "day": "2026-08-30",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-30-monster-tactic-creature-278-dde5f07f2f5e",
+      "instagram_post_id": "18113486864055916",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "7a5068136c20907342f9eba070d7ddb5177393a572f8a9340e907aad71e4cd8b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-30.mp4",
+      "fact_name": "Large Scorpion",
+      "category": "monster_tactic",
+      "hook": "Large Scorpion's poison is more potent than expected - 1d6 damage with a DC 12 Fort save to negate.",
+      "body": "Large Scorpion's sting attack combines 1d5+1 damage with a poison effect that deals an additional 1d6 damage unless negated by a DC 12 Fortitude save. Underestimating the impact of failing this save can lead to significant damage, especially in low-level encounters. Positioning the scorpion in terrain that restricts movement, like narrow passages, can force targets into its threat range and increase the chance of failed saves. Prioritizing movement and controlling the battlefield can mitigate its effectiveness.",
+      "cta": "Judges: Pin the scorpion in a tight corridor to exploit its 30' movement and force those DC 12 poison saves."
+    },
+    {
+      "published_utc": "2026-08-30T14:26:41Z",
+      "day": "2026-08-30",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-30-encounter-seed-creature-monsters-multiverse-quickling-d50d3585485f",
+      "instagram_post_id": "18069548405724612",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "015f9982ccc28cc383d76f0e4a934489f45840062410308eb9a633511b59fddb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-30.mp4",
+      "fact_name": "Quickling",
+      "category": "encounter_seed",
+      "hook": "Run Quickling as a moral-choice encounter: they can protect everyone, or finish the objective before the cost spikes.",
+      "body": "Quicklings have an Armor Class of 16 and only 10 hit points, but their 120 feet of movement allows them to avoid most attacks. Underestimating their ability to disengage and reposition leads to wasted actions. Using area-of-effect spells or abilities that negate their high Dexterity is more effective than chasing them down with melee attacks.",
+      "cta": "DMs: Make them choose - secure the objective or save the villagers as Quicklings exploit their 120-foot speed to wreak havoc."
+    },
+    {
+      "published_utc": "2026-08-30T14:31:45Z",
+      "day": "2026-08-30",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-30-item-spotlight-item-78-b1475c4349ca",
+      "instagram_post_id": "18160129510491438",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "a8129335ccb9e4faf6804a37071e5d11ee37f35fae9360a6974999a53d45fd99",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-30.mp4",
+      "fact_name": "Sphere Of Annihilation",
+      "category": "item_spotlight",
+      "hook": "Sphere Of Annihilation obliterates everything it touches - DC 18 Intelligence check to control it.",
+      "body": "The Sphere Of Annihilation destroys all matter on contact. Moving it requires passing a DC 18 Intelligence check, and if multiple creatures attempt control, it becomes a contested Intelligence check. Wizards have advantage on these checks. Most players try to use it in every encounter, but its real value is in precise timing - deploying it at a critical moment to change the course of events rather than forcing it into every scene.",
+      "cta": "GMs: Identify a DC 18 Intelligence check moment to control the Sphere and bypass a deadly encounter entirely."
     }
   ]
 }

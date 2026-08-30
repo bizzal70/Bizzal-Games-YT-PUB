@@ -678,5 +678,17 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-08-30": {
+    "encounter_seed": {
+      "angle": "moral_choice",
+      "voice": "rules_lawyer",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

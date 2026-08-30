@@ -586,5 +586,15 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-08-30": {
+    "monster_tactic": {
+      "angle": "terrain_synergy",
+      "voice": "chaos_herald",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "fable"
+    }
   }
 }

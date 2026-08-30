@@ -1797,6 +1797,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-29.mp4",
         "video_sha256": "871106f8593ba3cd1e86573f07d8c2fb902df59492e11c30cf2083cc56e7b05c"
       }
+    },
+    {
+      "published_utc": "2026-08-30T14:25:57Z",
+      "day": "2026-08-30",
+      "content_id": "bgp-2026-08-30-encounter-seed-creature-monsters-multiverse-quickling-d50d3585485f",
+      "publish_hash": "44405c802c02b3e5122367b42ec65396420cab750756b4012109997be3441c8f",
+      "youtube_video_id": "KLcrrWun_Fg",
+      "youtube_url": "https://www.youtube.com/watch?v=KLcrrWun_Fg",
+      "video_sha256": "015f9982ccc28cc383d76f0e4a934489f45840062410308eb9a633511b59fddb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-30.mp4",
+      "fingerprint": {
+        "day": "2026-08-30",
+        "category": "encounter_seed",
+        "angle": "moral_choice",
+        "content_id": "bgp-2026-08-30-encounter-seed-creature-monsters-multiverse-quickling-d50d3585485f",
+        "canonical_hash": "d50d3585485fa433cb025f65c3a48de524736dd34e00860d30f000033ae20edd",
+        "script_id": "d6bf2c5e0932e1c2776ec9fe6aa260491cc6cddd01fd4bf29b647de9f244af49",
+        "fact_kind": "creature",
+        "fact_pk": "monsters-multiverse_quickling",
+        "fact_name": "Quickling",
+        "hook": "Run Quickling as a moral-choice encounter: they can protect everyone, or finish the objective before the cost spikes.",
+        "body": "Quicklings have an Armor Class of 16 and only 10 hit points, but their 120 feet of movement allows them to avoid most attacks. Underestimating their ability to disengage and reposition leads to wasted actions. Using area-of-effect spells or abilities that negate their high Dexterity is more effective than chasing them down with melee attacks.",
+        "cta": "DMs: Make them choose - secure the objective or save the villagers as Quicklings exploit their 120-foot speed to wreak havoc.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-30.mp4",
+        "video_sha256": "015f9982ccc28cc383d76f0e4a934489f45840062410308eb9a633511b59fddb"
+      }
     }
   ]
 }

@@ -1433,6 +1433,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-29.mp4",
         "video_sha256": "466f5a21cec1ebdc2757cb33864dc6bfe9e908a6f247942c211902d293c7610b"
       }
+    },
+    {
+      "published_utc": "2026-08-30T14:30:45Z",
+      "day": "2026-08-30",
+      "content_id": "bgp-2026-08-30-item-spotlight-item-78-b1475c4349ca",
+      "publish_hash": "bec6a578db8a9c722d9aebfa91aeaa8c99369a0d7c0d178a097c223c30846742",
+      "youtube_video_id": "TR0HyUQpPGc",
+      "youtube_url": "https://www.youtube.com/watch?v=TR0HyUQpPGc",
+      "video_sha256": "a8129335ccb9e4faf6804a37071e5d11ee37f35fae9360a6974999a53d45fd99",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-30.mp4",
+      "fingerprint": {
+        "day": "2026-08-30",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-08-30-item-spotlight-item-78-b1475c4349ca",
+        "canonical_hash": "b1475c4349ca4f5a14097f4c0a811f33c034cc3692b033e472a3821a8e4d7616",
+        "script_id": "8302ae8130779f5612c1a8311d899846511aa9bd581ee402380739dfbb4eb9f3",
+        "fact_kind": "item",
+        "fact_pk": 78,
+        "fact_name": "Sphere Of Annihilation",
+        "hook": "Sphere Of Annihilation obliterates everything it touches - DC 18 Intelligence check to control it.",
+        "body": "The Sphere Of Annihilation destroys all matter on contact. Moving it requires passing a DC 18 Intelligence check, and if multiple creatures attempt control, it becomes a contested Intelligence check. Wizards have advantage on these checks. Most players try to use it in every encounter, but its real value is in precise timing - deploying it at a critical moment to change the course of events rather than forcing it into every scene.",
+        "cta": "GMs: Identify a DC 18 Intelligence check moment to control the Sphere and bypass a deadly encounter entirely.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-30.mp4",
+        "video_sha256": "a8129335ccb9e4faf6804a37071e5d11ee37f35fae9360a6974999a53d45fd99"
+      }
     }
   ]
 }

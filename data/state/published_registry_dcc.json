@@ -1174,6 +1174,32 @@
         "video_sha256": "9a60d18faeeb8b34622b90330301c1f3f3a32b495a936ee215bdd0156a48484b"
       },
       "tone_lint_violation": "vague filler phrase: often leads to"
+    },
+    {
+      "published_utc": "2026-08-30T14:20:56Z",
+      "day": "2026-08-30",
+      "content_id": "bgp-2026-08-30-monster-tactic-creature-278-dde5f07f2f5e",
+      "publish_hash": "a8b5e2796f6e59e7fbe2a98d3ea18f8a2c268f1fd06baca801d0e5fabf803b05",
+      "youtube_video_id": "0f8vfkBrHMQ",
+      "youtube_url": "https://www.youtube.com/watch?v=0f8vfkBrHMQ",
+      "video_sha256": "7a5068136c20907342f9eba070d7ddb5177393a572f8a9340e907aad71e4cd8b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-30.mp4",
+      "fingerprint": {
+        "day": "2026-08-30",
+        "category": "monster_tactic",
+        "angle": "terrain_synergy",
+        "content_id": "bgp-2026-08-30-monster-tactic-creature-278-dde5f07f2f5e",
+        "canonical_hash": "dde5f07f2f5ea2f0198709b3f85ae42568372535de1ce4f93607536f2965e26f",
+        "script_id": "23c74fa5359d5cc368ada98ef096510a8ad19ff9d37eb63ed28bc7d0a0cb9e54",
+        "fact_kind": "creature",
+        "fact_pk": 278,
+        "fact_name": "Large Scorpion",
+        "hook": "Large Scorpion's poison is more potent than expected - 1d6 damage with a DC 12 Fort save to negate.",
+        "body": "Large Scorpion's sting attack combines 1d5+1 damage with a poison effect that deals an additional 1d6 damage unless negated by a DC 12 Fortitude save. Underestimating the impact of failing this save can lead to significant damage, especially in low-level encounters. Positioning the scorpion in terrain that restricts movement, like narrow passages, can force targets into its threat range and increase the chance of failed saves. Prioritizing movement and controlling the battlefield can mitigate its effectiveness.",
+        "cta": "Judges: Pin the scorpion in a tight corridor to exploit its 30' movement and force those DC 12 poison saves.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-30.mp4",
+        "video_sha256": "7a5068136c20907342f9eba070d7ddb5177393a572f8a9340e907aad71e4cd8b"
+      }
     }
   ]
 }
