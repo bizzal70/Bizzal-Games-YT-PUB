@@ -1200,6 +1200,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-30.mp4",
         "video_sha256": "7a5068136c20907342f9eba070d7ddb5177393a572f8a9340e907aad71e4cd8b"
       }
+    },
+    {
+      "published_utc": "2026-08-31T14:26:51Z",
+      "day": "2026-08-31",
+      "content_id": "bgp-2026-08-31-spell-use-case-spell-60-0c034ae29d4c",
+      "publish_hash": "6eb7375ac71199f7782201b9b9a97675431c0b3d856ecba3ea20bca9739af212",
+      "youtube_video_id": "HFqDT75ki0U",
+      "youtube_url": "https://www.youtube.com/watch?v=HFqDT75ki0U",
+      "video_sha256": "6b733bd74e905d51c1bf2964fe05cd2c512b56b53bfe91ebd63cac6530621115",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-31.mp4",
+      "fingerprint": {
+        "day": "2026-08-31",
+        "category": "spell_use_case",
+        "angle": "patron_invoke",
+        "content_id": "bgp-2026-08-31-spell-use-case-spell-60-0c034ae29d4c",
+        "canonical_hash": "0c034ae29d4c8216cfd7c9e1a7f1929a8b610c17e9c93935fa680b91ee9f2ad3",
+        "script_id": "920d13dad0510fd903caafc7bf8282a64763bee21b8dbfb958c5422e4b150ab7",
+        "fact_kind": "spell",
+        "fact_pk": 60,
+        "fact_name": "Cure Paralysis",
+        "hook": "Cure Paralysis changes encounter dynamics more than players expect - at a spell check of 16-19.",
+        "body": "Cure Paralysis is a 2nd-level cleric spell that requires a spell check of d20 plus Personality modifier and caster level. A result of 13-15 removes paralysis from one creature via touch. At a result of 16-19, it affects 1d3 creatures within 30 feet, making it more than just a single-target solution. Timing and target selection are crucial before committing to the spell check, as higher results can restore lost ability score points or reverse more severe conditions.",
+        "cta": "Judges: Remind them to aim for a 16-19 spell check on Cure Paralysis to affect multiple targets and shift the battle.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-31.mp4",
+        "video_sha256": "6b733bd74e905d51c1bf2964fe05cd2c512b56b53bfe91ebd63cac6530621115"
+      }
     }
   ]
 }

@@ -1459,6 +1459,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-30.mp4",
         "video_sha256": "a8129335ccb9e4faf6804a37071e5d11ee37f35fae9360a6974999a53d45fd99"
       }
+    },
+    {
+      "published_utc": "2026-08-31T14:36:55Z",
+      "day": "2026-08-31",
+      "content_id": "bgp-2026-08-31-encounter-seed-creature-224-4dbadebfaba5",
+      "publish_hash": "68ecf6b233d1e1e6329a83785f82aac3b220e6715367114acb6a2b342375ce35",
+      "youtube_video_id": "jcIODhj1g-c",
+      "youtube_url": "https://www.youtube.com/watch?v=jcIODhj1g-c",
+      "video_sha256": "971f41ca586e1b1fd0bf29a5e02693a67be2a8f11c830d27eb9dc705ec6c411a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-31.mp4",
+      "fingerprint": {
+        "day": "2026-08-31",
+        "category": "encounter_seed",
+        "angle": "twist",
+        "content_id": "bgp-2026-08-31-encounter-seed-creature-224-4dbadebfaba5",
+        "canonical_hash": "4dbadebfaba50d75620cd7e2c7f023f5f0a28a6a4f07886229d870dce9365b0a",
+        "script_id": "ae8724ead5ddaba86453dbd16a0646965c8dd09dfa7dfc7a170f79f9f237a2c6",
+        "fact_kind": "creature",
+        "fact_pk": 224,
+        "fact_name": "Winter Wolf",
+        "hook": "Winter Wolf earns its stakes fast.",
+        "body": "Frost Breath fills a near-sized cube, forcing a DC 15 DEX save or inflicting 3d8 damage. Misjudging the recharge time leads to repeated exposure. Underestimating its area control potential results in clustered targets taking heavy damage. Positioning to avoid clustering mitigates the damage spike and limits its impact.",
+        "cta": "GMs: Remind them that clustering invites disaster; the Winter Wolf's Frost Breath recharges in 1d4 rounds, not the usual longer wait.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-31.mp4",
+        "video_sha256": "971f41ca586e1b1fd0bf29a5e02693a67be2a8f11c830d27eb9dc705ec6c411a"
+      }
     }
   ]
 }

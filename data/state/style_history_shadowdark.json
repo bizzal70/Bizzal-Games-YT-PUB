@@ -684,5 +684,15 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-08-31": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "strict_referee",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "fable"
+    }
   }
 }

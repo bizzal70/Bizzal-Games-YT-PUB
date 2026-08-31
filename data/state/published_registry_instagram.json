@@ -2007,6 +2007,51 @@
       "hook": "Sphere Of Annihilation obliterates everything it touches - DC 18 Intelligence check to control it.",
       "body": "The Sphere Of Annihilation destroys all matter on contact. Moving it requires passing a DC 18 Intelligence check, and if multiple creatures attempt control, it becomes a contested Intelligence check. Wizards have advantage on these checks. Most players try to use it in every encounter, but its real value is in precise timing - deploying it at a critical moment to change the course of events rather than forcing it into every scene.",
       "cta": "GMs: Identify a DC 18 Intelligence check moment to control the Sphere and bypass a deadly encounter entirely."
+    },
+    {
+      "published_utc": "2026-08-31T14:28:10Z",
+      "day": "2026-08-31",
+      "system": "dcc",
+      "content_id": "bgp-2026-08-31-spell-use-case-spell-60-0c034ae29d4c",
+      "instagram_post_id": "17986392063023166",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "6b733bd74e905d51c1bf2964fe05cd2c512b56b53bfe91ebd63cac6530621115",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-31.mp4",
+      "fact_name": "Cure Paralysis",
+      "category": "spell_use_case",
+      "hook": "Cure Paralysis changes encounter dynamics more than players expect - at a spell check of 16-19.",
+      "body": "Cure Paralysis is a 2nd-level cleric spell that requires a spell check of d20 plus Personality modifier and caster level. A result of 13-15 removes paralysis from one creature via touch. At a result of 16-19, it affects 1d3 creatures within 30 feet, making it more than just a single-target solution. Timing and target selection are crucial before committing to the spell check, as higher results can restore lost ability score points or reverse more severe conditions.",
+      "cta": "Judges: Remind them to aim for a 16-19 spell check on Cure Paralysis to affect multiple targets and shift the battle."
+    },
+    {
+      "published_utc": "2026-08-31T14:32:57Z",
+      "day": "2026-08-31",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-08-31-rules-myth-rule-srd-2024-combat-cover-4c7d3c5ec520",
+      "instagram_post_id": "17985318093028534",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "71970f987af23b95f85951482c2a34327d538181a3fe73c7c22af68a90b088f0",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-31.mp4",
+      "fact_name": "Cover",
+      "category": "rules_myth",
+      "hook": "Cover often gets misinterpreted - three degrees of cover modify attack rolls and saving throws.",
+      "body": "Cover modifies attack rolls and Dexterity saving throws, with half cover adding +2 to AC and saving throws, and three-quarters cover adding +5. Total cover blocks attacks and effects entirely. Players frequently assume a mere obstacle provides total cover, when it only grants half cover. Proper application involves understanding the line of sight and the specific degree of cover granted by an obstacle.",
+      "cta": "DMs: Use the cover table to correct players who mistake half cover for total cover; line of sight matters."
+    },
+    {
+      "published_utc": "2026-08-31T14:37:57Z",
+      "day": "2026-08-31",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-08-31-encounter-seed-creature-224-4dbadebfaba5",
+      "instagram_post_id": "18350489998219772",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "971f41ca586e1b1fd0bf29a5e02693a67be2a8f11c830d27eb9dc705ec6c411a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-31.mp4",
+      "fact_name": "Winter Wolf",
+      "category": "encounter_seed",
+      "hook": "Winter Wolf earns its stakes fast.",
+      "body": "Frost Breath fills a near-sized cube, forcing a DC 15 DEX save or inflicting 3d8 damage. Misjudging the recharge time leads to repeated exposure. Underestimating its area control potential results in clustered targets taking heavy damage. Positioning to avoid clustering mitigates the damage spike and limits its impact.",
+      "cta": "GMs: Remind them that clustering invites disaster; the Winter Wolf's Frost Breath recharges in 1d4 rounds, not the usual longer wait."
     }
   ]
 }

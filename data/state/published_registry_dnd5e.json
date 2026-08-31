@@ -1823,6 +1823,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-30.mp4",
         "video_sha256": "015f9982ccc28cc383d76f0e4a934489f45840062410308eb9a633511b59fddb"
       }
+    },
+    {
+      "published_utc": "2026-08-31T14:31:59Z",
+      "day": "2026-08-31",
+      "content_id": "bgp-2026-08-31-rules-myth-rule-srd-2024-combat-cover-4c7d3c5ec520",
+      "publish_hash": "cc50f695622c98f63f60cdc3a649f5689a6e39062e1f3b6e7b9afcb933a4dc0e",
+      "youtube_video_id": "Y8ORxMuyGRc",
+      "youtube_url": "https://www.youtube.com/watch?v=Y8ORxMuyGRc",
+      "video_sha256": "71970f987af23b95f85951482c2a34327d538181a3fe73c7c22af68a90b088f0",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-31.mp4",
+      "fingerprint": {
+        "day": "2026-08-31",
+        "category": "rules_myth",
+        "angle": "why_people_get_it_wrong",
+        "content_id": "bgp-2026-08-31-rules-myth-rule-srd-2024-combat-cover-4c7d3c5ec520",
+        "canonical_hash": "4c7d3c5ec52044fb583e44592bb7bb143158667bd4746a267bdb5e8932ef2c00",
+        "script_id": "9f2376bd25429ea3b27aa86dbcfaba0a9b49bbcd1d03067307636df8ca8d30b6",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_combat_cover",
+        "fact_name": "Cover",
+        "hook": "Cover often gets misinterpreted - three degrees of cover modify attack rolls and saving throws.",
+        "body": "Cover modifies attack rolls and Dexterity saving throws, with half cover adding +2 to AC and saving throws, and three-quarters cover adding +5. Total cover blocks attacks and effects entirely. Players frequently assume a mere obstacle provides total cover, when it only grants half cover. Proper application involves understanding the line of sight and the specific degree of cover granted by an obstacle.",
+        "cta": "DMs: Use the cover table to correct players who mistake half cover for total cover; line of sight matters.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-31.mp4",
+        "video_sha256": "71970f987af23b95f85951482c2a34327d538181a3fe73c7c22af68a90b088f0"
+      }
     }
   ]
 }
