@@ -1,6 +1,83 @@
 [
   {
     "system": "dnd5e",
+    "title": "Ravenloft's New Warlock Class: Powers Unleashed",
+    "angle": "Explore the unique abilities of the new Warlock class set in the spooky Ravenloft setting.",
+    "rationale": "The Warlock class is gaining attention with its first gameplay footage in Ravenloft.",
+    "fixture_hint": "class",
+    "search_keyword": "Dungeons & Dragons: Warlock shows off first gameplay footage, will be set in Ravenloft",
+    "created_date": "2026-08-31",
+    "status": "pending",
+    "brief_id": "56483139fa18"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Arcana Unleashed: Deadfall's Game-Changing Spell",
+    "angle": "Delve into Deadfall's most transformative spell and its implications for gameplay.",
+    "rationale": "Arcana Unleashed and its Deadfall expansion are being previewed, sparking community interest.",
+    "fixture_hint": "spell",
+    "search_keyword": "Arcana Unleashed & Arcana Unleashed: Deadfall preview",
+    "created_date": "2026-08-31",
+    "status": "pending",
+    "brief_id": "15a0e621ef34"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Long Rest Tavern: Transforming D&D with Cozy Sim Mechanics",
+    "angle": "Analyze how the Long Rest Tavern integrates cozy simulation elements into D&D gameplay.",
+    "rationale": "The newly announced Long Rest Tavern is merging D&D elements with a cozy sim genre.",
+    "fixture_hint": "rule",
+    "search_keyword": "Dungeons & Dragons: Long Rest Tavern announced, cozy business sim for PC",
+    "created_date": "2026-08-31",
+    "status": "pending",
+    "brief_id": "67e81cdcfcd0"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's Cursed Crow: A Monster Profile",
+    "angle": "Profile the Cursed Crow, a new monster generating buzz in the Shadowdark community.",
+    "rationale": "Crows are a trending topic in RPG crowdfunding, making this creature relevant.",
+    "fixture_hint": "creature",
+    "search_keyword": "RPG Crowdfunding News – Crows, Cypher, Monsters of Rend World, and more",
+    "created_date": "2026-08-31",
+    "status": "pending",
+    "brief_id": "b7b5f6623e02"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Spellcasting Innovations in Shadowdark: The Uncanny Valley",
+    "angle": "Investigate how new spellcasting mechanics align with the Uncanny Valley theme.",
+    "rationale": "The concept of RPG Evolution and the Uncanny Valley is trending, tying into Shadowdark's themes.",
+    "fixture_hint": "spell",
+    "search_keyword": "RPG Evolution: Welcome to the Uncanny Valley",
+    "created_date": "2026-08-31",
+    "status": "pending",
+    "brief_id": "6d8d689419dc"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's New Monster: The Starlane Scum",
+    "angle": "Explore the Starlane Scum's role and abilities in the DCC universe.",
+    "rationale": "Alpha Star issue 3 is incoming with new content, including starlane scum.",
+    "fixture_hint": "creature",
+    "search_keyword": "Alpha Star issue 3 is incoming--starlane scum, jungle beasts, a murder mystery, and a new heritage!",
+    "created_date": "2026-08-31",
+    "status": "pending",
+    "brief_id": "81f6f8d74110"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Runes of Power: The Tome for Dwarves",
+    "angle": "Delve into the powerful runes available in the new Tome for Dwarves and their impact.",
+    "rationale": "Runes, mines, and monsters are trending topics, making this tome timely for DCC players.",
+    "fixture_hint": "item",
+    "search_keyword": "Tome for dwarves, runes, mines, and monsters",
+    "created_date": "2026-08-31",
+    "status": "pending",
+    "brief_id": "ee5539a128fe"
+  },
+  {
+    "system": "dnd5e",
     "title": "Mind Flayer Transformation: The New Underdark Twist",
     "angle": "Explore the mechanics and implications of transforming into a mind flayer as a player character.",
     "rationale": "Dungeons & Dragons is currently playtesting new Underdark options, including this transformation.",
