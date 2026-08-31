@@ -389,6 +389,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-28-shadowdark-clip3.mp4",
         "video_sha256": "65164ee53ac2e8f4846a860166b2be7e28ef9cba091900ada3dbb8365090ca71"
       }
+    },
+    {
+      "published_utc": "2026-08-31T18:10:51Z",
+      "day": "2026-08-31-shadowdark-clip1",
+      "content_id": "clip:2959930216e88ae0",
+      "publish_hash": "710e7ba15513fe8a3e9f1ff3dfbe48f17b55f7b887c98397bfa89431a99059ec",
+      "youtube_video_id": "s3IdV2k0Ls4",
+      "youtube_url": "https://www.youtube.com/watch?v=s3IdV2k0Ls4",
+      "video_sha256": "d60e587b9156b4c2a1e2d8f29f340e5642c0882274d71ae341137019ef9f26ca",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-31-shadowdark-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-08-31-shadowdark-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:2959930216e88ae0",
+        "canonical_hash": "",
+        "script_id": "2959930216e88ae082e3ed2ec5f8a60eb9b97b576bcf80ad1f47d482270531cf",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Couatl's Change Shape sacrifices attacks",
+        "hook": "Couatl's Change Shape sacrifices attacks",
+        "body": "The Couatl's Change Shape lets it transform into any similarly-sized creature, offering tactical flexibility. But beware: it replaces attacks for that turn, so timing is crucial. Misplaying this ability can leave the Couatl vulnerable in combat.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-31-shadowdark-clip1.mp4",
+        "video_sha256": "d60e587b9156b4c2a1e2d8f29f340e5642c0882274d71ae341137019ef9f26ca"
+      }
+    },
+    {
+      "published_utc": "2026-08-31T18:12:30Z",
+      "day": "2026-08-31-shadowdark-clip2",
+      "content_id": "clip:605e2d5023bb0930",
+      "publish_hash": "44b031cc8958eafc04aaf944a97bede87b8713f0d5c5b0842ebf8e8b4ac8e0e9",
+      "youtube_video_id": "R-o4HmjnaOI",
+      "youtube_url": "https://www.youtube.com/watch?v=R-o4HmjnaOI",
+      "video_sha256": "576f96bb47b4bc3524121049fdce2e434653f41ce0d57fbdd766320af3d52138",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-31-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-08-31-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:605e2d5023bb0930",
+        "canonical_hash": "",
+        "script_id": "605e2d5023bb0930c0258d025eea11aa1f578a7460fc19e0cd491516b53dc342",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Couatl's poison induces deep sleep",
+        "hook": "Couatl's poison induces deep sleep",
+        "body": "Couatl's bite attack includes a poison that requires a DC 15 Constitution saving throw. Failure results in deep sleep for 1d8 hours. Ideal for non-lethal takedowns, but less reliable against high-Constitution or poison-resistant creatures.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-31-shadowdark-clip2.mp4",
+        "video_sha256": "576f96bb47b4bc3524121049fdce2e434653f41ce0d57fbdd766320af3d52138"
+      }
+    },
+    {
+      "published_utc": "2026-08-31T18:14:22Z",
+      "day": "2026-08-31-shadowdark-clip3",
+      "content_id": "clip:2e750dd81eb914cd",
+      "publish_hash": "80899373ab532b50681704cb1d3c16d8b6f648a1e1306f696e190044d3b6ac3e",
+      "youtube_video_id": "xjJKXq5DXb4",
+      "youtube_url": "https://www.youtube.com/watch?v=xjJKXq5DXb4",
+      "video_sha256": "3b08987eebc6addebda706d1cc18058d79128c37cea4ca2ab44cf9f02da89221",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-31-shadowdark-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-08-31-shadowdark-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:2e750dd81eb914cd",
+        "canonical_hash": "",
+        "script_id": "2e750dd81eb914cdf1d6fd3985ebb065466adf0d6cc435c9dc72f78615cca7e7",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Couatl's Restore sacrifices attacks for support",
+        "hook": "Couatl's Restore sacrifices attacks for support",
+        "body": "The Couatl's Restore heals 3d8 HP, removes curses, or alleviates afflictions, used in place of attacks. This makes it a support action, crucial for saving allies or turning battles, but requires sacrificing an attack opportunity.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-31-shadowdark-clip3.mp4",
+        "video_sha256": "3b08987eebc6addebda706d1cc18058d79128c37cea4ca2ab44cf9f02da89221"
+      }
     }
   ]
 }
