@@ -432,14 +432,21 @@ def main() -> int:
         eprint(f"ERROR: unable to load atom for day {day}: {exc}")
         return 3
 
-    cover_frame_sec = float(os.getenv("BIZZAL_IG_COVER_FRAME_SEC", "1.0"))
-    cover_path = extract_cover_frame(video_path, cover_frame_sec)
+    # Cover: use the rendered background ART ({day}.bg.png). This is the
+    # proven-good cover -- posts that used it show the full black-and-white
+    # illustration in the feed grid. The 2026-08-28 "extract a real video
+    # frame" approach (BIZZAL_IG_COVER_FRAME_SEC ~1s) produced BLACK covers in
+    # the grid (the frame reads black), so the whole recent feed went dark.
+    # Frame extraction is demoted to a fallback only if the bg PNG is missing,
+    # and then at a later timestamp to avoid any dark lead-in.
+    cover_path = cover_image_path_for_day(repo_root, day)
     if cover_path:
-        print(f"[upload_instagram] cover image: extracted frame at {cover_frame_sec}s (includes hook text)")
+        print(f"[upload_instagram] cover image: {cover_path.name} (background art)")
     else:
-        cover_path = cover_image_path_for_day(repo_root, day)
+        cover_frame_sec = float(os.getenv("BIZZAL_IG_COVER_FRAME_SEC", "2.5"))
+        cover_path = extract_cover_frame(video_path, cover_frame_sec)
         if cover_path:
-            print(f"[upload_instagram] cover image: {cover_path.name} (raw background, no hook text -- frame extraction failed)")
+            print(f"[upload_instagram] cover image: extracted frame at {cover_frame_sec}s (bg png missing)")
         else:
             print("[upload_instagram] no cover image found; Instagram will auto-select a frame")
 
