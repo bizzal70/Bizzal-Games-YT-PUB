@@ -16,8 +16,13 @@ export BIZZAL_BG_IMAGE_MOTION_PIXELS="${BIZZAL_BG_IMAGE_MOTION_PIXELS:-24}"
 export BIZZAL_BG_IMAGE_MOTION_SPEED="${BIZZAL_BG_IMAGE_MOTION_SPEED:-0.20}"
 export BIZZAL_AUDIO_PROFILE="${BIZZAL_AUDIO_PROFILE:-cinematic}"
 export BIZZAL_BG_MUSIC_TAIL_SEC="${BIZZAL_BG_MUSIC_TAIL_SEC:-3}"
-export BIZZAL_INTRO_PAD_SEC="${BIZZAL_INTRO_PAD_SEC:-2}"
-export BIZZAL_INTRO_FADE_SEC="${BIZZAL_INTRO_FADE_SEC:-2}"
+# No opening black pad or fade-in: the ~2s black + 2s fade meant the video's
+# first ~4s were black, so Instagram's feed preview (which uses an early video
+# frame, not the cover_url) showed a black tile and scrollers couldn't tell what
+# the Reel was. Open hard on the hook art instead -- frame 0 is content. (Any
+# fade-in starts from black, so it MUST be 0, not just short, to fix the thumbnail.)
+export BIZZAL_INTRO_PAD_SEC="${BIZZAL_INTRO_PAD_SEC:-0}"
+export BIZZAL_INTRO_FADE_SEC="${BIZZAL_INTRO_FADE_SEC:-0}"
 export BIZZAL_END_FADE_SEC="${BIZZAL_END_FADE_SEC:-4}"
 export BIZZAL_END_BLACK_PAD_SEC="${BIZZAL_END_BLACK_PAD_SEC:-2}"
 
