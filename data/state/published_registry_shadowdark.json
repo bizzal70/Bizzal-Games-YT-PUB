@@ -1485,6 +1485,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-08-31.mp4",
         "video_sha256": "971f41ca586e1b1fd0bf29a5e02693a67be2a8f11c830d27eb9dc705ec6c411a"
       }
+    },
+    {
+      "published_utc": "2026-09-01T14:33:44Z",
+      "day": "2026-09-01",
+      "content_id": "bgp-2026-09-01-rules-myth-rule-4-0e85143edd84",
+      "publish_hash": "b7f7659e9bfd86c636f4ae3ff80f6538658032f1429b1edb8e4ccff7a85066b6",
+      "youtube_video_id": "5YFlJskrupk",
+      "youtube_url": "https://www.youtube.com/watch?v=5YFlJskrupk",
+      "video_sha256": "a3b0b813ec0eeeead75170229d748d632d7de9c9517ed3c29e6e32b93c57adbc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-01.mp4",
+      "fingerprint": {
+        "day": "2026-09-01",
+        "category": "rules_myth",
+        "angle": "quick_example",
+        "content_id": "bgp-2026-09-01-rules-myth-rule-4-0e85143edd84",
+        "canonical_hash": "0e85143edd840162b2cf23efa92835a0fd533ea17b56361858f8e9e3261e2057",
+        "script_id": "31bac6a2b3d1a39c0d84f69039031a2b4431bec6b0742ccc069135bd53bc6d7b",
+        "fact_kind": "rule",
+        "fact_pk": 4,
+        "fact_name": "Torch and Light",
+        "hook": "Torch and Light often gets mismanaged - torches burn for 1 hour of real time.",
+        "body": "Torches last precisely 1 hour in real time, not in-game time, which means setting a timer is non-negotiable. Characters without darkvision are effectively blind without a light source, yet players consistently forget to track torch duration. Aligning exploration pace with torch life prevents unnecessary blindness and arguments.",
+        "cta": "GMs: Set a timer for each torch's 1-hour real-time burn to avoid players stumbling around in the dark.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-01.mp4",
+        "video_sha256": "a3b0b813ec0eeeead75170229d748d632d7de9c9517ed3c29e6e32b93c57adbc"
+      }
     }
   ]
 }

@@ -2052,6 +2052,51 @@
       "hook": "Winter Wolf earns its stakes fast.",
       "body": "Frost Breath fills a near-sized cube, forcing a DC 15 DEX save or inflicting 3d8 damage. Misjudging the recharge time leads to repeated exposure. Underestimating its area control potential results in clustered targets taking heavy damage. Positioning to avoid clustering mitigates the damage spike and limits its impact.",
       "cta": "GMs: Remind them that clustering invites disaster; the Winter Wolf's Frost Breath recharges in 1d4 rounds, not the usual longer wait."
+    },
+    {
+      "published_utc": "2026-09-01T14:24:53Z",
+      "day": "2026-09-01",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-01-rules-ruling-rule-24-2395a303280c",
+      "instagram_post_id": "18103256198225842",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "7d5160672e1c69bfe842a91b7fcde1145d95125261fb45faafd9dc29f1f8f91f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-01.mp4",
+      "fact_name": "Experience Points",
+      "category": "rules_ruling",
+      "hook": "Experience Points are earned in small amounts - 0 to 4 points per encounter based on danger.",
+      "body": "DCC awards Experience Points by the danger of encounters, not by the number of monsters defeated or treasure gathered. Focusing on grinding through easy fights to level up is inefficient, as a single deadly encounter can provide more XP than several minor skirmishes. Prioritizing survival in high-risk situations yields more significant rewards.",
+      "cta": "Judges: Award 0-4 XP per encounter based on danger; stop rewarding players for grinding through trivial fights."
+    },
+    {
+      "published_utc": "2026-09-01T14:30:11Z",
+      "day": "2026-09-01",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-01-class-spotlight-class-xanathars-guide-college-of-glamour-6232f0e8dc01",
+      "instagram_post_id": "18174100834435894",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "beeacbf8c55a98c2300b6b2e64de747569988a45f4135efbb80898e0ea3b73f4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-01.mp4",
+      "fact_name": "College of Glamour",
+      "category": "class_spotlight",
+      "hook": "College of Glamour's Mantle of Inspiration surprises with its efficiency - a bonus action grants temporary HP.",
+      "body": "Mantle of Inspiration at 3rd level uses a Bardic Inspiration die to provide temporary HP equal to the die roll plus Charisma modifier. The common error is prioritizing flashy but situational abilities that delay core utility. Consistent use of Mantle of Inspiration in combat ensures survivability and battlefield control, leveraging repeatable decisions over sporadic spikes.",
+      "cta": "DMs: Use Mantle of Inspiration's bonus action for consistent temporary HP; it's your reliable tool, not a flashy distraction."
+    },
+    {
+      "published_utc": "2026-09-01T14:34:31Z",
+      "day": "2026-09-01",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-01-rules-myth-rule-4-0e85143edd84",
+      "instagram_post_id": "18115525982291287",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "a3b0b813ec0eeeead75170229d748d632d7de9c9517ed3c29e6e32b93c57adbc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-01.mp4",
+      "fact_name": "Torch and Light",
+      "category": "rules_myth",
+      "hook": "Torch and Light often gets mismanaged - torches burn for 1 hour of real time.",
+      "body": "Torches last precisely 1 hour in real time, not in-game time, which means setting a timer is non-negotiable. Characters without darkvision are effectively blind without a light source, yet players consistently forget to track torch duration. Aligning exploration pace with torch life prevents unnecessary blindness and arguments.",
+      "cta": "GMs: Set a timer for each torch's 1-hour real-time burn to avoid players stumbling around in the dark."
     }
   ]
 }

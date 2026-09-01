@@ -606,5 +606,15 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-09-01": {
+    "rules_ruling": {
+      "angle": "dice_chain_use",
+      "voice": "grim_referee",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

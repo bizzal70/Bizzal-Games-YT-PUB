@@ -1849,6 +1849,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-08-31.mp4",
         "video_sha256": "71970f987af23b95f85951482c2a34327d538181a3fe73c7c22af68a90b088f0"
       }
+    },
+    {
+      "published_utc": "2026-09-01T14:28:56Z",
+      "day": "2026-09-01",
+      "content_id": "bgp-2026-09-01-class-spotlight-class-xanathars-guide-college-of-glamour-6232f0e8dc01",
+      "publish_hash": "2497c96d370d5fe6f45746182d0d2ce0d1d9153d0a87594684102df338acb07c",
+      "youtube_video_id": "nPwuVyyDjGI",
+      "youtube_url": "https://www.youtube.com/watch?v=nPwuVyyDjGI",
+      "video_sha256": "beeacbf8c55a98c2300b6b2e64de747569988a45f4135efbb80898e0ea3b73f4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-01.mp4",
+      "fingerprint": {
+        "day": "2026-09-01",
+        "category": "class_spotlight",
+        "angle": "progression_trap",
+        "content_id": "bgp-2026-09-01-class-spotlight-class-xanathars-guide-college-of-glamour-6232f0e8dc01",
+        "canonical_hash": "6232f0e8dc0141e7a0ed11de7f87021f73ac9ac38a2432f09226c429c01ac8fa",
+        "script_id": "fd66e1cc1fd41f94e873ea4a01f16a6bec06b667afbfd42c3b239e09bd16a5a8",
+        "fact_kind": "class",
+        "fact_pk": "xanathars-guide_college-of-glamour",
+        "fact_name": "College of Glamour",
+        "hook": "College of Glamour's Mantle of Inspiration surprises with its efficiency - a bonus action grants temporary HP.",
+        "body": "Mantle of Inspiration at 3rd level uses a Bardic Inspiration die to provide temporary HP equal to the die roll plus Charisma modifier. The common error is prioritizing flashy but situational abilities that delay core utility. Consistent use of Mantle of Inspiration in combat ensures survivability and battlefield control, leveraging repeatable decisions over sporadic spikes.",
+        "cta": "DMs: Use Mantle of Inspiration's bonus action for consistent temporary HP; it's your reliable tool, not a flashy distraction.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-01.mp4",
+        "video_sha256": "beeacbf8c55a98c2300b6b2e64de747569988a45f4135efbb80898e0ea3b73f4"
+      }
     }
   ]
 }

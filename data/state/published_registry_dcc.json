@@ -1226,6 +1226,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-08-31.mp4",
         "video_sha256": "6b733bd74e905d51c1bf2964fe05cd2c512b56b53bfe91ebd63cac6530621115"
       }
+    },
+    {
+      "published_utc": "2026-09-01T14:24:08Z",
+      "day": "2026-09-01",
+      "content_id": "bgp-2026-09-01-rules-ruling-rule-24-2395a303280c",
+      "publish_hash": "159c03a6f851913070f77240f3b14a656f7819c0131ebf3bab0c4eaeceece48f",
+      "youtube_video_id": "jEIwSb3L8L0",
+      "youtube_url": "https://www.youtube.com/watch?v=jEIwSb3L8L0",
+      "video_sha256": "7d5160672e1c69bfe842a91b7fcde1145d95125261fb45faafd9dc29f1f8f91f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-01.mp4",
+      "fingerprint": {
+        "day": "2026-09-01",
+        "category": "rules_ruling",
+        "angle": "dice_chain_use",
+        "content_id": "bgp-2026-09-01-rules-ruling-rule-24-2395a303280c",
+        "canonical_hash": "2395a303280c32ac3beb4dfd5536921069ca5351fa4e00c601e428a3cd0c1b7c",
+        "script_id": "d4eb4344e042e8aead8fea81fe83eff74dba2516ee9fd9c30aad51d6f71c4a14",
+        "fact_kind": "rule",
+        "fact_pk": 24,
+        "fact_name": "Experience Points",
+        "hook": "Experience Points are earned in small amounts - 0 to 4 points per encounter based on danger.",
+        "body": "DCC awards Experience Points by the danger of encounters, not by the number of monsters defeated or treasure gathered. Focusing on grinding through easy fights to level up is inefficient, as a single deadly encounter can provide more XP than several minor skirmishes. Prioritizing survival in high-risk situations yields more significant rewards.",
+        "cta": "Judges: Award 0-4 XP per encounter based on danger; stop rewarding players for grinding through trivial fights.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-01.mp4",
+        "video_sha256": "7d5160672e1c69bfe842a91b7fcde1145d95125261fb45faafd9dc29f1f8f91f"
+      }
     }
   ]
 }
