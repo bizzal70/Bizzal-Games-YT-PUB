@@ -1875,6 +1875,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-01.mp4",
         "video_sha256": "beeacbf8c55a98c2300b6b2e64de747569988a45f4135efbb80898e0ea3b73f4"
       }
+    },
+    {
+      "published_utc": "2026-09-02T14:29:37Z",
+      "day": "2026-09-02",
+      "content_id": "bgp-2026-09-02-monster-tactic-creature-srd-2024-stone-giant-93e7e8505ed1",
+      "publish_hash": "21823e59fb55bc3ff75e47a0b76f22b39b6fbf7fcc7fec6b6b7277cbdb36b532",
+      "youtube_video_id": "uVHiMnA2uOU",
+      "youtube_url": "https://www.youtube.com/watch?v=uVHiMnA2uOU",
+      "video_sha256": "c5ea3bc1eca9bde06839f51d5530b7e5e098209ed504ccd3369da0516aa6f6d2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-02.mp4",
+      "fingerprint": {
+        "day": "2026-09-02",
+        "category": "monster_tactic",
+        "angle": "common_mistake",
+        "content_id": "bgp-2026-09-02-monster-tactic-creature-srd-2024-stone-giant-93e7e8505ed1",
+        "canonical_hash": "93e7e8505ed1a1698380db56c18e00c6e1ee1d1a2ec67bc1d246a133749b85fe",
+        "script_id": "81f35d05708b91623b04e6bdfedbb3e83bc8dafcf0a3051a3e4d0664d7cbc438",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_stone-giant",
+        "fact_name": "Stone Giant",
+        "hook": "Stone Giant's Boulder attack surprises with its reach - 60-foot range allows for unexpected engagement.",
+        "body": "The common mistake against a Stone Giant is engaging at close range, ignoring its 60-foot Boulder attack. With AC 17 and HP 126, it withstands significant punishment while dealing damage from afar. Multiattack lets it throw two Boulders in one turn if targets cluster. Maintaining distance and spreading out forces it into melee, where its options are limited.",
+        "cta": "DMs: Remind players that the Stone Giant's Boulder attack has a 60-foot range, encouraging them to spread out and avoid clustering.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-02.mp4",
+        "video_sha256": "c5ea3bc1eca9bde06839f51d5530b7e5e098209ed504ccd3369da0516aa6f6d2"
+      }
     }
   ]
 }

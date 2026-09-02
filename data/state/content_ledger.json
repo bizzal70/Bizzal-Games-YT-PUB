@@ -4476,6 +4476,72 @@
       "video_id": "18115525982291287",
       "day": "2026-09-01",
       "published_at": "2026-09-01T14:34:31+00:00"
+    },
+    {
+      "content_key": "a3ea45f9a5a552d24819b3737613273a81e859c45018566eef0eb028193bed91",
+      "token_text": "10 1d20 bane dc dealer death deliver fort instant save weapon",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Death Dealer (Bane Weapon) delivers instant death to its bane #dcc",
+      "video_id": "izECXdVJ3EI",
+      "day": "2026-09-02",
+      "published_at": "2026-09-02T14:24:50+00:00"
+    },
+    {
+      "content_key": "4ac0eb9dda7962f19b95fb9c5f384af4298a818a09bf0bea0b83537d612d251f",
+      "token_text": "10 1d20 bane dc dealer death deliver fort instant save weapon",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Death Dealer (Bane Weapon) delivers instant death to its bane - Fort save DC is 1d20+10.",
+      "video_id": "18120293488919448",
+      "day": "2026-09-02",
+      "published_at": "2026-09-02T14:25:53+00:00"
+    },
+    {
+      "content_key": "828ead57dc71fd178304a1b432500d0838f7e9295e17cf5fd5744fda1c2b9657",
+      "token_text": "60 allow attack boulder engagement foot giant range reach stone surprise unexpected",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Stone Giant's Boulder attack surprises with its reach #dnd5e",
+      "video_id": "uVHiMnA2uOU",
+      "day": "2026-09-02",
+      "published_at": "2026-09-02T14:29:37+00:00"
+    },
+    {
+      "content_key": "d5e3ed1b0f1a3666facdd5e002e9ec8392a9e5fad3505ce9d364fcef9932636e",
+      "token_text": "60 allow attack boulder engagement foot giant range reach stone surprise unexpected",
+      "system_id": "dnd5e",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Stone Giant's Boulder attack surprises with its reach - 60-foot range allows for unexpected engagement.",
+      "video_id": "17870910762594364",
+      "day": "2026-09-02",
+      "published_at": "2026-09-02T14:30:41+00:00"
+    },
+    {
+      "content_key": "90d31ee5c154ad1d98d3981135fe0310f5a920861d181df4f99c99203765735b",
+      "token_text": "alter curse effect expect game more permanent player state",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Curse alters the game state more than players expect #shadowdark",
+      "video_id": "6bbDCqD-4jU",
+      "day": "2026-09-02",
+      "published_at": "2026-09-02T14:34:40+00:00"
+    },
+    {
+      "content_key": "f443599150061bf32624b18a53627082c52e3393d4b19e6278d42622ce1310bb",
+      "token_text": "alter curse effect expect game more permanent player state",
+      "system_id": "shadowdark",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Curse alters the game state more than players expect - its effect is permanent.",
+      "video_id": "18107192705134102",
+      "day": "2026-09-02",
+      "published_at": "2026-09-02T14:35:44+00:00"
     }
   ]
 }

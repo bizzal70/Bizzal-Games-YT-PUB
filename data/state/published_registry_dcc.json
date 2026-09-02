@@ -1252,6 +1252,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-01.mp4",
         "video_sha256": "7d5160672e1c69bfe842a91b7fcde1145d95125261fb45faafd9dc29f1f8f91f"
       }
+    },
+    {
+      "published_utc": "2026-09-02T14:24:50Z",
+      "day": "2026-09-02",
+      "content_id": "bgp-2026-09-02-item-spotlight-item-22-26bed590e6a7",
+      "publish_hash": "7b0cdd3764044af60366d5fac3e86c4088fed3d65384496bd41bcbba06352c89",
+      "youtube_video_id": "izECXdVJ3EI",
+      "youtube_url": "https://www.youtube.com/watch?v=izECXdVJ3EI",
+      "video_sha256": "8b0e6e421d1c6a0e30840e610e119e67e899d84af735bfe9760dcd2107603495",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-02.mp4",
+      "fingerprint": {
+        "day": "2026-09-02",
+        "category": "item_spotlight",
+        "angle": "drawback_watchout",
+        "content_id": "bgp-2026-09-02-item-spotlight-item-22-26bed590e6a7",
+        "canonical_hash": "26bed590e6a7fdf4fae1c2d26bc9cc32fd253cb68b9c1f5d684215629d40b3ac",
+        "script_id": "cf69a7dce5f9caccc3676efe05587ae5af3370dd727164a3f0b86ebd5d75a668",
+        "fact_kind": "item",
+        "fact_pk": 22,
+        "fact_name": "Death Dealer (Bane Weapon)",
+        "hook": "Death Dealer (Bane Weapon) delivers instant death to its bane - Fort save DC is 1d20+10.",
+        "body": "Death Dealer (Bane Weapon) relies on a specific foe type to trigger its lethal effect. The Fortitude save DC is dynamic, rolling 1d20+10, which can catch players off guard if they assume a static difficulty. Using it against non-bane targets offers no advantage beyond being a finely crafted blade. The effective strategy involves confirming the enemy type before engaging, ensuring the weapon's full potential is realized.",
+        "cta": "Judges: Confirm the enemy type matches the Death Dealer's bane to exploit that 1d20+10 Fort save, or it's just a fancy knife.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-02.mp4",
+        "video_sha256": "8b0e6e421d1c6a0e30840e610e119e67e899d84af735bfe9760dcd2107603495"
+      }
     }
   ]
 }

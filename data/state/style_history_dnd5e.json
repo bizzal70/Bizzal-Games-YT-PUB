@@ -714,5 +714,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-09-02": {
+    "monster_tactic": {
+      "angle": "common_mistake",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

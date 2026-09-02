@@ -706,5 +706,17 @@
       ],
       "tts_voice_id": "nova"
     }
+  },
+  "2026-09-02": {
+    "spell_use_case": {
+      "angle": "best_moment",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "arcane_survival_coach",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

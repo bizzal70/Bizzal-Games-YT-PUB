@@ -1511,6 +1511,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-01.mp4",
         "video_sha256": "a3b0b813ec0eeeead75170229d748d632d7de9c9517ed3c29e6e32b93c57adbc"
       }
+    },
+    {
+      "published_utc": "2026-09-02T14:34:40Z",
+      "day": "2026-09-02",
+      "content_id": "bgp-2026-09-02-spell-use-case-spell-80-eae1ff842a3c",
+      "publish_hash": "3d9afdebf9434f18ce0dab440aba313c0ff810febad64dfa5732e39ca503495d",
+      "youtube_video_id": "6bbDCqD-4jU",
+      "youtube_url": "https://www.youtube.com/watch?v=6bbDCqD-4jU",
+      "video_sha256": "3f96e53a1e1b2d4de5363e9f5907acd4f6465a466e78e1f9cb563ac52ad7daf2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-02.mp4",
+      "fingerprint": {
+        "day": "2026-09-02",
+        "category": "spell_use_case",
+        "angle": "best_moment",
+        "content_id": "bgp-2026-09-02-spell-use-case-spell-80-eae1ff842a3c",
+        "canonical_hash": "eae1ff842a3cf7261d33a073d3bbe68088e9a9389885821311fdab34db29f45d",
+        "script_id": "e4040a6fa4fcd2ddbce146c5e354377cce430555a31ee9f27c19456132f702fd",
+        "fact_kind": "spell",
+        "fact_pk": 80,
+        "fact_name": "Curse",
+        "hook": "Curse alters the game state more than players expect - its effect is permanent.",
+        "body": "Curse has a range of Close and a permanent duration, which makes it a strategic tool rather than a damage dealer. Many players misapply it by focusing on immediate combat impact, like inflicting temporary debuffs. Instead, use it to create lasting changes that disrupt enemy plans or force tactical retreats. Consider the broader implications of afflicting an enemy with nightmares or turning an ally against them.",
+        "cta": "GMs: Use Curse's permanent effect to turn an enemy's ally against them, forcing a strategic shift in their plans.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-02.mp4",
+        "video_sha256": "3f96e53a1e1b2d4de5363e9f5907acd4f6465a466e78e1f9cb563ac52ad7daf2"
+      }
     }
   ]
 }
