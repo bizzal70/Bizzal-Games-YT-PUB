@@ -724,5 +724,15 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-09-03": {
+    "spell_use_case": {
+      "angle": "best_moment",
+      "voice": "gritty_dm",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

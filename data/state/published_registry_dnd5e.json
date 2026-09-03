@@ -1901,6 +1901,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-02.mp4",
         "video_sha256": "c5ea3bc1eca9bde06839f51d5530b7e5e098209ed504ccd3369da0516aa6f6d2"
       }
+    },
+    {
+      "published_utc": "2026-09-03T14:31:08Z",
+      "day": "2026-09-03",
+      "content_id": "bgp-2026-09-03-spell-use-case-spell-srd-2024-spirit-guardians-43aef21e957b",
+      "publish_hash": "687dd6bf25ebd942f8d107fd6f544f262d1b506082eeab1fae9730881ae5f4ce",
+      "youtube_video_id": "fRPyCCpu5sY",
+      "youtube_url": "https://www.youtube.com/watch?v=fRPyCCpu5sY",
+      "video_sha256": "a04f3dfa6a629ad1ba65d24dff13a20cc018a136c6050dbe4ffc103dd53a6d0f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-03.mp4",
+      "fingerprint": {
+        "day": "2026-09-03",
+        "category": "spell_use_case",
+        "angle": "best_moment",
+        "content_id": "bgp-2026-09-03-spell-use-case-spell-srd-2024-spirit-guardians-43aef21e957b",
+        "canonical_hash": "43aef21e957b8974891976e5f73cdc0668c3832361f2482843d3008eface8796",
+        "script_id": "42aa569661eff628dd348327b4056ecae8be58f796b90945e45ab65a2a16c67a",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_spirit-guardians",
+        "fact_name": "Spirit Guardians",
+        "hook": "Spirit Guardians shifts the battlefield in unexpected ways - its 15-foot radius punishes clustered foes.",
+        "body": "Spirit Guardians requires concentration and lasts up to 10 minutes, making it a persistent threat in prolonged engagements. The spell deals 3d8 radiant or necrotic damage to creatures within a 15-foot radius, with a Wisdom saving throw for half damage. The mistake is casting it when you can't maintain concentration, typically when surrounded or under heavy fire. Deploy it when you can control the space and protect your concentration, allowing you to disrupt enemy formations and control the tempo of combat.",
+        "cta": "DMs: Cast Spirit Guardians when you can protect concentration, punishing clustered foes with 3d8 damage in a 15-foot radius.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-03.mp4",
+        "video_sha256": "a04f3dfa6a629ad1ba65d24dff13a20cc018a136c6050dbe4ffc103dd53a6d0f"
+      }
     }
   ]
 }

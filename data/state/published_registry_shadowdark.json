@@ -1537,6 +1537,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-02.mp4",
         "video_sha256": "3f96e53a1e1b2d4de5363e9f5907acd4f6465a466e78e1f9cb563ac52ad7daf2"
       }
+    },
+    {
+      "published_utc": "2026-09-03T14:36:03Z",
+      "day": "2026-09-03",
+      "content_id": "bgp-2026-09-03-class-spotlight-class-8-d857cc54fd19",
+      "publish_hash": "a87b0ce0a0cbd8801c5e39da2eb7c18b46a2f92705a7e8039d3bdd7bcbef9454",
+      "youtube_video_id": "LekAY9y45jQ",
+      "youtube_url": "https://www.youtube.com/watch?v=LekAY9y45jQ",
+      "video_sha256": "283f2cce12bfd6e2ecb7299b2a927a047a45cff28f48afe84b663d359c6fb497",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-03.mp4",
+      "fingerprint": {
+        "day": "2026-09-03",
+        "category": "class_spotlight",
+        "angle": "progression_trap",
+        "content_id": "bgp-2026-09-03-class-spotlight-class-8-d857cc54fd19",
+        "canonical_hash": "d857cc54fd19b8d8e14c3fa87f6058bbeb8f262d61ea6b8c4baad45dd0fd56ab",
+        "script_id": "288b1b3614c7c5e8121f715b60482d834f3bdaaa3f8a9071fcb22e0a1934f1b1",
+        "fact_kind": "class",
+        "fact_pk": 8,
+        "fact_name": "Desert Rider",
+        "hook": "Desert Rider progression trap delays effectiveness - flashy picks postpone your core engine by multiple.",
+        "body": "Charge allows double melee damage 3 times per day if you move near before attacking, but chasing flashy abilities dilutes your core mechanics. The class relies on consistent execution of Charge and the AC boost from riding to maintain effectiveness. Investing in flashy options weakens your ability to leverage these repeatable advantages. Focus on enhancing your primary abilities and leveraging your mount's AC boost for sustained performance.",
+        "cta": "GMs: Keep players focused on using Charge and mount AC boosts; discourage flashy distractions that undermine their core strengths.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-03.mp4",
+        "video_sha256": "283f2cce12bfd6e2ecb7299b2a927a047a45cff28f48afe84b663d359c6fb497"
+      }
     }
   ]
 }

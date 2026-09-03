@@ -718,5 +718,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-03": {
+    "class_spotlight": {
+      "angle": "progression_trap",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "class_mentor",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

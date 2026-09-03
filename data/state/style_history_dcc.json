@@ -628,5 +628,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-09-03": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "survival_coach",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

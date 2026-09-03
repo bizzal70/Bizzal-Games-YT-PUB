@@ -1278,6 +1278,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-02.mp4",
         "video_sha256": "8b0e6e421d1c6a0e30840e610e119e67e899d84af735bfe9760dcd2107603495"
       }
+    },
+    {
+      "published_utc": "2026-09-03T14:25:46Z",
+      "day": "2026-09-03",
+      "content_id": "bgp-2026-09-03-encounter-seed-creature-406-41c8d65495c8",
+      "publish_hash": "3d2284b16059dcdd39637890cf0da35e0fbf21fb40846e0af4d500944de3ce2c",
+      "youtube_video_id": "HMz-qW24Qbk",
+      "youtube_url": "https://www.youtube.com/watch?v=HMz-qW24Qbk",
+      "video_sha256": "0b827163346dffcec796186312871bdc761b7fbaffcceee26906ad5bf80ed9ca",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-03.mp4",
+      "fingerprint": {
+        "day": "2026-09-03",
+        "category": "encounter_seed",
+        "angle": "twist",
+        "content_id": "bgp-2026-09-03-encounter-seed-creature-406-41c8d65495c8",
+        "canonical_hash": "41c8d65495c8fa0c5230f7dc4e36219cb8422700f03c4076ce5e950b9bda62ab",
+        "script_id": "59819f68228732102f2611dbd91076ec5d6e09a2c4b46fe1545d3d36815c0c2b",
+        "fact_kind": "creature",
+        "fact_pk": 406,
+        "fact_name": "Crimson Stain Primeval Slime",
+        "hook": "Give Crimson Stain Primeval Slime a real price.",
+        "body": "Crimson Stain Primeval Slime's smother condition isn't just damage; it restricts movement and actions, which players often underestimate. When facing multiple 5' squares, each with its own action die, players tend to focus on damage output rather than mobility. The slime's split ability means damage-based strategies can backfire, turning one threat into many. Prioritizing mobility and area control is critical to avoid being overwhelmed.",
+        "cta": "Judges: When they turtle up, unleash the slime's smother attack to remind them that movement matters more than damage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-03.mp4",
+        "video_sha256": "0b827163346dffcec796186312871bdc761b7fbaffcceee26906ad5bf80ed9ca"
+      }
     }
   ]
 }
