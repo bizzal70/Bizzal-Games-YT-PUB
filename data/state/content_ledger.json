@@ -4641,6 +4641,39 @@
       "video_id": "48uClzMA5TE",
       "day": "2026-09-04",
       "published_at": "2026-09-04T14:26:55+00:00"
+    },
+    {
+      "content_key": "bf096e43b8359d841cc06c8a8a3eb621fb8befdc9e1eae630ec10f380c4c1050",
+      "token_text": "affecting annwyn immune mind spell",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Annwyn: Immune to Mind-Affecting Spells #dcc",
+      "video_id": "X9pqOII4dfo",
+      "day": "2026-09-04",
+      "published_at": "2026-09-04T18:04:20+00:00"
+    },
+    {
+      "content_key": "dd4d80c8db1e590075e24831ce617d466dca96c5a985febbce2a732142ea961f",
+      "token_text": "annwyn detect foes hidden infravision",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Annwyn's Infravision detects hidden foes #dcc",
+      "video_id": "kRxjQVy3Zmg",
+      "day": "2026-09-04-dcc-clip1",
+      "published_at": "2026-09-04T18:06:32+00:00"
+    },
+    {
+      "content_key": "6a2100db123c5496f9b433b39eaa25b920eda13658371a40612d0e648e2c7da7",
+      "token_text": "annwyn cold fire mundane resist weapon",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Annwyn resists cold, fire, and mundane weapons #dcc",
+      "video_id": "jtqIpPdQTew",
+      "day": "2026-09-04-dcc-clip2",
+      "published_at": "2026-09-04T18:08:20+00:00"
     }
   ]
 }

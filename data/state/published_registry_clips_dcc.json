@@ -363,6 +363,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-08-26-dcc-clip2.mp4",
         "video_sha256": "155c4b263f596b13d0a5367de3a9e3c794c0be5c93e0f9e6b82b2ddc961b6769"
       }
+    },
+    {
+      "published_utc": "2026-09-04T18:06:32Z",
+      "day": "2026-09-04-dcc-clip1",
+      "content_id": "clip:0ffc67a7a3d04634",
+      "publish_hash": "e1990fbd05e1941e74d2f5adf1e00c7bcfbfa9a3b2152e954c23fe2f0d96edbd",
+      "youtube_video_id": "kRxjQVy3Zmg",
+      "youtube_url": "https://www.youtube.com/watch?v=kRxjQVy3Zmg",
+      "video_sha256": "788544379b142056857cb0871105b8e82d8af4fda70c361955296a921871b98d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-04-dcc-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-09-04-dcc-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:0ffc67a7a3d04634",
+        "canonical_hash": "",
+        "script_id": "0ffc67a7a3d046341573ea9f35264e3197cf51ed9ada56945fce087fa8716a37",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Annwyn's Infravision detects hidden foes",
+        "hook": "Annwyn's Infravision detects hidden foes",
+        "body": "Annwyn's infravision sees up to 60 feet in darkness, detecting heat signatures. Even in magical darkness or illusions, Annwyn tracks foes. Its keen senses, especially scent, easily detect invisible or hidden creatures, challenging stealth tactics.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-04-dcc-clip1.mp4",
+        "video_sha256": "788544379b142056857cb0871105b8e82d8af4fda70c361955296a921871b98d"
+      }
+    },
+    {
+      "published_utc": "2026-09-04T18:08:20Z",
+      "day": "2026-09-04-dcc-clip2",
+      "content_id": "clip:1766a2cd19422178",
+      "publish_hash": "9d6544bd8778797fb95ecd5b85b8922d50f9d187bb29eb2f2ae79355918dc01b",
+      "youtube_video_id": "jtqIpPdQTew",
+      "youtube_url": "https://www.youtube.com/watch?v=jtqIpPdQTew",
+      "video_sha256": "091cea7962c7115053d5bf526f7bca260d16a072e0e32d4473c8cb711202b933",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-04-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-09-04-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:1766a2cd19422178",
+        "canonical_hash": "",
+        "script_id": "1766a2cd19422178327ce9ef11598f9fd08443f88e735adc7d5adb1a051c294b",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Annwyn resists cold, fire, and mundane weapons",
+        "hook": "Annwyn resists cold, fire, and mundane weapons",
+        "body": "Annwyn takes half damage from cold, fire, and non-magical weapons. This resistance extends its combat longevity, challenging players to adapt. Parties relying on fireball spells or mundane attacks must switch to magical weapons or other damage types.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-04-dcc-clip2.mp4",
+        "video_sha256": "091cea7962c7115053d5bf526f7bca260d16a072e0e32d4473c8cb711202b933"
+      }
     }
   ]
 }
