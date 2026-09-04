@@ -1304,6 +1304,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-03.mp4",
         "video_sha256": "0b827163346dffcec796186312871bdc761b7fbaffcceee26906ad5bf80ed9ca"
       }
+    },
+    {
+      "published_utc": "2026-09-04T14:22:01Z",
+      "day": "2026-09-04",
+      "content_id": "bgp-2026-09-04-class-spotlight-class-4-a2b59c224297",
+      "publish_hash": "80d02c3c76a1667ce7d53a95400cfc54b556ce3ba6befd69bc9c1dcc6bf4e733",
+      "youtube_video_id": "QcL-AEhBNTM",
+      "youtube_url": "https://www.youtube.com/watch?v=QcL-AEhBNTM",
+      "video_sha256": "f65c90552379c46dfd447edc323805ca4601edd9d712dc2729f8490b1b99ab5f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-04.mp4",
+      "fingerprint": {
+        "day": "2026-09-04",
+        "category": "class_spotlight",
+        "angle": "warrior_deed",
+        "content_id": "bgp-2026-09-04-class-spotlight-class-4-a2b59c224297",
+        "canonical_hash": "a2b59c2242970970dec86b2e41f66dbe3700533ebe053f045161b94634f97e16",
+        "script_id": "9890661e1ca7976f4f92c83226808fe887672576728b91aa426f01000c205752",
+        "fact_kind": "class",
+        "fact_pk": 4,
+        "fact_name": "Thief",
+        "hook": "The dice chain shifts: Thief.",
+        "body": "Character tip: Thief. Thieves have a unique set of skills that use a d20 roll vs. a difficulty: Backstab (bonus to attack and damage from hiding; attack die improves to d24 at 5th), Sneak silently, Hide in shadows, Pick pockets, Climb walls. Strong turns come from repeatable decisions, not lucky spikes.",
+        "cta": "Judges: Remind your Thief to burn Luck for skill checks, then watch them earn it back with improbable feats.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-04.mp4",
+        "video_sha256": "f65c90552379c46dfd447edc323805ca4601edd9d712dc2729f8490b1b99ab5f"
+      }
     }
   ]
 }

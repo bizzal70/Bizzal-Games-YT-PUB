@@ -734,5 +734,17 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-04": {
+    "rules_ruling": {
+      "angle": "player_tip",
+      "voice": "friendly_vet",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "alloy"
+    }
   }
 }

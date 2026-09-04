@@ -1563,6 +1563,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-03.mp4",
         "video_sha256": "283f2cce12bfd6e2ecb7299b2a927a047a45cff28f48afe84b663d359c6fb497"
       }
+    },
+    {
+      "published_utc": "2026-09-04T14:26:55Z",
+      "day": "2026-09-04",
+      "content_id": "bgp-2026-09-04-monster-tactic-creature-6-38e444b66646",
+      "publish_hash": "93c2f873f1f5274376465734ef12fc5f53c48d90fe88a8d3b791884080aac44e",
+      "youtube_video_id": "48uClzMA5TE",
+      "youtube_url": "https://www.youtube.com/watch?v=48uClzMA5TE",
+      "video_sha256": "11355ed8f913f38a298920399567a9f30a2d8fe594cd362739659d035381577d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-04.mp4",
+      "fingerprint": {
+        "day": "2026-09-04",
+        "category": "monster_tactic",
+        "angle": "counterplay",
+        "content_id": "bgp-2026-09-04-monster-tactic-creature-6-38e444b66646",
+        "canonical_hash": "38e444b66646c3001e93669ba34bdf9fecbd580feaf31f773a1d636600c80b47",
+        "script_id": "fb2f0d6eb85d1b46d7c6657e55395b5a52137f4960a81f3a4d638349d9f5cbff",
+        "fact_kind": "creature",
+        "fact_pk": 6,
+        "fact_name": "Archangel",
+        "hook": "Archangel's Crown of Fire makes casting hostile spells a high-risk move - DC 18 to cast.",
+        "body": "Archangel's Command talent forces a DC 18 Charisma save to resist. Players underestimate how often this disrupts plans. Misjudging the timing of spellcasting against Crown of Fire leads to wasted resources. Focus on positioning to negate its flying mobility and isolate it from allies.",
+        "cta": "GMs: Exploit its need to command by forcing multiple DC 18 Charisma saves, draining resources before they can strike.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-04.mp4",
+        "video_sha256": "11355ed8f913f38a298920399567a9f30a2d8fe594cd362739659d035381577d"
+      }
     }
   ]
 }

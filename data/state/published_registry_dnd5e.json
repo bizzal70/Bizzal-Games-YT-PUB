@@ -1927,6 +1927,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-03.mp4",
         "video_sha256": "a04f3dfa6a629ad1ba65d24dff13a20cc018a136c6050dbe4ffc103dd53a6d0f"
       }
+    },
+    {
+      "published_utc": "2026-09-04T14:24:27Z",
+      "day": "2026-09-04",
+      "content_id": "bgp-2026-09-04-rules-ruling-rule-srd-2024-damage-and-healing-critical-hits-9959c7d66173",
+      "publish_hash": "9e11eb1fc32397406c4d733808bd9fc4a883fa06842c01e0beb29f648a47d083",
+      "youtube_video_id": "J70KBAlVBBU",
+      "youtube_url": "https://www.youtube.com/watch?v=J70KBAlVBBU",
+      "video_sha256": "5df603fe21b2ad968b92cd8eca6994bba3a6d4d72f60cb545d1331490855d5eb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-04.mp4",
+      "fingerprint": {
+        "day": "2026-09-04",
+        "category": "rules_ruling",
+        "angle": "player_tip",
+        "content_id": "bgp-2026-09-04-rules-ruling-rule-srd-2024-damage-and-healing-critical-hits-9959c7d66173",
+        "canonical_hash": "9959c7d66173e4e35e22e882a8cec9e1bdaac9e50149d8a08bc2f0a25e418eab",
+        "script_id": "4400383705a8ba6d266bc726a3bea369dfeeafefae894ae626b04a82abe1c4ac",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_damage-and-healing_critical-hits",
+        "fact_name": "Critical Hits",
+        "hook": "Critical Hits often surprise players with their damage potential - doubling the attack's damage dice.",
+        "body": "Critical Hits double the attack's damage dice, not the modifiers. Adding modifiers twice is a common mistake, leading to inflated damage numbers. Roll the damage dice twice, add them together, then apply modifiers once. Announce your attack plan and timing before rolling to prevent disputes.",
+        "cta": "DMs: Before rolling, make sure players declare their attack sequence to avoid confusion over doubling only the damage dice, not modifiers.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-04.mp4",
+        "video_sha256": "5df603fe21b2ad968b92cd8eca6994bba3a6d4d72f60cb545d1331490855d5eb"
+      }
     }
   ]
 }

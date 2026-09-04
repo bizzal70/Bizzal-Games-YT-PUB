@@ -730,5 +730,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-04": {
+    "monster_tactic": {
+      "angle": "counterplay",
+      "voice": "strict_referee",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

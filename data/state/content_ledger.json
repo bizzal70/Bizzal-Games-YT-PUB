@@ -4608,6 +4608,39 @@
       "video_id": "18421504045150780",
       "day": "2026-09-03",
       "published_at": "2026-09-03T14:37:03+00:00"
+    },
+    {
+      "content_key": "bf74850f902dfbcdbbe969396e8ca557ff6c8c2ff8edf575d6737011c7eb9061",
+      "token_text": "chain dice shift thief",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "The dice chain shifts: Thief #dcc",
+      "video_id": "QcL-AEhBNTM",
+      "day": "2026-09-04",
+      "published_at": "2026-09-04T14:22:01+00:00"
+    },
+    {
+      "content_key": "07293d4b59f005599abe9eda196f9d46ff90398bb81f3d2386e2247d989536fb",
+      "token_text": "attack critical damage dice doubling hits often player potential surprise",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Critical Hits often surprise players with their damage potential #dnd5e",
+      "video_id": "J70KBAlVBBU",
+      "day": "2026-09-04",
+      "published_at": "2026-09-04T14:24:27+00:00"
+    },
+    {
+      "content_key": "2c15acf7aa6b126ea956384769334d540a596e115a6a4b30357590019f702454",
+      "token_text": "18 archangel cast casting crown dc fire high hostile make move risk spell",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Archangel's Crown of Fire makes casting hostile spells a high-risk move #shadowdark",
+      "video_id": "48uClzMA5TE",
+      "day": "2026-09-04",
+      "published_at": "2026-09-04T14:26:55+00:00"
     }
   ]
 }
