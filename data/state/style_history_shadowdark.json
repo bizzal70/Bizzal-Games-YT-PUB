@@ -742,5 +742,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-09-05": {
+    "rules_ruling": {
+      "angle": "common_table_mistake",
+      "voice": "strict_referee",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "nova"
+    }
   }
 }

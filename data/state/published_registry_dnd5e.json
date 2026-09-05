@@ -1953,6 +1953,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-04.mp4",
         "video_sha256": "5df603fe21b2ad968b92cd8eca6994bba3a6d4d72f60cb545d1331490855d5eb"
       }
+    },
+    {
+      "published_utc": "2026-09-05T14:24:25Z",
+      "day": "2026-09-05",
+      "content_id": "bgp-2026-09-05-item-spotlight-item-srd-2024-nine-lives-stealer-club-de9d2912ab18",
+      "publish_hash": "fb9f9b226580d509e93df114fea54d5624f265c6feee737f596b224bc02adb1a",
+      "youtube_video_id": "f3nZZcw4vtU",
+      "youtube_url": "https://www.youtube.com/watch?v=f3nZZcw4vtU",
+      "video_sha256": "b6316c094db731327090e239a9141f789c7fbcbbf448ef5c1ea4b36e6d62e383",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-05.mp4",
+      "fingerprint": {
+        "day": "2026-09-05",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-09-05-item-spotlight-item-srd-2024-nine-lives-stealer-club-de9d2912ab18",
+        "canonical_hash": "de9d2912ab18ad985a4fc01bbcfb12a0c468337e110195a49a2b962deda3d4a0",
+        "script_id": "1cc06f0522ebae147298d3f4927158168b561a429fc1a7026cb07bef96b5e052",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_nine-lives-stealer-club",
+        "fact_name": "Nine Lives Stealer (Club)",
+        "hook": "Nine Lives Stealer (Club) can end a fight before it begins - DC 15 Constitution save or instant death.",
+        "body": "This very rare weapon grants a +2 bonus to attack and damage rolls, but its true value lies in its life-stealing feature. Rolling a natural 20 against a creature with fewer than 100 hit points forces a DC 15 Constitution saving throw or results in instant death. Constructs and Undead automatically succeed on this save, rendering them immune. Misuse often occurs when players swing it at every opportunity, depleting its limited charges. The weapon's real strength is in saving its charges for pivotal moments where an instant kill can change the tide of battle.",
+        "cta": "DMs: Wait for a natural 20, then make them roll that DC 15 Constitution save to end the fight instantly.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-05.mp4",
+        "video_sha256": "b6316c094db731327090e239a9141f789c7fbcbbf448ef5c1ea4b36e6d62e383"
+      }
     }
   ]
 }

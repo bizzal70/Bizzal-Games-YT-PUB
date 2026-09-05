@@ -746,5 +746,17 @@
       ],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-09-05": {
+    "item_spotlight": {
+      "angle": "clever_use",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "alloy"
+    }
   }
 }

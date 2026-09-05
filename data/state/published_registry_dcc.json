@@ -1330,6 +1330,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-04.mp4",
         "video_sha256": "f65c90552379c46dfd447edc323805ca4601edd9d712dc2729f8490b1b99ab5f"
       }
+    },
+    {
+      "published_utc": "2026-09-05T14:19:53Z",
+      "day": "2026-09-05",
+      "content_id": "bgp-2026-09-05-rules-myth-rule-13-58ee2bdb1b1a",
+      "publish_hash": "b54286c55e98d4213f7c7f7435dd63b0b2e7f8d372656d2bc22f0b2581bb6e79",
+      "youtube_video_id": "-Z_1UNf4tcc",
+      "youtube_url": "https://www.youtube.com/watch?v=-Z_1UNf4tcc",
+      "video_sha256": "511d6398725a33a6c92add70b811ee635fa53ef76c6c9d4768abf6648f3956d6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-05.mp4",
+      "fingerprint": {
+        "day": "2026-09-05",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-09-05-rules-myth-rule-13-58ee2bdb1b1a",
+        "canonical_hash": "58ee2bdb1b1ac65405af4080f597ea687db3068afde52630a9fa382ee4f9711e",
+        "script_id": "7614660fcbc14fbf53cb33a704800dd664450bfb2f5a0e2d81bc80fb6cf61ce1",
+        "fact_kind": "rule",
+        "fact_pk": 13,
+        "fact_name": "Spellburn",
+        "hook": "Spellburn surprises players with its cost - ability loss heals like damage, but it invites dark bargains.",
+        "body": "Spellburn allows a wizard to burn points of Strength, Agility, or Stamina to boost a spell check. The ability loss heals over time, similar to recovering from damage. Overlooking the potential for dark bargains with demons or patrons can lead to unexpected complications. Balancing immediate power gain against long-term consequences and potential narrative complications is crucial for optimal use.",
+        "cta": "Judges: Remind wizards that burning 3 Strength for Spellburn might save the day, but demons always collect their due.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-05.mp4",
+        "video_sha256": "511d6398725a33a6c92add70b811ee635fa53ef76c6c9d4768abf6648f3956d6"
+      },
+      "tone_lint_violation": "vague filler phrase: surprises players"
     }
   ]
 }

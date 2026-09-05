@@ -1589,6 +1589,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-04.mp4",
         "video_sha256": "11355ed8f913f38a298920399567a9f30a2d8fe594cd362739659d035381577d"
       }
+    },
+    {
+      "published_utc": "2026-09-05T14:27:27Z",
+      "day": "2026-09-05",
+      "content_id": "bgp-2026-09-05-rules-ruling-rule-7-044775dcff3a",
+      "publish_hash": "13016f314d503243ac7616831f5f90197a36a1ee967119df6ba37996f1acb535",
+      "youtube_video_id": "K1mne1Z1asI",
+      "youtube_url": "https://www.youtube.com/watch?v=K1mne1Z1asI",
+      "video_sha256": "a4f5cbb05a0d6b56fe1e22331b40714b5d08f87624bfc079576cb2be09224e8b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-05.mp4",
+      "fingerprint": {
+        "day": "2026-09-05",
+        "category": "rules_ruling",
+        "angle": "common_table_mistake",
+        "content_id": "bgp-2026-09-05-rules-ruling-rule-7-044775dcff3a",
+        "canonical_hash": "044775dcff3aec1f5581786d39f9c919471f4249dc9bdfc42df0eb10cdee514c",
+        "script_id": "96f44d6cf8d4cf42d5e5753b5149a70fc0c9f96bd19c5b24c947134355c6fde0",
+        "fact_kind": "rule",
+        "fact_pk": 7,
+        "fact_name": "Morale",
+        "hook": "Morale checks often surprise players with sudden shifts - they trigger at half losses or a key ally's fall.",
+        "body": "Morale requires a DC 15 Wisdom check when a group loses half its members or a significant ally. Failure results in fleeing or surrender, which can abruptly change an encounter's dynamic. Mistakes arise when players rush the process, leading to disputes. A clear, deliberate ruling prevents confusion and maintains game flow.",
+        "cta": "GMs: When half the group falls, enforce the DC 15 Wisdom check for Morale to prevent rushed disputes.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-05.mp4",
+        "video_sha256": "a4f5cbb05a0d6b56fe1e22331b40714b5d08f87624bfc079576cb2be09224e8b"
+      }
     }
   ]
 }
