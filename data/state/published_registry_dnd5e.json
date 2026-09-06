@@ -1979,6 +1979,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-05.mp4",
         "video_sha256": "b6316c094db731327090e239a9141f789c7fbcbbf448ef5c1ea4b36e6d62e383"
       }
+    },
+    {
+      "published_utc": "2026-09-06T14:24:00Z",
+      "day": "2026-09-06",
+      "content_id": "bgp-2026-09-06-encounter-seed-creature-srd-2024-guard-captain-a036fd452738",
+      "publish_hash": "f8f15dceb92eb35f717910ba8f7c8831a667660ef9de0747dd20c95f1dd7d8ce",
+      "youtube_video_id": "EgaTOpeHdRo",
+      "youtube_url": "https://www.youtube.com/watch?v=EgaTOpeHdRo",
+      "video_sha256": "f0d55b189b9543f35ab6d7f07010ab049ff39f4db08e76cae2e41de48140e348",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-06.mp4",
+      "fingerprint": {
+        "day": "2026-09-06",
+        "category": "encounter_seed",
+        "angle": "terrain_feature",
+        "content_id": "bgp-2026-09-06-encounter-seed-creature-srd-2024-guard-captain-a036fd452738",
+        "canonical_hash": "a036fd452738c32c15200950898258d7d711800696cd1697947676d118e6203c",
+        "script_id": "4327654142abb852f2132cd3f0326b4171ed502d91c199d9f277c018e89dcd50",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_guard-captain",
+        "fact_name": "Guard Captain",
+        "hook": "Anchor Guard Captain in terrain with one strong feature so map control decides the fight before raw DPR does.",
+        "body": "A challenge rating of 4 gives the Guard Captain 75 hit points and an AC of 18, making it a durable opponent in combat. Many players misjudge the impact of its natural armor, leading to wasted actions on disarm attempts that yield no benefit. Exploiting terrain to bypass its defenses is more effective than relying on brute force.",
+        "cta": "DMs: Use the Guard Captain's 18 AC to force players into leveraging terrain for tactical advantage, or they'll waste actions.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-06.mp4",
+        "video_sha256": "f0d55b189b9543f35ab6d7f07010ab049ff39f4db08e76cae2e41de48140e348"
+      }
     }
   ]
 }

@@ -1357,6 +1357,32 @@
         "video_sha256": "511d6398725a33a6c92add70b811ee635fa53ef76c6c9d4768abf6648f3956d6"
       },
       "tone_lint_violation": "vague filler phrase: surprises players"
+    },
+    {
+      "published_utc": "2026-09-06T14:20:12Z",
+      "day": "2026-09-06",
+      "content_id": "bgp-2026-09-06-monster-tactic-creature-477-3f06d3498e18",
+      "publish_hash": "f893e336be7e22bc7b8c419820d4ce34060501e1f2896f76b8ec66f124248444",
+      "youtube_video_id": "gBIRdep4zaw",
+      "youtube_url": "https://www.youtube.com/watch?v=gBIRdep4zaw",
+      "video_sha256": "817ded7120ba9f309ea6bf5e1eb0d6826c3e1da269db5f4b39635e60d5dc8350",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-06.mp4",
+      "fingerprint": {
+        "day": "2026-09-06",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-09-06-monster-tactic-creature-477-3f06d3498e18",
+        "canonical_hash": "3f06d3498e18c22345588dd54054e43b943f159ab75e3c19bdc5c49a0d50703a",
+        "script_id": "3cb9355cda1568516c17bbbedb1f51460dd6f90f4e02898a711c97143f68b14b",
+        "fact_kind": "creature",
+        "fact_pk": 477,
+        "fact_name": "Sword Snatcher",
+        "hook": "Sword Snatcher's prehensile tongue can disarm from a distance - weapon snatch at 15'.",
+        "body": "The Sword Snatcher's prehensile tongue attack has a 15-foot range and can disarm opponents, often catching players off guard by rendering their melee weapons useless. Many players underestimate the impact of losing a primary weapon mid-combat, leading to disarray and ineffective attacks. Prioritizing ranged attacks or spells can mitigate this risk, forcing the Sword Snatcher to close the distance where its tongue is less effective.",
+        "cta": "Judges: Use the Sword Snatcher's tongue to disarm at 15 feet; players, switch to ranged or spell attacks.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-06.mp4",
+        "video_sha256": "817ded7120ba9f309ea6bf5e1eb0d6826c3e1da269db5f4b39635e60d5dc8350"
+      }
     }
   ]
 }

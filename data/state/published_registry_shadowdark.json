@@ -1615,6 +1615,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-05.mp4",
         "video_sha256": "a4f5cbb05a0d6b56fe1e22331b40714b5d08f87624bfc079576cb2be09224e8b"
       }
+    },
+    {
+      "published_utc": "2026-09-06T14:28:03Z",
+      "day": "2026-09-06",
+      "content_id": "bgp-2026-09-06-item-spotlight-item-66-0a56ad689357",
+      "publish_hash": "4d09d6e74a5a9644f4f0c711c34832d303477eb68d1c4e40dbbb7b61a64d57ef",
+      "youtube_video_id": "ZVGYUUdIOl8",
+      "youtube_url": "https://www.youtube.com/watch?v=ZVGYUUdIOl8",
+      "video_sha256": "83e5b79fa895dd31cb25c3a39cea949e5f89b975abf87fb33eea529921c8771c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-06.mp4",
+      "fingerprint": {
+        "day": "2026-09-06",
+        "category": "item_spotlight",
+        "angle": "drawback_watchout",
+        "content_id": "bgp-2026-09-06-item-spotlight-item-66-0a56ad689357",
+        "canonical_hash": "0a56ad68935769e1f5170394a14a9da27b57a2ffe0605c91b890b8bc61489e66",
+        "script_id": "3cedeb394506f53774f1bf82f0e466a429fe1b5f1e9a5dafe4a7624f01298b84",
+        "fact_kind": "item",
+        "fact_pk": 66,
+        "fact_name": "Ring Of Invisibility",
+        "hook": "Ring Of Invisibility comes with a hidden risk - a cumulative 1% chance of nightmare-induced rest failure.",
+        "body": "The Ring Of Invisibility allows casting the invisibility spell once per day, but carries a risk. Each rest has a cumulative 1% chance to be ruined by apocalyptic nightmares, resetting to 1% once triggered. This often leads to unexpected exhaustion when the drawback is ignored. Avoid relying on the ring as a primary escape tool without backup plans.",
+        "cta": "GMs: Track the cumulative 1% nightmare chance; players will learn the hard way not to lean on invisibility.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-06.mp4",
+        "video_sha256": "83e5b79fa895dd31cb25c3a39cea949e5f89b975abf87fb33eea529921c8771c"
+      },
+      "tone_lint_violation": "vague filler phrase: often leads to"
     }
   ]
 }

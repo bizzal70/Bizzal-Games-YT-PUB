@@ -660,5 +660,15 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-09-06": {
+    "monster_tactic": {
+      "angle": "how_it_wins",
+      "voice": "survival_coach",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }
