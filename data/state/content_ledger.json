@@ -4773,6 +4773,39 @@
       "video_id": "dYx8m620TFQ",
       "day": "2026-09-07",
       "published_at": "2026-09-07T14:33:31+00:00"
+    },
+    {
+      "content_key": "f2094faca774e20b2dbe15f6f71e8a666ebbf6239a1f83ddb5d334489f1abacc",
+      "token_text": "economy fortune good halfling luck mastering",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Halfling: Mastering Good Fortune and Luck Economy #dcc",
+      "video_id": "5YgFVl_eqwE",
+      "day": "2026-09-07",
+      "published_at": "2026-09-07T18:02:56+00:00"
+    },
+    {
+      "content_key": "9dab506f19a7352c1b483f524bbedd076ab0409988d4050a44db84785292e58d",
+      "token_text": "allie fortune good grant halfling",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Halflings grant Good Fortune to allies #dcc",
+      "video_id": "fy2lkvuaAV8",
+      "day": "2026-09-07-dcc-clip1",
+      "published_at": "2026-09-07T18:04:58+00:00"
+    },
+    {
+      "content_key": "091683f9e7a822bfa9fa8f89bf9e0a97ab1e4c7be9f2084fe6ddad66a118f877",
+      "token_text": "ac creature get halfling large vs",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Halflings get +4 AC vs. large creatures #dcc",
+      "video_id": "LKlvslsPwDE",
+      "day": "2026-09-07-dcc-clip3",
+      "published_at": "2026-09-07T18:08:16+00:00"
     }
   ]
 }

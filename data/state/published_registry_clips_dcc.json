@@ -415,6 +415,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-04-dcc-clip2.mp4",
         "video_sha256": "091cea7962c7115053d5bf526f7bca260d16a072e0e32d4473c8cb711202b933"
       }
+    },
+    {
+      "published_utc": "2026-09-07T18:04:58Z",
+      "day": "2026-09-07-dcc-clip1",
+      "content_id": "clip:5adc835a40abd12f",
+      "publish_hash": "e9851aa0c49e3b613c9fde8e2fb0d96b4647ae07e4e591b55040edb809927be5",
+      "youtube_video_id": "fy2lkvuaAV8",
+      "youtube_url": "https://www.youtube.com/watch?v=fy2lkvuaAV8",
+      "video_sha256": "1c41240732ddccb9aeff6a98e48902f75b717c7b1407239542375c1dba0a3190",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-07-dcc-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-09-07-dcc-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:5adc835a40abd12f",
+        "canonical_hash": "",
+        "script_id": "5adc835a40abd12fb36fad8e109c2b8e1365f003861e891083b2322a78a549d2",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Halflings grant Good Fortune to allies",
+        "hook": "Halflings grant Good Fortune to allies",
+        "body": "Halflings in Dungeon Crawl Classics can grant their Good Fortune to nearby allies once per session. This allows allies to roll a Luck die and add it to a crucial check without burning Luck, turning the tide in critical moments.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-07-dcc-clip1.mp4",
+        "video_sha256": "1c41240732ddccb9aeff6a98e48902f75b717c7b1407239542375c1dba0a3190"
+      }
+    },
+    {
+      "published_utc": "2026-09-07T18:08:16Z",
+      "day": "2026-09-07-dcc-clip3",
+      "content_id": "clip:722b27315f46e642",
+      "publish_hash": "eb85c3e61537c2ed4a84e86fe7f005bce558d4b3cc6ca16fb6e2158a75e06e6b",
+      "youtube_video_id": "LKlvslsPwDE",
+      "youtube_url": "https://www.youtube.com/watch?v=LKlvslsPwDE",
+      "video_sha256": "c4b513f89b1b6ae2f4d5bd398b9bbe31be1e5c939699a478a8fdf75fafdb8df4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-07-dcc-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-09-07-dcc-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:722b27315f46e642",
+        "canonical_hash": "",
+        "script_id": "722b27315f46e6424aea9240405f89a94a5fdbde06a5703d2f49bc662d9906d2",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Halflings get +4 AC vs. large creatures",
+        "hook": "Halflings get +4 AC vs. large creatures",
+        "body": "In combat, Halflings enjoy a +4 bonus to AC against large creatures, making them effective against giants and similar foes. This defensive edge allows Halflings to survive attacks that might incapacitate other characters.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-07-dcc-clip3.mp4",
+        "video_sha256": "c4b513f89b1b6ae2f4d5bd398b9bbe31be1e5c939699a478a8fdf75fafdb8df4"
+      }
     }
   ]
 }
