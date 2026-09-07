@@ -1383,6 +1383,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-06.mp4",
         "video_sha256": "817ded7120ba9f309ea6bf5e1eb0d6826c3e1da269db5f4b39635e60d5dc8350"
       }
+    },
+    {
+      "published_utc": "2026-09-07T14:25:18Z",
+      "day": "2026-09-07",
+      "content_id": "bgp-2026-09-07-spell-use-case-spell-142-b3ed99107c59",
+      "publish_hash": "2300578fab12c430c988218612a8f729880f8136fd81a108918e4fe8583f02d7",
+      "youtube_video_id": "7O9gjGHnMLs",
+      "youtube_url": "https://www.youtube.com/watch?v=7O9gjGHnMLs",
+      "video_sha256": "23197060d77d3372040d95bfea9ebf1b1d38a344b9db8917762ebc4936cf69fa",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-07.mp4",
+      "fingerprint": {
+        "day": "2026-09-07",
+        "category": "spell_use_case",
+        "angle": "corruption_risk",
+        "content_id": "bgp-2026-09-07-spell-use-case-spell-142-b3ed99107c59",
+        "canonical_hash": "b3ed99107c59a216ca945a293fc8a12a6c752c64571a64d0897c948d1770a265",
+        "script_id": "8fcea8b896c51421fcfeb27499bd124eebe1581bac5629863e22ccd5e4b95ebe",
+        "fact_kind": "spell",
+        "fact_pk": 142,
+        "fact_name": "Divine Symbol",
+        "hook": "Divine Symbol's power shifts encounter dynamics - duration is 1d6 rounds or more.",
+        "body": "Divine Symbol, a 2nd-level cleric spell, affects only the caster but transforms their holy symbol into a potent tool against enemies of the faith. Its duration of 1d6 rounds or more means timing its use is crucial; casting too early can waste its potential. Prioritizing damage output often leads to suboptimal use, as the spell's real strength lies in altering the battlefield. Casting it at the right moment enhances its rallying and combat effects, rather than just dealing immediate damage.",
+        "cta": "Judges: Cast Divine Symbol when a 1d6+ round rally can turn the tide, not just for a quick hit.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-07.mp4",
+        "video_sha256": "23197060d77d3372040d95bfea9ebf1b1d38a344b9db8917762ebc4936cf69fa"
+      },
+      "tone_lint_violation": "vague filler phrase: often leads to"
     }
   ]
 }

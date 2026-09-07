@@ -2005,6 +2005,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-06.mp4",
         "video_sha256": "f0d55b189b9543f35ab6d7f07010ab049ff39f4db08e76cae2e41de48140e348"
       }
+    },
+    {
+      "published_utc": "2026-09-07T14:29:51Z",
+      "day": "2026-09-07",
+      "content_id": "bgp-2026-09-07-rules-myth-rule-srd-2024-damage-and-healing-hit-points-abae8927f2c2",
+      "publish_hash": "e068d86a90dc0b2fbd7df0c750e36c4cad2006b91e743038784c40dd32ea63e9",
+      "youtube_video_id": "klMkrhLi21c",
+      "youtube_url": "https://www.youtube.com/watch?v=klMkrhLi21c",
+      "video_sha256": "bdc22365ea14c2b2e0712ae4671053a0b97b77319afb1820fc69d6d7cf01501f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-07.mp4",
+      "fingerprint": {
+        "day": "2026-09-07",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-09-07-rules-myth-rule-srd-2024-damage-and-healing-hit-points-abae8927f2c2",
+        "canonical_hash": "abae8927f2c2144fd413f330f49166f55bc83bb8448ebd79b80591308818a907",
+        "script_id": "2900e68c7c557075493cba007e8b4c10e549d47d1ac917b74267bd6fc019128e",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_damage-and-healing_hit-points",
+        "fact_name": "Hit Points",
+        "hook": "Hit Points aren't just a measure of physical health - they also represent a creature's will to live.",
+        "body": "Hit Points determine how much damage a creature can take before falling unconscious. A common mistake is treating Hit Points as purely physical durability, ignoring the narrative aspect of willpower and resolve. This misconception can lead to overlooking strategic retreats or negotiations when Hit Points are low. Optimal play involves recognizing when to disengage or use non-combat solutions as Hit Points dwindle, preserving resources for critical moments.",
+        "cta": "DMs: Remind players that 16 Hit Points reflect more than just wounds; they also measure resolve and the wisdom to retreat.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-07.mp4",
+        "video_sha256": "bdc22365ea14c2b2e0712ae4671053a0b97b77319afb1820fc69d6d7cf01501f"
+      }
     }
   ]
 }

@@ -762,5 +762,17 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-09-07": {
+    "encounter_seed": {
+      "angle": "time_pressure",
+      "voice": "torchbearer_ref",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

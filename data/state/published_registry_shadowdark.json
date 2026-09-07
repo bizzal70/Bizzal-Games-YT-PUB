@@ -1642,6 +1642,32 @@
         "video_sha256": "83e5b79fa895dd31cb25c3a39cea949e5f89b975abf87fb33eea529921c8771c"
       },
       "tone_lint_violation": "vague filler phrase: often leads to"
+    },
+    {
+      "published_utc": "2026-09-07T14:33:31Z",
+      "day": "2026-09-07",
+      "content_id": "bgp-2026-09-07-encounter-seed-creature-164-03dd5d5874c2",
+      "publish_hash": "4de1fd491bf42fe9916d4a266fed06ee64566a9fcffe1a00c591daae3d19c02c",
+      "youtube_video_id": "dYx8m620TFQ",
+      "youtube_url": "https://www.youtube.com/watch?v=dYx8m620TFQ",
+      "video_sha256": "422a7db95c71a33a2af08f5b68f2496c04037dbef6e6494429074b5b290457a1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-07.mp4",
+      "fingerprint": {
+        "day": "2026-09-07",
+        "category": "encounter_seed",
+        "angle": "time_pressure",
+        "content_id": "bgp-2026-09-07-encounter-seed-creature-164-03dd5d5874c2",
+        "canonical_hash": "03dd5d5874c2f5cc689a0de6092320ec7a83d60317f713326eda91732987ed3c",
+        "script_id": "043d4b685bf2735fdea41de27a8877b148bc829b40f1aa8aef9910d4ba1d2f0d",
+        "fact_kind": "creature",
+        "fact_pk": 164,
+        "fact_name": "Pirate",
+        "hook": "Pirate encounters escalate faster than expected - each round without progress compounds the threat.",
+        "body": "Pirate has 4 hit points and an AC of 12, making it deceptively fragile. Its ability to attack with a cutlass for 1d6 damage or a dagger for 1d4 damage at close or near range creates a persistent threat. Time pressure is often underestimated, leading to insufficient advancement of objectives. Maintaining momentum and minimizing time spent in combat is crucial to avoid escalating danger.",
+        "cta": "GMs: Put a 3-minute timer on the table; every expired minute calls in another pirate.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-07.mp4",
+        "video_sha256": "422a7db95c71a33a2af08f5b68f2496c04037dbef6e6494429074b5b290457a1"
+      }
     }
   ]
 }
