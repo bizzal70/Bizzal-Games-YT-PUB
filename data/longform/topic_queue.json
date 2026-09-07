@@ -1,6 +1,105 @@
 [
   {
     "system": "dnd5e",
+    "title": "Ravenloft's New Warlock Gameplay Revealed",
+    "angle": "Explore the unique abilities and gameplay mechanics of the new Warlock class set in Ravenloft.",
+    "rationale": "With recent headlines about the Ravenloft TV series and game demonstrations, interest in Ravenloft-related content is high.",
+    "fixture_hint": "class",
+    "search_keyword": "Dungeons & Dragons: Warlock shows off first gameplay footage, will be set in Ravenloft",
+    "created_date": "2026-09-07",
+    "status": "pending",
+    "brief_id": "037ef420cde3"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Dark Sun's New World: What to Expect",
+    "angle": "A deep dive into the updated mechanics and rules for the new Dark Sun world in D&D 5e.",
+    "rationale": "The revival of Dark Sun by its original creators is generating buzz in the D&D community.",
+    "fixture_hint": "rule",
+    "search_keyword": "Original Dark Sun creators update their Dragon Kings world to 5E",
+    "created_date": "2026-09-07",
+    "status": "pending",
+    "brief_id": "ef24914899d8"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Long Rest Tavern: A Deep Dive into Cozy Mechanics",
+    "angle": "Investigate the mechanics of the Long Rest Tavern and how it transforms traditional gameplay.",
+    "rationale": "The announcement of a new cozy business sim in the D&D universe aligns with growing trends in gaming.",
+    "fixture_hint": "rule",
+    "search_keyword": "Dungeons & Dragons: Long Rest Tavern announced, cozy business sim for PC",
+    "created_date": "2026-09-07",
+    "status": "pending",
+    "brief_id": "a124628ef3f8"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's New Monster: The Crows of Terror",
+    "angle": "An in-depth look at the features and lore of the new Crows monster in Shadowdark.",
+    "rationale": "Crowdfunding news highlights new monster content, aligning with community interest in fresh challenges.",
+    "fixture_hint": "creature",
+    "search_keyword": "RPG Crowdfunding News – Crows, Cypher, Monsters of Rend World, and more",
+    "created_date": "2026-09-07",
+    "status": "pending",
+    "brief_id": "dc4efbae4d21"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Spellcasting in Shadowdark: Arcana Unleashed",
+    "angle": "Examining the unique spellcasting mechanics introduced in the Arcana Unleashed updates.",
+    "rationale": "Recent previews of Arcana Unleashed are capturing the community's attention.",
+    "fixture_hint": "spell",
+    "search_keyword": "Arcana Unleashed & Arcana Unleashed: Deadfall preview",
+    "created_date": "2026-09-07",
+    "status": "pending",
+    "brief_id": "330700e1adde"
+  },
+  {
+    "system": "shadowdark",
+    "title": "The Uncanny Valley: Shadowdark's New Spell Innovations",
+    "angle": "Explore the spell mechanics that push the boundaries of traditional magic systems.",
+    "rationale": "Shadowdark's innovative spellcasting approach is a hot topic following recent discussions.",
+    "fixture_hint": "spell",
+    "search_keyword": "RPG Evolution: Welcome to the Uncanny Valley",
+    "created_date": "2026-09-07",
+    "status": "pending",
+    "brief_id": "4c96b50754c5"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Warlock: Powers and Gameplay",
+    "angle": "A detailed exploration of the Warlock class in DCC and its unique features.",
+    "rationale": "With the new Warlock gameplay footage, there's a renewed interest in Warlock mechanics.",
+    "fixture_hint": "class",
+    "search_keyword": "Dungeons & Dragons: Warlock shows off first gameplay footage, will be set in Ravenloft",
+    "created_date": "2026-09-07",
+    "status": "pending",
+    "brief_id": "d70373bc3cb7"
+  },
+  {
+    "system": "dcc",
+    "title": "The Starlane Scum: DCC's New Monster Threat",
+    "angle": "Delve into the characteristics, strengths, and weaknesses of the Starlane Scum.",
+    "rationale": "Dungeon Crawl Classics continues to captivate with its unique monster designs.",
+    "fixture_hint": "creature",
+    "search_keyword": "DCC's New Monster: The Starlane Scum",
+    "created_date": "2026-09-07",
+    "status": "pending",
+    "brief_id": "93427a054196"
+  },
+  {
+    "system": "dcc",
+    "title": "Runes of Power: DCC's Dwarven Magic",
+    "angle": "Uncover the secrets and applications of rune magic as used by Dwarves in DCC.",
+    "rationale": "Rune magic remains a popular subject among players interested in magical systems.",
+    "fixture_hint": "spell",
+    "search_keyword": "DCC's Runes of Power: The Tome for Dwarves",
+    "created_date": "2026-09-07",
+    "status": "pending",
+    "brief_id": "376a0e165f1d"
+  },
+  {
+    "system": "dnd5e",
     "title": "Ravenloft's New Warlock Class: Powers Unleashed",
     "angle": "Explore the unique abilities of the new Warlock class set in the spooky Ravenloft setting.",
     "rationale": "The Warlock class is gaining attention with its first gameplay footage in Ravenloft.",
