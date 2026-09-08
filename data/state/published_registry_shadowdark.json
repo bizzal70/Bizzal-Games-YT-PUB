@@ -1668,6 +1668,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-07.mp4",
         "video_sha256": "422a7db95c71a33a2af08f5b68f2496c04037dbef6e6494429074b5b290457a1"
       }
+    },
+    {
+      "published_utc": "2026-09-08T14:33:38Z",
+      "day": "2026-09-08",
+      "content_id": "bgp-2026-09-08-rules-myth-rule-2-a2d28f672570",
+      "publish_hash": "4ea37a47b4599067cb15f2a219b16ce3c6ed17c6403e2c4bdcd86506034b1b75",
+      "youtube_video_id": "UJFiVE3eVcQ",
+      "youtube_url": "https://www.youtube.com/watch?v=UJFiVE3eVcQ",
+      "video_sha256": "0507ebf287a93fa89fa2571d8425d23c73fc2971d84f9857e8e1ef128166a64b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-08.mp4",
+      "fingerprint": {
+        "day": "2026-09-08",
+        "category": "rules_myth",
+        "angle": "dm_callout",
+        "content_id": "bgp-2026-09-08-rules-myth-rule-2-a2d28f672570",
+        "canonical_hash": "a2d28f672570d6a8a4f8867a4fea44b320f723cc7b6b27db2e654bedd7710adb",
+        "script_id": "98a9d166531449bd8d9b137aa01553284766e951776f0f1cdee65f75c92b4578",
+        "fact_kind": "rule",
+        "fact_pk": 2,
+        "fact_name": "Difficulty Class",
+        "hook": "Difficulty Class impacts planning significantly - Easy DC 9, Normal DC 12, Hard DC 15.",
+        "body": "Difficulty Class (DC) sets the target number for d20 rolls, modified by relevant stat modifiers. These benchmarks are crucial: Easy DC 9, Normal DC 12, Hard DC 15, Extreme DC 18. GMs often fail to declare DCs upfront, leading to disputes and wasted time. Declare DCs before players act, allowing them to strategize effectively.",
+        "cta": "GMs: Announce the DC - Easy 9, Normal 12, Hard 15 - before actions to prevent pointless bickering and wasted time.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-08.mp4",
+        "video_sha256": "0507ebf287a93fa89fa2571d8425d23c73fc2971d84f9857e8e1ef128166a64b"
+      }
     }
   ]
 }

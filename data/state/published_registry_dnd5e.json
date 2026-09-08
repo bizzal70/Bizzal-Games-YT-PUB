@@ -2031,6 +2031,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-07.mp4",
         "video_sha256": "bdc22365ea14c2b2e0712ae4671053a0b97b77319afb1820fc69d6d7cf01501f"
       }
+    },
+    {
+      "published_utc": "2026-09-08T14:29:41Z",
+      "day": "2026-09-08",
+      "content_id": "bgp-2026-09-08-class-spotlight-class-xanathars-guide-swashbuckler-e08623904ef6",
+      "publish_hash": "430fa94692a976a312922c85d6cde6600a2c9a88e816d997598135ec8fcb823b",
+      "youtube_video_id": "4hRnVRGIyBI",
+      "youtube_url": "https://www.youtube.com/watch?v=4hRnVRGIyBI",
+      "video_sha256": "d42701a1da8dcaf21d054d839b143ba70f7a01411d33d8adb93b2b4a9d4b01d6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-08.mp4",
+      "fingerprint": {
+        "day": "2026-09-08",
+        "category": "class_spotlight",
+        "angle": "party_role_pivot",
+        "content_id": "bgp-2026-09-08-class-spotlight-class-xanathars-guide-swashbuckler-e08623904ef6",
+        "canonical_hash": "e08623904ef6e595ed8568e06456e2b27d858c0152c8532643419495adb1e211",
+        "script_id": "ec0f5b4055bca8d5581c2517d552308f9f5d3ab01c708b07f37d7f813e64ce26",
+        "fact_kind": "class",
+        "fact_pk": "xanathars-guide_swashbuckler",
+        "fact_name": "Swashbuckler",
+        "hook": "Swashbuckler shifts from evasive to aggressive effortlessly - Fancy Footwork prevents opportunity attacks.",
+        "body": "Fancy Footwork at 3rd level allows the Swashbuckler to attack and then move away without provoking opportunity attacks. This mechanic is often misused by players who forget to reposition after attacking, missing the chance to control the battlefield. Effective use involves attacking a target and then moving to a strategic position, forcing opponents to waste their movement or actions to engage again.",
+        "cta": "DMs: Remind your Swashbuckler to attack and reposition with Fancy Footwork, forcing enemies to waste actions chasing them.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-08.mp4",
+        "video_sha256": "d42701a1da8dcaf21d054d839b143ba70f7a01411d33d8adb93b2b4a9d4b01d6"
+      }
     }
   ]
 }

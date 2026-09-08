@@ -1410,6 +1410,33 @@
         "video_sha256": "23197060d77d3372040d95bfea9ebf1b1d38a344b9db8917762ebc4936cf69fa"
       },
       "tone_lint_violation": "vague filler phrase: often leads to"
+    },
+    {
+      "published_utc": "2026-09-08T14:26:12Z",
+      "day": "2026-09-08",
+      "content_id": "bgp-2026-09-08-rules-ruling-rule-10-af9ef6f85ad2",
+      "publish_hash": "97b8a64a57c5a7e6d00606bbeebc8cd2e9565f52b783d50c019d15ecdfd6f171",
+      "youtube_video_id": "xQbigGHwl8o",
+      "youtube_url": "https://www.youtube.com/watch?v=xQbigGHwl8o",
+      "video_sha256": "4aac06cd07703881e20f498330469e065751f37d7764f69d7d88d3fe10b13e23",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-08.mp4",
+      "fingerprint": {
+        "day": "2026-09-08",
+        "category": "rules_ruling",
+        "angle": "funnel_ruling",
+        "content_id": "bgp-2026-09-08-rules-ruling-rule-10-af9ef6f85ad2",
+        "canonical_hash": "af9ef6f85ad26b1007431ef8e5d3f68f2fcdf73aa1ed66da9c4ba8236faa5950",
+        "script_id": "3d859a613dc8397bc3d708a552ead008a23165a67d20a72ab4ea131841c69590",
+        "fact_kind": "rule",
+        "fact_pk": 10,
+        "fact_name": "Birth Augur",
+        "hook": "Birth Augur ties your Luck modifier to a specific roll type for life - one d30 roll at creation determines it.",
+        "body": "Birth Augur permanently links your Luck modifier to one roll type, such as attack rolls or poison saves, based on a d30 roll during character creation. This ongoing bonus or penalty is separate from spending Luck for a one-time +1. Misunderstanding this as a temporary effect can lead to missed opportunities for consistent benefits. Aligning your Birth Augur with your character's primary actions ensures its effect is felt across multiple sessions.",
+        "cta": "Judges: Make sure players roll that d30 at creation to lock in their Birth Augur's lifelong Luck impact.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-08.mp4",
+        "video_sha256": "4aac06cd07703881e20f498330469e065751f37d7764f69d7d88d3fe10b13e23"
+      },
+      "tone_lint_violation": "vague filler phrase: Misunderstanding this as a temporary effect can lead to"
     }
   ]
 }

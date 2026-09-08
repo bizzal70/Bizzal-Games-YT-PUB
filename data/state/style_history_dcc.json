@@ -680,5 +680,15 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-08": {
+    "rules_ruling": {
+      "angle": "funnel_ruling",
+      "voice": "grim_referee",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

@@ -774,5 +774,15 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-08": {
+    "rules_myth": {
+      "angle": "dm_callout",
+      "voice": "torchbearer_ref",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "coral"
+    }
   }
 }
