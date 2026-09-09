@@ -467,6 +467,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-08-31-shadowdark-clip3.mp4",
         "video_sha256": "3b08987eebc6addebda706d1cc18058d79128c37cea4ca2ab44cf9f02da89221"
       }
+    },
+    {
+      "published_utc": "2026-09-09T18:05:20Z",
+      "day": "2026-09-09-shadowdark-clip2",
+      "content_id": "clip:351e4977e9e8180b",
+      "publish_hash": "331ad29e69c2d2e437b2032e20f999275f744166ede397065fa64abf12769924",
+      "youtube_video_id": "NlO0e0W-3mI",
+      "youtube_url": "https://www.youtube.com/watch?v=NlO0e0W-3mI",
+      "video_sha256": "de65ac4107eb393d11a6ce060365dfe4e5575d55287e97fe68d15d0eb52b6bea",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-09-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-09-09-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:351e4977e9e8180b",
+        "canonical_hash": "",
+        "script_id": "351e4977e9e8180b461b099a9c1aa2a88fa85aefd88dee447bd947f74d70e5bf",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Erinyes Devil excels in both melee and ranged combat",
+        "hook": "Erinyes Devil excels in both melee and ranged combat",
+        "body": "The Erinyes Devil uses a greatsword for close combat with a +8 to hit and 1d12 damage. Its longbow, also at +8 to hit, deals 1d8 damage plus a poison effect, allowing it to disrupt party dynamics.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-09-shadowdark-clip2.mp4",
+        "video_sha256": "de65ac4107eb393d11a6ce060365dfe4e5575d55287e97fe68d15d0eb52b6bea"
+      }
+    },
+    {
+      "published_utc": "2026-09-09T18:07:02Z",
+      "day": "2026-09-09-shadowdark-clip3",
+      "content_id": "clip:c4c53303a06003e8",
+      "publish_hash": "536f25b6eee85eb08ea1b7ddbca4022c8e8124f5268bfcaf4302225c2ab08e3c",
+      "youtube_video_id": "-DMDxPsWYOI",
+      "youtube_url": "https://www.youtube.com/watch?v=-DMDxPsWYOI",
+      "video_sha256": "44f486fa2f6ea4b62b12071626ce3d636d8714e75fd86a83b49fa41439cd17c3",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-09-shadowdark-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-09-09-shadowdark-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:c4c53303a06003e8",
+        "canonical_hash": "",
+        "script_id": "c4c53303a06003e8def7f302f0ec1394f992a314fdb20396812dcdce3d29dfb9",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Erinyes Devil's mobility controls the battlefield",
+        "hook": "Erinyes Devil's mobility controls the battlefield",
+        "body": "With 'double near (fly)' movement, the Erinyes Devil can quickly reposition, target weak party members, or escape unfavorable situations. Its flying ability allows it to employ hit-and-run tactics and leverage terrain for strategic advantage.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-09-shadowdark-clip3.mp4",
+        "video_sha256": "44f486fa2f6ea4b62b12071626ce3d636d8714e75fd86a83b49fa41439cd17c3"
+      }
     }
   ]
 }
