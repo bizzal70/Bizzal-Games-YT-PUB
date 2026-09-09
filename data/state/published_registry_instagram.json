@@ -2187,6 +2187,21 @@
       "hook": "Desert Rider progression trap delays effectiveness - flashy picks postpone your core engine by multiple.",
       "body": "Charge allows double melee damage 3 times per day if you move near before attacking, but chasing flashy abilities dilutes your core mechanics. The class relies on consistent execution of Charge and the AC boost from riding to maintain effectiveness. Investing in flashy options weakens your ability to leverage these repeatable advantages. Focus on enhancing your primary abilities and leveraging your mount's AC boost for sustained performance.",
       "cta": "GMs: Keep players focused on using Charge and mount AC boosts; discourage flashy distractions that undermine their core strengths."
+    },
+    {
+      "published_utc": "2026-09-09T16:28:06Z",
+      "day": "2026-09-09",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-09-monster-tactic-creature-srd-2024-homunculus-a0d7b1a3c372",
+      "instagram_post_id": "17945404926329036",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "ba679aef0235ee2e3a5954aab545ccffdd4bc163a9698838976214b49d82e909",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-09.mp4",
+      "fact_name": "Homunculus",
+      "category": "monster_tactic",
+      "hook": "Homunculus disrupts party plans more than expected - telepathic bond with its master creates strategic depth.",
+      "body": "With an Armor Class of 13 and only 4 hit points, the Homunculus isn't a tank, but its telepathic bond with its master is the real threat. This connection allows for seamless communication, enabling coordinated tactics that often go unnoticed. Ignoring the Homunculus to focus on its master misses the point; disrupting the bond through movement and target priority is the effective counter.",
+      "cta": "DMs: Use the Homunculus's 40-foot fly speed to maintain its telepathic bond while staying out of melee range."
     }
   ]
 }

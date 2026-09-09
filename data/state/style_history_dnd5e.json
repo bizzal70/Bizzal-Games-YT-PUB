@@ -796,13 +796,13 @@
   "2026-09-09": {
     "monster_tactic": {
       "angle": "how_it_wins",
-      "voice": "gritty_dm",
+      "voice": "rules_lawyer",
       "tone": "dry",
       "persona": "tactical_analyst",
       "spice": [
-        "wry"
+        "sardonic"
       ],
-      "tts_voice_id": "echo"
+      "tts_voice_id": "sage"
     }
   }
 }

@@ -2084,6 +2084,32 @@
         "video_sha256": "40d005d605e000b101656556cb6a35a6792342b1cb2482224c038733d73a7b72"
       },
       "tone_lint_violation": "vague filler phrase: often leads to"
+    },
+    {
+      "published_utc": "2026-09-09T16:27:20Z",
+      "day": "2026-09-09",
+      "content_id": "bgp-2026-09-09-monster-tactic-creature-srd-2024-homunculus-a0d7b1a3c372",
+      "publish_hash": "2a13c0a6c2f98524b82e621001513c5c9fb7c8297bbedfb8db66daf96727df54",
+      "youtube_video_id": "9znL_sKV7Do",
+      "youtube_url": "https://www.youtube.com/watch?v=9znL_sKV7Do",
+      "video_sha256": "ba679aef0235ee2e3a5954aab545ccffdd4bc163a9698838976214b49d82e909",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-09.mp4",
+      "fingerprint": {
+        "day": "2026-09-09",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-09-09-monster-tactic-creature-srd-2024-homunculus-a0d7b1a3c372",
+        "canonical_hash": "a0d7b1a3c37258db29e2b9d8cef618a66fa4b08ae2c41edf6a3fe00d78cf14c2",
+        "script_id": "9ca351d6a0f9dcf22957e808590887ce50dc0e2e34ceab9a8499b212758d72d7",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_homunculus",
+        "fact_name": "Homunculus",
+        "hook": "Homunculus disrupts party plans more than expected - telepathic bond with its master creates strategic depth.",
+        "body": "With an Armor Class of 13 and only 4 hit points, the Homunculus isn't a tank, but its telepathic bond with its master is the real threat. This connection allows for seamless communication, enabling coordinated tactics that often go unnoticed. Ignoring the Homunculus to focus on its master misses the point; disrupting the bond through movement and target priority is the effective counter.",
+        "cta": "DMs: Use the Homunculus's 40-foot fly speed to maintain its telepathic bond while staying out of melee range.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-09.mp4",
+        "video_sha256": "ba679aef0235ee2e3a5954aab545ccffdd4bc163a9698838976214b49d82e909"
+      }
     }
   ]
 }
