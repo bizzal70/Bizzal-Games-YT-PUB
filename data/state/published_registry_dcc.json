@@ -1437,6 +1437,32 @@
         "video_sha256": "4aac06cd07703881e20f498330469e065751f37d7764f69d7d88d3fe10b13e23"
       },
       "tone_lint_violation": "vague filler phrase: Misunderstanding this as a temporary effect can lead to"
+    },
+    {
+      "published_utc": "2026-09-09T14:22:48Z",
+      "day": "2026-09-09",
+      "content_id": "bgp-2026-09-09-item-spotlight-item-9-0a8efd545840",
+      "publish_hash": "8760bbf8a7fad1a04098cb53e223f22aae49ece68c1f38a895c76e12ea0d2b17",
+      "youtube_video_id": "M8OUf7mtRCs",
+      "youtube_url": "https://www.youtube.com/watch?v=M8OUf7mtRCs",
+      "video_sha256": "e24f92b44e7742448fdbcfa5d4e28891485e3583eb409b70c1bca4f25ade6077",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-09.mp4",
+      "fingerprint": {
+        "day": "2026-09-09",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-09-09-item-spotlight-item-9-0a8efd545840",
+        "canonical_hash": "0a8efd5458402f083da2038a1610a859dc29ee60b394d95028f25ce7dc7e6dfc",
+        "script_id": "8a862eb6bb47fee45ca5d0e96b6d61feb1c9e19223dc84c80eb9885b505ffdcf",
+        "fact_kind": "item",
+        "fact_pk": 9,
+        "fact_name": "The Grimoire of Zulmak",
+        "hook": "The Grimoire of Zulmak grants three unique 3rd-level spells instantly - no normal study time required.",
+        "body": "Casting from The Grimoire of Zulmak risks corruption with each use - a roll of 1 on a d6 triggers it. Repeated casting increases the chance of accumulating corruption levels, which many overlook. Reserving these spells for critical moments minimizes exposure to Zulmak's influence.",
+        "cta": "Judges: Save Zulmak's spells for dire situations; each cast risks corruption on a d6 roll of 1.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-09.mp4",
+        "video_sha256": "e24f92b44e7742448fdbcfa5d4e28891485e3583eb409b70c1bca4f25ade6077"
+      }
     }
   ]
 }

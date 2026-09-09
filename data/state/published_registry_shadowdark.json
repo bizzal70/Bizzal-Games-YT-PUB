@@ -1694,6 +1694,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-08.mp4",
         "video_sha256": "0507ebf287a93fa89fa2571d8425d23c73fc2971d84f9857e8e1ef128166a64b"
       }
+    },
+    {
+      "published_utc": "2026-09-09T14:31:15Z",
+      "day": "2026-09-09",
+      "content_id": "bgp-2026-09-09-spell-use-case-spell-109-35a1081c5016",
+      "publish_hash": "91538bfab94fe62bbe3b3b8ea197fbf09cb19217e2cd962d7ddc5811929483bd",
+      "youtube_video_id": "cTtMqHoL88Y",
+      "youtube_url": "https://www.youtube.com/watch?v=cTtMqHoL88Y",
+      "video_sha256": "1a865235b3aec9998171ff48353722a98bf5b5286e86cc33a6ba22fd10e2f82b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-09.mp4",
+      "fingerprint": {
+        "day": "2026-09-09",
+        "category": "spell_use_case",
+        "angle": "best_moment",
+        "content_id": "bgp-2026-09-09-spell-use-case-spell-109-35a1081c5016",
+        "canonical_hash": "35a1081c5016cf2d8772b7625987b7a6a77b4a7829aada8843d2d713aae47b5c",
+        "script_id": "2921dfaf150ec1003ea8ad974b34cdb159ec6565075c96b82d1944d04f9f956d",
+        "fact_kind": "spell",
+        "fact_pk": 109,
+        "fact_name": "Evoke Rage",
+        "hook": "Evoke Rage flips the morale game - 1d4 rounds of berserk immunity.",
+        "body": "Evoke Rage lasts 1d4 rounds and requires a willing humanoid target within Close range. Most players waste it on minor skirmishes, thinking it's just a damage buff. Its real power is negating morale checks when a fight turns grim. Use it when morale breaks would cost the fight, not just for extra attacks.",
+        "cta": "GMs: Cast Evoke Rage when morale checks threaten your Seer's objectives, not just for 1d4 rounds of reckless attacks.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-09.mp4",
+        "video_sha256": "1a865235b3aec9998171ff48353722a98bf5b5286e86cc33a6ba22fd10e2f82b"
+      }
     }
   ]
 }

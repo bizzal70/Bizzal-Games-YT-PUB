@@ -784,5 +784,17 @@
       "spice": [],
       "tts_voice_id": "coral"
     }
+  },
+  "2026-09-09": {
+    "spell_use_case": {
+      "angle": "best_moment",
+      "voice": "strict_referee",
+      "tone": "dry",
+      "persona": "arcane_survival_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "coral"
+    }
   }
 }

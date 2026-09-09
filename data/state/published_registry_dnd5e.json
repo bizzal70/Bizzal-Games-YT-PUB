@@ -2057,6 +2057,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-08.mp4",
         "video_sha256": "d42701a1da8dcaf21d054d839b143ba70f7a01411d33d8adb93b2b4a9d4b01d6"
       }
+    },
+    {
+      "published_utc": "2026-09-09T14:27:51Z",
+      "day": "2026-09-09",
+      "content_id": "bgp-2026-09-09-monster-tactic-creature-monsters-multiverse-death-kiss-c1b9c0317d0f",
+      "publish_hash": "ae8902fa6ac8b0427cec8f8edfe3a461818e1ea1f4fa9a4000cf364b626b0590",
+      "youtube_video_id": "E2XrK4_oj_4",
+      "youtube_url": "https://www.youtube.com/watch?v=E2XrK4_oj_4",
+      "video_sha256": "40d005d605e000b101656556cb6a35a6792342b1cb2482224c038733d73a7b72",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-09.mp4",
+      "fingerprint": {
+        "day": "2026-09-09",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-09-09-monster-tactic-creature-monsters-multiverse-death-kiss-c1b9c0317d0f",
+        "canonical_hash": "c1b9c0317d0fd3e33076102c74010c92f0a88d9efc4fbcf3f02f193a7d6ac9fc",
+        "script_id": "f9256479d134d480ef37379ed2cf99bcf1a211e72c03db3355b33d9b92f1c517",
+        "fact_kind": "creature",
+        "fact_pk": "monsters-multiverse_death-kiss",
+        "fact_name": "Death Kiss",
+        "hook": "Death Kiss pressures parties more than they expect - its fly speed is 40 feet and it hovers.",
+        "body": "Death Kiss uses its 40-foot fly speed and hover ability to maintain distance and avoid melee retaliation. With an AC of 16 and 161 hit points, it withstands initial assaults, but its real strength is in controlling the battlefield. Focusing solely on its hit points often leads to miscalculation, as its ability to reposition and isolate targets is ignored. Disrupting its movement with control effects and prioritizing targets that can reach it despite its aerial advantage is crucial.",
+        "cta": "DMs: Use its 40-foot fly speed to stay out of melee range; players should counter with movement-restricting spells.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-09.mp4",
+        "video_sha256": "40d005d605e000b101656556cb6a35a6792342b1cb2482224c038733d73a7b72"
+      },
+      "tone_lint_violation": "vague filler phrase: often leads to"
     }
   ]
 }
