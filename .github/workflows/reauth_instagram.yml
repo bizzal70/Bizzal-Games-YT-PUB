@@ -1,0 +1,89 @@
+name: Refresh Instagram token
+
+# Instagram's long-lived access token (BIZZAL_IG_ACCESS_TOKEN) lasts ~60 days
+# and does NOT auto-renew (unlike the YouTube token, which refreshes itself
+# via a refresh_token). Meta provides a self-refresh endpoint that extends a
+# long-lived token by another ~60 days, but ONLY if called while the current
+# token is still valid (it fails once the token has actually expired -- as
+# happened 2026-09-03, causing a 6-day outage across all 3 systems + Reels +
+# ig-metrics, discovered only during a manual audit).
+#
+# This runs WEEKLY -- far inside the 60-day window, so a missed run or two is
+# harmless -- and silently keeps the secret fresh. If it ever fails (token
+# already expired, revoked, or permissions changed), it exits non-zero so
+# alert_on_failure.yml opens a GitHub issue, and the log prints the manual
+# fallback: regenerate a token at
+# https://developers.facebook.com/apps -> your app -> Use cases ->
+# "Manage messaging & content on Instagram" -> Customize ->
+# "2. Generate access tokens" -> Generate token next to the account,
+# then `gh secret set BIZZAL_IG_ACCESS_TOKEN --repo bizzal70/Bizzal-Games-YT-PUB`.
+#
+# Can also be run manually any time (e.g. right after pasting a brand-new
+# token from the dashboard) to confirm it's valid and push its expiry back out.
+
+on:
+  schedule:
+    # Sunday 09:00 UTC -- weekly, well inside the ~60-day expiry window.
+    - cron: "0 9 * * 0"
+  workflow_dispatch: {}
+
+jobs:
+  reauth:
+    runs-on: ubuntu-latest
+    env:
+      BIZZAL_IG_ACCESS_TOKEN: ${{ secrets.BIZZAL_IG_ACCESS_TOKEN }}
+      GH_TOKEN: ${{ secrets.BIZZAL_GITHUB_PAT }}
+    steps:
+      - name: Refresh the long-lived Instagram token
+        run: |
+          python3 - <<'EOF'
+          import json, os, sys, urllib.parse, urllib.request, urllib.error, datetime
+
+          token = os.environ.get("BIZZAL_IG_ACCESS_TOKEN", "").strip()
+          if not token:
+              print("ERROR: BIZZAL_IG_ACCESS_TOKEN secret is empty", file=sys.stderr)
+              sys.exit(1)
+
+          params = urllib.parse.urlencode({
+              "grant_type": "ig_refresh_token",
+              "access_token": token,
+          })
+          url = f"https://graph.instagram.com/refresh_access_token?{params}"
+
+          try:
+              with urllib.request.urlopen(url, timeout=30) as resp:
+                  data = json.loads(resp.read())
+          except urllib.error.HTTPError as exc:
+              body = exc.read().decode("utf-8", errors="ignore")
+              print(f"ERROR: refresh failed ({exc.code}): {body}", file=sys.stderr)
+              print("", file=sys.stderr)
+              print("This usually means the token has ALREADY expired -- the self-refresh", file=sys.stderr)
+              print("endpoint only works on a still-valid token. Manual fix:", file=sys.stderr)
+              print("  1. https://developers.facebook.com/apps -> Bizzal_Games_Pub", file=sys.stderr)
+              print("  2. Use cases -> Manage messaging & content on Instagram -> Customize", file=sys.stderr)
+              print("  3. '2. Generate access tokens' -> Generate token (next to bizzalgames70)", file=sys.stderr)
+              print("  4. gh secret set BIZZAL_IG_ACCESS_TOKEN --repo bizzal70/Bizzal-Games-YT-PUB", file=sys.stderr)
+              sys.exit(1)
+
+          new_token = data.get("access_token", "")
+          expires_in = data.get("expires_in", 0)
+          if not new_token:
+              print(f"ERROR: no access_token in refresh response: {data}", file=sys.stderr)
+              sys.exit(1)
+
+          expiry = (
+              datetime.datetime.utcnow() + datetime.timedelta(seconds=expires_in)
+          ).strftime("%Y-%m-%d")
+
+          with open("ig_token.txt", "w") as f:
+              f.write(new_token)
+          print(f"[reauth] token refreshed OK -- new expiry ~{expiry} ({expires_in}s from now)")
+          EOF
+
+          if [ -f ig_token.txt ]; then
+            gh secret set BIZZAL_IG_ACCESS_TOKEN \
+              --repo bizzal70/Bizzal-Games-YT-PUB \
+              --body "$(cat ig_token.txt)"
+            rm -f ig_token.txt
+            echo "[reauth] BIZZAL_IG_ACCESS_TOKEN secret updated"
+          fi
