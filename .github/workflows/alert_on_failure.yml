@@ -9,7 +9,7 @@ name: Alert on pipeline failure
 
 on:
   workflow_run:
-    workflows: ["Daily content pipeline", "Long-form daily pipeline"]
+    workflows: ["Daily content pipeline", "Long-form daily pipeline", "Refresh Instagram token"]
     types: [completed]
 
 permissions:
