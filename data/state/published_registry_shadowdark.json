@@ -1720,6 +1720,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-09.mp4",
         "video_sha256": "1a865235b3aec9998171ff48353722a98bf5b5286e86cc33a6ba22fd10e2f82b"
       }
+    },
+    {
+      "published_utc": "2026-09-10T14:28:56Z",
+      "day": "2026-09-10",
+      "content_id": "bgp-2026-09-10-class-spotlight-class-9-5f2411c7406e",
+      "publish_hash": "abc20e4ca03abc3d2617fba8d46ad97e0f899ebbe1ea74482ab69fb8daa5c8bb",
+      "youtube_video_id": "CDH_tnQSQF4",
+      "youtube_url": "https://www.youtube.com/watch?v=CDH_tnQSQF4",
+      "video_sha256": "8e93a3d19d34f35fb5a1bf6724fc1b2145a0d2e1a392de8c82a42f466af1ecf3",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-10.mp4",
+      "fingerprint": {
+        "day": "2026-09-10",
+        "category": "class_spotlight",
+        "angle": "progression_trap",
+        "content_id": "bgp-2026-09-10-class-spotlight-class-9-5f2411c7406e",
+        "canonical_hash": "5f2411c7406e1670856b930dc2bad6edc4fd87a7cc79fd1aae7fca34846fb6f0",
+        "script_id": "bed8741c02054e178d9dedc5517c578a76e3a6f637aaecb3f2ff982bf58fefef",
+        "fact_kind": "class",
+        "fact_pk": 9,
+        "fact_name": "Pit Fighter",
+        "hook": "Pit Fighter progression stalls harder than players expect - flashy talents delay core growth by multiple.",
+        "body": "Pit Fighter's Flourish allows healing 1d6 on a melee hit, up to 3 times per day, but players often chase flashy abilities instead of maximizing this reliable sustain. Last Stand's ability to rise from dying at 1 HP on a natural 18-20 is a trap if it means delaying core Strength increases. Implacable offers advantage on Constitution saves against injury and poison, yet many overlook its consistent value for short-lived spikes. Prioritizing repeatable actions over rare spikes maintains consistent performance.",
+        "cta": "GMs: Remind players that delaying Strength for flashy Pit Fighter talents leads to dead levels and regret.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-10.mp4",
+        "video_sha256": "8e93a3d19d34f35fb5a1bf6724fc1b2145a0d2e1a392de8c82a42f466af1ecf3"
+      }
     }
   ]
 }

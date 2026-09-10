@@ -1463,6 +1463,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-09.mp4",
         "video_sha256": "e24f92b44e7742448fdbcfa5d4e28891485e3583eb409b70c1bca4f25ade6077"
       }
+    },
+    {
+      "published_utc": "2026-09-10T14:21:11Z",
+      "day": "2026-09-10",
+      "content_id": "bgp-2026-09-10-encounter-seed-creature-110-d291576777a9",
+      "publish_hash": "2fa0107c9b818f3db7930755a537b91b351af3b372769e4a31c7c09941420267",
+      "youtube_video_id": "dopltHD97lo",
+      "youtube_url": "https://www.youtube.com/watch?v=dopltHD97lo",
+      "video_sha256": "eef55ce39306178f3be471d9a0d7a8b647ab1981086248c39cc58a1001b31c75",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-10.mp4",
+      "fingerprint": {
+        "day": "2026-09-10",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-09-10-encounter-seed-creature-110-d291576777a9",
+        "canonical_hash": "d291576777a9b9e55460b743292efa5af2b7818039de62ada788bd58f2e64f45",
+        "script_id": "5e8a0abe3d3ac6ea67da7f0b67a04d248d83d13b5b2359457aba4f03118876d3",
+        "fact_kind": "creature",
+        "fact_pk": 110,
+        "fact_name": "Blood Boulder Pebble Swarm",
+        "hook": "Blood Boulder Pebble Swarm forces a costly choice.",
+        "body": "Blood Boulder Pebble Swarm's camouflage grants a +10 bonus to hide checks in rocky or forest terrain, often catching parties unaware. Its slam attack targets all creatures within a 20' x 20' area, which is frequently underestimated in terms of reach. Non-area attacks deal only half damage, leading to prolonged engagements if players don't adjust tactics. Prioritizing area-of-effect spells or abilities can mitigate the swarm's durability.",
+        "cta": "Judges: Remind them area-of-effect spells are their only hope; non-area attacks just tickle this thing.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-10.mp4",
+        "video_sha256": "eef55ce39306178f3be471d9a0d7a8b647ab1981086248c39cc58a1001b31c75"
+      }
     }
   ]
 }

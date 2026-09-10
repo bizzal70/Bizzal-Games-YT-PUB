@@ -796,5 +796,17 @@
       ],
       "tts_voice_id": "coral"
     }
+  },
+  "2026-09-10": {
+    "class_spotlight": {
+      "angle": "progression_trap",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "class_mentor",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

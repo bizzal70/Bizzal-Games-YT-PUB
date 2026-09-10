@@ -2202,6 +2202,21 @@
       "hook": "Homunculus disrupts party plans more than expected - telepathic bond with its master creates strategic depth.",
       "body": "With an Armor Class of 13 and only 4 hit points, the Homunculus isn't a tank, but its telepathic bond with its master is the real threat. This connection allows for seamless communication, enabling coordinated tactics that often go unnoticed. Ignoring the Homunculus to focus on its master misses the point; disrupting the bond through movement and target priority is the effective counter.",
       "cta": "DMs: Use the Homunculus's 40-foot fly speed to maintain its telepathic bond while staying out of melee range."
+    },
+    {
+      "published_utc": "2026-09-10T14:21:57Z",
+      "day": "2026-09-10",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-10-encounter-seed-creature-110-d291576777a9",
+      "instagram_post_id": "17896226100669310",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "eef55ce39306178f3be471d9a0d7a8b647ab1981086248c39cc58a1001b31c75",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-10.mp4",
+      "fact_name": "Blood Boulder Pebble Swarm",
+      "category": "encounter_seed",
+      "hook": "Blood Boulder Pebble Swarm forces a costly choice.",
+      "body": "Blood Boulder Pebble Swarm's camouflage grants a +10 bonus to hide checks in rocky or forest terrain, often catching parties unaware. Its slam attack targets all creatures within a 20' x 20' area, which is frequently underestimated in terms of reach. Non-area attacks deal only half damage, leading to prolonged engagements if players don't adjust tactics. Prioritizing area-of-effect spells or abilities can mitigate the swarm's durability.",
+      "cta": "Judges: Remind them area-of-effect spells are their only hope; non-area attacks just tickle this thing."
     }
   ]
 }

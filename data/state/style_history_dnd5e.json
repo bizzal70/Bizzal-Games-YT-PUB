@@ -804,5 +804,17 @@
       ],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-09-10": {
+    "spell_use_case": {
+      "angle": "best_moment",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

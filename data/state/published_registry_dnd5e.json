@@ -2110,6 +2110,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-09.mp4",
         "video_sha256": "ba679aef0235ee2e3a5954aab545ccffdd4bc163a9698838976214b49d82e909"
       }
+    },
+    {
+      "published_utc": "2026-09-10T14:25:12Z",
+      "day": "2026-09-10",
+      "content_id": "bgp-2026-09-10-spell-use-case-spell-srd-2024-water-walk-f94ee3185bdb",
+      "publish_hash": "3f82074ca4340412b1199fd8d9ac79152c8b1f0ff8301c41bdace69dba486584",
+      "youtube_video_id": "GBYijP918YM",
+      "youtube_url": "https://www.youtube.com/watch?v=GBYijP918YM",
+      "video_sha256": "b70b74b71d05a230686fa234978f34ea3fd2c4f4693116bf92a6a3324a519bb5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-10.mp4",
+      "fingerprint": {
+        "day": "2026-09-10",
+        "category": "spell_use_case",
+        "angle": "best_moment",
+        "content_id": "bgp-2026-09-10-spell-use-case-spell-srd-2024-water-walk-f94ee3185bdb",
+        "canonical_hash": "f94ee3185bdbb452dcd88226ec5e5d51d2f1895516e6ee338900f0dc0c4ee8a0",
+        "script_id": "7ad568e441c858197bac87ec3910ae2741e8ec1231b27fbaa778a34af5459b28",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_water-walk",
+        "fact_name": "Water Walk",
+        "hook": "Water Walk is often underestimated for its tactical value - it allows movement across any liquid surface for 1.",
+        "body": "Water Walk's real utility isn't in combat but in solving non-combat problems. It lets creatures move across liquids like water, acid, and even lava as if they were solid ground, though heat damage from lava still applies. The oversight is using it just to avoid difficult terrain, missing its potential to bypass obstacles or traps entirely. Deploy it when changing the environment alters the mission objectives, not just the odds of success in a skirmish.",
+        "cta": "DMs: Cast Water Walk as a ritual to bypass traps or obstacles like lava flows, not just to avoid difficult terrain.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-10.mp4",
+        "video_sha256": "b70b74b71d05a230686fa234978f34ea3fd2c4f4693116bf92a6a3324a519bb5"
+      }
     }
   ]
 }
