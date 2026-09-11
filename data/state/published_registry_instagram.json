@@ -2217,6 +2217,51 @@
       "hook": "Blood Boulder Pebble Swarm forces a costly choice.",
       "body": "Blood Boulder Pebble Swarm's camouflage grants a +10 bonus to hide checks in rocky or forest terrain, often catching parties unaware. Its slam attack targets all creatures within a 20' x 20' area, which is frequently underestimated in terms of reach. Non-area attacks deal only half damage, leading to prolonged engagements if players don't adjust tactics. Prioritizing area-of-effect spells or abilities can mitigate the swarm's durability.",
       "cta": "Judges: Remind them area-of-effect spells are their only hope; non-area attacks just tickle this thing."
+    },
+    {
+      "published_utc": "2026-09-11T14:25:17Z",
+      "day": "2026-09-11",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-11-class-spotlight-class-4-74d8b9caf4e4",
+      "instagram_post_id": "17936236527363381",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d329d349fe851e6a68ea7ceed0a0f7800824edfc571959b4d7729a2e88d3c680",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-11.mp4",
+      "fact_name": "Thief",
+      "category": "class_spotlight",
+      "hook": "Your peasant survived long enough to learn: Thief.",
+      "body": "Character tip: Thief. Thieves have a unique set of skills that use a d20 roll vs. a difficulty: Backstab (bonus to attack and damage from hiding; attack die improves to d24 at 5th), Sneak silently, Hide in shadows, Pick pockets, Climb walls. Strong turns come from repeatable decisions, not lucky spikes.",
+      "cta": "Judges: Remind your Thief to burn Luck for skill checks - it's the only way they'll earn it back."
+    },
+    {
+      "published_utc": "2026-09-11T14:30:29Z",
+      "day": "2026-09-11",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-11-rules-ruling-rule-srd-2024-damage-and-healing-immunity-af6fb96e1e14",
+      "instagram_post_id": "18114851152995846",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "0ba291910decceeacff043389f68e7498e2266c21482b6fdd6837775dea80dec",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-11.mp4",
+      "fact_name": "Immunity",
+      "category": "rules_ruling",
+      "hook": "Immunity often leads to misunderstandings in combat - it means no damage or condition effects at all.",
+      "body": "Immunity to a damage type means that any attack or effect dealing that type inflicts zero damage. Similarly, Immunity to a condition means the creature cannot be affected by that condition in any way. Assumptions of partial resistance or reduced effect result in wasted actions. Identifying and avoiding ineffective damage types or conditions against immune targets is essential.",
+      "cta": "DMs: Immunity means zero damage or effect; remind players not to waste actions on immune targets."
+    },
+    {
+      "published_utc": "2026-09-11T14:36:22Z",
+      "day": "2026-09-11",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-11-monster-tactic-creature-22-e94dc494cf4d",
+      "instagram_post_id": "18018399191875146",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "a1c857f85cc42b6112f059870ca922bf28d4e0120927f1842422c2fdc5b07386",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-11.mp4",
+      "fact_name": "Berserker",
+      "category": "monster_tactic",
+      "hook": "Berserker's Rage adds unexpected damage - +1d4 for 3 rounds once per day.",
+      "body": "Rage makes the Berserker immune to morale checks and increases its damage output by +1d4 for 3 rounds. Many players underestimate this burst potential, expecting the Berserker to fall back under pressure. Its attacks with a greataxe or spear, both at +2 to hit, become significantly more lethal during this window. Optimal play involves forcing the Berserker to waste Rage on less critical targets or during moments when it can't fully capitalize on the damage boost.",
+      "cta": "GMs: Trigger Rage when players cluster, forcing them to endure the +1d4 damage boost with no easy escape."
     }
   ]
 }

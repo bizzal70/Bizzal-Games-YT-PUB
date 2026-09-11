@@ -808,5 +808,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-09-11": {
+    "monster_tactic": {
+      "angle": "how_it_wins",
+      "voice": "torchbearer_ref",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "fable"
+    }
   }
 }

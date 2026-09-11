@@ -816,5 +816,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-09-11": {
+    "rules_ruling": {
+      "angle": "fast_ruling",
+      "voice": "friendly_vet",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

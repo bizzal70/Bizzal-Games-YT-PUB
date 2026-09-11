@@ -1746,6 +1746,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-10.mp4",
         "video_sha256": "8e93a3d19d34f35fb5a1bf6724fc1b2145a0d2e1a392de8c82a42f466af1ecf3"
       }
+    },
+    {
+      "published_utc": "2026-09-11T14:34:51Z",
+      "day": "2026-09-11",
+      "content_id": "bgp-2026-09-11-monster-tactic-creature-22-e94dc494cf4d",
+      "publish_hash": "1635a9a5846f1b4e629f8a766d23b33369486ca40b67dcc62f35500995902618",
+      "youtube_video_id": "9V-xewkBU94",
+      "youtube_url": "https://www.youtube.com/watch?v=9V-xewkBU94",
+      "video_sha256": "a1c857f85cc42b6112f059870ca922bf28d4e0120927f1842422c2fdc5b07386",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-11.mp4",
+      "fingerprint": {
+        "day": "2026-09-11",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-09-11-monster-tactic-creature-22-e94dc494cf4d",
+        "canonical_hash": "e94dc494cf4dd27b4c85fc24d4c91b28cdf25cde676f4d99fe73c09dedc6afd2",
+        "script_id": "94e446ef921a5ce22656dec48b6781ce4f39899e776ffac00e5a24c3f30bfc05",
+        "fact_kind": "creature",
+        "fact_pk": 22,
+        "fact_name": "Berserker",
+        "hook": "Berserker's Rage adds unexpected damage - +1d4 for 3 rounds once per day.",
+        "body": "Rage makes the Berserker immune to morale checks and increases its damage output by +1d4 for 3 rounds. Many players underestimate this burst potential, expecting the Berserker to fall back under pressure. Its attacks with a greataxe or spear, both at +2 to hit, become significantly more lethal during this window. Optimal play involves forcing the Berserker to waste Rage on less critical targets or during moments when it can't fully capitalize on the damage boost.",
+        "cta": "GMs: Trigger Rage when players cluster, forcing them to endure the +1d4 damage boost with no easy escape.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-11.mp4",
+        "video_sha256": "a1c857f85cc42b6112f059870ca922bf28d4e0120927f1842422c2fdc5b07386"
+      }
     }
   ]
 }

@@ -2136,6 +2136,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-10.mp4",
         "video_sha256": "b70b74b71d05a230686fa234978f34ea3fd2c4f4693116bf92a6a3324a519bb5"
       }
+    },
+    {
+      "published_utc": "2026-09-11T14:28:43Z",
+      "day": "2026-09-11",
+      "content_id": "bgp-2026-09-11-rules-ruling-rule-srd-2024-damage-and-healing-immunity-af6fb96e1e14",
+      "publish_hash": "fd7f8d5a79af885f74c13073675f3983c49fb5eafaca1097b7c582aae6273dc4",
+      "youtube_video_id": "_LqL09jaAig",
+      "youtube_url": "https://www.youtube.com/watch?v=_LqL09jaAig",
+      "video_sha256": "0ba291910decceeacff043389f68e7498e2266c21482b6fdd6837775dea80dec",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-11.mp4",
+      "fingerprint": {
+        "day": "2026-09-11",
+        "category": "rules_ruling",
+        "angle": "fast_ruling",
+        "content_id": "bgp-2026-09-11-rules-ruling-rule-srd-2024-damage-and-healing-immunity-af6fb96e1e14",
+        "canonical_hash": "af6fb96e1e14d0614d87c84052a7ae055c8cbf51f6633442b6223f5b9bd14ac4",
+        "script_id": "f56f872b4367c051298611ffddaa67d65c13c883dfe5295675fa1af16db129e2",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_damage-and-healing_immunity",
+        "fact_name": "Immunity",
+        "hook": "Immunity often leads to misunderstandings in combat - it means no damage or condition effects at all.",
+        "body": "Immunity to a damage type means that any attack or effect dealing that type inflicts zero damage. Similarly, Immunity to a condition means the creature cannot be affected by that condition in any way. Assumptions of partial resistance or reduced effect result in wasted actions. Identifying and avoiding ineffective damage types or conditions against immune targets is essential.",
+        "cta": "DMs: Immunity means zero damage or effect; remind players not to waste actions on immune targets.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-11.mp4",
+        "video_sha256": "0ba291910decceeacff043389f68e7498e2266c21482b6fdd6837775dea80dec"
+      },
+      "tone_lint_violation": "vague filler phrase: often leads to"
     }
   ]
 }

@@ -710,5 +710,15 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-11": {
+    "class_spotlight": {
+      "angle": "class_identity",
+      "voice": "grim_referee",
+      "tone": "neutral",
+      "persona": "class_mentor",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }
