@@ -207,6 +207,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-08-24-dnd5e-clip2.mp4",
         "video_sha256": "6b931dad64f5ca5669c640140a59c1e2b9e222a1033f3434add87fefc420b549"
       }
+    },
+    {
+      "published_utc": "2026-09-11T18:07:29Z",
+      "day": "2026-09-11-dnd5e-clip1",
+      "content_id": "clip:0c7851276382a37f",
+      "publish_hash": "7a071d50f206b4266de04d80e50e39f975347a105c332a1d88be704d0a48a9ad",
+      "youtube_video_id": "KT4xd3hqdHo",
+      "youtube_url": "https://www.youtube.com/watch?v=KT4xd3hqdHo",
+      "video_sha256": "b891d4d9abe23349033875cdf7e9c37965f35f3c943e17758eecae179b86c4d2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-11-dnd5e-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-09-11-dnd5e-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:0c7851276382a37f",
+        "canonical_hash": "",
+        "script_id": "0c7851276382a37f1ceb686e8ddf0a63c526147905eced555535cfda2ad602a6",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Favored by the Gods boosts critical rolls",
+        "hook": "Favored by the Gods boosts critical rolls",
+        "body": "Divine Soul sorcerers get Favored by the Gods at 1st level. Once per short rest, add 2d4 to a failed saving throw or missed attack roll. Use it strategically in high-stakes moments to turn failure into success.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-11-dnd5e-clip1.mp4",
+        "video_sha256": "b891d4d9abe23349033875cdf7e9c37965f35f3c943e17758eecae179b86c4d2"
+      }
+    },
+    {
+      "published_utc": "2026-09-11T18:09:09Z",
+      "day": "2026-09-11-dnd5e-clip2",
+      "content_id": "clip:c3ef7ff56948bf8b",
+      "publish_hash": "5f3dd42faa455f6e0026c1f491aa229d17c7ac3f88e359742debb2a6ee0f1f81",
+      "youtube_video_id": "xHg7jrdbIzk",
+      "youtube_url": "https://www.youtube.com/watch?v=xHg7jrdbIzk",
+      "video_sha256": "950edbb58f98131c0aae9c9401fb108caafce36b1615b1a36f9eac8d0d876fee",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-11-dnd5e-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-09-11-dnd5e-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:c3ef7ff56948bf8b",
+        "canonical_hash": "",
+        "script_id": "c3ef7ff56948bf8ba80d3e7c6fd8dadf72c3a5d0002d18b2844543200ebddaca",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Empowered Healing maximizes recovery",
+        "hook": "Empowered Healing maximizes recovery",
+        "body": "At level 6, Divine Souls gain Empowered Healing. Spend 1 sorcery point to reroll healing dice for you or an ally within 5 feet. Use in emergencies to boost hit points, but manage sorcery points carefully.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-11-dnd5e-clip2.mp4",
+        "video_sha256": "950edbb58f98131c0aae9c9401fb108caafce36b1615b1a36f9eac8d0d876fee"
+      }
     }
   ]
 }

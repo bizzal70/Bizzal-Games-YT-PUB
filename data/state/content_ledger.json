@@ -5037,6 +5037,39 @@
       "video_id": "18018399191875146",
       "day": "2026-09-11",
       "published_at": "2026-09-11T14:36:22+00:00"
+    },
+    {
+      "content_key": "6b4fca9448a7ac57f3ab3f57854a105732c1f26e11edcb4e1e2729725fa6fd5d",
+      "token_text": "5e divine dual list mastery soul spell",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Divine Soul: Dual Spell List Mastery in D&D 5e #dnd5e",
+      "video_id": "jwoBTfMU7hU",
+      "day": "2026-09-11",
+      "published_at": "2026-09-11T18:05:28+00:00"
+    },
+    {
+      "content_key": "5f9a02a2b8ab2590ca09fb687fde19116e1fba635fbc68d1a3e926bec644cb5c",
+      "token_text": "boost critical favored gods roll",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Favored by the Gods boosts critical rolls #dnd5e",
+      "video_id": "KT4xd3hqdHo",
+      "day": "2026-09-11-dnd5e-clip1",
+      "published_at": "2026-09-11T18:07:29+00:00"
+    },
+    {
+      "content_key": "3a8641407a5c1ae70c96c9c230a4018861c287815813867624c59979413ec5e3",
+      "token_text": "empowered healing maximize recovery",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Empowered Healing maximizes recovery #dnd5e",
+      "video_id": "xHg7jrdbIzk",
+      "day": "2026-09-11-dnd5e-clip2",
+      "published_at": "2026-09-11T18:09:09+00:00"
     }
   ]
 }
