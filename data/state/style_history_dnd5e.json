@@ -826,5 +826,17 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-09-12": {
+    "item_spotlight": {
+      "angle": "clever_use",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

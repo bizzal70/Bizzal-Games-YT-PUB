@@ -720,5 +720,15 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-09-12": {
+    "rules_myth": {
+      "angle": "why_people_get_it_wrong",
+      "voice": "survival_coach",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

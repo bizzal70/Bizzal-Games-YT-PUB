@@ -1515,6 +1515,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-11.mp4",
         "video_sha256": "d329d349fe851e6a68ea7ceed0a0f7800824edfc571959b4d7729a2e88d3c680"
       }
+    },
+    {
+      "published_utc": "2026-09-12T14:20:27Z",
+      "day": "2026-09-12",
+      "content_id": "bgp-2026-09-12-rules-myth-rule-1-885371125857",
+      "publish_hash": "d85b2eeed0a431ba2c70e2803f84a043f6306b888d3d7840d13e57e38bd9d826",
+      "youtube_video_id": "5cwHs5vifhY",
+      "youtube_url": "https://www.youtube.com/watch?v=5cwHs5vifhY",
+      "video_sha256": "028c0cb88a17f727f7b21e265315ce3108898cc078f572650eaab368fa072194",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-12.mp4",
+      "fingerprint": {
+        "day": "2026-09-12",
+        "category": "rules_myth",
+        "angle": "why_people_get_it_wrong",
+        "content_id": "bgp-2026-09-12-rules-myth-rule-1-885371125857",
+        "canonical_hash": "885371125857963024986812d63684ff745742b2b23057e98d6e5ceeae920ece",
+        "script_id": "3d1c86825c90d31b839ac49caf27c9746a8beed2556d72668e51694b56a116fa",
+        "fact_kind": "rule",
+        "fact_pk": 1,
+        "fact_name": "The Dice Chain",
+        "hook": "The Dice Chain replaces standard bonuses - shifts the die size from d3 to d30 instead.",
+        "body": "The Dice Chain in DCC swaps traditional +1/-1 bonuses for steps along a sequence of dice sizes: d3, d4, d5, d6, d7, d8, d10, d12, d14, d16, d20, d24, and d30. Misinterpretation occurs when players treat it as a simple numerical bonus, overlooking the exponential increase in probability range. Tracking each adjustment accurately is crucial, as stacking bonuses can escalate the die size quickly. Leveraging these shifts allows for significant changes in outcomes, especially when multiple bonuses apply.",
+        "cta": "Judges: When players stack bonuses, shift their dice up the chain - d3 to d30 - so they feel the weight of their choices.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-12.mp4",
+        "video_sha256": "028c0cb88a17f727f7b21e265315ce3108898cc078f572650eaab368fa072194"
+      }
     }
   ]
 }

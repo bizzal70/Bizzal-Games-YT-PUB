@@ -1772,6 +1772,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-11.mp4",
         "video_sha256": "a1c857f85cc42b6112f059870ca922bf28d4e0120927f1842422c2fdc5b07386"
       }
+    },
+    {
+      "published_utc": "2026-09-12T14:29:08Z",
+      "day": "2026-09-12",
+      "content_id": "bgp-2026-09-12-rules-ruling-rule-8-9bbbca52a7b7",
+      "publish_hash": "1df1050b5f6f033bd6bd6906730183398616ff63da056e7df0c6c370dfa2afce",
+      "youtube_video_id": "PN4XBJOhEUM",
+      "youtube_url": "https://www.youtube.com/watch?v=PN4XBJOhEUM",
+      "video_sha256": "66f76535d152239a072bd8d2599c8cbdc4be7f27ee78307a425ed90ef5851d55",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-12.mp4",
+      "fingerprint": {
+        "day": "2026-09-12",
+        "category": "rules_ruling",
+        "angle": "edge_case",
+        "content_id": "bgp-2026-09-12-rules-ruling-rule-8-9bbbca52a7b7",
+        "canonical_hash": "9bbbca52a7b7d04174f1a5d9898445ada467e417c932ab0618912b9db2362c9c",
+        "script_id": "370073ae3b69f9af40a8e7a21b6c41c23aa66ddc938bf963adbe014b8c28ac9b",
+        "fact_kind": "rule",
+        "fact_pk": 8,
+        "fact_name": "Dying and Death",
+        "hook": "Dying characters face a harsh reality - each round they must make a DC 15 CON check or die.",
+        "body": "At 0 HP, a character is considered dying and must make a DC 15 Constitution check each round to avoid death. Rolling a natural 20 stabilizes the character at 1 HP. Allies can attempt to stabilize a dying character with a DC 12 Wisdom check. Defining the timing order for these checks prevents disputes and ensures consistent application.",
+        "cta": "GMs: Enforce DC 15 CON checks at the start of each round for dying characters to maintain order and avoid disputes.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-12.mp4",
+        "video_sha256": "66f76535d152239a072bd8d2599c8cbdc4be7f27ee78307a425ed90ef5851d55"
+      }
     }
   ]
 }

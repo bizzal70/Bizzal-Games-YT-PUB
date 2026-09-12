@@ -2163,6 +2163,32 @@
         "video_sha256": "0ba291910decceeacff043389f68e7498e2266c21482b6fdd6837775dea80dec"
       },
       "tone_lint_violation": "vague filler phrase: often leads to"
+    },
+    {
+      "published_utc": "2026-09-12T14:24:58Z",
+      "day": "2026-09-12",
+      "content_id": "bgp-2026-09-12-item-spotlight-item-srd-2024-necklace-of-fireballs-8b24f7d1cf3f",
+      "publish_hash": "c3290cec4e6ff892c6f1ea40d4dd95f786864118b8bdd0a94058a7cb740bc9ef",
+      "youtube_video_id": "y01XQg9LYNk",
+      "youtube_url": "https://www.youtube.com/watch?v=y01XQg9LYNk",
+      "video_sha256": "8b3ac173c80960cdb92cb7903fa5f1e5f2b0588e14462ac2ae1464c5a3a91583",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-12.mp4",
+      "fingerprint": {
+        "day": "2026-09-12",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-09-12-item-spotlight-item-srd-2024-necklace-of-fireballs-8b24f7d1cf3f",
+        "canonical_hash": "8b24f7d1cf3fa06b0323e64d666a94945e5fb5ac1c79d376233dc0944b5dea31",
+        "script_id": "0d01ad87d849b36ac7f988d268d68b438d3510fcbf6a996af49e1e6cf15ac6a0",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_necklace-of-fireballs",
+        "fact_name": "Necklace of Fireballs",
+        "hook": "Necklace of Fireballs can escalate damage quickly - each additional bead adds 1d6 damage, up to 12d6 total.",
+        "body": "The Necklace of Fireballs allows you to throw beads up to 60 feet, each detonating as a level 3 Fireball with a DC 15 Dexterity save. Many players waste its potential by using a single bead in every encounter. Optimal use involves saving multiple beads to unleash a high-damage burst when facing clustered enemies or a critical threat.",
+        "cta": "DMs: Wait for enemies to cluster, then use the Necklace of Fireballs to hit them with multiple beads for maximum damage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-12.mp4",
+        "video_sha256": "8b3ac173c80960cdb92cb7903fa5f1e5f2b0588e14462ac2ae1464c5a3a91583"
+      }
     }
   ]
 }

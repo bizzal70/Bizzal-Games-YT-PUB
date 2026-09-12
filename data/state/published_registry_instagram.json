@@ -2262,6 +2262,51 @@
       "hook": "Berserker's Rage adds unexpected damage - +1d4 for 3 rounds once per day.",
       "body": "Rage makes the Berserker immune to morale checks and increases its damage output by +1d4 for 3 rounds. Many players underestimate this burst potential, expecting the Berserker to fall back under pressure. Its attacks with a greataxe or spear, both at +2 to hit, become significantly more lethal during this window. Optimal play involves forcing the Berserker to waste Rage on less critical targets or during moments when it can't fully capitalize on the damage boost.",
       "cta": "GMs: Trigger Rage when players cluster, forcing them to endure the +1d4 damage boost with no easy escape."
+    },
+    {
+      "published_utc": "2026-09-12T14:21:44Z",
+      "day": "2026-09-12",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-12-rules-myth-rule-1-885371125857",
+      "instagram_post_id": "17980202210904375",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "028c0cb88a17f727f7b21e265315ce3108898cc078f572650eaab368fa072194",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-12.mp4",
+      "fact_name": "The Dice Chain",
+      "category": "rules_myth",
+      "hook": "The Dice Chain replaces standard bonuses - shifts the die size from d3 to d30 instead.",
+      "body": "The Dice Chain in DCC swaps traditional +1/-1 bonuses for steps along a sequence of dice sizes: d3, d4, d5, d6, d7, d8, d10, d12, d14, d16, d20, d24, and d30. Misinterpretation occurs when players treat it as a simple numerical bonus, overlooking the exponential increase in probability range. Tracking each adjustment accurately is crucial, as stacking bonuses can escalate the die size quickly. Leveraging these shifts allows for significant changes in outcomes, especially when multiple bonuses apply.",
+      "cta": "Judges: When players stack bonuses, shift their dice up the chain - d3 to d30 - so they feel the weight of their choices."
+    },
+    {
+      "published_utc": "2026-09-12T14:25:58Z",
+      "day": "2026-09-12",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-12-item-spotlight-item-srd-2024-necklace-of-fireballs-8b24f7d1cf3f",
+      "instagram_post_id": "18078304172341075",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "8b3ac173c80960cdb92cb7903fa5f1e5f2b0588e14462ac2ae1464c5a3a91583",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-12.mp4",
+      "fact_name": "Necklace of Fireballs",
+      "category": "item_spotlight",
+      "hook": "Necklace of Fireballs can escalate damage quickly - each additional bead adds 1d6 damage, up to 12d6 total.",
+      "body": "The Necklace of Fireballs allows you to throw beads up to 60 feet, each detonating as a level 3 Fireball with a DC 15 Dexterity save. Many players waste its potential by using a single bead in every encounter. Optimal use involves saving multiple beads to unleash a high-damage burst when facing clustered enemies or a critical threat.",
+      "cta": "DMs: Wait for enemies to cluster, then use the Necklace of Fireballs to hit them with multiple beads for maximum damage."
+    },
+    {
+      "published_utc": "2026-09-12T14:30:07Z",
+      "day": "2026-09-12",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-12-rules-ruling-rule-8-9bbbca52a7b7",
+      "instagram_post_id": "18111463487028647",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "66f76535d152239a072bd8d2599c8cbdc4be7f27ee78307a425ed90ef5851d55",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-12.mp4",
+      "fact_name": "Dying and Death",
+      "category": "rules_ruling",
+      "hook": "Dying characters face a harsh reality - each round they must make a DC 15 CON check or die.",
+      "body": "At 0 HP, a character is considered dying and must make a DC 15 Constitution check each round to avoid death. Rolling a natural 20 stabilizes the character at 1 HP. Allies can attempt to stabilize a dying character with a DC 12 Wisdom check. Defining the timing order for these checks prevents disputes and ensures consistent application.",
+      "cta": "GMs: Enforce DC 15 CON checks at the start of each round for dying characters to maintain order and avoid disputes."
     }
   ]
 }

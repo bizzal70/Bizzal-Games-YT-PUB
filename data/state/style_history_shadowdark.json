@@ -820,5 +820,15 @@
       ],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-09-12": {
+    "rules_ruling": {
+      "angle": "edge_case",
+      "voice": "strict_referee",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "coral"
+    }
   }
 }
