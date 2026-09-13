@@ -838,5 +838,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-09-13": {
+    "encounter_seed": {
+      "angle": "moral_choice",
+      "voice": "gritty_dm",
+      "tone": "heroic",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

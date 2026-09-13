@@ -2307,6 +2307,51 @@
       "hook": "Dying characters face a harsh reality - each round they must make a DC 15 CON check or die.",
       "body": "At 0 HP, a character is considered dying and must make a DC 15 Constitution check each round to avoid death. Rolling a natural 20 stabilizes the character at 1 HP. Allies can attempt to stabilize a dying character with a DC 12 Wisdom check. Defining the timing order for these checks prevents disputes and ensures consistent application.",
       "cta": "GMs: Enforce DC 15 CON checks at the start of each round for dying characters to maintain order and avoid disputes."
+    },
+    {
+      "published_utc": "2026-09-13T14:21:06Z",
+      "day": "2026-09-13",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-13-monster-tactic-creature-127-2cbb76374081",
+      "instagram_post_id": "18623532157031654",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9098228b0acdd939c0a6287b2110274c4246fc25da9b67970f8512a8e210c742",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-13.mp4",
+      "fact_name": "Child of Bobugbubilz",
+      "category": "monster_tactic",
+      "hook": "Patron displeasure incoming: Child of Bobugbubilz.",
+      "body": "Child of Bobugbubilz has a swim speed of 30', allowing it to control water-based terrain effectively. Its bite attack deals 1d7 damage and triggers serrated bite and blood drain, forcing opponents into a difficult position. Vulnerability to cold results in taking double damage from cold-based attacks, making environmental awareness crucial. Position it in water to leverage its mobility advantage while forcing foes to engage on unfavorable terms.",
+      "cta": "Judges: Position the Child of Bobugbubilz in water to exploit its 30' swim speed and force foes into its blood drain."
+    },
+    {
+      "published_utc": "2026-09-13T14:26:03Z",
+      "day": "2026-09-13",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-13-encounter-seed-creature-monsters-multiverse-kobold-inventor-5c38d8d2b36d",
+      "instagram_post_id": "18052067828646943",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "72df4a2ab087400fd10c1cd7a7a014c4be03a8c81b2ace036ef635fb325ac26d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-13.mp4",
+      "fact_name": "Kobold Inventor",
+      "category": "encounter_seed",
+      "hook": "Open a Kobold Inventor scene with stakes on both sides, then force a choice that costs something either way.",
+      "body": "Kobold Inventor has an Armor Class of 12 and 13 hit points, making it vulnerable in direct combat. Its Intelligence score of 16 and Investigation bonus of +5 allow it to set up traps that can shift the balance of an encounter. Underestimating the impact of these traps leads to unnecessary damage and disruption. Prioritizing disarming traps before engaging minimizes potential risks.",
+      "cta": "DMs: make them choose what they can live with: save everyone at higher risk, or end the threat before collateral climbs."
+    },
+    {
+      "published_utc": "2026-09-13T14:29:56Z",
+      "day": "2026-09-13",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-13-item-spotlight-item-71-379b8743d2c9",
+      "instagram_post_id": "17902173774354804",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "4f4e000972448dff47630e21176d705101245e23f291fa482efbdbcde5ca508a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-13.mp4",
+      "fact_name": "Scarab Of Protection",
+      "category": "item_spotlight",
+      "hook": "Scarab Of Protection changes death to unconsciousness - DC 18 Constitution check required.",
+      "body": "The Scarab Of Protection offers a DC 18 Constitution check upon death, turning death into unconsciousness if successful. Misuse occurs when it's activated in every encounter without regard for its true impact. Reserve its use for critical moments where avoiding death alters the course of the game.",
+      "cta": "GMs: Remind players the Scarab Of Protection's DC 18 Constitution check is for when death truly matters, not every scrape."
     }
   ]
 }

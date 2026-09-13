@@ -1798,6 +1798,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-12.mp4",
         "video_sha256": "66f76535d152239a072bd8d2599c8cbdc4be7f27ee78307a425ed90ef5851d55"
       }
+    },
+    {
+      "published_utc": "2026-09-13T14:29:13Z",
+      "day": "2026-09-13",
+      "content_id": "bgp-2026-09-13-item-spotlight-item-71-379b8743d2c9",
+      "publish_hash": "a65c8db68b14f17b29404642f586158843b76facb880fbeb5fda2cc5b9e9c039",
+      "youtube_video_id": "OjNX6GavtGA",
+      "youtube_url": "https://www.youtube.com/watch?v=OjNX6GavtGA",
+      "video_sha256": "4f4e000972448dff47630e21176d705101245e23f291fa482efbdbcde5ca508a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-13.mp4",
+      "fingerprint": {
+        "day": "2026-09-13",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-09-13-item-spotlight-item-71-379b8743d2c9",
+        "canonical_hash": "379b8743d2c98fca3ea70e6bea50c68cf542f4889c194a36c1e9bf636d07a38a",
+        "script_id": "c8a0b816290c7cf0001ccae60f60f52b70944113aaeee73dd25714eabd49a09e",
+        "fact_kind": "item",
+        "fact_pk": 71,
+        "fact_name": "Scarab Of Protection",
+        "hook": "Scarab Of Protection changes death to unconsciousness - DC 18 Constitution check required.",
+        "body": "The Scarab Of Protection offers a DC 18 Constitution check upon death, turning death into unconsciousness if successful. Misuse occurs when it's activated in every encounter without regard for its true impact. Reserve its use for critical moments where avoiding death alters the course of the game.",
+        "cta": "GMs: Remind players the Scarab Of Protection's DC 18 Constitution check is for when death truly matters, not every scrape.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-13.mp4",
+        "video_sha256": "4f4e000972448dff47630e21176d705101245e23f291fa482efbdbcde5ca508a"
+      }
     }
   ]
 }

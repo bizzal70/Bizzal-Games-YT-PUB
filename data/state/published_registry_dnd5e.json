@@ -2189,6 +2189,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-12.mp4",
         "video_sha256": "8b3ac173c80960cdb92cb7903fa5f1e5f2b0588e14462ac2ae1464c5a3a91583"
       }
+    },
+    {
+      "published_utc": "2026-09-13T14:25:01Z",
+      "day": "2026-09-13",
+      "content_id": "bgp-2026-09-13-encounter-seed-creature-monsters-multiverse-kobold-inventor-5c38d8d2b36d",
+      "publish_hash": "d14ad44c3869ed19550e43f99e6937ea2c927c48da2f9bb1267783e5f18b96fb",
+      "youtube_video_id": "khLcd3Jklj8",
+      "youtube_url": "https://www.youtube.com/watch?v=khLcd3Jklj8",
+      "video_sha256": "72df4a2ab087400fd10c1cd7a7a014c4be03a8c81b2ace036ef635fb325ac26d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-13.mp4",
+      "fingerprint": {
+        "day": "2026-09-13",
+        "category": "encounter_seed",
+        "angle": "moral_choice",
+        "content_id": "bgp-2026-09-13-encounter-seed-creature-monsters-multiverse-kobold-inventor-5c38d8d2b36d",
+        "canonical_hash": "5c38d8d2b36de6448ac2f9edbee66e4c5db61d040a2ca6be132e36b9b7221e39",
+        "script_id": "a761927a41468fffa8e97fbd919d4aa4daff98b45eb2432ab50ce4279a073a09",
+        "fact_kind": "creature",
+        "fact_pk": "monsters-multiverse_kobold-inventor",
+        "fact_name": "Kobold Inventor",
+        "hook": "Open a Kobold Inventor scene with stakes on both sides, then force a choice that costs something either way.",
+        "body": "Kobold Inventor has an Armor Class of 12 and 13 hit points, making it vulnerable in direct combat. Its Intelligence score of 16 and Investigation bonus of +5 allow it to set up traps that can shift the balance of an encounter. Underestimating the impact of these traps leads to unnecessary damage and disruption. Prioritizing disarming traps before engaging minimizes potential risks.",
+        "cta": "DMs: make them choose what they can live with: save everyone at higher risk, or end the threat before collateral climbs.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-13.mp4",
+        "video_sha256": "72df4a2ab087400fd10c1cd7a7a014c4be03a8c81b2ace036ef635fb325ac26d"
+      }
     }
   ]
 }

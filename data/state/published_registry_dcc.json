@@ -1541,6 +1541,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-12.mp4",
         "video_sha256": "028c0cb88a17f727f7b21e265315ce3108898cc078f572650eaab368fa072194"
       }
+    },
+    {
+      "published_utc": "2026-09-13T14:20:20Z",
+      "day": "2026-09-13",
+      "content_id": "bgp-2026-09-13-monster-tactic-creature-127-2cbb76374081",
+      "publish_hash": "714403f713c026771ee95bd134ce2b4f1a51162d85c108d9bc25dbfddef4ab7a",
+      "youtube_video_id": "-oB7vPHbTl0",
+      "youtube_url": "https://www.youtube.com/watch?v=-oB7vPHbTl0",
+      "video_sha256": "9098228b0acdd939c0a6287b2110274c4246fc25da9b67970f8512a8e210c742",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-13.mp4",
+      "fingerprint": {
+        "day": "2026-09-13",
+        "category": "monster_tactic",
+        "angle": "terrain_synergy",
+        "content_id": "bgp-2026-09-13-monster-tactic-creature-127-2cbb76374081",
+        "canonical_hash": "2cbb76374081c0783274d672fff36d2e8509b6464db7749247d4584302d27cb9",
+        "script_id": "8d8e1a9ac50cb664c7f48d5818e43ab214d5b83c03f14057a72584f642e98792",
+        "fact_kind": "creature",
+        "fact_pk": 127,
+        "fact_name": "Child of Bobugbubilz",
+        "hook": "Patron displeasure incoming: Child of Bobugbubilz.",
+        "body": "Child of Bobugbubilz has a swim speed of 30', allowing it to control water-based terrain effectively. Its bite attack deals 1d7 damage and triggers serrated bite and blood drain, forcing opponents into a difficult position. Vulnerability to cold results in taking double damage from cold-based attacks, making environmental awareness crucial. Position it in water to leverage its mobility advantage while forcing foes to engage on unfavorable terms.",
+        "cta": "Judges: Position the Child of Bobugbubilz in water to exploit its 30' swim speed and force foes into its blood drain.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-13.mp4",
+        "video_sha256": "9098228b0acdd939c0a6287b2110274c4246fc25da9b67970f8512a8e210c742"
+      }
     }
   ]
 }
