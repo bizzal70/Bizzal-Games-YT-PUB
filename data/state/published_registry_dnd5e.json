@@ -2215,6 +2215,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-13.mp4",
         "video_sha256": "72df4a2ab087400fd10c1cd7a7a014c4be03a8c81b2ace036ef635fb325ac26d"
       }
+    },
+    {
+      "published_utc": "2026-09-14T14:29:47Z",
+      "day": "2026-09-14",
+      "content_id": "bgp-2026-09-14-rules-myth-rule-srd-2024-proficiency-skill-proficiencies-5368e220fa2d",
+      "publish_hash": "956ef2b7c1c2c69509e63d34cc514286b12654d31719255aafe757a33ac71f28",
+      "youtube_video_id": "_vgC4op4M2I",
+      "youtube_url": "https://www.youtube.com/watch?v=_vgC4op4M2I",
+      "video_sha256": "862e224f08484084e9d38615f179c3529a5b9e87a4fa38432ba505368530fd1e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-14.mp4",
+      "fingerprint": {
+        "day": "2026-09-14",
+        "category": "rules_myth",
+        "angle": "quick_example",
+        "content_id": "bgp-2026-09-14-rules-myth-rule-srd-2024-proficiency-skill-proficiencies-5368e220fa2d",
+        "canonical_hash": "5368e220fa2dbd9f777749498dcbf475e1d19a7e734ed0a5268e6070dbd3147f",
+        "script_id": "f4dbf859801d787991ef36497c9f5cf7dd8ff66e9385e359d8e0f5592581818d",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_proficiency_skill-proficiencies",
+        "fact_name": "Skill Proficiencies",
+        "hook": "Skill Proficiencies often mislead players about ability checks - they only modify the d20 roll.",
+        "body": "Skill Proficiencies add a proficiency bonus to specific ability checks, but they don't guarantee success. Players frequently assume a high bonus means automatic success, overlooking the DC set by the DM. The correct approach is using Skill Proficiencies to strategically tackle tasks aligned with the character's strengths, not as a substitute for planning or teamwork.",
+        "cta": "DMs: Remind players that Skill Proficiencies add a bonus to ability checks but don't bypass the DC you've set.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-14.mp4",
+        "video_sha256": "862e224f08484084e9d38615f179c3529a5b9e87a4fa38432ba505368530fd1e"
+      }
     }
   ]
 }

@@ -2352,6 +2352,36 @@
       "hook": "Scarab Of Protection changes death to unconsciousness - DC 18 Constitution check required.",
       "body": "The Scarab Of Protection offers a DC 18 Constitution check upon death, turning death into unconsciousness if successful. Misuse occurs when it's activated in every encounter without regard for its true impact. Reserve its use for critical moments where avoiding death alters the course of the game.",
       "cta": "GMs: Remind players the Scarab Of Protection's DC 18 Constitution check is for when death truly matters, not every scrape."
+    },
+    {
+      "published_utc": "2026-09-14T14:26:23Z",
+      "day": "2026-09-14",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-14-spell-use-case-spell-76-6d6c70b25e8b",
+      "instagram_post_id": "18067610012759462",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "85dd48b08d3a00bf4f6c0b28fce872aa388df0722c2aaf25243af0dd42f8d307",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-14.mp4",
+      "fact_name": "Magic Mouth",
+      "category": "spell_use_case",
+      "hook": "Magic Mouth often fails to deliver its potential impact - the spell's duration can extend beyond 1 hour.",
+      "body": "Magic Mouth requires a wizard spell check to set a trigger and deliver a message, with the range and duration varying based on the result. The spell is frequently wasted when used only for simple alerts, ignoring its capacity for complex interactions and extended durations. Optimal use involves setting nuanced triggers that manipulate the encounter environment or mislead opponents, rather than merely announcing intruders.",
+      "cta": "Judges: Roll high on the spell check to set Magic Mouth's trigger for strategic misdirection - use its full potential beyond mere alerts."
+    },
+    {
+      "published_utc": "2026-09-14T14:30:45Z",
+      "day": "2026-09-14",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-14-rules-myth-rule-srd-2024-proficiency-skill-proficiencies-5368e220fa2d",
+      "instagram_post_id": "17992534062044686",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "862e224f08484084e9d38615f179c3529a5b9e87a4fa38432ba505368530fd1e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-14.mp4",
+      "fact_name": "Skill Proficiencies",
+      "category": "rules_myth",
+      "hook": "Skill Proficiencies often mislead players about ability checks - they only modify the d20 roll.",
+      "body": "Skill Proficiencies add a proficiency bonus to specific ability checks, but they don't guarantee success. Players frequently assume a high bonus means automatic success, overlooking the DC set by the DM. The correct approach is using Skill Proficiencies to strategically tackle tasks aligned with the character's strengths, not as a substitute for planning or teamwork.",
+      "cta": "DMs: Remind players that Skill Proficiencies add a bonus to ability checks but don't bypass the DC you've set."
     }
   ]
 }

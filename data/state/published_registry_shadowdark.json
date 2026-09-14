@@ -1824,6 +1824,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-13.mp4",
         "video_sha256": "4f4e000972448dff47630e21176d705101245e23f291fa482efbdbcde5ca508a"
       }
+    },
+    {
+      "published_utc": "2026-09-14T14:34:28Z",
+      "day": "2026-09-14",
+      "content_id": "bgp-2026-09-14-encounter-seed-creature-23-8e6f7e8725e1",
+      "publish_hash": "828d4a0ee8efed95a293cf34a072416160528dfd245347a6e5736c2b81c9ab0c",
+      "youtube_video_id": "TAqsXxxYjzE",
+      "youtube_url": "https://www.youtube.com/watch?v=TAqsXxxYjzE",
+      "video_sha256": "28d0a242595e3c2c29b1226df40a7ac40fc5a95103248b38f1f3a646b2d3ff5b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-14.mp4",
+      "fingerprint": {
+        "day": "2026-09-14",
+        "category": "encounter_seed",
+        "angle": "moral_choice",
+        "content_id": "bgp-2026-09-14-encounter-seed-creature-23-8e6f7e8725e1",
+        "canonical_hash": "8e6f7e8725e10b6d28d04a6b92d06ced8be09c5a2f03f990a544d89410450ff1",
+        "script_id": "ab09e3dde52eda81a941221ceccb0478bc92121c3bc4ac1395fb18d06dfabec9",
+        "fact_kind": "creature",
+        "fact_pk": 23,
+        "fact_name": "Boar",
+        "hook": "Open a Boar scene with stakes on both sides, then force a choice that costs something either way.",
+        "body": "The Boar's Gore talent triggers when both tusks hit the same target, adding an extra die of damage. Underestimating this ability leads to unexpected damage spikes, as players expect only a single 1d6 hit. Mitigating this risk involves using terrain or tactics to prevent the Boar from landing both attacks on a single target in the same round.",
+        "cta": "GMs: Force players to choose between saving a companion from the Boar's double tusk attack or pursuing their objective.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-14.mp4",
+        "video_sha256": "28d0a242595e3c2c29b1226df40a7ac40fc5a95103248b38f1f3a646b2d3ff5b"
+      }
     }
   ]
 }
