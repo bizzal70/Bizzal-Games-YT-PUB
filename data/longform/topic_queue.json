@@ -1,6 +1,94 @@
 [
   {
     "system": "dnd5e",
+    "title": "Underdark Subclasses: Breaking Down the New Barriers",
+    "angle": "Explore the latest Underdark subclasses shaking up the game with unique abilities and synergies.",
+    "rationale": "Dungeons & Dragons is testing new Underdark subclasses and species, making it a hot topic.",
+    "fixture_hint": "class",
+    "search_keyword": "Dungeons & Dragons testing out even more Underdark subclasses and species",
+    "created_date": "2026-09-14",
+    "status": "pending",
+    "brief_id": "084995c14433"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Species Spotlight: New Faces in the Underdark",
+    "angle": "Delve into the newly introduced species of the Underdark and their impact on gameplay.",
+    "rationale": "The introduction of new Underdark species is a significant development in D&D 5E.",
+    "fixture_hint": "creature",
+    "search_keyword": "Dungeons & Dragons testing out even more Underdark subclasses and species",
+    "created_date": "2026-09-14",
+    "status": "pending",
+    "brief_id": "bfa128799b69"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's Underdark: Spells that Chill",
+    "angle": "Uncover the eerie new spells emerging from Shadowdark's version of the Underdark.",
+    "rationale": "With Dungeons & Dragons exploring the Underdark, players are curious about similar Shadowdark spells.",
+    "fixture_hint": "spell",
+    "search_keyword": "Dungeons & Dragons testing out even more Underdark subclasses and species",
+    "created_date": "2026-09-14",
+    "status": "pending",
+    "brief_id": "c933e5626925"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Ravenloft's Influence: Shadowdark's New Terrifying Creatures",
+    "angle": "Investigate how Shadowdark's latest creature additions are inspired by the Ravenloft setting.",
+    "rationale": "Ravenloft is trending due to Netflix developments, making creature comparisons relevant.",
+    "fixture_hint": "creature",
+    "search_keyword": "Ravenloft TV series in development by Netflix",
+    "created_date": "2026-09-14",
+    "status": "pending",
+    "brief_id": "370ba8cf21a0"
+  },
+  {
+    "system": "shadowdark",
+    "title": "The Dark Arts: Shadowdark's Forbidden Spell Collection",
+    "angle": "Dive into Shadowdark's collection of forbidden spells that push the boundaries of magic.",
+    "rationale": "New spell innovations in RPGs are a key topic given the recent Arcana Unleashed preview.",
+    "fixture_hint": "spell",
+    "search_keyword": "Podcast #412 Livestream: Arcana Unleashed previewed",
+    "created_date": "2026-09-14",
+    "status": "pending",
+    "brief_id": "1a8ae81cae36"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's New Class: The Warlock's Unholy Pact",
+    "angle": "Examine the mechanics and lore behind DCC's latest warlock class and its unique pacts.",
+    "rationale": "New class information is timely with ongoing discussions about warlocks in various settings.",
+    "fixture_hint": "class",
+    "search_keyword": "Ravenloft's New Warlock Class: Powers Unleashed",
+    "created_date": "2026-09-14",
+    "status": "pending",
+    "brief_id": "b54312eb3e5f"
+  },
+  {
+    "system": "dcc",
+    "title": "Mystic Forces: DCC's Runes of Power",
+    "angle": "Explore how DCC's runes are redefining dwarven magic and strategy in campaigns.",
+    "rationale": "Runes of Power are gaining interest due to recent DCC gameplay releases.",
+    "fixture_hint": "item",
+    "search_keyword": "DCC's Runes of Power: The Tome for Dwarves",
+    "created_date": "2026-09-14",
+    "status": "pending",
+    "brief_id": "13e48e2a95dc"
+  },
+  {
+    "system": "dcc",
+    "title": "Cosmic Horrors: The Starlane Scum Unveiled",
+    "angle": "Discover the alien menace of the Starlane Scum and their impact on DCC narratives.",
+    "rationale": "New creature threats like the Starlane Scum are a focal point in DCC discussions.",
+    "fixture_hint": "creature",
+    "search_keyword": "DCC's New Monster: The Starlane Scum",
+    "created_date": "2026-09-14",
+    "status": "pending",
+    "brief_id": "7d7e2aa506c2"
+  },
+  {
+    "system": "dnd5e",
     "title": "Ravenloft's New Warlock Gameplay Revealed",
     "angle": "Explore the unique abilities and gameplay mechanics of the new Warlock class set in Ravenloft.",
     "rationale": "With recent headlines about the Ravenloft TV series and game demonstrations, interest in Ravenloft-related content is high.",
