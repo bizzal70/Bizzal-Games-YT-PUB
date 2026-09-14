@@ -259,6 +259,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-11-dnd5e-clip2.mp4",
         "video_sha256": "950edbb58f98131c0aae9c9401fb108caafce36b1615b1a36f9eac8d0d876fee"
       }
+    },
+    {
+      "published_utc": "2026-09-14T18:04:52Z",
+      "day": "2026-09-14-dnd5e-clip1",
+      "content_id": "clip:a601ea85851251c7",
+      "publish_hash": "302190a4b21dc7bacc976e46a011d4dab0f5b449d32e1bd68daff249f04ca6a4",
+      "youtube_video_id": "_oyicTIQQWY",
+      "youtube_url": "https://www.youtube.com/watch?v=_oyicTIQQWY",
+      "video_sha256": "500e4e804f8abebb71063c17e0f8c22b422133e94fd6f99064df50d2f60e63ce",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-14-dnd5e-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-09-14-dnd5e-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:a601ea85851251c7",
+        "canonical_hash": "",
+        "script_id": "a601ea85851251c7a84436549166cffb0d22626f0efaf5aca2cf271818b24d06",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Healing Light uses bonus action efficiently",
+        "hook": "Healing Light uses bonus action efficiently",
+        "body": "Celestial warlocks use Healing Light as a bonus action. Restore hit points with d6s, up to your Charisma modifier, without spending spell slots. Use strategically for allies in critical condition, not at first damage.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-14-dnd5e-clip1.mp4",
+        "video_sha256": "500e4e804f8abebb71063c17e0f8c22b422133e94fd6f99064df50d2f60e63ce"
+      }
+    },
+    {
+      "published_utc": "2026-09-14T18:06:19Z",
+      "day": "2026-09-14-dnd5e-clip2",
+      "content_id": "clip:cf6dc444931d1405",
+      "publish_hash": "e452d9ff66b18e79c7f7e15f0c6948dfecc33aff85e2c85a9919ae038d39a348",
+      "youtube_video_id": "2mErl9A2mLU",
+      "youtube_url": "https://www.youtube.com/watch?v=2mErl9A2mLU",
+      "video_sha256": "40083c48588773a33abaa4ce3fca00d30500105acb26e171f2ee03b7e453b943",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-14-dnd5e-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-09-14-dnd5e-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:cf6dc444931d1405",
+        "canonical_hash": "",
+        "script_id": "cf6dc444931d140539c2a51e4f875ac360cc258afef9bfbb07fb147ee84f74ea",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Sacred Flame targets Dexterity, not AC",
+        "hook": "Sacred Flame targets Dexterity, not AC",
+        "body": "Sacred Flame forces a Dexterity save, bypassing AC. This makes it effective against high AC foes with low Dexterity. Use against undead or creatures vulnerable to radiant damage for maximum impact.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-14-dnd5e-clip2.mp4",
+        "video_sha256": "40083c48588773a33abaa4ce3fca00d30500105acb26e171f2ee03b7e453b943"
+      }
+    },
+    {
+      "published_utc": "2026-09-14T18:07:45Z",
+      "day": "2026-09-14-dnd5e-clip3",
+      "content_id": "clip:f53b9b0266c78ae1",
+      "publish_hash": "f3a971e855fbdd59e83cd3288ce8de8a9fb0a4726a0911353524da1aa1a18cd4",
+      "youtube_video_id": "aAVzF70BOQY",
+      "youtube_url": "https://www.youtube.com/watch?v=aAVzF70BOQY",
+      "video_sha256": "0a070003ad64a82ca318327a707aca317fa25f8a9096c40ddad42801ed8a36cb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-14-dnd5e-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-09-14-dnd5e-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:f53b9b0266c78ae1",
+        "canonical_hash": "",
+        "script_id": "f53b9b0266c78ae1a91faffcc7dae7962d55d2a536cfa3b329dc83d4da12eaf7",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Expanded spell list offers unique healing",
+        "hook": "Expanded spell list offers unique healing",
+        "body": "Celestial warlocks gain cure wounds and revivify, rare for warlocks. Lesser restoration removes blindness or paralysis, while greater restoration cures exhaustion. These spells provide crucial support options.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-14-dnd5e-clip3.mp4",
+        "video_sha256": "0a070003ad64a82ca318327a707aca317fa25f8a9096c40ddad42801ed8a36cb"
+      }
     }
   ]
 }

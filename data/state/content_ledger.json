@@ -5257,6 +5257,50 @@
       "video_id": "TAqsXxxYjzE",
       "day": "2026-09-14",
       "published_at": "2026-09-14T14:34:28+00:00"
+    },
+    {
+      "content_key": "b8f88b7d385e27748ff120ed1cfc13f89a25d2fed12ef4ccfe39204d2ac261ac",
+      "token_text": "action advantage bonu celestial healing light",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "The Celestial: Healing Light's Bonus Action Advantage #dnd5e",
+      "video_id": "r1iRAUqBIAQ",
+      "day": "2026-09-14",
+      "published_at": "2026-09-14T18:02:55+00:00"
+    },
+    {
+      "content_key": "8c914321cd265f93f456e259fa7570a2dd85065db67e52952ee5dab3148d23c8",
+      "token_text": "action bonu efficiently healing light uses",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Healing Light uses bonus action efficiently #dnd5e",
+      "video_id": "_oyicTIQQWY",
+      "day": "2026-09-14-dnd5e-clip1",
+      "published_at": "2026-09-14T18:04:52+00:00"
+    },
+    {
+      "content_key": "761218e171eb2400c76b51ff2e10ccd014c68dd9e6d8ec3a59c2d6b4f7d2244d",
+      "token_text": "ac dexterity flame sacred target",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Sacred Flame targets Dexterity, not AC #dnd5e",
+      "video_id": "2mErl9A2mLU",
+      "day": "2026-09-14-dnd5e-clip2",
+      "published_at": "2026-09-14T18:06:19+00:00"
+    },
+    {
+      "content_key": "ff9960c0323fcc4f8e65c261e466151bc3cfe58691d073322dcb9f1758490603",
+      "token_text": "expanded healing list offer spell unique",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Expanded spell list offers unique healing #dnd5e",
+      "video_id": "aAVzF70BOQY",
+      "day": "2026-09-14-dnd5e-clip3",
+      "published_at": "2026-09-14T18:07:45+00:00"
     }
   ]
 }
