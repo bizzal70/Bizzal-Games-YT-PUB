@@ -1593,6 +1593,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-14.mp4",
         "video_sha256": "85dd48b08d3a00bf4f6c0b28fce872aa388df0722c2aaf25243af0dd42f8d307"
       }
+    },
+    {
+      "published_utc": "2026-09-15T14:30:42Z",
+      "day": "2026-09-15",
+      "content_id": "bgp-2026-09-15-rules-ruling-rule-17-bdc5b628fa07",
+      "publish_hash": "3cf72da2ea24f8ab07c9126ff691100e86ee1d376606df78f5c4ba3094a7f83f",
+      "youtube_video_id": "PHsAPnsr7Oc",
+      "youtube_url": "https://www.youtube.com/watch?v=PHsAPnsr7Oc",
+      "video_sha256": "c8e6433e43e74e5c15c242d50af859be2d34fa108b13e5ab160374315a93eafa",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-15.mp4",
+      "fingerprint": {
+        "day": "2026-09-15",
+        "category": "rules_ruling",
+        "angle": "dice_chain_use",
+        "content_id": "bgp-2026-09-15-rules-ruling-rule-17-bdc5b628fa07",
+        "canonical_hash": "bdc5b628fa072622c7c269d652967f989d0e62d4339a3efc2d8583b62f8ff034",
+        "script_id": "698341fc7cb01d08fc04bbaaeed4c39966134e3213a59e1c19b23e24652fe9e3",
+        "fact_kind": "rule",
+        "fact_pk": 17,
+        "fact_name": "Spell Duels",
+        "hook": "Spell Duels catch players off-guard with their complexity - opposed checks, phlogiston disturbances.",
+        "body": "Spell Duels require opposed checks between wizards, with the defender having the option to counterspell. Colliding spells trigger phlogiston disturbances, escalating the duel with potential spellburn and corruption. Overlooking the risk of these disturbances can lead to unexpected consequences like corruption or even being reduced to ash. Anticipating these escalations and preparing for counterspell opportunities is key.",
+        "cta": "Judges: Spell Duels demand you enforce opposed checks and track phlogiston disturbances, or your wizards will burn themselves to ash.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-15.mp4",
+        "video_sha256": "c8e6433e43e74e5c15c242d50af859be2d34fa108b13e5ab160374315a93eafa"
+      }
     }
   ]
 }

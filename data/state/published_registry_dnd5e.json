@@ -2241,6 +2241,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-14.mp4",
         "video_sha256": "862e224f08484084e9d38615f179c3529a5b9e87a4fa38432ba505368530fd1e"
       }
+    },
+    {
+      "published_utc": "2026-09-15T14:35:32Z",
+      "day": "2026-09-15",
+      "content_id": "bgp-2026-09-15-class-spotlight-class-srd-2024-circle-of-the-land-7256455f0fdc",
+      "publish_hash": "c6f86af5c3ebf2829397efd0a088e8cba72a6474edfe7a95e4009027b9bc4efa",
+      "youtube_video_id": "aavJHctqCuU",
+      "youtube_url": "https://www.youtube.com/watch?v=aavJHctqCuU",
+      "video_sha256": "5fc423efa0ad2420477eb94e52c95e24283053a63694316262b83729c00eb270",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-15.mp4",
+      "fingerprint": {
+        "day": "2026-09-15",
+        "category": "class_spotlight",
+        "angle": "subclass_identity",
+        "content_id": "bgp-2026-09-15-class-spotlight-class-srd-2024-circle-of-the-land-7256455f0fdc",
+        "canonical_hash": "7256455f0fdc2687e75c7294f56dc9952731b526321e72e9b579792085ba1fef",
+        "script_id": "4315188a5b25dd7d86e9d85ad85f68878545192b650aa062868918bbfc10331a",
+        "fact_kind": "class",
+        "fact_pk": "srd-2024_circle-of-the-land",
+        "fact_name": "Circle of the Land",
+        "hook": "Circle of the Land Druids can recover spell slots - Natural Recovery allows regaining up to half your druid.",
+        "body": "Circle of the Land emphasizes spellcasting efficiency. Natural Recovery is often underutilized by players who forget to plan for its once-per-day use. Efficient play involves using it strategically after a short rest to maximize spellcasting potential throughout the day. This subclass excels when its features are focused on enhancing spellcasting rather than splitting focus across multiple roles.",
+        "cta": "DMs: Remind players to use Natural Recovery after a short rest to regain spell slots, maximizing their Circle of the Land efficiency.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-15.mp4",
+        "video_sha256": "5fc423efa0ad2420477eb94e52c95e24283053a63694316262b83729c00eb270"
+      }
     }
   ]
 }

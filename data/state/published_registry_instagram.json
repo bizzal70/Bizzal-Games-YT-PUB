@@ -2382,6 +2382,36 @@
       "hook": "Skill Proficiencies often mislead players about ability checks - they only modify the d20 roll.",
       "body": "Skill Proficiencies add a proficiency bonus to specific ability checks, but they don't guarantee success. Players frequently assume a high bonus means automatic success, overlooking the DC set by the DM. The correct approach is using Skill Proficiencies to strategically tackle tasks aligned with the character's strengths, not as a substitute for planning or teamwork.",
       "cta": "DMs: Remind players that Skill Proficiencies add a bonus to ability checks but don't bypass the DC you've set."
+    },
+    {
+      "published_utc": "2026-09-15T14:31:28Z",
+      "day": "2026-09-15",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-15-rules-ruling-rule-17-bdc5b628fa07",
+      "instagram_post_id": "18015781490930473",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c8e6433e43e74e5c15c242d50af859be2d34fa108b13e5ab160374315a93eafa",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-15.mp4",
+      "fact_name": "Spell Duels",
+      "category": "rules_ruling",
+      "hook": "Spell Duels catch players off-guard with their complexity - opposed checks, phlogiston disturbances.",
+      "body": "Spell Duels require opposed checks between wizards, with the defender having the option to counterspell. Colliding spells trigger phlogiston disturbances, escalating the duel with potential spellburn and corruption. Overlooking the risk of these disturbances can lead to unexpected consequences like corruption or even being reduced to ash. Anticipating these escalations and preparing for counterspell opportunities is key.",
+      "cta": "Judges: Spell Duels demand you enforce opposed checks and track phlogiston disturbances, or your wizards will burn themselves to ash."
+    },
+    {
+      "published_utc": "2026-09-15T14:37:23Z",
+      "day": "2026-09-15",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-15-class-spotlight-class-srd-2024-circle-of-the-land-7256455f0fdc",
+      "instagram_post_id": "18019717061722404",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "5fc423efa0ad2420477eb94e52c95e24283053a63694316262b83729c00eb270",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-15.mp4",
+      "fact_name": "Circle of the Land",
+      "category": "class_spotlight",
+      "hook": "Circle of the Land Druids can recover spell slots - Natural Recovery allows regaining up to half your druid.",
+      "body": "Circle of the Land emphasizes spellcasting efficiency. Natural Recovery is often underutilized by players who forget to plan for its once-per-day use. Efficient play involves using it strategically after a short rest to maximize spellcasting potential throughout the day. This subclass excels when its features are focused on enhancing spellcasting rather than splitting focus across multiple roles.",
+      "cta": "DMs: Remind players to use Natural Recovery after a short rest to regain spell slots, maximizing their Circle of the Land efficiency."
     }
   ]
 }

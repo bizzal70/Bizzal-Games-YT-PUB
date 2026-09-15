@@ -1850,6 +1850,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-14.mp4",
         "video_sha256": "28d0a242595e3c2c29b1226df40a7ac40fc5a95103248b38f1f3a646b2d3ff5b"
       }
+    },
+    {
+      "published_utc": "2026-09-15T14:40:52Z",
+      "day": "2026-09-15",
+      "content_id": "bgp-2026-09-15-rules-myth-rule-11-7bbff14ebf0a",
+      "publish_hash": "b26a58941212f19ede6617326c79dcdb40faf0310a192d5fb73cdb15015da35b",
+      "youtube_video_id": "7lOt19XLpqU",
+      "youtube_url": "https://www.youtube.com/watch?v=7lOt19XLpqU",
+      "video_sha256": "9deb93ca0511cf9a00d84f528a4f0ab366b686ad98110611b92ef2d01c251f6b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-15.mp4",
+      "fingerprint": {
+        "day": "2026-09-15",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-09-15-rules-myth-rule-11-7bbff14ebf0a",
+        "canonical_hash": "7bbff14ebf0a05c21c9b801d2bffc2db8c9c5c4ff372567d98f87847f7cf0873",
+        "script_id": "d154bfbc084036cbd1963e41f27b5417c72ba1880e4d07532c1d684fca27b5e6",
+        "fact_kind": "rule",
+        "fact_pk": 11,
+        "fact_name": "Turn Undead",
+        "hook": "Turn Undead isn't a spell slot drain - it doesn't count toward known spells.",
+        "body": "Turn Undead affects undead with a level equal to or less than the roll result, causing them to flee for 2d4 rounds. This isn't a spell, so it doesn't consume a spell slot, yet players often treat it as one. The real efficiency comes from using it as a free action to control the battlefield without sacrificing other spellcasting options.",
+        "cta": "GMs: Remind clerics to use Turn Undead as a free action to scatter undead, not as a spell slot sacrifice.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-15.mp4",
+        "video_sha256": "9deb93ca0511cf9a00d84f528a4f0ab366b686ad98110611b92ef2d01c251f6b"
+      }
     }
   ]
 }

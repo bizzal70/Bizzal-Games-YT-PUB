@@ -860,5 +860,15 @@
       ],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-09-15": {
+    "class_spotlight": {
+      "angle": "subclass_identity",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "class_mentor",
+      "spice": [],
+      "tts_voice_id": "sage"
+    }
   }
 }
