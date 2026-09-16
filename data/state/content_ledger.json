@@ -5422,6 +5422,50 @@
       "video_id": "17883393816680817",
       "day": "2026-09-16",
       "published_at": "2026-09-16T14:36:11+00:00"
+    },
+    {
+      "content_key": "64fe39c53f7103f902374ec15989fdcebe1ece5dec01a20d1fdd06d8fa8bfef4",
+      "token_text": "action corruption dual economy elf risk",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Elf: Dual Action Economy with Corruption Risks #dcc",
+      "video_id": "PpQTLZdU0CM",
+      "day": "2026-09-16",
+      "published_at": "2026-09-16T18:15:18+00:00"
+    },
+    {
+      "content_key": "adbd35e9255fb92d6e8e34fb36977e9bb1e40cc8d3cf46c1fae8b4227b189aea",
+      "token_text": "corruption elve risk roll spell",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Elves risk corruption on spell rolls of 1-2 #dcc",
+      "video_id": "2NKBube65WU",
+      "day": "2026-09-16-dcc-clip1",
+      "published_at": "2026-09-16T18:17:26+00:00"
+    },
+    {
+      "content_key": "fffe6f4d6df5c3c94511af2e96bc497d2646db8646b122419043e9aae519c6d9",
+      "token_text": "dark detect door elve secret see",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Elves detect secret doors and see in the dark #dcc",
+      "video_id": "-8VIHARwNEo",
+      "day": "2026-09-16-dcc-clip2",
+      "published_at": "2026-09-16T18:19:03+00:00"
+    },
+    {
+      "content_key": "2e9a49f1e3d72b7c8c2975ece6319c37d3be465dc8e1eb4be317494b856a63c2",
+      "token_text": "dcc elve hold immune paralysi",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Elves in DCC are immune to paralysis and hold",
+      "video_id": "JLtOwAxz2ew",
+      "day": "2026-09-16-dcc-clip3",
+      "published_at": "2026-09-16T18:20:43+00:00"
     }
   ]
 }

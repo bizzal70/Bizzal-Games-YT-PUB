@@ -467,6 +467,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-07-dcc-clip3.mp4",
         "video_sha256": "c4b513f89b1b6ae2f4d5bd398b9bbe31be1e5c939699a478a8fdf75fafdb8df4"
       }
+    },
+    {
+      "published_utc": "2026-09-16T18:17:26Z",
+      "day": "2026-09-16-dcc-clip1",
+      "content_id": "clip:76f7e8c08d6825df",
+      "publish_hash": "eb00898e737e1a8b012dff3d6c7dd5b84e2e9e5863c94c0e38f5b85c9876210c",
+      "youtube_video_id": "2NKBube65WU",
+      "youtube_url": "https://www.youtube.com/watch?v=2NKBube65WU",
+      "video_sha256": "9afd6734e41bfcbf62a55f28697623265a8ff1c480070aca31904662fe7da9db",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-16-dcc-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-09-16-dcc-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:76f7e8c08d6825df",
+        "canonical_hash": "",
+        "script_id": "76f7e8c08d6825df086daa9c1ed3efd7a8dc0bf7adb055d3dd2a14718d1723c9",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Elves risk corruption on spell rolls of 1-2",
+        "hook": "Elves risk corruption on spell rolls of 1-2",
+        "body": "In DCC, Elves face corruption on spell checks rolling 1-2, unlike others who risk it only on a 1. This increases their corruption vulnerability, making spellcasting a strategic choice. Balancing spells and melee can mitigate this risk.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-16-dcc-clip1.mp4",
+        "video_sha256": "9afd6734e41bfcbf62a55f28697623265a8ff1c480070aca31904662fe7da9db"
+      }
+    },
+    {
+      "published_utc": "2026-09-16T18:19:03Z",
+      "day": "2026-09-16-dcc-clip2",
+      "content_id": "clip:9859af06afdd65f5",
+      "publish_hash": "1a41b5ef938175433a72e7c4ef30fed2e82e19574c06dd6bee9d655849960586",
+      "youtube_video_id": "-8VIHARwNEo",
+      "youtube_url": "https://www.youtube.com/watch?v=-8VIHARwNEo",
+      "video_sha256": "312ce6b80be7411586b380488b6d87d8df2bb39a47a8f6726ebf8eedcce45c79",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-16-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-09-16-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:9859af06afdd65f5",
+        "canonical_hash": "",
+        "script_id": "9859af06afdd65f58767930e99969d66cd81a32404e575e9fb06529cc53e66bc",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Elves detect secret doors and see in the dark",
+        "hook": "Elves detect secret doors and see in the dark",
+        "body": "Elves in DCC have infravision up to 60 feet and can detect secret doors. These abilities aid in exploration, allowing them to spot hidden passages and enemies in darkness, enhancing their role as scouts and support characters.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-16-dcc-clip2.mp4",
+        "video_sha256": "312ce6b80be7411586b380488b6d87d8df2bb39a47a8f6726ebf8eedcce45c79"
+      }
+    },
+    {
+      "published_utc": "2026-09-16T18:20:43Z",
+      "day": "2026-09-16-dcc-clip3",
+      "content_id": "clip:85fe72f029d0a3ec",
+      "publish_hash": "9534346cb2f8dfd89ded26cb0ea7eb2d40db1fcf3d7c75ec1271c2ba894e1b10",
+      "youtube_video_id": "JLtOwAxz2ew",
+      "youtube_url": "https://www.youtube.com/watch?v=JLtOwAxz2ew",
+      "video_sha256": "cdba7fe53f0b29172293cf5c4b147eac72718bd2b669563f66ca86d404c5680a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-16-dcc-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-09-16-dcc-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:85fe72f029d0a3ec",
+        "canonical_hash": "",
+        "script_id": "85fe72f029d0a3ec718f21b34a032bad41ca5d0ca2d62cc4a07fb0917fd01d98",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Elves in DCC are immune to paralysis and hold",
+        "hook": "Elves in DCC are immune to paralysis and hold",
+        "body": "Elves have immunity to paralysis and hold effects in DCC. This makes them reliable in battles involving these conditions, as they can continue to fight or cast spells, unaffected by these incapacitating effects.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-16-dcc-clip3.mp4",
+        "video_sha256": "cdba7fe53f0b29172293cf5c4b147eac72718bd2b669563f66ca86d404c5680a"
+      }
     }
   ]
 }
