@@ -1876,6 +1876,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-15.mp4",
         "video_sha256": "9deb93ca0511cf9a00d84f528a4f0ab366b686ad98110611b92ef2d01c251f6b"
       }
+    },
+    {
+      "published_utc": "2026-09-16T14:34:42Z",
+      "day": "2026-09-16",
+      "content_id": "bgp-2026-09-16-spell-use-case-spell-44-611cbc221360",
+      "publish_hash": "9c985325e14bc4b532e954a256348ea5b21c5faaef82179d3b5050761561c2df",
+      "youtube_video_id": "GATurYudbZk",
+      "youtube_url": "https://www.youtube.com/watch?v=GATurYudbZk",
+      "video_sha256": "d7d7070d2d63b80310ec90c3072ab4b53b05c7dd1e4fc70593a9129a7d87bfec",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-16.mp4",
+      "fingerprint": {
+        "day": "2026-09-16",
+        "category": "spell_use_case",
+        "angle": "dm_twist",
+        "content_id": "bgp-2026-09-16-spell-use-case-spell-44-611cbc221360",
+        "canonical_hash": "611cbc221360ebc47e2c7b05c00f8e73f3bb97d6ccf24509250f3323535577dd",
+        "script_id": "4be7e33a724b5d66aedbad8dcbda77aa30ba34f1b7834bb691587928edd2c77f",
+        "fact_kind": "spell",
+        "fact_pk": 44,
+        "fact_name": "Knock",
+        "hook": "Knock's noise is louder than players expect - audible to all within earshot.",
+        "body": "Knock operates at Near range and opens a lock instantly, but its loud report alerts everything nearby. Casting it without considering the noise can compromise stealth. The better move is using it as a distraction or when stealth is already compromised.",
+        "cta": "GMs: Use Knock at Near range when the noise can draw foes away or when stealth is already blown.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-16.mp4",
+        "video_sha256": "d7d7070d2d63b80310ec90c3072ab4b53b05c7dd1e4fc70593a9129a7d87bfec"
+      }
     }
   ]
 }

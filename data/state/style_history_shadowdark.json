@@ -862,5 +862,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-16": {
+    "spell_use_case": {
+      "angle": "dm_twist",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "arcane_survival_coach",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

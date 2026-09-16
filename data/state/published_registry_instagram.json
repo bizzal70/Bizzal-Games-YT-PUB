@@ -2412,6 +2412,51 @@
       "hook": "Circle of the Land Druids can recover spell slots - Natural Recovery allows regaining up to half your druid.",
       "body": "Circle of the Land emphasizes spellcasting efficiency. Natural Recovery is often underutilized by players who forget to plan for its once-per-day use. Efficient play involves using it strategically after a short rest to maximize spellcasting potential throughout the day. This subclass excels when its features are focused on enhancing spellcasting rather than splitting focus across multiple roles.",
       "cta": "DMs: Remind players to use Natural Recovery after a short rest to regain spell slots, maximizing their Circle of the Land efficiency."
+    },
+    {
+      "published_utc": "2026-09-16T14:26:40Z",
+      "day": "2026-09-16",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-16-item-spotlight-item-12-790cbee5f049",
+      "instagram_post_id": "18406551874089844",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "25e250e41eb1c882dc7225cfca975691ea1244f4b94c868d24024faeb2ada50e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-16.mp4",
+      "fact_name": "Dagger of the Assassin",
+      "category": "item_spotlight",
+      "hook": "Dagger of the Assassin's curse punishes neglect - lose 1 Luck per day if it doesn't taste blood weekly.",
+      "body": "The Dagger of the Assassin adds +3 to attack and damage rolls against surprised or unaware targets, which is often forgotten in the heat of combat. On a backstab, it provides an additional +2d6 damage beyond the usual backstab bonus, a detail that can be missed when calculating total damage. Once per session, it can deal automatic maximum damage on an unaware target, a strategic option often underutilized. The curse of losing 1 Luck per day if it doesn't draw blood weekly is a critical factor that demands regular attention.",
+      "cta": "Judges: Remind them the Dagger of the Assassin demands blood weekly, or it starts draining 1 Luck per day."
+    },
+    {
+      "published_utc": "2026-09-16T14:31:32Z",
+      "day": "2026-09-16",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-16-monster-tactic-creature-srd-2024-constrictor-snake-30ace5889fb2",
+      "instagram_post_id": "17958286365252913",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d5913b6d292f5dca6dc0722f259e83e89761b95489144d98b88c1c26c8ffb626",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-16.mp4",
+      "fact_name": "Constrictor Snake",
+      "category": "monster_tactic",
+      "hook": "Constrictor Snake's constriction can disrupt the action economy - a single failed escape check costs.",
+      "body": "Constrictor Snake has an AC of 13 and 13 hit points, which might seem manageable, but its Constrict attack is where the real threat lies. A failed DC 16 Strength check to escape the grapple means a character loses an action, disrupting the party's action economy. Underestimating this can lead to wasted resources as the party scrambles to recover. Positioning to avoid being grappled in the first place is crucial.",
+      "cta": "DMs: Let one player fail the DC 16 Strength check to escape the Constrict, and watch the action economy unravel."
+    },
+    {
+      "published_utc": "2026-09-16T14:36:11Z",
+      "day": "2026-09-16",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-16-spell-use-case-spell-44-611cbc221360",
+      "instagram_post_id": "17883393816680817",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d7d7070d2d63b80310ec90c3072ab4b53b05c7dd1e4fc70593a9129a7d87bfec",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-16.mp4",
+      "fact_name": "Knock",
+      "category": "spell_use_case",
+      "hook": "Knock's noise is louder than players expect - audible to all within earshot.",
+      "body": "Knock operates at Near range and opens a lock instantly, but its loud report alerts everything nearby. Casting it without considering the noise can compromise stealth. The better move is using it as a distraction or when stealth is already compromised.",
+      "cta": "GMs: Use Knock at Near range when the noise can draw foes away or when stealth is already blown."
     }
   ]
 }

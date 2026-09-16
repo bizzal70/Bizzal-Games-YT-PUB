@@ -762,5 +762,15 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-16": {
+    "item_spotlight": {
+      "angle": "story_hook",
+      "voice": "survival_coach",
+      "tone": "gritty",
+      "persona": "dungeon_gear_mentor",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

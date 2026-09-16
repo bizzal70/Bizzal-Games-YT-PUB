@@ -1619,6 +1619,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-15.mp4",
         "video_sha256": "c8e6433e43e74e5c15c242d50af859be2d34fa108b13e5ab160374315a93eafa"
       }
+    },
+    {
+      "published_utc": "2026-09-16T14:25:40Z",
+      "day": "2026-09-16",
+      "content_id": "bgp-2026-09-16-item-spotlight-item-12-790cbee5f049",
+      "publish_hash": "6062815699c1f432c620d06c7cc8aa8fb0d738abd281c4f4fe76dfc9ecd87efe",
+      "youtube_video_id": "jl6sDvbYfjQ",
+      "youtube_url": "https://www.youtube.com/watch?v=jl6sDvbYfjQ",
+      "video_sha256": "25e250e41eb1c882dc7225cfca975691ea1244f4b94c868d24024faeb2ada50e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-16.mp4",
+      "fingerprint": {
+        "day": "2026-09-16",
+        "category": "item_spotlight",
+        "angle": "story_hook",
+        "content_id": "bgp-2026-09-16-item-spotlight-item-12-790cbee5f049",
+        "canonical_hash": "790cbee5f049604b56d1c8af425f576d4193aebad447fd6a7b3fb912da380b4e",
+        "script_id": "db9a5494277c24afdd87c18dc7faec3ec11bbfb92ecb41a5178b3774ae4f19b8",
+        "fact_kind": "item",
+        "fact_pk": 12,
+        "fact_name": "Dagger of the Assassin",
+        "hook": "Dagger of the Assassin's curse punishes neglect - lose 1 Luck per day if it doesn't taste blood weekly.",
+        "body": "The Dagger of the Assassin adds +3 to attack and damage rolls against surprised or unaware targets, which is often forgotten in the heat of combat. On a backstab, it provides an additional +2d6 damage beyond the usual backstab bonus, a detail that can be missed when calculating total damage. Once per session, it can deal automatic maximum damage on an unaware target, a strategic option often underutilized. The curse of losing 1 Luck per day if it doesn't draw blood weekly is a critical factor that demands regular attention.",
+        "cta": "Judges: Remind them the Dagger of the Assassin demands blood weekly, or it starts draining 1 Luck per day.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-16.mp4",
+        "video_sha256": "25e250e41eb1c882dc7225cfca975691ea1244f4b94c868d24024faeb2ada50e"
+      }
     }
   ]
 }

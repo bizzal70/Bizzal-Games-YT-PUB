@@ -2267,6 +2267,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-15.mp4",
         "video_sha256": "5fc423efa0ad2420477eb94e52c95e24283053a63694316262b83729c00eb270"
       }
+    },
+    {
+      "published_utc": "2026-09-16T14:30:48Z",
+      "day": "2026-09-16",
+      "content_id": "bgp-2026-09-16-monster-tactic-creature-srd-2024-constrictor-snake-30ace5889fb2",
+      "publish_hash": "e5356f102854939cf6013248a257eca7c7f54495a894f7642c22133b7d903750",
+      "youtube_video_id": "3tp5eGD7ReQ",
+      "youtube_url": "https://www.youtube.com/watch?v=3tp5eGD7ReQ",
+      "video_sha256": "d5913b6d292f5dca6dc0722f259e83e89761b95489144d98b88c1c26c8ffb626",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-16.mp4",
+      "fingerprint": {
+        "day": "2026-09-16",
+        "category": "monster_tactic",
+        "angle": "common_mistake",
+        "content_id": "bgp-2026-09-16-monster-tactic-creature-srd-2024-constrictor-snake-30ace5889fb2",
+        "canonical_hash": "30ace5889fb24f83cbb1baa479000c495f6af19cfa34dd99d4f33f8619171f6e",
+        "script_id": "37f84bd6a1066cd60fc12e7028396064335e174091144034e63bed373b6e7021",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_constrictor-snake",
+        "fact_name": "Constrictor Snake",
+        "hook": "Constrictor Snake's constriction can disrupt the action economy - a single failed escape check costs.",
+        "body": "Constrictor Snake has an AC of 13 and 13 hit points, which might seem manageable, but its Constrict attack is where the real threat lies. A failed DC 16 Strength check to escape the grapple means a character loses an action, disrupting the party's action economy. Underestimating this can lead to wasted resources as the party scrambles to recover. Positioning to avoid being grappled in the first place is crucial.",
+        "cta": "DMs: Let one player fail the DC 16 Strength check to escape the Constrict, and watch the action economy unravel.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-16.mp4",
+        "video_sha256": "d5913b6d292f5dca6dc0722f259e83e89761b95489144d98b88c1c26c8ffb626"
+      }
     }
   ]
 }
