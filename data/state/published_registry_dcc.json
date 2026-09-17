@@ -1645,6 +1645,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-16.mp4",
         "video_sha256": "25e250e41eb1c882dc7225cfca975691ea1244f4b94c868d24024faeb2ada50e"
       }
+    },
+    {
+      "published_utc": "2026-09-17T14:27:09Z",
+      "day": "2026-09-17",
+      "content_id": "bgp-2026-09-17-encounter-seed-creature-218-7f0437252705",
+      "publish_hash": "f335ca26d47463cc89ae3ef005d09e7457637e44e53cd7590778efa262e7437d",
+      "youtube_video_id": "htpRwModrg8",
+      "youtube_url": "https://www.youtube.com/watch?v=htpRwModrg8",
+      "video_sha256": "be7f5dc8db6a4251632b80d8a13688cf0431d877857e82b048e8192e79d0bb7f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-17.mp4",
+      "fingerprint": {
+        "day": "2026-09-17",
+        "category": "encounter_seed",
+        "angle": "terrain_feature",
+        "content_id": "bgp-2026-09-17-encounter-seed-creature-218-7f0437252705",
+        "canonical_hash": "7f0437252705a6d51ffab5edc12f662ead0b095dc2af3cede8b1fbae73af483a",
+        "script_id": "3865b15a67da88e635c4462d9e73a0ab94eb37b40a28a9bba364f6633044a66b",
+        "fact_kind": "creature",
+        "fact_pk": 218,
+        "fact_name": "Minor Air Elemental",
+        "hook": "Run Minor Air Elemental where terrain creates risk every turn and rewards smart positioning.",
+        "body": "The Minor Air Elemental's whirlwind ability can disrupt formations, but players often underestimate its impact by not considering terrain. With an armor class of 13 and hit dice ranging from 2d8 to 6d8, it can withstand more than expected, especially when taking advantage of cover or elevation. A common mistake is engaging it in open space where its mobility and +3 initiative give it the upper hand. Positioning near obstacles or choke points can limit its movement options and mitigate its advantage.",
+        "cta": "Judges: Pin the Minor Air Elemental against a wall to negate its 60' flight advantage and +3 initiative.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-17.mp4",
+        "video_sha256": "be7f5dc8db6a4251632b80d8a13688cf0431d877857e82b048e8192e79d0bb7f"
+      }
     }
   ]
 }

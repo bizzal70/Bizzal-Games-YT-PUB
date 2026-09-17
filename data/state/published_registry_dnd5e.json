@@ -2293,6 +2293,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-16.mp4",
         "video_sha256": "d5913b6d292f5dca6dc0722f259e83e89761b95489144d98b88c1c26c8ffb626"
       }
+    },
+    {
+      "published_utc": "2026-09-17T14:31:38Z",
+      "day": "2026-09-17",
+      "content_id": "bgp-2026-09-17-spell-use-case-spell-xanathars-guide-aganazzar-s-scorcher-f829cc5451ba",
+      "publish_hash": "34596d2a76b8fb335f9eff6f42f9032ae0c0efcb3f1f4a9c8bc6292173cd0914",
+      "youtube_video_id": "VNPKj2fjDM8",
+      "youtube_url": "https://www.youtube.com/watch?v=VNPKj2fjDM8",
+      "video_sha256": "85a60d767ae0c81d3554b8314d5b7987b387f8223021bd8d7af85c33c2061c4a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-17.mp4",
+      "fingerprint": {
+        "day": "2026-09-17",
+        "category": "spell_use_case",
+        "angle": "combo_pairing",
+        "content_id": "bgp-2026-09-17-spell-use-case-spell-xanathars-guide-aganazzar-s-scorcher-f829cc5451ba",
+        "canonical_hash": "f829cc5451ba242fd8cf7e965881acb88704e56d479a2f4cb28f3c8396ad99c2",
+        "script_id": "28ee5c28c03db43228c2c269d6ffef6e5920aeeed241cf0e203a5024ec0d9a03",
+        "fact_kind": "spell",
+        "fact_pk": "xanathars-guide_aganazzar-s-scorcher",
+        "fact_name": "Aganazzar's Scorcher",
+        "hook": "Aganazzar's Scorcher is more than just a damage spell - the 30-foot line can disrupt enemy positioning.",
+        "body": "Aganazzar's Scorcher deals 3d8 fire damage in a 30-foot line, requiring a Dexterity saving throw. Many players waste it on high-Dexterity targets, minimizing its impact. Instead, use it to force enemies into disadvantageous positions, especially when they cluster in tight formations.",
+        "cta": "DMs: Use Aganazzar's Scorcher to force enemies into disadvantageous positions, not just for its 3d8 fire damage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-17.mp4",
+        "video_sha256": "85a60d767ae0c81d3554b8314d5b7987b387f8223021bd8d7af85c33c2061c4a"
+      }
     }
   ]
 }

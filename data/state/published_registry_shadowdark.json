@@ -1902,6 +1902,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-16.mp4",
         "video_sha256": "d7d7070d2d63b80310ec90c3072ab4b53b05c7dd1e4fc70593a9129a7d87bfec"
       }
+    },
+    {
+      "published_utc": "2026-09-17T14:36:42Z",
+      "day": "2026-09-17",
+      "content_id": "bgp-2026-09-17-class-spotlight-class-1-0f783aebb3e6",
+      "publish_hash": "06e776b3e71bbffc0a8be05e381260e00e6da381be954aec00841c140a42971b",
+      "youtube_video_id": "HC0dty6Je9A",
+      "youtube_url": "https://www.youtube.com/watch?v=HC0dty6Je9A",
+      "video_sha256": "f78c7887f3ad12ab84d7a6aa23603552b206c401aa99601aa1401d17c4e0c512",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-17.mp4",
+      "fingerprint": {
+        "day": "2026-09-17",
+        "category": "class_spotlight",
+        "angle": "party_role_pivot",
+        "content_id": "bgp-2026-09-17-class-spotlight-class-1-0f783aebb3e6",
+        "canonical_hash": "0f783aebb3e61bc63aac3e44138fa0505f673a2aa0791ce848cb0cf2daccdcaf",
+        "script_id": "81e5e491b9c7db5e3af7a5681d7ca107f6b142533560f30823b17fb4a711f544",
+        "fact_kind": "class",
+        "fact_pk": 1,
+        "fact_name": "Fighter",
+        "hook": "Fighter shifts from setup to closer - Weapon Mastery enables decisive role changes.",
+        "body": "Fighter's Weapon Mastery allows for flexibility with all weapons, pivoting between setup and closer roles based on party needs. Treating Fighter as a static damage dealer without considering the broader tactical context is a common mistake. By leveraging armor and shield options, Fighter can hold a line or break through enemy defenses as required. Recognizing when the party is overcommitting to a single strategy and adjusting Fighter's role helps balance the approach.",
+        "cta": "GMs: Make sure the Fighter's Weapon Mastery adapts to party needs - don't let them become a predictable 1d8 damage sponge.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-17.mp4",
+        "video_sha256": "f78c7887f3ad12ab84d7a6aa23603552b206c401aa99601aa1401d17c4e0c512"
+      }
     }
   ]
 }

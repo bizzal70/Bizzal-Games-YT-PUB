@@ -2457,6 +2457,51 @@
       "hook": "Knock's noise is louder than players expect - audible to all within earshot.",
       "body": "Knock operates at Near range and opens a lock instantly, but its loud report alerts everything nearby. Casting it without considering the noise can compromise stealth. The better move is using it as a distraction or when stealth is already compromised.",
       "cta": "GMs: Use Knock at Near range when the noise can draw foes away or when stealth is already blown."
+    },
+    {
+      "published_utc": "2026-09-17T14:28:11Z",
+      "day": "2026-09-17",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-17-encounter-seed-creature-218-7f0437252705",
+      "instagram_post_id": "17944882563345303",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "be7f5dc8db6a4251632b80d8a13688cf0431d877857e82b048e8192e79d0bb7f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-17.mp4",
+      "fact_name": "Minor Air Elemental",
+      "category": "encounter_seed",
+      "hook": "Run Minor Air Elemental where terrain creates risk every turn and rewards smart positioning.",
+      "body": "The Minor Air Elemental's whirlwind ability can disrupt formations, but players often underestimate its impact by not considering terrain. With an armor class of 13 and hit dice ranging from 2d8 to 6d8, it can withstand more than expected, especially when taking advantage of cover or elevation. A common mistake is engaging it in open space where its mobility and +3 initiative give it the upper hand. Positioning near obstacles or choke points can limit its movement options and mitigate its advantage.",
+      "cta": "Judges: Pin the Minor Air Elemental against a wall to negate its 60' flight advantage and +3 initiative."
+    },
+    {
+      "published_utc": "2026-09-17T14:32:23Z",
+      "day": "2026-09-17",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-17-spell-use-case-spell-xanathars-guide-aganazzar-s-scorcher-f829cc5451ba",
+      "instagram_post_id": "18036009290885042",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "85a60d767ae0c81d3554b8314d5b7987b387f8223021bd8d7af85c33c2061c4a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-17.mp4",
+      "fact_name": "Aganazzar's Scorcher",
+      "category": "spell_use_case",
+      "hook": "Aganazzar's Scorcher is more than just a damage spell - the 30-foot line can disrupt enemy positioning.",
+      "body": "Aganazzar's Scorcher deals 3d8 fire damage in a 30-foot line, requiring a Dexterity saving throw. Many players waste it on high-Dexterity targets, minimizing its impact. Instead, use it to force enemies into disadvantageous positions, especially when they cluster in tight formations.",
+      "cta": "DMs: Use Aganazzar's Scorcher to force enemies into disadvantageous positions, not just for its 3d8 fire damage."
+    },
+    {
+      "published_utc": "2026-09-17T14:37:55Z",
+      "day": "2026-09-17",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-17-class-spotlight-class-1-0f783aebb3e6",
+      "instagram_post_id": "17902713945596022",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "f78c7887f3ad12ab84d7a6aa23603552b206c401aa99601aa1401d17c4e0c512",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-17.mp4",
+      "fact_name": "Fighter",
+      "category": "class_spotlight",
+      "hook": "Fighter shifts from setup to closer - Weapon Mastery enables decisive role changes.",
+      "body": "Fighter's Weapon Mastery allows for flexibility with all weapons, pivoting between setup and closer roles based on party needs. Treating Fighter as a static damage dealer without considering the broader tactical context is a common mistake. By leveraging armor and shield options, Fighter can hold a line or break through enemy defenses as required. Recognizing when the party is overcommitting to a single strategy and adjusting Fighter's role helps balance the approach.",
+      "cta": "GMs: Make sure the Fighter's Weapon Mastery adapts to party needs - don't let them become a predictable 1d8 damage sponge."
     }
   ]
 }

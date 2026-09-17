@@ -874,5 +874,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-09-17": {
+    "class_spotlight": {
+      "angle": "party_role_pivot",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "class_mentor",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }
