@@ -1928,6 +1928,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-17.mp4",
         "video_sha256": "f78c7887f3ad12ab84d7a6aa23603552b206c401aa99601aa1401d17c4e0c512"
       }
+    },
+    {
+      "published_utc": "2026-09-18T14:29:59Z",
+      "day": "2026-09-18",
+      "content_id": "bgp-2026-09-18-monster-tactic-creature-118-14fdcbce26f0",
+      "publish_hash": "302160e615423cf31b21e19bfd68d7c18ac1b7d5525c1554dc2e5e554f869b2b",
+      "youtube_video_id": "Ii8z1s94cWI",
+      "youtube_url": "https://www.youtube.com/watch?v=Ii8z1s94cWI",
+      "video_sha256": "5b9468041fa54c72eff5a7bf2ae5f1e3aaf3cfff4b40d9111759d288a6a327bc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-18.mp4",
+      "fingerprint": {
+        "day": "2026-09-18",
+        "category": "monster_tactic",
+        "angle": "common_mistake",
+        "content_id": "bgp-2026-09-18-monster-tactic-creature-118-14fdcbce26f0",
+        "canonical_hash": "14fdcbce26f094d26fbafe8f212b7e63c13d8e73754c75a8fe2372d184466e13",
+        "script_id": "78ebc4f10f32ac73ffb0e7c1cac2cc2f029744f7ccb4bf0ae8756b711aafcced",
+        "fact_kind": "creature",
+        "fact_pk": 118,
+        "fact_name": "Hippopotamus",
+        "hook": "Hippopotamus surprises with its bite - 2 attacks at +4 for 1d10 each.",
+        "body": "Treating the Hippopotamus as 'just flavor' is a common mistake. Its dual bite attacks can exploit clustered or drifting positions, dealing significant damage quickly. ADV on Strength checks to grab or drag enhances its threat in melee. Optimal play involves maintaining distance and avoiding tight formations.",
+        "cta": "GMs: Exploit the hippo's ADV on Strength checks to drag players into the water, punishing their clustered formations.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-18.mp4",
+        "video_sha256": "5b9468041fa54c72eff5a7bf2ae5f1e3aaf3cfff4b40d9111759d288a6a327bc"
+      }
     }
   ]
 }

@@ -1671,6 +1671,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-17.mp4",
         "video_sha256": "be7f5dc8db6a4251632b80d8a13688cf0431d877857e82b048e8192e79d0bb7f"
       }
+    },
+    {
+      "published_utc": "2026-09-18T14:22:34Z",
+      "day": "2026-09-18",
+      "content_id": "bgp-2026-09-18-class-spotlight-class-7-e2246aeab2d5",
+      "publish_hash": "a32e851477a28f9041112fff4db027739b1ef937935da190ed2b847b4284d4d1",
+      "youtube_video_id": "od2YNM78stI",
+      "youtube_url": "https://www.youtube.com/watch?v=od2YNM78stI",
+      "video_sha256": "00ddaec08b4718041fc06f1f30df1e802581462252e61350ddf7f24fc882dcd1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-18.mp4",
+      "fingerprint": {
+        "day": "2026-09-18",
+        "category": "class_spotlight",
+        "angle": "level_1_survival",
+        "content_id": "bgp-2026-09-18-class-spotlight-class-7-e2246aeab2d5",
+        "canonical_hash": "e2246aeab2d506dad875f346ccf1a53deb52daca4ff904fb8729086388a95bcc",
+        "script_id": "1f6a47384d0f390424cb01f69c52c813d40bfb6dd7ddfa852fd3752240703e8d",
+        "fact_kind": "class",
+        "fact_pk": 7,
+        "fact_name": "Halfling",
+        "hook": "Halflings have the best Luck economy in the game - Luck burns at d3 intervals.",
+        "body": "Halflings operate on a unique Good Fortune mechanic: once per session, they can roll their Luck die and add it to any check as a free bonus. This can also be given to a nearby ally, which players often overlook. Consistent use of this ability builds reliability over time, rather than relying on rare high rolls.",
+        "cta": "Judges: Remind your halfling player to deploy their Luck die early, before they forget and regret it.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-18.mp4",
+        "video_sha256": "00ddaec08b4718041fc06f1f30df1e802581462252e61350ddf7f24fc882dcd1"
+      }
     }
   ]
 }

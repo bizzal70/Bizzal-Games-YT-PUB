@@ -2319,6 +2319,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-17.mp4",
         "video_sha256": "85a60d767ae0c81d3554b8314d5b7987b387f8223021bd8d7af85c33c2061c4a"
       }
+    },
+    {
+      "published_utc": "2026-09-18T14:26:17Z",
+      "day": "2026-09-18",
+      "content_id": "bgp-2026-09-18-rules-ruling-rule-srd-2024-social-interaction-roleplaying-d040b2189a6f",
+      "publish_hash": "8b9f967fb62f0724944f19fc64de2bebeadadca0b926f91bb230791dc3c9cd60",
+      "youtube_video_id": "8tUlx90n-eA",
+      "youtube_url": "https://www.youtube.com/watch?v=8tUlx90n-eA",
+      "video_sha256": "54798dc14beb6408f5f2c9bb08e8a8a775894ff429984326aa69d4719125ac17",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-18.mp4",
+      "fingerprint": {
+        "day": "2026-09-18",
+        "category": "rules_ruling",
+        "angle": "edge_case",
+        "content_id": "bgp-2026-09-18-rules-ruling-rule-srd-2024-social-interaction-roleplaying-d040b2189a6f",
+        "canonical_hash": "d040b2189a6f36d0b61b7dd7bdc9850b34e2d16a3c95231795422f43a5e4483d",
+        "script_id": "ef08023db260ea61c9a41dadd033937ff17a815b9ecc5f252d5936e626716cef",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_social-interaction_roleplaying",
+        "fact_name": "Roleplaying",
+        "hook": "Roleplaying creates confusion without clear action sequence - check sequence before adjudicating.",
+        "body": "Roleplaying involves determining how a character thinks, acts, and talks. Disputes arise if the sequence of actions isn't clear. Establish the order of operations before resolving outcomes. This prevents arguments and ensures consistent rulings.",
+        "cta": "DMs: Before resolving social interactions, clarify the sequence of roleplaying and ability checks to avoid disputes.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-18.mp4",
+        "video_sha256": "54798dc14beb6408f5f2c9bb08e8a8a775894ff429984326aa69d4719125ac17"
+      }
     }
   ]
 }

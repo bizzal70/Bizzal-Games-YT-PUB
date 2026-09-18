@@ -886,5 +886,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-18": {
+    "monster_tactic": {
+      "angle": "common_mistake",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

@@ -2502,6 +2502,51 @@
       "hook": "Fighter shifts from setup to closer - Weapon Mastery enables decisive role changes.",
       "body": "Fighter's Weapon Mastery allows for flexibility with all weapons, pivoting between setup and closer roles based on party needs. Treating Fighter as a static damage dealer without considering the broader tactical context is a common mistake. By leveraging armor and shield options, Fighter can hold a line or break through enemy defenses as required. Recognizing when the party is overcommitting to a single strategy and adjusting Fighter's role helps balance the approach.",
       "cta": "GMs: Make sure the Fighter's Weapon Mastery adapts to party needs - don't let them become a predictable 1d8 damage sponge."
+    },
+    {
+      "published_utc": "2026-09-18T14:23:22Z",
+      "day": "2026-09-18",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-18-class-spotlight-class-7-e2246aeab2d5",
+      "instagram_post_id": "17877964662543216",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "00ddaec08b4718041fc06f1f30df1e802581462252e61350ddf7f24fc882dcd1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-18.mp4",
+      "fact_name": "Halfling",
+      "category": "class_spotlight",
+      "hook": "Halflings have the best Luck economy in the game - Luck burns at d3 intervals.",
+      "body": "Halflings operate on a unique Good Fortune mechanic: once per session, they can roll their Luck die and add it to any check as a free bonus. This can also be given to a nearby ally, which players often overlook. Consistent use of this ability builds reliability over time, rather than relying on rare high rolls.",
+      "cta": "Judges: Remind your halfling player to deploy their Luck die early, before they forget and regret it."
+    },
+    {
+      "published_utc": "2026-09-18T14:27:18Z",
+      "day": "2026-09-18",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-18-rules-ruling-rule-srd-2024-social-interaction-roleplaying-d040b2189a6f",
+      "instagram_post_id": "18103335563216537",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "54798dc14beb6408f5f2c9bb08e8a8a775894ff429984326aa69d4719125ac17",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-18.mp4",
+      "fact_name": "Roleplaying",
+      "category": "rules_ruling",
+      "hook": "Roleplaying creates confusion without clear action sequence - check sequence before adjudicating.",
+      "body": "Roleplaying involves determining how a character thinks, acts, and talks. Disputes arise if the sequence of actions isn't clear. Establish the order of operations before resolving outcomes. This prevents arguments and ensures consistent rulings.",
+      "cta": "DMs: Before resolving social interactions, clarify the sequence of roleplaying and ability checks to avoid disputes."
+    },
+    {
+      "published_utc": "2026-09-18T14:30:44Z",
+      "day": "2026-09-18",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-18-monster-tactic-creature-118-14fdcbce26f0",
+      "instagram_post_id": "18072320594474638",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "5b9468041fa54c72eff5a7bf2ae5f1e3aaf3cfff4b40d9111759d288a6a327bc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-18.mp4",
+      "fact_name": "Hippopotamus",
+      "category": "monster_tactic",
+      "hook": "Hippopotamus surprises with its bite - 2 attacks at +4 for 1d10 each.",
+      "body": "Treating the Hippopotamus as 'just flavor' is a common mistake. Its dual bite attacks can exploit clustered or drifting positions, dealing significant damage quickly. ADV on Strength checks to grab or drag enhances its threat in melee. Optimal play involves maintaining distance and avoiding tight formations.",
+      "cta": "GMs: Exploit the hippo's ADV on Strength checks to drag players into the water, punishing their clustered formations."
     }
   ]
 }
