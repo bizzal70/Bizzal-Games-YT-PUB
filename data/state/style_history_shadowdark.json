@@ -898,5 +898,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-19": {
+    "rules_ruling": {
+      "angle": "fast_ruling",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

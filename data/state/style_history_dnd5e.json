@@ -904,5 +904,17 @@
       ],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-09-19": {
+    "item_spotlight": {
+      "angle": "best_user",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "sage"
+    }
   }
 }

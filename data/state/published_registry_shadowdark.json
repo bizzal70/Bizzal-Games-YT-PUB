@@ -1954,6 +1954,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-18.mp4",
         "video_sha256": "5b9468041fa54c72eff5a7bf2ae5f1e3aaf3cfff4b40d9111759d288a6a327bc"
       }
+    },
+    {
+      "published_utc": "2026-09-19T14:29:37Z",
+      "day": "2026-09-19",
+      "content_id": "bgp-2026-09-19-rules-ruling-rule-3-72915233df23",
+      "publish_hash": "b14b5e1a0a4bd57cdf12a5976d59b39f2978137106b459b6d9ec5585d6974a5c",
+      "youtube_video_id": "F7VQDfrZrA8",
+      "youtube_url": "https://www.youtube.com/watch?v=F7VQDfrZrA8",
+      "video_sha256": "3643d29e1727509409563b0db41523a25f63a90aee6783a61ac11ca3214ac3c8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-19.mp4",
+      "fingerprint": {
+        "day": "2026-09-19",
+        "category": "rules_ruling",
+        "angle": "fast_ruling",
+        "content_id": "bgp-2026-09-19-rules-ruling-rule-3-72915233df23",
+        "canonical_hash": "72915233df231c067a28d6d4fbfc11fa5fd41c92eb6b7c3b7ebbf2cb2a4b2510",
+        "script_id": "ada5c0e6ed62226335a0b9b9c8401127161d969042e0c7eb2ee0357f0619d55f",
+        "fact_kind": "rule",
+        "fact_pk": 3,
+        "fact_name": "Focus Spells",
+        "hook": "Focus Spells limit action economy - you can't cast another while one is active.",
+        "body": "Focus Spells stay active until you take an action that ends them. Taking damage forces a DC 12 Constitution check to keep the spell active. Missteps occur when players attempt to stack spells or ignore the Constitution check. Commit to one spell and protect against interruptions to maintain effectiveness.",
+        "cta": "GMs: When a player takes damage, enforce the DC 12 Constitution check immediately to see if their Focus Spell fizzles.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-19.mp4",
+        "video_sha256": "3643d29e1727509409563b0db41523a25f63a90aee6783a61ac11ca3214ac3c8"
+      }
     }
   ]
 }

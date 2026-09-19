@@ -796,5 +796,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-09-19": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "survival_coach",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

@@ -2547,6 +2547,51 @@
       "hook": "Hippopotamus surprises with its bite - 2 attacks at +4 for 1d10 each.",
       "body": "Treating the Hippopotamus as 'just flavor' is a common mistake. Its dual bite attacks can exploit clustered or drifting positions, dealing significant damage quickly. ADV on Strength checks to grab or drag enhances its threat in melee. Optimal play involves maintaining distance and avoiding tight formations.",
       "cta": "GMs: Exploit the hippo's ADV on Strength checks to drag players into the water, punishing their clustered formations."
+    },
+    {
+      "published_utc": "2026-09-19T14:22:07Z",
+      "day": "2026-09-19",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-19-rules-myth-rule-11-1ab50fe2e81b",
+      "instagram_post_id": "18097141355250705",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "0beb7451d20978547b5a7e1a83fdd2f59ba55f77228467e7f6bd13a8b63cb700",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-19.mp4",
+      "fact_name": "Critical Hits",
+      "category": "rules_myth",
+      "hook": "Critical Hits aren't just double damage - they use tables for effects from max damage to severed limbs.",
+      "body": "Critical Hits in DCC require rolling a crit die on a crit table, determined by class and level, rather than simply doubling damage. Warriors expand their crit range, meaning they roll criticals more often and can achieve results like instant death or blindness. Assuming a natural 20 always means double damage overlooks the table's potential for more devastating outcomes. Leveraging the crit table's potential can shift the tide of battle significantly.",
+      "cta": "Judges: remind players that Warriors' expanded crit range means more frequent rolls on the crit table for nastier effects."
+    },
+    {
+      "published_utc": "2026-09-19T14:26:39Z",
+      "day": "2026-09-19",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-19-item-spotlight-item-srd-2024-sack-cc859eebc807",
+      "instagram_post_id": "17899478745378665",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "e1e0fd90a42e17579d7cdd6af23b0d1f60fae0ddbb13ff86c381de19ae8e1eac",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-19.mp4",
+      "fact_name": "Sack",
+      "category": "item_spotlight",
+      "hook": "Sack's utility often gets overlooked - it holds up to 30 pounds within 1 cubic foot.",
+      "body": "The Sack is immune to poison and psychic damage, a fact rarely relevant but amusingly true. Its cost is a mere 0. 01 gp, making it the cheapest item in the adventuring-gear category. Many players misuse it by trying to employ it in combat scenarios, where its lack of armor class and hit points renders it useless. Instead, leverage its capacity for creative problem-solving or as a distraction in non-combat situations.",
+      "cta": "DMs: Use the Sack's 30-pound capacity to creatively solve problems or distract, not as an improvised weapon."
+    },
+    {
+      "published_utc": "2026-09-19T14:30:23Z",
+      "day": "2026-09-19",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-19-rules-ruling-rule-3-72915233df23",
+      "instagram_post_id": "18114935533789707",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "3643d29e1727509409563b0db41523a25f63a90aee6783a61ac11ca3214ac3c8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-19.mp4",
+      "fact_name": "Focus Spells",
+      "category": "rules_ruling",
+      "hook": "Focus Spells limit action economy - you can't cast another while one is active.",
+      "body": "Focus Spells stay active until you take an action that ends them. Taking damage forces a DC 12 Constitution check to keep the spell active. Missteps occur when players attempt to stack spells or ignore the Constitution check. Commit to one spell and protect against interruptions to maintain effectiveness.",
+      "cta": "GMs: When a player takes damage, enforce the DC 12 Constitution check immediately to see if their Focus Spell fizzles."
     }
   ]
 }

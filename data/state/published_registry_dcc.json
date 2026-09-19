@@ -1697,6 +1697,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-18.mp4",
         "video_sha256": "00ddaec08b4718041fc06f1f30df1e802581462252e61350ddf7f24fc882dcd1"
       }
+    },
+    {
+      "published_utc": "2026-09-19T14:20:20Z",
+      "day": "2026-09-19",
+      "content_id": "bgp-2026-09-19-rules-myth-rule-11-1ab50fe2e81b",
+      "publish_hash": "c2ff9d879e307f4083045270260e6d3a44b55dcd3f3ae126808e9e7eb89b465a",
+      "youtube_video_id": "006uHsn793w",
+      "youtube_url": "https://www.youtube.com/watch?v=006uHsn793w",
+      "video_sha256": "0beb7451d20978547b5a7e1a83fdd2f59ba55f77228467e7f6bd13a8b63cb700",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-19.mp4",
+      "fingerprint": {
+        "day": "2026-09-19",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-09-19-rules-myth-rule-11-1ab50fe2e81b",
+        "canonical_hash": "1ab50fe2e81b1ce144afad02ad45682aa17615158a938e8eb233646a8431ef30",
+        "script_id": "78b5e0ded1c631228c7f57c763896f4dba03ffbe6e2080a8218f469ad36478bb",
+        "fact_kind": "rule",
+        "fact_pk": 11,
+        "fact_name": "Critical Hits",
+        "hook": "Critical Hits aren't just double damage - they use tables for effects from max damage to severed limbs.",
+        "body": "Critical Hits in DCC require rolling a crit die on a crit table, determined by class and level, rather than simply doubling damage. Warriors expand their crit range, meaning they roll criticals more often and can achieve results like instant death or blindness. Assuming a natural 20 always means double damage overlooks the table's potential for more devastating outcomes. Leveraging the crit table's potential can shift the tide of battle significantly.",
+        "cta": "Judges: remind players that Warriors' expanded crit range means more frequent rolls on the crit table for nastier effects.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-19.mp4",
+        "video_sha256": "0beb7451d20978547b5a7e1a83fdd2f59ba55f77228467e7f6bd13a8b63cb700"
+      }
     }
   ]
 }

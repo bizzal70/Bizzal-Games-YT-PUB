@@ -2345,6 +2345,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-18.mp4",
         "video_sha256": "54798dc14beb6408f5f2c9bb08e8a8a775894ff429984326aa69d4719125ac17"
       }
+    },
+    {
+      "published_utc": "2026-09-19T14:25:40Z",
+      "day": "2026-09-19",
+      "content_id": "bgp-2026-09-19-item-spotlight-item-srd-2024-sack-cc859eebc807",
+      "publish_hash": "17b044b2cadbde6211b2f3f513f5d5926d45429d3863acd5d97330778e0cf538",
+      "youtube_video_id": "v3tVHy7Zn1E",
+      "youtube_url": "https://www.youtube.com/watch?v=v3tVHy7Zn1E",
+      "video_sha256": "e1e0fd90a42e17579d7cdd6af23b0d1f60fae0ddbb13ff86c381de19ae8e1eac",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-19.mp4",
+      "fingerprint": {
+        "day": "2026-09-19",
+        "category": "item_spotlight",
+        "angle": "best_user",
+        "content_id": "bgp-2026-09-19-item-spotlight-item-srd-2024-sack-cc859eebc807",
+        "canonical_hash": "cc859eebc80763851aa9792f0b44eb25e0820738421a2ca35b6de4c56031824e",
+        "script_id": "046b9136d24d67b9ba82cce91feef9f1c339b308cee972bc47b26eddc1270cbb",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_sack",
+        "fact_name": "Sack",
+        "hook": "Sack's utility often gets overlooked - it holds up to 30 pounds within 1 cubic foot.",
+        "body": "The Sack is immune to poison and psychic damage, a fact rarely relevant but amusingly true. Its cost is a mere 0. 01 gp, making it the cheapest item in the adventuring-gear category. Many players misuse it by trying to employ it in combat scenarios, where its lack of armor class and hit points renders it useless. Instead, leverage its capacity for creative problem-solving or as a distraction in non-combat situations.",
+        "cta": "DMs: Use the Sack's 30-pound capacity to creatively solve problems or distract, not as an improvised weapon.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-19.mp4",
+        "video_sha256": "e1e0fd90a42e17579d7cdd6af23b0d1f60fae0ddbb13ff86c381de19ae8e1eac"
+      }
     }
   ]
 }
