@@ -2371,6 +2371,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-19.mp4",
         "video_sha256": "e1e0fd90a42e17579d7cdd6af23b0d1f60fae0ddbb13ff86c381de19ae8e1eac"
       }
+    },
+    {
+      "published_utc": "2026-09-20T15:09:16Z",
+      "day": "2026-09-20",
+      "content_id": "bgp-2026-09-20-encounter-seed-creature-srd-2024-ghost-f507a0beac41",
+      "publish_hash": "84f27a4875ed9ce237191d35882af9ce903e11b3722e2ae59dbad3e3969cdade",
+      "youtube_video_id": "HszXE68RaPg",
+      "youtube_url": "https://www.youtube.com/watch?v=HszXE68RaPg",
+      "video_sha256": "09d78b3afac08683a645adfe76f2118fbda59826e6af71d7968337c7b7d96ff4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-20.mp4",
+      "fingerprint": {
+        "day": "2026-09-20",
+        "category": "encounter_seed",
+        "angle": "time_pressure",
+        "content_id": "bgp-2026-09-20-encounter-seed-creature-srd-2024-ghost-f507a0beac41",
+        "canonical_hash": "f507a0beac41e8e9f995bc260f4659ef2e85744886b195d4e06ae77565171987",
+        "script_id": "11ba79123482ac638614f9795352890cca5a4bdc6b0cd97ae1e1cbc4bb9b288e",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_ghost",
+        "fact_name": "Ghost",
+        "hook": "Ghosts often create unexpected time pressure - Etherealness and Horrific Visage force costly decisions each.",
+        "body": "Ghosts have an AC of 11 and 45 hit points, but their true threat lies in Etherealness and Horrific Visage. Etherealness allows them to move through objects and avoid attacks, while Horrific Visage can frighten creatures within 60 feet, potentially causing them to lose actions. A common mistake is focusing on dealing damage instead of managing these abilities. Effective play involves prioritizing dispelling or countering these effects to maintain control over the encounter.",
+        "cta": "DMs: Set a 5-minute timer each round to remind players of the Ghost's Etherealness and Horrific Visage impact.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-20.mp4",
+        "video_sha256": "09d78b3afac08683a645adfe76f2118fbda59826e6af71d7968337c7b7d96ff4"
+      }
     }
   ]
 }
