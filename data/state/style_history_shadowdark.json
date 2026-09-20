@@ -910,5 +910,15 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-20": {
+    "item_spotlight": {
+      "angle": "best_user",
+      "voice": "torchbearer_ref",
+      "tone": "dry",
+      "persona": "dungeon_gear_mentor",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

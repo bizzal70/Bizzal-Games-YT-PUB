@@ -1980,6 +1980,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-19.mp4",
         "video_sha256": "3643d29e1727509409563b0db41523a25f63a90aee6783a61ac11ca3214ac3c8"
       }
+    },
+    {
+      "published_utc": "2026-09-20T14:29:35Z",
+      "day": "2026-09-20",
+      "content_id": "bgp-2026-09-20-item-spotlight-item-28-7243952fba16",
+      "publish_hash": "b43c1db4faca67f0e76cf9a603fcac1ef858c4f9e35260124439a217fd6f85ef",
+      "youtube_video_id": "plnVxwvgC8U",
+      "youtube_url": "https://www.youtube.com/watch?v=plnVxwvgC8U",
+      "video_sha256": "185b04ff403a4892caf1a1a5e31fb8145e3b33b765e0b425f0412ff0b860c436",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-20.mp4",
+      "fingerprint": {
+        "day": "2026-09-20",
+        "category": "item_spotlight",
+        "angle": "best_user",
+        "content_id": "bgp-2026-09-20-item-spotlight-item-28-7243952fba16",
+        "canonical_hash": "7243952fba166770f892fcb4dc0c7f1bdbd5a1b86340f999e0b496aa2b5c9629",
+        "script_id": "f0a2f3df16db414d92a7518e60424ab4eb89c362b9ddbc165b3ec18b22aef358",
+        "fact_kind": "item",
+        "fact_pk": 28,
+        "fact_name": "Gauntlets Of Might",
+        "hook": "Gauntlets Of Might alter your Strength stat - it becomes 18 (+4) while worn.",
+        "body": "The Gauntlets Of Might set your Strength to 18 (+4), overriding any lower value. This is only beneficial when your Strength is below 18, as they do not stack with higher stats. Timing their use is crucial; equipping them right before a critical strength check or combat can change the outcome. For characters already at or above 18 Strength, these gauntlets offer no additional benefit.",
+        "cta": "GMs: Hand out Gauntlets Of Might when players face a challenge needing Strength 18, not as everyday gear.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-20.mp4",
+        "video_sha256": "185b04ff403a4892caf1a1a5e31fb8145e3b33b765e0b425f0412ff0b860c436"
+      }
     }
   ]
 }

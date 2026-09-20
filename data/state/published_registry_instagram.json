@@ -2592,6 +2592,36 @@
       "hook": "Focus Spells limit action economy - you can't cast another while one is active.",
       "body": "Focus Spells stay active until you take an action that ends them. Taking damage forces a DC 12 Constitution check to keep the spell active. Missteps occur when players attempt to stack spells or ignore the Constitution check. Commit to one spell and protect against interruptions to maintain effectiveness.",
       "cta": "GMs: When a player takes damage, enforce the DC 12 Constitution check immediately to see if their Focus Spell fizzles."
+    },
+    {
+      "published_utc": "2026-09-20T14:21:23Z",
+      "day": "2026-09-20",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-20-monster-tactic-creature-202-fd6ddd1c4a26",
+      "instagram_post_id": "18089242556438143",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "19710e4866291eb4eba28c8827523c2147ee87cb8096854eb7a7d2514a2d6c08",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-20.mp4",
+      "fact_name": "Zamyra",
+      "category": "monster_tactic",
+      "hook": "Zamyra's attack routine overwhelms most defenses - with a +27 to hit and multiple attacks per round.",
+      "body": "Zamyra's 8d20+1d20 action dice allow it to unleash a barrage of attacks and spells, often catching players off guard. Engaging Zamyra in direct combat without a plan to mitigate its multiple attacks and high AC can lead to quick defeat. Using movement and target priority to disrupt its positioning and limit its attack options proves more effective.",
+      "cta": "Judges: exploit Zamyra's 160' fly speed to outmaneuver the party, forcing them to adapt or suffer."
+    },
+    {
+      "published_utc": "2026-09-20T14:31:05Z",
+      "day": "2026-09-20",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-20-item-spotlight-item-28-7243952fba16",
+      "instagram_post_id": "17993118305843917",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "185b04ff403a4892caf1a1a5e31fb8145e3b33b765e0b425f0412ff0b860c436",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-20.mp4",
+      "fact_name": "Gauntlets Of Might",
+      "category": "item_spotlight",
+      "hook": "Gauntlets Of Might alter your Strength stat - it becomes 18 (+4) while worn.",
+      "body": "The Gauntlets Of Might set your Strength to 18 (+4), overriding any lower value. This is only beneficial when your Strength is below 18, as they do not stack with higher stats. Timing their use is crucial; equipping them right before a critical strength check or combat can change the outcome. For characters already at or above 18 Strength, these gauntlets offer no additional benefit.",
+      "cta": "GMs: Hand out Gauntlets Of Might when players face a challenge needing Strength 18, not as everyday gear."
     }
   ]
 }

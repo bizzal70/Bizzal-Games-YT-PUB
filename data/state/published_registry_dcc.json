@@ -1723,6 +1723,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-19.mp4",
         "video_sha256": "0beb7451d20978547b5a7e1a83fdd2f59ba55f77228467e7f6bd13a8b63cb700"
       }
+    },
+    {
+      "published_utc": "2026-09-20T14:20:22Z",
+      "day": "2026-09-20",
+      "content_id": "bgp-2026-09-20-monster-tactic-creature-202-fd6ddd1c4a26",
+      "publish_hash": "c2963be6245d3cadb3395ca1bcae2a35931cb1c5dc2b0e7ca4f5ef9cdc6acb86",
+      "youtube_video_id": "DQNMPFZ4-yI",
+      "youtube_url": "https://www.youtube.com/watch?v=DQNMPFZ4-yI",
+      "video_sha256": "19710e4866291eb4eba28c8827523c2147ee87cb8096854eb7a7d2514a2d6c08",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-20.mp4",
+      "fingerprint": {
+        "day": "2026-09-20",
+        "category": "monster_tactic",
+        "angle": "death_roll_odds",
+        "content_id": "bgp-2026-09-20-monster-tactic-creature-202-fd6ddd1c4a26",
+        "canonical_hash": "fd6ddd1c4a26c91a5ca00aee76d37e29ccb322bbd479c3e3aa4bdee1bf1be095",
+        "script_id": "90c29eea1150da82c48c78e20b8437230e66ea9d192525eab9194623ee361f9f",
+        "fact_kind": "creature",
+        "fact_pk": 202,
+        "fact_name": "Zamyra",
+        "hook": "Zamyra's attack routine overwhelms most defenses - with a +27 to hit and multiple attacks per round.",
+        "body": "Zamyra's 8d20+1d20 action dice allow it to unleash a barrage of attacks and spells, often catching players off guard. Engaging Zamyra in direct combat without a plan to mitigate its multiple attacks and high AC can lead to quick defeat. Using movement and target priority to disrupt its positioning and limit its attack options proves more effective.",
+        "cta": "Judges: exploit Zamyra's 160' fly speed to outmaneuver the party, forcing them to adapt or suffer.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-20.mp4",
+        "video_sha256": "19710e4866291eb4eba28c8827523c2147ee87cb8096854eb7a7d2514a2d6c08"
+      }
     }
   ]
 }

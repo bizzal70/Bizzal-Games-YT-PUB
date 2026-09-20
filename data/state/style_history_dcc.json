@@ -808,5 +808,15 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-20": {
+    "monster_tactic": {
+      "angle": "death_roll_odds",
+      "voice": "grim_referee",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }
