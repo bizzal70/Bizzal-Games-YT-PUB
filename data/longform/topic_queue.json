@@ -1,6 +1,94 @@
 [
   {
     "system": "dnd5e",
+    "title": "Underdark Subclasses: The New Paradigm",
+    "angle": "Exploration of the latest subclasses that redefine Underdark adventuring in 5e.",
+    "rationale": "The recent testing of new Underdark subclasses in D&D has captured community interest.",
+    "fixture_hint": "class",
+    "search_keyword": "Dungeons & Dragons testing out even more Underdark subclasses and species",
+    "created_date": "2026-09-21",
+    "status": "pending",
+    "brief_id": "6d27c7c596b3"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Munchkin 5E: A Closer Look",
+    "angle": "Dissecting how the Munchkin RPG adapts D&D 5E mechanics in humorous ways.",
+    "rationale": "The announcement of Munchkin becoming an RPG using 5E rules is a significant development.",
+    "fixture_hint": "class",
+    "search_keyword": "The iconic card game MUNCHKIN is becoming a roleplaying game... powered by 5E!",
+    "created_date": "2026-09-21",
+    "status": "pending",
+    "brief_id": "5038d04b4d1e"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Arcana Unleashed: A Shadowdark Adaptation",
+    "angle": "Exploring how the Arcana Unleashed spell mechanics could be integrated into Shadowdark.",
+    "rationale": "The deep dive review of Arcana Unleashed offers new spell mechanics that can influence Shadowdark.",
+    "fixture_hint": "spell",
+    "search_keyword": "Arcana Unleashed: A Deep Dive Review",
+    "created_date": "2026-09-21",
+    "status": "pending",
+    "brief_id": "ecf81ea15e77"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's Necromunda Inspiration",
+    "angle": "Examining how a Necromunda-inspired setting could work using Shadowdark rules.",
+    "rationale": "Games Workshop's production of a Necromunda TTRPG invites comparisons to Shadowdark's gritty themes.",
+    "fixture_hint": "rule",
+    "search_keyword": "Games Workshop is producing a Necromunda TTRPG",
+    "created_date": "2026-09-21",
+    "status": "pending",
+    "brief_id": "881e8564bfb1"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Ravenloft's Shadows in Shadowdark",
+    "angle": "Investigating how Shadowdark can incorporate gothic horror elements from Ravenloft.",
+    "rationale": "With Ravenloft's resurgence, audiences are keen on gothic horror, relevant to Shadowdark's tone.",
+    "fixture_hint": "creature",
+    "search_keyword": "Podcast #413 Livestream: Ravenloft on Netflix, new D&D movie script, WFRP 5E",
+    "created_date": "2026-09-21",
+    "status": "pending",
+    "brief_id": "ed536c4e4988"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Warlock: The OGL Influence",
+    "angle": "Evaluating how the Warlock class in DCC has evolved in response to OGL controversies.",
+    "rationale": "Dan Ayoub's comments on OGL mistakes highlight ongoing impacts on RPG systems like DCC.",
+    "fixture_hint": "class",
+    "search_keyword": "WotC's Dan Ayoub talks OGL mistakes--\"we're recovering from loud public missteps\"",
+    "created_date": "2026-09-21",
+    "status": "pending",
+    "brief_id": "8f0f782d17d5"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Homage to Munchkin",
+    "angle": "Exploring potential ways DCC could incorporate Munchkin's humor into its mechanics.",
+    "rationale": "With Munchkin adopting 5E, there's curiosity about its influence on other systems like DCC.",
+    "fixture_hint": "rule",
+    "search_keyword": "The iconic card game MUNCHKIN is becoming a roleplaying game... powered by 5E!",
+    "created_date": "2026-09-21",
+    "status": "pending",
+    "brief_id": "78e5dc8638c3"
+  },
+  {
+    "system": "dcc",
+    "title": "Ravenloft Echoes in DCC",
+    "angle": "Investigating how DCC could integrate Ravenloft's horror mechanics into its campaigns.",
+    "rationale": "Ravenloft's popularity in various formats prompts discussions on its influence across RPGs.",
+    "fixture_hint": "creature",
+    "search_keyword": "Castle Ravenloft returns, as board game gets reprint from Renegade Games",
+    "created_date": "2026-09-21",
+    "status": "pending",
+    "brief_id": "54c7da3fa18f"
+  },
+  {
+    "system": "dnd5e",
     "title": "Underdark Subclasses: Breaking Down the New Barriers",
     "angle": "Explore the latest Underdark subclasses shaking up the game with unique abilities and synergies.",
     "rationale": "Dungeons & Dragons is testing new Underdark subclasses and species, making it a hot topic.",
