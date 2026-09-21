@@ -1749,6 +1749,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-20.mp4",
         "video_sha256": "19710e4866291eb4eba28c8827523c2147ee87cb8096854eb7a7d2514a2d6c08"
       }
+    },
+    {
+      "published_utc": "2026-09-21T14:26:17Z",
+      "day": "2026-09-21",
+      "content_id": "bgp-2026-09-21-spell-use-case-spell-152-c6c6c92053f8",
+      "publish_hash": "3f521973226ec4e72791c126f4eafe8f84dd1207bf2b9674a2ff7bb1719e5d4c",
+      "youtube_video_id": "IbGSvCCnko8",
+      "youtube_url": "https://www.youtube.com/watch?v=IbGSvCCnko8",
+      "video_sha256": "07b0ae21957aa5d1081d3a0482abbae6857991ddff914ae988a0574751e61d5b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-21.mp4",
+      "fingerprint": {
+        "day": "2026-09-21",
+        "category": "spell_use_case",
+        "angle": "crit_result",
+        "content_id": "bgp-2026-09-21-spell-use-case-spell-152-c6c6c92053f8",
+        "canonical_hash": "c6c6c92053f882aa2586c8c507b3a22871d05eeb471ed169727b6938c77c11c0",
+        "script_id": "b9a895627c6f3910771423cd3f7171b27b97ace88572a4c2a5760d0bc7061841",
+        "fact_kind": "spell",
+        "fact_pk": 152,
+        "fact_name": "Whirling Doom",
+        "hook": "Whirling Doom often surprises clerics with its encounter-altering potential - 1 round per level of razor.",
+        "body": "Whirling Doom creates a stationary barrier of whirling blades, lasting 1 round per level, with a range of 50' per caster level. Many clerics mistakenly use it solely for damage, but its true strength lies in controlling movement and providing cover bonuses to creatures beyond it. Optimal use involves casting it to block enemy advances or retreat, altering the tactical landscape of the encounter.",
+        "cta": "Judges: Cast Whirling Doom when foes are 50' away, blocking their path with a razor barrier for 1 round per level.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-21.mp4",
+        "video_sha256": "07b0ae21957aa5d1081d3a0482abbae6857991ddff914ae988a0574751e61d5b"
+      }
     }
   ]
 }

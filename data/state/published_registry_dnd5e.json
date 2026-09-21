@@ -2397,6 +2397,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-20.mp4",
         "video_sha256": "09d78b3afac08683a645adfe76f2118fbda59826e6af71d7968337c7b7d96ff4"
       }
+    },
+    {
+      "published_utc": "2026-09-21T14:30:51Z",
+      "day": "2026-09-21",
+      "content_id": "bgp-2026-09-21-rules-myth-rule-srd-2024-damage-and-healing-knocking-out-a-creature-2eeec695409f",
+      "publish_hash": "a6e99b970a6f1511e69696369b824fb82cd61b4a07c08d03ec413ebf1592511d",
+      "youtube_video_id": "HT8lpGgkx9w",
+      "youtube_url": "https://www.youtube.com/watch?v=HT8lpGgkx9w",
+      "video_sha256": "fc0470f31941445b0f46057d39aad7559e2859dd76f270d6ef60574129cd9985",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-21.mp4",
+      "fingerprint": {
+        "day": "2026-09-21",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-09-21-rules-myth-rule-srd-2024-damage-and-healing-knocking-out-a-creature-2eeec695409f",
+        "canonical_hash": "2eeec695409f19da7106b6b0894fcfccd96b1cacf6c220619f9127eb17245b34",
+        "script_id": "1298a854bead35bcde838cc86e5bc81adaef2043be3dced25d44f2e4f2c4ef4d",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_damage-and-healing_knocking-out-a-creature",
+        "fact_name": "Knocking out a Creature",
+        "hook": "Knocking out a Creature is more flexible than most players realize - you can choose to reduce a creature to 1.",
+        "body": "Reducing a creature to 0 Hit Points with a melee attack allows the attacker to instead leave it at 1 Hit Point and apply the Unconscious condition. This mechanic prevents unnecessary fatalities and opens options for interrogation or avoiding moral complications. Opting for unconsciousness can shift the encounter's outcome without additional violence.",
+        "cta": "DMs: Remind players they can leave foes at 1 HP and unconscious with melee attacks to avoid unnecessary deaths.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-21.mp4",
+        "video_sha256": "fc0470f31941445b0f46057d39aad7559e2859dd76f270d6ef60574129cd9985"
+      }
     }
   ]
 }

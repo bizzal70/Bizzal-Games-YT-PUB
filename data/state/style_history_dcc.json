@@ -818,5 +818,15 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-09-21": {
+    "spell_use_case": {
+      "angle": "crit_result",
+      "voice": "grim_referee",
+      "tone": "gritty",
+      "persona": "chaos_arcane_coach",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

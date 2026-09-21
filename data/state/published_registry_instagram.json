@@ -2637,6 +2637,51 @@
       "hook": "Ghosts often create unexpected time pressure - Etherealness and Horrific Visage force costly decisions each.",
       "body": "Ghosts have an AC of 11 and 45 hit points, but their true threat lies in Etherealness and Horrific Visage. Etherealness allows them to move through objects and avoid attacks, while Horrific Visage can frighten creatures within 60 feet, potentially causing them to lose actions. A common mistake is focusing on dealing damage instead of managing these abilities. Effective play involves prioritizing dispelling or countering these effects to maintain control over the encounter.",
       "cta": "DMs: Set a 5-minute timer each round to remind players of the Ghost's Etherealness and Horrific Visage impact."
+    },
+    {
+      "published_utc": "2026-09-21T14:27:01Z",
+      "day": "2026-09-21",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-21-spell-use-case-spell-152-c6c6c92053f8",
+      "instagram_post_id": "17910462378472436",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "07b0ae21957aa5d1081d3a0482abbae6857991ddff914ae988a0574751e61d5b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-21.mp4",
+      "fact_name": "Whirling Doom",
+      "category": "spell_use_case",
+      "hook": "Whirling Doom often surprises clerics with its encounter-altering potential - 1 round per level of razor.",
+      "body": "Whirling Doom creates a stationary barrier of whirling blades, lasting 1 round per level, with a range of 50' per caster level. Many clerics mistakenly use it solely for damage, but its true strength lies in controlling movement and providing cover bonuses to creatures beyond it. Optimal use involves casting it to block enemy advances or retreat, altering the tactical landscape of the encounter.",
+      "cta": "Judges: Cast Whirling Doom when foes are 50' away, blocking their path with a razor barrier for 1 round per level."
+    },
+    {
+      "published_utc": "2026-09-21T14:31:36Z",
+      "day": "2026-09-21",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-21-rules-myth-rule-srd-2024-damage-and-healing-knocking-out-a-creature-2eeec695409f",
+      "instagram_post_id": "17920794702224905",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "fc0470f31941445b0f46057d39aad7559e2859dd76f270d6ef60574129cd9985",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-21.mp4",
+      "fact_name": "Knocking out a Creature",
+      "category": "rules_myth",
+      "hook": "Knocking out a Creature is more flexible than most players realize - you can choose to reduce a creature to 1.",
+      "body": "Reducing a creature to 0 Hit Points with a melee attack allows the attacker to instead leave it at 1 Hit Point and apply the Unconscious condition. This mechanic prevents unnecessary fatalities and opens options for interrogation or avoiding moral complications. Opting for unconsciousness can shift the encounter's outcome without additional violence.",
+      "cta": "DMs: Remind players they can leave foes at 1 HP and unconscious with melee attacks to avoid unnecessary deaths."
+    },
+    {
+      "published_utc": "2026-09-21T14:35:58Z",
+      "day": "2026-09-21",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-21-encounter-seed-creature-176-5070d42fbb77",
+      "instagram_post_id": "18104071559592425",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "166b29bb16920cc1be75903cc0c811de62ab1cc2fdd9f1b29c7c056ed86e062a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-21.mp4",
+      "fact_name": "Roper",
+      "category": "encounter_seed",
+      "hook": "Give Roper a real price.",
+      "body": "Roper's tendrils have a dual threat: they grab with a DC 15 Strength check and automatically hit the next round if not severed. Underestimating the need to focus fire on tendrils often results in multiple party members being pulled into range for the roper's 2d8 bite. Prioritizing cutting tendrils before attempting to free a trapped ally is crucial; it's the only way to prevent being reeled in like fish on a line.",
+      "cta": "GMs: Make them roll DC 15 Strength checks early or watch them get dragged into a 2d8 bite."
     }
   ]
 }

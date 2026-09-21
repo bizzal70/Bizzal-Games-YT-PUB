@@ -2006,6 +2006,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-20.mp4",
         "video_sha256": "185b04ff403a4892caf1a1a5e31fb8145e3b33b765e0b425f0412ff0b860c436"
       }
+    },
+    {
+      "published_utc": "2026-09-21T14:35:14Z",
+      "day": "2026-09-21",
+      "content_id": "bgp-2026-09-21-encounter-seed-creature-176-5070d42fbb77",
+      "publish_hash": "2e88f09d065a382d0d173a90ff50bef2cb359d80a49d27a5a7c0d200388be3dc",
+      "youtube_video_id": "UdXlpCpz0ug",
+      "youtube_url": "https://www.youtube.com/watch?v=UdXlpCpz0ug",
+      "video_sha256": "166b29bb16920cc1be75903cc0c811de62ab1cc2fdd9f1b29c7c056ed86e062a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-21.mp4",
+      "fingerprint": {
+        "day": "2026-09-21",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-09-21-encounter-seed-creature-176-5070d42fbb77",
+        "canonical_hash": "5070d42fbb77bd642cc41c8c7fcc123f1fdd3700d3148b0c214e0838367aaaec",
+        "script_id": "b126545927145fce455810229440d1e65cedc20ddc3d190a3d884f6f0e61bb61",
+        "fact_kind": "creature",
+        "fact_pk": 176,
+        "fact_name": "Roper",
+        "hook": "Give Roper a real price.",
+        "body": "Roper's tendrils have a dual threat: they grab with a DC 15 Strength check and automatically hit the next round if not severed. Underestimating the need to focus fire on tendrils often results in multiple party members being pulled into range for the roper's 2d8 bite. Prioritizing cutting tendrils before attempting to free a trapped ally is crucial; it's the only way to prevent being reeled in like fish on a line.",
+        "cta": "GMs: Make them roll DC 15 Strength checks early or watch them get dragged into a 2d8 bite.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-21.mp4",
+        "video_sha256": "166b29bb16920cc1be75903cc0c811de62ab1cc2fdd9f1b29c7c056ed86e062a"
+      },
+      "tone_lint_violation": "vague filler phrase: often results in"
     }
   ]
 }
