@@ -519,6 +519,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-09-shadowdark-clip3.mp4",
         "video_sha256": "44f486fa2f6ea4b62b12071626ce3d636d8714e75fd86a83b49fa41439cd17c3"
       }
+    },
+    {
+      "published_utc": "2026-09-21T17:57:04Z",
+      "day": "2026-09-21-shadowdark-clip2",
+      "content_id": "clip:97e10108a7b43e5a",
+      "publish_hash": "5403a86ffe726f64cfa0c901bbfab693eb73026cfa6ff0053b7101537077bda8",
+      "youtube_video_id": "ez48tBBMh08",
+      "youtube_url": "https://www.youtube.com/watch?v=ez48tBBMh08",
+      "video_sha256": "741ae3e0a1a0ede4344f4b6c84d663fc99dad46a444c6253b9fc7b3c5c7be3cc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-21-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-09-21-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:97e10108a7b43e5a",
+        "canonical_hash": "",
+        "script_id": "97e10108a7b43e5a7a6dcf8c0040a710a3c2db5f627a38280500aa3dad8a97ee",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Animate Dead lasts only one day",
+        "hook": "Animate Dead lasts only one day",
+        "body": "The undead created by Animate Dead reverts to dust after one day. Timing is critical. Cast just before major encounters to maximize utility. Plan strategically to ensure the undead serves its purpose within this limited timeframe.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-21-shadowdark-clip2.mp4",
+        "video_sha256": "741ae3e0a1a0ede4344f4b6c84d663fc99dad46a444c6253b9fc7b3c5c7be3cc"
+      }
+    },
+    {
+      "published_utc": "2026-09-21T17:58:24Z",
+      "day": "2026-09-21-shadowdark-clip3",
+      "content_id": "clip:48615317d87f235b",
+      "publish_hash": "f1c145a5d6e61813d650b0d40a4edd13dad0fc4b8fca6e78000549fbdcdbb956",
+      "youtube_video_id": "uDJ41Ro3q7A",
+      "youtube_url": "https://www.youtube.com/watch?v=uDJ41Ro3q7A",
+      "video_sha256": "b527c9572dfb73f9f50a6f542eae99a650da57d1877730f1021b5aedbe5de83d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-21-shadowdark-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-09-21-shadowdark-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:48615317d87f235b",
+        "canonical_hash": "",
+        "script_id": "48615317d87f235b02a067e900592affff5dc50a267c3f4163bb8f7924315b01",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Animate Dead acts on your turn",
+        "hook": "Animate Dead acts on your turn",
+        "body": "Animate Dead's creature acts strictly on your turn. This means no independent actions. Coordinate with your party to maximize its effectiveness. The undead's actions require your command, so plan your moves carefully.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-21-shadowdark-clip3.mp4",
+        "video_sha256": "b527c9572dfb73f9f50a6f542eae99a650da57d1877730f1021b5aedbe5de83d"
+      }
     }
   ]
 }

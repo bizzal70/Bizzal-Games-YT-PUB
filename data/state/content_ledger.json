@@ -5796,6 +5796,39 @@
       "video_id": "18104071559592425",
       "day": "2026-09-21",
       "published_at": "2026-09-21T14:35:58+00:00"
+    },
+    {
+      "content_key": "732bc2aec1a9919dc6758178295628a6b372cb9701f3374d4f2551ea557f8794",
+      "token_text": "animate control dead head limb require three",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Animate Dead: Control Requires Three Limbs and a Head #shadowdark",
+      "video_id": "hdp0Vcvldnw",
+      "day": "2026-09-21",
+      "published_at": "2026-09-21T17:53:55+00:00"
+    },
+    {
+      "content_key": "ddf787c7b7cac4684f2cdb21060ca5ff870c9a7856a3187071fa46b6a47cf584",
+      "token_text": "animate day dead last one only",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Animate Dead lasts only one day #shadowdark",
+      "video_id": "ez48tBBMh08",
+      "day": "2026-09-21-shadowdark-clip2",
+      "published_at": "2026-09-21T17:57:04+00:00"
+    },
+    {
+      "content_key": "81957ea51d75d8ad4646e3f2b0bf9e36b3734215258f085ac5aed6180d56e06d",
+      "token_text": "acts animate dead turn",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Animate Dead acts on your turn #shadowdark",
+      "video_id": "uDJ41Ro3q7A",
+      "day": "2026-09-21-shadowdark-clip3",
+      "published_at": "2026-09-21T17:58:24+00:00"
     }
   ]
 }
