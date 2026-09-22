@@ -2033,6 +2033,32 @@
         "video_sha256": "166b29bb16920cc1be75903cc0c811de62ab1cc2fdd9f1b29c7c056ed86e062a"
       },
       "tone_lint_violation": "vague filler phrase: often results in"
+    },
+    {
+      "published_utc": "2026-09-22T14:34:33Z",
+      "day": "2026-09-22",
+      "content_id": "bgp-2026-09-22-rules-myth-rule-1-418b0b098c33",
+      "publish_hash": "9769cf0ccd50bc3bc3d573919c16b92e0c2a225e64d7f0bcac7a67421096f2f5",
+      "youtube_video_id": "hReyf5INdRA",
+      "youtube_url": "https://www.youtube.com/watch?v=hReyf5INdRA",
+      "video_sha256": "d9cbe0c25c82ecfafbd9cc4352022fcc2ab657463fb0bc3e4f857f9be38cc883",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-22.mp4",
+      "fingerprint": {
+        "day": "2026-09-22",
+        "category": "rules_myth",
+        "angle": "dm_callout",
+        "content_id": "bgp-2026-09-22-rules-myth-rule-1-418b0b098c33",
+        "canonical_hash": "418b0b098c338f8714be343bd36b8538dab1180a9d06cc21c158070bc4a7cf98",
+        "script_id": "80985259ed4c15a886e71df941ec6cbbd74117cc185d437da0523596468e48ad",
+        "fact_kind": "rule",
+        "fact_pk": 1,
+        "fact_name": "Advantage and Disadvantage",
+        "hook": "Advantage and Disadvantage confuse players - they never stack.",
+        "body": "Advantage and Disadvantage require rolling twice and using the better or worse result, respectively. Multiple sources do not stack, so having more than one source of advantage or disadvantage is irrelevant. They cancel each other out, leaving a straight roll if both apply. Consistent rulings prevent future disputes.",
+        "cta": "GMs: Remind them advantage and disadvantage don't stack; one cancels the other, leaving a single roll.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-22.mp4",
+        "video_sha256": "d9cbe0c25c82ecfafbd9cc4352022fcc2ab657463fb0bc3e4f857f9be38cc883"
+      }
     }
   ]
 }

@@ -932,5 +932,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-09-22": {
+    "rules_myth": {
+      "angle": "dm_callout",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

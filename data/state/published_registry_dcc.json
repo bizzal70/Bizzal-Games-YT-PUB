@@ -1775,6 +1775,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-21.mp4",
         "video_sha256": "07b0ae21957aa5d1081d3a0482abbae6857991ddff914ae988a0574751e61d5b"
       }
+    },
+    {
+      "published_utc": "2026-09-22T14:24:43Z",
+      "day": "2026-09-22",
+      "content_id": "bgp-2026-09-22-rules-ruling-rule-6-71f0b0fd0d06",
+      "publish_hash": "9d0d1a209daea41ebf3ab8cfeabddc04a9167054a68c769d355cc7fde860afcd",
+      "youtube_video_id": "agHKiv6W4GI",
+      "youtube_url": "https://www.youtube.com/watch?v=agHKiv6W4GI",
+      "video_sha256": "dc920385ff939e3aa7419ad91509b80f1459d2f38754344fb0cb5b7fdef88720",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-22.mp4",
+      "fingerprint": {
+        "day": "2026-09-22",
+        "category": "rules_ruling",
+        "angle": "saving_throw_type",
+        "content_id": "bgp-2026-09-22-rules-ruling-rule-6-71f0b0fd0d06",
+        "canonical_hash": "71f0b0fd0d06a64790443c1cfa43229fb8f97e4aa3fb81b369ccb26cd9329082",
+        "script_id": "1062482f4f33718ce1f8e51071caac055d9101d0cf4b21abeed047842704f993",
+        "fact_kind": "rule",
+        "fact_pk": 6,
+        "fact_name": "The Funnel",
+        "hook": "The Funnel has a high mortality rate - most 0-level characters die before reaching 1st level.",
+        "body": "The Funnel begins with each player controlling 3-4 randomly generated 0-level characters, typically peasants with 1d4 HP and a single weapon. These characters lack classes or spells, emphasizing survival through clever play and luck rather than optimization. Attempting to min-max is ineffective; the real advantage comes from embracing the chaos and adapting quickly to changing circumstances.",
+        "cta": "Judges: Remind them that their 1d4 HP peasants survive The Funnel by using their wits, not by rolling high on stats.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-22.mp4",
+        "video_sha256": "dc920385ff939e3aa7419ad91509b80f1459d2f38754344fb0cb5b7fdef88720"
+      }
     }
   ]
 }

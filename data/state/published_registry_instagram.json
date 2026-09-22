@@ -2682,6 +2682,51 @@
       "hook": "Give Roper a real price.",
       "body": "Roper's tendrils have a dual threat: they grab with a DC 15 Strength check and automatically hit the next round if not severed. Underestimating the need to focus fire on tendrils often results in multiple party members being pulled into range for the roper's 2d8 bite. Prioritizing cutting tendrils before attempting to free a trapped ally is crucial; it's the only way to prevent being reeled in like fish on a line.",
       "cta": "GMs: Make them roll DC 15 Strength checks early or watch them get dragged into a 2d8 bite."
+    },
+    {
+      "published_utc": "2026-09-22T14:25:28Z",
+      "day": "2026-09-22",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-22-rules-ruling-rule-6-71f0b0fd0d06",
+      "instagram_post_id": "18168590857417886",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "dc920385ff939e3aa7419ad91509b80f1459d2f38754344fb0cb5b7fdef88720",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-22.mp4",
+      "fact_name": "The Funnel",
+      "category": "rules_ruling",
+      "hook": "The Funnel has a high mortality rate - most 0-level characters die before reaching 1st level.",
+      "body": "The Funnel begins with each player controlling 3-4 randomly generated 0-level characters, typically peasants with 1d4 HP and a single weapon. These characters lack classes or spells, emphasizing survival through clever play and luck rather than optimization. Attempting to min-max is ineffective; the real advantage comes from embracing the chaos and adapting quickly to changing circumstances.",
+      "cta": "Judges: Remind them that their 1d4 HP peasants survive The Funnel by using their wits, not by rolling high on stats."
+    },
+    {
+      "published_utc": "2026-09-22T14:30:53Z",
+      "day": "2026-09-22",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-22-class-spotlight-class-tashas-cauldron-way-of-the-astral-self-7af08badcb01",
+      "instagram_post_id": "17915610402448743",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "bbaae1c5786eedb9771bd6bff79fd0e680b90f56c8c6517ee40d61e1f64aec73",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-22.mp4",
+      "fact_name": "Way of the Astral Self",
+      "category": "class_spotlight",
+      "hook": "Way of the Astral Self transitions from setup to closer - Arms of the Astral Self cost 1 ki to summon and use.",
+      "body": "Arms of the Astral Self allow monks to use Wisdom instead of Strength for attack and damage rolls, but many default to suboptimal Strength-based strategies. Leveraging the spectral arms' 10-foot reach early in combat sets up control, then shifting to Wisdom-based strikes closes out encounters efficiently. Timing ki expenditure to maintain the astral form's presence throughout the fight is crucial for sustained effectiveness.",
+      "cta": "DMs: Remind your Astral Self monk to spend 1 ki on spectral arms early to maximize their Wisdom-based reach and control."
+    },
+    {
+      "published_utc": "2026-09-22T14:35:20Z",
+      "day": "2026-09-22",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-22-rules-myth-rule-1-418b0b098c33",
+      "instagram_post_id": "18001011039007912",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d9cbe0c25c82ecfafbd9cc4352022fcc2ab657463fb0bc3e4f857f9be38cc883",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-22.mp4",
+      "fact_name": "Advantage and Disadvantage",
+      "category": "rules_myth",
+      "hook": "Advantage and Disadvantage confuse players - they never stack.",
+      "body": "Advantage and Disadvantage require rolling twice and using the better or worse result, respectively. Multiple sources do not stack, so having more than one source of advantage or disadvantage is irrelevant. They cancel each other out, leaving a straight roll if both apply. Consistent rulings prevent future disputes.",
+      "cta": "GMs: Remind them advantage and disadvantage don't stack; one cancels the other, leaving a single roll."
     }
   ]
 }

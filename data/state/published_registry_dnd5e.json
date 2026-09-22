@@ -2423,6 +2423,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-21.mp4",
         "video_sha256": "fc0470f31941445b0f46057d39aad7559e2859dd76f270d6ef60574129cd9985"
       }
+    },
+    {
+      "published_utc": "2026-09-22T14:29:37Z",
+      "day": "2026-09-22",
+      "content_id": "bgp-2026-09-22-class-spotlight-class-tashas-cauldron-way-of-the-astral-self-7af08badcb01",
+      "publish_hash": "71386096b7b5f8f6663b6b6ce509de633fe6007be463379b72c0d08f0433b0f2",
+      "youtube_video_id": "Mxor4RIZSjM",
+      "youtube_url": "https://www.youtube.com/watch?v=Mxor4RIZSjM",
+      "video_sha256": "bbaae1c5786eedb9771bd6bff79fd0e680b90f56c8c6517ee40d61e1f64aec73",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-22.mp4",
+      "fingerprint": {
+        "day": "2026-09-22",
+        "category": "class_spotlight",
+        "angle": "party_role_pivot",
+        "content_id": "bgp-2026-09-22-class-spotlight-class-tashas-cauldron-way-of-the-astral-self-7af08badcb01",
+        "canonical_hash": "7af08badcb0130fc3d9999efa2027d3236f55cf342a66f37d35ffc9197e16736",
+        "script_id": "3bc8b2e552593f51a073e98b34b4d440bf87bfccd0d967b450313975b3ac392c",
+        "fact_kind": "class",
+        "fact_pk": "tashas-cauldron_way-of-the-astral-self",
+        "fact_name": "Way of the Astral Self",
+        "hook": "Way of the Astral Self transitions from setup to closer - Arms of the Astral Self cost 1 ki to summon and use.",
+        "body": "Arms of the Astral Self allow monks to use Wisdom instead of Strength for attack and damage rolls, but many default to suboptimal Strength-based strategies. Leveraging the spectral arms' 10-foot reach early in combat sets up control, then shifting to Wisdom-based strikes closes out encounters efficiently. Timing ki expenditure to maintain the astral form's presence throughout the fight is crucial for sustained effectiveness.",
+        "cta": "DMs: Remind your Astral Self monk to spend 1 ki on spectral arms early to maximize their Wisdom-based reach and control.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-22.mp4",
+        "video_sha256": "bbaae1c5786eedb9771bd6bff79fd0e680b90f56c8c6517ee40d61e1f64aec73"
+      }
     }
   ]
 }
