@@ -5961,6 +5961,39 @@
       "video_id": "18139430032625966",
       "day": "2026-09-23",
       "published_at": "2026-09-23T14:32:59+00:00"
+    },
+    {
+      "content_key": "6d3030b0688275958e78bb70ab2474d7fcbe059e4b93f5ca4b250f2f6659525d",
+      "token_text": "barbarian dice hit mastering saving throw",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Barbarian: Mastering Hit Dice and Saving Throws #dnd5e",
+      "video_id": "cTOm_pR8FZs",
+      "day": "2026-09-23",
+      "published_at": "2026-09-23T18:02:31+00:00"
+    },
+    {
+      "content_key": "131e90cbc8b7fd2729a3881cf2f895988ac04ba543ed1213db7d3a8f19fdf09c",
+      "token_text": "barbarian constitution excel saving throw",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Barbarians excel in Constitution saving throws #dnd5e",
+      "video_id": "x7QZoTELxlI",
+      "day": "2026-09-23-dnd5e-clip1",
+      "published_at": "2026-09-23T18:04:17+00:00"
+    },
+    {
+      "content_key": "c207be851e84b42e86a3710a465bd465a16bf616112ea9fefc12c6fdeaf10a9e",
+      "token_text": "barbarian boost d12 dice health hit recovery",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Barbarians' d12 hit dice boosts health recovery #dnd5e",
+      "video_id": "dqVOwZfyUgw",
+      "day": "2026-09-23-dnd5e-clip2",
+      "published_at": "2026-09-23T18:05:48+00:00"
     }
   ]
 }

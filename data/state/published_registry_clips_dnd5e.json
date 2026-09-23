@@ -337,6 +337,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-14-dnd5e-clip3.mp4",
         "video_sha256": "0a070003ad64a82ca318327a707aca317fa25f8a9096c40ddad42801ed8a36cb"
       }
+    },
+    {
+      "published_utc": "2026-09-23T18:04:17Z",
+      "day": "2026-09-23-dnd5e-clip1",
+      "content_id": "clip:0c9d185166dc2517",
+      "publish_hash": "147bad0dfbaa4d652402830564f8ed353aabc7446bcc9168ecb1477fc6ef6102",
+      "youtube_video_id": "x7QZoTELxlI",
+      "youtube_url": "https://www.youtube.com/watch?v=x7QZoTELxlI",
+      "video_sha256": "66464d795db2ca6c8e0f1f05394e9b243ec3ec41ceb3146b8882dcd323352a10",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-23-dnd5e-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-09-23-dnd5e-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:0c9d185166dc2517",
+        "canonical_hash": "",
+        "script_id": "0c9d185166dc25172f666d7f52c120474cca72671cd466fab67d17dfa00e01d1",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Barbarians excel in Constitution saving throws",
+        "hook": "Barbarians excel in Constitution saving throws",
+        "body": "Barbarians are proficient in Constitution saving throws, vital for resisting poison and maintaining concentration. This proficiency offers resilience against environmental hazards and certain spells, making them tough in varied scenarios. Leverage this to withstand effects others can't.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-23-dnd5e-clip1.mp4",
+        "video_sha256": "66464d795db2ca6c8e0f1f05394e9b243ec3ec41ceb3146b8882dcd323352a10"
+      }
+    },
+    {
+      "published_utc": "2026-09-23T18:05:48Z",
+      "day": "2026-09-23-dnd5e-clip2",
+      "content_id": "clip:505dedc0b665b44f",
+      "publish_hash": "17395752d933dce46713773743a807d5dc41e56a9ce1929e50f7cc9ca48aba7c",
+      "youtube_video_id": "dqVOwZfyUgw",
+      "youtube_url": "https://www.youtube.com/watch?v=dqVOwZfyUgw",
+      "video_sha256": "bfae05b7ed8b2e05976358da19dc1a22d4ef20bf3ddcbd83df4939d3eb57442b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-23-dnd5e-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-09-23-dnd5e-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:505dedc0b665b44f",
+        "canonical_hash": "",
+        "script_id": "505dedc0b665b44fc7747ae8a920822c481e8f9729939de4add5251fa21bd84c",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Barbarians' d12 hit dice boosts health recovery",
+        "hook": "Barbarians' d12 hit dice boosts health recovery",
+        "body": "Barbarians use a d12 hit dice, the largest in the game, allowing significant health recovery during short rests. This advantage makes them durable frontliners. Roll multiple d12s to maximize health regain, crucial in dungeon crawls or prolonged fights.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-09-23-dnd5e-clip2.mp4",
+        "video_sha256": "bfae05b7ed8b2e05976358da19dc1a22d4ef20bf3ddcbd83df4939d3eb57442b"
+      }
     }
   ]
 }
