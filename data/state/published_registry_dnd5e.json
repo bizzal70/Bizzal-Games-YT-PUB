@@ -2449,6 +2449,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-22.mp4",
         "video_sha256": "bbaae1c5786eedb9771bd6bff79fd0e680b90f56c8c6517ee40d61e1f64aec73"
       }
+    },
+    {
+      "published_utc": "2026-09-23T14:28:49Z",
+      "day": "2026-09-23",
+      "content_id": "bgp-2026-09-23-monster-tactic-creature-srd-2024-reef-shark-62bd556cab3d",
+      "publish_hash": "8e3194be19c40fe566b02d4abdb28a0a7b8c8b530eaa3305ffe5932813a4bde2",
+      "youtube_video_id": "krwIIW_bwTI",
+      "youtube_url": "https://www.youtube.com/watch?v=krwIIW_bwTI",
+      "video_sha256": "2723e07c991f7edd7821dac241c032962d9de2f1f3601d4662b6f3207ed58d87",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-23.mp4",
+      "fingerprint": {
+        "day": "2026-09-23",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-09-23-monster-tactic-creature-srd-2024-reef-shark-62bd556cab3d",
+        "canonical_hash": "62bd556cab3de307c55781b32b18d28a0995567d55fb874d23d216161006643e",
+        "script_id": "9eda26992bd9c736498753f0e20da29295ce63451cc85e0fb9c07dd91a2ad63e",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_reef-shark",
+        "fact_name": "Reef Shark",
+        "hook": "Reef Shark's Pack Tactics often surprises parties - advantage triggers when an ally is within 5 feet.",
+        "body": "Reef Shark's Pack Tactics grants advantage on attack rolls if an ally is adjacent to the target. This synergy means the shark is most effective when it coordinates with others, creating a swarm effect. Disrupting this formation is key to preventing the shark from exploiting its advantage repeatedly. Prioritizing movement and breaking adjacency can deny the shark its bonus.",
+        "cta": "DMs: Maintain the sharks' 5-foot adjacency for Pack Tactics advantage; players, break their formation to negate it.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-23.mp4",
+        "video_sha256": "2723e07c991f7edd7821dac241c032962d9de2f1f3601d4662b6f3207ed58d87"
+      },
+      "tone_lint_violation": "vague filler phrase: surprises parties"
     }
   ]
 }

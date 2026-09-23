@@ -2059,6 +2059,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-22.mp4",
         "video_sha256": "d9cbe0c25c82ecfafbd9cc4352022fcc2ab657463fb0bc3e4f857f9be38cc883"
       }
+    },
+    {
+      "published_utc": "2026-09-23T14:32:14Z",
+      "day": "2026-09-23",
+      "content_id": "bgp-2026-09-23-spell-use-case-spell-105-bedbf15071ac",
+      "publish_hash": "c51d308196f5cfaf8b424bfd03064ad6b62f3b47fbaaeece42aa8475269de11a",
+      "youtube_video_id": "ZBbKjU3zsBg",
+      "youtube_url": "https://www.youtube.com/watch?v=ZBbKjU3zsBg",
+      "video_sha256": "ec28cc0db395ee97fbe781df4de78006c112d982f01fbd63c978febc24325697",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-23.mp4",
+      "fingerprint": {
+        "day": "2026-09-23",
+        "category": "spell_use_case",
+        "angle": "dm_twist",
+        "content_id": "bgp-2026-09-23-spell-use-case-spell-105-bedbf15071ac",
+        "canonical_hash": "bedbf15071aca065c996f80e9331546fdddb4636f519924f40e4290ce5ab2b93",
+        "script_id": "70f67f1873968d1755efb6e08c9393a6f5b2df85ecbf9b0e48ce4b9431b948bc",
+        "fact_kind": "spell",
+        "fact_pk": 105,
+        "fact_name": "Willowman",
+        "hook": "Willowman forces a morale check on normally immune creatures - even undead must roll.",
+        "body": "Willowman operates at Near range with an Instant duration. It targets creatures of level 2 or less, compelling a morale check. Many overlook its utility against morale-immune creatures, like undead. Deploy it to disrupt expected behaviors and gain tactical leverage.",
+        "cta": "GMs: Use Willowman to force a morale check on level 2 undead, breaking their immunity and shifting the fight.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-23.mp4",
+        "video_sha256": "ec28cc0db395ee97fbe781df4de78006c112d982f01fbd63c978febc24325697"
+      }
     }
   ]
 }

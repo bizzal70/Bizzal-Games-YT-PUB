@@ -1801,6 +1801,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-22.mp4",
         "video_sha256": "dc920385ff939e3aa7419ad91509b80f1459d2f38754344fb0cb5b7fdef88720"
       }
+    },
+    {
+      "published_utc": "2026-09-23T14:24:33Z",
+      "day": "2026-09-23",
+      "content_id": "bgp-2026-09-23-item-spotlight-item-20-f1cb214e4c78",
+      "publish_hash": "416dfafb78d22a27cd4437b99e88dbf236cc8dfc289c148d0561ae975620eeac",
+      "youtube_video_id": "41-C9DT1gRs",
+      "youtube_url": "https://www.youtube.com/watch?v=41-C9DT1gRs",
+      "video_sha256": "7d597b1c58fd08cde12f7718b5a136ccb7f7cb34415f4d05f5406ad889b1dafa",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-23.mp4",
+      "fingerprint": {
+        "day": "2026-09-23",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-09-23-item-spotlight-item-20-f1cb214e4c78",
+        "canonical_hash": "f1cb214e4c782af42639da975dabbdd854151b5e79b5e0c6d8818dacb7ab8829",
+        "script_id": "3f9b1450ee1ea6c9fe55acdf9375ca52782c44dc66b5dd22e55c8b8ce7cb003b",
+        "fact_kind": "item",
+        "fact_pk": 20,
+        "fact_name": "Weapon-breaker",
+        "hook": "Weapon-breaker does more than just damage - it destroys the opponent's weapon on a crit.",
+        "body": "Weapon-breaker destroys the opponent's weapon on any critical hit, adding to the normal crit effects. Many players try to use it in every combat, overlooking its true value. Its real impact comes when it's timed to disarm a key opponent, shifting the battle's balance.",
+        "cta": "Judges: Time Weapon-breaker's crit to destroy a key opponent's weapon, turning their advantage into a liability.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-23.mp4",
+        "video_sha256": "7d597b1c58fd08cde12f7718b5a136ccb7f7cb34415f4d05f5406ad889b1dafa"
+      }
     }
   ]
 }

@@ -2727,6 +2727,51 @@
       "hook": "Advantage and Disadvantage confuse players - they never stack.",
       "body": "Advantage and Disadvantage require rolling twice and using the better or worse result, respectively. Multiple sources do not stack, so having more than one source of advantage or disadvantage is irrelevant. They cancel each other out, leaving a straight roll if both apply. Consistent rulings prevent future disputes.",
       "cta": "GMs: Remind them advantage and disadvantage don't stack; one cancels the other, leaving a single roll."
+    },
+    {
+      "published_utc": "2026-09-23T14:25:49Z",
+      "day": "2026-09-23",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-23-item-spotlight-item-20-f1cb214e4c78",
+      "instagram_post_id": "18090906611268478",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "7d597b1c58fd08cde12f7718b5a136ccb7f7cb34415f4d05f5406ad889b1dafa",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-23.mp4",
+      "fact_name": "Weapon-breaker",
+      "category": "item_spotlight",
+      "hook": "Weapon-breaker does more than just damage - it destroys the opponent's weapon on a crit.",
+      "body": "Weapon-breaker destroys the opponent's weapon on any critical hit, adding to the normal crit effects. Many players try to use it in every combat, overlooking its true value. Its real impact comes when it's timed to disarm a key opponent, shifting the battle's balance.",
+      "cta": "Judges: Time Weapon-breaker's crit to destroy a key opponent's weapon, turning their advantage into a liability."
+    },
+    {
+      "published_utc": "2026-09-23T14:29:34Z",
+      "day": "2026-09-23",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-23-monster-tactic-creature-srd-2024-reef-shark-62bd556cab3d",
+      "instagram_post_id": "17887580511618322",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "2723e07c991f7edd7821dac241c032962d9de2f1f3601d4662b6f3207ed58d87",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-23.mp4",
+      "fact_name": "Reef Shark",
+      "category": "monster_tactic",
+      "hook": "Reef Shark's Pack Tactics often surprises parties - advantage triggers when an ally is within 5 feet.",
+      "body": "Reef Shark's Pack Tactics grants advantage on attack rolls if an ally is adjacent to the target. This synergy means the shark is most effective when it coordinates with others, creating a swarm effect. Disrupting this formation is key to preventing the shark from exploiting its advantage repeatedly. Prioritizing movement and breaking adjacency can deny the shark its bonus.",
+      "cta": "DMs: Maintain the sharks' 5-foot adjacency for Pack Tactics advantage; players, break their formation to negate it."
+    },
+    {
+      "published_utc": "2026-09-23T14:32:59Z",
+      "day": "2026-09-23",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-23-spell-use-case-spell-105-bedbf15071ac",
+      "instagram_post_id": "18139430032625966",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "ec28cc0db395ee97fbe781df4de78006c112d982f01fbd63c978febc24325697",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-23.mp4",
+      "fact_name": "Willowman",
+      "category": "spell_use_case",
+      "hook": "Willowman forces a morale check on normally immune creatures - even undead must roll.",
+      "body": "Willowman operates at Near range with an Instant duration. It targets creatures of level 2 or less, compelling a morale check. Many overlook its utility against morale-immune creatures, like undead. Deploy it to disrupt expected behaviors and gain tactical leverage.",
+      "cta": "GMs: Use Willowman to force a morale check on level 2 undead, breaking their immunity and shifting the fight."
     }
   ]
 }
