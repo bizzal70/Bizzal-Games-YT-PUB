@@ -2085,6 +2085,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-23.mp4",
         "video_sha256": "ec28cc0db395ee97fbe781df4de78006c112d982f01fbd63c978febc24325697"
       }
+    },
+    {
+      "published_utc": "2026-09-24T14:35:49Z",
+      "day": "2026-09-24",
+      "content_id": "bgp-2026-09-24-class-spotlight-class-11-e74681e17a23",
+      "publish_hash": "c354c91180c7bb10fd138cf4675c3a7b514f00d95cbbf09fdc6e084e9e063387",
+      "youtube_video_id": "IGPk5DwLG8c",
+      "youtube_url": "https://www.youtube.com/watch?v=IGPk5DwLG8c",
+      "video_sha256": "fad737ba4ee551d6608ffec363d2450378c9364c2285d2175633bcc5a7b12aa9",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-24.mp4",
+      "fingerprint": {
+        "day": "2026-09-24",
+        "category": "class_spotlight",
+        "angle": "progression_trap",
+        "content_id": "bgp-2026-09-24-class-spotlight-class-11-e74681e17a23",
+        "canonical_hash": "e74681e17a23a25e5afec2abc015b481df993612eb1cc15bcbd1e290bbc3c4e8",
+        "script_id": "474c33a34d4c10ac67b0681d6af170a315a083506b0994b5f2d699074628c257",
+        "fact_kind": "class",
+        "fact_pk": 11,
+        "fact_name": "Sea Wolf",
+        "hook": "Sea Wolf's Old Gods talent offers a surprising tactical edge - each rest, align with a god for unique.",
+        "body": "Sea Wolf's progression trap lies in flashy picks that delay core abilities. Old Gods provides repeatable benefits: Odin's healing on kills, Freya's daily luck token, and Loki's advantage on deception. Chasing situational upgrades often sidelines these consistent strengths. Prioritize talents that enhance core capabilities over sporadic boosts.",
+        "cta": "GMs: Remind players that aligning with Odin for 1d4 HP per kill beats flashy but inconsistent upgrades.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-24.mp4",
+        "video_sha256": "fad737ba4ee551d6608ffec363d2450378c9364c2285d2175633bcc5a7b12aa9"
+      }
     }
   ]
 }

@@ -956,5 +956,15 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-24": {
+    "class_spotlight": {
+      "angle": "progression_trap",
+      "voice": "torchbearer_ref",
+      "tone": "gritty",
+      "persona": "class_mentor",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

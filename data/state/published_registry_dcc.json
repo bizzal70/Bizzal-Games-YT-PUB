@@ -1827,6 +1827,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-23.mp4",
         "video_sha256": "7d597b1c58fd08cde12f7718b5a136ccb7f7cb34415f4d05f5406ad889b1dafa"
       }
+    },
+    {
+      "published_utc": "2026-09-24T14:25:55Z",
+      "day": "2026-09-24",
+      "content_id": "bgp-2026-09-24-encounter-seed-creature-9-e3d274e3ea6b",
+      "publish_hash": "604ba88af27462c5cf340a20c98dd6489e66ad9b76945eb8e30b77e6adec5d72",
+      "youtube_video_id": "A-LveatI0T4",
+      "youtube_url": "https://www.youtube.com/watch?v=A-LveatI0T4",
+      "video_sha256": "ec8cfaa724c0ac64e3adb31fbfc1b9991d57af1122339ec66607d4f0496113c8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-24.mp4",
+      "fingerprint": {
+        "day": "2026-09-24",
+        "category": "encounter_seed",
+        "angle": "mortality_pressure",
+        "content_id": "bgp-2026-09-24-encounter-seed-creature-9-e3d274e3ea6b",
+        "canonical_hash": "e3d274e3ea6bee3040da4228760b1a8a3302711dc9e470da5d555bab46483e63",
+        "script_id": "839829d7df7b8b7d2ee3070eabe4688de9f8937b0aca9be9be058cca61f366ca",
+        "fact_kind": "creature",
+        "fact_pk": 9,
+        "fact_name": "Dragonborn (Red Dragon Hatchling)",
+        "hook": "Make Dragonborn (Red Dragon Hatchling) cost something.",
+        "body": "Fire breath covers a 20' cone and deals 2d6 fire damage, with a Reflex DC 10 save for half. Immunity to fire negates any fire-based spells or attacks, rendering them ineffective and requiring a shift in tactics. Exploiting its neutral or chaotic alignment can create internal conflict, while non-fire-based attacks become essential. With a 3 hit dice bite attack at +3, it presents a consistent threat that demands attention.",
+        "cta": "Judges: Make them sweat by exploiting the hatchling's fire immunity and force them to adapt with non-fire tactics.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-24.mp4",
+        "video_sha256": "ec8cfaa724c0ac64e3adb31fbfc1b9991d57af1122339ec66607d4f0496113c8"
+      }
     }
   ]
 }

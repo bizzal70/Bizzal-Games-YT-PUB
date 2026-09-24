@@ -850,5 +850,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-09-24": {
+    "encounter_seed": {
+      "angle": "mortality_pressure",
+      "voice": "chaos_herald",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "fable"
+    }
   }
 }

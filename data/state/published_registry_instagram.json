@@ -2772,6 +2772,51 @@
       "hook": "Willowman forces a morale check on normally immune creatures - even undead must roll.",
       "body": "Willowman operates at Near range with an Instant duration. It targets creatures of level 2 or less, compelling a morale check. Many overlook its utility against morale-immune creatures, like undead. Deploy it to disrupt expected behaviors and gain tactical leverage.",
       "cta": "GMs: Use Willowman to force a morale check on level 2 undead, breaking their immunity and shifting the fight."
+    },
+    {
+      "published_utc": "2026-09-24T14:26:56Z",
+      "day": "2026-09-24",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-24-encounter-seed-creature-9-e3d274e3ea6b",
+      "instagram_post_id": "18430579477182236",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "ec8cfaa724c0ac64e3adb31fbfc1b9991d57af1122339ec66607d4f0496113c8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-24.mp4",
+      "fact_name": "Dragonborn (Red Dragon Hatchling)",
+      "category": "encounter_seed",
+      "hook": "Make Dragonborn (Red Dragon Hatchling) cost something.",
+      "body": "Fire breath covers a 20' cone and deals 2d6 fire damage, with a Reflex DC 10 save for half. Immunity to fire negates any fire-based spells or attacks, rendering them ineffective and requiring a shift in tactics. Exploiting its neutral or chaotic alignment can create internal conflict, while non-fire-based attacks become essential. With a 3 hit dice bite attack at +3, it presents a consistent threat that demands attention.",
+      "cta": "Judges: Make them sweat by exploiting the hatchling's fire immunity and force them to adapt with non-fire tactics."
+    },
+    {
+      "published_utc": "2026-09-24T14:32:26Z",
+      "day": "2026-09-24",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-24-spell-use-case-spell-srd-2024-scorching-ray-06df18b77c37",
+      "instagram_post_id": "17885316111686118",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "fc1e62fe8c03248066446db7c400dc71b66b5b9a188f5bf459067f348af0cf0a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-24.mp4",
+      "fact_name": "Scorching Ray",
+      "category": "spell_use_case",
+      "hook": "Scorching Ray often feels underwhelming - 2d6 fire damage per ray isn't much without advantage.",
+      "body": "Scorching Ray requires making three separate ranged spell attacks, each dealing 2d6 fire damage on a hit. Without advantage, the likelihood of missing one or more attacks increases, reducing overall effectiveness. The spell's impact is better realized when targeting multiple enemies or when advantage is guaranteed, such as against restrained targets. Casting it in situations where attack rolls are likely to miss diminishes its potential significantly.",
+      "cta": "DMs: Use Scorching Ray when enemies are restrained to exploit advantage on attack rolls and avoid wasting a 2nd-level slot."
+    },
+    {
+      "published_utc": "2026-09-24T14:36:49Z",
+      "day": "2026-09-24",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-24-class-spotlight-class-11-e74681e17a23",
+      "instagram_post_id": "18023581196871220",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "fad737ba4ee551d6608ffec363d2450378c9364c2285d2175633bcc5a7b12aa9",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-24.mp4",
+      "fact_name": "Sea Wolf",
+      "category": "class_spotlight",
+      "hook": "Sea Wolf's Old Gods talent offers a surprising tactical edge - each rest, align with a god for unique.",
+      "body": "Sea Wolf's progression trap lies in flashy picks that delay core abilities. Old Gods provides repeatable benefits: Odin's healing on kills, Freya's daily luck token, and Loki's advantage on deception. Chasing situational upgrades often sidelines these consistent strengths. Prioritize talents that enhance core capabilities over sporadic boosts.",
+      "cta": "GMs: Remind players that aligning with Odin for 1d4 HP per kill beats flashy but inconsistent upgrades."
     }
   ]
 }

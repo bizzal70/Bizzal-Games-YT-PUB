@@ -2476,6 +2476,33 @@
         "video_sha256": "2723e07c991f7edd7821dac241c032962d9de2f1f3601d4662b6f3207ed58d87"
       },
       "tone_lint_violation": "vague filler phrase: surprises parties"
+    },
+    {
+      "published_utc": "2026-09-24T14:31:27Z",
+      "day": "2026-09-24",
+      "content_id": "bgp-2026-09-24-spell-use-case-spell-srd-2024-scorching-ray-06df18b77c37",
+      "publish_hash": "727a38c4b8d110b8476b6453f16c21a05eaa50679ace76cb40b7ed46ff1f2b8a",
+      "youtube_video_id": "kNzY7K2W6c4",
+      "youtube_url": "https://www.youtube.com/watch?v=kNzY7K2W6c4",
+      "video_sha256": "fc1e62fe8c03248066446db7c400dc71b66b5b9a188f5bf459067f348af0cf0a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-24.mp4",
+      "fingerprint": {
+        "day": "2026-09-24",
+        "category": "spell_use_case",
+        "angle": "dm_twist",
+        "content_id": "bgp-2026-09-24-spell-use-case-spell-srd-2024-scorching-ray-06df18b77c37",
+        "canonical_hash": "06df18b77c3751dca8b5555518d6e48584fc40e39b06669261104ab5c7adadde",
+        "script_id": "ceec201df5a0ac326a54631a559bb19d7633c98a6af7e045ae5d2d7e6841a431",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_scorching-ray",
+        "fact_name": "Scorching Ray",
+        "hook": "Scorching Ray often feels underwhelming - 2d6 fire damage per ray isn't much without advantage.",
+        "body": "Scorching Ray requires making three separate ranged spell attacks, each dealing 2d6 fire damage on a hit. Without advantage, the likelihood of missing one or more attacks increases, reducing overall effectiveness. The spell's impact is better realized when targeting multiple enemies or when advantage is guaranteed, such as against restrained targets. Casting it in situations where attack rolls are likely to miss diminishes its potential significantly.",
+        "cta": "DMs: Use Scorching Ray when enemies are restrained to exploit advantage on attack rolls and avoid wasting a 2nd-level slot.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-24.mp4",
+        "video_sha256": "fc1e62fe8c03248066446db7c400dc71b66b5b9a188f5bf459067f348af0cf0a"
+      },
+      "tone_lint_violation": "vague filler phrase: maximize its damage potential"
     }
   ]
 }
