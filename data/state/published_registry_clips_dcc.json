@@ -545,6 +545,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-16-dcc-clip3.mp4",
         "video_sha256": "cdba7fe53f0b29172293cf5c4b147eac72718bd2b669563f66ca86d404c5680a"
       }
+    },
+    {
+      "published_utc": "2026-09-25T17:56:23Z",
+      "day": "2026-09-25-dcc-clip1",
+      "content_id": "clip:65bfbe25e1f54bea",
+      "publish_hash": "19fccbc7f52afb51f03e5e7965627caf51be8b6ecfc74436c35e57ded40f626a",
+      "youtube_video_id": "pu_MqXqMPac",
+      "youtube_url": "https://www.youtube.com/watch?v=pu_MqXqMPac",
+      "video_sha256": "525dd99353ec13697495a4547b5ed9bd796bdd2c1359f93853f341cfdc09846a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-25-dcc-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-09-25-dcc-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:65bfbe25e1f54bea",
+        "canonical_hash": "",
+        "script_id": "65bfbe25e1f54beaa395d3eb03b3c92cf3670f9a7fbc48074b4fedaaeeb14828",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Clerics must manage disapproval after failed spells",
+        "hook": "Clerics must manage disapproval after failed spells",
+        "body": "In DCC, clerics face disapproval for failed spell checks. Each failure increases disapproval, affecting spellcasting ability. High disapproval can lead to the deity withholding spells or demanding penance. Strategic spell use is crucial to maintain divine favor.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-25-dcc-clip1.mp4",
+        "video_sha256": "525dd99353ec13697495a4547b5ed9bd796bdd2c1359f93853f341cfdc09846a"
+      }
+    },
+    {
+      "published_utc": "2026-09-25T17:57:31Z",
+      "day": "2026-09-25-dcc-clip2",
+      "content_id": "clip:d9d93ed4ed9706c7",
+      "publish_hash": "386addcf0ef56782a1125a6ff6d8afadc34354a8afd2f82f90205f6ae681fdce",
+      "youtube_video_id": "WiriQ7U9sLI",
+      "youtube_url": "https://www.youtube.com/watch?v=WiriQ7U9sLI",
+      "video_sha256": "e4e26bb31444cc8967bbefd69af4260b39f777519b583eceeecc4ea7cee5ffee",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-25-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-09-25-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:d9d93ed4ed9706c7",
+        "canonical_hash": "",
+        "script_id": "d9d93ed4ed9706c7aaff34f75cb32e3942ec118b602b95189af650d1e71a8535",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Healing spells require a successful check in DCC",
+        "hook": "Healing spells require a successful check in DCC",
+        "body": "Clerics in DCC must pass a spell check to heal. Failing increases disapproval, risking future spellcasting. Players must weigh healing risks and consider alternatives like potions. Teamwork becomes crucial when divine powers are unreliable.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-25-dcc-clip2.mp4",
+        "video_sha256": "e4e26bb31444cc8967bbefd69af4260b39f777519b583eceeecc4ea7cee5ffee"
+      }
+    },
+    {
+      "published_utc": "2026-09-25T17:58:38Z",
+      "day": "2026-09-25-dcc-clip3",
+      "content_id": "clip:dd74373341416a2f",
+      "publish_hash": "27fd9d50d3961f5c324d1dd75050555be08bae6bd8a92590fad924a2b644c7a6",
+      "youtube_video_id": "Ub79d8-tRns",
+      "youtube_url": "https://www.youtube.com/watch?v=Ub79d8-tRns",
+      "video_sha256": "3d27c0b864bb6b58fd678093c7057a0122fe7b22872afe54ad4e8b786fee4812",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-25-dcc-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-09-25-dcc-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:dd74373341416a2f",
+        "canonical_hash": "",
+        "script_id": "dd74373341416a2f48eae45c704547529ff9aeb62b127486288bb71f955fa10b",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Turning undead relies on a spell check in DCC",
+        "hook": "Turning undead relies on a spell check in DCC",
+        "body": "Turning undead in DCC requires a spell check. Success depends on a d20 roll plus modifiers. Failure increases disapproval, limiting future attempts. Clerics must time their uses carefully, balancing risks and strategic needs.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-25-dcc-clip3.mp4",
+        "video_sha256": "3d27c0b864bb6b58fd678093c7057a0122fe7b22872afe54ad4e8b786fee4812"
+      }
     }
   ]
 }

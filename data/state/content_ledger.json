@@ -6126,6 +6126,50 @@
       "video_id": "18107916200158758",
       "day": "2026-09-25",
       "published_at": "2026-09-25T14:36:19+00:00"
+    },
+    {
+      "content_key": "c86af3222e732fe316ad6b0efdac0dbd33fe074a405fb478f3d3c6d3026b600e",
+      "token_text": "cleric dcc disapproval divine favor managing rpg",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Cleric's Divine Favor: Managing Disapproval in DCC RPG",
+      "video_id": "IpzQhKjhXwk",
+      "day": "2026-09-25",
+      "published_at": "2026-09-25T17:54:44+00:00"
+    },
+    {
+      "content_key": "474e15d560e2a0dabd6751ea0c3486f4de8f499547f20935b97c5bca079da803",
+      "token_text": "after cleric disapproval failed manage must spell",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Clerics must manage disapproval after failed spells #dcc",
+      "video_id": "pu_MqXqMPac",
+      "day": "2026-09-25-dcc-clip1",
+      "published_at": "2026-09-25T17:56:23+00:00"
+    },
+    {
+      "content_key": "6bb60278dda610bf219924e43c0bd387d46887dc571e429c40b12de659de6643",
+      "token_text": "check dcc healing require spell successful",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Healing spells require a successful check in DCC",
+      "video_id": "WiriQ7U9sLI",
+      "day": "2026-09-25-dcc-clip2",
+      "published_at": "2026-09-25T17:57:31+00:00"
+    },
+    {
+      "content_key": "a237ca9dca79f831581b3b2db197e5dba168d56c5b45a8351a6f3e7568dfb40d",
+      "token_text": "check dcc relie spell turning undead",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Turning undead relies on a spell check in DCC",
+      "video_id": "Ub79d8-tRns",
+      "day": "2026-09-25-dcc-clip3",
+      "published_at": "2026-09-25T17:58:38+00:00"
     }
   ]
 }
