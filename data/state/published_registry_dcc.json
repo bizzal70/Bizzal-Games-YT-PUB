@@ -1853,6 +1853,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-24.mp4",
         "video_sha256": "ec8cfaa724c0ac64e3adb31fbfc1b9991d57af1122339ec66607d4f0496113c8"
       }
+    },
+    {
+      "published_utc": "2026-09-25T14:25:59Z",
+      "day": "2026-09-25",
+      "content_id": "bgp-2026-09-25-class-spotlight-class-7-47aac3aa7e24",
+      "publish_hash": "6f3457780b434012ffd1e7f31e0410108b966633a2bca07226fc216c18f60afe",
+      "youtube_video_id": "N5hzr_O4LeI",
+      "youtube_url": "https://www.youtube.com/watch?v=N5hzr_O4LeI",
+      "video_sha256": "2eda7721b8418734c9f1fc7f90703d7e2859f78e5a40b5f254021491d5506782",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-25.mp4",
+      "fingerprint": {
+        "day": "2026-09-25",
+        "category": "class_spotlight",
+        "angle": "thief_gamble",
+        "content_id": "bgp-2026-09-25-class-spotlight-class-7-47aac3aa7e24",
+        "canonical_hash": "47aac3aa7e24ba7c41bcf2d03b13e4370ee61834c3c2ce7d97c364b2f722a7e2",
+        "script_id": "7d7e43aedd7ab8b829abcee834de4bf677d937f5b8761f942fc24ceef1e6d94d",
+        "fact_kind": "class",
+        "fact_pk": 7,
+        "fact_name": "Halfling",
+        "hook": "Halfling Luck economy outperforms other classes - burns at d3 intervals with the highest starting Luck.",
+        "body": "Halfling Good Fortune allows a free Luck die bonus once per session, before any roll, without burning Luck. This mechanic often gets misused as a panic button, but its true strength lies in preemptive application to crucial checks. The ability to hand this bonus to a nearby ally uniquely expands tactical options, enhancing group success rates when planned in advance.",
+        "cta": "Judges: Make your halfling's once-per-session Luck die count by using it on critical rolls before they happen, not after.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-25.mp4",
+        "video_sha256": "2eda7721b8418734c9f1fc7f90703d7e2859f78e5a40b5f254021491d5506782"
+      }
     }
   ]
 }

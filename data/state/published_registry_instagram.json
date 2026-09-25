@@ -2817,6 +2817,51 @@
       "hook": "Sea Wolf's Old Gods talent offers a surprising tactical edge - each rest, align with a god for unique.",
       "body": "Sea Wolf's progression trap lies in flashy picks that delay core abilities. Old Gods provides repeatable benefits: Odin's healing on kills, Freya's daily luck token, and Loki's advantage on deception. Chasing situational upgrades often sidelines these consistent strengths. Prioritize talents that enhance core capabilities over sporadic boosts.",
       "cta": "GMs: Remind players that aligning with Odin for 1d4 HP per kill beats flashy but inconsistent upgrades."
+    },
+    {
+      "published_utc": "2026-09-25T14:27:15Z",
+      "day": "2026-09-25",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-25-class-spotlight-class-7-47aac3aa7e24",
+      "instagram_post_id": "18172939600443411",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "2eda7721b8418734c9f1fc7f90703d7e2859f78e5a40b5f254021491d5506782",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-25.mp4",
+      "fact_name": "Halfling",
+      "category": "class_spotlight",
+      "hook": "Halfling Luck economy outperforms other classes - burns at d3 intervals with the highest starting Luck.",
+      "body": "Halfling Good Fortune allows a free Luck die bonus once per session, before any roll, without burning Luck. This mechanic often gets misused as a panic button, but its true strength lies in preemptive application to crucial checks. The ability to hand this bonus to a nearby ally uniquely expands tactical options, enhancing group success rates when planned in advance.",
+      "cta": "Judges: Make your halfling's once-per-session Luck die count by using it on critical rolls before they happen, not after."
+    },
+    {
+      "published_utc": "2026-09-25T14:31:21Z",
+      "day": "2026-09-25",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-25-rules-ruling-rule-srd-2024-d20-tests-attack-rolls-d3f88eaa2f94",
+      "instagram_post_id": "17995741764030040",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "b3c6314ae14b35e2572c33a0be19ea850aecd8a7c6a961b5275beeb65bcbd71c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-25.mp4",
+      "fact_name": "Attack Rolls",
+      "category": "rules_ruling",
+      "hook": "Attack Rolls determine hit success - they must meet or exceed the target's Armor Class.",
+      "body": "An attack roll succeeds if it equals or exceeds the target's Armor Class. Consistent application of this rule for both player characters and monsters prevents disputes. Inconsistent rulings, especially when players expect different treatment for allies and enemies, can disrupt gameplay. Fairness and clarity are maintained by applying the rule uniformly.",
+      "cta": "DMs: Ensure attack rolls meet or exceed Armor Class for everyone, or prepare for the inevitable whining."
+    },
+    {
+      "published_utc": "2026-09-25T14:36:19Z",
+      "day": "2026-09-25",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-25-monster-tactic-creature-119-39855aba524f",
+      "instagram_post_id": "18107916200158758",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c241e27e0ae3afd666a2fcbe96d6676fec53da600d47dfcfe4571fd8b6577515",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-25.mp4",
+      "fact_name": "Hobgoblin",
+      "category": "monster_tactic",
+      "hook": "Hobgoblin's Phalanx talent changes the odds - +1 to attacks and AC when in close range of an allied hobgoblin.",
+      "body": "Hobgoblin thrives in groups, leveraging its Phalanx talent for a tactical advantage. With AC 15 and a +1 boost, it becomes a formidable barrier, especially when players underestimate the compounding effect of multiple hobgoblins. The common oversight is engaging them piecemeal, allowing them to maintain their defensive formation. Disrupt their ranks with area effects or isolate them to negate the Phalanx bonus.",
+      "cta": "GMs: Force players to split the hobgoblins with area effects; deny them their +1 Phalanx bonus by breaking formation."
     }
   ]
 }

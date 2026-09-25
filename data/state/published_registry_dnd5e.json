@@ -2503,6 +2503,32 @@
         "video_sha256": "fc1e62fe8c03248066446db7c400dc71b66b5b9a188f5bf459067f348af0cf0a"
       },
       "tone_lint_violation": "vague filler phrase: maximize its damage potential"
+    },
+    {
+      "published_utc": "2026-09-25T14:30:22Z",
+      "day": "2026-09-25",
+      "content_id": "bgp-2026-09-25-rules-ruling-rule-srd-2024-d20-tests-attack-rolls-d3f88eaa2f94",
+      "publish_hash": "b254d4d1f8115f7b3af2db0d5b16dea22227faa89cbb6a911434aede6f149e40",
+      "youtube_video_id": "kCfKVCKQE88",
+      "youtube_url": "https://www.youtube.com/watch?v=kCfKVCKQE88",
+      "video_sha256": "b3c6314ae14b35e2572c33a0be19ea850aecd8a7c6a961b5275beeb65bcbd71c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-25.mp4",
+      "fingerprint": {
+        "day": "2026-09-25",
+        "category": "rules_ruling",
+        "angle": "dm_fairness_tip",
+        "content_id": "bgp-2026-09-25-rules-ruling-rule-srd-2024-d20-tests-attack-rolls-d3f88eaa2f94",
+        "canonical_hash": "d3f88eaa2f94a814bb48fd194e35ccdb4fa1b930f24c2eaff15777e19eacf5b7",
+        "script_id": "c4a320843760b9c69ac7922795c2586cce454e467833e8a2fc7b7ad6b120c915",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_d20-tests_attack-rolls",
+        "fact_name": "Attack Rolls",
+        "hook": "Attack Rolls determine hit success - they must meet or exceed the target's Armor Class.",
+        "body": "An attack roll succeeds if it equals or exceeds the target's Armor Class. Consistent application of this rule for both player characters and monsters prevents disputes. Inconsistent rulings, especially when players expect different treatment for allies and enemies, can disrupt gameplay. Fairness and clarity are maintained by applying the rule uniformly.",
+        "cta": "DMs: Ensure attack rolls meet or exceed Armor Class for everyone, or prepare for the inevitable whining.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-25.mp4",
+        "video_sha256": "b3c6314ae14b35e2572c33a0be19ea850aecd8a7c6a961b5275beeb65bcbd71c"
+      }
     }
   ]
 }

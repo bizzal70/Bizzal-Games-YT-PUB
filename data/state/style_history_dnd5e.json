@@ -974,5 +974,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-09-25": {
+    "rules_ruling": {
+      "angle": "dm_fairness_tip",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

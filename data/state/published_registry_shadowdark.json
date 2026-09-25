@@ -2111,6 +2111,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-24.mp4",
         "video_sha256": "fad737ba4ee551d6608ffec363d2450378c9364c2285d2175633bcc5a7b12aa9"
       }
+    },
+    {
+      "published_utc": "2026-09-25T14:35:21Z",
+      "day": "2026-09-25",
+      "content_id": "bgp-2026-09-25-monster-tactic-creature-119-39855aba524f",
+      "publish_hash": "0524c8e5851f2ea0a6796ba50e587080f1eadcfc304bd91ba11f82f0d0a6edd7",
+      "youtube_video_id": "MKeU-ZcsyWs",
+      "youtube_url": "https://www.youtube.com/watch?v=MKeU-ZcsyWs",
+      "video_sha256": "c241e27e0ae3afd666a2fcbe96d6676fec53da600d47dfcfe4571fd8b6577515",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-25.mp4",
+      "fingerprint": {
+        "day": "2026-09-25",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-09-25-monster-tactic-creature-119-39855aba524f",
+        "canonical_hash": "39855aba524f5889441ff1c29fad8704d80aa70445965e86f905e811843efacf",
+        "script_id": "4532c405b0b0a15d86429c08b0ff29dc1048f308e76d6cf342de82c37352f554",
+        "fact_kind": "creature",
+        "fact_pk": 119,
+        "fact_name": "Hobgoblin",
+        "hook": "Hobgoblin's Phalanx talent changes the odds - +1 to attacks and AC when in close range of an allied hobgoblin.",
+        "body": "Hobgoblin thrives in groups, leveraging its Phalanx talent for a tactical advantage. With AC 15 and a +1 boost, it becomes a formidable barrier, especially when players underestimate the compounding effect of multiple hobgoblins. The common oversight is engaging them piecemeal, allowing them to maintain their defensive formation. Disrupt their ranks with area effects or isolate them to negate the Phalanx bonus.",
+        "cta": "GMs: Force players to split the hobgoblins with area effects; deny them their +1 Phalanx bonus by breaking formation.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-25.mp4",
+        "video_sha256": "c241e27e0ae3afd666a2fcbe96d6676fec53da600d47dfcfe4571fd8b6577515"
+      }
     }
   ]
 }

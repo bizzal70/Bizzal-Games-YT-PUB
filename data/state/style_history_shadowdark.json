@@ -966,5 +966,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-09-25": {
+    "monster_tactic": {
+      "angle": "how_it_wins",
+      "voice": "grim_warden",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "fable"
+    }
   }
 }
