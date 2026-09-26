@@ -984,5 +984,15 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-09-26": {
+    "item_spotlight": {
+      "angle": "drawback_watchout",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [],
+      "tts_voice_id": "alloy"
+    }
   }
 }

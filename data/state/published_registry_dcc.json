@@ -1879,6 +1879,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-25.mp4",
         "video_sha256": "2eda7721b8418734c9f1fc7f90703d7e2859f78e5a40b5f254021491d5506782"
       }
+    },
+    {
+      "published_utc": "2026-09-26T14:21:56Z",
+      "day": "2026-09-26",
+      "content_id": "bgp-2026-09-26-rules-myth-rule-14-2aca8986fe64",
+      "publish_hash": "8186702766646d1627ab4b4dd81e00807b813abcc343fc14f24029f1f48712ab",
+      "youtube_video_id": "i9DTbTPtO70",
+      "youtube_url": "https://www.youtube.com/watch?v=i9DTbTPtO70",
+      "video_sha256": "647711e5eacfc592b702a84ce9ddb649edf82f0dc682dbcfbebfa60289de59f4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-26.mp4",
+      "fingerprint": {
+        "day": "2026-09-26",
+        "category": "rules_myth",
+        "angle": "why_people_get_it_wrong",
+        "content_id": "bgp-2026-09-26-rules-myth-rule-14-2aca8986fe64",
+        "canonical_hash": "2aca8986fe6437a24dfefd87e7cf51c72f9b98023d65cdc9f99e7004d6cacd75",
+        "script_id": "db560345e7b68865f0307ccb3baf28e8e4d2a5ac35a218d5fa66c4abf7b7f54e",
+        "fact_kind": "rule",
+        "fact_pk": 14,
+        "fact_name": "Mercurial Magic",
+        "hook": "Mercurial Magic changes spellcasting unpredictably - each spell gains a unique quirk for the wizard who learns.",
+        "body": "Mercurial Magic assigns a permanent, unique quirk to a spell when a wizard first learns it, determined by a roll on a d100 table. This means the same spell can behave differently for each wizard, leading to confusion when players assume uniform effects across different characters. Misunderstandings arise when players forget to check these quirks, expecting spells to function identically. The better approach is to document each spell's quirk in the wizard's grimoire and review it before casting to avoid surprises.",
+        "cta": "Judges: Remind your wizards to roll on the d100 Mercurial Magic table and note each spell's quirk in their grimoire.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-26.mp4",
+        "video_sha256": "647711e5eacfc592b702a84ce9ddb649edf82f0dc682dbcfbebfa60289de59f4"
+      }
     }
   ]
 }

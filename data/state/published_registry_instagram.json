@@ -2862,6 +2862,36 @@
       "hook": "Hobgoblin's Phalanx talent changes the odds - +1 to attacks and AC when in close range of an allied hobgoblin.",
       "body": "Hobgoblin thrives in groups, leveraging its Phalanx talent for a tactical advantage. With AC 15 and a +1 boost, it becomes a formidable barrier, especially when players underestimate the compounding effect of multiple hobgoblins. The common oversight is engaging them piecemeal, allowing them to maintain their defensive formation. Disrupt their ranks with area effects or isolate them to negate the Phalanx bonus.",
       "cta": "GMs: Force players to split the hobgoblins with area effects; deny them their +1 Phalanx bonus by breaking formation."
+    },
+    {
+      "published_utc": "2026-09-26T14:22:44Z",
+      "day": "2026-09-26",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-26-rules-myth-rule-14-2aca8986fe64",
+      "instagram_post_id": "17904515781581412",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "647711e5eacfc592b702a84ce9ddb649edf82f0dc682dbcfbebfa60289de59f4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-26.mp4",
+      "fact_name": "Mercurial Magic",
+      "category": "rules_myth",
+      "hook": "Mercurial Magic changes spellcasting unpredictably - each spell gains a unique quirk for the wizard who learns.",
+      "body": "Mercurial Magic assigns a permanent, unique quirk to a spell when a wizard first learns it, determined by a roll on a d100 table. This means the same spell can behave differently for each wizard, leading to confusion when players assume uniform effects across different characters. Misunderstandings arise when players forget to check these quirks, expecting spells to function identically. The better approach is to document each spell's quirk in the wizard's grimoire and review it before casting to avoid surprises.",
+      "cta": "Judges: Remind your wizards to roll on the d100 Mercurial Magic table and note each spell's quirk in their grimoire."
+    },
+    {
+      "published_utc": "2026-09-26T14:29:28Z",
+      "day": "2026-09-26",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-26-rules-ruling-rule-5-e1fdcd4d73cf",
+      "instagram_post_id": "18149648671558485",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "4ff8d4d90dd5da2a6923b3dbecb784884202a7d5a3089ccd7e17d0a5f88775dd",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-26.mp4",
+      "fact_name": "Spell Casting Check",
+      "category": "rules_ruling",
+      "hook": "Spell Casting Check punishes haste - failure costs the slot without effect.",
+      "body": "Roll d20 plus the relevant stat modifier against DC 10 plus the spell's tier. A failed roll consumes the spell slot without activating the spell. Wizards face additional risk with a critical failure triggering a mishap. Clarity in rulings prevents disputes and maintains game flow.",
+      "cta": "GMs: Enforce the DC 10 plus spell tier check; failure costs the slot, so remind them before they roll."
     }
   ]
 }
