@@ -988,5 +988,15 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-09-27": {
+    "item_spotlight": {
+      "angle": "drawback_watchout",
+      "voice": "grim_warden",
+      "tone": "dry",
+      "persona": "dungeon_gear_mentor",
+      "spice": [],
+      "tts_voice_id": "coral"
+    }
   }
 }

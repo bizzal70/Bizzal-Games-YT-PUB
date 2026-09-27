@@ -1905,6 +1905,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-26.mp4",
         "video_sha256": "647711e5eacfc592b702a84ce9ddb649edf82f0dc682dbcfbebfa60289de59f4"
       }
+    },
+    {
+      "published_utc": "2026-09-27T14:20:30Z",
+      "day": "2026-09-27",
+      "content_id": "bgp-2026-09-27-monster-tactic-creature-464-a10c3c012cd6",
+      "publish_hash": "4afa0e83d829b32f72880f738da1970a84b176e783526ed99e529669051cd66d",
+      "youtube_video_id": "1vRihP1rqLI",
+      "youtube_url": "https://www.youtube.com/watch?v=1vRihP1rqLI",
+      "video_sha256": "9dae02b72303efddb58b0cc39c6b4dc986078c8b063f9a89ab54ac569ba21a95",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-27.mp4",
+      "fingerprint": {
+        "day": "2026-09-27",
+        "category": "monster_tactic",
+        "angle": "terrain_synergy",
+        "content_id": "bgp-2026-09-27-monster-tactic-creature-464-a10c3c012cd6",
+        "canonical_hash": "a10c3c012cd617c1e3b7ed17016e690c0e339ee3f070440549893aa20d9be36f",
+        "script_id": "33ab58da2f1d8e341c86007640dbb45e4966f3fb71478902b4418df979e070d9",
+        "fact_kind": "creature",
+        "fact_pk": 464,
+        "fact_name": "Rust Spider",
+        "hook": "Rust Spider's rust glob attack catches parties off guard - special effect ruins metal gear within 30' range.",
+        "body": "Rust Spider's rust glob attack corrodes metal, rendering armor and weapons useless. Losing key equipment mid-combat can turn the tide of battle. With a 40' movement and 20' climb speed, it exploits vertical terrain to stay out of reach. Using non-metal weapons or disabling the spider before it can use its rust glob is critical.",
+        "cta": "Judges: Force players to adapt by exploiting the Rust Spider's 40' movement to attack from above with rust globs.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-27.mp4",
+        "video_sha256": "9dae02b72303efddb58b0cc39c6b4dc986078c8b063f9a89ab54ac569ba21a95"
+      },
+      "tone_lint_violation": "vague filler phrase: catches parties off guard"
     }
   ]
 }

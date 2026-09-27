@@ -2163,6 +2163,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-26.mp4",
         "video_sha256": "4ff8d4d90dd5da2a6923b3dbecb784884202a7d5a3089ccd7e17d0a5f88775dd"
       }
+    },
+    {
+      "published_utc": "2026-09-27T14:29:27Z",
+      "day": "2026-09-27",
+      "content_id": "bgp-2026-09-27-item-spotlight-item-26-1f7d0ef52be0",
+      "publish_hash": "9d2756e4a9c09b9e80d2735e7cbd5e437b90a43516d1fafb6241ca7ec9f8afdd",
+      "youtube_video_id": "rLcO8AETD-A",
+      "youtube_url": "https://www.youtube.com/watch?v=rLcO8AETD-A",
+      "video_sha256": "e9e0f8ee584e203ea56f08fad7411eb27868181bc755068fae45104b320ec424",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-27.mp4",
+      "fingerprint": {
+        "day": "2026-09-27",
+        "category": "item_spotlight",
+        "angle": "drawback_watchout",
+        "content_id": "bgp-2026-09-27-item-spotlight-item-26-1f7d0ef52be0",
+        "canonical_hash": "1f7d0ef52be0fd415fcf32004f96387c65cc770238db0be84f9cb893d73dd758",
+        "script_id": "eaaf095f6131f0d16f74c01736f78e3f262b72674e52467b990bf4c75c2e260e",
+        "fact_kind": "item",
+        "fact_pk": 26,
+        "fact_name": "Gloves Of Agility",
+        "hook": "Gloves Of Agility elevate Dexterity beyond normal limits - your Dexterity stat becomes 18 (+4) while wearing.",
+        "body": "The Gloves Of Agility set your Dexterity to 18, which can override higher scores. Many assume these gloves provide a bonus, but they actually replace your Dexterity score. Equipping them with a base Dexterity of 18 or higher results in a net loss. For characters with a lower Dexterity score, these gloves offer the most benefit.",
+        "cta": "GMs: Confirm players' base Dexterity is below 18 before handing out the Gloves Of Agility, or they'll lose out.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-27.mp4",
+        "video_sha256": "e9e0f8ee584e203ea56f08fad7411eb27868181bc755068fae45104b320ec424"
+      }
     }
   ]
 }

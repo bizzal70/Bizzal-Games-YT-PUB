@@ -2529,6 +2529,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-25.mp4",
         "video_sha256": "b3c6314ae14b35e2572c33a0be19ea850aecd8a7c6a961b5275beeb65bcbd71c"
       }
+    },
+    {
+      "published_utc": "2026-09-27T14:25:00Z",
+      "day": "2026-09-27",
+      "content_id": "bgp-2026-09-27-encounter-seed-creature-srd-2024-gargoyle-3d4bbc7c5279",
+      "publish_hash": "4825767906977e8cad026783a7fd48b9cf8ec7687686ff75d0a20a540542a892",
+      "youtube_video_id": "8k0xCXmSzAs",
+      "youtube_url": "https://www.youtube.com/watch?v=8k0xCXmSzAs",
+      "video_sha256": "e68d3651350a3cd15142e08d62f81b4a92ca0e33c03505b207f5bd604cab4732",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-27.mp4",
+      "fingerprint": {
+        "day": "2026-09-27",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-09-27-encounter-seed-creature-srd-2024-gargoyle-3d4bbc7c5279",
+        "canonical_hash": "3d4bbc7c52791c905e3f30aa52309e10becfad453e315d6b5332b503dd8ddf82",
+        "script_id": "eece0a7b4733579c930ede099bf06a71fb36c495aff20291b61efdabbe6f781a",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_gargoyle",
+        "fact_name": "Gargoyle",
+        "hook": "Make Gargoyle cost something.",
+        "body": "Armor Class 15 and 67 hit points make Gargoyles surprisingly durable for their challenge rating. The Multiattack feature, combining a bite and two claw attacks, often overwhelms parties that underestimate the pressure spike. Condition immunities like exhaustion, petrified, and poisoned mean that relying on status effects to control Gargoyles is futile. Instead, focus on bypassing their natural armor with spells or tactics that exploit their low Dexterity and Intelligence saves.",
+        "cta": "DMs: Highlight the Gargoyle's 67 hit points and poison immunity to force players into using spells targeting its low Intelligence save.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-27.mp4",
+        "video_sha256": "e68d3651350a3cd15142e08d62f81b4a92ca0e33c03505b207f5bd604cab4732"
+      }
     }
   ]
 }
