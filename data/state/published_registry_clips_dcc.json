@@ -623,6 +623,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-25-dcc-clip3.mp4",
         "video_sha256": "3d27c0b864bb6b58fd678093c7057a0122fe7b22872afe54ad4e8b786fee4812"
       }
+    },
+    {
+      "published_utc": "2026-09-28T18:07:18Z",
+      "day": "2026-09-28-dcc-clip1",
+      "content_id": "clip:98df7ce6fe0ccc07",
+      "publish_hash": "78a39a64e21717eaae0f3bd0c21a3c87b25230819bf2beefa7f89c51cf6db201",
+      "youtube_video_id": "EdXX0male7A",
+      "youtube_url": "https://www.youtube.com/watch?v=EdXX0male7A",
+      "video_sha256": "5217878c52066e5d4958f37727620e3a73c33a8ab3753ca2b78431aab1b0c1a2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-28-dcc-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-09-28-dcc-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:98df7ce6fe0ccc07",
+        "canonical_hash": "",
+        "script_id": "98df7ce6fe0ccc078f3504fa1090c07a357b005859591e4b3adaf575a9df4145",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Giant Beetle's Poison Bite is a Persistent Threat",
+        "hook": "Giant Beetle's Poison Bite is a Persistent Threat",
+        "body": "The Giant Predaceous Diving Beetle's bite deals 1d5 damage with a +3 melee bonus. Its poison adds 1d6 damage unless a DC 12 Fortitude save is made. This ongoing poison can quickly accumulate, threatening players over multiple combat rounds.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-28-dcc-clip1.mp4",
+        "video_sha256": "5217878c52066e5d4958f37727620e3a73c33a8ab3753ca2b78431aab1b0c1a2"
+      }
+    },
+    {
+      "published_utc": "2026-09-28T18:10:45Z",
+      "day": "2026-09-28-dcc-clip2",
+      "content_id": "clip:50775fed03f8c38a",
+      "publish_hash": "cefce415cf73ab0914210211141c59e47ed7f15f7c8d5c555475540e3e309bcb",
+      "youtube_video_id": "uTP-f0_UM4M",
+      "youtube_url": "https://www.youtube.com/watch?v=uTP-f0_UM4M",
+      "video_sha256": "574c4b032adafe4309ee663687c446c4ea8215dbaa76dd8c50442fa27ca47d6d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-28-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-09-28-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:50775fed03f8c38a",
+        "canonical_hash": "",
+        "script_id": "50775fed03f8c38a7f163ecd7ba9a0e1530262b2ae1ed38207a955771fdd1675",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Beetle's Swim Speed Creates Tactical Advantage",
+        "hook": "Beetle's Swim Speed Creates Tactical Advantage",
+        "body": "The Giant Predaceous Diving Beetle has a swim speed of 40 feet, outpacing many foes in water. This speed allows hit-and-run tactics, making it hard to pin down. On land, its speed drops to 20 feet, limiting its mobility.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-28-dcc-clip2.mp4",
+        "video_sha256": "574c4b032adafe4309ee663687c446c4ea8215dbaa76dd8c50442fa27ca47d6d"
+      }
+    },
+    {
+      "published_utc": "2026-09-28T18:13:50Z",
+      "day": "2026-09-28-dcc-clip3",
+      "content_id": "clip:dc6580f8f90de40b",
+      "publish_hash": "9c03dfccb8f9a97aa8b6c477c8563733ff4b55f147e7f9dbc5f44394b70de486",
+      "youtube_video_id": "v3JTePCNoCg",
+      "youtube_url": "https://www.youtube.com/watch?v=v3JTePCNoCg",
+      "video_sha256": "7157a452597e83670ad71c7d95c2b7c63f791f2f61692e126ad6cf7251f87759",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-28-dcc-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-09-28-dcc-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:dc6580f8f90de40b",
+        "canonical_hash": "",
+        "script_id": "dc6580f8f90de40ba25d258bbd0e76285613c9aa525b7a7922695350decd1f5d",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Infravision and Air Bubble: Beetle's Environmental Edge",
+        "hook": "Infravision and Air Bubble: Beetle's Environmental Edge",
+        "body": "The Giant Predaceous Diving Beetle's infravision sees heat sources up to 60 feet, advantageous in darkness. Its air bubble ability allows survival in oxygen-poor environments. These abilities complicate encounters, requiring players to strategize creatively.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-28-dcc-clip3.mp4",
+        "video_sha256": "7157a452597e83670ad71c7d95c2b7c63f791f2f61692e126ad6cf7251f87759"
+      }
     }
   ]
 }

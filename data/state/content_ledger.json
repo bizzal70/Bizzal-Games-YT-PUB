@@ -6324,6 +6324,50 @@
       "video_id": "18109057550053371",
       "day": "2026-09-28",
       "published_at": "2026-09-28T14:36:55+00:00"
+    },
+    {
+      "content_key": "0b1bdc3baef16bdc2beafeea79c8000c3200063f1905f45f3c58090290f122f4",
+      "token_text": "beetle bite diving giant mechanic poison predaceou",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Giant Predaceous Diving Beetle: Poison Bite Mechanics #dcc",
+      "video_id": "NoEohaRtxmc",
+      "day": "2026-09-28",
+      "published_at": "2026-09-28T17:55:04+00:00"
+    },
+    {
+      "content_key": "65809e2dfdb4a39cfeb797d21578bf507808285a5e6b8e9a34f520d0322172de",
+      "token_text": "beetle bite giant persistent poison threat",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Giant Beetle's Poison Bite is a Persistent Threat #dcc",
+      "video_id": "EdXX0male7A",
+      "day": "2026-09-28-dcc-clip1",
+      "published_at": "2026-09-28T18:07:18+00:00"
+    },
+    {
+      "content_key": "4b42aac0d7f3d0c497fb82acfc2af18dbc8d5578d58791271ae13786f653c0a6",
+      "token_text": "advantage beetle create speed swim tactical",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Beetle's Swim Speed Creates Tactical Advantage #dcc",
+      "video_id": "uTP-f0_UM4M",
+      "day": "2026-09-28-dcc-clip2",
+      "published_at": "2026-09-28T18:10:45+00:00"
+    },
+    {
+      "content_key": "478484f7d7728ff3c307aa0f86bce9dba50248361eb27efe7b0c2dcf7bce24e2",
+      "token_text": "air beetle bubble edge environmental infravision",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Infravision and Air Bubble: Beetle's Environmental Edge #dcc",
+      "video_id": "v3JTePCNoCg",
+      "day": "2026-09-28-dcc-clip3",
+      "published_at": "2026-09-28T18:13:50+00:00"
     }
   ]
 }
