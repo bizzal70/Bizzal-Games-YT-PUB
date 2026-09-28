@@ -1,6 +1,105 @@
 [
   {
     "system": "dnd5e",
+    "title": "World of Warcraft Subclasses: Redefining Abilities",
+    "angle": "Examine how WoW subclasses are introducing new abilities by swapping out classic D&D class features.",
+    "rationale": "D&D's World of Warcraft subclasses are gaining attention with their ability swaps.",
+    "fixture_hint": "class",
+    "search_keyword": "D&D World of Warcraft subclasses will swap out classic class features for new abilities",
+    "created_date": "2026-09-28",
+    "status": "pending",
+    "brief_id": "7ec0d5dee9a3"
+  },
+  {
+    "system": "dnd5e",
+    "title": "The New Face of Bahamut: A D&D Redesign",
+    "angle": "Dive into the redesign of Bahamut and its implications for gameplay and lore.",
+    "rationale": "D&D's redesign of Bahamut is a hot topic among players and lore enthusiasts.",
+    "fixture_hint": "creature",
+    "search_keyword": "Check out D&D's redesign of Bahamut",
+    "created_date": "2026-09-28",
+    "status": "pending",
+    "brief_id": "265ab4ee8d9b"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Dragonlance Revival: What the World Book Brings",
+    "angle": "Explore the new rules and features introduced in the Dragonlance world book.",
+    "rationale": "The upcoming Dragonlance world book is stirring excitement in the D&D community.",
+    "fixture_hint": "rule",
+    "search_keyword": "Weis, Hickman, and Manganiello update on Dragonlance world book",
+    "created_date": "2026-09-28",
+    "status": "pending",
+    "brief_id": "3d42d4c44b70"
+  },
+  {
+    "system": "shadowdark",
+    "title": "UKGE AI Ban: Impacts on Shadowdark",
+    "angle": "Analyze how the UK Games Expo's ban on AI affects Shadowdark players and community events.",
+    "rationale": "The recent AI ban at UKGE is relevant to discussions on RPG community practices.",
+    "fixture_hint": "rule",
+    "search_keyword": "UK Games Expo finally bans AI from the convention",
+    "created_date": "2026-09-28",
+    "status": "pending",
+    "brief_id": "59471fb9e76f"
+  },
+  {
+    "system": "shadowdark",
+    "title": "The Rotating Dungeon: Shadowdark's New Exploration Challenge",
+    "angle": "Delve into the mechanics and strategic challenges of Shadowdark's rotating dungeon.",
+    "rationale": "New exploration challenges like the rotating dungeon are capturing player interest.",
+    "fixture_hint": "rule",
+    "search_keyword": "Truly build an adventurer with this new species and explore a rotating dungeon",
+    "created_date": "2026-09-28",
+    "status": "pending",
+    "brief_id": "9060150ce70a"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Social Media Influence: Paranoia's Spin in Shadowdark",
+    "angle": "Investigate the influence of Paranoia's latest adventure on Shadowdark's narrative elements.",
+    "rationale": "Paranoia's social media influencer theme is resonating with RPG narratives.",
+    "fixture_hint": "rule",
+    "search_keyword": "Dystopian comedy RPG Paranoia takes aim at social media influencers in its latest adventure",
+    "created_date": "2026-09-28",
+    "status": "pending",
+    "brief_id": "289bc09ff7e5"
+  },
+  {
+    "system": "dcc",
+    "title": "Necromunda's TTRPG Influence on DCC",
+    "angle": "Explore how the upcoming Necromunda TTRPG might influence Dungeon Crawl Classics.",
+    "rationale": "The announcement of a Necromunda TTRPG is relevant to DCC's design inspirations.",
+    "fixture_hint": "rule",
+    "search_keyword": "Games Workshop is producing a Necromunda TTRPG",
+    "created_date": "2026-09-28",
+    "status": "pending",
+    "brief_id": "5cbaafa773b6"
+  },
+  {
+    "system": "dcc",
+    "title": "Faster, Purple Worm!: Dungeon Crawl Classics' Newest Threat",
+    "angle": "Examine the mechanics and strategies for encountering the 'Faster, Purple Worm!' in DCC.",
+    "rationale": "The Purple Worm is a notable part of recent RPG crowdfunding news.",
+    "fixture_hint": "creature",
+    "search_keyword": "RPG Crowdfunding News – Wild Hearth, The Griffon's Saddlebag, Faster, Purple Worm!, and more",
+    "created_date": "2026-09-28",
+    "status": "pending",
+    "brief_id": "9d8a55fe36e7"
+  },
+  {
+    "system": "dcc",
+    "title": "The Griffon's Saddlebag: DCC's Magical Inventory Expansion",
+    "angle": "Discover the new magical items introduced by The Griffon's Saddlebag for DCC gameplay.",
+    "rationale": "The Griffon's Saddlebag is highlighted in crowdfunding news, offering new items for DCC.",
+    "fixture_hint": "item",
+    "search_keyword": "RPG Crowdfunding News – Wild Hearth, The Griffon's Saddlebag, Faster, Purple Worm!, and more",
+    "created_date": "2026-09-28",
+    "status": "pending",
+    "brief_id": "d32785404212"
+  },
+  {
+    "system": "dnd5e",
     "title": "Underdark Subclasses: The New Paradigm",
     "angle": "Exploration of the latest subclasses that redefine Underdark adventuring in 5e.",
     "rationale": "The recent testing of new Underdark subclasses in D&D has captured community interest.",
