@@ -2555,6 +2555,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-27.mp4",
         "video_sha256": "e68d3651350a3cd15142e08d62f81b4a92ca0e33c03505b207f5bd604cab4732"
       }
+    },
+    {
+      "published_utc": "2026-09-28T14:35:09Z",
+      "day": "2026-09-28",
+      "content_id": "bgp-2026-09-28-rules-myth-rule-srd-2024-damage-and-healing-healing-f2519e117b97",
+      "publish_hash": "fc33313a79b87ba7e5a24997ffd4b22b4ca2c01b70561bf1fc032a37fa2d9458",
+      "youtube_video_id": "i1DmVh9Un9Q",
+      "youtube_url": "https://www.youtube.com/watch?v=i1DmVh9Un9Q",
+      "video_sha256": "9175e70349b5c2cde9119dd262aa3973274e40f92d884bea5d6b95c1674db689",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-28.mp4",
+      "fingerprint": {
+        "day": "2026-09-28",
+        "category": "rules_myth",
+        "angle": "why_people_get_it_wrong",
+        "content_id": "bgp-2026-09-28-rules-myth-rule-srd-2024-damage-and-healing-healing-f2519e117b97",
+        "canonical_hash": "f2519e117b978d1ffe4c0c61018436e1941b65ac95931bb55481b23be7a6c861",
+        "script_id": "3e57afbf55aa68627db92a2da39d925a20c053b5ebe1091d1a2325c827dd5b2d",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_damage-and-healing_healing",
+        "fact_name": "Healing",
+        "hook": "Healing often appears more flexible than it is - only hit points are restored, not conditions or exhaustion.",
+        "body": "Healing spells like Cure Wounds and Potions of Healing restore hit points but do not remove conditions or exhaustion. Many players assume healing reverses all negative effects, leading to wasted resources when conditions persist. Optimal healing involves understanding its limits and using spells like Lesser Restoration for conditions.",
+        "cta": "DMs: Remind your players that healing spells only restore hit points - conditions and exhaustion require specific spells like Lesser Restoration.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-28.mp4",
+        "video_sha256": "9175e70349b5c2cde9119dd262aa3973274e40f92d884bea5d6b95c1674db689"
+      }
     }
   ]
 }

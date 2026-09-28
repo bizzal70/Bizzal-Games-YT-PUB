@@ -998,5 +998,17 @@
       "spice": [],
       "tts_voice_id": "coral"
     }
+  },
+  "2026-09-28": {
+    "encounter_seed": {
+      "angle": "moral_choice",
+      "voice": "grim_warden",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "fable"
+    }
   }
 }

@@ -2937,6 +2937,36 @@
       "hook": "Gloves Of Agility elevate Dexterity beyond normal limits - your Dexterity stat becomes 18 (+4) while wearing.",
       "body": "The Gloves Of Agility set your Dexterity to 18, which can override higher scores. Many assume these gloves provide a bonus, but they actually replace your Dexterity score. Equipping them with a base Dexterity of 18 or higher results in a net loss. For characters with a lower Dexterity score, these gloves offer the most benefit.",
       "cta": "GMs: Confirm players' base Dexterity is below 18 before handing out the Gloves Of Agility, or they'll lose out."
+    },
+    {
+      "published_utc": "2026-09-28T14:30:54Z",
+      "day": "2026-09-28",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-28-spell-use-case-spell-111-68600c751dac",
+      "instagram_post_id": "18631274887006457",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "0a1148f07dfe9272129eb41e2df6cece9dffc1c14548583dd5c40ec3501d8aad",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-28.mp4",
+      "fact_name": "Ventriloquism",
+      "category": "spell_use_case",
+      "hook": "Ventriloquism's range can be deceptive - 30 feet or more, depending on the spell check result.",
+      "body": "Ventriloquism allows a wizard to project their voice up to 30 feet or more, with the distance determined by the spell check result. Many players underestimate its utility by focusing solely on damage spells, missing its potential to alter encounter dynamics. A high spell check can increase both the volume and believability of the voice, sometimes requiring a Will save to disbelieve. Optimal use involves targeting areas or creatures that can change the flow of an encounter, rather than direct damage application.",
+      "cta": "Judges: Use Ventriloquism to manipulate encounters by projecting the voice 30 feet or more, forcing strategic Will saves."
+    },
+    {
+      "published_utc": "2026-09-28T14:36:55Z",
+      "day": "2026-09-28",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-28-rules-myth-rule-srd-2024-damage-and-healing-healing-f2519e117b97",
+      "instagram_post_id": "18109057550053371",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9175e70349b5c2cde9119dd262aa3973274e40f92d884bea5d6b95c1674db689",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-28.mp4",
+      "fact_name": "Healing",
+      "category": "rules_myth",
+      "hook": "Healing often appears more flexible than it is - only hit points are restored, not conditions or exhaustion.",
+      "body": "Healing spells like Cure Wounds and Potions of Healing restore hit points but do not remove conditions or exhaustion. Many players assume healing reverses all negative effects, leading to wasted resources when conditions persist. Optimal healing involves understanding its limits and using spells like Lesser Restoration for conditions.",
+      "cta": "DMs: Remind your players that healing spells only restore hit points - conditions and exhaustion require specific spells like Lesser Restoration."
     }
   ]
 }

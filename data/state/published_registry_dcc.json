@@ -1932,6 +1932,32 @@
         "video_sha256": "9dae02b72303efddb58b0cc39c6b4dc986078c8b063f9a89ab54ac569ba21a95"
       },
       "tone_lint_violation": "vague filler phrase: catches parties off guard"
+    },
+    {
+      "published_utc": "2026-09-28T14:29:08Z",
+      "day": "2026-09-28",
+      "content_id": "bgp-2026-09-28-spell-use-case-spell-111-68600c751dac",
+      "publish_hash": "c263f4e5838a477e01c0b41d260193eba38ebbc00f2af8628c4145aa01c9a971",
+      "youtube_video_id": "OlAG08b_uN8",
+      "youtube_url": "https://www.youtube.com/watch?v=OlAG08b_uN8",
+      "video_sha256": "0a1148f07dfe9272129eb41e2df6cece9dffc1c14548583dd5c40ec3501d8aad",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-28.mp4",
+      "fingerprint": {
+        "day": "2026-09-28",
+        "category": "spell_use_case",
+        "angle": "spell_check_range",
+        "content_id": "bgp-2026-09-28-spell-use-case-spell-111-68600c751dac",
+        "canonical_hash": "68600c751dacbef194119ba6c6ac205773157667a4135d556cf91e0095e20e5c",
+        "script_id": "8163e85764904c452cef30da806dd93282418b3daa5adab1885ec0c47e18f24d",
+        "fact_kind": "spell",
+        "fact_pk": 111,
+        "fact_name": "Ventriloquism",
+        "hook": "Ventriloquism's range can be deceptive - 30 feet or more, depending on the spell check result.",
+        "body": "Ventriloquism allows a wizard to project their voice up to 30 feet or more, with the distance determined by the spell check result. Many players underestimate its utility by focusing solely on damage spells, missing its potential to alter encounter dynamics. A high spell check can increase both the volume and believability of the voice, sometimes requiring a Will save to disbelieve. Optimal use involves targeting areas or creatures that can change the flow of an encounter, rather than direct damage application.",
+        "cta": "Judges: Use Ventriloquism to manipulate encounters by projecting the voice 30 feet or more, forcing strategic Will saves.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-28.mp4",
+        "video_sha256": "0a1148f07dfe9272129eb41e2df6cece9dffc1c14548583dd5c40ec3501d8aad"
+      }
     }
   ]
 }
