@@ -1958,6 +1958,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-28.mp4",
         "video_sha256": "0a1148f07dfe9272129eb41e2df6cece9dffc1c14548583dd5c40ec3501d8aad"
       }
+    },
+    {
+      "published_utc": "2026-09-29T14:28:13Z",
+      "day": "2026-09-29",
+      "content_id": "bgp-2026-09-29-rules-ruling-rule-12-0023a8151591",
+      "publish_hash": "158fddb80ab080c03e597b1b7c8894f5f0b38700e48cbd7232b07eba1d525c50",
+      "youtube_video_id": "pbrLT-4Ih64",
+      "youtube_url": "https://www.youtube.com/watch?v=pbrLT-4Ih64",
+      "video_sha256": "354e8f2b70d1c2f4fb120e7ce1253969f54515390197fc832680e23dbbff2eb3",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-29.mp4",
+      "fingerprint": {
+        "day": "2026-09-29",
+        "category": "rules_ruling",
+        "angle": "dice_chain_use",
+        "content_id": "bgp-2026-09-29-rules-ruling-rule-12-0023a8151591",
+        "canonical_hash": "0023a81515913cf8c44c44983c213570c004cb122a6bb770c56505953ed1ec9d",
+        "script_id": "d50be16b3c93a0b8a3ccc7285ce0f5ac849fc4b4ab7912aab145e22c325dc7c9",
+        "fact_kind": "rule",
+        "fact_pk": 12,
+        "fact_name": "Action Dice",
+        "hook": "Action Dice surprise players with their versatility - each die independently fuels one attack or spell per.",
+        "body": "Action Dice replace the traditional extra-attack bonuses with additional dice as characters level. Each action die can be used for a separate attack or spell, allowing higher-level Warriors to roll a d20 and a d14 in the same round. Misuse occurs when players treat them as extra attacks only; casters can instead use them to double their spell output in a single turn. This flexibility enhances both damage and utility when properly understood.",
+        "cta": "Judges: Remind players that Action Dice mean a high-level Warrior rolls a d20 and d14 for separate attacks or spells.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-29.mp4",
+        "video_sha256": "354e8f2b70d1c2f4fb120e7ce1253969f54515390197fc832680e23dbbff2eb3"
+      }
     }
   ]
 }

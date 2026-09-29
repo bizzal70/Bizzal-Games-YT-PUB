@@ -2967,6 +2967,51 @@
       "hook": "Healing often appears more flexible than it is - only hit points are restored, not conditions or exhaustion.",
       "body": "Healing spells like Cure Wounds and Potions of Healing restore hit points but do not remove conditions or exhaustion. Many players assume healing reverses all negative effects, leading to wasted resources when conditions persist. Optimal healing involves understanding its limits and using spells like Lesser Restoration for conditions.",
       "cta": "DMs: Remind your players that healing spells only restore hit points - conditions and exhaustion require specific spells like Lesser Restoration."
+    },
+    {
+      "published_utc": "2026-09-29T14:29:30Z",
+      "day": "2026-09-29",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-29-rules-ruling-rule-12-0023a8151591",
+      "instagram_post_id": "18126131008886402",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "354e8f2b70d1c2f4fb120e7ce1253969f54515390197fc832680e23dbbff2eb3",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-29.mp4",
+      "fact_name": "Action Dice",
+      "category": "rules_ruling",
+      "hook": "Action Dice surprise players with their versatility - each die independently fuels one attack or spell per.",
+      "body": "Action Dice replace the traditional extra-attack bonuses with additional dice as characters level. Each action die can be used for a separate attack or spell, allowing higher-level Warriors to roll a d20 and a d14 in the same round. Misuse occurs when players treat them as extra attacks only; casters can instead use them to double their spell output in a single turn. This flexibility enhances both damage and utility when properly understood.",
+      "cta": "Judges: Remind players that Action Dice mean a high-level Warrior rolls a d20 and d14 for separate attacks or spells."
+    },
+    {
+      "published_utc": "2026-09-29T14:34:31Z",
+      "day": "2026-09-29",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-29-class-spotlight-class-tashas-cauldron-order-of-scribes-9bb2e5f4415c",
+      "instagram_post_id": "18013358387952699",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "f0642e67ae39e48699f0c1f94ff78b69708974c85ca6067d788a8506ac5ea464",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-29.mp4",
+      "fact_name": "Order of Scribes",
+      "category": "class_spotlight",
+      "hook": "Order of Scribes' Wizardly Quill copies spells faster than most realize - it writes twice as fast.",
+      "body": "Order of Scribes' Wizardly Quill is summoned as a bonus action, enabling spell copying at double speed. Resource mismanagement occurs when spell slots are depleted in minor skirmishes, leaving nothing for critical encounters. Determining which spells are expendable in every fight and reserving others for boss-level threats ensures consistent performance.",
+      "cta": "DMs: Remind your players to use the Wizardly Quill's double-speed copying to conserve spell slots for boss fights."
+    },
+    {
+      "published_utc": "2026-09-29T14:38:36Z",
+      "day": "2026-09-29",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-29-rules-myth-rule-12-51d122abd2c1",
+      "instagram_post_id": "18372745897240717",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "8e9cec13a9373ca123b687655c4f8de8b7bec180c0133edeb337a921e420103f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-29.mp4",
+      "fact_name": "Random Encounters",
+      "category": "rules_myth",
+      "hook": "Random Encounters occur more frequently than players expect - every 10 minutes on a d6 roll of 1.",
+      "body": "Random Encounters in Shadowdark trigger every 10 minutes with a d6 roll of 1. This mechanic emphasizes the critical nature of resource management and light tracking, as encounters can quickly deplete supplies. Misjudging encounter frequency often leads to unpreparedness. Consistent application of this rule highlights the importance of planning and timing.",
+      "cta": "GMs: Roll for random encounters every 10 minutes; watch them scramble when they forget to track time."
     }
   ]
 }

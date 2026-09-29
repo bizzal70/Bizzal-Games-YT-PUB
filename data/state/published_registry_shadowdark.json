@@ -2189,6 +2189,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-27.mp4",
         "video_sha256": "e9e0f8ee584e203ea56f08fad7411eb27868181bc755068fae45104b320ec424"
       }
+    },
+    {
+      "published_utc": "2026-09-29T14:37:34Z",
+      "day": "2026-09-29",
+      "content_id": "bgp-2026-09-29-rules-myth-rule-12-51d122abd2c1",
+      "publish_hash": "ce01b811ea944d7417e8978cd4e33d01d7c7e1cfe8712f30121a1fa1bd57cecb",
+      "youtube_video_id": "ps1dPRWI0hE",
+      "youtube_url": "https://www.youtube.com/watch?v=ps1dPRWI0hE",
+      "video_sha256": "8e9cec13a9373ca123b687655c4f8de8b7bec180c0133edeb337a921e420103f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-29.mp4",
+      "fingerprint": {
+        "day": "2026-09-29",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-09-29-rules-myth-rule-12-51d122abd2c1",
+        "canonical_hash": "51d122abd2c1578b573532c492e707a697faa39efbae3750a99871599d89e7d4",
+        "script_id": "7fe190a36a43ebfa0816f00017ba1ca36bdbec5bb803ec352ddcc6c8b3c53d50",
+        "fact_kind": "rule",
+        "fact_pk": 12,
+        "fact_name": "Random Encounters",
+        "hook": "Random Encounters occur more frequently than players expect - every 10 minutes on a d6 roll of 1.",
+        "body": "Random Encounters in Shadowdark trigger every 10 minutes with a d6 roll of 1. This mechanic emphasizes the critical nature of resource management and light tracking, as encounters can quickly deplete supplies. Misjudging encounter frequency often leads to unpreparedness. Consistent application of this rule highlights the importance of planning and timing.",
+        "cta": "GMs: Roll for random encounters every 10 minutes; watch them scramble when they forget to track time.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-29.mp4",
+        "video_sha256": "8e9cec13a9373ca123b687655c4f8de8b7bec180c0133edeb337a921e420103f"
+      },
+      "tone_lint_violation": "vague filler phrase: often leads to"
     }
   ]
 }

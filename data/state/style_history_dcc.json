@@ -902,5 +902,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-09-29": {
+    "rules_ruling": {
+      "angle": "dice_chain_use",
+      "voice": "grim_referee",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

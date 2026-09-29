@@ -2581,6 +2581,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-28.mp4",
         "video_sha256": "9175e70349b5c2cde9119dd262aa3973274e40f92d884bea5d6b95c1674db689"
       }
+    },
+    {
+      "published_utc": "2026-09-29T14:33:46Z",
+      "day": "2026-09-29",
+      "content_id": "bgp-2026-09-29-class-spotlight-class-tashas-cauldron-order-of-scribes-9bb2e5f4415c",
+      "publish_hash": "e598e7e466471fa78ffef23f2e3af2f5489497a67d625df12d22859a65a72395",
+      "youtube_video_id": "Y4jr-0WVcv8",
+      "youtube_url": "https://www.youtube.com/watch?v=Y4jr-0WVcv8",
+      "video_sha256": "f0642e67ae39e48699f0c1f94ff78b69708974c85ca6067d788a8506ac5ea464",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-29.mp4",
+      "fingerprint": {
+        "day": "2026-09-29",
+        "category": "class_spotlight",
+        "angle": "resource_breakpoint",
+        "content_id": "bgp-2026-09-29-class-spotlight-class-tashas-cauldron-order-of-scribes-9bb2e5f4415c",
+        "canonical_hash": "9bb2e5f4415c70bf2984d9ec62dd962a7592f5210e6f93a308d3e46518e3446c",
+        "script_id": "8527505dd3996d2805f4bfdb786e31da336021ee32aa9b4fc6a099d8565d4bec",
+        "fact_kind": "class",
+        "fact_pk": "tashas-cauldron_order-of-scribes",
+        "fact_name": "Order of Scribes",
+        "hook": "Order of Scribes' Wizardly Quill copies spells faster than most realize - it writes twice as fast.",
+        "body": "Order of Scribes' Wizardly Quill is summoned as a bonus action, enabling spell copying at double speed. Resource mismanagement occurs when spell slots are depleted in minor skirmishes, leaving nothing for critical encounters. Determining which spells are expendable in every fight and reserving others for boss-level threats ensures consistent performance.",
+        "cta": "DMs: Remind your players to use the Wizardly Quill's double-speed copying to conserve spell slots for boss fights.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-29.mp4",
+        "video_sha256": "f0642e67ae39e48699f0c1f94ff78b69708974c85ca6067d788a8506ac5ea464"
+      },
+      "tone_lint_violation": "vague filler phrase: mismanagement occurs"
     }
   ]
 }
