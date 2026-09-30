@@ -6500,6 +6500,50 @@
       "video_id": "18070720379751480",
       "day": "2026-09-30",
       "published_at": "2026-09-30T14:47:15+00:00"
+    },
+    {
+      "content_key": "18a264e28154261125d115de42ddcb39c9786811a0a111edc416c82814308500",
+      "token_text": "attack damage explained holy roll weapon",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Holy Weapon: +1 to Attack and Damage Rolls Explained #shadowdark",
+      "video_id": "kmKEtOEX8xg",
+      "day": "2026-09-30",
+      "published_at": "2026-09-30T18:08:53+00:00"
+    },
+    {
+      "content_key": "895d838bfdac7450705ff2c0fc291d6c5f4221580272a1b25a8f8726c9e6f737",
+      "token_text": "holy positioning require strategic timing weapon",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Holy Weapon requires strategic timing and positioning #shadowdark",
+      "video_id": "zqrnfJN9OTo",
+      "day": "2026-09-30-shadowdark-clip1",
+      "published_at": "2026-09-30T18:10:49+00:00"
+    },
+    {
+      "content_key": "21f1ea6a0cbad5a311cd86042f5f35feec1eb0dd96de33c8d05d5e2a39ac2ff4",
+      "token_text": "benefit disarmed holy persist weapon",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Holy Weapon benefits persist on disarmed weapons #shadowdark",
+      "video_id": "Ht1judtUlrA",
+      "day": "2026-09-30-shadowdark-clip2",
+      "published_at": "2026-09-30T18:12:29+00:00"
+    },
+    {
+      "content_key": "e1c009881938267a5f427034ab51e1ae04906cdf1eb35882ae651e83955d03ae",
+      "token_text": "abilitie attack holy multi synergize weapon",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Holy Weapon synergizes with multi-attack abilities #shadowdark",
+      "video_id": "3ltaxYqyhhY",
+      "day": "2026-09-30-shadowdark-clip3",
+      "published_at": "2026-09-30T18:14:15+00:00"
     }
   ]
 }

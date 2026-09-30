@@ -571,6 +571,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-21-shadowdark-clip3.mp4",
         "video_sha256": "b527c9572dfb73f9f50a6f542eae99a650da57d1877730f1021b5aedbe5de83d"
       }
+    },
+    {
+      "published_utc": "2026-09-30T18:10:49Z",
+      "day": "2026-09-30-shadowdark-clip1",
+      "content_id": "clip:545be1a5eead68cb",
+      "publish_hash": "51f8e55ee0b7dbe5498ee6182bc952c86559c652c8b1b6e4c90cd17b98759b23",
+      "youtube_video_id": "zqrnfJN9OTo",
+      "youtube_url": "https://www.youtube.com/watch?v=zqrnfJN9OTo",
+      "video_sha256": "564ac87376de38f6f2fd5fdc381f4a6c84383a760edb3c466072aa475c75e7d6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-30-shadowdark-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-09-30-shadowdark-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:545be1a5eead68cb",
+        "canonical_hash": "",
+        "script_id": "545be1a5eead68cbc9f2fc900fd981cdee02627be67273cfa202b560487338be",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Holy Weapon requires strategic timing and positioning",
+        "hook": "Holy Weapon requires strategic timing and positioning",
+        "body": "The 'Holy Weapon' spell lasts only five rounds, requiring precise timing. Cast it too early, and its benefits may be wasted. Positioning is key; the caster must be close to the weapon. Avoid common misplays by planning carefully.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-30-shadowdark-clip1.mp4",
+        "video_sha256": "564ac87376de38f6f2fd5fdc381f4a6c84383a760edb3c466072aa475c75e7d6"
+      }
+    },
+    {
+      "published_utc": "2026-09-30T18:12:29Z",
+      "day": "2026-09-30-shadowdark-clip2",
+      "content_id": "clip:5308904fbb994fc0",
+      "publish_hash": "21571a28a60db581aded304b0398de6baf9f5aec2785f0d9946f24280e1e9c86",
+      "youtube_video_id": "Ht1judtUlrA",
+      "youtube_url": "https://www.youtube.com/watch?v=Ht1judtUlrA",
+      "video_sha256": "e3dc2497a9d84ba4223ad0955b8d31194638f15d3dbe553448f0f58e36724c76",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-30-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-09-30-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:5308904fbb994fc0",
+        "canonical_hash": "",
+        "script_id": "5308904fbb994fc0b94d03a4e2f5f608dc5927e2c5661bda9a96f9b54cf7ce7f",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Holy Weapon benefits persist on disarmed weapons",
+        "hook": "Holy Weapon benefits persist on disarmed weapons",
+        "body": "If a weapon enhanced by 'Holy Weapon' is disarmed or dropped, its magical benefits remain. Another character can pick it up and use it, offering strategic flexibility. The spell's effect is tied to the weapon, not the wielder.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-30-shadowdark-clip2.mp4",
+        "video_sha256": "e3dc2497a9d84ba4223ad0955b8d31194638f15d3dbe553448f0f58e36724c76"
+      }
+    },
+    {
+      "published_utc": "2026-09-30T18:14:15Z",
+      "day": "2026-09-30-shadowdark-clip3",
+      "content_id": "clip:4cf57d3ca4624dca",
+      "publish_hash": "1895b74ef8265ce7d65ee723140b76a431d631638ceaed89589bdc7b1d6e83ab",
+      "youtube_video_id": "3ltaxYqyhhY",
+      "youtube_url": "https://www.youtube.com/watch?v=3ltaxYqyhhY",
+      "video_sha256": "27c95f8d6bfb65d0f1a3900292e787c76590ebe6e9225c58e1edd83cf6749440",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-30-shadowdark-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-09-30-shadowdark-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:4cf57d3ca4624dca",
+        "canonical_hash": "",
+        "script_id": "4cf57d3ca4624dca63e91a075317c469c3de4535894b0cfb2ccfebb4c79b226a",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Holy Weapon synergizes with multi-attack abilities",
+        "hook": "Holy Weapon synergizes with multi-attack abilities",
+        "body": "The 'Holy Weapon' spell's +1 bonus to attack and damage rolls stacks with multi-attack abilities. Characters with multiple attacks per round can greatly benefit, enhancing each strike. This synergy maximizes combat effectiveness.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-30-shadowdark-clip3.mp4",
+        "video_sha256": "27c95f8d6bfb65d0f1a3900292e787c76590ebe6e9225c58e1edd83cf6749440"
+      }
     }
   ]
 }
