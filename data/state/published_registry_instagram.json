@@ -3012,6 +3012,51 @@
       "hook": "Random Encounters occur more frequently than players expect - every 10 minutes on a d6 roll of 1.",
       "body": "Random Encounters in Shadowdark trigger every 10 minutes with a d6 roll of 1. This mechanic emphasizes the critical nature of resource management and light tracking, as encounters can quickly deplete supplies. Misjudging encounter frequency often leads to unpreparedness. Consistent application of this rule highlights the importance of planning and timing.",
       "cta": "GMs: Roll for random encounters every 10 minutes; watch them scramble when they forget to track time."
+    },
+    {
+      "published_utc": "2026-09-30T14:36:21Z",
+      "day": "2026-09-30",
+      "system": "dcc",
+      "content_id": "bgp-2026-09-30-item-spotlight-item-23-2f6e3d4759be",
+      "instagram_post_id": "17896032732608069",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "7b14b04a9d2f5bb570e57f948074f076a07157df84f5d5580869dc608f83e337",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-30.mp4",
+      "fact_name": "Hunter (Bane Weapon)",
+      "category": "item_spotlight",
+      "hook": "Hunter (Bane Weapon) sees through invisibility better than most players expect - a +10 Will save against.",
+      "body": "A Hunter (Bane Weapon) senses its designated bane within 100 feet, bypassing invisibility and magical concealment with a +10 Will save. Many players misuse it by trying to force its effect in every encounter, regardless of relevance. The optimal strategy is to reserve its use for when the enemy is actively concealed or attempting to escape, ensuring that its tracking ability changes the outcome of the pursuit.",
+      "cta": "Judges: Remind players that Hunter's +10 Will save is for when the enemy's actually concealed, not just because it's Tuesday."
+    },
+    {
+      "published_utc": "2026-09-30T14:42:08Z",
+      "day": "2026-09-30",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-09-30-monster-tactic-creature-srd-2024-horned-devil-178430861239",
+      "instagram_post_id": "18143477755598578",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "71eeaaf982b5c66fa783ccd55bec956a500bc3fc5853194cac5356da26b8e9c0",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-30.mp4",
+      "fact_name": "Horned Devil",
+      "category": "monster_tactic",
+      "hook": "Horned Devil punishes poor positioning - its Infernal Tail and Hurl Flame can devastate clustered targets.",
+      "body": "AC 18 and 199 HP make the Horned Devil a tough opponent, but its real threat is area control. Hurl Flame has a range of 150 feet, and its Infernal Tail can reach 10 feet. Diabolical Restoration means killing it outside the Nine Hells is futile; it just reforms. Clustering allows the devil to maximize its area attacks. Spread out to minimize damage and force it to engage on your terms.",
+      "cta": "DMs: Enforce the Horned Devil's 150-foot Hurl Flame range to punish players who cluster and fail to spread out."
+    },
+    {
+      "published_utc": "2026-09-30T14:47:15Z",
+      "day": "2026-09-30",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-09-30-spell-use-case-spell-4-e4ad994fd394",
+      "instagram_post_id": "18070720379751480",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "12966d42adb9a2c6d7480012982d1642bc820f60c70db27fbd115ab124e0c0be",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-30.mp4",
+      "fact_name": "Animate Dead",
+      "category": "spell_use_case",
+      "hook": "Animate Dead shifts the tactical landscape more than expected - duration extends to 1 day.",
+      "body": "Animate Dead allows a wizard to raise a zombie or skeleton from a humanoid's remains, provided the remains have at least three limbs and an intact head. The undead acts on the wizard's turn, and the spell's close range can limit its immediate utility in combat. Casting it solely for damage output misses its potential. The spell excels when the undead are used to control space or create distractions over the course of a day.",
+      "cta": "GMs: Use Animate Dead's 1-day duration to block paths or divert foes, not just for close-range combat."
     }
   ]
 }

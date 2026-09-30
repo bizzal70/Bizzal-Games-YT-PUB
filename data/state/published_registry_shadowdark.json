@@ -2216,6 +2216,32 @@
         "video_sha256": "8e9cec13a9373ca123b687655c4f8de8b7bec180c0133edeb337a921e420103f"
       },
       "tone_lint_violation": "vague filler phrase: often leads to"
+    },
+    {
+      "published_utc": "2026-09-30T14:46:10Z",
+      "day": "2026-09-30",
+      "content_id": "bgp-2026-09-30-spell-use-case-spell-4-e4ad994fd394",
+      "publish_hash": "c154cbfdc13b4700e1aa600c3a31339c650dd2463c34d158612847e7c35b2d0a",
+      "youtube_video_id": "_Bq_B1GUc98",
+      "youtube_url": "https://www.youtube.com/watch?v=_Bq_B1GUc98",
+      "video_sha256": "12966d42adb9a2c6d7480012982d1642bc820f60c70db27fbd115ab124e0c0be",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-30.mp4",
+      "fingerprint": {
+        "day": "2026-09-30",
+        "category": "spell_use_case",
+        "angle": "best_moment",
+        "content_id": "bgp-2026-09-30-spell-use-case-spell-4-e4ad994fd394",
+        "canonical_hash": "e4ad994fd394f1a440f8ffa51db90c1fb23e558b13aa41485a941cb51475c2cd",
+        "script_id": "4b529c5ceaea01bd381e50bb146412aaf09bda12b70592e48f5cf0e64308abc2",
+        "fact_kind": "spell",
+        "fact_pk": 4,
+        "fact_name": "Animate Dead",
+        "hook": "Animate Dead shifts the tactical landscape more than expected - duration extends to 1 day.",
+        "body": "Animate Dead allows a wizard to raise a zombie or skeleton from a humanoid's remains, provided the remains have at least three limbs and an intact head. The undead acts on the wizard's turn, and the spell's close range can limit its immediate utility in combat. Casting it solely for damage output misses its potential. The spell excels when the undead are used to control space or create distractions over the course of a day.",
+        "cta": "GMs: Use Animate Dead's 1-day duration to block paths or divert foes, not just for close-range combat.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-30.mp4",
+        "video_sha256": "12966d42adb9a2c6d7480012982d1642bc820f60c70db27fbd115ab124e0c0be"
+      }
     }
   ]
 }

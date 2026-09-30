@@ -1020,5 +1020,15 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-09-30": {
+    "spell_use_case": {
+      "angle": "best_moment",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "arcane_survival_coach",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

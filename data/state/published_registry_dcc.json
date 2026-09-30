@@ -1984,6 +1984,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-29.mp4",
         "video_sha256": "354e8f2b70d1c2f4fb120e7ce1253969f54515390197fc832680e23dbbff2eb3"
       }
+    },
+    {
+      "published_utc": "2026-09-30T14:35:01Z",
+      "day": "2026-09-30",
+      "content_id": "bgp-2026-09-30-item-spotlight-item-23-2f6e3d4759be",
+      "publish_hash": "b0296d818beacf8b1a5b61f06d5880160b60d74d5ebfb6eca4c3d223a81157af",
+      "youtube_video_id": "gOnuIHAMdp8",
+      "youtube_url": "https://www.youtube.com/watch?v=gOnuIHAMdp8",
+      "video_sha256": "7b14b04a9d2f5bb570e57f948074f076a07157df84f5d5580869dc608f83e337",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-30.mp4",
+      "fingerprint": {
+        "day": "2026-09-30",
+        "category": "item_spotlight",
+        "angle": "best_user",
+        "content_id": "bgp-2026-09-30-item-spotlight-item-23-2f6e3d4759be",
+        "canonical_hash": "2f6e3d4759bef0dea90ec309e47f174919189664db5e017bc522a4ab5e839d41",
+        "script_id": "1a6537768d30709b7330a206dfa73e2bfcfe83b9b68f9a5d831910e92527c96c",
+        "fact_kind": "item",
+        "fact_pk": 23,
+        "fact_name": "Hunter (Bane Weapon)",
+        "hook": "Hunter (Bane Weapon) sees through invisibility better than most players expect - a +10 Will save against.",
+        "body": "A Hunter (Bane Weapon) senses its designated bane within 100 feet, bypassing invisibility and magical concealment with a +10 Will save. Many players misuse it by trying to force its effect in every encounter, regardless of relevance. The optimal strategy is to reserve its use for when the enemy is actively concealed or attempting to escape, ensuring that its tracking ability changes the outcome of the pursuit.",
+        "cta": "Judges: Remind players that Hunter's +10 Will save is for when the enemy's actually concealed, not just because it's Tuesday.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-30.mp4",
+        "video_sha256": "7b14b04a9d2f5bb570e57f948074f076a07157df84f5d5580869dc608f83e337"
+      }
     }
   ]
 }

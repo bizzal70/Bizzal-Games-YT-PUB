@@ -2608,6 +2608,32 @@
         "video_sha256": "f0642e67ae39e48699f0c1f94ff78b69708974c85ca6067d788a8506ac5ea464"
       },
       "tone_lint_violation": "vague filler phrase: mismanagement occurs"
+    },
+    {
+      "published_utc": "2026-09-30T14:40:19Z",
+      "day": "2026-09-30",
+      "content_id": "bgp-2026-09-30-monster-tactic-creature-srd-2024-horned-devil-178430861239",
+      "publish_hash": "b0efcc158957935e52324bb76ba873c206bfa282fecb5db33c21f02f3a59c92f",
+      "youtube_video_id": "yHqwMbRjKow",
+      "youtube_url": "https://www.youtube.com/watch?v=yHqwMbRjKow",
+      "video_sha256": "71eeaaf982b5c66fa783ccd55bec956a500bc3fc5853194cac5356da26b8e9c0",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-30.mp4",
+      "fingerprint": {
+        "day": "2026-09-30",
+        "category": "monster_tactic",
+        "angle": "common_mistake",
+        "content_id": "bgp-2026-09-30-monster-tactic-creature-srd-2024-horned-devil-178430861239",
+        "canonical_hash": "178430861239bb8dcaccd6ef7dc251239e44d7c7ce4c0906bc83fa637ec036c7",
+        "script_id": "f8f48e58d00d0ab5a9ab2372336641097c051fae648a63e4ceb5aa73b51ee512",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_horned-devil",
+        "fact_name": "Horned Devil",
+        "hook": "Horned Devil punishes poor positioning - its Infernal Tail and Hurl Flame can devastate clustered targets.",
+        "body": "AC 18 and 199 HP make the Horned Devil a tough opponent, but its real threat is area control. Hurl Flame has a range of 150 feet, and its Infernal Tail can reach 10 feet. Diabolical Restoration means killing it outside the Nine Hells is futile; it just reforms. Clustering allows the devil to maximize its area attacks. Spread out to minimize damage and force it to engage on your terms.",
+        "cta": "DMs: Enforce the Horned Devil's 150-foot Hurl Flame range to punish players who cluster and fail to spread out.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-30.mp4",
+        "video_sha256": "71eeaaf982b5c66fa783ccd55bec956a500bc3fc5853194cac5356da26b8e9c0"
+      }
     }
   ]
 }
