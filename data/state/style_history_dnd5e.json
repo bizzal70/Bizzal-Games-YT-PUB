@@ -1040,5 +1040,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-10-01": {
+    "spell_use_case": {
+      "angle": "best_moment",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

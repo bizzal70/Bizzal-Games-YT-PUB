@@ -2010,6 +2010,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-09-30.mp4",
         "video_sha256": "7b14b04a9d2f5bb570e57f948074f076a07157df84f5d5580869dc608f83e337"
       }
+    },
+    {
+      "published_utc": "2026-10-01T14:32:41Z",
+      "day": "2026-10-01",
+      "content_id": "bgp-2026-10-01-encounter-seed-creature-475-a26961b8b03b",
+      "publish_hash": "0c22e70f1d877d75eaf625a3e8066bfa1b8af3cf0756f8a1b6bca98f879a66cd",
+      "youtube_video_id": "31lC_v-kLnc",
+      "youtube_url": "https://www.youtube.com/watch?v=31lC_v-kLnc",
+      "video_sha256": "cdc9dcf2e932bb15fd9876de65a8c3c4c429b6d8f535874a9f0a980db348346c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-01.mp4",
+      "fingerprint": {
+        "day": "2026-10-01",
+        "category": "encounter_seed",
+        "angle": "time_pressure",
+        "content_id": "bgp-2026-10-01-encounter-seed-creature-475-a26961b8b03b",
+        "canonical_hash": "a26961b8b03bef66b44b55f082cfe716e9db2a3a314b343ac0aa3bbc006ca8e8",
+        "script_id": "0dc6a6e3cfd12084da40f751b4267f11d9a67c2436b06870920ca7cef5ca11e2",
+        "fact_kind": "creature",
+        "fact_pk": 475,
+        "fact_name": "Boneshard Swarm of Bones",
+        "hook": "Run Boneshard Swarm of Bones with a hard clock and consequences each round; indecision should hurt more than damage.",
+        "body": "With a movement speed of 20', the Boneshard Swarm of Bones struggles to chase down targets. Many underestimate the impact of its blindsight, assuming they can hide or sneak past it. This oversight can lead to costly positioning errors, especially under time pressure. Maintaining distance while avoiding reliance on stealth is crucial.",
+        "cta": "Judges: Remind them that blindsight makes stealth pointless; they must stay beyond 60' or risk being shredded by shards.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-01.mp4",
+        "video_sha256": "cdc9dcf2e932bb15fd9876de65a8c3c4c429b6d8f535874a9f0a980db348346c"
+      }
     }
   ]
 }

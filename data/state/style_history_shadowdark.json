@@ -1030,5 +1030,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-01": {
+    "class_spotlight": {
+      "angle": "early_power_spike",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "class_mentor",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

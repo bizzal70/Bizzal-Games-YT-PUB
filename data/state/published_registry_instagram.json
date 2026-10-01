@@ -3057,6 +3057,51 @@
       "hook": "Animate Dead shifts the tactical landscape more than expected - duration extends to 1 day.",
       "body": "Animate Dead allows a wizard to raise a zombie or skeleton from a humanoid's remains, provided the remains have at least three limbs and an intact head. The undead acts on the wizard's turn, and the spell's close range can limit its immediate utility in combat. Casting it solely for damage output misses its potential. The spell excels when the undead are used to control space or create distractions over the course of a day.",
       "cta": "GMs: Use Animate Dead's 1-day duration to block paths or divert foes, not just for close-range combat."
+    },
+    {
+      "published_utc": "2026-10-01T14:33:42Z",
+      "day": "2026-10-01",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-01-encounter-seed-creature-475-a26961b8b03b",
+      "instagram_post_id": "18130812904664653",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "cdc9dcf2e932bb15fd9876de65a8c3c4c429b6d8f535874a9f0a980db348346c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-01.mp4",
+      "fact_name": "Boneshard Swarm of Bones",
+      "category": "encounter_seed",
+      "hook": "Run Boneshard Swarm of Bones with a hard clock and consequences each round; indecision should hurt more than damage.",
+      "body": "With a movement speed of 20', the Boneshard Swarm of Bones struggles to chase down targets. Many underestimate the impact of its blindsight, assuming they can hide or sneak past it. This oversight can lead to costly positioning errors, especially under time pressure. Maintaining distance while avoiding reliance on stealth is crucial.",
+      "cta": "Judges: Remind them that blindsight makes stealth pointless; they must stay beyond 60' or risk being shredded by shards."
+    },
+    {
+      "published_utc": "2026-10-01T14:37:51Z",
+      "day": "2026-10-01",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-01-spell-use-case-spell-srd-2024-inflict-wounds-23e5a00fe742",
+      "instagram_post_id": "17948153448324193",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d0b71550d5837304bd5fa00b9b383d36192ced5998e60ff5e286881efdc7e0ee",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-01.mp4",
+      "fact_name": "Inflict Wounds",
+      "category": "spell_use_case",
+      "hook": "Inflict Wounds surprises with its touch range - 0 feet means you need to plan your approach carefully.",
+      "body": "Inflict Wounds deals 2d10 necrotic damage at 1st level, but the touch range requires you to be in melee distance. The common oversight is casting it against creatures with high Constitution saves, which reduces its impact. The better move is targeting low-Constitution enemies where the damage can actually shift the combat dynamics.",
+      "cta": "DMs: Target enemies with low Constitution saves for Inflict Wounds' 2d10 necrotic damage; avoid wasting it on high-Constitution creatures."
+    },
+    {
+      "published_utc": "2026-10-01T14:44:24Z",
+      "day": "2026-10-01",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-01-class-spotlight-class-9-7573206d3ae8",
+      "instagram_post_id": "18111735587139437",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "56b478243dcc9d33eb3a2658d55cc55cb6ec4a11f0554439f581aacb7a87d9e2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-01.mp4",
+      "fact_name": "Pit Fighter",
+      "category": "class_spotlight",
+      "hook": "Pit Fighter's early power spike hinges on a narrow survival window - Last Stand triggers on a natural 18-20.",
+      "body": "Flourish heals 1d6 hit points three times per day on a melee hit, but often gets squandered on trivial fights. Last Stand's ability to rise from dying at 1 HP on a natural 18-20 is frequently overlooked, missing crucial survival moments. Implacable offers advantage on Constitution checks to resist injury and poison, yet its benefit is often ignored in hazardous environments. Use these abilities strategically in high-stakes encounters where survival is critical.",
+      "cta": "GMs: Design encounters that force Pit Fighters to rely on Last Stand's 18-20 trigger for survival."
     }
   ]
 }

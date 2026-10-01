@@ -2634,6 +2634,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-09-30.mp4",
         "video_sha256": "71eeaaf982b5c66fa783ccd55bec956a500bc3fc5853194cac5356da26b8e9c0"
       }
+    },
+    {
+      "published_utc": "2026-10-01T14:37:05Z",
+      "day": "2026-10-01",
+      "content_id": "bgp-2026-10-01-spell-use-case-spell-srd-2024-inflict-wounds-23e5a00fe742",
+      "publish_hash": "09995373c4fc96a79ae35df81e87badbcfb5b33ee39fa90db7bf5c7e48beffc1",
+      "youtube_video_id": "9dw9Wa_sNRE",
+      "youtube_url": "https://www.youtube.com/watch?v=9dw9Wa_sNRE",
+      "video_sha256": "d0b71550d5837304bd5fa00b9b383d36192ced5998e60ff5e286881efdc7e0ee",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-01.mp4",
+      "fingerprint": {
+        "day": "2026-10-01",
+        "category": "spell_use_case",
+        "angle": "best_moment",
+        "content_id": "bgp-2026-10-01-spell-use-case-spell-srd-2024-inflict-wounds-23e5a00fe742",
+        "canonical_hash": "23e5a00fe7429bd2603f008f791fb515d4eb1d53d9d6a4ad7acde08d3a54db3d",
+        "script_id": "c3e553533010232ae78653932693c64ab3ae466f16eab72ca4cc4616279c876f",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_inflict-wounds",
+        "fact_name": "Inflict Wounds",
+        "hook": "Inflict Wounds surprises with its touch range - 0 feet means you need to plan your approach carefully.",
+        "body": "Inflict Wounds deals 2d10 necrotic damage at 1st level, but the touch range requires you to be in melee distance. The common oversight is casting it against creatures with high Constitution saves, which reduces its impact. The better move is targeting low-Constitution enemies where the damage can actually shift the combat dynamics.",
+        "cta": "DMs: Target enemies with low Constitution saves for Inflict Wounds' 2d10 necrotic damage; avoid wasting it on high-Constitution creatures.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-01.mp4",
+        "video_sha256": "d0b71550d5837304bd5fa00b9b383d36192ced5998e60ff5e286881efdc7e0ee"
+      }
     }
   ]
 }

@@ -2242,6 +2242,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-09-30.mp4",
         "video_sha256": "12966d42adb9a2c6d7480012982d1642bc820f60c70db27fbd115ab124e0c0be"
       }
+    },
+    {
+      "published_utc": "2026-10-01T14:43:23Z",
+      "day": "2026-10-01",
+      "content_id": "bgp-2026-10-01-class-spotlight-class-9-7573206d3ae8",
+      "publish_hash": "c3a5be3526a01c8dc846830215d35bd8132e67a272a097ceb997f96154d8b36c",
+      "youtube_video_id": "AVvxJvqgxAg",
+      "youtube_url": "https://www.youtube.com/watch?v=AVvxJvqgxAg",
+      "video_sha256": "56b478243dcc9d33eb3a2658d55cc55cb6ec4a11f0554439f581aacb7a87d9e2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-01.mp4",
+      "fingerprint": {
+        "day": "2026-10-01",
+        "category": "class_spotlight",
+        "angle": "early_power_spike",
+        "content_id": "bgp-2026-10-01-class-spotlight-class-9-7573206d3ae8",
+        "canonical_hash": "7573206d3ae82a94c1a12ba502adb2ec5caa294e4fc7d8645057bef4ec58d9b1",
+        "script_id": "87627f3ac9449f0fbbba73d4fe7108ed8b01a5297ddc7c6d05af752ca1b7edce",
+        "fact_kind": "class",
+        "fact_pk": 9,
+        "fact_name": "Pit Fighter",
+        "hook": "Pit Fighter's early power spike hinges on a narrow survival window - Last Stand triggers on a natural 18-20.",
+        "body": "Flourish heals 1d6 hit points three times per day on a melee hit, but often gets squandered on trivial fights. Last Stand's ability to rise from dying at 1 HP on a natural 18-20 is frequently overlooked, missing crucial survival moments. Implacable offers advantage on Constitution checks to resist injury and poison, yet its benefit is often ignored in hazardous environments. Use these abilities strategically in high-stakes encounters where survival is critical.",
+        "cta": "GMs: Design encounters that force Pit Fighters to rely on Last Stand's 18-20 trigger for survival.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-01.mp4",
+        "video_sha256": "56b478243dcc9d33eb3a2658d55cc55cb6ec4a11f0554439f581aacb7a87d9e2"
+      }
     }
   ]
 }
