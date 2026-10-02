@@ -6610,6 +6610,72 @@
       "video_id": "18111735587139437",
       "day": "2026-10-01",
       "published_at": "2026-10-01T14:44:24+00:00"
+    },
+    {
+      "content_key": "e64a817da66a5027cf94e504fecf7bcd79eda43cac0ac71015ca177eed26e0e3",
+      "token_text": "adds challenge check cleric deity face failed point spell spellcasting unique",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Clerics face a unique challenge with spellcasting #dcc",
+      "video_id": "snNbw7AxQ4g",
+      "day": "2026-10-02",
+      "published_at": "2026-10-02T14:26:14+00:00"
+    },
+    {
+      "content_key": "da3dd6d2c4faf73da8d31eaa4c6b6db4be1ffe3e31284c0eb8194f16ff85ed3d",
+      "token_text": "adds challenge check cleric deity face failed point spell spellcasting unique",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Clerics face a unique challenge with spellcasting - every failed spell check adds 1 point of deity.",
+      "video_id": "17982986436442439",
+      "day": "2026-10-02",
+      "published_at": "2026-10-02T14:27:06+00:00"
+    },
+    {
+      "content_key": "23719ffa9e3575a6a1439592ce8ea0ca7d0c5ef33352d176fe7cc01ec77703be",
+      "token_text": "after apply damage dice modifier often player roll rolling surprise variability",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Damage Rolls often surprise players with their variability #dnd5e",
+      "video_id": "MY2YJtWE1Ds",
+      "day": "2026-10-02",
+      "published_at": "2026-10-02T14:29:48+00:00"
+    },
+    {
+      "content_key": "9f2b95357f665974adabd7eca886721e16b1b749b7054c13197b0b2370a68b47",
+      "token_text": "after apply damage dice modifier often player roll rolling surprise variability",
+      "system_id": "dnd5e",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Damage Rolls often surprise players with their variability - modifiers apply after rolling the dice.",
+      "video_id": "18014922620746771",
+      "day": "2026-10-02",
+      "published_at": "2026-10-02T14:30:36+00:00"
+    },
+    {
+      "content_key": "a9fdf50dea1e357ef059049eb69b607d83075d9956a5e1dd244fc66ebfea16cf",
+      "token_text": "1d4 attack damage expected harder hits surprise velociraptor",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Velociraptor's surprise attack hits harder than expected #shadowdark",
+      "video_id": "QieAWy_pATg",
+      "day": "2026-10-02",
+      "published_at": "2026-10-02T14:37:02+00:00"
+    },
+    {
+      "content_key": "73410ecd3bc05647ddac44e0aebc56a5ddf13936f1c3ec4a19de057f7b7cd45e",
+      "token_text": "1d4 attack damage expected harder hits surprise velociraptor",
+      "system_id": "shadowdark",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Velociraptor's surprise attack hits harder than expected - +1d4 damage with surprise.",
+      "video_id": "18194102506398409",
+      "day": "2026-10-02",
+      "published_at": "2026-10-02T14:38:26+00:00"
     }
   ]
 }

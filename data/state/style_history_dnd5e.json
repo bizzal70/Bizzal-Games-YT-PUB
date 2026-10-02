@@ -1052,5 +1052,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-02": {
+    "rules_ruling": {
+      "angle": "edge_case",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

@@ -1042,5 +1042,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-10-02": {
+    "monster_tactic": {
+      "angle": "common_mistake",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

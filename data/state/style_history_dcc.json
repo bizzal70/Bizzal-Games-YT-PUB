@@ -934,5 +934,17 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-10-02": {
+    "class_spotlight": {
+      "angle": "level_1_survival",
+      "voice": "survival_coach",
+      "tone": "gritty",
+      "persona": "class_mentor",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

@@ -2660,6 +2660,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-01.mp4",
         "video_sha256": "d0b71550d5837304bd5fa00b9b383d36192ced5998e60ff5e286881efdc7e0ee"
       }
+    },
+    {
+      "published_utc": "2026-10-02T14:29:48Z",
+      "day": "2026-10-02",
+      "content_id": "bgp-2026-10-02-rules-ruling-rule-srd-2024-damage-and-healing-damage-rolls-d611f362a54a",
+      "publish_hash": "a5470f5a308b96e3bdaaf69b13253a54a5d51a492efa5db60c875e64e6ff4070",
+      "youtube_video_id": "MY2YJtWE1Ds",
+      "youtube_url": "https://www.youtube.com/watch?v=MY2YJtWE1Ds",
+      "video_sha256": "ed6508783607bcfbfbbe759b10cb9b5bd8bac76ac4aa0b797355c50542847b77",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-02.mp4",
+      "fingerprint": {
+        "day": "2026-10-02",
+        "category": "rules_ruling",
+        "angle": "edge_case",
+        "content_id": "bgp-2026-10-02-rules-ruling-rule-srd-2024-damage-and-healing-damage-rolls-d611f362a54a",
+        "canonical_hash": "d611f362a54a90bae02c79fe153e778223eeebbfe80ae2540a878ca089ffd3c9",
+        "script_id": "c8669fe6693427e84710b43a40d92a8d8a68c919560d4346d55a8282f6789544",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_damage-and-healing_damage-rolls",
+        "fact_name": "Damage Rolls",
+        "hook": "Damage Rolls often surprise players with their variability - modifiers apply after rolling the dice.",
+        "body": "Damage Rolls require rolling the specified damage dice and then adding any relevant modifiers. Players frequently forget to apply modifiers after the roll, leading to incorrect damage totals. Correct application involves rolling first and then adding modifiers to determine the final damage dealt.",
+        "cta": "DMs: Remind players to roll damage dice first, then add modifiers, as outlined in section 16 of the rules.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-02.mp4",
+        "video_sha256": "ed6508783607bcfbfbbe759b10cb9b5bd8bac76ac4aa0b797355c50542847b77"
+      }
     }
   ]
 }

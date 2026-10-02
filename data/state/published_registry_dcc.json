@@ -2036,6 +2036,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-01.mp4",
         "video_sha256": "cdc9dcf2e932bb15fd9876de65a8c3c4c429b6d8f535874a9f0a980db348346c"
       }
+    },
+    {
+      "published_utc": "2026-10-02T14:26:14Z",
+      "day": "2026-10-02",
+      "content_id": "bgp-2026-10-02-class-spotlight-class-3-352c4c8a4a40",
+      "publish_hash": "b479dd2c587467e8f102ab998ef85489621cec3f99ea2276db6f7c7ee4b6429f",
+      "youtube_video_id": "snNbw7AxQ4g",
+      "youtube_url": "https://www.youtube.com/watch?v=snNbw7AxQ4g",
+      "video_sha256": "4ff75cbf1a3f4df05cf21375c76907695d7255b86f5f21f28cab79a731815b83",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-02.mp4",
+      "fingerprint": {
+        "day": "2026-10-02",
+        "category": "class_spotlight",
+        "angle": "level_1_survival",
+        "content_id": "bgp-2026-10-02-class-spotlight-class-3-352c4c8a4a40",
+        "canonical_hash": "352c4c8a4a40e6994cf2c011d8904b5ae7863bd920e17e7fae680e4868018eae",
+        "script_id": "fed1a2db56e3ad6c838a85b3a81526ea6a1170b0d3b6293313fb0510f7bf9831",
+        "fact_kind": "class",
+        "fact_pk": 3,
+        "fact_name": "Cleric",
+        "hook": "Clerics face a unique challenge with spellcasting - every failed spell check adds 1 point of deity.",
+        "body": "Clerics use a spell check of d20 plus Personality modifier and caster level to cast spells. Each failure increases deity disapproval, expanding the range of failure and risking spell loss or divine wrath. Many players overlook this and attempt risky spell checks, leading to a cascade of failures. Consistent success comes from managing disapproval and knowing when to attempt a spell.",
+        "cta": "Judges: Remind clerics that every failed spell check adds to deity disapproval; prioritize spells with higher success odds to avoid divine backlash.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-02.mp4",
+        "video_sha256": "4ff75cbf1a3f4df05cf21375c76907695d7255b86f5f21f28cab79a731815b83"
+      }
     }
   ]
 }

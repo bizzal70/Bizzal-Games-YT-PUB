@@ -2268,6 +2268,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-01.mp4",
         "video_sha256": "56b478243dcc9d33eb3a2658d55cc55cb6ec4a11f0554439f581aacb7a87d9e2"
       }
+    },
+    {
+      "published_utc": "2026-10-02T14:37:02Z",
+      "day": "2026-10-02",
+      "content_id": "bgp-2026-10-02-monster-tactic-creature-60-904827c7ddc4",
+      "publish_hash": "3e4eebcb23588985a62469800690c8a23a90a9d71e710d0a2ccc0d9c515bc7b1",
+      "youtube_video_id": "QieAWy_pATg",
+      "youtube_url": "https://www.youtube.com/watch?v=QieAWy_pATg",
+      "video_sha256": "fcdbae2e488e36ce3a9f2e82fb585d92adeb1e9aea42fcf9f6942c3cf7dec8f8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-02.mp4",
+      "fingerprint": {
+        "day": "2026-10-02",
+        "category": "monster_tactic",
+        "angle": "common_mistake",
+        "content_id": "bgp-2026-10-02-monster-tactic-creature-60-904827c7ddc4",
+        "canonical_hash": "904827c7ddc4eee46cffdb3a65d10640c2e71aca3c1792d9bb5d89b9475d7c3c",
+        "script_id": "f1f2e75f7cf4dc9578a3ac8df1769e15093c303f764e8901f200de8532c917b8",
+        "fact_kind": "creature",
+        "fact_pk": 60,
+        "fact_name": "Velociraptor",
+        "hook": "Velociraptor's surprise attack hits harder than expected - +1d4 damage with surprise.",
+        "body": "Velociraptor's movement speed of double near frequently surprises players who assume it can't close the gap quickly. Its +3 claw attack deals 1d6 damage, and with the 'Clever' talent, it adds an extra +1d4 damage when attacking with surprise. Ignoring its high Dexterity score of 3 underestimates its ability to exploit surprise effectively. Poor positioning against this creature leads to unnecessary resource expenditure to recover from the initial hit.",
+        "cta": "GMs: Let the Velociraptor's double near movement punish sloppy positioning with its +1d4 surprise damage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-02.mp4",
+        "video_sha256": "fcdbae2e488e36ce3a9f2e82fb585d92adeb1e9aea42fcf9f6942c3cf7dec8f8"
+      },
+      "tone_lint_violation": "vague filler phrase: surprises players"
     }
   ]
 }

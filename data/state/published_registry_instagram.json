@@ -3102,6 +3102,51 @@
       "hook": "Pit Fighter's early power spike hinges on a narrow survival window - Last Stand triggers on a natural 18-20.",
       "body": "Flourish heals 1d6 hit points three times per day on a melee hit, but often gets squandered on trivial fights. Last Stand's ability to rise from dying at 1 HP on a natural 18-20 is frequently overlooked, missing crucial survival moments. Implacable offers advantage on Constitution checks to resist injury and poison, yet its benefit is often ignored in hazardous environments. Use these abilities strategically in high-stakes encounters where survival is critical.",
       "cta": "GMs: Design encounters that force Pit Fighters to rely on Last Stand's 18-20 trigger for survival."
+    },
+    {
+      "published_utc": "2026-10-02T14:27:06Z",
+      "day": "2026-10-02",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-02-class-spotlight-class-3-352c4c8a4a40",
+      "instagram_post_id": "17982986436442439",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "4ff75cbf1a3f4df05cf21375c76907695d7255b86f5f21f28cab79a731815b83",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-02.mp4",
+      "fact_name": "Cleric",
+      "category": "class_spotlight",
+      "hook": "Clerics face a unique challenge with spellcasting - every failed spell check adds 1 point of deity.",
+      "body": "Clerics use a spell check of d20 plus Personality modifier and caster level to cast spells. Each failure increases deity disapproval, expanding the range of failure and risking spell loss or divine wrath. Many players overlook this and attempt risky spell checks, leading to a cascade of failures. Consistent success comes from managing disapproval and knowing when to attempt a spell.",
+      "cta": "Judges: Remind clerics that every failed spell check adds to deity disapproval; prioritize spells with higher success odds to avoid divine backlash."
+    },
+    {
+      "published_utc": "2026-10-02T14:30:36Z",
+      "day": "2026-10-02",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-02-rules-ruling-rule-srd-2024-damage-and-healing-damage-rolls-d611f362a54a",
+      "instagram_post_id": "18014922620746771",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "ed6508783607bcfbfbbe759b10cb9b5bd8bac76ac4aa0b797355c50542847b77",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-02.mp4",
+      "fact_name": "Damage Rolls",
+      "category": "rules_ruling",
+      "hook": "Damage Rolls often surprise players with their variability - modifiers apply after rolling the dice.",
+      "body": "Damage Rolls require rolling the specified damage dice and then adding any relevant modifiers. Players frequently forget to apply modifiers after the roll, leading to incorrect damage totals. Correct application involves rolling first and then adding modifiers to determine the final damage dealt.",
+      "cta": "DMs: Remind players to roll damage dice first, then add modifiers, as outlined in section 16 of the rules."
+    },
+    {
+      "published_utc": "2026-10-02T14:38:26Z",
+      "day": "2026-10-02",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-02-monster-tactic-creature-60-904827c7ddc4",
+      "instagram_post_id": "18194102506398409",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "fcdbae2e488e36ce3a9f2e82fb585d92adeb1e9aea42fcf9f6942c3cf7dec8f8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-02.mp4",
+      "fact_name": "Velociraptor",
+      "category": "monster_tactic",
+      "hook": "Velociraptor's surprise attack hits harder than expected - +1d4 damage with surprise.",
+      "body": "Velociraptor's movement speed of double near frequently surprises players who assume it can't close the gap quickly. Its +3 claw attack deals 1d6 damage, and with the 'Clever' talent, it adds an extra +1d4 damage when attacking with surprise. Ignoring its high Dexterity score of 3 underestimates its ability to exploit surprise effectively. Poor positioning against this creature leads to unnecessary resource expenditure to recover from the initial hit.",
+      "cta": "GMs: Let the Velociraptor's double near movement punish sloppy positioning with its +1d4 surprise damage."
     }
   ]
 }
