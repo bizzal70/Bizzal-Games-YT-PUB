@@ -2295,6 +2295,32 @@
         "video_sha256": "fcdbae2e488e36ce3a9f2e82fb585d92adeb1e9aea42fcf9f6942c3cf7dec8f8"
       },
       "tone_lint_violation": "vague filler phrase: surprises players"
+    },
+    {
+      "published_utc": "2026-10-03T15:11:39Z",
+      "day": "2026-10-03",
+      "content_id": "bgp-2026-10-03-rules-ruling-rule-6-6593db7257aa",
+      "publish_hash": "4f4669af34945febafc325083783938da7546cd94ffce89d1d1cb49bfa10151b",
+      "youtube_video_id": "tTw7-qXRCik",
+      "youtube_url": "https://www.youtube.com/watch?v=tTw7-qXRCik",
+      "video_sha256": "9a75c8e6a6df122e9541d4a2e3bda966103916f7244ed492d1eff06f330bba77",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-03.mp4",
+      "fingerprint": {
+        "day": "2026-10-03",
+        "category": "rules_ruling",
+        "angle": "fast_ruling",
+        "content_id": "bgp-2026-10-03-rules-ruling-rule-6-6593db7257aa",
+        "canonical_hash": "6593db7257aace1d30773bbce3bb7514e73d9616e41d98e00bd869399e373964",
+        "script_id": "3e9ccd9eb6c9e59a2cfb555578e95dabcddab7029276cd7101eb3e24bac4ed0d",
+        "fact_kind": "rule",
+        "fact_pk": 6,
+        "fact_name": "Backstab",
+        "hook": "Backstab hits harder than expected - an extra weapon die plus half thief level in additional dice.",
+        "body": "Backstab requires the target to be unaware, granting an extra weapon die of damage, with additional dice equal to half the thief's level, rounded down. The mistake is forgetting the awareness condition, leading to wasted actions. Correct play involves ensuring the target is distracted or surprised before the attack.",
+        "cta": "GMs: Ensure the target is unaware before allowing Backstab; otherwise, it's just a wasted action and a lesson learned.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-03.mp4",
+        "video_sha256": "9a75c8e6a6df122e9541d4a2e3bda966103916f7244ed492d1eff06f330bba77"
+      }
     }
   ]
 }

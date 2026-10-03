@@ -946,5 +946,15 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-10-03": {
+    "rules_myth": {
+      "angle": "quick_example",
+      "voice": "survival_coach",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

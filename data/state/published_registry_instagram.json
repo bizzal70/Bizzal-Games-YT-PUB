@@ -3147,6 +3147,51 @@
       "hook": "Velociraptor's surprise attack hits harder than expected - +1d4 damage with surprise.",
       "body": "Velociraptor's movement speed of double near frequently surprises players who assume it can't close the gap quickly. Its +3 claw attack deals 1d6 damage, and with the 'Clever' talent, it adds an extra +1d4 damage when attacking with surprise. Ignoring its high Dexterity score of 3 underestimates its ability to exploit surprise effectively. Poor positioning against this creature leads to unnecessary resource expenditure to recover from the initial hit.",
       "cta": "GMs: Let the Velociraptor's double near movement punish sloppy positioning with its +1d4 surprise damage."
+    },
+    {
+      "published_utc": "2026-10-03T15:08:25Z",
+      "day": "2026-10-03",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-03-item-spotlight-item-srd-2024-vicious-greatsword-d59a3318df1a",
+      "instagram_post_id": "17951002761267095",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "6a4249a57ae01d9a86085f425137d4a763869ab2f5c5611f98d9d9904748ec59",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-03.mp4",
+      "fact_name": "Vicious Greatsword",
+      "category": "item_spotlight",
+      "hook": "Vicious Greatsword deals more damage than expected - an extra 2d6 on a hit.",
+      "body": "The Vicious Greatsword's extra 2d6 damage applies to every hit, matching the weapon's normal damage type. Many players swing it indiscriminately, missing the chance to change the fight's momentum. Timing the attack to break stalemates or eliminate key threats maximizes its impact.",
+      "cta": "DMs: Use the Vicious Greatsword's 2d6 bonus damage to decisively end stalemates or eliminate priority targets."
+    },
+    {
+      "published_utc": "2026-10-03T15:12:36Z",
+      "day": "2026-10-03",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-03-rules-ruling-rule-6-6593db7257aa",
+      "instagram_post_id": "18117286534989867",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9a75c8e6a6df122e9541d4a2e3bda966103916f7244ed492d1eff06f330bba77",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-03.mp4",
+      "fact_name": "Backstab",
+      "category": "rules_ruling",
+      "hook": "Backstab hits harder than expected - an extra weapon die plus half thief level in additional dice.",
+      "body": "Backstab requires the target to be unaware, granting an extra weapon die of damage, with additional dice equal to half the thief's level, rounded down. The mistake is forgetting the awareness condition, leading to wasted actions. Correct play involves ensuring the target is distracted or surprised before the attack.",
+      "cta": "GMs: Ensure the target is unaware before allowing Backstab; otherwise, it's just a wasted action and a lesson learned."
+    },
+    {
+      "published_utc": "2026-10-03T15:17:43Z",
+      "day": "2026-10-03",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-03-rules-myth-rule-2-6a3649625d1c",
+      "instagram_post_id": "17994276558045270",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "77a55bfe729e10c5fe2db91cea1f4840a8d9b213d1b5b7fa027221f14c7b6bf1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-03.mp4",
+      "fact_name": "Luck",
+      "category": "rules_myth",
+      "hook": "Luck burns permanently for a +1 bonus - it rarely returns once spent.",
+      "body": "Luck can be burned permanently for a +1 bonus to any die roll, but the cost is a permanent loss to the Luck ability score. Thieves regain Luck over time, making them more resilient to burning it, while warriors can use it to enhance attacks. Halflings burn Luck more efficiently, multiplying their bonus. A birth augur ties your Luck modifier to a specific roll type, offering a consistent edge if managed wisely. Many players misinterpret Luck as a temporary resource, overlooking its permanent cost.",
+      "cta": "Judges: Remind them that burning Luck permanently for a +1 is a one-way street - Thieves get it back, the rest don't."
     }
   ]
 }

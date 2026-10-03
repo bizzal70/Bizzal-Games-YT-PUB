@@ -2062,6 +2062,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-02.mp4",
         "video_sha256": "4ff75cbf1a3f4df05cf21375c76907695d7255b86f5f21f28cab79a731815b83"
       }
+    },
+    {
+      "published_utc": "2026-10-03T15:16:44Z",
+      "day": "2026-10-03",
+      "content_id": "bgp-2026-10-03-rules-myth-rule-2-6a3649625d1c",
+      "publish_hash": "4ec04858a3401c84172168702e498f2cc55387bdda461dfb910bf4a2b6f621f6",
+      "youtube_video_id": "xCW58ey8B3g",
+      "youtube_url": "https://www.youtube.com/watch?v=xCW58ey8B3g",
+      "video_sha256": "77a55bfe729e10c5fe2db91cea1f4840a8d9b213d1b5b7fa027221f14c7b6bf1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-03.mp4",
+      "fingerprint": {
+        "day": "2026-10-03",
+        "category": "rules_myth",
+        "angle": "quick_example",
+        "content_id": "bgp-2026-10-03-rules-myth-rule-2-6a3649625d1c",
+        "canonical_hash": "6a3649625d1c9eb7eacfb00f42012c07518857c201babc47c848a7d029419105",
+        "script_id": "c7ba2e6e185d01c5e4b2c8123a9359a0cb8f106a42d7823a7eb241865586e064",
+        "fact_kind": "rule",
+        "fact_pk": 2,
+        "fact_name": "Luck",
+        "hook": "Luck burns permanently for a +1 bonus - it rarely returns once spent.",
+        "body": "Luck can be burned permanently for a +1 bonus to any die roll, but the cost is a permanent loss to the Luck ability score. Thieves regain Luck over time, making them more resilient to burning it, while warriors can use it to enhance attacks. Halflings burn Luck more efficiently, multiplying their bonus. A birth augur ties your Luck modifier to a specific roll type, offering a consistent edge if managed wisely. Many players misinterpret Luck as a temporary resource, overlooking its permanent cost.",
+        "cta": "Judges: Remind them that burning Luck permanently for a +1 is a one-way street - Thieves get it back, the rest don't.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-03.mp4",
+        "video_sha256": "77a55bfe729e10c5fe2db91cea1f4840a8d9b213d1b5b7fa027221f14c7b6bf1"
+      }
     }
   ]
 }

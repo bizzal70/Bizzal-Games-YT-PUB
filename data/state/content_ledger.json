@@ -6698,6 +6698,72 @@
       "video_id": "BmxCfeh3BEE",
       "day": "2026-10-02-dnd5e-clip1",
       "published_at": "2026-10-02T18:12:40+00:00"
+    },
+    {
+      "content_key": "c6dba716365d1f131644ef241bd6dfca78a4a5b12e3d8a55c7170fc2e0eb4fa8",
+      "token_text": "2d6 damage deal expected extra greatsword hit more viciou",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Vicious Greatsword deals more damage than expected #dnd5e",
+      "video_id": "AamFk4Q4TQU",
+      "day": "2026-10-03",
+      "published_at": "2026-10-03T15:06:40+00:00"
+    },
+    {
+      "content_key": "4189a3f91146ec18fe54612677bfcb2250963880df1d1a3c8fa18198f1d94600",
+      "token_text": "2d6 damage deal expected extra greatsword hit more viciou",
+      "system_id": "dnd5e",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Vicious Greatsword deals more damage than expected - an extra 2d6 on a hit.",
+      "video_id": "17951002761267095",
+      "day": "2026-10-03",
+      "published_at": "2026-10-03T15:08:25+00:00"
+    },
+    {
+      "content_key": "70cc9f1c931b1995dbab69b89669894b5f05646bb118feaf3011d17334653382",
+      "token_text": "additional backstab dice die expected extra half harder hits level plus thief weapon",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Backstab hits harder than expected #shadowdark",
+      "video_id": "tTw7-qXRCik",
+      "day": "2026-10-03",
+      "published_at": "2026-10-03T15:11:39+00:00"
+    },
+    {
+      "content_key": "6a22c265265776986ff2ae455cd0523cc8f3e3452062e9d9eadbde006d6c7731",
+      "token_text": "additional backstab dice die expected extra half harder hits level plus thief weapon",
+      "system_id": "shadowdark",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Backstab hits harder than expected - an extra weapon die plus half thief level in additional dice.",
+      "video_id": "18117286534989867",
+      "day": "2026-10-03",
+      "published_at": "2026-10-03T15:12:36+00:00"
+    },
+    {
+      "content_key": "e0b9ed896b4602ea0c436ddccb2578ff0b7c4c4806ec6041ebcea01f5bc20dff",
+      "token_text": "bonu burn luck once permanently rarely return spent",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Luck burns permanently for a +1 bonus #dcc",
+      "video_id": "xCW58ey8B3g",
+      "day": "2026-10-03",
+      "published_at": "2026-10-03T15:16:44+00:00"
+    },
+    {
+      "content_key": "337d6abe8d6a9c9ff1157e65d37aae0aae6a61e24cf415cb3355f69e944ff468",
+      "token_text": "bonu burn luck once permanently rarely return spent",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Luck burns permanently for a +1 bonus - it rarely returns once spent.",
+      "video_id": "17994276558045270",
+      "day": "2026-10-03",
+      "published_at": "2026-10-03T15:17:43+00:00"
     }
   ]
 }

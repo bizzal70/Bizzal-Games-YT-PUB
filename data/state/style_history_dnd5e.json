@@ -1062,5 +1062,15 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-03": {
+    "item_spotlight": {
+      "angle": "best_user",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

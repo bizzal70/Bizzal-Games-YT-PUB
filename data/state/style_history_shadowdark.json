@@ -1054,5 +1054,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-03": {
+    "rules_ruling": {
+      "angle": "fast_ruling",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

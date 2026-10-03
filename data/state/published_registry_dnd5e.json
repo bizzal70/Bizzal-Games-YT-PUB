@@ -2686,6 +2686,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-02.mp4",
         "video_sha256": "ed6508783607bcfbfbbe759b10cb9b5bd8bac76ac4aa0b797355c50542847b77"
       }
+    },
+    {
+      "published_utc": "2026-10-03T15:06:40Z",
+      "day": "2026-10-03",
+      "content_id": "bgp-2026-10-03-item-spotlight-item-srd-2024-vicious-greatsword-d59a3318df1a",
+      "publish_hash": "253714d6c5274ea758c78e9b5d6f01366a8fb1a4bbf80dad7bb306c69400631e",
+      "youtube_video_id": "AamFk4Q4TQU",
+      "youtube_url": "https://www.youtube.com/watch?v=AamFk4Q4TQU",
+      "video_sha256": "6a4249a57ae01d9a86085f425137d4a763869ab2f5c5611f98d9d9904748ec59",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-03.mp4",
+      "fingerprint": {
+        "day": "2026-10-03",
+        "category": "item_spotlight",
+        "angle": "best_user",
+        "content_id": "bgp-2026-10-03-item-spotlight-item-srd-2024-vicious-greatsword-d59a3318df1a",
+        "canonical_hash": "d59a3318df1a884ad20f7b14c7b32b16ccd189b6e366e3a8b7c872b5b6519f16",
+        "script_id": "4afb845fe5c76ec71a5dfecd2374bf3eb414bc4286df5253b80fbbe2247290bf",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_vicious-greatsword",
+        "fact_name": "Vicious Greatsword",
+        "hook": "Vicious Greatsword deals more damage than expected - an extra 2d6 on a hit.",
+        "body": "The Vicious Greatsword's extra 2d6 damage applies to every hit, matching the weapon's normal damage type. Many players swing it indiscriminately, missing the chance to change the fight's momentum. Timing the attack to break stalemates or eliminate key threats maximizes its impact.",
+        "cta": "DMs: Use the Vicious Greatsword's 2d6 bonus damage to decisively end stalemates or eliminate priority targets.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-03.mp4",
+        "video_sha256": "6a4249a57ae01d9a86085f425137d4a763869ab2f5c5611f98d9d9904748ec59"
+      },
+      "tone_lint_violation": "vague filler phrase: maximizes its impact"
     }
   ]
 }
