@@ -2321,6 +2321,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-03.mp4",
         "video_sha256": "9a75c8e6a6df122e9541d4a2e3bda966103916f7244ed492d1eff06f330bba77"
       }
+    },
+    {
+      "published_utc": "2026-10-04T15:45:25Z",
+      "day": "2026-10-04",
+      "content_id": "bgp-2026-10-04-item-spotlight-item-53-beae53abc49e",
+      "publish_hash": "fce8762ac045ebfb39a587ae3698d4b893e7656c34f554ef7fffa6dbfcba30b1",
+      "youtube_video_id": "DZFFJYMjrv8",
+      "youtube_url": "https://www.youtube.com/watch?v=DZFFJYMjrv8",
+      "video_sha256": "269fb3a7652bb6d6a0dc0d641983d6bfb88c82a13ef57877f1d9a7b54760f4cc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-04.mp4",
+      "fingerprint": {
+        "day": "2026-10-04",
+        "category": "item_spotlight",
+        "angle": "best_user",
+        "content_id": "bgp-2026-10-04-item-spotlight-item-53-beae53abc49e",
+        "canonical_hash": "beae53abc49e62c343f7417c3201602496b9a2fcbdddacf29bea8fd47d7b7df3",
+        "script_id": "e53256abd0ee9d2d449f184401dbfcc79ea0bebb737bb8c8f7455b7400a29a16",
+        "fact_kind": "item",
+        "fact_pk": 53,
+        "fact_name": "Pipes Of The Sewers",
+        "hook": "Pipes Of The Sewers are a double-edged tool - stop playing and the rats attack you.",
+        "body": "Pipes Of The Sewers can summon 2d6 giant rats once per day, but they obey for only d6 rounds. Activating the pipes too early often wastes the limited control period. Timing the activation to when the rats can block or distract effectively changes the tactical landscape, rather than adding unnecessary chaos to combat.",
+        "cta": "GMs: Time the Pipes of the Sewers' activation so the rats block escape routes, then watch the players scramble.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-04.mp4",
+        "video_sha256": "269fb3a7652bb6d6a0dc0d641983d6bfb88c82a13ef57877f1d9a7b54760f4cc"
+      }
     }
   ]
 }

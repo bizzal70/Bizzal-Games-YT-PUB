@@ -6764,6 +6764,72 @@
       "video_id": "17994276558045270",
       "day": "2026-10-03",
       "published_at": "2026-10-03T15:17:43+00:00"
+    },
+    {
+      "content_key": "4c5604a3c7fe24927b4f0aa073062e3f79608fa4a845b99349e534c1e117ebb7",
+      "token_text": "11 12 ac bandit choice fragile hp mean miss moral often player potentially present re they",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Bandits present a moral choice that players often miss #dnd5e",
+      "video_id": "Vw8nj-9X-e0",
+      "day": "2026-10-04",
+      "published_at": "2026-10-04T15:40:18+00:00"
+    },
+    {
+      "content_key": "ffaf78b50124cf64f025fd13643c8c563f2408d186eade0291b7287e866b3735",
+      "token_text": "11 12 ac bandit choice fragile hp mean miss moral often player potentially present re they",
+      "system_id": "dnd5e",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Bandits present a moral choice that players often miss - AC 12 and HP 11 mean they're fragile but potentially.",
+      "video_id": "17942576754361652",
+      "day": "2026-10-04",
+      "published_at": "2026-10-04T15:42:21+00:00"
+    },
+    {
+      "content_key": "c3e3b9369990265e916c390a643bcc5645c7edcf0add5bb3249d4872a1752115",
+      "token_text": "attack double edged pipe playing rats sewer stop tool",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Pipes Of The Sewers are a double-edged tool #shadowdark",
+      "video_id": "DZFFJYMjrv8",
+      "day": "2026-10-04",
+      "published_at": "2026-10-04T15:45:25+00:00"
+    },
+    {
+      "content_key": "83329532aa653895cfbe64c57ce5520dca77e528bfe0f781bb96c7388d6b2a60",
+      "token_text": "attack double edged pipe playing rats sewer stop tool",
+      "system_id": "shadowdark",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Pipes Of The Sewers are a double-edged tool - stop playing and the rats attack you.",
+      "video_id": "18080901023393340",
+      "day": "2026-10-04",
+      "published_at": "2026-10-04T15:46:12+00:00"
+    },
+    {
+      "content_key": "801ff6ea502ca5dd5e280b1e896d659d224c859aed0d3ca2b0a08b3f14e75aea",
+      "token_text": "3d6 complicate damage deliver elemental hit plagued plus pox recovery tar",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Plagued Tar Elemental's tar pox complicates damage recovery #dcc",
+      "video_id": "eF5_fyM15cQ",
+      "day": "2026-10-04",
+      "published_at": "2026-10-04T15:51:19+00:00"
+    },
+    {
+      "content_key": "f5a814a8a1d4eb2fe8babfca3007738c29cc6bd579dc98564802edd83c9e38db",
+      "token_text": "3d6 complicate damage deliver elemental hit plagued plus pox recovery tar",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Plagued Tar Elemental's tar pox complicates damage recovery - each hit delivers 3d6 plus tar pox.",
+      "video_id": "18054841376649659",
+      "day": "2026-10-04",
+      "published_at": "2026-10-04T15:52:20+00:00"
     }
   ]
 }

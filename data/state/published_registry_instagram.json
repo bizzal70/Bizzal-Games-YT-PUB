@@ -3192,6 +3192,51 @@
       "hook": "Luck burns permanently for a +1 bonus - it rarely returns once spent.",
       "body": "Luck can be burned permanently for a +1 bonus to any die roll, but the cost is a permanent loss to the Luck ability score. Thieves regain Luck over time, making them more resilient to burning it, while warriors can use it to enhance attacks. Halflings burn Luck more efficiently, multiplying their bonus. A birth augur ties your Luck modifier to a specific roll type, offering a consistent edge if managed wisely. Many players misinterpret Luck as a temporary resource, overlooking its permanent cost.",
       "cta": "Judges: Remind them that burning Luck permanently for a +1 is a one-way street - Thieves get it back, the rest don't."
+    },
+    {
+      "published_utc": "2026-10-04T15:42:21Z",
+      "day": "2026-10-04",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-04-encounter-seed-creature-srd-2024-bandit-2cfe74ae2a90",
+      "instagram_post_id": "17942576754361652",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "33a76de6c36de7c3b5e5be8e5b22ffecddf311086145959ffe2a2a2a38892fdc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-04.mp4",
+      "fact_name": "Bandit",
+      "category": "encounter_seed",
+      "hook": "Bandits present a moral choice that players often miss - AC 12 and HP 11 mean they're fragile but potentially.",
+      "body": "Bandits have a challenge rating of 0. 125, which often leads players to underestimate them. Their Light Crossbow and Scimitar can apply consistent pressure, forcing players to decide between protecting allies or achieving objectives quickly. Players frequently misjudge the significance of this decision, assuming they can handle both without consequence. The effective play is to prioritize one path by round two, minimizing the risk of unforeseen costs.",
+      "cta": "DMs: By round two, make them choose between the bandits' 11 HP threat to NPCs or their primary objective."
+    },
+    {
+      "published_utc": "2026-10-04T15:46:12Z",
+      "day": "2026-10-04",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-04-item-spotlight-item-53-beae53abc49e",
+      "instagram_post_id": "18080901023393340",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "269fb3a7652bb6d6a0dc0d641983d6bfb88c82a13ef57877f1d9a7b54760f4cc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-04.mp4",
+      "fact_name": "Pipes Of The Sewers",
+      "category": "item_spotlight",
+      "hook": "Pipes Of The Sewers are a double-edged tool - stop playing and the rats attack you.",
+      "body": "Pipes Of The Sewers can summon 2d6 giant rats once per day, but they obey for only d6 rounds. Activating the pipes too early often wastes the limited control period. Timing the activation to when the rats can block or distract effectively changes the tactical landscape, rather than adding unnecessary chaos to combat.",
+      "cta": "GMs: Time the Pipes of the Sewers' activation so the rats block escape routes, then watch the players scramble."
+    },
+    {
+      "published_utc": "2026-10-04T15:52:20Z",
+      "day": "2026-10-04",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-04-monster-tactic-creature-230-4e2aa728ece2",
+      "instagram_post_id": "18054841376649659",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "a5dd1b938f1a9df460e5d5755125d89d15afa7bd8bb8806d051868fb82067806",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-04.mp4",
+      "fact_name": "Plagued Tar Elemental",
+      "category": "monster_tactic",
+      "hook": "Plagued Tar Elemental's tar pox complicates damage recovery - each hit delivers 3d6 plus tar pox.",
+      "body": "Plagued Tar Elemental's attacks, both melee and ranged, inflict tar pox in addition to 3d6 damage, creating ongoing pressure that players often underestimate. Its armor class of 19 makes it difficult to land hits without dedicated effort, while its immunity to fire and vulnerability to cold and water (double damage) dictate the damage types that matter. Players frequently focus on dealing raw damage and neglect the elemental's pressure cycle, which can quickly overwhelm if not addressed. Effective play involves exploiting its vulnerabilities early to mitigate the tar pox's cumulative threat.",
+      "cta": "Judges: Exploit the Plagued Tar Elemental's vulnerability to cold and water for double damage before tar pox overwhelms the party."
     }
   ]
 }

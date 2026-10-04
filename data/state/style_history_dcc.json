@@ -956,5 +956,15 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-10-04": {
+    "monster_tactic": {
+      "angle": "how_it_wins",
+      "voice": "grim_referee",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }

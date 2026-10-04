@@ -2088,6 +2088,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-03.mp4",
         "video_sha256": "77a55bfe729e10c5fe2db91cea1f4840a8d9b213d1b5b7fa027221f14c7b6bf1"
       }
+    },
+    {
+      "published_utc": "2026-10-04T15:51:19Z",
+      "day": "2026-10-04",
+      "content_id": "bgp-2026-10-04-monster-tactic-creature-230-4e2aa728ece2",
+      "publish_hash": "ed6f36b0a0e3be133c44d377e85da16dec0c3a0692f50b13f26e806f642f5bf2",
+      "youtube_video_id": "eF5_fyM15cQ",
+      "youtube_url": "https://www.youtube.com/watch?v=eF5_fyM15cQ",
+      "video_sha256": "a5dd1b938f1a9df460e5d5755125d89d15afa7bd8bb8806d051868fb82067806",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-04.mp4",
+      "fingerprint": {
+        "day": "2026-10-04",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-10-04-monster-tactic-creature-230-4e2aa728ece2",
+        "canonical_hash": "4e2aa728ece26be18fb1912d713047653f1f3e3e6b096bb774bea70a42dd1a97",
+        "script_id": "c504b4f345236f676d12a856e6c7caa397019e3343e6c34d0240bf283d81cfb0",
+        "fact_kind": "creature",
+        "fact_pk": 230,
+        "fact_name": "Plagued Tar Elemental",
+        "hook": "Plagued Tar Elemental's tar pox complicates damage recovery - each hit delivers 3d6 plus tar pox.",
+        "body": "Plagued Tar Elemental's attacks, both melee and ranged, inflict tar pox in addition to 3d6 damage, creating ongoing pressure that players often underestimate. Its armor class of 19 makes it difficult to land hits without dedicated effort, while its immunity to fire and vulnerability to cold and water (double damage) dictate the damage types that matter. Players frequently focus on dealing raw damage and neglect the elemental's pressure cycle, which can quickly overwhelm if not addressed. Effective play involves exploiting its vulnerabilities early to mitigate the tar pox's cumulative threat.",
+        "cta": "Judges: Exploit the Plagued Tar Elemental's vulnerability to cold and water for double damage before tar pox overwhelms the party.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-04.mp4",
+        "video_sha256": "a5dd1b938f1a9df460e5d5755125d89d15afa7bd8bb8806d051868fb82067806"
+      }
     }
   ]
 }

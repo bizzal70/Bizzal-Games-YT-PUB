@@ -2713,6 +2713,32 @@
         "video_sha256": "6a4249a57ae01d9a86085f425137d4a763869ab2f5c5611f98d9d9904748ec59"
       },
       "tone_lint_violation": "vague filler phrase: maximizes its impact"
+    },
+    {
+      "published_utc": "2026-10-04T15:40:18Z",
+      "day": "2026-10-04",
+      "content_id": "bgp-2026-10-04-encounter-seed-creature-srd-2024-bandit-2cfe74ae2a90",
+      "publish_hash": "0d20df77eeba7051c18344ad204cbc0ef17c467ff7b660ce1e3aede83d4385bb",
+      "youtube_video_id": "Vw8nj-9X-e0",
+      "youtube_url": "https://www.youtube.com/watch?v=Vw8nj-9X-e0",
+      "video_sha256": "33a76de6c36de7c3b5e5be8e5b22ffecddf311086145959ffe2a2a2a38892fdc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-04.mp4",
+      "fingerprint": {
+        "day": "2026-10-04",
+        "category": "encounter_seed",
+        "angle": "moral_choice",
+        "content_id": "bgp-2026-10-04-encounter-seed-creature-srd-2024-bandit-2cfe74ae2a90",
+        "canonical_hash": "2cfe74ae2a90edd2f5acf73077c33701565ad125d6c28cb719a323a87ad72e9e",
+        "script_id": "c967deba6df8643597223f9389b0d2d44ddc9fa265ab2ccf96de6722791f76f0",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_bandit",
+        "fact_name": "Bandit",
+        "hook": "Bandits present a moral choice that players often miss - AC 12 and HP 11 mean they're fragile but potentially.",
+        "body": "Bandits have a challenge rating of 0. 125, which often leads players to underestimate them. Their Light Crossbow and Scimitar can apply consistent pressure, forcing players to decide between protecting allies or achieving objectives quickly. Players frequently misjudge the significance of this decision, assuming they can handle both without consequence. The effective play is to prioritize one path by round two, minimizing the risk of unforeseen costs.",
+        "cta": "DMs: By round two, make them choose between the bandits' 11 HP threat to NPCs or their primary objective.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-04.mp4",
+        "video_sha256": "33a76de6c36de7c3b5e5be8e5b22ffecddf311086145959ffe2a2a2a38892fdc"
+      }
     }
   ]
 }
