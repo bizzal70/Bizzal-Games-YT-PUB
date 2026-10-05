@@ -1076,5 +1076,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-05": {
+    "encounter_seed": {
+      "angle": "time_pressure",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

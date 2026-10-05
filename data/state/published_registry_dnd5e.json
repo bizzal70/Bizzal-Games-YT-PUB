@@ -2739,6 +2739,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-04.mp4",
         "video_sha256": "33a76de6c36de7c3b5e5be8e5b22ffecddf311086145959ffe2a2a2a38892fdc"
       }
+    },
+    {
+      "published_utc": "2026-10-05T14:35:48Z",
+      "day": "2026-10-05",
+      "content_id": "bgp-2026-10-05-rules-myth-rule-srd-2024-d20-tests-advantage-disadvantage-c1973e299d3f",
+      "publish_hash": "d49b81ad4da584060da7fde8f9e030d1242b386fa40f02486fc1b6da28c04002",
+      "youtube_video_id": "uoVerZvtYyw",
+      "youtube_url": "https://www.youtube.com/watch?v=uoVerZvtYyw",
+      "video_sha256": "bafe7dbc21c27fb510f213a5827126cb35e09513fc35abde484024d377deb89f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-05.mp4",
+      "fingerprint": {
+        "day": "2026-10-05",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-10-05-rules-myth-rule-srd-2024-d20-tests-advantage-disadvantage-c1973e299d3f",
+        "canonical_hash": "c1973e299d3f96cb87d1c3e2f3b4a876acfe7251aa74b0132446797faa3fa89d",
+        "script_id": "2fde63b64f47169f60ead8b61c6fcc12ca3c45b07620e68d8c3537bd77328d65",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_d20-tests_advantage-disadvantage",
+        "fact_name": "Advantage/Disadvantage",
+        "hook": "Advantage/Disadvantage modifies a d20 roll - one roll with two dice, not two separate rolls.",
+        "body": "Advantage/Disadvantage requires rolling two d20s and taking the higher or lower result, respectively. A common mistake is rolling twice and choosing the better or worse roll, which skews outcomes. Proper application means one roll with two dice, ensuring consistent probability adjustments. This mechanic shines when used to mitigate risk in high-stakes situations, not just for minor bonuses.",
+        "cta": "DMs: Roll two d20s for Advantage/Disadvantage, not two separate rolls; it keeps the probability consistent.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-05.mp4",
+        "video_sha256": "bafe7dbc21c27fb510f213a5827126cb35e09513fc35abde484024d377deb89f"
+      }
     }
   ]
 }

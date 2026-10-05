@@ -2114,6 +2114,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-04.mp4",
         "video_sha256": "a5dd1b938f1a9df460e5d5755125d89d15afa7bd8bb8806d051868fb82067806"
       }
+    },
+    {
+      "published_utc": "2026-10-05T14:30:57Z",
+      "day": "2026-10-05",
+      "content_id": "bgp-2026-10-05-spell-use-case-spell-80-80604e4f8c97",
+      "publish_hash": "caffa7b6e14223444e8a21b0e73401a705fd62c8e1e2104f17a7b8d525c154d8",
+      "youtube_video_id": "CrZ8x5ZVDvY",
+      "youtube_url": "https://www.youtube.com/watch?v=CrZ8x5ZVDvY",
+      "video_sha256": "b611f994473fd10e6512d9455591c0c748d6fa2d81c1dc2390d80d06117b9d01",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-05.mp4",
+      "fingerprint": {
+        "day": "2026-10-05",
+        "category": "spell_use_case",
+        "angle": "corruption_risk",
+        "content_id": "bgp-2026-10-05-spell-use-case-spell-80-80604e4f8c97",
+        "canonical_hash": "80604e4f8c97f513df5cafafad04f0d6a2795ebe44e235960b22f10f95645b3e",
+        "script_id": "a5f59f64104cb9239c8d7333016a38a9e6e1ec511a6d694669008196a2116c49",
+        "fact_kind": "spell",
+        "fact_pk": 80,
+        "fact_name": "Shatter",
+        "hook": "Shatter's range flexibility is frequently underestimated - touch or further.",
+        "body": "Shatter can break inanimate objects with a spell check, but its true utility lies in altering encounter conditions, not just dealing damage. The range varies from touch to further based on the result, which means planning your approach is crucial to avoid unnecessary harm. The spell's potential to weaken tougher materials with ongoing fractures is often overlooked, making it useful for strategic disruption rather than brute force. Timing and target selection should precede the decision to cast, as the spell's effectiveness hinges on these factors.",
+        "cta": "Judges: Use Shatter's range flexibility to fracture key structures from a distance, undermining enemy defenses without risking corruption up close.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-05.mp4",
+        "video_sha256": "b611f994473fd10e6512d9455591c0c748d6fa2d81c1dc2390d80d06117b9d01"
+      },
+      "tone_lint_violation": "vague filler phrase: often overlooked"
     }
   ]
 }

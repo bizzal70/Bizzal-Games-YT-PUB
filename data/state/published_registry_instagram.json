@@ -3237,6 +3237,51 @@
       "hook": "Plagued Tar Elemental's tar pox complicates damage recovery - each hit delivers 3d6 plus tar pox.",
       "body": "Plagued Tar Elemental's attacks, both melee and ranged, inflict tar pox in addition to 3d6 damage, creating ongoing pressure that players often underestimate. Its armor class of 19 makes it difficult to land hits without dedicated effort, while its immunity to fire and vulnerability to cold and water (double damage) dictate the damage types that matter. Players frequently focus on dealing raw damage and neglect the elemental's pressure cycle, which can quickly overwhelm if not addressed. Effective play involves exploiting its vulnerabilities early to mitigate the tar pox's cumulative threat.",
       "cta": "Judges: Exploit the Plagued Tar Elemental's vulnerability to cold and water for double damage before tar pox overwhelms the party."
+    },
+    {
+      "published_utc": "2026-10-05T14:32:01Z",
+      "day": "2026-10-05",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-05-spell-use-case-spell-80-80604e4f8c97",
+      "instagram_post_id": "18098415029434302",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "b611f994473fd10e6512d9455591c0c748d6fa2d81c1dc2390d80d06117b9d01",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-05.mp4",
+      "fact_name": "Shatter",
+      "category": "spell_use_case",
+      "hook": "Shatter's range flexibility is frequently underestimated - touch or further.",
+      "body": "Shatter can break inanimate objects with a spell check, but its true utility lies in altering encounter conditions, not just dealing damage. The range varies from touch to further based on the result, which means planning your approach is crucial to avoid unnecessary harm. The spell's potential to weaken tougher materials with ongoing fractures is often overlooked, making it useful for strategic disruption rather than brute force. Timing and target selection should precede the decision to cast, as the spell's effectiveness hinges on these factors.",
+      "cta": "Judges: Use Shatter's range flexibility to fracture key structures from a distance, undermining enemy defenses without risking corruption up close."
+    },
+    {
+      "published_utc": "2026-10-05T14:36:32Z",
+      "day": "2026-10-05",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-05-rules-myth-rule-srd-2024-d20-tests-advantage-disadvantage-c1973e299d3f",
+      "instagram_post_id": "18109531922170306",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "bafe7dbc21c27fb510f213a5827126cb35e09513fc35abde484024d377deb89f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-05.mp4",
+      "fact_name": "Advantage/Disadvantage",
+      "category": "rules_myth",
+      "hook": "Advantage/Disadvantage modifies a d20 roll - one roll with two dice, not two separate rolls.",
+      "body": "Advantage/Disadvantage requires rolling two d20s and taking the higher or lower result, respectively. A common mistake is rolling twice and choosing the better or worse roll, which skews outcomes. Proper application means one roll with two dice, ensuring consistent probability adjustments. This mechanic shines when used to mitigate risk in high-stakes situations, not just for minor bonuses.",
+      "cta": "DMs: Roll two d20s for Advantage/Disadvantage, not two separate rolls; it keeps the probability consistent."
+    },
+    {
+      "published_utc": "2026-10-05T14:41:24Z",
+      "day": "2026-10-05",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-05-encounter-seed-creature-62-62c01a0848fe",
+      "instagram_post_id": "18081440195517858",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "17ebc7ad6b42ff776e37e710beec79bfa7907552da611986ac9a621e5a0f1d09",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-05.mp4",
+      "fact_name": "Doppelganger",
+      "category": "encounter_seed",
+      "hook": "Frame a Doppelganger encounter with a timer so the party must trade certainty for speed.",
+      "body": "Doppelganger's Change Shape ability swaps attacks for transformation, making it a tactical chameleon. Its Telepathy reads surface thoughts within near range, creating opportunities for manipulation. Misjudging its ability to deceive leads to costly mistakes. Reposition constantly to limit its telepathic range and force it to reveal its true form under pressure.",
+      "cta": "GMs: Limit the party to 10 real-time minutes per turn to exploit the Doppelganger's need for hasty decisions."
     }
   ]
 }

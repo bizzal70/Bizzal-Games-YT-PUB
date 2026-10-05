@@ -2347,6 +2347,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-04.mp4",
         "video_sha256": "269fb3a7652bb6d6a0dc0d641983d6bfb88c82a13ef57877f1d9a7b54760f4cc"
       }
+    },
+    {
+      "published_utc": "2026-10-05T14:40:04Z",
+      "day": "2026-10-05",
+      "content_id": "bgp-2026-10-05-encounter-seed-creature-62-62c01a0848fe",
+      "publish_hash": "dabb1545ed9929b86127dd5e975d832f3bef2bfc773abf2a9c8e286697d12ecc",
+      "youtube_video_id": "nLNYTBOJ-EI",
+      "youtube_url": "https://www.youtube.com/watch?v=nLNYTBOJ-EI",
+      "video_sha256": "17ebc7ad6b42ff776e37e710beec79bfa7907552da611986ac9a621e5a0f1d09",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-05.mp4",
+      "fingerprint": {
+        "day": "2026-10-05",
+        "category": "encounter_seed",
+        "angle": "time_pressure",
+        "content_id": "bgp-2026-10-05-encounter-seed-creature-62-62c01a0848fe",
+        "canonical_hash": "62c01a0848fe7896d9149f967df3179a01f0ad7f1a3b3dac713e70939688a4ff",
+        "script_id": "d5f52c15855663c5b20bc97e7137c3e9e3ed544d6275310d946e07a14ea02528",
+        "fact_kind": "creature",
+        "fact_pk": 62,
+        "fact_name": "Doppelganger",
+        "hook": "Frame a Doppelganger encounter with a timer so the party must trade certainty for speed.",
+        "body": "Doppelganger's Change Shape ability swaps attacks for transformation, making it a tactical chameleon. Its Telepathy reads surface thoughts within near range, creating opportunities for manipulation. Misjudging its ability to deceive leads to costly mistakes. Reposition constantly to limit its telepathic range and force it to reveal its true form under pressure.",
+        "cta": "GMs: Limit the party to 10 real-time minutes per turn to exploit the Doppelganger's need for hasty decisions.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-05.mp4",
+        "video_sha256": "17ebc7ad6b42ff776e37e710beec79bfa7907552da611986ac9a621e5a0f1d09"
+      }
     }
   ]
 }

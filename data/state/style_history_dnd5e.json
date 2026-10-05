@@ -1082,5 +1082,17 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-10-05": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "sage"
+    }
   }
 }
