@@ -1,6 +1,94 @@
 [
   {
     "system": "dnd5e",
+    "title": "Shadowfell Fighter: Unleashing the Gloom",
+    "angle": "Explore the unique abilities and thematic elements of the new Shadowfell-themed Fighter subclass.",
+    "rationale": "D&D Beyond's addition of the Shadowfell-themed Fighter subclass is generating buzz.",
+    "fixture_hint": "class",
+    "search_keyword": "D&D Beyond Drops adds first subclass, a Shadowfell-themed Fighter",
+    "created_date": "2026-10-05",
+    "status": "pending",
+    "brief_id": "c1d8edb9b31c"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Project Lamordia: A New Ravenloft Era",
+    "angle": "Delve into the modern reinterpretation mechanics of Ravenloft's Project Lamordia.",
+    "rationale": "Project Lamordia is being teased as a modern take on Ravenloft, drawing attention.",
+    "fixture_hint": "rule",
+    "search_keyword": "D&D Beyond teases Project Lamordia, a modern reinterpretation of Ravenloft",
+    "created_date": "2026-10-05",
+    "status": "pending",
+    "brief_id": "85673ee4e728"
+  },
+  {
+    "system": "shadowdark",
+    "title": "AI Ban Impact: Shadowdark's Game Mastering Evolution",
+    "angle": "Investigate how the UKGE's AI ban could change Shadowdark's game mastering techniques.",
+    "rationale": "The recent UKGE ban on AI introduces new challenges and opportunities for Shadowdark.",
+    "fixture_hint": "rule",
+    "search_keyword": "UK Games Expo finally bans AI from the convention",
+    "created_date": "2026-10-05",
+    "status": "pending",
+    "brief_id": "a2d07b6ab5fd"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Dungeon Walkthroughs: Shadowdark Maps Revolution",
+    "angle": "Examine the potential influence of detailed dungeon walkthrough maps on Shadowdark gameplay.",
+    "rationale": "The announcement of a walkthrough map book of classic D&D dungeons has implications for Shadowdark.",
+    "fixture_hint": "rule",
+    "search_keyword": "Walkthrough map book of classic D&D dungeons coming next year",
+    "created_date": "2026-10-05",
+    "status": "pending",
+    "brief_id": "b52dc75fd836"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Sorrow Knight Tactics: Shadowdark's New Challenge",
+    "angle": "Break down the mechanics and strategies for incorporating the Sorrow Knight into Shadowdark campaigns.",
+    "rationale": "The Sorrow Knight is trending and presents a fresh challenge for Shadowdark players.",
+    "fixture_hint": "creature",
+    "search_keyword": "Podcast #417 livestream: Project Lamordia, Sorrow Knight, Warcraft monsters, dungeon walkthrough maps, and more",
+    "created_date": "2026-10-05",
+    "status": "pending",
+    "brief_id": "5ca9f08a0a1d"
+  },
+  {
+    "system": "dcc",
+    "title": "Tarrasque Unleashed: DCC's Colossal Threat",
+    "angle": "Analyze how the introduction of a massive Tarrasque statue could inspire new DCC scenarios.",
+    "rationale": "The release of a 9-inch Tarrasque statue is sparking discussions about its use in DCC.",
+    "fixture_hint": "creature",
+    "search_keyword": "9-inch Tarrasque statue coming from Iron Studios",
+    "created_date": "2026-10-05",
+    "status": "pending",
+    "brief_id": "bc33d370faa1"
+  },
+  {
+    "system": "dcc",
+    "title": "Viking Themes in DCC: Age of Vikings Influence",
+    "angle": "Explore how the themes from the Age of Vikings RPG could be adapted for DCC gameplay.",
+    "rationale": "The Age of Vikings is making headlines, providing fresh inspiration for DCC campaigns.",
+    "fixture_hint": "rule",
+    "search_keyword": "RPG Print News – Hot Spring Island, Fifth Season RPG, Age of Vikings, and More",
+    "created_date": "2026-10-05",
+    "status": "pending",
+    "brief_id": "cfe0ee3b0a4f"
+  },
+  {
+    "system": "dcc",
+    "title": "Project Lamordia's Echo in DCC",
+    "angle": "Investigate how DCC can integrate the modern reinterpretation concepts from Project Lamordia.",
+    "rationale": "Project Lamordia's reinterpretation of classic horror themes is a hot topic right now.",
+    "fixture_hint": "rule",
+    "search_keyword": "D&D Beyond teases Project Lamordia, a modern reinterpretation of Ravenloft",
+    "created_date": "2026-10-05",
+    "status": "pending",
+    "brief_id": "433bcfe33bac"
+  },
+  {
+    "system": "dnd5e",
     "title": "World of Warcraft Subclasses: Redefining Abilities",
     "angle": "Examine how WoW subclasses are introducing new abilities by swapping out classic D&D class features.",
     "rationale": "D&D's World of Warcraft subclasses are gaining attention with their ability swaps.",
