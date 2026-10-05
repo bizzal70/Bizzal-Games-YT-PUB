@@ -6896,6 +6896,50 @@
       "video_id": "18081440195517858",
       "day": "2026-10-05",
       "published_at": "2026-10-05T14:41:24+00:00"
+    },
+    {
+      "content_key": "dcc370ca5d3d780fe007cb664718803d103581e27edd8782e6440e1e59dfa8c6",
+      "token_text": "damage necrotic phantom proficiency versatile",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Phantom: Versatile Proficiency and Necrotic Damage #dnd5e",
+      "video_id": "SLzSxq2SrXI",
+      "day": "2026-10-05",
+      "published_at": "2026-10-05T17:51:23+00:00"
+    },
+    {
+      "content_key": "ac6aadb5c4d29d8df303f44f932f387f11266ff5b358295a2462d950188975c4",
+      "token_text": "damage deal extra grave necrotic wail",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Wails from the Grave deals extra necrotic damage #dnd5e",
+      "video_id": "zrQGEo613bU",
+      "day": "2026-10-05-dnd5e-clip1",
+      "published_at": "2026-10-05T17:52:52+00:00"
+    },
+    {
+      "content_key": "568a167cff6ab8325aec2be07624b812fdacac047427f9a4e5ce2e737cbcbd35",
+      "token_text": "dead grant skill temporary whisper",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Whispers of the Dead grants temporary skills #dnd5e",
+      "video_id": "J9F48-w3c-4",
+      "day": "2026-10-05-dnd5e-clip2",
+      "published_at": "2026-10-05T17:54:22+00:00"
+    },
+    {
+      "content_key": "d5469d4cce339f81d687dd0b5062285ee87c99f8b4b7c61514f0613566e98b4b",
+      "token_text": "action economy enhance phantom versatility",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Phantom's action economy enhances versatility #dnd5e",
+      "video_id": "BkB77Sz-R8o",
+      "day": "2026-10-05-dnd5e-clip3",
+      "published_at": "2026-10-05T17:55:31+00:00"
     }
   ]
 }

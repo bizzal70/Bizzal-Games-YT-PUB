@@ -415,6 +415,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-02-dnd5e-clip1.mp4",
         "video_sha256": "f5071e78836f5148e54b3c353859f0d837f4eee30adf7289df1904f6d5c774b5"
       }
+    },
+    {
+      "published_utc": "2026-10-05T17:52:52Z",
+      "day": "2026-10-05-dnd5e-clip1",
+      "content_id": "clip:b2c7c0af9aeacfe2",
+      "publish_hash": "3cf7fa4a15f669f71f7871698d52aa7c3c1c834c3165ed08ee191888c220c69f",
+      "youtube_video_id": "zrQGEo613bU",
+      "youtube_url": "https://www.youtube.com/watch?v=zrQGEo613bU",
+      "video_sha256": "96b47af63bc38e0420ba56df9f1bd7ab0ae1b0c278c6dcec1f7f306a24e32323",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-05-dnd5e-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-10-05-dnd5e-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:b2c7c0af9aeacfe2",
+        "canonical_hash": "",
+        "script_id": "b2c7c0af9aeacfe2a83fd1761e61ae68d423c8303f84e2ef6dc605bd3a754245",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Wails from the Grave deals extra necrotic damage",
+        "hook": "Wails from the Grave deals extra necrotic damage",
+        "body": "After a successful Sneak Attack, the Phantom can deal necrotic damage to another creature within 30 feet of the original target. This secondary damage equals half the Sneak Attack dice, adding extra punch without using an action.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-05-dnd5e-clip1.mp4",
+        "video_sha256": "96b47af63bc38e0420ba56df9f1bd7ab0ae1b0c278c6dcec1f7f306a24e32323"
+      }
+    },
+    {
+      "published_utc": "2026-10-05T17:54:22Z",
+      "day": "2026-10-05-dnd5e-clip2",
+      "content_id": "clip:e7fe94fc203dcb87",
+      "publish_hash": "f66d79a54939fab69d34a81e4bc601ce93ebbf3ee09ed2d5a21d1f5153e05267",
+      "youtube_video_id": "J9F48-w3c-4",
+      "youtube_url": "https://www.youtube.com/watch?v=J9F48-w3c-4",
+      "video_sha256": "40f154ca3996226a0e27f2da346cdac7a3785dcc5540ed943d0e3edb7e5cc069",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-05-dnd5e-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-10-05-dnd5e-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:e7fe94fc203dcb87",
+        "canonical_hash": "",
+        "script_id": "e7fe94fc203dcb87268df842beb537616658988e11ecc6c824653a870a405aae",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Whispers of the Dead grants temporary skills",
+        "hook": "Whispers of the Dead grants temporary skills",
+        "body": "Whispers of the Dead lets the Phantom gain a temporary skill or tool proficiency after a short or long rest. This borrowed proficiency adapts to the day's challenges, offering versatility but requiring strategic planning before each rest.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-05-dnd5e-clip2.mp4",
+        "video_sha256": "40f154ca3996226a0e27f2da346cdac7a3785dcc5540ed943d0e3edb7e5cc069"
+      }
+    },
+    {
+      "published_utc": "2026-10-05T17:55:31Z",
+      "day": "2026-10-05-dnd5e-clip3",
+      "content_id": "clip:01234d806198b8d3",
+      "publish_hash": "359bf47872e2264b25f836b5f5e16b8fd3b798cb08e248329b34ee46021a4ac3",
+      "youtube_video_id": "BkB77Sz-R8o",
+      "youtube_url": "https://www.youtube.com/watch?v=BkB77Sz-R8o",
+      "video_sha256": "a313edb19a4ed3a1a747b9fd2cd1c0f750e679f4d699efb21cf66cf3592f392f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-05-dnd5e-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-10-05-dnd5e-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:01234d806198b8d3",
+        "canonical_hash": "",
+        "script_id": "01234d806198b8d327c8333574baa332f45777cd28e0a5187640dd023d92c677",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Phantom's action economy enhances versatility",
+        "hook": "Phantom's action economy enhances versatility",
+        "body": "Phantom abilities like Whispers of the Dead and Wails from the Grave require no action, preserving the rogue's mobility and damage. This allows use of bonus actions like Cunning Action for repositioning, maximizing combat effectiveness.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-05-dnd5e-clip3.mp4",
+        "video_sha256": "a313edb19a4ed3a1a747b9fd2cd1c0f750e679f4d699efb21cf66cf3592f392f"
+      }
     }
   ]
 }
