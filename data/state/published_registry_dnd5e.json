@@ -2765,6 +2765,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-05.mp4",
         "video_sha256": "bafe7dbc21c27fb510f213a5827126cb35e09513fc35abde484024d377deb89f"
       }
+    },
+    {
+      "published_utc": "2026-10-06T14:30:09Z",
+      "day": "2026-10-06",
+      "content_id": "bgp-2026-10-06-class-spotlight-class-tashas-cauldron-oath-of-glory-914d0c004b47",
+      "publish_hash": "c26ee3a346b85b0e91258925b06f53dbeb605d68659daac57c4079007a8bde7f",
+      "youtube_video_id": "ksCKtiXVKQc",
+      "youtube_url": "https://www.youtube.com/watch?v=ksCKtiXVKQc",
+      "video_sha256": "8db84e6f332d7dd9275734cb363055d1a767bcbb69c8b32037b0543b44220f36",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-06.mp4",
+      "fingerprint": {
+        "day": "2026-10-06",
+        "category": "class_spotlight",
+        "angle": "party_role_pivot",
+        "content_id": "bgp-2026-10-06-class-spotlight-class-tashas-cauldron-oath-of-glory-914d0c004b47",
+        "canonical_hash": "914d0c004b4721c27d4fdf4ef8ec7e8235aa9bd2238fb5a4df1d29f5ec169025",
+        "script_id": "6f1e4b6999233a90f48bd11ad18877bb27210c1218a4b6ca35743c1dcf49a047",
+        "fact_kind": "class",
+        "fact_pk": "tashas-cauldron_oath-of-glory",
+        "fact_name": "Oath of Glory",
+        "hook": "Oath of Glory Paladins pivot from support to pressure - their Channel Divinity options enable this shift.",
+        "body": "Inspiring Smite allows an Oath of Glory Paladin to grant temporary hit points to nearby allies, supporting the party's durability early in combat. However, the common mistake is overcommitting to this support role without transitioning. When the battle turns, using Peerless Athlete to enhance mobility and strength checks can shift the Paladin into a more aggressive role, applying pressure where needed. The key is recognizing the moment to pivot based on the flow of combat, leveraging both Channel Divinity options effectively.",
+        "cta": "DMs: When Inspiring Smite keeps an ally standing, switch to Peerless Athlete for a strength-based assault that shifts momentum.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-06.mp4",
+        "video_sha256": "8db84e6f332d7dd9275734cb363055d1a767bcbb69c8b32037b0543b44220f36"
+      }
     }
   ]
 }

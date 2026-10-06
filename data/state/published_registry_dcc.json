@@ -2141,6 +2141,32 @@
         "video_sha256": "b611f994473fd10e6512d9455591c0c748d6fa2d81c1dc2390d80d06117b9d01"
       },
       "tone_lint_violation": "vague filler phrase: often overlooked"
+    },
+    {
+      "published_utc": "2026-10-06T14:24:24Z",
+      "day": "2026-10-06",
+      "content_id": "bgp-2026-10-06-rules-ruling-rule-8-e43caf82b26c",
+      "publish_hash": "b5179e63141354464d452ec062c815461e4dac0da94f251a9e69a010273f95fa",
+      "youtube_video_id": "5qqArfoWKMA",
+      "youtube_url": "https://www.youtube.com/watch?v=5qqArfoWKMA",
+      "video_sha256": "3fd55638bc827014d41d3a375e26824504d5056e198dd7ab4727da145f9b971d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-06.mp4",
+      "fingerprint": {
+        "day": "2026-10-06",
+        "category": "rules_ruling",
+        "angle": "luck_burn_timing",
+        "content_id": "bgp-2026-10-06-rules-ruling-rule-8-e43caf82b26c",
+        "canonical_hash": "e43caf82b26cfb38108e0014b8446901012de5c258780668a78cb81e66e78739",
+        "script_id": "898fd9cce9c3f9b834305ff4197fa214c8e99c2bc35da05400edaf27e2ce3422",
+        "fact_kind": "rule",
+        "fact_pk": 8,
+        "fact_name": "Saving Throws",
+        "hook": "Luck's impact on Saving Throws isn't universal - only one save type benefits per character.",
+        "body": "DCC uses three saving throws: Fortitude for physical effects like poison and disease, Reflex for area effects such as traps and explosions, and Will for mental effects like charm and fear. Each class has one save that improves faster than the others. Luck modifies just one save type per character, as determined by the birth augur, not all saves as some assume. Identifying which save benefits from Luck can significantly alter outcomes in crucial situations.",
+        "cta": "Judges: Identify each character's Luck-affected save type from their birth augur before the session, and remind players to use it wisely.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-06.mp4",
+        "video_sha256": "3fd55638bc827014d41d3a375e26824504d5056e198dd7ab4727da145f9b971d"
+      }
     }
   ]
 }

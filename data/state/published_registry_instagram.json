@@ -3282,6 +3282,51 @@
       "hook": "Frame a Doppelganger encounter with a timer so the party must trade certainty for speed.",
       "body": "Doppelganger's Change Shape ability swaps attacks for transformation, making it a tactical chameleon. Its Telepathy reads surface thoughts within near range, creating opportunities for manipulation. Misjudging its ability to deceive leads to costly mistakes. Reposition constantly to limit its telepathic range and force it to reveal its true form under pressure.",
       "cta": "GMs: Limit the party to 10 real-time minutes per turn to exploit the Doppelganger's need for hasty decisions."
+    },
+    {
+      "published_utc": "2026-10-06T14:26:25Z",
+      "day": "2026-10-06",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-06-rules-ruling-rule-8-e43caf82b26c",
+      "instagram_post_id": "17887800837684996",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "3fd55638bc827014d41d3a375e26824504d5056e198dd7ab4727da145f9b971d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-06.mp4",
+      "fact_name": "Saving Throws",
+      "category": "rules_ruling",
+      "hook": "Luck's impact on Saving Throws isn't universal - only one save type benefits per character.",
+      "body": "DCC uses three saving throws: Fortitude for physical effects like poison and disease, Reflex for area effects such as traps and explosions, and Will for mental effects like charm and fear. Each class has one save that improves faster than the others. Luck modifies just one save type per character, as determined by the birth augur, not all saves as some assume. Identifying which save benefits from Luck can significantly alter outcomes in crucial situations.",
+      "cta": "Judges: Identify each character's Luck-affected save type from their birth augur before the session, and remind players to use it wisely."
+    },
+    {
+      "published_utc": "2026-10-06T14:31:09Z",
+      "day": "2026-10-06",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-06-class-spotlight-class-tashas-cauldron-oath-of-glory-914d0c004b47",
+      "instagram_post_id": "18079658324724239",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "8db84e6f332d7dd9275734cb363055d1a767bcbb69c8b32037b0543b44220f36",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-06.mp4",
+      "fact_name": "Oath of Glory",
+      "category": "class_spotlight",
+      "hook": "Oath of Glory Paladins pivot from support to pressure - their Channel Divinity options enable this shift.",
+      "body": "Inspiring Smite allows an Oath of Glory Paladin to grant temporary hit points to nearby allies, supporting the party's durability early in combat. However, the common mistake is overcommitting to this support role without transitioning. When the battle turns, using Peerless Athlete to enhance mobility and strength checks can shift the Paladin into a more aggressive role, applying pressure where needed. The key is recognizing the moment to pivot based on the flow of combat, leveraging both Channel Divinity options effectively.",
+      "cta": "DMs: When Inspiring Smite keeps an ally standing, switch to Peerless Athlete for a strength-based assault that shifts momentum."
+    },
+    {
+      "published_utc": "2026-10-06T14:37:26Z",
+      "day": "2026-10-06",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-06-rules-myth-rule-5-0f0b857cc22a",
+      "instagram_post_id": "18094594025378458",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "e6999eb279e4cbb1a4e72c659562218a88ed52d566249b7892d1a132f0675005",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-06.mp4",
+      "fact_name": "Spell Casting Check",
+      "category": "rules_myth",
+      "hook": "Spell Casting Check failure burns resources faster than players expect - the slot is consumed even if.",
+      "body": "To cast a spell, roll d20 plus the relevant stat modifier against DC 10 plus the spell tier. On a failure, the spell slot is consumed without effect. Critical failures trigger a mishap, but only for Wizards. Many players overlook the importance of timing and preparation, failing to account for the risk of losing a spell slot with nothing to show for it. The savvy approach involves using lower-tier spells when success is crucial, minimizing wasted resources.",
+      "cta": "GMs: Make them roll a Spell Casting Check for a simple spell early on to hammer home the cost of failure."
     }
   ]
 }

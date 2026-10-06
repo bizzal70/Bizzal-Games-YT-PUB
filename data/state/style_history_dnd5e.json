@@ -1094,5 +1094,15 @@
       ],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-10-06": {
+    "class_spotlight": {
+      "angle": "party_role_pivot",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "class_mentor",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }
