@@ -3327,6 +3327,51 @@
       "hook": "Spell Casting Check failure burns resources faster than players expect - the slot is consumed even if.",
       "body": "To cast a spell, roll d20 plus the relevant stat modifier against DC 10 plus the spell tier. On a failure, the spell slot is consumed without effect. Critical failures trigger a mishap, but only for Wizards. Many players overlook the importance of timing and preparation, failing to account for the risk of losing a spell slot with nothing to show for it. The savvy approach involves using lower-tier spells when success is crucial, minimizing wasted resources.",
       "cta": "GMs: Make them roll a Spell Casting Check for a simple spell early on to hammer home the cost of failure."
+    },
+    {
+      "published_utc": "2026-10-07T14:26:34Z",
+      "day": "2026-10-07",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-07-item-spotlight-item-5-fa1062753e51",
+      "instagram_post_id": "17942489820358116",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "2a6e096ea5b56ad37d4676714318c658f0ab902425af8f2cbfe1b65822b332d1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-07.mp4",
+      "fact_name": "Cloak of the Mountaineer",
+      "category": "item_spotlight",
+      "hook": "Cloak of the Mountaineer is more restrictive than it seems - automatic climb success doesn't cover overhangs.",
+      "body": "The Cloak of the Mountaineer gives a climbing speed equal to ground speed and automatic success on climb checks, but overhangs are the exception, needing a DC 12 check. The once-per-day feather fall effect lasts only 1 round, often misused outside of immediate danger. Effective play involves using feather fall at the exact moment of a fall to negate damage, not as a proactive measure.",
+      "cta": "Judges: Remind them that feather fall's one round is for emergencies, not for showboating; save it for when gravity gets personal."
+    },
+    {
+      "published_utc": "2026-10-07T14:31:52Z",
+      "day": "2026-10-07",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-07-monster-tactic-creature-srd-2024-glabrezu-db6dbe3f3376",
+      "instagram_post_id": "18128182021694540",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "8ec2faba8089cd6baecea2258632f5cabfc6a7d8ad2b613529d5ff78a36e2cbc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-07.mp4",
+      "fact_name": "Glabrezu",
+      "category": "monster_tactic",
+      "hook": "Glabrezu's demonic resilience confounds expectations - it gains a new body instantly if it dies outside.",
+      "body": "With an Armor Class of 17 and 189 hit points, the Glabrezu can absorb significant damage while closing the distance with a 40-foot speed. Its Multiattack and Pincer abilities force opponents into difficult decisions, often leading to mistakes. A common error is underestimating its Demonic Restoration, which allows it to return immediately if killed outside the Abyss. Effective play requires exploiting its weaknesses quickly before it can leverage this ability.",
+      "cta": "DMs: Position the Glabrezu outside the Abyss to exploit its Demonic Restoration, forcing players to rethink their strategy."
+    },
+    {
+      "published_utc": "2026-10-07T14:38:43Z",
+      "day": "2026-10-07",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-07-spell-use-case-spell-112-924f99d59480",
+      "instagram_post_id": "18030279428684360",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c40acd3cac12107bc6d27f783af6be4719235fcc39d370791e42320e6b970b52",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-07.mp4",
+      "fact_name": "Freya's Omen",
+      "category": "spell_use_case",
+      "hook": "Freya's Omen often gets misused as a preemptive safety net - it only lasts 1d6 rounds.",
+      "body": "Freya's Omen, a tier 4 Seer spell, prevents spell loss on a failed cast for 1d6 rounds, but doesn't protect against critical backfires. Casting it without an immediate high-risk spell lined up wastes its limited duration. Timing is crucial; align its use with moments where failed spells would otherwise cost significant actions or resources.",
+      "cta": "GMs: Make sure players have a high-stakes spell ready before they waste Freya's Omen's 1d6 round duration."
     }
   ]
 }

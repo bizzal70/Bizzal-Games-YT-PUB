@@ -2791,6 +2791,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-06.mp4",
         "video_sha256": "8db84e6f332d7dd9275734cb363055d1a767bcbb69c8b32037b0543b44220f36"
       }
+    },
+    {
+      "published_utc": "2026-10-07T14:30:48Z",
+      "day": "2026-10-07",
+      "content_id": "bgp-2026-10-07-monster-tactic-creature-srd-2024-glabrezu-db6dbe3f3376",
+      "publish_hash": "50b8218be3c100ec212737d9c6fd19fd8cea450dc33deb1a9032e7dc1007e856",
+      "youtube_video_id": "t854_DFcrI8",
+      "youtube_url": "https://www.youtube.com/watch?v=t854_DFcrI8",
+      "video_sha256": "8ec2faba8089cd6baecea2258632f5cabfc6a7d8ad2b613529d5ff78a36e2cbc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-07.mp4",
+      "fingerprint": {
+        "day": "2026-10-07",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-10-07-monster-tactic-creature-srd-2024-glabrezu-db6dbe3f3376",
+        "canonical_hash": "db6dbe3f3376959b50f6f942c4926aa652e381bcb2e66bb7e6e7897a69f98db7",
+        "script_id": "26ed57a8584a58b71a61064eb57d450932246e8d59061268983cfc790eb08de3",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_glabrezu",
+        "fact_name": "Glabrezu",
+        "hook": "Glabrezu's demonic resilience confounds expectations - it gains a new body instantly if it dies outside.",
+        "body": "With an Armor Class of 17 and 189 hit points, the Glabrezu can absorb significant damage while closing the distance with a 40-foot speed. Its Multiattack and Pincer abilities force opponents into difficult decisions, often leading to mistakes. A common error is underestimating its Demonic Restoration, which allows it to return immediately if killed outside the Abyss. Effective play requires exploiting its weaknesses quickly before it can leverage this ability.",
+        "cta": "DMs: Position the Glabrezu outside the Abyss to exploit its Demonic Restoration, forcing players to rethink their strategy.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-07.mp4",
+        "video_sha256": "8ec2faba8089cd6baecea2258632f5cabfc6a7d8ad2b613529d5ff78a36e2cbc"
+      }
     }
   ]
 }

@@ -2399,6 +2399,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-06.mp4",
         "video_sha256": "e6999eb279e4cbb1a4e72c659562218a88ed52d566249b7892d1a132f0675005"
       }
+    },
+    {
+      "published_utc": "2026-10-07T14:37:26Z",
+      "day": "2026-10-07",
+      "content_id": "bgp-2026-10-07-spell-use-case-spell-112-924f99d59480",
+      "publish_hash": "0595b91d7f95b0edc87c2c49a0c524a28e48076d70383175d2ae5ce03c7db059",
+      "youtube_video_id": "Tu3kYTf5hW4",
+      "youtube_url": "https://www.youtube.com/watch?v=Tu3kYTf5hW4",
+      "video_sha256": "c40acd3cac12107bc6d27f783af6be4719235fcc39d370791e42320e6b970b52",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-07.mp4",
+      "fingerprint": {
+        "day": "2026-10-07",
+        "category": "spell_use_case",
+        "angle": "common_misplay",
+        "content_id": "bgp-2026-10-07-spell-use-case-spell-112-924f99d59480",
+        "canonical_hash": "924f99d59480da00e0326c97c83ebde5754193930bd6d4104e75b1659bb6368c",
+        "script_id": "41ec53a32291c947e75f7865d8aca9191083db0aaf4b4e09a994cf8ce6c566da",
+        "fact_kind": "spell",
+        "fact_pk": 112,
+        "fact_name": "Freya's Omen",
+        "hook": "Freya's Omen often gets misused as a preemptive safety net - it only lasts 1d6 rounds.",
+        "body": "Freya's Omen, a tier 4 Seer spell, prevents spell loss on a failed cast for 1d6 rounds, but doesn't protect against critical backfires. Casting it without an immediate high-risk spell lined up wastes its limited duration. Timing is crucial; align its use with moments where failed spells would otherwise cost significant actions or resources.",
+        "cta": "GMs: Make sure players have a high-stakes spell ready before they waste Freya's Omen's 1d6 round duration.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-07.mp4",
+        "video_sha256": "c40acd3cac12107bc6d27f783af6be4719235fcc39d370791e42320e6b970b52"
+      }
     }
   ]
 }

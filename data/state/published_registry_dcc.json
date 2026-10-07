@@ -2167,6 +2167,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-06.mp4",
         "video_sha256": "3fd55638bc827014d41d3a375e26824504d5056e198dd7ab4727da145f9b971d"
       }
+    },
+    {
+      "published_utc": "2026-10-07T14:25:46Z",
+      "day": "2026-10-07",
+      "content_id": "bgp-2026-10-07-item-spotlight-item-5-fa1062753e51",
+      "publish_hash": "811598ffd148ede7acb6f96ce787e7dae50cfed506351773dff172e7e6205804",
+      "youtube_video_id": "CcQiY-IIfKI",
+      "youtube_url": "https://www.youtube.com/watch?v=CcQiY-IIfKI",
+      "video_sha256": "2a6e096ea5b56ad37d4676714318c658f0ab902425af8f2cbfe1b65822b332d1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-07.mp4",
+      "fingerprint": {
+        "day": "2026-10-07",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-10-07-item-spotlight-item-5-fa1062753e51",
+        "canonical_hash": "fa1062753e51b4a2561fbaaee517f733ae6bfc544fb52f5311a511f69b15fb23",
+        "script_id": "07b38c62f4f5adc707159b1559307ccb1e041730d338731eab4f491e66cf7643",
+        "fact_kind": "item",
+        "fact_pk": 5,
+        "fact_name": "Cloak of the Mountaineer",
+        "hook": "Cloak of the Mountaineer is more restrictive than it seems - automatic climb success doesn't cover overhangs.",
+        "body": "The Cloak of the Mountaineer gives a climbing speed equal to ground speed and automatic success on climb checks, but overhangs are the exception, needing a DC 12 check. The once-per-day feather fall effect lasts only 1 round, often misused outside of immediate danger. Effective play involves using feather fall at the exact moment of a fall to negate damage, not as a proactive measure.",
+        "cta": "Judges: Remind them that feather fall's one round is for emergencies, not for showboating; save it for when gravity gets personal.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-07.mp4",
+        "video_sha256": "2a6e096ea5b56ad37d4676714318c658f0ab902425af8f2cbfe1b65822b332d1"
+      }
     }
   ]
 }
