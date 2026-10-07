@@ -701,6 +701,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-09-28-dcc-clip3.mp4",
         "video_sha256": "7157a452597e83670ad71c7d95c2b7c63f791f2f61692e126ad6cf7251f87759"
       }
+    },
+    {
+      "published_utc": "2026-10-07T18:07:39Z",
+      "day": "2026-10-07-dcc-clip1",
+      "content_id": "clip:a68cf1e68dab38a7",
+      "publish_hash": "5aefbf115574370992b56793863c59bb9f688d2f1e9f902a9335258fe297bb39",
+      "youtube_video_id": "o-1HASCTtwA",
+      "youtube_url": "https://www.youtube.com/watch?v=o-1HASCTtwA",
+      "video_sha256": "070a397659b2d341a75d50407a62a5019495043e8219358d5fd36f1f847d63fd",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-07-dcc-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-10-07-dcc-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:a68cf1e68dab38a7",
+        "canonical_hash": "",
+        "script_id": "a68cf1e68dab38a78d02da562b585baf2a246bd3a23ad3b2fd095403257efb6b",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Carrion Crow Swarm blinds for 1d4+1 rounds",
+        "hook": "Carrion Crow Swarm blinds for 1d4+1 rounds",
+        "body": "The Carrion Crow Swarm can blind opponents for 1d4+1 rounds with its swarming beak attack. Players must succeed on a DC 8 Reflex save to avoid this condition, significantly impacting those relying on sight, like archers and spellcasters.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-07-dcc-clip1.mp4",
+        "video_sha256": "070a397659b2d341a75d50407a62a5019495043e8219358d5fd36f1f847d63fd"
+      }
+    },
+    {
+      "published_utc": "2026-10-07T18:09:43Z",
+      "day": "2026-10-07-dcc-clip2",
+      "content_id": "clip:80a5f886ccdde4a7",
+      "publish_hash": "667339a0bff406bc066b234cb669592b7b52312355f7a3fdfe8a32e019dc75d2",
+      "youtube_video_id": "KOxBOP6hicw",
+      "youtube_url": "https://www.youtube.com/watch?v=KOxBOP6hicw",
+      "video_sha256": "882882caeb8f3af96ade496b7e0ee6fc6b14f200939fa37833bd83ae833c64e3",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-07-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-10-07-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:80a5f886ccdde4a7",
+        "canonical_hash": "",
+        "script_id": "80a5f886ccdde4a7be5e5ee9f1d5a953bd5199ab84781c0ff43ccab574db65a3",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Carrion Crow Swarm halves non-area attack damage",
+        "hook": "Carrion Crow Swarm halves non-area attack damage",
+        "body": "The Carrion Crow Swarm takes half damage from non-area attacks. This mechanic makes single-target attacks less effective, encouraging players to use area-of-effect spells or abilities for full damage against the swarm.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-07-dcc-clip2.mp4",
+        "video_sha256": "882882caeb8f3af96ade496b7e0ee6fc6b14f200939fa37833bd83ae833c64e3"
+      }
     }
   ]
 }

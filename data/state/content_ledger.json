@@ -7072,6 +7072,39 @@
       "video_id": "18030279428684360",
       "day": "2026-10-07",
       "published_at": "2026-10-07T14:38:43+00:00"
+    },
+    {
+      "content_key": "11acae47e93ee98998b227069feb58d06cc5873df1b0d1071b4db09e0ea9894d",
+      "token_text": "20 blinding carrion chao crow space swarm",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Carrion Crow Swarm: Blinding Chaos in a 20' x 20' Space #dcc",
+      "video_id": "ssNe_OISBbA",
+      "day": "2026-10-07",
+      "published_at": "2026-10-07T18:05:23+00:00"
+    },
+    {
+      "content_key": "5173fe271778fa83cea816949c03d4b2f669b38ab8b00a0a8f308a9f7e94e6ac",
+      "token_text": "1d4 blind carrion crow round swarm",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Carrion Crow Swarm blinds for 1d4+1 rounds #dcc",
+      "video_id": "o-1HASCTtwA",
+      "day": "2026-10-07-dcc-clip1",
+      "published_at": "2026-10-07T18:07:39+00:00"
+    },
+    {
+      "content_key": "d54de65c28bf1b9c41d8e159c03a40b0a00a6920166162ea19d6de6b9fc42aed",
+      "token_text": "area attack carrion crow damage halve non swarm",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Carrion Crow Swarm halves non-area attack damage #dcc",
+      "video_id": "KOxBOP6hicw",
+      "day": "2026-10-07-dcc-clip2",
+      "published_at": "2026-10-07T18:09:43+00:00"
     }
   ]
 }
