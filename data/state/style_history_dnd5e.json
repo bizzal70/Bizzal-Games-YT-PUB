@@ -1116,5 +1116,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-08": {
+    "spell_use_case": {
+      "angle": "combo_pairing",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

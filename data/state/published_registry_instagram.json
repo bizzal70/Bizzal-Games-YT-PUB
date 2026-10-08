@@ -3372,6 +3372,51 @@
       "hook": "Freya's Omen often gets misused as a preemptive safety net - it only lasts 1d6 rounds.",
       "body": "Freya's Omen, a tier 4 Seer spell, prevents spell loss on a failed cast for 1d6 rounds, but doesn't protect against critical backfires. Casting it without an immediate high-risk spell lined up wastes its limited duration. Timing is crucial; align its use with moments where failed spells would otherwise cost significant actions or resources.",
       "cta": "GMs: Make sure players have a high-stakes spell ready before they waste Freya's Omen's 1d6 round duration."
+    },
+    {
+      "published_utc": "2026-10-08T14:26:33Z",
+      "day": "2026-10-08",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-08-encounter-seed-creature-277-22f80ef28172",
+      "instagram_post_id": "18091509158668920",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "b89e39d6bd7b1ab8aecda3fbe839a02f62c8c54a217431d21407a09550b2aaca",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-08.mp4",
+      "fact_name": "Girtablullu",
+      "category": "encounter_seed",
+      "hook": "Girtablullu earns its stakes fast.",
+      "body": "Girtablullu's fearful gaze forces a Will save at DC 15. Underestimating this effect leads to retreat, disrupting formations and leaving allies exposed. Buffing Will saves or securing rerolls maintains cohesion and prevents tactical breakdown.",
+      "cta": "Judges: Pin the Girtablullu in a 10-foot corridor to exploit its fearful gaze and scatter the party's ranks."
+    },
+    {
+      "published_utc": "2026-10-08T14:31:02Z",
+      "day": "2026-10-08",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-08-spell-use-case-spell-srd-2024-find-traps-2fb574e66e16",
+      "instagram_post_id": "18091801967276488",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "6317d279ac6cdad8534295d5a3e0f86636c4f6e3774e9551e395cfd68d94788f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-08.mp4",
+      "fact_name": "Find Traps",
+      "category": "spell_use_case",
+      "hook": "Find Traps reveals more than players expect - any trap within 120 feet and line of sight.",
+      "body": "Find Traps is a 2nd-level divination spell with a range of 120 feet and an instantaneous duration. It identifies any trap within line of sight, including objects or mechanisms designed to cause harm. Casting it purely for damage avoidance misses its potential. Use it to adjust tactical positioning or shift objective priorities during exploration.",
+      "cta": "DMs: Use Find Traps to identify threats within 120 feet and adjust your party's tactical positioning, not just to dodge damage."
+    },
+    {
+      "published_utc": "2026-10-08T14:35:57Z",
+      "day": "2026-10-08",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-08-class-spotlight-class-3-6e81969443b6",
+      "instagram_post_id": "18104146040290699",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "cd5eb89e2aedbaf5ba4e479db4606fae3ade674ed78dafb6fef00104828dc9c8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-08.mp4",
+      "fact_name": "Thief",
+      "category": "class_spotlight",
+      "hook": "Thief shifts from setup to closer - Backstab makes the pivot with a single attack roll.",
+      "body": "Thief's Backstab requires a successful attack roll and grants double damage when hitting an unaware target. Timing is often misjudged, with Backstab held until too late in combat when the opportunity is lost. Using Backstab early, while enemies are still unaware, maximizes damage output before the situation changes.",
+      "cta": "GMs: Have the Thief roll for Backstab early, while enemies are unaware, to exploit double damage before chaos ensues."
     }
   ]
 }

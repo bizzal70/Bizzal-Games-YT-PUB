@@ -2817,6 +2817,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-07.mp4",
         "video_sha256": "8ec2faba8089cd6baecea2258632f5cabfc6a7d8ad2b613529d5ff78a36e2cbc"
       }
+    },
+    {
+      "published_utc": "2026-10-08T14:30:18Z",
+      "day": "2026-10-08",
+      "content_id": "bgp-2026-10-08-spell-use-case-spell-srd-2024-find-traps-2fb574e66e16",
+      "publish_hash": "91bc7f36efeb6510766401560dab0f356ed9dfe7d2e0e8c8476914e6d84a64c5",
+      "youtube_video_id": "RDmttmBQHTU",
+      "youtube_url": "https://www.youtube.com/watch?v=RDmttmBQHTU",
+      "video_sha256": "6317d279ac6cdad8534295d5a3e0f86636c4f6e3774e9551e395cfd68d94788f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-08.mp4",
+      "fingerprint": {
+        "day": "2026-10-08",
+        "category": "spell_use_case",
+        "angle": "combo_pairing",
+        "content_id": "bgp-2026-10-08-spell-use-case-spell-srd-2024-find-traps-2fb574e66e16",
+        "canonical_hash": "2fb574e66e16f94eab3637f730f007f845ced8eb1e0c2387f68ea380a386f605",
+        "script_id": "c2df5e5dca86ed7eb1eaaca985c73cb5ddf8643bca1b44b6f4a63ca60b35a083",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_find-traps",
+        "fact_name": "Find Traps",
+        "hook": "Find Traps reveals more than players expect - any trap within 120 feet and line of sight.",
+        "body": "Find Traps is a 2nd-level divination spell with a range of 120 feet and an instantaneous duration. It identifies any trap within line of sight, including objects or mechanisms designed to cause harm. Casting it purely for damage avoidance misses its potential. Use it to adjust tactical positioning or shift objective priorities during exploration.",
+        "cta": "DMs: Use Find Traps to identify threats within 120 feet and adjust your party's tactical positioning, not just to dodge damage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-08.mp4",
+        "video_sha256": "6317d279ac6cdad8534295d5a3e0f86636c4f6e3774e9551e395cfd68d94788f"
+      }
     }
   ]
 }

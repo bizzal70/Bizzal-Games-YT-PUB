@@ -2425,6 +2425,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-07.mp4",
         "video_sha256": "c40acd3cac12107bc6d27f783af6be4719235fcc39d370791e42320e6b970b52"
       }
+    },
+    {
+      "published_utc": "2026-10-08T14:35:11Z",
+      "day": "2026-10-08",
+      "content_id": "bgp-2026-10-08-class-spotlight-class-3-6e81969443b6",
+      "publish_hash": "853c7396b6c08dd0cdb667c6452e3cf8f55f7821c80bb89e74327cbe35417a51",
+      "youtube_video_id": "p5yTFPD9pMk",
+      "youtube_url": "https://www.youtube.com/watch?v=p5yTFPD9pMk",
+      "video_sha256": "cd5eb89e2aedbaf5ba4e479db4606fae3ade674ed78dafb6fef00104828dc9c8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-08.mp4",
+      "fingerprint": {
+        "day": "2026-10-08",
+        "category": "class_spotlight",
+        "angle": "party_role_pivot",
+        "content_id": "bgp-2026-10-08-class-spotlight-class-3-6e81969443b6",
+        "canonical_hash": "6e81969443b6e2dab0a563ca679321bbc1f04c0437d22d02146b07a61b11b6e8",
+        "script_id": "eedb8c34b6563899261cd13c4252cbc06db977672abe92ca603924ff2bdc98f4",
+        "fact_kind": "class",
+        "fact_pk": 3,
+        "fact_name": "Thief",
+        "hook": "Thief shifts from setup to closer - Backstab makes the pivot with a single attack roll.",
+        "body": "Thief's Backstab requires a successful attack roll and grants double damage when hitting an unaware target. Timing is often misjudged, with Backstab held until too late in combat when the opportunity is lost. Using Backstab early, while enemies are still unaware, maximizes damage output before the situation changes.",
+        "cta": "GMs: Have the Thief roll for Backstab early, while enemies are unaware, to exploit double damage before chaos ensues.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-08.mp4",
+        "video_sha256": "cd5eb89e2aedbaf5ba4e479db4606fae3ade674ed78dafb6fef00104828dc9c8"
+      }
     }
   ]
 }

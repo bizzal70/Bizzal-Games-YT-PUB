@@ -998,5 +998,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-08": {
+    "encounter_seed": {
+      "angle": "three_beats",
+      "voice": "grim_referee",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

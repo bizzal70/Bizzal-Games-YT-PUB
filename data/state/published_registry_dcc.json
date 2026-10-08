@@ -2193,6 +2193,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-07.mp4",
         "video_sha256": "2a6e096ea5b56ad37d4676714318c658f0ab902425af8f2cbfe1b65822b332d1"
       }
+    },
+    {
+      "published_utc": "2026-10-08T14:25:16Z",
+      "day": "2026-10-08",
+      "content_id": "bgp-2026-10-08-encounter-seed-creature-277-22f80ef28172",
+      "publish_hash": "d8621835c8e6761ac5fb2cf8601ca1afd68af565a327189df79838665b1bf6b4",
+      "youtube_video_id": "K-D-aO466dw",
+      "youtube_url": "https://www.youtube.com/watch?v=K-D-aO466dw",
+      "video_sha256": "b89e39d6bd7b1ab8aecda3fbe839a02f62c8c54a217431d21407a09550b2aaca",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-08.mp4",
+      "fingerprint": {
+        "day": "2026-10-08",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-10-08-encounter-seed-creature-277-22f80ef28172",
+        "canonical_hash": "22f80ef281729b7ae18111bdcf3b507a5603758fc8e99d8eb66ff79a786e6eaf",
+        "script_id": "c5e728d8e909ea7ee546858f450aa7c8c4daee7355123b51f3b1bad8c09b0e35",
+        "fact_kind": "creature",
+        "fact_pk": 277,
+        "fact_name": "Girtablullu",
+        "hook": "Girtablullu earns its stakes fast.",
+        "body": "Girtablullu's fearful gaze forces a Will save at DC 15. Underestimating this effect leads to retreat, disrupting formations and leaving allies exposed. Buffing Will saves or securing rerolls maintains cohesion and prevents tactical breakdown.",
+        "cta": "Judges: Pin the Girtablullu in a 10-foot corridor to exploit its fearful gaze and scatter the party's ranks.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-08.mp4",
+        "video_sha256": "b89e39d6bd7b1ab8aecda3fbe839a02f62c8c54a217431d21407a09550b2aaca"
+      },
+      "tone_lint_violation": "vague filler phrase: catches players off guard"
     }
   ]
 }
