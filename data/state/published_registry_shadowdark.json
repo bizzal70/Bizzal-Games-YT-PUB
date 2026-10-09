@@ -2451,6 +2451,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-08.mp4",
         "video_sha256": "cd5eb89e2aedbaf5ba4e479db4606fae3ade674ed78dafb6fef00104828dc9c8"
       }
+    },
+    {
+      "published_utc": "2026-10-09T14:36:57Z",
+      "day": "2026-10-09",
+      "content_id": "bgp-2026-10-09-monster-tactic-creature-230-bdb9e2bb77b6",
+      "publish_hash": "a5f953a4cc97329c20711e86cb892c3e715274097a90a9010da20f408d69801b",
+      "youtube_video_id": "jFH2skahpOQ",
+      "youtube_url": "https://www.youtube.com/watch?v=jFH2skahpOQ",
+      "video_sha256": "256b4bbe213f66f248838cb200494ce7958d23b77c1718a92c893c7bdfb22038",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-09.mp4",
+      "fingerprint": {
+        "day": "2026-10-09",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-10-09-monster-tactic-creature-230-bdb9e2bb77b6",
+        "canonical_hash": "bdb9e2bb77b6a93c7b8fea2e5b1146c7bfcad4663c9124d7d26706499556bd98",
+        "script_id": "7137cc43cb4d38b4e7d0d7c5e7612703e8dbfc494ebed9a50bee4e565a8dcca3",
+        "fact_kind": "creature",
+        "fact_pk": 230,
+        "fact_name": "Bogthorn",
+        "hook": "Bogthorn's thorn hail is more dangerous than its stab attack - poison with DC 12 CON or paralyze for 1d4.",
+        "body": "Bogthorn's thorn hail attack hits at near range with a +2 bonus and deals 1d4 damage plus poison. Failing the DC 12 Constitution save results in paralysis for 1d4 rounds, which can be devastating. Underestimating the impact of paralysis often leads to focusing on its stab attack instead. Prioritizing movement to avoid the thorn hail is critical to counter its strategy.",
+        "cta": "GMs: Use Bogthorn's thorn hail to paralyze and isolate targets; players, stay out of its near range or face the consequences.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-09.mp4",
+        "video_sha256": "256b4bbe213f66f248838cb200494ce7958d23b77c1718a92c893c7bdfb22038"
+      },
+      "tone_lint_violation": "vague filler phrase: often leads to"
     }
   ]
 }

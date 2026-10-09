@@ -2220,6 +2220,32 @@
         "video_sha256": "b89e39d6bd7b1ab8aecda3fbe839a02f62c8c54a217431d21407a09550b2aaca"
       },
       "tone_lint_violation": "vague filler phrase: catches players off guard"
+    },
+    {
+      "published_utc": "2026-10-09T14:27:17Z",
+      "day": "2026-10-09",
+      "content_id": "bgp-2026-10-09-class-spotlight-class-5-dce647b9809b",
+      "publish_hash": "888903361e1fc429e00e0c054488e595f576da7154eea06950ab5e37dd70bc69",
+      "youtube_video_id": "DQ6nRq_-nUY",
+      "youtube_url": "https://www.youtube.com/watch?v=DQ6nRq_-nUY",
+      "video_sha256": "7e2a45908fad1afcf1312c91cc5efb0cdbdd1066ea7f3aa22d47fec12b62f071",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-09.mp4",
+      "fingerprint": {
+        "day": "2026-10-09",
+        "category": "class_spotlight",
+        "angle": "wizard_risk",
+        "content_id": "bgp-2026-10-09-class-spotlight-class-5-dce647b9809b",
+        "canonical_hash": "dce647b9809b0b569d911028d1e30ccf0f0dca73ac4ccd9bbffe8e409c2cbc8d",
+        "script_id": "5634ba4628e6f2a711752a63fa0ef24579bb85fab8f5a6fbc7ba3a0d78d99041",
+        "fact_kind": "class",
+        "fact_pk": 5,
+        "fact_name": "Dwarf",
+        "hook": "Dwarves can't be wizards - their racial class identity locks them into martial roles.",
+        "body": "Dwarves operate as racial warriors with Mighty Deeds of Arms, but their deed die caps at d14 instead of the Warrior's d16. This means their peak damage potential is slightly lower, but their consistency in executing maneuvers remains high. The Shield Brother action grants an adjacent ally +2 AC by body-blocking, a tactical edge that can shift the tide in prolonged engagements. Ignoring their superior Fortitude saves and paralysis immunity in favor of flashy damage reduces their effectiveness; durability and support play are their real strengths.",
+        "cta": "Judges: Position your Dwarf to use Shield Brother for +2 AC, reinforcing allies instead of chasing higher damage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-09.mp4",
+        "video_sha256": "7e2a45908fad1afcf1312c91cc5efb0cdbdd1066ea7f3aa22d47fec12b62f071"
+      }
     }
   ]
 }

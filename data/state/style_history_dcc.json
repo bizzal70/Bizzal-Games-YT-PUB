@@ -1010,5 +1010,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-09": {
+    "class_spotlight": {
+      "angle": "wizard_risk",
+      "voice": "grim_referee",
+      "tone": "neutral",
+      "persona": "class_mentor",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

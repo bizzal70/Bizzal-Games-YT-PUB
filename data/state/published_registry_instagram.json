@@ -3417,6 +3417,51 @@
       "hook": "Thief shifts from setup to closer - Backstab makes the pivot with a single attack roll.",
       "body": "Thief's Backstab requires a successful attack roll and grants double damage when hitting an unaware target. Timing is often misjudged, with Backstab held until too late in combat when the opportunity is lost. Using Backstab early, while enemies are still unaware, maximizes damage output before the situation changes.",
       "cta": "GMs: Have the Thief roll for Backstab early, while enemies are unaware, to exploit double damage before chaos ensues."
+    },
+    {
+      "published_utc": "2026-10-09T14:28:37Z",
+      "day": "2026-10-09",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-09-class-spotlight-class-5-dce647b9809b",
+      "instagram_post_id": "18085268051335458",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "7e2a45908fad1afcf1312c91cc5efb0cdbdd1066ea7f3aa22d47fec12b62f071",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-09.mp4",
+      "fact_name": "Dwarf",
+      "category": "class_spotlight",
+      "hook": "Dwarves can't be wizards - their racial class identity locks them into martial roles.",
+      "body": "Dwarves operate as racial warriors with Mighty Deeds of Arms, but their deed die caps at d14 instead of the Warrior's d16. This means their peak damage potential is slightly lower, but their consistency in executing maneuvers remains high. The Shield Brother action grants an adjacent ally +2 AC by body-blocking, a tactical edge that can shift the tide in prolonged engagements. Ignoring their superior Fortitude saves and paralysis immunity in favor of flashy damage reduces their effectiveness; durability and support play are their real strengths.",
+      "cta": "Judges: Position your Dwarf to use Shield Brother for +2 AC, reinforcing allies instead of chasing higher damage."
+    },
+    {
+      "published_utc": "2026-10-09T14:33:04Z",
+      "day": "2026-10-09",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-09-rules-ruling-rule-srd-2024-damage-and-healing-temporary-hit-points-2a487c5a9187",
+      "instagram_post_id": "18089771519677488",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "26711a6f344372dec074a17e141233d50e27728e00fa153fed27b1b29321b741",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-09.mp4",
+      "fact_name": "Temporary Hit Points",
+      "category": "rules_ruling",
+      "hook": "Temporary Hit Points absorb damage before actual Hit Points - they vanish first when you take damage.",
+      "body": "Temporary Hit Points act as a buffer, absorbing damage before any actual Hit Points are lost. They do not stack; if you gain Temporary Hit Points while you already have some, you choose which to keep. Temporary Hit Points don't heal; they just prevent damage to real Hit Points. Use them to mitigate burst damage, not as a substitute for healing.",
+      "cta": "DMs: Remind players that Temporary Hit Points absorb the first 17 damage before real Hit Points, and they don't stack."
+    },
+    {
+      "published_utc": "2026-10-09T14:37:45Z",
+      "day": "2026-10-09",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-09-monster-tactic-creature-230-bdb9e2bb77b6",
+      "instagram_post_id": "17951517231328509",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "256b4bbe213f66f248838cb200494ce7958d23b77c1718a92c893c7bdfb22038",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-09.mp4",
+      "fact_name": "Bogthorn",
+      "category": "monster_tactic",
+      "hook": "Bogthorn's thorn hail is more dangerous than its stab attack - poison with DC 12 CON or paralyze for 1d4.",
+      "body": "Bogthorn's thorn hail attack hits at near range with a +2 bonus and deals 1d4 damage plus poison. Failing the DC 12 Constitution save results in paralysis for 1d4 rounds, which can be devastating. Underestimating the impact of paralysis often leads to focusing on its stab attack instead. Prioritizing movement to avoid the thorn hail is critical to counter its strategy.",
+      "cta": "GMs: Use Bogthorn's thorn hail to paralyze and isolate targets; players, stay out of its near range or face the consequences."
     }
   ]
 }

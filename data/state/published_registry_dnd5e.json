@@ -2843,6 +2843,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-08.mp4",
         "video_sha256": "6317d279ac6cdad8534295d5a3e0f86636c4f6e3774e9551e395cfd68d94788f"
       }
+    },
+    {
+      "published_utc": "2026-10-09T14:32:20Z",
+      "day": "2026-10-09",
+      "content_id": "bgp-2026-10-09-rules-ruling-rule-srd-2024-damage-and-healing-temporary-hit-points-2a487c5a9187",
+      "publish_hash": "f8878f2c6935c4cb2a41f72b3016b33a14543e46259f890bf6726a6fe622b66d",
+      "youtube_video_id": "6jz6KTDgt0o",
+      "youtube_url": "https://www.youtube.com/watch?v=6jz6KTDgt0o",
+      "video_sha256": "26711a6f344372dec074a17e141233d50e27728e00fa153fed27b1b29321b741",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-09.mp4",
+      "fingerprint": {
+        "day": "2026-10-09",
+        "category": "rules_ruling",
+        "angle": "fast_ruling",
+        "content_id": "bgp-2026-10-09-rules-ruling-rule-srd-2024-damage-and-healing-temporary-hit-points-2a487c5a9187",
+        "canonical_hash": "2a487c5a9187c69bd8d653347442e3776aac7edda2e4c505ac3440b4b35dcace",
+        "script_id": "be35be26ef6789722d0bd6b8d207bfb3a51f79972b18b85727c58905d598c022",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_damage-and-healing_temporary-hit-points",
+        "fact_name": "Temporary Hit Points",
+        "hook": "Temporary Hit Points absorb damage before actual Hit Points - they vanish first when you take damage.",
+        "body": "Temporary Hit Points act as a buffer, absorbing damage before any actual Hit Points are lost. They do not stack; if you gain Temporary Hit Points while you already have some, you choose which to keep. Temporary Hit Points don't heal; they just prevent damage to real Hit Points. Use them to mitigate burst damage, not as a substitute for healing.",
+        "cta": "DMs: Remind players that Temporary Hit Points absorb the first 17 damage before real Hit Points, and they don't stack.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-09.mp4",
+        "video_sha256": "26711a6f344372dec074a17e141233d50e27728e00fa153fed27b1b29321b741"
+      }
     }
   ]
 }
