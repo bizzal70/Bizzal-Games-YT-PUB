@@ -7237,6 +7237,50 @@
       "video_id": "17951517231328509",
       "day": "2026-10-09",
       "published_at": "2026-10-09T14:37:45+00:00"
+    },
+    {
+      "content_key": "a9125feb483bc54fc87337225a82d6e13fd941d8e4e010e09b7e830821127201",
+      "token_text": "breaking duration enchantment mechanic mistletoe",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Mistletoe: Enchantment Duration and Breaking Mechanics #shadowdark",
+      "video_id": "n3tmUAZTpZs",
+      "day": "2026-10-09",
+      "published_at": "2026-10-09T17:58:59+00:00"
+    },
+    {
+      "content_key": "13a883592870e862ccd04744865cc38449a0acaeb779ee94ecf022bc29a3e1d1",
+      "token_text": "damage enchantment ends mistletoe",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Mistletoe enchantment ends with damage #shadowdark",
+      "video_id": "4moEEUcJQnY",
+      "day": "2026-10-09-shadowdark-clip1",
+      "published_at": "2026-10-09T18:00:44+00:00"
+    },
+    {
+      "content_key": "9a73db01e41be96e378f299f4c2561f8b861989efbe2ee62915246640ed92672",
+      "token_text": "days enchantment last mistletoe",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Mistletoe's enchantment lasts 1-8 days #shadowdark",
+      "video_id": "zCbZ8bPVajw",
+      "day": "2026-10-09-shadowdark-clip2",
+      "published_at": "2026-10-09T18:02:20+00:00"
+    },
+    {
+      "content_key": "94430d79faeacaf648aa2d24bd02f420e3539f1928d597eb27ab22f575d4b0e3",
+      "token_text": "affect creature mistletoe one two",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Mistletoe affects two creatures, not one #shadowdark",
+      "video_id": "GXHTAHT4bic",
+      "day": "2026-10-09-shadowdark-clip3",
+      "published_at": "2026-10-09T18:04:03+00:00"
     }
   ]
 }

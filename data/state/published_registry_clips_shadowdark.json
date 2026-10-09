@@ -649,6 +649,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-09-30-shadowdark-clip3.mp4",
         "video_sha256": "27c95f8d6bfb65d0f1a3900292e787c76590ebe6e9225c58e1edd83cf6749440"
       }
+    },
+    {
+      "published_utc": "2026-10-09T18:00:44Z",
+      "day": "2026-10-09-shadowdark-clip1",
+      "content_id": "clip:05d0ae892295c73f",
+      "publish_hash": "723efa6df113ed49fe34c98407c6fee1f92a184bf90e8e215636925dd9ab2f60",
+      "youtube_video_id": "4moEEUcJQnY",
+      "youtube_url": "https://www.youtube.com/watch?v=4moEEUcJQnY",
+      "video_sha256": "1f3bb72245775cb308b60679a42a741c107a43f2c336fd59968d2e118a3bbd6b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-09-shadowdark-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-10-09-shadowdark-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:05d0ae892295c73f",
+        "canonical_hash": "",
+        "script_id": "05d0ae892295c73f5144f606450f0911249efe1752b03ed58e9707ef4a83f61c",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Mistletoe enchantment ends with damage",
+        "hook": "Mistletoe enchantment ends with damage",
+        "body": "In Shadowdark RPG, Mistletoe's enchantment can be broken if either enchanted creature takes damage and succeeds on a DC 15 Charisma check. This adds a layer of strategy, as players must balance risks and benefits.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-09-shadowdark-clip1.mp4",
+        "video_sha256": "1f3bb72245775cb308b60679a42a741c107a43f2c336fd59968d2e118a3bbd6b"
+      }
+    },
+    {
+      "published_utc": "2026-10-09T18:02:20Z",
+      "day": "2026-10-09-shadowdark-clip2",
+      "content_id": "clip:816a8b83b5d35aeb",
+      "publish_hash": "f2aa0f1b34e1714a25fa66b0150c659e020cb4b84e1daf74759ace759f3b0f67",
+      "youtube_video_id": "zCbZ8bPVajw",
+      "youtube_url": "https://www.youtube.com/watch?v=zCbZ8bPVajw",
+      "video_sha256": "51a808b0902d02877772520fc2862334cd644e4835dae8d24201668d8dfe5fe1",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-09-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-10-09-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:816a8b83b5d35aeb",
+        "canonical_hash": "",
+        "script_id": "816a8b83b5d35aeb1e3f1f59923154e2eb0c9eba7e5c4239964348cd84869cdf",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Mistletoe's enchantment lasts 1-8 days",
+        "hook": "Mistletoe's enchantment lasts 1-8 days",
+        "body": "Mistletoe's enchantment duration in Shadowdark RPG is determined by a d8 roll, lasting 1 to 8 days. This variability requires strategic planning, as a short duration might disrupt plans, while a long one can forge unexpected alliances.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-09-shadowdark-clip2.mp4",
+        "video_sha256": "51a808b0902d02877772520fc2862334cd644e4835dae8d24201668d8dfe5fe1"
+      }
+    },
+    {
+      "published_utc": "2026-10-09T18:04:03Z",
+      "day": "2026-10-09-shadowdark-clip3",
+      "content_id": "clip:7ff0859ba29b1bda",
+      "publish_hash": "b36b8e5e4fca8f14d115072d3a042486d16e358b233035dbef3ae3b25a00550f",
+      "youtube_video_id": "GXHTAHT4bic",
+      "youtube_url": "https://www.youtube.com/watch?v=GXHTAHT4bic",
+      "video_sha256": "bd63a18b69514343c78e206ee56c6c13ca601689029c0f87fea30bd19c87f14b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-09-shadowdark-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-10-09-shadowdark-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:7ff0859ba29b1bda",
+        "canonical_hash": "",
+        "script_id": "7ff0859ba29b1bdaadcc5c086de091841c1a35e6d953a3c923275f8bdd064537",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Mistletoe affects two creatures, not one",
+        "hook": "Mistletoe affects two creatures, not one",
+        "body": "Unlike single-target enchantments, Mistletoe in Shadowdark RPG bonds two creatures, offering dual influence. This can be a game-changer in scenarios, but remember it's breakable by damage and requires proximity to cast.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-09-shadowdark-clip3.mp4",
+        "video_sha256": "bd63a18b69514343c78e206ee56c6c13ca601689029c0f87fea30bd19c87f14b"
+      }
     }
   ]
 }
