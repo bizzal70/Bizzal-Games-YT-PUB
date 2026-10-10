@@ -2246,6 +2246,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-09.mp4",
         "video_sha256": "7e2a45908fad1afcf1312c91cc5efb0cdbdd1066ea7f3aa22d47fec12b62f071"
       }
+    },
+    {
+      "published_utc": "2026-10-10T14:23:39Z",
+      "day": "2026-10-10",
+      "content_id": "bgp-2026-10-10-rules-myth-rule-5-dcfb580df565",
+      "publish_hash": "7dbf39d807ed42a3ca84a1f41cc73cc6a2d4c4e00566871e5884f051404da80c",
+      "youtube_video_id": "-0RanBcTSJo",
+      "youtube_url": "https://www.youtube.com/watch?v=-0RanBcTSJo",
+      "video_sha256": "8ccd53335eeac83445bf8ba9a8eadf03c907c9e86e415c799c07385c7a39a263",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-10.mp4",
+      "fingerprint": {
+        "day": "2026-10-10",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-10-10-rules-myth-rule-5-dcfb580df565",
+        "canonical_hash": "dcfb580df5658f72ef37befffbf4a762be01400816b6b8fc9dd18806850cfa0b",
+        "script_id": "a6cd10a4dde0dea075c163627ba48c558327c277ac729596feff2a010c08ec11",
+        "fact_kind": "rule",
+        "fact_pk": 5,
+        "fact_name": "Corruption",
+        "hook": "Corruption surprises wizards with its permanence - a natural 1 on a spell check means the spell is lost.",
+        "body": "A wizard rolling a natural 1 on a spell check loses the spell permanently and must roll on the Corruption table, using d6+Luck for minor or d10 for major effects. Corruption results range from cosmetic changes to ability drain or even madness, and these effects cannot be removed by any means, including Remove Curse. Underestimating this leads to treating Corruption as a temporary setback, but the real adjustment is recognizing every spell cast as a potential risk to the character's long-term viability.",
+        "cta": "Judges: Remind wizards that a natural 1 on spell checks means permanent spell loss and irreversible corruption - plan accordingly.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-10.mp4",
+        "video_sha256": "8ccd53335eeac83445bf8ba9a8eadf03c907c9e86e415c799c07385c7a39a263"
+      }
     }
   ]
 }

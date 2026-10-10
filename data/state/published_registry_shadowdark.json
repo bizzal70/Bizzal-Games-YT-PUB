@@ -2478,6 +2478,32 @@
         "video_sha256": "256b4bbe213f66f248838cb200494ce7958d23b77c1718a92c893c7bdfb22038"
       },
       "tone_lint_violation": "vague filler phrase: often leads to"
+    },
+    {
+      "published_utc": "2026-10-10T14:34:11Z",
+      "day": "2026-10-10",
+      "content_id": "bgp-2026-10-10-rules-ruling-rule-8-e1a4938798fc",
+      "publish_hash": "fb76f0002c2b1cf73e6c9ebd37965e28eb7d786320b234ae2a9a5c30be0106e7",
+      "youtube_video_id": "W-yfv6l3HXo",
+      "youtube_url": "https://www.youtube.com/watch?v=W-yfv6l3HXo",
+      "video_sha256": "0816d261f47fa958b11a6c67bcc0f879e967dbc6a4ff29deea1311004c94db45",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-10.mp4",
+      "fingerprint": {
+        "day": "2026-10-10",
+        "category": "rules_ruling",
+        "angle": "common_table_mistake",
+        "content_id": "bgp-2026-10-10-rules-ruling-rule-8-e1a4938798fc",
+        "canonical_hash": "e1a4938798fcd5e73546076a8c20eeb1e80c5ae7ab6bb42d5c60d1350a00be40",
+        "script_id": "cf6b25027c54b7cd2262dd925b9732e287ae1de907a74334c925cc49adb7c26c",
+        "fact_kind": "rule",
+        "fact_pk": 8,
+        "fact_name": "Dying and Death",
+        "hook": "Dying and Death confuses tables over survival checks - DC 15 CON check determines survival.",
+        "body": "At 0 HP, a character enters a dying state and must make a DC 15 CON check each round or die. A natural 20 on this check stabilizes the character at 1 HP. Allies can attempt to stabilize a dying character with a DC 12 WIS check. Speeding through these checks results in missed stabilization opportunities.",
+        "cta": "GMs: Enforce the DC 15 CON check for dying characters and ensure allies remember the DC 12 WIS check to stabilize.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-10.mp4",
+        "video_sha256": "0816d261f47fa958b11a6c67bcc0f879e967dbc6a4ff29deea1311004c94db45"
+      }
     }
   ]
 }

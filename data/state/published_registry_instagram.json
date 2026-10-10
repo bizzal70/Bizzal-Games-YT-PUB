@@ -3462,6 +3462,51 @@
       "hook": "Bogthorn's thorn hail is more dangerous than its stab attack - poison with DC 12 CON or paralyze for 1d4.",
       "body": "Bogthorn's thorn hail attack hits at near range with a +2 bonus and deals 1d4 damage plus poison. Failing the DC 12 Constitution save results in paralysis for 1d4 rounds, which can be devastating. Underestimating the impact of paralysis often leads to focusing on its stab attack instead. Prioritizing movement to avoid the thorn hail is critical to counter its strategy.",
       "cta": "GMs: Use Bogthorn's thorn hail to paralyze and isolate targets; players, stay out of its near range or face the consequences."
+    },
+    {
+      "published_utc": "2026-10-10T14:24:56Z",
+      "day": "2026-10-10",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-10-rules-myth-rule-5-dcfb580df565",
+      "instagram_post_id": "18629844799023976",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "8ccd53335eeac83445bf8ba9a8eadf03c907c9e86e415c799c07385c7a39a263",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-10.mp4",
+      "fact_name": "Corruption",
+      "category": "rules_myth",
+      "hook": "Corruption surprises wizards with its permanence - a natural 1 on a spell check means the spell is lost.",
+      "body": "A wizard rolling a natural 1 on a spell check loses the spell permanently and must roll on the Corruption table, using d6+Luck for minor or d10 for major effects. Corruption results range from cosmetic changes to ability drain or even madness, and these effects cannot be removed by any means, including Remove Curse. Underestimating this leads to treating Corruption as a temporary setback, but the real adjustment is recognizing every spell cast as a potential risk to the character's long-term viability.",
+      "cta": "Judges: Remind wizards that a natural 1 on spell checks means permanent spell loss and irreversible corruption - plan accordingly."
+    },
+    {
+      "published_utc": "2026-10-10T14:30:54Z",
+      "day": "2026-10-10",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-10-item-spotlight-item-srd-2024-wand-of-polymorph-b230c7026375",
+      "instagram_post_id": "18086530508695388",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d769557a95e7b61e662d342a465a540a3d09c028baef83106fe8a41857bf8abf",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-10.mp4",
+      "fact_name": "Wand of Polymorph",
+      "category": "item_spotlight",
+      "hook": "Wand of Polymorph changes encounters more than players expect - save DC 15 forces tough decisions.",
+      "body": "The Wand of Polymorph holds 7 charges and allows casting Polymorph with a save DC of 15. Players frequently misuse it by attempting to polymorph every enemy, ignoring the risk of the wand crumbling on a 1 when the last charge is used. Strategic play involves reserving charges for pivotal moments where altering a single creature's form can decisively shift an encounter's outcome.",
+      "cta": "DMs: Save the Wand of Polymorph's charges for when a single DC 15 save can turn the tide of battle."
+    },
+    {
+      "published_utc": "2026-10-10T14:35:26Z",
+      "day": "2026-10-10",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-10-rules-ruling-rule-8-e1a4938798fc",
+      "instagram_post_id": "17897926077611005",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "0816d261f47fa958b11a6c67bcc0f879e967dbc6a4ff29deea1311004c94db45",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-10.mp4",
+      "fact_name": "Dying and Death",
+      "category": "rules_ruling",
+      "hook": "Dying and Death confuses tables over survival checks - DC 15 CON check determines survival.",
+      "body": "At 0 HP, a character enters a dying state and must make a DC 15 CON check each round or die. A natural 20 on this check stabilizes the character at 1 HP. Allies can attempt to stabilize a dying character with a DC 12 WIS check. Speeding through these checks results in missed stabilization opportunities.",
+      "cta": "GMs: Enforce the DC 15 CON check for dying characters and ensure allies remember the DC 12 WIS check to stabilize."
     }
   ]
 }

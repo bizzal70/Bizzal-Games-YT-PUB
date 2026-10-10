@@ -2869,6 +2869,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-09.mp4",
         "video_sha256": "26711a6f344372dec074a17e141233d50e27728e00fa153fed27b1b29321b741"
       }
+    },
+    {
+      "published_utc": "2026-10-10T14:29:08Z",
+      "day": "2026-10-10",
+      "content_id": "bgp-2026-10-10-item-spotlight-item-srd-2024-wand-of-polymorph-b230c7026375",
+      "publish_hash": "3b15987e9972cb2498e6b160ef812101de78ffa96022d13239204caf32ed533f",
+      "youtube_video_id": "qTS2sfErJGg",
+      "youtube_url": "https://www.youtube.com/watch?v=qTS2sfErJGg",
+      "video_sha256": "d769557a95e7b61e662d342a465a540a3d09c028baef83106fe8a41857bf8abf",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-10.mp4",
+      "fingerprint": {
+        "day": "2026-10-10",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-10-10-item-spotlight-item-srd-2024-wand-of-polymorph-b230c7026375",
+        "canonical_hash": "b230c70263750064b6d35861e7c40cde4e427314e3351a893d2b93d27f3ba4af",
+        "script_id": "8ad47adf61c3b5b375297daa0db7a8adbe0e59f2f08aefac3ff728a7e2e4ccfe",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_wand-of-polymorph",
+        "fact_name": "Wand of Polymorph",
+        "hook": "Wand of Polymorph changes encounters more than players expect - save DC 15 forces tough decisions.",
+        "body": "The Wand of Polymorph holds 7 charges and allows casting Polymorph with a save DC of 15. Players frequently misuse it by attempting to polymorph every enemy, ignoring the risk of the wand crumbling on a 1 when the last charge is used. Strategic play involves reserving charges for pivotal moments where altering a single creature's form can decisively shift an encounter's outcome.",
+        "cta": "DMs: Save the Wand of Polymorph's charges for when a single DC 15 save can turn the tide of battle.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-10.mp4",
+        "video_sha256": "d769557a95e7b61e662d342a465a540a3d09c028baef83106fe8a41857bf8abf"
+      }
     }
   ]
 }
