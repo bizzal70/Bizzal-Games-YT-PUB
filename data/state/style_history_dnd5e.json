@@ -1150,5 +1150,17 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-10-11": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "gritty_dm",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

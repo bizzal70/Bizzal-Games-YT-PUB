@@ -1146,5 +1146,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-11": {
+    "item_spotlight": {
+      "angle": "clever_use",
+      "voice": "grim_warden",
+      "tone": "dry",
+      "persona": "dungeon_gear_mentor",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

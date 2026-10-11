@@ -3507,6 +3507,51 @@
       "hook": "Dying and Death confuses tables over survival checks - DC 15 CON check determines survival.",
       "body": "At 0 HP, a character enters a dying state and must make a DC 15 CON check each round or die. A natural 20 on this check stabilizes the character at 1 HP. Allies can attempt to stabilize a dying character with a DC 12 WIS check. Speeding through these checks results in missed stabilization opportunities.",
       "cta": "GMs: Enforce the DC 15 CON check for dying characters and ensure allies remember the DC 12 WIS check to stabilize."
+    },
+    {
+      "published_utc": "2026-10-11T14:24:48Z",
+      "day": "2026-10-11",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-11-monster-tactic-creature-144-e1d06ee73350",
+      "instagram_post_id": "18207204460369582",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c34b4fee6ac65d88d50059d647920ad4c15d2d5a37b4102898d3769a2b96824d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-11.mp4",
+      "fact_name": "Siege Colossus",
+      "category": "monster_tactic",
+      "hook": "Siege Colossus pressures parties with overwhelming force - 3d24 action dice and attacks that knock prone.",
+      "body": "With 3d24 action dice, the Siege Colossus can unleash multiple attacks each round, combining stomps and long-range missile fire. Its stomp attack deals 2d24+10 damage and knocks targets prone unless they succeed on a DC 20 Reflex save. Many underestimate the impact of its 500' range ballista and trebuchet, leading to devastating hits before closing the distance. Effective play involves leveraging terrain to limit line of sight and engaging from multiple angles to divide its attention.",
+      "cta": "Judges: Place the Siege Colossus where its 500' range ballista can punish the party's predictable clustering and lack of cover."
+    },
+    {
+      "published_utc": "2026-10-11T14:29:52Z",
+      "day": "2026-10-11",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-11-encounter-seed-creature-srd-2024-mummy-7a9787c7fd1e",
+      "instagram_post_id": "17988453168074926",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c9236268360ede5633ebc814facff8aa15abb03c88211ab5d55f67fc4cbd956e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-11.mp4",
+      "fact_name": "Mummy",
+      "category": "encounter_seed",
+      "hook": "Mummy earns its stakes fast.",
+      "body": "Mummy's AC of 11 and HP 58 make it deceptively fragile, but its Dreadful Glare and Multiattack can quickly shift the battlefield. Underestimating the paralysis effect from Dreadful Glare leads to poor prioritization of Wisdom saves. Focus fire on the Mummy before it can exploit its condition immunities and incapacitate key players.",
+      "cta": "DMs: When players ignore the Mummy's Dreadful Glare, remind them that failing a DC 11 Wisdom save means paralysis - then watch the panic."
+    },
+    {
+      "published_utc": "2026-10-11T14:34:21Z",
+      "day": "2026-10-11",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-11-item-spotlight-item-85-7ebbc9346061",
+      "instagram_post_id": "17941976076097701",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "91a142c11124135fe7ae6f6ccbc6d269fbdc7cf90d1f95beab8f479c9e877c87",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-11.mp4",
+      "fact_name": "Sword Of The Ancients",
+      "category": "item_spotlight",
+      "hook": "Sword Of The Ancients isn't just a +2 longsword - it can be summoned across the plane.",
+      "body": "The Sword Of The Ancients is unbreakable and cuts through any material, which means it's not just about dealing damage. Most players waste its potential by treating it like a standard weapon in every encounter. The real value is in summoning it at the precise moment when disarming or bypassing obstacles matters, not swinging it at every enemy.",
+      "cta": "GMs: Remind them to summon the Sword Of The Ancients when disarmed or trapped, not just to start a fight."
     }
   ]
 }

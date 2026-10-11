@@ -2272,6 +2272,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-10.mp4",
         "video_sha256": "8ccd53335eeac83445bf8ba9a8eadf03c907c9e86e415c799c07385c7a39a263"
       }
+    },
+    {
+      "published_utc": "2026-10-11T14:23:49Z",
+      "day": "2026-10-11",
+      "content_id": "bgp-2026-10-11-monster-tactic-creature-144-e1d06ee73350",
+      "publish_hash": "fb6eb205359fffa18c94d73ec79aac962d584acb11d2cbee253974cc64c95156",
+      "youtube_video_id": "-sHYBFQo6W4",
+      "youtube_url": "https://www.youtube.com/watch?v=-sHYBFQo6W4",
+      "video_sha256": "c34b4fee6ac65d88d50059d647920ad4c15d2d5a37b4102898d3769a2b96824d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-11.mp4",
+      "fingerprint": {
+        "day": "2026-10-11",
+        "category": "monster_tactic",
+        "angle": "dungeon_level_fit",
+        "content_id": "bgp-2026-10-11-monster-tactic-creature-144-e1d06ee73350",
+        "canonical_hash": "e1d06ee73350cfe6ea19a41e34f590de0f672f325b1a86615460da84f5007c4b",
+        "script_id": "a6c9490a4408a670e0f633eacf1ca5215f2936acb54e32a91abd4bd1fb9eadba",
+        "fact_kind": "creature",
+        "fact_pk": 144,
+        "fact_name": "Siege Colossus",
+        "hook": "Siege Colossus pressures parties with overwhelming force - 3d24 action dice and attacks that knock prone.",
+        "body": "With 3d24 action dice, the Siege Colossus can unleash multiple attacks each round, combining stomps and long-range missile fire. Its stomp attack deals 2d24+10 damage and knocks targets prone unless they succeed on a DC 20 Reflex save. Many underestimate the impact of its 500' range ballista and trebuchet, leading to devastating hits before closing the distance. Effective play involves leveraging terrain to limit line of sight and engaging from multiple angles to divide its attention.",
+        "cta": "Judges: Place the Siege Colossus where its 500' range ballista can punish the party's predictable clustering and lack of cover.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-11.mp4",
+        "video_sha256": "c34b4fee6ac65d88d50059d647920ad4c15d2d5a37b4102898d3769a2b96824d"
+      }
     }
   ]
 }

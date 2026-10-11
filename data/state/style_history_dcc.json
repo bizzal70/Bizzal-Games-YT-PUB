@@ -1034,5 +1034,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-10-11": {
+    "monster_tactic": {
+      "angle": "dungeon_level_fit",
+      "voice": "survival_coach",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

@@ -2895,6 +2895,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-10.mp4",
         "video_sha256": "d769557a95e7b61e662d342a465a540a3d09c028baef83106fe8a41857bf8abf"
       }
+    },
+    {
+      "published_utc": "2026-10-11T14:28:24Z",
+      "day": "2026-10-11",
+      "content_id": "bgp-2026-10-11-encounter-seed-creature-srd-2024-mummy-7a9787c7fd1e",
+      "publish_hash": "b7d316dad6efb945888fa97c6bce4f78d416850da02d39a5558062d9158f9d1c",
+      "youtube_video_id": "0eI9adtrr58",
+      "youtube_url": "https://www.youtube.com/watch?v=0eI9adtrr58",
+      "video_sha256": "c9236268360ede5633ebc814facff8aa15abb03c88211ab5d55f67fc4cbd956e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-11.mp4",
+      "fingerprint": {
+        "day": "2026-10-11",
+        "category": "encounter_seed",
+        "angle": "twist",
+        "content_id": "bgp-2026-10-11-encounter-seed-creature-srd-2024-mummy-7a9787c7fd1e",
+        "canonical_hash": "7a9787c7fd1e021b42f4bbf4c4e8733b7db6576ac5604e40b7a88c4ded2b6f1c",
+        "script_id": "a23989847386527583123158e2e3bf439e34cc719acde2e136539097f8f50823",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_mummy",
+        "fact_name": "Mummy",
+        "hook": "Mummy earns its stakes fast.",
+        "body": "Mummy's AC of 11 and HP 58 make it deceptively fragile, but its Dreadful Glare and Multiattack can quickly shift the battlefield. Underestimating the paralysis effect from Dreadful Glare leads to poor prioritization of Wisdom saves. Focus fire on the Mummy before it can exploit its condition immunities and incapacitate key players.",
+        "cta": "DMs: When players ignore the Mummy's Dreadful Glare, remind them that failing a DC 11 Wisdom save means paralysis - then watch the panic.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-11.mp4",
+        "video_sha256": "c9236268360ede5633ebc814facff8aa15abb03c88211ab5d55f67fc4cbd956e"
+      }
     }
   ]
 }

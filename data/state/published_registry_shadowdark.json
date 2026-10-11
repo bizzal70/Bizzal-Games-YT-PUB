@@ -2504,6 +2504,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-10.mp4",
         "video_sha256": "0816d261f47fa958b11a6c67bcc0f879e967dbc6a4ff29deea1311004c94db45"
       }
+    },
+    {
+      "published_utc": "2026-10-11T14:33:24Z",
+      "day": "2026-10-11",
+      "content_id": "bgp-2026-10-11-item-spotlight-item-85-7ebbc9346061",
+      "publish_hash": "de724325f7a3f9dbbea5edbb4071be369aff02231186019a978a501275198835",
+      "youtube_video_id": "ghan3AcxoaE",
+      "youtube_url": "https://www.youtube.com/watch?v=ghan3AcxoaE",
+      "video_sha256": "91a142c11124135fe7ae6f6ccbc6d269fbdc7cf90d1f95beab8f479c9e877c87",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-11.mp4",
+      "fingerprint": {
+        "day": "2026-10-11",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-10-11-item-spotlight-item-85-7ebbc9346061",
+        "canonical_hash": "7ebbc9346061008e8b2ec4b20f07268d2ba08cf73e21ec6d52af9609fd6cfb1c",
+        "script_id": "cfb384938a7cd2d5ac0584e6a6892528b8f08a3c2a0f5ab087988e3498107c63",
+        "fact_kind": "item",
+        "fact_pk": 85,
+        "fact_name": "Sword Of The Ancients",
+        "hook": "Sword Of The Ancients isn't just a +2 longsword - it can be summoned across the plane.",
+        "body": "The Sword Of The Ancients is unbreakable and cuts through any material, which means it's not just about dealing damage. Most players waste its potential by treating it like a standard weapon in every encounter. The real value is in summoning it at the precise moment when disarming or bypassing obstacles matters, not swinging it at every enemy.",
+        "cta": "GMs: Remind them to summon the Sword Of The Ancients when disarmed or trapped, not just to start a fight.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-11.mp4",
+        "video_sha256": "91a142c11124135fe7ae6f6ccbc6d269fbdc7cf90d1f95beab8f479c9e877c87"
+      }
     }
   ]
 }
