@@ -1,6 +1,83 @@
 [
   {
     "system": "dnd5e",
+    "title": "Unionizing D&D: What It Means for 2024 Rules",
+    "angle": "Explore the potential impacts of unionization on the development of D&D 5e's 2024 rules update.",
+    "rationale": "With D&D unionizing as a major topic, understanding how this might affect future rules is crucial.",
+    "fixture_hint": "rule",
+    "search_keyword": "Dungeons & Dragons is unionizing",
+    "created_date": "2026-10-12",
+    "status": "pending",
+    "brief_id": "5eaa131fc74c"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Dark Sun Graphic Novels: What Can D&D 5e Learn?",
+    "angle": "Analyze how the revival of Dark Sun in graphic novels could influence future D&D 5e settings.",
+    "rationale": "Dark Sun is being revived in graphic novels, sparking interest in its potential impact on D&D 5e.",
+    "fixture_hint": "rule",
+    "search_keyword": "Dark Sun graphic novels",
+    "created_date": "2026-10-12",
+    "status": "pending",
+    "brief_id": "9eec85aaa893"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Shadowfell Fighter: The New Subclass Explained",
+    "angle": "Dive into the mechanics and thematic elements of the new Shadowfell-themed Fighter subclass.",
+    "rationale": "The release of a Shadowfell-themed Fighter subclass is a timely addition to D&D Beyond.",
+    "fixture_hint": "class",
+    "search_keyword": "D&D Beyond Drops adds first subclass, a Shadowfell-themed Fighter",
+    "created_date": "2026-10-12",
+    "status": "pending",
+    "brief_id": "3a1f3a9abd58"
+  },
+  {
+    "system": "shadowdark",
+    "title": "AI Ban and Shadowdark: A New Era of Game Mastering",
+    "angle": "Discuss how the AI ban is shaping a new era of game mastering in Shadowdark RPG.",
+    "rationale": "AI's impact on game mastering is a hot topic, with Shadowdark evolving its approach.",
+    "fixture_hint": "rule",
+    "search_keyword": "Dungeons & Dragons is unionizing--citing AI",
+    "created_date": "2026-10-12",
+    "status": "pending",
+    "brief_id": "846496cbaedc"
+  },
+  {
+    "system": "shadowdark",
+    "title": "The Rotating Dungeon: Innovative Exploration in Shadowdark",
+    "angle": "Examine the new Rotating Dungeon mechanic and its impact on exploration in Shadowdark.",
+    "rationale": "As exploration mechanics evolve, the Rotating Dungeon offers fresh challenges.",
+    "fixture_hint": "rule",
+    "search_keyword": "Dungeon Walkthroughs: Shadowdark Maps Revolution",
+    "created_date": "2026-10-12",
+    "status": "pending",
+    "brief_id": "e40f88241e41"
+  },
+  {
+    "system": "dcc",
+    "title": "The Tarrasque Unleashed: DCC's Colossal Threat",
+    "angle": "Detail the mechanics and play strategies for facing the colossal Tarrasque in DCC.",
+    "rationale": "The Tarrasque is a legendary creature, and its presence in DCC is of great interest now.",
+    "fixture_hint": "creature",
+    "search_keyword": "Tarrasque Unleashed: DCC's Colossal Threat",
+    "created_date": "2026-10-12",
+    "status": "pending",
+    "brief_id": "5c2543bcf1e2"
+  },
+  {
+    "system": "dcc",
+    "title": "Faster, Purple Worm!: DCC's Newest Threat",
+    "angle": "Look at the mechanics and challenges presented by the new Purple Worm threat in DCC.",
+    "rationale": "The introduction of the Purple Worm in DCC is a current topic of interest.",
+    "fixture_hint": "creature",
+    "search_keyword": "Faster, Purple Worm!: Dungeon Crawl Classics' Newest Threat",
+    "created_date": "2026-10-12",
+    "status": "pending",
+    "brief_id": "d2f606917768"
+  },
+  {
+    "system": "dnd5e",
     "title": "Shadowfell Fighter: Unleashing the Gloom",
     "angle": "Explore the unique abilities and thematic elements of the new Shadowfell-themed Fighter subclass.",
     "rationale": "D&D Beyond's addition of the Shadowfell-themed Fighter subclass is generating buzz.",
