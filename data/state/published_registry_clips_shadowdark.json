@@ -727,6 +727,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-09-shadowdark-clip3.mp4",
         "video_sha256": "bd63a18b69514343c78e206ee56c6c13ca601689029c0f87fea30bd19c87f14b"
       }
+    },
+    {
+      "published_utc": "2026-10-12T18:03:28Z",
+      "day": "2026-10-12-shadowdark-clip1",
+      "content_id": "clip:d2bc5abd39bf3096",
+      "publish_hash": "503fade53b285121b210a40c1dd9ec57fc8c66669df9ea3eb150cf317dba3e8a",
+      "youtube_video_id": "j1mJIP2MEeI",
+      "youtube_url": "https://www.youtube.com/watch?v=j1mJIP2MEeI",
+      "video_sha256": "98ab49f43f20cfc0a2212cf2c2d9b3f0d7b3624376e513bdabcdd88e06e7eddf",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-12-shadowdark-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-10-12-shadowdark-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:d2bc5abd39bf3096",
+        "canonical_hash": "",
+        "script_id": "d2bc5abd39bf3096ea7e673a0001b81b7373426d01b82d53c0b94f10d3ccdaac",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Witchlight requires constant focus",
+        "hook": "Witchlight requires constant focus",
+        "body": "Witchlight, a tier 1 Witch spell, demands concentration to stay active. Losing focus from damage or distraction ends it. Its utility isn't just illumination; it changes colors and shapes for communication and deception. Stay vigilant to maximize impact.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-12-shadowdark-clip1.mp4",
+        "video_sha256": "98ab49f43f20cfc0a2212cf2c2d9b3f0d7b3624376e513bdabcdd88e06e7eddf"
+      }
     }
   ]
 }
