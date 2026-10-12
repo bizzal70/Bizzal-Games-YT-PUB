@@ -7413,6 +7413,50 @@
       "video_id": "17941976076097701",
       "day": "2026-10-11",
       "published_at": "2026-10-11T14:34:21+00:00"
+    },
+    {
+      "content_key": "d9cb0bde18da0c819a4154f7b7a1e22d2e8a9a6236e12a740263b229d7734b1a",
+      "token_text": "20 alter battlefield caster control damage deal ice level more range",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Control Ice alters the battlefield more than it deals damage #dcc",
+      "video_id": "f3sfcPcVZQo",
+      "day": "2026-10-12",
+      "published_at": "2026-10-12T14:33:24+00:00"
+    },
+    {
+      "content_key": "0eac5e777dd07080331a81425c407eda2bda8ea6519cf81fc0df4a03a75606f3",
+      "token_text": "20 alter battlefield caster control damage deal ice level more range",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Control Ice alters the battlefield more than it deals damage - range is 20' per caster level.",
+      "video_id": "18078396515709054",
+      "day": "2026-10-12",
+      "published_at": "2026-10-12T14:34:26+00:00"
+    },
+    {
+      "content_key": "b9f00a426879dfa5bda5b24298ff9584bd78abf46504f234bc90d9d96e27c427",
+      "token_text": "added damage doubled halved mislead often player resistance subtracted vulnerability",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Resistance and Vulnerability often mislead players #dnd5e",
+      "video_id": "2Qc9JawAbzc",
+      "day": "2026-10-12",
+      "published_at": "2026-10-12T14:38:14+00:00"
+    },
+    {
+      "content_key": "bd807a2ceadcb8397b4213f628e5f637a373c517e499191923e5621b7b6582a2",
+      "token_text": "added damage doubled halved mislead often player resistance subtracted vulnerability",
+      "system_id": "dnd5e",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Resistance and Vulnerability often mislead players - damage is halved or doubled, not subtracted or added.",
+      "video_id": "18487330585110406",
+      "day": "2026-10-12",
+      "published_at": "2026-10-12T14:40:15+00:00"
     }
   ]
 }

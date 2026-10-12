@@ -3552,6 +3552,36 @@
       "hook": "Sword Of The Ancients isn't just a +2 longsword - it can be summoned across the plane.",
       "body": "The Sword Of The Ancients is unbreakable and cuts through any material, which means it's not just about dealing damage. Most players waste its potential by treating it like a standard weapon in every encounter. The real value is in summoning it at the precise moment when disarming or bypassing obstacles matters, not swinging it at every enemy.",
       "cta": "GMs: Remind them to summon the Sword Of The Ancients when disarmed or trapped, not just to start a fight."
+    },
+    {
+      "published_utc": "2026-10-12T14:34:26Z",
+      "day": "2026-10-12",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-12-spell-use-case-spell-93-72d417db37db",
+      "instagram_post_id": "18078396515709054",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "2e201c9e19ed8907a701f45a85764188c8bb8738130e1c8fe7e7badd461d52ee",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-12.mp4",
+      "fact_name": "Control Ice",
+      "category": "spell_use_case",
+      "hook": "Control Ice alters the battlefield more than it deals damage - range is 20' per caster level.",
+      "body": "Control Ice's real strength is in its versatility, not just its damage output. Wizards can use it to raise barriers or unleash freezing blasts, but the range of 20 feet per caster level means the spell can shift the battlefield in unexpected ways. The common misstep is casting it reactively for damage, overlooking its potential to reshape the encounter. Optimal use involves anticipating enemy movement and using the spell's effects to control the flow of battle.",
+      "cta": "Judges: Use Control Ice's 20' per caster level range to preemptively block escape routes, not just for flashy damage."
+    },
+    {
+      "published_utc": "2026-10-12T14:40:15Z",
+      "day": "2026-10-12",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-12-rules-myth-rule-srd-2024-damage-and-healing-resistance-and-vulnerability-5daf31eaad72",
+      "instagram_post_id": "18487330585110406",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "108ad030787edb8a967754d402719ec53cc1d51a1032b256d582f404cae85acd",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-12.mp4",
+      "fact_name": "Resistance and Vulnerability",
+      "category": "rules_myth",
+      "hook": "Resistance and Vulnerability often mislead players - damage is halved or doubled, not subtracted or added.",
+      "body": "Resistance to a damage type halves the damage taken, rounding down, while Vulnerability doubles it. Misinterpretation occurs when players treat these as flat reductions or additions, leading to incorrect damage calculations. Accurate application requires calculating the total damage first, then applying the resistance or vulnerability modifier.",
+      "cta": "DMs: Remind players that Resistance and Vulnerability modify total damage, not individual dice - page 16 has the details."
     }
   ]
 }

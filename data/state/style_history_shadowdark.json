@@ -1158,5 +1158,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-10-12": {
+    "encounter_seed": {
+      "angle": "moral_choice",
+      "voice": "torchbearer_ref",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

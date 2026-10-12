@@ -2298,6 +2298,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-11.mp4",
         "video_sha256": "c34b4fee6ac65d88d50059d647920ad4c15d2d5a37b4102898d3769a2b96824d"
       }
+    },
+    {
+      "published_utc": "2026-10-12T14:33:24Z",
+      "day": "2026-10-12",
+      "content_id": "bgp-2026-10-12-spell-use-case-spell-93-72d417db37db",
+      "publish_hash": "e9ba8856c9fb869a347c16472ddbef9246dbfa1f4097264e4ad920548267cc79",
+      "youtube_video_id": "f3sfcPcVZQo",
+      "youtube_url": "https://www.youtube.com/watch?v=f3sfcPcVZQo",
+      "video_sha256": "2e201c9e19ed8907a701f45a85764188c8bb8738130e1c8fe7e7badd461d52ee",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-12.mp4",
+      "fingerprint": {
+        "day": "2026-10-12",
+        "category": "spell_use_case",
+        "angle": "patron_invoke",
+        "content_id": "bgp-2026-10-12-spell-use-case-spell-93-72d417db37db",
+        "canonical_hash": "72d417db37db881fcd24750695074996be4ea06e5b60f3b8b471918c325b288f",
+        "script_id": "017433f8c7304745339e9cf88086fc2912a26b70769d1874dfb3e16f050f860d",
+        "fact_kind": "spell",
+        "fact_pk": 93,
+        "fact_name": "Control Ice",
+        "hook": "Control Ice alters the battlefield more than it deals damage - range is 20' per caster level.",
+        "body": "Control Ice's real strength is in its versatility, not just its damage output. Wizards can use it to raise barriers or unleash freezing blasts, but the range of 20 feet per caster level means the spell can shift the battlefield in unexpected ways. The common misstep is casting it reactively for damage, overlooking its potential to reshape the encounter. Optimal use involves anticipating enemy movement and using the spell's effects to control the flow of battle.",
+        "cta": "Judges: Use Control Ice's 20' per caster level range to preemptively block escape routes, not just for flashy damage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-12.mp4",
+        "video_sha256": "2e201c9e19ed8907a701f45a85764188c8bb8738130e1c8fe7e7badd461d52ee"
+      }
     }
   ]
 }
