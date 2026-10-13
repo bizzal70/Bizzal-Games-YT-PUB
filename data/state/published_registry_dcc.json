@@ -2324,6 +2324,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-12.mp4",
         "video_sha256": "2e201c9e19ed8907a701f45a85764188c8bb8738130e1c8fe7e7badd461d52ee"
       }
+    },
+    {
+      "published_utc": "2026-10-13T15:13:42Z",
+      "day": "2026-10-13",
+      "content_id": "bgp-2026-10-13-rules-ruling-rule-12-191aacca1f37",
+      "publish_hash": "c257894fd8043b55325c14772de0f0376b24b65dbbaf4d1765ff4ef9aba63437",
+      "youtube_video_id": "NoQ4wT3nK9Q",
+      "youtube_url": "https://www.youtube.com/watch?v=NoQ4wT3nK9Q",
+      "video_sha256": "138b1713b83ba9de13475d5753d9745fbee95c152dd3bf997bbab871c6a2c2da",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-13.mp4",
+      "fingerprint": {
+        "day": "2026-10-13",
+        "category": "rules_ruling",
+        "angle": "saving_throw_type",
+        "content_id": "bgp-2026-10-13-rules-ruling-rule-12-191aacca1f37",
+        "canonical_hash": "191aacca1f374fb6f26f354dc5d841bdbdf1f0c1824247e39511bd4a4fb21b59",
+        "script_id": "2abb9049afd4c36efbbbd6f8d1964379b01fda592fe327657b7bc105a9eb59e7",
+        "fact_kind": "rule",
+        "fact_pk": 12,
+        "fact_name": "Action Dice",
+        "hook": "Action Dice aren't just for extra attacks - they independently fuel each attack or spell per round.",
+        "body": "Action Dice grant characters the ability to perform multiple actions in a single round as they level up. Each die can be used for one attack or one spell cast. This means a high-level Warrior might roll a d20 and a d14, using them for separate attacks or a combination of attack and Mighty Deed. Casters can similarly use multiple dice to attempt multiple spells. A common mistake is assuming these dice only add to attack rolls, missing the opportunity for additional actions. Optimal play involves planning each round's actions to fully utilize all available dice.",
+        "cta": "Judges: Remind them Action Dice aren't just bonuses - each die is a separate action, so plan attacks and spells accordingly.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-13.mp4",
+        "video_sha256": "138b1713b83ba9de13475d5753d9745fbee95c152dd3bf997bbab871c6a2c2da"
+      }
     }
   ]
 }

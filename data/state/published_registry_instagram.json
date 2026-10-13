@@ -3612,6 +3612,21 @@
       "hook": "In the dark, Encumbrance and Gear Slots matters.",
       "body": "Myth vs rule: Encumbrance and Gear Slots. Characters have gear slots equal to their Strength score (minimum 10). Each item occupies 1 slot unless noted. Exceeding slots imposes disadvantage on physical checks. Clear rulings now save argument time later.",
       "cta": "GMs: Enforce the Strength-based gear slots to curb the players' hoarding tendencies and keep the game moving."
+    },
+    {
+      "published_utc": "2026-10-13T15:14:41Z",
+      "day": "2026-10-13",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-13-rules-ruling-rule-12-191aacca1f37",
+      "instagram_post_id": "18131045377761849",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "138b1713b83ba9de13475d5753d9745fbee95c152dd3bf997bbab871c6a2c2da",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-13.mp4",
+      "fact_name": "Action Dice",
+      "category": "rules_ruling",
+      "hook": "Action Dice aren't just for extra attacks - they independently fuel each attack or spell per round.",
+      "body": "Action Dice grant characters the ability to perform multiple actions in a single round as they level up. Each die can be used for one attack or one spell cast. This means a high-level Warrior might roll a d20 and a d14, using them for separate attacks or a combination of attack and Mighty Deed. Casters can similarly use multiple dice to attempt multiple spells. A common mistake is assuming these dice only add to attack rolls, missing the opportunity for additional actions. Optimal play involves planning each round's actions to fully utilize all available dice.",
+      "cta": "Judges: Remind them Action Dice aren't just bonuses - each die is a separate action, so plan attacks and spells accordingly."
     }
   ]
 }
