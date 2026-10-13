@@ -2947,6 +2947,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-12.mp4",
         "video_sha256": "108ad030787edb8a967754d402719ec53cc1d51a1032b256d582f404cae85acd"
       }
+    },
+    {
+      "published_utc": "2026-10-13T14:36:18Z",
+      "day": "2026-10-13",
+      "content_id": "bgp-2026-10-13-class-spotlight-class-xanathars-guide-path-of-the-zealot-b67e05c8d08d",
+      "publish_hash": "8b03ae0316ef49ba8db663f4f4c7747f1a9d7c83503c8e6454bbccb3b0c4ea21",
+      "youtube_video_id": "FWIiFbfXyBI",
+      "youtube_url": "https://www.youtube.com/watch?v=FWIiFbfXyBI",
+      "video_sha256": "e58b3d4034a7c43791d44e7ffd8023c6a6a4df65b5d217163097fb97dc6d6dfe",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-13.mp4",
+      "fingerprint": {
+        "day": "2026-10-13",
+        "category": "class_spotlight",
+        "angle": "early_power_spike",
+        "content_id": "bgp-2026-10-13-class-spotlight-class-xanathars-guide-path-of-the-zealot-b67e05c8d08d",
+        "canonical_hash": "b67e05c8d08d7d82cf3b29608cc2fe6a7b71ea3b8451756c26dcfdf21fc15205",
+        "script_id": "8896331d62f015581b4d0fee6d5f0e1e86ed52f842123af88cb6a3cde5afb5f3",
+        "fact_kind": "class",
+        "fact_pk": "xanathars-guide_path-of-the-zealot",
+        "fact_name": "Path of the Zealot",
+        "hook": "Path of the Zealot's early power spike catches players off guard - Divine Fury adds 1d6 necrotic or radiant.",
+        "body": "Divine Fury at 3rd level adds 1d6 necrotic or radiant damage to the first hit each turn while raging. This bonus applies every turn, not just once, which significantly boosts damage output over time. Consistent application of this bonus maximizes damage, rather than relying on critical hits or other spikes.",
+        "cta": "DMs: Remind players to hit early in the round to maximize Divine Fury's 1d6 damage boost every turn.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-13.mp4",
+        "video_sha256": "e58b3d4034a7c43791d44e7ffd8023c6a6a4df65b5d217163097fb97dc6d6dfe"
+      },
+      "tone_lint_violation": "vague filler phrase: catches players off guard"
     }
   ]
 }

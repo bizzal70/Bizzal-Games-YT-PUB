@@ -2530,6 +2530,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-11.mp4",
         "video_sha256": "91a142c11124135fe7ae6f6ccbc6d269fbdc7cf90d1f95beab8f479c9e877c87"
       }
+    },
+    {
+      "published_utc": "2026-10-13T14:40:16Z",
+      "day": "2026-10-13",
+      "content_id": "bgp-2026-10-13-rules-myth-rule-9-b09cc5413a57",
+      "publish_hash": "0d79c5a1a39f0ac7fda9737115ea4850acb9c3949a414a7538f5f44b3c899c8b",
+      "youtube_video_id": "vVb4e5dmuWg",
+      "youtube_url": "https://www.youtube.com/watch?v=vVb4e5dmuWg",
+      "video_sha256": "4a84696eec023e58d79d972587d62969c64c6b4451f195dbe7ef9f6b67a43581",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-13.mp4",
+      "fingerprint": {
+        "day": "2026-10-13",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-10-13-rules-myth-rule-9-b09cc5413a57",
+        "canonical_hash": "b09cc5413a57e80f213961e48918b19858d661fe012ffec46e3579c2656d0a80",
+        "script_id": "fb481fb36f76239a9bc7c07818b404b28b8c14bd6372981dcb1009bf48260b27",
+        "fact_kind": "rule",
+        "fact_pk": 9,
+        "fact_name": "Encumbrance and Gear Slots",
+        "hook": "In the dark, Encumbrance and Gear Slots matters.",
+        "body": "Myth vs rule: Encumbrance and Gear Slots. Characters have gear slots equal to their Strength score (minimum 10). Each item occupies 1 slot unless noted. Exceeding slots imposes disadvantage on physical checks. Clear rulings now save argument time later.",
+        "cta": "GMs: Enforce the Strength-based gear slots to curb the players' hoarding tendencies and keep the game moving.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-13.mp4",
+        "video_sha256": "4a84696eec023e58d79d972587d62969c64c6b4451f195dbe7ef9f6b67a43581"
+      }
     }
   ]
 }

@@ -1170,5 +1170,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-13": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "grim_warden",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

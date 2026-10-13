@@ -3582,6 +3582,36 @@
       "hook": "Resistance and Vulnerability often mislead players - damage is halved or doubled, not subtracted or added.",
       "body": "Resistance to a damage type halves the damage taken, rounding down, while Vulnerability doubles it. Misinterpretation occurs when players treat these as flat reductions or additions, leading to incorrect damage calculations. Accurate application requires calculating the total damage first, then applying the resistance or vulnerability modifier.",
       "cta": "DMs: Remind players that Resistance and Vulnerability modify total damage, not individual dice - page 16 has the details."
+    },
+    {
+      "published_utc": "2026-10-13T14:37:18Z",
+      "day": "2026-10-13",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-13-class-spotlight-class-xanathars-guide-path-of-the-zealot-b67e05c8d08d",
+      "instagram_post_id": "18094487462451266",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "e58b3d4034a7c43791d44e7ffd8023c6a6a4df65b5d217163097fb97dc6d6dfe",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-13.mp4",
+      "fact_name": "Path of the Zealot",
+      "category": "class_spotlight",
+      "hook": "Path of the Zealot's early power spike catches players off guard - Divine Fury adds 1d6 necrotic or radiant.",
+      "body": "Divine Fury at 3rd level adds 1d6 necrotic or radiant damage to the first hit each turn while raging. This bonus applies every turn, not just once, which significantly boosts damage output over time. Consistent application of this bonus maximizes damage, rather than relying on critical hits or other spikes.",
+      "cta": "DMs: Remind players to hit early in the round to maximize Divine Fury's 1d6 damage boost every turn."
+    },
+    {
+      "published_utc": "2026-10-13T14:41:14Z",
+      "day": "2026-10-13",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-13-rules-myth-rule-9-b09cc5413a57",
+      "instagram_post_id": "18028050188881238",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "4a84696eec023e58d79d972587d62969c64c6b4451f195dbe7ef9f6b67a43581",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-13.mp4",
+      "fact_name": "Encumbrance and Gear Slots",
+      "category": "rules_myth",
+      "hook": "In the dark, Encumbrance and Gear Slots matters.",
+      "body": "Myth vs rule: Encumbrance and Gear Slots. Characters have gear slots equal to their Strength score (minimum 10). Each item occupies 1 slot unless noted. Exceeding slots imposes disadvantage on physical checks. Clear rulings now save argument time later.",
+      "cta": "GMs: Enforce the Strength-based gear slots to curb the players' hoarding tendencies and keep the game moving."
     }
   ]
 }

@@ -1056,5 +1056,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-13": {
+    "rules_ruling": {
+      "angle": "saving_throw_type",
+      "voice": "grim_referee",
+      "tone": "neutral",
+      "persona": "rules_referee",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

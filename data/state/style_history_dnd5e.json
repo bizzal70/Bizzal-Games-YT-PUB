@@ -1172,5 +1172,17 @@
       "spice": [],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-10-13": {
+    "class_spotlight": {
+      "angle": "early_power_spike",
+      "voice": "rules_lawyer",
+      "tone": "heroic",
+      "persona": "class_mentor",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "sage"
+    }
   }
 }
