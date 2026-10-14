@@ -7611,6 +7611,50 @@
       "video_id": "17972858991187977",
       "day": "2026-10-14",
       "published_at": "2026-10-14T14:37:10+00:00"
+    },
+    {
+      "content_key": "a6704c8daa8643b4d631b9ba14ecbfbec1f8969b8555fc4952d5d17e4cf7ee7d",
+      "token_text": "damage force horizon mastering planar portal walker",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Horizon Walker: Mastering Planar Portals and Force Damage #dnd5e",
+      "video_id": "50mDcrfc6vk",
+      "day": "2026-10-14",
+      "published_at": "2026-10-14T17:55:38+00:00"
+    },
+    {
+      "content_key": "08d6e697088a67cc03dfc69b38040b4df4af469e8e112344efa8bcea50f12dd3",
+      "token_text": "detect find hidden path planar portal",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Detect Portal finds hidden planar paths #dnd5e",
+      "video_id": "vWIdmy0lDAs",
+      "day": "2026-10-14-dnd5e-clip1",
+      "published_at": "2026-10-14T17:58:49+00:00"
+    },
+    {
+      "content_key": "1f2f6426c85f23edcd1ec3f92c073bc3f0e205ac021179c1481e3997764def9a",
+      "token_text": "ethereal invisibility offer step strategic",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Ethereal Step offers strategic invisibility #dnd5e",
+      "video_id": "3dvnYZYHBZ8",
+      "day": "2026-10-14-dnd5e-clip2",
+      "published_at": "2026-10-14T18:02:26+00:00"
+    },
+    {
+      "content_key": "af8972868aa0fe535240007cb15522838b143fe4e4807b96f3367af17db19a16",
+      "token_text": "attack convert damage force planar warrior",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Planar Warrior converts attacks to force damage #dnd5e",
+      "video_id": "rfRxCQnbsiM",
+      "day": "2026-10-14-dnd5e-clip3",
+      "published_at": "2026-10-14T18:04:42+00:00"
     }
   ]
 }

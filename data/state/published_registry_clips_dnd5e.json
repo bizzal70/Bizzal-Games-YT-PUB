@@ -493,6 +493,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-05-dnd5e-clip3.mp4",
         "video_sha256": "a313edb19a4ed3a1a747b9fd2cd1c0f750e679f4d699efb21cf66cf3592f392f"
       }
+    },
+    {
+      "published_utc": "2026-10-14T17:58:49Z",
+      "day": "2026-10-14-dnd5e-clip1",
+      "content_id": "clip:903fcede092d2f07",
+      "publish_hash": "d9c3ca5d815cce5d5394cc24b8ecb23c58d93754de66774163277cddce17f780",
+      "youtube_video_id": "vWIdmy0lDAs",
+      "youtube_url": "https://www.youtube.com/watch?v=vWIdmy0lDAs",
+      "video_sha256": "dcd26009731dc0417caf51f7740f0d2568754b641b8b770cf76ec80709dc3e12",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-14-dnd5e-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-10-14-dnd5e-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:903fcede092d2f07",
+        "canonical_hash": "",
+        "script_id": "903fcede092d2f07f0c02c01d6c28b8561de4188fac5ea1ab285efd9f720268f",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Detect Portal finds hidden planar paths",
+        "hook": "Detect Portal finds hidden planar paths",
+        "body": "The Horizon Walker’s 'Detect Portal' feature senses planar portals within a 1-mile radius, usable at will. It doesn't pinpoint the location, but knowing a portal is nearby can prepare your party for extraplanar encounters. Regular use is crucial.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-14-dnd5e-clip1.mp4",
+        "video_sha256": "dcd26009731dc0417caf51f7740f0d2568754b641b8b770cf76ec80709dc3e12"
+      }
+    },
+    {
+      "published_utc": "2026-10-14T18:02:26Z",
+      "day": "2026-10-14-dnd5e-clip2",
+      "content_id": "clip:d3280fd2a37de49d",
+      "publish_hash": "53407addd42c383cbfbe408f7a330f07ccf4d78a85eca6df34ce897ca9b4aee2",
+      "youtube_video_id": "3dvnYZYHBZ8",
+      "youtube_url": "https://www.youtube.com/watch?v=3dvnYZYHBZ8",
+      "video_sha256": "32248f79b2df0e1ff2ce62623fd7c27524242fdf7b942906dc9ec73e0d92e1f6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-14-dnd5e-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-10-14-dnd5e-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:d3280fd2a37de49d",
+        "canonical_hash": "",
+        "script_id": "d3280fd2a37de49dfaedeb4628f3ca6ca4a7f11c1757ae12ccc1cf89ef21594a",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Ethereal Step offers strategic invisibility",
+        "hook": "Ethereal Step offers strategic invisibility",
+        "body": "'Ethereal Step' lets Horizon Walkers enter the Ethereal Plane as a bonus action at 7th level. This grants temporary invisibility and intangibility. Use it to bypass barriers or escape danger, but plan your return to the Material Plane.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-14-dnd5e-clip2.mp4",
+        "video_sha256": "32248f79b2df0e1ff2ce62623fd7c27524242fdf7b942906dc9ec73e0d92e1f6"
+      }
+    },
+    {
+      "published_utc": "2026-10-14T18:04:42Z",
+      "day": "2026-10-14-dnd5e-clip3",
+      "content_id": "clip:0d4553370f257d54",
+      "publish_hash": "18265f43e9ab9824c2c63c701a958a930859cd0f788d258e8ca26f1dbca0d270",
+      "youtube_video_id": "rfRxCQnbsiM",
+      "youtube_url": "https://www.youtube.com/watch?v=rfRxCQnbsiM",
+      "video_sha256": "ec0e4fc221bf46ece3caa645cfb50cf41efed76e13a7e7c17deba0081917ef43",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-14-dnd5e-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-10-14-dnd5e-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:0d4553370f257d54",
+        "canonical_hash": "",
+        "script_id": "0d4553370f257d54d0ccce28408c060e9de33704ddcec2bc757efdfbacdb9604",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Planar Warrior converts attacks to force damage",
+        "hook": "Planar Warrior converts attacks to force damage",
+        "body": "At 3rd level, Horizon Walkers can use 'Planar Warrior' to convert one weapon attack per turn into force damage, adding 1d8 extra damage. At 11th level, this increases to 2d8. It's effective against creatures resistant to physical damage.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-14-dnd5e-clip3.mp4",
+        "video_sha256": "ec0e4fc221bf46ece3caa645cfb50cf41efed76e13a7e7c17deba0081917ef43"
+      }
     }
   ]
 }
