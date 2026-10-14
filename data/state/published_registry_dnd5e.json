@@ -2974,6 +2974,32 @@
         "video_sha256": "e58b3d4034a7c43791d44e7ffd8023c6a6a4df65b5d217163097fb97dc6d6dfe"
       },
       "tone_lint_violation": "vague filler phrase: catches players off guard"
+    },
+    {
+      "published_utc": "2026-10-14T14:31:17Z",
+      "day": "2026-10-14",
+      "content_id": "bgp-2026-10-14-monster-tactic-creature-monsters-multiverse-duergar-mind-master-7233189fb35e",
+      "publish_hash": "c3017ee8383e7b6b223ab7e697599e81d1babf7b97aeacce6fa82381ba3edadb",
+      "youtube_video_id": "7hcuzoseFgE",
+      "youtube_url": "https://www.youtube.com/watch?v=7hcuzoseFgE",
+      "video_sha256": "8f434359b1b7a21a167143cf729c0b3b2002ae8e6c0a8d881d5b80d295773639",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-14.mp4",
+      "fingerprint": {
+        "day": "2026-10-14",
+        "category": "monster_tactic",
+        "angle": "counterplay",
+        "content_id": "bgp-2026-10-14-monster-tactic-creature-monsters-multiverse-duergar-mind-master-7233189fb35e",
+        "canonical_hash": "7233189fb35ea1ea9aeb4dec02add963fa4f315f9fd2318334a50b44e17b3242",
+        "script_id": "2d95e68000a74855ff1c9d64f278d27e7db26ef35e17949766b5b9831e6d05de",
+        "fact_kind": "creature",
+        "fact_pk": "monsters-multiverse_duergar-mind-master",
+        "fact_name": "Duergar Mind Master",
+        "hook": "Duergar Mind Master disrupts party plans with psychic manipulation - AC 13 makes it vulnerable to focused.",
+        "body": "Duergar Mind Masters leverage their psychic abilities to control the battlefield, but with an Armor Class of 13 and 39 hit points, they are susceptible to concentrated fire. Their speed of 25 feet limits their mobility, making it easy to isolate them from allies. Spreading damage across multiple targets allows the Mind Master to maintain its control. Focus fire on the Mind Master to dismantle their control and reduce their threat level quickly.",
+        "cta": "DMs: Have the party focus fire on the Duergar Mind Master to exploit its low AC 13 and limited 39 hit points.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-14.mp4",
+        "video_sha256": "8f434359b1b7a21a167143cf729c0b3b2002ae8e6c0a8d881d5b80d295773639"
+      }
     }
   ]
 }

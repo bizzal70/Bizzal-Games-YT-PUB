@@ -1068,5 +1068,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-14": {
+    "item_spotlight": {
+      "angle": "story_hook",
+      "voice": "survival_coach",
+      "tone": "neutral",
+      "persona": "dungeon_gear_mentor",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

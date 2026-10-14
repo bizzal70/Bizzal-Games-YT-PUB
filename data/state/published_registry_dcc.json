@@ -2350,6 +2350,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-13.mp4",
         "video_sha256": "138b1713b83ba9de13475d5753d9745fbee95c152dd3bf997bbab871c6a2c2da"
       }
+    },
+    {
+      "published_utc": "2026-10-14T14:23:34Z",
+      "day": "2026-10-14",
+      "content_id": "bgp-2026-10-14-item-spotlight-item-17-aacd588199e5",
+      "publish_hash": "5f8543b73a1caaa1b58caaaf4fc20b75923a27a0e0a8ac39562652596f17bc4f",
+      "youtube_video_id": "V13NgHiKxqE",
+      "youtube_url": "https://www.youtube.com/watch?v=V13NgHiKxqE",
+      "video_sha256": "2d4275fd15ca2217b4f893bceabf0d92b4ee0c1686f12508a617ab0118856ab6",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-14.mp4",
+      "fingerprint": {
+        "day": "2026-10-14",
+        "category": "item_spotlight",
+        "angle": "story_hook",
+        "content_id": "bgp-2026-10-14-item-spotlight-item-17-aacd588199e5",
+        "canonical_hash": "aacd588199e5033a09c2ef7d5474e0beeea21484abb29c2257329cc006d791fd",
+        "script_id": "cc7d9e409f0add0fb6721b5162e97fbc8805e2902ef974468b2924b1838c4016",
+        "fact_kind": "item",
+        "fact_pk": 17,
+        "fact_name": "Blade of Precise Strike",
+        "hook": "Blade of Precise Strike shifts attack odds unpredictably - a +1d4 bonus on each swing.",
+        "body": "The Blade of Precise Strike grants a variable +1d4 bonus to attack rolls, making it easier to hit elusive targets. Expecting a flat bonus leads to miscalculations; the fluctuating nature demands strategic timing. Deploy it when any increase in hit probability is crucial, rather than relying on it for consistent damage output.",
+        "cta": "Judges: Hand the Blade of Precise Strike to players when they need a +1d4 swing to hit, not for damage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-14.mp4",
+        "video_sha256": "2d4275fd15ca2217b4f893bceabf0d92b4ee0c1686f12508a617ab0118856ab6"
+      }
     }
   ]
 }

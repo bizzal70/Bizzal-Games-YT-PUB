@@ -1184,5 +1184,15 @@
       ],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-10-14": {
+    "monster_tactic": {
+      "angle": "counterplay",
+      "voice": "friendly_vet",
+      "tone": "dry",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "alloy"
+    }
   }
 }

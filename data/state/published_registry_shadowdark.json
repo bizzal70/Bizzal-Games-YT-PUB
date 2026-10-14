@@ -2556,6 +2556,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-13.mp4",
         "video_sha256": "4a84696eec023e58d79d972587d62969c64c6b4451f195dbe7ef9f6b67a43581"
       }
+    },
+    {
+      "published_utc": "2026-10-14T14:36:11Z",
+      "day": "2026-10-14",
+      "content_id": "bgp-2026-10-14-spell-use-case-spell-41-0b8d0bb352b0",
+      "publish_hash": "74ed1f2600c3462173c50829c039f71792395443badedf7769806067c28c20a5",
+      "youtube_video_id": "OetwHrCM_Mo",
+      "youtube_url": "https://www.youtube.com/watch?v=OetwHrCM_Mo",
+      "video_sha256": "2f241e470316e0dfb849a426b5e15db75cfd717ef0589ca0d63cd374eee16735",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-14.mp4",
+      "fingerprint": {
+        "day": "2026-10-14",
+        "category": "spell_use_case",
+        "angle": "dm_twist",
+        "content_id": "bgp-2026-10-14-spell-use-case-spell-41-0b8d0bb352b0",
+        "canonical_hash": "0b8d0bb352b0f5280d9b4456e9100da46503fc24490d00a0bd309cc527ba2159",
+        "script_id": "c75b1bedc9581e81dfc2261f38701cae6f9f1df62055c97a7479c7c2280ce308",
+        "fact_kind": "spell",
+        "fact_pk": 41,
+        "fact_name": "Illusion",
+        "hook": "Illusion changes the game more than players expect - its range is Far and duration is Focus.",
+        "body": "Illusion creates a visible and audible deception within a near-sized cube at a Far range. While it cannot inflict damage, creatures convinced of its reality respond as though it were real. Many misuse it for combat distraction, overlooking its potential for gaining information or access. Crafting illusions that alter perception and decision-making can shift narrative stakes beyond tactical positioning.",
+        "cta": "GMs: Use Illusion's Far range to mislead from a distance, forcing players to rethink their approach before they even engage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-14.mp4",
+        "video_sha256": "2f241e470316e0dfb849a426b5e15db75cfd717ef0589ca0d63cd374eee16735"
+      }
     }
   ]
 }
