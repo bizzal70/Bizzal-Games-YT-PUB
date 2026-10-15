@@ -2376,6 +2376,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-14.mp4",
         "video_sha256": "2d4275fd15ca2217b4f893bceabf0d92b4ee0c1686f12508a617ab0118856ab6"
       }
+    },
+    {
+      "published_utc": "2026-10-15T14:24:48Z",
+      "day": "2026-10-15",
+      "content_id": "bgp-2026-10-15-encounter-seed-creature-264-3698d677699f",
+      "publish_hash": "9fc4a7274f38ae7c1ba5f1da6a80e94007ed855ca9b9c0b4326d251c86253401",
+      "youtube_video_id": "MFE44rT3onU",
+      "youtube_url": "https://www.youtube.com/watch?v=MFE44rT3onU",
+      "video_sha256": "08275bed4406db29a16bf1ba77029efd3f342257bbdf64a526067453e69dc2c8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-15.mp4",
+      "fingerprint": {
+        "day": "2026-10-15",
+        "category": "encounter_seed",
+        "angle": "twist",
+        "content_id": "bgp-2026-10-15-encounter-seed-creature-264-3698d677699f",
+        "canonical_hash": "3698d677699f5299f46690ff6fc527c43d6538df7000df0743b17954b0448a92",
+        "script_id": "8e94b5720737375b92c9d688dc8cdce0b6df2fd5fe2844bc567aec7c78e1dcb0",
+        "fact_kind": "creature",
+        "fact_pk": 264,
+        "fact_name": "Gargantuan Lizard",
+        "hook": "Gargantuan Lizard earns its stakes fast.",
+        "body": "The Gargantuan Lizard has 10d8 hit dice and an armor class of 17, making it a durable opponent. Its bite attack not only deals 3d4 damage but also includes a swallow whole mechanic, which players often overlook until it's too late. With a movement speed of 40' and a climb speed of 20', it can close distances quickly, catching players off guard. Prioritizing ranged attacks or spells that exploit its lower Reflex save (+8) can mitigate the threat before it closes in.",
+        "cta": "Judges: When the party gets cocky in melee, let the Gargantuan Lizard's 3d4 bite and swallow whole mechanic humble them.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-15.mp4",
+        "video_sha256": "08275bed4406db29a16bf1ba77029efd3f342257bbdf64a526067453e69dc2c8"
+      }
     }
   ]
 }

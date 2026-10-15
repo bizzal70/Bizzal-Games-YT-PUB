@@ -1194,5 +1194,17 @@
       "spice": [],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-10-15": {
+    "spell_use_case": {
+      "angle": "upcast_tip",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

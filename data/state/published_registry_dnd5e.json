@@ -3000,6 +3000,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-14.mp4",
         "video_sha256": "8f434359b1b7a21a167143cf729c0b3b2002ae8e6c0a8d881d5b80d295773639"
       }
+    },
+    {
+      "published_utc": "2026-10-15T14:31:59Z",
+      "day": "2026-10-15",
+      "content_id": "bgp-2026-10-15-spell-use-case-spell-srd-2024-hex-ff584559e468",
+      "publish_hash": "adf1cadb808b7cce1be7ea6da5198ad9492d11ae5fd42b1d2921e212ce236fdb",
+      "youtube_video_id": "ShQYb2hZryw",
+      "youtube_url": "https://www.youtube.com/watch?v=ShQYb2hZryw",
+      "video_sha256": "a10bc538ac7a0354084bf90713ae632f8347f61b5a19a1ea113e85e96e906a9d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-15.mp4",
+      "fingerprint": {
+        "day": "2026-10-15",
+        "category": "spell_use_case",
+        "angle": "upcast_tip",
+        "content_id": "bgp-2026-10-15-spell-use-case-spell-srd-2024-hex-ff584559e468",
+        "canonical_hash": "ff584559e4689f966e6047bef92ccbc9e57dc9cbf57366bf4a8033e6a7fde2d1",
+        "script_id": "6a842c9807a6f9af3edca95c3851cd006d192014b480fae5d18cced6a8d4f248",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_hex",
+        "fact_name": "Hex",
+        "hook": "Hex lasts much longer than players expect - up to 24 hours with a 5th-level slot.",
+        "body": "Hex is a 1st-level enchantment spell with a range of 90 feet and requires concentration, adding 1d6 necrotic damage on every attack roll against the cursed target. Casting it when concentration can't be protected often results in losing it on the first hit. Upcasting Hex extends its duration significantly; at 5th level or higher, it can last up to 24 hours, allowing for planning beyond a single encounter.",
+        "cta": "DMs: Upcast Hex with a 5th-level slot for a 24-hour duration, ensuring your warlock's concentration isn't wasted in a single encounter.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-15.mp4",
+        "video_sha256": "a10bc538ac7a0354084bf90713ae632f8347f61b5a19a1ea113e85e96e906a9d"
+      },
+      "tone_lint_violation": "vague filler phrase: often results in"
     }
   ]
 }

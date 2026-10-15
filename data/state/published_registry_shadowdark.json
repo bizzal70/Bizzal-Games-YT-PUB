@@ -2582,6 +2582,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-14.mp4",
         "video_sha256": "2f241e470316e0dfb849a426b5e15db75cfd717ef0589ca0d63cd374eee16735"
       }
+    },
+    {
+      "published_utc": "2026-10-15T14:37:39Z",
+      "day": "2026-10-15",
+      "content_id": "bgp-2026-10-15-class-spotlight-class-1-d313d5fbd603",
+      "publish_hash": "daef98e0b171a2d6353b1bbc332bc3930051fce7817d624d71c97fbf52baf178",
+      "youtube_video_id": "4bPk1AjnNMc",
+      "youtube_url": "https://www.youtube.com/watch?v=4bPk1AjnNMc",
+      "video_sha256": "c10fec4a6bf97fb5260d67e062b185da83568d3267cb64c2cb7c5093fdd14fc4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-15.mp4",
+      "fingerprint": {
+        "day": "2026-10-15",
+        "category": "class_spotlight",
+        "angle": "early_power_spike",
+        "content_id": "bgp-2026-10-15-class-spotlight-class-1-d313d5fbd603",
+        "canonical_hash": "d313d5fbd60376d7595cc6abc3beeb8d7073dbd16d9c40cc7a5bf065f569feaf",
+        "script_id": "9ae2e769dfc1fd5c06340b0375be380310babae03f0f6fc90f2b3bcfba93ecd8",
+        "fact_kind": "class",
+        "fact_pk": 1,
+        "fact_name": "Fighter",
+        "hook": "Fighter's early power spike catches many off guard - Weapon Mastery at level 1 gives access to all weapons.",
+        "body": "Fighter's hit dice of 1d8 and access to all armor and shields create a durability edge early on. Weapon Mastery at level 1 means Fighters can maximize damage output from the start, unlike classes waiting for spells or abilities to scale. Many players overlook the importance of choosing weapons that leverage their primary ability, Strength, leading to suboptimal damage. Prioritizing weapon selection that aligns with Strength ensures consistent high damage turns.",
+        "cta": "GMs: Make sure Fighters exploit their Weapon Mastery at level 1 by equipping the heaviest Strength-based weapon available.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-15.mp4",
+        "video_sha256": "c10fec4a6bf97fb5260d67e062b185da83568d3267cb64c2cb7c5093fdd14fc4"
+      }
     }
   ]
 }

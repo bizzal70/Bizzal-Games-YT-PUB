@@ -3672,6 +3672,51 @@
       "hook": "Illusion changes the game more than players expect - its range is Far and duration is Focus.",
       "body": "Illusion creates a visible and audible deception within a near-sized cube at a Far range. While it cannot inflict damage, creatures convinced of its reality respond as though it were real. Many misuse it for combat distraction, overlooking its potential for gaining information or access. Crafting illusions that alter perception and decision-making can shift narrative stakes beyond tactical positioning.",
       "cta": "GMs: Use Illusion's Far range to mislead from a distance, forcing players to rethink their approach before they even engage."
+    },
+    {
+      "published_utc": "2026-10-15T14:26:47Z",
+      "day": "2026-10-15",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-15-encounter-seed-creature-264-3698d677699f",
+      "instagram_post_id": "18383521357225377",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "08275bed4406db29a16bf1ba77029efd3f342257bbdf64a526067453e69dc2c8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-15.mp4",
+      "fact_name": "Gargantuan Lizard",
+      "category": "encounter_seed",
+      "hook": "Gargantuan Lizard earns its stakes fast.",
+      "body": "The Gargantuan Lizard has 10d8 hit dice and an armor class of 17, making it a durable opponent. Its bite attack not only deals 3d4 damage but also includes a swallow whole mechanic, which players often overlook until it's too late. With a movement speed of 40' and a climb speed of 20', it can close distances quickly, catching players off guard. Prioritizing ranged attacks or spells that exploit its lower Reflex save (+8) can mitigate the threat before it closes in.",
+      "cta": "Judges: When the party gets cocky in melee, let the Gargantuan Lizard's 3d4 bite and swallow whole mechanic humble them."
+    },
+    {
+      "published_utc": "2026-10-15T14:33:13Z",
+      "day": "2026-10-15",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-15-spell-use-case-spell-srd-2024-hex-ff584559e468",
+      "instagram_post_id": "18135125266655986",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "a10bc538ac7a0354084bf90713ae632f8347f61b5a19a1ea113e85e96e906a9d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-15.mp4",
+      "fact_name": "Hex",
+      "category": "spell_use_case",
+      "hook": "Hex lasts much longer than players expect - up to 24 hours with a 5th-level slot.",
+      "body": "Hex is a 1st-level enchantment spell with a range of 90 feet and requires concentration, adding 1d6 necrotic damage on every attack roll against the cursed target. Casting it when concentration can't be protected often results in losing it on the first hit. Upcasting Hex extends its duration significantly; at 5th level or higher, it can last up to 24 hours, allowing for planning beyond a single encounter.",
+      "cta": "DMs: Upcast Hex with a 5th-level slot for a 24-hour duration, ensuring your warlock's concentration isn't wasted in a single encounter."
+    },
+    {
+      "published_utc": "2026-10-15T14:38:37Z",
+      "day": "2026-10-15",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-15-class-spotlight-class-1-d313d5fbd603",
+      "instagram_post_id": "18006020084790355",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c10fec4a6bf97fb5260d67e062b185da83568d3267cb64c2cb7c5093fdd14fc4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-15.mp4",
+      "fact_name": "Fighter",
+      "category": "class_spotlight",
+      "hook": "Fighter's early power spike catches many off guard - Weapon Mastery at level 1 gives access to all weapons.",
+      "body": "Fighter's hit dice of 1d8 and access to all armor and shields create a durability edge early on. Weapon Mastery at level 1 means Fighters can maximize damage output from the start, unlike classes waiting for spells or abilities to scale. Many players overlook the importance of choosing weapons that leverage their primary ability, Strength, leading to suboptimal damage. Prioritizing weapon selection that aligns with Strength ensures consistent high damage turns.",
+      "cta": "GMs: Make sure Fighters exploit their Weapon Mastery at level 1 by equipping the heaviest Strength-based weapon available."
     }
   ]
 }
