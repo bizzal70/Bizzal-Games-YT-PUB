@@ -7787,6 +7787,39 @@
       "video_id": "17993630193052460",
       "day": "2026-10-16",
       "published_at": "2026-10-16T14:34:31+00:00"
+    },
+    {
+      "content_key": "c4c848bf2fc801ca1ee232f53a82da2b68236869fa66c9ffea5648ed5e795794",
+      "token_text": "60 any chance corridor kobold trap",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Kobold traps: 60% chance in any corridor #dcc",
+      "video_id": "uyxvjAw_-6c",
+      "day": "2026-10-16",
+      "published_at": "2026-10-16T17:55:48+00:00"
+    },
+    {
+      "content_key": "5aa61df719579ee5cf5f51f8db149adc9fc591aa337821dee61c1b30ed198a4f",
+      "token_text": "attack boost kobold pack tactic",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Kobold pack tactics boost attacks #dcc",
+      "video_id": "pEN4CI_zcUQ",
+      "day": "2026-10-16-dcc-clip1",
+      "published_at": "2026-10-16T17:57:45+00:00"
+    },
+    {
+      "content_key": "1465a7186527f62733e3ae7395f60523b0233ce0e3e2d304ec0f7d6c18366ee0",
+      "token_text": "alarm cry hearing kobold range triple",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Kobold alarm cry triples hearing range #dcc",
+      "video_id": "BFkWgoitCkk",
+      "day": "2026-10-16-dcc-clip2",
+      "published_at": "2026-10-16T17:59:33+00:00"
     }
   ]
 }

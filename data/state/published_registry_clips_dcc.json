@@ -753,6 +753,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-07-dcc-clip2.mp4",
         "video_sha256": "882882caeb8f3af96ade496b7e0ee6fc6b14f200939fa37833bd83ae833c64e3"
       }
+    },
+    {
+      "published_utc": "2026-10-16T17:57:45Z",
+      "day": "2026-10-16-dcc-clip1",
+      "content_id": "clip:84130b36123a869c",
+      "publish_hash": "7ddcd2b421c06b8d9e5400c12772ff7b006d60ec53d1bd0be56a5013037d5093",
+      "youtube_video_id": "pEN4CI_zcUQ",
+      "youtube_url": "https://www.youtube.com/watch?v=pEN4CI_zcUQ",
+      "video_sha256": "2327c4c7b53a7c77b2932aeb2a075f637ed74c632d3af2c11b2fd1c398864c72",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-16-dcc-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-10-16-dcc-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:84130b36123a869c",
+        "canonical_hash": "",
+        "script_id": "84130b36123a869c66e30e599110c9f735ad7cd3d4299880c3794ca45f5e636e",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Kobold pack tactics boost attacks",
+        "hook": "Kobold pack tactics boost attacks",
+        "body": "Kobolds thrive in numbers. Their pack tactics give a +1 attack bonus for every three kobolds in melee. This makes even small groups a threat. Players must reduce their numbers quickly to avoid being overwhelmed.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-16-dcc-clip1.mp4",
+        "video_sha256": "2327c4c7b53a7c77b2932aeb2a075f637ed74c632d3af2c11b2fd1c398864c72"
+      }
+    },
+    {
+      "published_utc": "2026-10-16T17:59:33Z",
+      "day": "2026-10-16-dcc-clip2",
+      "content_id": "clip:b1294d9e333f1867",
+      "publish_hash": "f355ac34addc9f254bfe43a8f64fc35575bf0bde7f450f1757978d878d59ac26",
+      "youtube_video_id": "BFkWgoitCkk",
+      "youtube_url": "https://www.youtube.com/watch?v=BFkWgoitCkk",
+      "video_sha256": "cfd3152a02136a0d16d838b4138730cb30a8cbd6bf2e2c981d3c91f254f89042",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-16-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-10-16-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:b1294d9e333f1867",
+        "canonical_hash": "",
+        "script_id": "b1294d9e333f18672e92d3e8d7d2f48ea0ceadec99e8486e847ec32c5a06d162",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Kobold alarm cry triples hearing range",
+        "hook": "Kobold alarm cry triples hearing range",
+        "body": "Kobolds can detect intruders from three times the normal hearing range with their alarm cry. This makes them excellent sentinels, alerting their kin to adventurers' presence and setting up ambushes.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-16-dcc-clip2.mp4",
+        "video_sha256": "cfd3152a02136a0d16d838b4138730cb30a8cbd6bf2e2c981d3c91f254f89042"
+      }
     }
   ]
 }
