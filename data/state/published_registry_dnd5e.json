@@ -3027,6 +3027,32 @@
         "video_sha256": "a10bc538ac7a0354084bf90713ae632f8347f61b5a19a1ea113e85e96e906a9d"
       },
       "tone_lint_violation": "vague filler phrase: often results in"
+    },
+    {
+      "published_utc": "2026-10-16T14:28:13Z",
+      "day": "2026-10-16",
+      "content_id": "bgp-2026-10-16-rules-ruling-rule-srd-2024-exploration-interacting-with-objects-1abdf71db2f7",
+      "publish_hash": "063e6da6d5bf27aecca8e3d4b3bfe649b5bbff26184f2d2c3ac71fdec7d9b622",
+      "youtube_video_id": "AIwUBWl1978",
+      "youtube_url": "https://www.youtube.com/watch?v=AIwUBWl1978",
+      "video_sha256": "9edf95b7e108b337a8bdfa829b1615ae59bb49a7e7e186788df996d0b6c15e79",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-16.mp4",
+      "fingerprint": {
+        "day": "2026-10-16",
+        "category": "rules_ruling",
+        "angle": "edge_case",
+        "content_id": "bgp-2026-10-16-rules-ruling-rule-srd-2024-exploration-interacting-with-objects-1abdf71db2f7",
+        "canonical_hash": "1abdf71db2f791e3f6c12b48486613418036be831d277eca0eceed22f6b1e0ac",
+        "script_id": "a5edfc3e0b7fac83dfe7a215fccd920fc8975592480057e579965c4cb1efdfd8",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_exploration_interacting-with-objects",
+        "fact_name": "Interacting with Objects",
+        "hook": "Interacting with Objects is deceptively simple - the action economy limits it to one free interaction per.",
+        "body": "Interacting with Objects allows one free object interaction per turn, such as drawing a weapon or opening a door. Players frequently overlook that additional interactions require an action, leading to mismanaged turns. Clarify object interaction limits to maintain consistent action economy adherence.",
+        "cta": "DMs: Remind players they get one free object interaction per turn; anything extra costs an action - no exceptions.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-16.mp4",
+        "video_sha256": "9edf95b7e108b337a8bdfa829b1615ae59bb49a7e7e186788df996d0b6c15e79"
+      }
     }
   ]
 }

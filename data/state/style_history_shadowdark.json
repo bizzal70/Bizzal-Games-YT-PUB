@@ -1204,5 +1204,17 @@
       "spice": [],
       "tts_voice_id": "nova"
     }
+  },
+  "2026-10-16": {
+    "monster_tactic": {
+      "angle": "how_it_wins",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

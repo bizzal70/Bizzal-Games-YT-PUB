@@ -2402,6 +2402,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-15.mp4",
         "video_sha256": "08275bed4406db29a16bf1ba77029efd3f342257bbdf64a526067453e69dc2c8"
       }
+    },
+    {
+      "published_utc": "2026-10-16T14:23:43Z",
+      "day": "2026-10-16",
+      "content_id": "bgp-2026-10-16-class-spotlight-class-1-68fd77fd135b",
+      "publish_hash": "12f2f3125cb94679a5aa87e8c9898c9aaba894626c90f933395b0cf38e8c1ca9",
+      "youtube_video_id": "eKeVA8gknxk",
+      "youtube_url": "https://www.youtube.com/watch?v=eKeVA8gknxk",
+      "video_sha256": "a761712c8d7964217ce0b9004f8fb76d167948800de70e3e2c49394678f704d3",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-16.mp4",
+      "fingerprint": {
+        "day": "2026-10-16",
+        "category": "class_spotlight",
+        "angle": "class_identity",
+        "content_id": "bgp-2026-10-16-class-spotlight-class-1-68fd77fd135b",
+        "canonical_hash": "68fd77fd135b80b16d08ea00740c31815fd81d5073ba0f99455fcd6c28a6ec23",
+        "script_id": "c0db343c3cef63acc42239283ca9ec7e3ed95c43bf6ca00503dc06bd024dc0fb",
+        "fact_kind": "class",
+        "fact_pk": 1,
+        "fact_name": "Warrior",
+        "hook": "Warrior actions are more versatile than most realize - every attack can carry a free Mighty Deed if the action.",
+        "body": "Mighty Deeds of Arms trigger on any attack roll without requiring a save. When an attack hits and the action die shows 3 or higher, the Deed succeeds automatically. This mechanic is not a limited resource; it activates on every attack. Consistent use of Deeds like trip or disarm controls the battlefield without expending additional resources.",
+        "cta": "Judges: Remind your Warriors that every hit with a 3+ action die can trip or disarm without costing resources.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-16.mp4",
+        "video_sha256": "a761712c8d7964217ce0b9004f8fb76d167948800de70e3e2c49394678f704d3"
+      }
     }
   ]
 }

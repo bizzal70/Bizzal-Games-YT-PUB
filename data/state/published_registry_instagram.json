@@ -3717,6 +3717,51 @@
       "hook": "Fighter's early power spike catches many off guard - Weapon Mastery at level 1 gives access to all weapons.",
       "body": "Fighter's hit dice of 1d8 and access to all armor and shields create a durability edge early on. Weapon Mastery at level 1 means Fighters can maximize damage output from the start, unlike classes waiting for spells or abilities to scale. Many players overlook the importance of choosing weapons that leverage their primary ability, Strength, leading to suboptimal damage. Prioritizing weapon selection that aligns with Strength ensures consistent high damage turns.",
       "cta": "GMs: Make sure Fighters exploit their Weapon Mastery at level 1 by equipping the heaviest Strength-based weapon available."
+    },
+    {
+      "published_utc": "2026-10-16T14:24:28Z",
+      "day": "2026-10-16",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-16-class-spotlight-class-1-68fd77fd135b",
+      "instagram_post_id": "18150923629557306",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "a761712c8d7964217ce0b9004f8fb76d167948800de70e3e2c49394678f704d3",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-16.mp4",
+      "fact_name": "Warrior",
+      "category": "class_spotlight",
+      "hook": "Warrior actions are more versatile than most realize - every attack can carry a free Mighty Deed if the action.",
+      "body": "Mighty Deeds of Arms trigger on any attack roll without requiring a save. When an attack hits and the action die shows 3 or higher, the Deed succeeds automatically. This mechanic is not a limited resource; it activates on every attack. Consistent use of Deeds like trip or disarm controls the battlefield without expending additional resources.",
+      "cta": "Judges: Remind your Warriors that every hit with a 3+ action die can trip or disarm without costing resources."
+    },
+    {
+      "published_utc": "2026-10-16T14:28:58Z",
+      "day": "2026-10-16",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-16-rules-ruling-rule-srd-2024-exploration-interacting-with-objects-1abdf71db2f7",
+      "instagram_post_id": "18489639301109631",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9edf95b7e108b337a8bdfa829b1615ae59bb49a7e7e186788df996d0b6c15e79",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-16.mp4",
+      "fact_name": "Interacting with Objects",
+      "category": "rules_ruling",
+      "hook": "Interacting with Objects is deceptively simple - the action economy limits it to one free interaction per.",
+      "body": "Interacting with Objects allows one free object interaction per turn, such as drawing a weapon or opening a door. Players frequently overlook that additional interactions require an action, leading to mismanaged turns. Clarify object interaction limits to maintain consistent action economy adherence.",
+      "cta": "DMs: Remind players they get one free object interaction per turn; anything extra costs an action - no exceptions."
+    },
+    {
+      "published_utc": "2026-10-16T14:34:31Z",
+      "day": "2026-10-16",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-16-monster-tactic-creature-31-d0d8a4d7425d",
+      "instagram_post_id": "17993630193052460",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "7278a4ecde3df6006d4d8e679dde3b9d35d60af87f2c8e9a471b6af2ff25ed78",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-16.mp4",
+      "fact_name": "Centaur",
+      "category": "monster_tactic",
+      "hook": "Centaur's mobility surprises players who underestimate its reach - double near movement enables rapid.",
+      "body": "Centaur's double near movement allows it to close gaps quickly, often outmaneuvering parties that don't anticipate its speed. With two spear attacks at +2 to hit (1d6 each) and a longbow for far-range threats at +1 (1d8 damage), it applies pressure both up close and from afar. This versatility often exposes gaps in party positioning. Anticipating its movement and maintaining a defensive formation can mitigate its reach.",
+      "cta": "GMs: Exploit the centaur's double near movement to flank and disrupt the party's formation before they can react."
     }
   ]
 }

@@ -2608,6 +2608,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-15.mp4",
         "video_sha256": "c10fec4a6bf97fb5260d67e062b185da83568d3267cb64c2cb7c5093fdd14fc4"
       }
+    },
+    {
+      "published_utc": "2026-10-16T14:33:30Z",
+      "day": "2026-10-16",
+      "content_id": "bgp-2026-10-16-monster-tactic-creature-31-d0d8a4d7425d",
+      "publish_hash": "177d59633d1857a72fcac305adb40bc46bc4f4e79ad3b221c8b530f5eebb10b2",
+      "youtube_video_id": "XXbqY6PMIdY",
+      "youtube_url": "https://www.youtube.com/watch?v=XXbqY6PMIdY",
+      "video_sha256": "7278a4ecde3df6006d4d8e679dde3b9d35d60af87f2c8e9a471b6af2ff25ed78",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-16.mp4",
+      "fingerprint": {
+        "day": "2026-10-16",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-10-16-monster-tactic-creature-31-d0d8a4d7425d",
+        "canonical_hash": "d0d8a4d7425d662e449d4e5aa5d2dd1de6c1d269280372044d86734d01e58f87",
+        "script_id": "2214ca18c55c8f5c24b00ad379361d2c34eddf9bc0f3587fcda16741518207bb",
+        "fact_kind": "creature",
+        "fact_pk": 31,
+        "fact_name": "Centaur",
+        "hook": "Centaur's mobility surprises players who underestimate its reach - double near movement enables rapid.",
+        "body": "Centaur's double near movement allows it to close gaps quickly, often outmaneuvering parties that don't anticipate its speed. With two spear attacks at +2 to hit (1d6 each) and a longbow for far-range threats at +1 (1d8 damage), it applies pressure both up close and from afar. This versatility often exposes gaps in party positioning. Anticipating its movement and maintaining a defensive formation can mitigate its reach.",
+        "cta": "GMs: Exploit the centaur's double near movement to flank and disrupt the party's formation before they can react.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-16.mp4",
+        "video_sha256": "7278a4ecde3df6006d4d8e679dde3b9d35d60af87f2c8e9a471b6af2ff25ed78"
+      },
+      "tone_lint_violation": "vague filler phrase: surprises players"
     }
   ]
 }
