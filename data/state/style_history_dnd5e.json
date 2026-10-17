@@ -1218,5 +1218,15 @@
       ],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-10-17": {
+    "item_spotlight": {
+      "angle": "best_user",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

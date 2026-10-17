@@ -1216,5 +1216,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-17": {
+    "rules_ruling": {
+      "angle": "common_table_mistake",
+      "voice": "grim_warden",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

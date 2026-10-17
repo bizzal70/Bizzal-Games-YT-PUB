@@ -2635,6 +2635,32 @@
         "video_sha256": "7278a4ecde3df6006d4d8e679dde3b9d35d60af87f2c8e9a471b6af2ff25ed78"
       },
       "tone_lint_violation": "vague filler phrase: surprises players"
+    },
+    {
+      "published_utc": "2026-10-17T14:23:17Z",
+      "day": "2026-10-17",
+      "content_id": "bgp-2026-10-17-rules-ruling-rule-2-345f3d07627e",
+      "publish_hash": "8cabf4d5ed08ead0d220535deb5bb8f8369fa6651c7f49cd24dc5f4421d3abf7",
+      "youtube_video_id": "EKUU8wmnH3E",
+      "youtube_url": "https://www.youtube.com/watch?v=EKUU8wmnH3E",
+      "video_sha256": "eed308ca0958e98cd99e6953b0ec3441fca4fce49108b70e2ebcf3175db5e2df",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-17.mp4",
+      "fingerprint": {
+        "day": "2026-10-17",
+        "category": "rules_ruling",
+        "angle": "common_table_mistake",
+        "content_id": "bgp-2026-10-17-rules-ruling-rule-2-345f3d07627e",
+        "canonical_hash": "345f3d07627e089125860a99f7ad0238da702954be74cf08c40c5cacd014d830",
+        "script_id": "4d579a6d63c5dabd07d5eab783fd6ac5c2c89bbd42e20ed83a7654c0dc7659ce",
+        "fact_kind": "rule",
+        "fact_pk": 2,
+        "fact_name": "Difficulty Class",
+        "hook": "Disputes arise from unclear Difficulty Class - a clear DC list prevents them.",
+        "body": "Difficulty Class is categorized as Easy DC 9, Normal DC 12, Hard DC 15, and Extreme DC 18. Characters roll d20 plus their relevant stat modifier against these benchmarks. Rushing through without clear DCs leads to arguments. Consistently applying these standards reduces disputes.",
+        "cta": "GMs: Stick to Easy DC 9, Normal DC 12, Hard DC 15, and Extreme DC 18 to avoid pointless arguments.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-17.mp4",
+        "video_sha256": "eed308ca0958e98cd99e6953b0ec3441fca4fce49108b70e2ebcf3175db5e2df"
+      }
     }
   ]
 }

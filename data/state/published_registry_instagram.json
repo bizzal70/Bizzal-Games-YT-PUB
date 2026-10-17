@@ -3762,6 +3762,21 @@
       "hook": "Centaur's mobility surprises players who underestimate its reach - double near movement enables rapid.",
       "body": "Centaur's double near movement allows it to close gaps quickly, often outmaneuvering parties that don't anticipate its speed. With two spear attacks at +2 to hit (1d6 each) and a longbow for far-range threats at +1 (1d8 damage), it applies pressure both up close and from afar. This versatility often exposes gaps in party positioning. Anticipating its movement and maintaining a defensive formation can mitigate its reach.",
       "cta": "GMs: Exploit the centaur's double near movement to flank and disrupt the party's formation before they can react."
+    },
+    {
+      "published_utc": "2026-10-17T14:24:01Z",
+      "day": "2026-10-17",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-17-rules-ruling-rule-2-345f3d07627e",
+      "instagram_post_id": "18284286013290115",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "eed308ca0958e98cd99e6953b0ec3441fca4fce49108b70e2ebcf3175db5e2df",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-17.mp4",
+      "fact_name": "Difficulty Class",
+      "category": "rules_ruling",
+      "hook": "Disputes arise from unclear Difficulty Class - a clear DC list prevents them.",
+      "body": "Difficulty Class is categorized as Easy DC 9, Normal DC 12, Hard DC 15, and Extreme DC 18. Characters roll d20 plus their relevant stat modifier against these benchmarks. Rushing through without clear DCs leads to arguments. Consistently applying these standards reduces disputes.",
+      "cta": "GMs: Stick to Easy DC 9, Normal DC 12, Hard DC 15, and Extreme DC 18 to avoid pointless arguments."
     }
   ]
 }
