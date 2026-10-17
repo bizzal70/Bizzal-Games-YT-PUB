@@ -2428,6 +2428,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-16.mp4",
         "video_sha256": "a761712c8d7964217ce0b9004f8fb76d167948800de70e3e2c49394678f704d3"
       }
+    },
+    {
+      "published_utc": "2026-10-17T15:08:58Z",
+      "day": "2026-10-17",
+      "content_id": "bgp-2026-10-17-rules-myth-rule-10-4f8851925615",
+      "publish_hash": "b2760707b0aaf89c4418b6cfeee04f38ffb3dd317ace00814603ce11a0c89498",
+      "youtube_video_id": "3Z8qRvaVnoY",
+      "youtube_url": "https://www.youtube.com/watch?v=3Z8qRvaVnoY",
+      "video_sha256": "00087a8ce9ff464e68d5ae75f41348dbca3cb4e5f0063576c76e3fe871df090d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-17.mp4",
+      "fingerprint": {
+        "day": "2026-10-17",
+        "category": "rules_myth",
+        "angle": "why_people_get_it_wrong",
+        "content_id": "bgp-2026-10-17-rules-myth-rule-10-4f8851925615",
+        "canonical_hash": "4f8851925615d428c5e66fd5850d9d642eef5134787339984f54aef365dad385",
+        "script_id": "97a5787b9de607638832c0ad6e3b5f312bdc878d46034ea3ee832777b58ce6f6",
+        "fact_kind": "rule",
+        "fact_pk": 10,
+        "fact_name": "Birth Augur",
+        "hook": "Birth Augur ties your Luck modifier to one roll type permanently - a d30 roll at creation sets the context.",
+        "body": "Birth Augur links your Luck modifier to a specific roll type for life, which many players overlook. This permanent effect is separate from spending Luck for temporary boosts, leading to mismanagement of Luck resources. Remember this ongoing effect when planning character actions and resource management to avoid wasting Luck on non-beneficial rolls.",
+        "cta": "Judges: Remind players their Birth Augur's Luck modifier affects one roll type permanently; it's not just a temporary Luck boost.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-17.mp4",
+        "video_sha256": "00087a8ce9ff464e68d5ae75f41348dbca3cb4e5f0063576c76e3fe871df090d"
+      }
     }
   ]
 }

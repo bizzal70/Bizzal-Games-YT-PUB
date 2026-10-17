@@ -3777,6 +3777,21 @@
       "hook": "Disputes arise from unclear Difficulty Class - a clear DC list prevents them.",
       "body": "Difficulty Class is categorized as Easy DC 9, Normal DC 12, Hard DC 15, and Extreme DC 18. Characters roll d20 plus their relevant stat modifier against these benchmarks. Rushing through without clear DCs leads to arguments. Consistently applying these standards reduces disputes.",
       "cta": "GMs: Stick to Easy DC 9, Normal DC 12, Hard DC 15, and Extreme DC 18 to avoid pointless arguments."
+    },
+    {
+      "published_utc": "2026-10-17T15:10:28Z",
+      "day": "2026-10-17",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-17-rules-myth-rule-10-4f8851925615",
+      "instagram_post_id": "18125742313883543",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "00087a8ce9ff464e68d5ae75f41348dbca3cb4e5f0063576c76e3fe871df090d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-17.mp4",
+      "fact_name": "Birth Augur",
+      "category": "rules_myth",
+      "hook": "Birth Augur ties your Luck modifier to one roll type permanently - a d30 roll at creation sets the context.",
+      "body": "Birth Augur links your Luck modifier to a specific roll type for life, which many players overlook. This permanent effect is separate from spending Luck for temporary boosts, leading to mismanagement of Luck resources. Remember this ongoing effect when planning character actions and resource management to avoid wasting Luck on non-beneficial rolls.",
+      "cta": "Judges: Remind players their Birth Augur's Luck modifier affects one roll type permanently; it's not just a temporary Luck boost."
     }
   ]
 }
