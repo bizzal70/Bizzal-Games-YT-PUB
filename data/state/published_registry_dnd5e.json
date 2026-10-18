@@ -3053,6 +3053,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-16.mp4",
         "video_sha256": "9edf95b7e108b337a8bdfa829b1615ae59bb49a7e7e186788df996d0b6c15e79"
       }
+    },
+    {
+      "published_utc": "2026-10-18T14:22:19Z",
+      "day": "2026-10-18",
+      "content_id": "bgp-2026-10-18-encounter-seed-creature-srd-2024-chuul-e6504201d269",
+      "publish_hash": "99d76ad2d7a62c29583326713208e48ac8069d2dfce79a0c8e465997a9539575",
+      "youtube_video_id": "7l-__HOHbtA",
+      "youtube_url": "https://www.youtube.com/watch?v=7l-__HOHbtA",
+      "video_sha256": "0c50cb452b5624f030fe220b3cdeabc48d18da6489365da1c2b110b6f5f76d45",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-18.mp4",
+      "fingerprint": {
+        "day": "2026-10-18",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-10-18-encounter-seed-creature-srd-2024-chuul-e6504201d269",
+        "canonical_hash": "e6504201d26975ae753127d1eea3e0c4a224055dd0f77c3a00b10842094623c5",
+        "script_id": "514a67b6ce1f42d0de7df64c1ee60aa0717043d9ed17f23cf90add1f62e0f751",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_chuul",
+        "fact_name": "Chuul",
+        "hook": "Chuul: pick a cost, enforce it.",
+        "body": "Multiattack combines a claw attack with Paralyzing Tentacles, forcing a DC 13 Constitution save. Many overlook that paralysis means automatic failure on Strength and Dexterity saves. Engaging at range or using spells that don't require attack rolls can mitigate this threat. Chuul's AC 16 and 76 HP make it a durable opponent at CR 4, so planning around its resistances is crucial.",
+        "cta": "DMs: Mention the Chuul's DC 13 Constitution save for paralysis to remind players that melee range is a bad idea.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-18.mp4",
+        "video_sha256": "0c50cb452b5624f030fe220b3cdeabc48d18da6489365da1c2b110b6f5f76d45"
+      }
     }
   ]
 }

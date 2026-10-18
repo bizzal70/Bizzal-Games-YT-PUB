@@ -1228,5 +1228,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-10-18": {
+    "item_spotlight": {
+      "angle": "clever_use",
+      "voice": "torchbearer_ref",
+      "tone": "gritty",
+      "persona": "dungeon_gear_mentor",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

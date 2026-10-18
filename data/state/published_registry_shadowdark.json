@@ -2661,6 +2661,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-17.mp4",
         "video_sha256": "eed308ca0958e98cd99e6953b0ec3441fca4fce49108b70e2ebcf3175db5e2df"
       }
+    },
+    {
+      "published_utc": "2026-10-18T14:26:10Z",
+      "day": "2026-10-18",
+      "content_id": "bgp-2026-10-18-item-spotlight-item-19-1054e341ef47",
+      "publish_hash": "82bd6d6d268c7e2711539bab13209c4a31146b408db153acdd39e3e7bb90befd",
+      "youtube_video_id": "_asQwPKQaZo",
+      "youtube_url": "https://www.youtube.com/watch?v=_asQwPKQaZo",
+      "video_sha256": "434bddba97f84aba035c457807f20f75a9c093e5dfa02aa0edea324c6a5f762d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-18.mp4",
+      "fingerprint": {
+        "day": "2026-10-18",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-10-18-item-spotlight-item-19-1054e341ef47",
+        "canonical_hash": "1054e341ef47910bf612ca95c8ac593a6c6612c9e4bfa729ae3cb0c2e9c40704",
+        "script_id": "3db89aca5d96bb5e0dfbeef7f498579a526950d2af18fb9ef0cb0d9767e9b561",
+        "fact_kind": "item",
+        "fact_pk": 19,
+        "fact_name": "Cloak Of Elvenkind",
+        "hook": "Cloak Of Elvenkind's invisibility is more limited than players assume - it lasts only 5 rounds and ends if you.",
+        "body": "The Cloak Of Elvenkind ensures hiding checks are always easy with a DC of 9. Invisibility from the cloak lasts for just 5 rounds and ends immediately if an attack or spell is performed. Activating invisibility too early or in combat situations often results in wasted potential. Timing activation precisely when avoiding detection is crucial and combat is unlikely yields the best results.",
+        "cta": "GMs: Remind them the cloak's invisibility lasts 5 rounds; use it for stealthy retreats, not mid-battle vanishing acts.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-18.mp4",
+        "video_sha256": "434bddba97f84aba035c457807f20f75a9c093e5dfa02aa0edea324c6a5f762d"
+      },
+      "tone_lint_violation": "vague filler phrase: often results in"
     }
   ]
 }

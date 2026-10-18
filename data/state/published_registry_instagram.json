@@ -3792,6 +3792,51 @@
       "hook": "Birth Augur ties your Luck modifier to one roll type permanently - a d30 roll at creation sets the context.",
       "body": "Birth Augur links your Luck modifier to a specific roll type for life, which many players overlook. This permanent effect is separate from spending Luck for temporary boosts, leading to mismanagement of Luck resources. Remember this ongoing effect when planning character actions and resource management to avoid wasting Luck on non-beneficial rolls.",
       "cta": "Judges: Remind players their Birth Augur's Luck modifier affects one roll type permanently; it's not just a temporary Luck boost."
+    },
+    {
+      "published_utc": "2026-10-18T14:19:37Z",
+      "day": "2026-10-18",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-18-monster-tactic-creature-411-154a12b48c41",
+      "instagram_post_id": "18027532910863466",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "5cc2989984a9c2f98b5d60c73f3169d13302f1ac8032ec93067cb74b9c7ce049",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-18.mp4",
+      "fact_name": "Lava Ooze Primeval Slime",
+      "category": "monster_tactic",
+      "hook": "Lava Ooze Primeval Slime is more dangerous than it looks - camouflage grants +10 to stealth checks in volcanic.",
+      "body": "Its pseudopod attack deals 1d4 damage plus burning touch, which can quickly stack up if not addressed. The common oversight is ignoring its camouflage bonus, letting it ambush effectively. Exploit its vulnerability to cold and water for double damage to mitigate its threat. Its movement is only 5', so controlling its position is crucial.",
+      "cta": "Judges: Exploit its -3 initiative; let the players act first and leverage cold or water for double damage."
+    },
+    {
+      "published_utc": "2026-10-18T14:23:19Z",
+      "day": "2026-10-18",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-18-encounter-seed-creature-srd-2024-chuul-e6504201d269",
+      "instagram_post_id": "17917110078266136",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "0c50cb452b5624f030fe220b3cdeabc48d18da6489365da1c2b110b6f5f76d45",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-18.mp4",
+      "fact_name": "Chuul",
+      "category": "encounter_seed",
+      "hook": "Chuul: pick a cost, enforce it.",
+      "body": "Multiattack combines a claw attack with Paralyzing Tentacles, forcing a DC 13 Constitution save. Many overlook that paralysis means automatic failure on Strength and Dexterity saves. Engaging at range or using spells that don't require attack rolls can mitigate this threat. Chuul's AC 16 and 76 HP make it a durable opponent at CR 4, so planning around its resistances is crucial.",
+      "cta": "DMs: Mention the Chuul's DC 13 Constitution save for paralysis to remind players that melee range is a bad idea."
+    },
+    {
+      "published_utc": "2026-10-18T14:27:09Z",
+      "day": "2026-10-18",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-18-item-spotlight-item-19-1054e341ef47",
+      "instagram_post_id": "18114498686032081",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "434bddba97f84aba035c457807f20f75a9c093e5dfa02aa0edea324c6a5f762d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-18.mp4",
+      "fact_name": "Cloak Of Elvenkind",
+      "category": "item_spotlight",
+      "hook": "Cloak Of Elvenkind's invisibility is more limited than players assume - it lasts only 5 rounds and ends if you.",
+      "body": "The Cloak Of Elvenkind ensures hiding checks are always easy with a DC of 9. Invisibility from the cloak lasts for just 5 rounds and ends immediately if an attack or spell is performed. Activating invisibility too early or in combat situations often results in wasted potential. Timing activation precisely when avoiding detection is crucial and combat is unlikely yields the best results.",
+      "cta": "GMs: Remind them the cloak's invisibility lasts 5 rounds; use it for stealthy retreats, not mid-battle vanishing acts."
     }
   ]
 }

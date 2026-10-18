@@ -1228,5 +1228,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-18": {
+    "encounter_seed": {
+      "angle": "three_beats",
+      "voice": "gritty_dm",
+      "tone": "heroic",
+      "persona": "dm_story_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }
