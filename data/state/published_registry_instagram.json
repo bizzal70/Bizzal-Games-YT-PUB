@@ -3837,6 +3837,51 @@
       "hook": "Cloak Of Elvenkind's invisibility is more limited than players assume - it lasts only 5 rounds and ends if you.",
       "body": "The Cloak Of Elvenkind ensures hiding checks are always easy with a DC of 9. Invisibility from the cloak lasts for just 5 rounds and ends immediately if an attack or spell is performed. Activating invisibility too early or in combat situations often results in wasted potential. Timing activation precisely when avoiding detection is crucial and combat is unlikely yields the best results.",
       "cta": "GMs: Remind them the cloak's invisibility lasts 5 rounds; use it for stealthy retreats, not mid-battle vanishing acts."
+    },
+    {
+      "published_utc": "2026-10-19T14:26:57Z",
+      "day": "2026-10-19",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-19-spell-use-case-spell-150-ef645c4a29c2",
+      "instagram_post_id": "17988832377085921",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "7929e9437c0e09bf8aa07c6c0d4576cd6290bf2b78145c05d9ce3b4b8bad51bd",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-19.mp4",
+      "fact_name": "Vermin Blight",
+      "category": "spell_use_case",
+      "hook": "Vermin Blight changes the battlefield dynamics more than players expect - 200' + 10' per caster level range.",
+      "body": "Vermin Blight's range and duration allow for strategic positioning, but players often misuse it as a mere damage tool. The spell check result determines the size and lethality of the swarm, which can drastically alter an encounter when used to control space or disrupt enemy formations. Casting it at the right moment to influence enemy movement or protect key areas is more effective than simply targeting the nearest threat.",
+      "cta": "Judges: Use Vermin Blight's 200' + 10' per level range to force enemy movement, not just rack up damage."
+    },
+    {
+      "published_utc": "2026-10-19T14:32:08Z",
+      "day": "2026-10-19",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-19-rules-myth-rule-srd-2024-exploration-hazards-ffc1eb946d08",
+      "instagram_post_id": "18143834422586622",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "ca663ad1759b64d8719e1126ef32572e2a4a2282da3a7b8045188a950aae3f6f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-19.mp4",
+      "fact_name": "Hazards",
+      "category": "rules_myth",
+      "hook": "Hazards often trigger more than once - they apply effects each time conditions are met.",
+      "body": "Hazards like burning, dehydration, and suffocation are defined in the Rules Glossary. They apply their effects whenever their specific conditions are met, not just once. Misunderstanding this can lead to repeated damage or penalties. Establishing clear rulings on trigger conditions prevents disputes and ensures consistent application.",
+      "cta": "DMs: Clarify that hazards like burning trigger each time conditions are met, as per Rules Glossary, to avoid repeated disputes."
+    },
+    {
+      "published_utc": "2026-10-19T14:39:45Z",
+      "day": "2026-10-19",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-19-encounter-seed-creature-177-78cfec836d0e",
+      "instagram_post_id": "18125699131907818",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c368252796a354091ffaac2e17b7acd38186beeed28e069c590ce3f7c9401c21",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-19.mp4",
+      "fact_name": "Rot Flower",
+      "category": "encounter_seed",
+      "hook": "Make Rot Flower cost something.",
+      "body": "Rot Flower has an AC of 9 and 10 hit points, making it deceptively easy to hit but not necessarily easy to handle. Its bite attack, with a +1 to hit and 1d4 damage, is less concerning than its toxin. The common error is underestimating the impact of the toxin, which can render targets unconscious for 1d4 rounds on a failed DC 12 Constitution save. Prioritizing its elimination or maintaining distance minimizes the risk of multiple party members being incapacitated.",
+      "cta": "GMs: Slip a Rot Flower into combat when they're distracted; its DC 12 toxin will remind them why focus matters."
     }
   ]
 }

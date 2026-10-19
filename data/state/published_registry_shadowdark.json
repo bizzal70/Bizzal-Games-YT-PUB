@@ -2688,6 +2688,32 @@
         "video_sha256": "434bddba97f84aba035c457807f20f75a9c093e5dfa02aa0edea324c6a5f762d"
       },
       "tone_lint_violation": "vague filler phrase: often results in"
+    },
+    {
+      "published_utc": "2026-10-19T14:37:45Z",
+      "day": "2026-10-19",
+      "content_id": "bgp-2026-10-19-encounter-seed-creature-177-78cfec836d0e",
+      "publish_hash": "3bb50adcf3aeca0fb8ea6baf7f3c0aa8a30f1ecc9b97d3b15d3d519fd41e2cc5",
+      "youtube_video_id": "0vPwDJvTZ3Y",
+      "youtube_url": "https://www.youtube.com/watch?v=0vPwDJvTZ3Y",
+      "video_sha256": "c368252796a354091ffaac2e17b7acd38186beeed28e069c590ce3f7c9401c21",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-19.mp4",
+      "fingerprint": {
+        "day": "2026-10-19",
+        "category": "encounter_seed",
+        "angle": "twist",
+        "content_id": "bgp-2026-10-19-encounter-seed-creature-177-78cfec836d0e",
+        "canonical_hash": "78cfec836d0e0d16932c7df075d8802c1eb2a8a7e2d91aa72a8688ce4fcd09b8",
+        "script_id": "2257fea619f66569120bb059fe5970bcc409039ceb7ba28f99db74cf41f6fcbb",
+        "fact_kind": "creature",
+        "fact_pk": 177,
+        "fact_name": "Rot Flower",
+        "hook": "Make Rot Flower cost something.",
+        "body": "Rot Flower has an AC of 9 and 10 hit points, making it deceptively easy to hit but not necessarily easy to handle. Its bite attack, with a +1 to hit and 1d4 damage, is less concerning than its toxin. The common error is underestimating the impact of the toxin, which can render targets unconscious for 1d4 rounds on a failed DC 12 Constitution save. Prioritizing its elimination or maintaining distance minimizes the risk of multiple party members being incapacitated.",
+        "cta": "GMs: Slip a Rot Flower into combat when they're distracted; its DC 12 toxin will remind them why focus matters.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-19.mp4",
+        "video_sha256": "c368252796a354091ffaac2e17b7acd38186beeed28e069c590ce3f7c9401c21"
+      }
     }
   ]
 }

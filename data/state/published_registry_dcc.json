@@ -2480,6 +2480,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-18.mp4",
         "video_sha256": "5cc2989984a9c2f98b5d60c73f3169d13302f1ac8032ec93067cb74b9c7ce049"
       }
+    },
+    {
+      "published_utc": "2026-10-19T14:25:55Z",
+      "day": "2026-10-19",
+      "content_id": "bgp-2026-10-19-spell-use-case-spell-150-ef645c4a29c2",
+      "publish_hash": "365b01d95bb2bd7da9fd0c307bf05b5d7604fcaf089f87dac72b2c0701c93e39",
+      "youtube_video_id": "3Rka188vaNg",
+      "youtube_url": "https://www.youtube.com/watch?v=3Rka188vaNg",
+      "video_sha256": "7929e9437c0e09bf8aa07c6c0d4576cd6290bf2b78145c05d9ce3b4b8bad51bd",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-19.mp4",
+      "fingerprint": {
+        "day": "2026-10-19",
+        "category": "spell_use_case",
+        "angle": "catastrophic_failure",
+        "content_id": "bgp-2026-10-19-spell-use-case-spell-150-ef645c4a29c2",
+        "canonical_hash": "ef645c4a29c28a422cdedd4cdcf284eadc5778c7c6f3a6d0ea4da16b0d1b8353",
+        "script_id": "86bc8bffeac9dafe84b97a0de0639bdf2e2449f35d47b4e14f8fd10c04068750",
+        "fact_kind": "spell",
+        "fact_pk": 150,
+        "fact_name": "Vermin Blight",
+        "hook": "Vermin Blight changes the battlefield dynamics more than players expect - 200' + 10' per caster level range.",
+        "body": "Vermin Blight's range and duration allow for strategic positioning, but players often misuse it as a mere damage tool. The spell check result determines the size and lethality of the swarm, which can drastically alter an encounter when used to control space or disrupt enemy formations. Casting it at the right moment to influence enemy movement or protect key areas is more effective than simply targeting the nearest threat.",
+        "cta": "Judges: Use Vermin Blight's 200' + 10' per level range to force enemy movement, not just rack up damage.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-19.mp4",
+        "video_sha256": "7929e9437c0e09bf8aa07c6c0d4576cd6290bf2b78145c05d9ce3b4b8bad51bd"
+      }
     }
   ]
 }

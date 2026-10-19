@@ -1122,5 +1122,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-19": {
+    "spell_use_case": {
+      "angle": "catastrophic_failure",
+      "voice": "grim_referee",
+      "tone": "ominous",
+      "persona": "chaos_arcane_coach",
+      "spice": [],
+      "tts_voice_id": "ash"
+    }
   }
 }
