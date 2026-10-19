@@ -1,6 +1,94 @@
 [
   {
     "system": "dnd5e",
+    "title": "D&D 5e Unionization: What It Means for Your Campaign",
+    "angle": "Explore how potential unionization might affect the development and updates of future D&D 5e rules.",
+    "rationale": "Wizards of the Coast's potential unionization is a hot topic, affecting the future of D&D.",
+    "fixture_hint": "rule",
+    "search_keyword": "Wizards of the Coast responds to D&D unionization effort",
+    "created_date": "2026-10-19",
+    "status": "pending",
+    "brief_id": "5a480fd2770b"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Project Lamordia Spells: Survival Horror in D&D 5e",
+    "angle": "Focus on new spells introduced by Project Lamordia that enhance the horror experience.",
+    "rationale": "Project Lamordia's incorporation into D&D Beyond signals new and exciting content for players.",
+    "fixture_hint": "spell",
+    "search_keyword": "Project_Lamordia is now on DDB bringing modern survival horror to D&D",
+    "created_date": "2026-10-19",
+    "status": "pending",
+    "brief_id": "b29cf40d9995"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's New Rotating Dungeon: A Tactical Deep Dive",
+    "angle": "Examine how the rotating dungeon mechanic reshapes player strategy and dungeon navigation.",
+    "rationale": "Innovative dungeon exploration in Shadowdark is a current topic of interest.",
+    "fixture_hint": "rule",
+    "search_keyword": "The Rotating Dungeon: Innovative Exploration in Shadowdark",
+    "created_date": "2026-10-19",
+    "status": "pending",
+    "brief_id": "3a230093d023"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's AI Ban: Enhancing the Game Master Experience",
+    "angle": "Discuss how the AI ban in Shadowdark impacts GM creativity and player engagement.",
+    "rationale": "With AI bans being a hot topic, Shadowdark's approach is particularly relevant.",
+    "fixture_hint": "rule",
+    "search_keyword": "AI Ban and Shadowdark: A New Era of Game Mastering",
+    "created_date": "2026-10-19",
+    "status": "pending",
+    "brief_id": "86947ee6fe02"
+  },
+  {
+    "system": "shadowdark",
+    "title": "The Sorrow Knight: Shadowdark's Latest Tactical Challenge",
+    "angle": "Analyze the new Sorrow Knight NPC and its implications for campaign dynamics.",
+    "rationale": "Shadowdark's new content introduces unique challenges that captivate the community.",
+    "fixture_hint": "creature",
+    "search_keyword": "Sorrow Knight Tactics: Shadowdark's New Challenge",
+    "created_date": "2026-10-19",
+    "status": "pending",
+    "brief_id": "6598e6ac4754"
+  },
+  {
+    "system": "dcc",
+    "title": "Vikings in DCC: Unleashing Norse Fury",
+    "angle": "Explore how Viking themes are integrated into DCC's rules and adventures.",
+    "rationale": "The Age of Vikings influence in DCC is a current trend in the community.",
+    "fixture_hint": "rule",
+    "search_keyword": "Viking Themes in DCC: Age of Vikings Influence",
+    "created_date": "2026-10-19",
+    "status": "pending",
+    "brief_id": "8794ec2e6e22"
+  },
+  {
+    "system": "dcc",
+    "title": "Tarrasque Unleashed: DCC's Ultimate Colossal Threat",
+    "angle": "Detail the mechanics and strategies for facing the newly introduced Tarrasque in DCC.",
+    "rationale": "The Tarrasque is a significant addition to DCC, drawing player interest.",
+    "fixture_hint": "creature",
+    "search_keyword": "The Tarrasque Unleashed: DCC's Colossal Threat",
+    "created_date": "2026-10-19",
+    "status": "pending",
+    "brief_id": "1785f188e918"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Colossal Threats: Faster, Purple Worm!",
+    "angle": "Delve into the tactics and features of the Purple Worm and its role in campaigns.",
+    "rationale": "The introduction of the Purple Worm in DCC captures the community's attention.",
+    "fixture_hint": "creature",
+    "search_keyword": "Faster, Purple Worm!: DCC's Newest Threat",
+    "created_date": "2026-10-19",
+    "status": "pending",
+    "brief_id": "ab6b223c9fa1"
+  },
+  {
+    "system": "dnd5e",
     "title": "Unionizing D&D: What It Means for 2024 Rules",
     "angle": "Explore the potential impacts of unionization on the development of D&D 5e's 2024 rules update.",
     "rationale": "With D&D unionizing as a major topic, understanding how this might affect future rules is crucial.",
