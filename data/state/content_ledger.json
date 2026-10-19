@@ -7996,6 +7996,50 @@
       "video_id": "18125699131907818",
       "day": "2026-10-19",
       "published_at": "2026-10-19T14:39:45+00:00"
+    },
+    {
+      "content_key": "b1c54acd03ccfc7c29accc8c4297a59ae7fc69bc42c305b055b089d989719842",
+      "token_text": "dragon fire hatchling immunity mobility red tactical",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Red Dragon Hatchling: Fire Immunity and Tactical Mobility #dcc",
+      "video_id": "ubDuYG7v000",
+      "day": "2026-10-19",
+      "published_at": "2026-10-19T17:50:10+00:00"
+    },
+    {
+      "content_key": "c90e3d9cc5df628c191832c8e0c672041109f00615a35cf3a380479fc93c961a",
+      "token_text": "dragon fire hatchling immunity player red surprise",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Red Dragon Hatchling's fire immunity surprises players #dcc",
+      "video_id": "QcFEH6oIb2Y",
+      "day": "2026-10-19-dcc-clip1",
+      "published_at": "2026-10-19T17:52:05+00:00"
+    },
+    {
+      "content_key": "dab2c6b8bd530a3f569c8e336f2ee1333c520f71118f99ec02c9302cf0f7d743",
+      "token_text": "battlefield breath control dragon fire hatchling red",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Red Dragon Hatchling's fire breath controls the battlefield #dcc",
+      "video_id": "iBHfoURa16c",
+      "day": "2026-10-19-dcc-clip2",
+      "published_at": "2026-10-19T17:54:25+00:00"
+    },
+    {
+      "content_key": "69deae9e523dcaf8b34cb9b92579956e9b060d499df61486d5295a805fb84cb0",
+      "token_text": "campaign dragon dynamic growth hatchling impact red",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Red Dragon Hatchling's growth impacts campaign dynamics #dcc",
+      "video_id": "wFht5GIAqAM",
+      "day": "2026-10-19-dcc-clip3",
+      "published_at": "2026-10-19T17:57:27+00:00"
     }
   ]
 }

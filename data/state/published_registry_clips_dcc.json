@@ -805,6 +805,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-16-dcc-clip2.mp4",
         "video_sha256": "cfd3152a02136a0d16d838b4138730cb30a8cbd6bf2e2c981d3c91f254f89042"
       }
+    },
+    {
+      "published_utc": "2026-10-19T17:52:05Z",
+      "day": "2026-10-19-dcc-clip1",
+      "content_id": "clip:f4cd858ba3df000c",
+      "publish_hash": "62bdbe6a8e1465449a5621aa4befd0aff95aaad0f9778bc4f3f6b8cbc64c282d",
+      "youtube_video_id": "QcFEH6oIb2Y",
+      "youtube_url": "https://www.youtube.com/watch?v=QcFEH6oIb2Y",
+      "video_sha256": "bd2e441aa884ce23682d40c9dec14e5e4d12dfdd8b37c11cb64b5f7b16af7d19",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-19-dcc-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-10-19-dcc-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:f4cd858ba3df000c",
+        "canonical_hash": "",
+        "script_id": "f4cd858ba3df000c449f543e4dd235713f4b1fa1cc87f9a3327612ce3b96b721",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Red Dragon Hatchling's fire immunity surprises players",
+        "hook": "Red Dragon Hatchling's fire immunity surprises players",
+        "body": "The Red Dragon Hatchling is immune to all fire-based attacks. Players relying on fire magic must adapt their strategies. GMs can place it in hazardous environments like lava flows, adding complexity and requiring players to think creatively.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-19-dcc-clip1.mp4",
+        "video_sha256": "bd2e441aa884ce23682d40c9dec14e5e4d12dfdd8b37c11cb64b5f7b16af7d19"
+      }
+    },
+    {
+      "published_utc": "2026-10-19T17:54:25Z",
+      "day": "2026-10-19-dcc-clip2",
+      "content_id": "clip:d872a804eb937adc",
+      "publish_hash": "5293808b8fb5e29ea20024c5be3f146bdd8f5ab97ad9625ba862f0d1339c559b",
+      "youtube_video_id": "iBHfoURa16c",
+      "youtube_url": "https://www.youtube.com/watch?v=iBHfoURa16c",
+      "video_sha256": "a7b0ca515e8b50e6ef7d415f29b94711fa8ca42a188d419a138139bb7ca38f75",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-19-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-10-19-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:d872a804eb937adc",
+        "canonical_hash": "",
+        "script_id": "d872a804eb937adc6c00641d7b8e118382b41cfa7a4bd0710887b2bc0a757ea5",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Red Dragon Hatchling's fire breath controls the battlefield",
+        "hook": "Red Dragon Hatchling's fire breath controls the battlefield",
+        "body": "The Hatchling's fire breath projects a 20-foot cone, dealing 2d6 damage twice daily. Players make a DC 10 Reflex save to halve damage. GMs use it to disperse groups or create strategic barriers, influencing player tactics.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-19-dcc-clip2.mp4",
+        "video_sha256": "a7b0ca515e8b50e6ef7d415f29b94711fa8ca42a188d419a138139bb7ca38f75"
+      }
+    },
+    {
+      "published_utc": "2026-10-19T17:57:27Z",
+      "day": "2026-10-19-dcc-clip3",
+      "content_id": "clip:b475497e5a9071d9",
+      "publish_hash": "46c52a432791eb91adb42860973f9af1799b84e0d6015721947209992021bccd",
+      "youtube_video_id": "wFht5GIAqAM",
+      "youtube_url": "https://www.youtube.com/watch?v=wFht5GIAqAM",
+      "video_sha256": "bf82840752b3774ed8bf599e052fd1775f8ae537fdfb879762e38258ee3edfdf",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-19-dcc-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-10-19-dcc-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:b475497e5a9071d9",
+        "canonical_hash": "",
+        "script_id": "b475497e5a9071d96982aa7fbd5d414fe5eceda2eba1737ed3864ab4d009942f",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Red Dragon Hatchling's growth impacts campaign dynamics",
+        "hook": "Red Dragon Hatchling's growth impacts campaign dynamics",
+        "body": "When the Hatchling reaches 6 hit dice, it becomes a young red dragon. This power increase shifts campaign dynamics, creating long-term story arcs and time pressure for players to stop its growth before it becomes too powerful.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-19-dcc-clip3.mp4",
+        "video_sha256": "bf82840752b3774ed8bf599e052fd1775f8ae537fdfb879762e38258ee3edfdf"
+      }
     }
   ]
 }
