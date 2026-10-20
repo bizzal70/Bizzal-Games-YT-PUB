@@ -2506,6 +2506,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-19.mp4",
         "video_sha256": "7929e9437c0e09bf8aa07c6c0d4576cd6290bf2b78145c05d9ce3b4b8bad51bd"
       }
+    },
+    {
+      "published_utc": "2026-10-20T15:10:22Z",
+      "day": "2026-10-20",
+      "content_id": "bgp-2026-10-20-rules-ruling-rule-7-d6eb9720fb97",
+      "publish_hash": "379b84eb665352af7fc5537a4921ef964b892e0b378e69f0f75e6e515cd87615",
+      "youtube_video_id": "Df_ShoS0pNs",
+      "youtube_url": "https://www.youtube.com/watch?v=Df_ShoS0pNs",
+      "video_sha256": "49d7300ce16291b9efedd37ae8a364e8fe0304035fd91dcf614329947e431a10",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-20.mp4",
+      "fingerprint": {
+        "day": "2026-10-20",
+        "category": "rules_ruling",
+        "angle": "mighty_deed_judge",
+        "content_id": "bgp-2026-10-20-rules-ruling-rule-7-d6eb9720fb97",
+        "canonical_hash": "d6eb9720fb975a801c4a6b36cb4a953e995587730ec823c0afe1023fedcae280",
+        "script_id": "301ed345d93838ad7a4c72398d17c9b27619ea2a25bcdf0cd06815daeebac698",
+        "fact_kind": "rule",
+        "fact_pk": 7,
+        "fact_name": "Patron Bond and Invoke Patron",
+        "hook": "Patron Bond and Invoke Patron can surprise players with its long-term consequences - patron taint accumulates.",
+        "body": "Patron Bond and Invoke Patron enables Wizards and Elves to form a bond with a patron, such as a demon lord or elder deity, unlocking Invoke Patron and patron-specific spells. Invoke Patron always produces an effect, even on failure, with outcomes influenced by the patron's mood, which improves through service. Each bond attempt risks accumulating patron taint, permanently altering the wizard's personality. Over time, this taint can stack up, leading to significant character changes that are often unexpected.",
+        "cta": "Judges: Track each patron bond attempt and taint accumulation; it'll save you from future \"I didn't know\" arguments.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-20.mp4",
+        "video_sha256": "49d7300ce16291b9efedd37ae8a364e8fe0304035fd91dcf614329947e431a10"
+      }
     }
   ]
 }

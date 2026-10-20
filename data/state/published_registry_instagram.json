@@ -3912,6 +3912,21 @@
       "hook": "Advantage and Disadvantage confuse players more than they expect - multiple sources don't stack.",
       "body": "Advantage and Disadvantage mean rolling twice and taking the better or worse result. Multiple sources do not stack; only one source applies at any time. They cancel each other out when present together. This understanding prevents wasted actions and arguments.",
       "cta": "GMs: Roll twice for Advantage or Disadvantage, pick the result, and ignore any stacking nonsense - this isn't a debate club."
+    },
+    {
+      "published_utc": "2026-10-20T15:12:45Z",
+      "day": "2026-10-20",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-20-rules-ruling-rule-7-d6eb9720fb97",
+      "instagram_post_id": "17961623556000235",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "49d7300ce16291b9efedd37ae8a364e8fe0304035fd91dcf614329947e431a10",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-20.mp4",
+      "fact_name": "Patron Bond and Invoke Patron",
+      "category": "rules_ruling",
+      "hook": "Patron Bond and Invoke Patron can surprise players with its long-term consequences - patron taint accumulates.",
+      "body": "Patron Bond and Invoke Patron enables Wizards and Elves to form a bond with a patron, such as a demon lord or elder deity, unlocking Invoke Patron and patron-specific spells. Invoke Patron always produces an effect, even on failure, with outcomes influenced by the patron's mood, which improves through service. Each bond attempt risks accumulating patron taint, permanently altering the wizard's personality. Over time, this taint can stack up, leading to significant character changes that are often unexpected.",
+      "cta": "Judges: Track each patron bond attempt and taint accumulation; it'll save you from future \"I didn't know\" arguments."
     }
   ]
 }
