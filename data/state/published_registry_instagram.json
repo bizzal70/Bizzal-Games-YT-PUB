@@ -3882,6 +3882,36 @@
       "hook": "Make Rot Flower cost something.",
       "body": "Rot Flower has an AC of 9 and 10 hit points, making it deceptively easy to hit but not necessarily easy to handle. Its bite attack, with a +1 to hit and 1d4 damage, is less concerning than its toxin. The common error is underestimating the impact of the toxin, which can render targets unconscious for 1d4 rounds on a failed DC 12 Constitution save. Prioritizing its elimination or maintaining distance minimizes the risk of multiple party members being incapacitated.",
       "cta": "GMs: Slip a Rot Flower into combat when they're distracted; its DC 12 toxin will remind them why focus matters."
+    },
+    {
+      "published_utc": "2026-10-20T14:31:36Z",
+      "day": "2026-10-20",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-20-class-spotlight-class-xanathars-guide-the-celestial-f84437b1cd53",
+      "instagram_post_id": "18005621669793266",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "6aa46a31b853b641e3e34024a1ed7d6d4f68d0cae77837feb16aba347d8d723e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-20.mp4",
+      "fact_name": "The Celestial",
+      "category": "class_spotlight",
+      "hook": "The Celestial's spell list offers healing and radiant damage options - guiding bolt and cure wounds.",
+      "body": "The Celestial subclass provides a unique spell list including cure wounds, guiding bolt, and revivify. Mismanagement of spell slots often occurs when too many are used for healing in early encounters, leaving fewer for critical moments. Reserving high-impact spells like revivify for boss fights while using cantrips and lower-level spells for routine combat is more effective.",
+      "cta": "DMs: Allocate spell slots wisely; save revivify for boss fights and use cantrips or cure wounds in routine skirmishes."
+    },
+    {
+      "published_utc": "2026-10-20T14:37:21Z",
+      "day": "2026-10-20",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-20-rules-myth-rule-1-9b419a9658b3",
+      "instagram_post_id": "17951343696334758",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "a74b5832da5ece0846e5f96c6b4a9d04cbb322f7a600151fa9ee67b186353c77",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-20.mp4",
+      "fact_name": "Advantage and Disadvantage",
+      "category": "rules_myth",
+      "hook": "Advantage and Disadvantage confuse players more than they expect - multiple sources don't stack.",
+      "body": "Advantage and Disadvantage mean rolling twice and taking the better or worse result. Multiple sources do not stack; only one source applies at any time. They cancel each other out when present together. This understanding prevents wasted actions and arguments.",
+      "cta": "GMs: Roll twice for Advantage or Disadvantage, pick the result, and ignore any stacking nonsense - this isn't a debate club."
     }
   ]
 }

@@ -2714,6 +2714,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-19.mp4",
         "video_sha256": "c368252796a354091ffaac2e17b7acd38186beeed28e069c590ce3f7c9401c21"
       }
+    },
+    {
+      "published_utc": "2026-10-20T14:36:17Z",
+      "day": "2026-10-20",
+      "content_id": "bgp-2026-10-20-rules-myth-rule-1-9b419a9658b3",
+      "publish_hash": "9d25af6247440307b3de7bdc442fcc0b9ddf4860dfbd34225d0392909fb0bbdf",
+      "youtube_video_id": "iBp8UP9ZOGI",
+      "youtube_url": "https://www.youtube.com/watch?v=iBp8UP9ZOGI",
+      "video_sha256": "a74b5832da5ece0846e5f96c6b4a9d04cbb322f7a600151fa9ee67b186353c77",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-20.mp4",
+      "fingerprint": {
+        "day": "2026-10-20",
+        "category": "rules_myth",
+        "angle": "quick_example",
+        "content_id": "bgp-2026-10-20-rules-myth-rule-1-9b419a9658b3",
+        "canonical_hash": "9b419a9658b36761bbb33027c25c3a215009a4222aa8546efd7ea938f25cd597",
+        "script_id": "b96b677c36346a98bf02ee935d8a8b8787a177b4704830fc764ecd180bc8c4db",
+        "fact_kind": "rule",
+        "fact_pk": 1,
+        "fact_name": "Advantage and Disadvantage",
+        "hook": "Advantage and Disadvantage confuse players more than they expect - multiple sources don't stack.",
+        "body": "Advantage and Disadvantage mean rolling twice and taking the better or worse result. Multiple sources do not stack; only one source applies at any time. They cancel each other out when present together. This understanding prevents wasted actions and arguments.",
+        "cta": "GMs: Roll twice for Advantage or Disadvantage, pick the result, and ignore any stacking nonsense - this isn't a debate club.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-20.mp4",
+        "video_sha256": "a74b5832da5ece0846e5f96c6b4a9d04cbb322f7a600151fa9ee67b186353c77"
+      }
     }
   ]
 }

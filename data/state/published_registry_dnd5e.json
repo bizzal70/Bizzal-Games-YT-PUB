@@ -3106,6 +3106,32 @@
         "video_sha256": "ca663ad1759b64d8719e1126ef32572e2a4a2282da3a7b8045188a950aae3f6f"
       },
       "tone_lint_violation": "vague filler phrase: Misunderstanding this can lead to"
+    },
+    {
+      "published_utc": "2026-10-20T14:29:49Z",
+      "day": "2026-10-20",
+      "content_id": "bgp-2026-10-20-class-spotlight-class-xanathars-guide-the-celestial-f84437b1cd53",
+      "publish_hash": "920cffd99d57ff1f3ec546496d5feb7e20e1a40871780d0c0ffa19834c3597d3",
+      "youtube_video_id": "lshvLxDhCGw",
+      "youtube_url": "https://www.youtube.com/watch?v=lshvLxDhCGw",
+      "video_sha256": "6aa46a31b853b641e3e34024a1ed7d6d4f68d0cae77837feb16aba347d8d723e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-20.mp4",
+      "fingerprint": {
+        "day": "2026-10-20",
+        "category": "class_spotlight",
+        "angle": "resource_breakpoint",
+        "content_id": "bgp-2026-10-20-class-spotlight-class-xanathars-guide-the-celestial-f84437b1cd53",
+        "canonical_hash": "f84437b1cd533f9a9e0e56e7182f74212b0aba9e77a619bb35c324f862695e9a",
+        "script_id": "35e76c2421b77d359ed4cd74de9eec7a44b329bd3ae40312bdfadab96663a7c3",
+        "fact_kind": "class",
+        "fact_pk": "xanathars-guide_the-celestial",
+        "fact_name": "The Celestial",
+        "hook": "The Celestial's spell list offers healing and radiant damage options - guiding bolt and cure wounds.",
+        "body": "The Celestial subclass provides a unique spell list including cure wounds, guiding bolt, and revivify. Mismanagement of spell slots often occurs when too many are used for healing in early encounters, leaving fewer for critical moments. Reserving high-impact spells like revivify for boss fights while using cantrips and lower-level spells for routine combat is more effective.",
+        "cta": "DMs: Allocate spell slots wisely; save revivify for boss fights and use cantrips or cure wounds in routine skirmishes.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-20.mp4",
+        "video_sha256": "6aa46a31b853b641e3e34024a1ed7d6d4f68d0cae77837feb16aba347d8d723e"
+      }
     }
   ]
 }
