@@ -753,6 +753,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-12-shadowdark-clip1.mp4",
         "video_sha256": "98ab49f43f20cfc0a2212cf2c2d9b3f0d7b3624376e513bdabcdd88e06e7eddf"
       }
+    },
+    {
+      "published_utc": "2026-10-21T17:56:00Z",
+      "day": "2026-10-21-shadowdark-clip1",
+      "content_id": "clip:a6e8c08272e3e549",
+      "publish_hash": "114026cfa99c44a8d3bdc107ec2513a67e5f39d45f4cfc60422a377f0b3e92e7",
+      "youtube_video_id": "aY1p40Ss-xY",
+      "youtube_url": "https://www.youtube.com/watch?v=aY1p40Ss-xY",
+      "video_sha256": "35671ac7af6ded92344c4cf770e8957fa5425771dcaf6cd763790b6a946694cd",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-21-shadowdark-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-10-21-shadowdark-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:a6e8c08272e3e549",
+        "canonical_hash": "",
+        "script_id": "a6e8c08272e3e549e6fdc5cac07d839fdaf74cbc4141b0549a24097a1fe01b70",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Dreamwalk requires a named sleeper",
+        "hook": "Dreamwalk requires a named sleeper",
+        "body": "Dreamwalk, a tier 5 spell, needs a 'named sleeper' to work. It’s not enough for someone to be simply asleep; you must know their name. Gathering this information involves divination, interrogation, or intelligence from informants.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-21-shadowdark-clip1.mp4",
+        "video_sha256": "35671ac7af6ded92344c4cf770e8957fa5425771dcaf6cd763790b6a946694cd"
+      }
+    },
+    {
+      "published_utc": "2026-10-21T17:57:19Z",
+      "day": "2026-10-21-shadowdark-clip2",
+      "content_id": "clip:1bf8746629351822",
+      "publish_hash": "1bd234fdb41e288cd4211dd205af71d433965c6097d2a41fad013a566ab546d6",
+      "youtube_video_id": "ZuhyeE1ptNY",
+      "youtube_url": "https://www.youtube.com/watch?v=ZuhyeE1ptNY",
+      "video_sha256": "a5582d62994da0cd27d6ccd3976816b7de1dbb9f74848c1d3826804ddc2718a9",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-21-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-10-21-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:1bf8746629351822",
+        "canonical_hash": "",
+        "script_id": "1bf8746629351822efdf9e2e57121ee0af0fc6aeb5ac003c0b03f3fac0dd158e",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Dreamwalk needs willing allies",
+        "hook": "Dreamwalk needs willing allies",
+        "body": "The Dreamwalk spell requires all allies to be willing participants. Each must agree to the teleportation. In chaotic situations, getting consent can be tricky but is crucial for the spell's success.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-21-shadowdark-clip2.mp4",
+        "video_sha256": "a5582d62994da0cd27d6ccd3976816b7de1dbb9f74848c1d3826804ddc2718a9"
+      }
+    },
+    {
+      "published_utc": "2026-10-21T17:59:32Z",
+      "day": "2026-10-21-shadowdark-clip3",
+      "content_id": "clip:d30d3d306364e18b",
+      "publish_hash": "9ec3b84f17f637dbf9677259c047ddeb7aa1074b2adab1521ed704b77755a88f",
+      "youtube_video_id": "hS9QuFpfbG0",
+      "youtube_url": "https://www.youtube.com/watch?v=hS9QuFpfbG0",
+      "video_sha256": "7d5c08f7620f32704b064d2726889bcb0c733ac6e09c75c9c036dc8aee50f02e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-21-shadowdark-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-10-21-shadowdark-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:d30d3d306364e18b",
+        "canonical_hash": "",
+        "script_id": "d30d3d306364e18b69b50835b1b05f95a1cf71997a6db4c0dcfade5feb38c3d5",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Dreamwalk bypasses physical barriers",
+        "hook": "Dreamwalk bypasses physical barriers",
+        "body": "Dreamwalk lets you teleport beside a named sleeper, bypassing physical barriers and magical wards. Unlike line-of-sight spells, it uses a dream state, providing flexibility and surprise.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-21-shadowdark-clip3.mp4",
+        "video_sha256": "7d5c08f7620f32704b064d2726889bcb0c733ac6e09c75c9c036dc8aee50f02e"
+      }
     }
   ]
 }

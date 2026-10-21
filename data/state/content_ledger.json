@@ -8172,6 +8172,50 @@
       "video_id": "17923777650435379",
       "day": "2026-10-21",
       "published_at": "2026-10-21T14:38:56+00:00"
+    },
+    {
+      "content_key": "1d73a9b2eff2172af194d38bedc614463d4bf4c6ab60f49bb86b251f6fbd278a",
+      "token_text": "beside dreamwalk named sleeper teleport",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Dreamwalk: Teleport Beside a Named Sleeper #shadowdark",
+      "video_id": "-oVblR7x6_E",
+      "day": "2026-10-21",
+      "published_at": "2026-10-21T17:53:39+00:00"
+    },
+    {
+      "content_key": "202f5717c02ad09f91a789d3832b0a8e58d6782ede03d3f49c9ff73ce0778a91",
+      "token_text": "dreamwalk named require sleeper",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Dreamwalk requires a named sleeper #shadowdark",
+      "video_id": "aY1p40Ss-xY",
+      "day": "2026-10-21-shadowdark-clip1",
+      "published_at": "2026-10-21T17:56:00+00:00"
+    },
+    {
+      "content_key": "08b2e32ecfb41a059167ba48ae6527ed86f099a8116b665456ff5632d37998c8",
+      "token_text": "allie dreamwalk need willing",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Dreamwalk needs willing allies #shadowdark",
+      "video_id": "ZuhyeE1ptNY",
+      "day": "2026-10-21-shadowdark-clip2",
+      "published_at": "2026-10-21T17:57:19+00:00"
+    },
+    {
+      "content_key": "a3590b5efb6f78372f53fe5030a74dea422b8dd65e282d9f73d7c58357fc0487",
+      "token_text": "barrier bypasse dreamwalk physical",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Dreamwalk bypasses physical barriers #shadowdark",
+      "video_id": "hS9QuFpfbG0",
+      "day": "2026-10-21-shadowdark-clip3",
+      "published_at": "2026-10-21T17:59:32+00:00"
     }
   ]
 }
