@@ -3927,6 +3927,51 @@
       "hook": "Patron Bond and Invoke Patron can surprise players with its long-term consequences - patron taint accumulates.",
       "body": "Patron Bond and Invoke Patron enables Wizards and Elves to form a bond with a patron, such as a demon lord or elder deity, unlocking Invoke Patron and patron-specific spells. Invoke Patron always produces an effect, even on failure, with outcomes influenced by the patron's mood, which improves through service. Each bond attempt risks accumulating patron taint, permanently altering the wizard's personality. Over time, this taint can stack up, leading to significant character changes that are often unexpected.",
       "cta": "Judges: Track each patron bond attempt and taint accumulation; it'll save you from future \"I didn't know\" arguments."
+    },
+    {
+      "published_utc": "2026-10-21T14:29:36Z",
+      "day": "2026-10-21",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-21-item-spotlight-item-15-7e2542a0aa99",
+      "instagram_post_id": "17982549131908103",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "7d9f4d6627f869734a93f4e59e3ac543583dccd948d6d8a6b04474382be33c61",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-21.mp4",
+      "fact_name": "Blade of Great Strength",
+      "category": "item_spotlight",
+      "hook": "Blade of Great Strength seems like a permanent boost - its +4 Strength bonus vanishes the moment it leaves.",
+      "body": "The Blade of Great Strength provides a +4 Strength bonus only while wielded. Assuming the bonus persists when sheathed or dropped leads to overconfidence in combat, expecting bonuses that aren't there. Keep the blade in hand when planning melee attacks to ensure the bonus applies.",
+      "cta": "Judges: Remind players that the Blade of Great Strength's +4 bonus vanishes if it's not in their hand."
+    },
+    {
+      "published_utc": "2026-10-21T14:34:18Z",
+      "day": "2026-10-21",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-21-monster-tactic-creature-srd-2024-gorgon-34bc36f7ed0a",
+      "instagram_post_id": "18091329227290350",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "90e85a3e6dafc5b193153fd628c874a15585ecdcc57d5c0d6537e178b57607c8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-21.mp4",
+      "fact_name": "Gorgon",
+      "category": "monster_tactic",
+      "hook": "Gorgon's AC is higher than expected for its challenge rating - 19 from natural armor.",
+      "body": "Gorgon's Petrifying Breath requires a DC 13 Constitution saving throw, which can quickly incapacitate characters. With a speed of 40 feet, it closes distances faster than most anticipate. Its 114 hit points and high Constitution make it resilient to damage. Counterplay involves using terrain to limit its movement and focusing fire to reduce its action economy impact.",
+      "cta": "DMs: Use the Gorgon's 40-foot movement against it by bottlenecking it in tight spaces, then focus fire to overcome its 114 hit points."
+    },
+    {
+      "published_utc": "2026-10-21T14:38:56Z",
+      "day": "2026-10-21",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-21-spell-use-case-spell-75-dd425c619ca5",
+      "instagram_post_id": "17923777650435379",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9e7a4bdeefd206e6440637067f8a05b48e0c7fc7f5b4b58c5aeae5cf0bba34ed",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-21.mp4",
+      "fact_name": "Cacklerot",
+      "category": "spell_use_case",
+      "hook": "Cacklerot changes the situation more than the damage math - range is Close with a Focus duration.",
+      "body": "Cacklerot requires the caster's focus to maintain its effect, rendering a level 4 or lower creature helpless with laughter. Misuse occurs when targeting creatures that aren't pivotal threats. The optimal use is against a key target whose removal shifts the tactical balance without needing a saving throw.",
+      "cta": "GMs: Use Cacklerot on a level 4 or lower creature to incapacitate a key threat, maintaining focus for maximum impact."
     }
   ]
 }

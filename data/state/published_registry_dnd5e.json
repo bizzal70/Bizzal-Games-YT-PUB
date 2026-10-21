@@ -3132,6 +3132,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-20.mp4",
         "video_sha256": "6aa46a31b853b641e3e34024a1ed7d6d4f68d0cae77837feb16aba347d8d723e"
       }
+    },
+    {
+      "published_utc": "2026-10-21T14:33:04Z",
+      "day": "2026-10-21",
+      "content_id": "bgp-2026-10-21-monster-tactic-creature-srd-2024-gorgon-34bc36f7ed0a",
+      "publish_hash": "6de7f9b1eaee366235cf4f5a1abff6bfb9132e0595c4567971007316856aef72",
+      "youtube_video_id": "o-EyXHSZ53o",
+      "youtube_url": "https://www.youtube.com/watch?v=o-EyXHSZ53o",
+      "video_sha256": "90e85a3e6dafc5b193153fd628c874a15585ecdcc57d5c0d6537e178b57607c8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-21.mp4",
+      "fingerprint": {
+        "day": "2026-10-21",
+        "category": "monster_tactic",
+        "angle": "counterplay",
+        "content_id": "bgp-2026-10-21-monster-tactic-creature-srd-2024-gorgon-34bc36f7ed0a",
+        "canonical_hash": "34bc36f7ed0a3937da3916866a0e528635a197f6dafc62e18c1eb1df814d4f65",
+        "script_id": "e0cecdb7e14b75d0fd2bc710528446fca88e1c19e53c6b93450be2a93c977463",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_gorgon",
+        "fact_name": "Gorgon",
+        "hook": "Gorgon's AC is higher than expected for its challenge rating - 19 from natural armor.",
+        "body": "Gorgon's Petrifying Breath requires a DC 13 Constitution saving throw, which can quickly incapacitate characters. With a speed of 40 feet, it closes distances faster than most anticipate. Its 114 hit points and high Constitution make it resilient to damage. Counterplay involves using terrain to limit its movement and focusing fire to reduce its action economy impact.",
+        "cta": "DMs: Use the Gorgon's 40-foot movement against it by bottlenecking it in tight spaces, then focus fire to overcome its 114 hit points.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-21.mp4",
+        "video_sha256": "90e85a3e6dafc5b193153fd628c874a15585ecdcc57d5c0d6537e178b57607c8"
+      }
     }
   ]
 }

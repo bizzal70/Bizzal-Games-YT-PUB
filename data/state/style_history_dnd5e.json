@@ -1262,5 +1262,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-10-21": {
+    "monster_tactic": {
+      "angle": "counterplay",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

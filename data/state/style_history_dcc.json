@@ -1142,5 +1142,15 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-10-21": {
+    "item_spotlight": {
+      "angle": "drawback_watchout",
+      "voice": "chaos_herald",
+      "tone": "gritty",
+      "persona": "dungeon_gear_mentor",
+      "spice": [],
+      "tts_voice_id": "fable"
+    }
   }
 }

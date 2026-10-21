@@ -2532,6 +2532,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-20.mp4",
         "video_sha256": "49d7300ce16291b9efedd37ae8a364e8fe0304035fd91dcf614329947e431a10"
       }
+    },
+    {
+      "published_utc": "2026-10-21T14:28:20Z",
+      "day": "2026-10-21",
+      "content_id": "bgp-2026-10-21-item-spotlight-item-15-7e2542a0aa99",
+      "publish_hash": "faa57f812ada56faf46939a1570f9300eccc8309324854d6e2871cba39f33fc0",
+      "youtube_video_id": "-zAVzCXtMPo",
+      "youtube_url": "https://www.youtube.com/watch?v=-zAVzCXtMPo",
+      "video_sha256": "7d9f4d6627f869734a93f4e59e3ac543583dccd948d6d8a6b04474382be33c61",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-21.mp4",
+      "fingerprint": {
+        "day": "2026-10-21",
+        "category": "item_spotlight",
+        "angle": "drawback_watchout",
+        "content_id": "bgp-2026-10-21-item-spotlight-item-15-7e2542a0aa99",
+        "canonical_hash": "7e2542a0aa9906ed29b6bce51427f72a4459580db3f5f61cf75ed70a5676f556",
+        "script_id": "fb7cf2b0dfbc9784396f3fceb311a16cbeefe0e7633eb85d24283fe9755cec7a",
+        "fact_kind": "item",
+        "fact_pk": 15,
+        "fact_name": "Blade of Great Strength",
+        "hook": "Blade of Great Strength seems like a permanent boost - its +4 Strength bonus vanishes the moment it leaves.",
+        "body": "The Blade of Great Strength provides a +4 Strength bonus only while wielded. Assuming the bonus persists when sheathed or dropped leads to overconfidence in combat, expecting bonuses that aren't there. Keep the blade in hand when planning melee attacks to ensure the bonus applies.",
+        "cta": "Judges: Remind players that the Blade of Great Strength's +4 bonus vanishes if it's not in their hand.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-21.mp4",
+        "video_sha256": "7d9f4d6627f869734a93f4e59e3ac543583dccd948d6d8a6b04474382be33c61"
+      }
     }
   ]
 }
