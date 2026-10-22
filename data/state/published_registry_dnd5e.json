@@ -3158,6 +3158,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-21.mp4",
         "video_sha256": "90e85a3e6dafc5b193153fd628c874a15585ecdcc57d5c0d6537e178b57607c8"
       }
+    },
+    {
+      "published_utc": "2026-10-22T14:29:12Z",
+      "day": "2026-10-22",
+      "content_id": "bgp-2026-10-22-spell-use-case-spell-srd-2024-private-sanctum-8eb50bdceb12",
+      "publish_hash": "6e3db6784206fc46b5b7fa5058de5a64fb6c45143fc0bb895d5736ab89096963",
+      "youtube_video_id": "c8WCQpGYpEY",
+      "youtube_url": "https://www.youtube.com/watch?v=c8WCQpGYpEY",
+      "video_sha256": "c4508d6bcd176de40aa3f20d70bef26442792cac743867aff9f311f738ba7222",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-22.mp4",
+      "fingerprint": {
+        "day": "2026-10-22",
+        "category": "spell_use_case",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-10-22-spell-use-case-spell-srd-2024-private-sanctum-8eb50bdceb12",
+        "canonical_hash": "8eb50bdceb1251a81738f2899b00fd8b5ca42b00c0007c3ebed3613af24b2eaf",
+        "script_id": "1a8ab00991e0d9b83074f07ad652e14bb08a7f3211778413577e6ddfe2ae320d",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_private-sanctum",
+        "fact_name": "Private Sanctum",
+        "hook": "Private Sanctum's area can be larger than players expect - each spell slot level above 4 increases the Cube.",
+        "body": "Private Sanctum creates a magically secure area with a 24-hour duration, but its potential size adjustment is often overlooked. The spell's area starts as a 100-foot Cube and can expand by 100 feet per additional spell slot level. Casting it at a higher level allows for securing larger environments, which can be crucial for controlling movement and visibility in exploration or defense scenarios.",
+        "cta": "DMs: Use Private Sanctum with higher-level slots to expand its Cube beyond 100 feet, securing larger areas for 24 hours.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-22.mp4",
+        "video_sha256": "c4508d6bcd176de40aa3f20d70bef26442792cac743867aff9f311f738ba7222"
+      },
+      "tone_lint_violation": "vague filler phrase: often overlooked"
     }
   ]
 }

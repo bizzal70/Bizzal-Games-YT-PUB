@@ -2558,6 +2558,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-21.mp4",
         "video_sha256": "7d9f4d6627f869734a93f4e59e3ac543583dccd948d6d8a6b04474382be33c61"
       }
+    },
+    {
+      "published_utc": "2026-10-22T14:24:47Z",
+      "day": "2026-10-22",
+      "content_id": "bgp-2026-10-22-encounter-seed-creature-306-ac1e3af6e4e3",
+      "publish_hash": "19d13f2306caca8df90eedef8723485b1f8d9be4d6b1edba3c92525a9da323a2",
+      "youtube_video_id": "FJAjKwLywSE",
+      "youtube_url": "https://www.youtube.com/watch?v=FJAjKwLywSE",
+      "video_sha256": "39220dd63e463531fcc12addca321b7755fcd66de1cae81295b1e0f3f4e1f87e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-22.mp4",
+      "fingerprint": {
+        "day": "2026-10-22",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-10-22-encounter-seed-creature-306-ac1e3af6e4e3",
+        "canonical_hash": "ac1e3af6e4e37a8aacbe2ac643c50cde35ad85d5d10cbe1ce91652fae5d44ee2",
+        "script_id": "d71e01e5526d89ed7822ebd12be34c82f28ee73d0567ccfe77d7a05c67d08cee",
+        "fact_kind": "creature",
+        "fact_pk": 306,
+        "fact_name": "Wood Door Golem",
+        "hook": "Charge Wood Door Golem a real price.",
+        "body": "The Wood Door Golem's slam attack deals 2d6+3 damage and initiates a grapple, often catching players off guard due to its stationary nature and 0' movement. Half damage from non-magical weapons often leads players to waste attacks without realizing its vulnerability to fire and heat, which inflicts double damage. Magic resistance imposes a 50% chance of spell failure, making direct spellcasting unreliable unless circumvented by non-spell fire sources.",
+        "cta": "Judges: Remind them that the Wood Door Golem takes double damage from fire; it's not a suggestion, it's a lifeline.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-22.mp4",
+        "video_sha256": "39220dd63e463531fcc12addca321b7755fcd66de1cae81295b1e0f3f4e1f87e"
+      }
     }
   ]
 }

@@ -2766,6 +2766,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-21.mp4",
         "video_sha256": "9e7a4bdeefd206e6440637067f8a05b48e0c7fc7f5b4b58c5aeae5cf0bba34ed"
       }
+    },
+    {
+      "published_utc": "2026-10-22T14:33:49Z",
+      "day": "2026-10-22",
+      "content_id": "bgp-2026-10-22-class-spotlight-class-2-9fdd3aba827f",
+      "publish_hash": "424d330580c04f24cbfc2d46a75b1e3c27d98f4c6fe696b2b4a21e395a20e07e",
+      "youtube_video_id": "0C23UDUcSfo",
+      "youtube_url": "https://www.youtube.com/watch?v=0C23UDUcSfo",
+      "video_sha256": "31ecd65b88d0e0ba4f992735396a13d65499bad115bb566d2680e52f9bd7cd93",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-22.mp4",
+      "fingerprint": {
+        "day": "2026-10-22",
+        "category": "class_spotlight",
+        "angle": "early_power_spike",
+        "content_id": "bgp-2026-10-22-class-spotlight-class-2-9fdd3aba827f",
+        "canonical_hash": "9fdd3aba827f026c1835fdf9cf56b21a99b724bd1175dd603b87083c678b4ca5",
+        "script_id": "69faed199b1ee3bd112628c88f85bf42ebeab8aff0fedbb1c111381989f7e860",
+        "fact_kind": "class",
+        "fact_pk": 2,
+        "fact_name": "Priest",
+        "hook": "Priest hits a power spike earlier than most classes - Turn Undead becomes reliable at specific levels.",
+        "body": "Priest's Turn Undead ability is a key talent that scales with level. Misjudging when it turns reliable leads to wasted opportunities. Turn Undead should not be used on weak undead early on if it won't consistently affect them. Instead, time its use to coincide with the level where it reliably impacts stronger undead, ensuring it delivers its intended effect.",
+        "cta": "GMs: Make sure your Priest knows Turn Undead becomes reliable at level 3 - plan encounters with stronger undead accordingly.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-22.mp4",
+        "video_sha256": "31ecd65b88d0e0ba4f992735396a13d65499bad115bb566d2680e52f9bd7cd93"
+      }
     }
   ]
 }

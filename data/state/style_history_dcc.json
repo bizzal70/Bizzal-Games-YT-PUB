@@ -1152,5 +1152,15 @@
       "spice": [],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-10-22": {
+    "encounter_seed": {
+      "angle": "three_beats",
+      "voice": "grim_referee",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

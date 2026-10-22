@@ -3972,6 +3972,51 @@
       "hook": "Cacklerot changes the situation more than the damage math - range is Close with a Focus duration.",
       "body": "Cacklerot requires the caster's focus to maintain its effect, rendering a level 4 or lower creature helpless with laughter. Misuse occurs when targeting creatures that aren't pivotal threats. The optimal use is against a key target whose removal shifts the tactical balance without needing a saving throw.",
       "cta": "GMs: Use Cacklerot on a level 4 or lower creature to incapacitate a key threat, maintaining focus for maximum impact."
+    },
+    {
+      "published_utc": "2026-10-22T14:25:48Z",
+      "day": "2026-10-22",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-22-encounter-seed-creature-306-ac1e3af6e4e3",
+      "instagram_post_id": "18075036272759642",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "39220dd63e463531fcc12addca321b7755fcd66de1cae81295b1e0f3f4e1f87e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-22.mp4",
+      "fact_name": "Wood Door Golem",
+      "category": "encounter_seed",
+      "hook": "Charge Wood Door Golem a real price.",
+      "body": "The Wood Door Golem's slam attack deals 2d6+3 damage and initiates a grapple, often catching players off guard due to its stationary nature and 0' movement. Half damage from non-magical weapons often leads players to waste attacks without realizing its vulnerability to fire and heat, which inflicts double damage. Magic resistance imposes a 50% chance of spell failure, making direct spellcasting unreliable unless circumvented by non-spell fire sources.",
+      "cta": "Judges: Remind them that the Wood Door Golem takes double damage from fire; it's not a suggestion, it's a lifeline."
+    },
+    {
+      "published_utc": "2026-10-22T14:30:13Z",
+      "day": "2026-10-22",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-22-spell-use-case-spell-srd-2024-private-sanctum-8eb50bdceb12",
+      "instagram_post_id": "17917688985259566",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "c4508d6bcd176de40aa3f20d70bef26442792cac743867aff9f311f738ba7222",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-22.mp4",
+      "fact_name": "Private Sanctum",
+      "category": "spell_use_case",
+      "hook": "Private Sanctum's area can be larger than players expect - each spell slot level above 4 increases the Cube.",
+      "body": "Private Sanctum creates a magically secure area with a 24-hour duration, but its potential size adjustment is often overlooked. The spell's area starts as a 100-foot Cube and can expand by 100 feet per additional spell slot level. Casting it at a higher level allows for securing larger environments, which can be crucial for controlling movement and visibility in exploration or defense scenarios.",
+      "cta": "DMs: Use Private Sanctum with higher-level slots to expand its Cube beyond 100 feet, securing larger areas for 24 hours."
+    },
+    {
+      "published_utc": "2026-10-22T14:34:48Z",
+      "day": "2026-10-22",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-22-class-spotlight-class-2-9fdd3aba827f",
+      "instagram_post_id": "18075749324468016",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "31ecd65b88d0e0ba4f992735396a13d65499bad115bb566d2680e52f9bd7cd93",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-22.mp4",
+      "fact_name": "Priest",
+      "category": "class_spotlight",
+      "hook": "Priest hits a power spike earlier than most classes - Turn Undead becomes reliable at specific levels.",
+      "body": "Priest's Turn Undead ability is a key talent that scales with level. Misjudging when it turns reliable leads to wasted opportunities. Turn Undead should not be used on weak undead early on if it won't consistently affect them. Instead, time its use to coincide with the level where it reliably impacts stronger undead, ensuring it delivers its intended effect.",
+      "cta": "GMs: Make sure your Priest knows Turn Undead becomes reliable at level 3 - plan encounters with stronger undead accordingly."
     }
   ]
 }
