@@ -1282,5 +1282,17 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-10-23": {
+    "rules_ruling": {
+      "angle": "common_table_mistake",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "sage"
+    }
   }
 }

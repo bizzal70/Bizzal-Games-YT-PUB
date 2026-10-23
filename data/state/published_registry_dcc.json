@@ -2584,6 +2584,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-22.mp4",
         "video_sha256": "39220dd63e463531fcc12addca321b7755fcd66de1cae81295b1e0f3f4e1f87e"
       }
+    },
+    {
+      "published_utc": "2026-10-23T14:25:26Z",
+      "day": "2026-10-23",
+      "content_id": "bgp-2026-10-23-class-spotlight-class-4-507dfb19135e",
+      "publish_hash": "b97a305441f80fcfec434788f90786748b2f778340daeefd94973261a048a2e9",
+      "youtube_video_id": "KTFosEPdqt8",
+      "youtube_url": "https://www.youtube.com/watch?v=KTFosEPdqt8",
+      "video_sha256": "1da4199f3e743acbddc8b279083fdb91eeefc6f28798e76592e4031c2099e503",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-23.mp4",
+      "fingerprint": {
+        "day": "2026-10-23",
+        "category": "class_spotlight",
+        "angle": "wizard_risk",
+        "content_id": "bgp-2026-10-23-class-spotlight-class-4-507dfb19135e",
+        "canonical_hash": "507dfb19135ef496248f65915169412037acf2f72482cde7907ff9bc72cda726",
+        "script_id": "66f7c62f0cc56d2d162e391069db22649db03512778c8d43c248340d35648d09",
+        "fact_kind": "class",
+        "fact_pk": 4,
+        "fact_name": "Thief",
+        "hook": "Thieves regain burned Luck in a way no other class can - by performing improbable feats.",
+        "body": "Thief skills use a d20 roll against a set difficulty, covering areas like backstab, stealth, and traps. Backstab grants a +4 bonus and advances the weapon die two steps, making it a potent opener. Earning back burned Luck requires succeeding at improbable stunts, which encourages risk-taking. Thieves level faster than any other class, making consistent skill use crucial for rapid advancement.",
+        "cta": "Judges: Have your thief roll a d20 for backstab every encounter to exploit that +4 bonus and recover Luck.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-23.mp4",
+        "video_sha256": "1da4199f3e743acbddc8b279083fdb91eeefc6f28798e76592e4031c2099e503"
+      }
     }
   ]
 }

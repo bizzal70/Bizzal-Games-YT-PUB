@@ -4017,6 +4017,51 @@
       "hook": "Priest hits a power spike earlier than most classes - Turn Undead becomes reliable at specific levels.",
       "body": "Priest's Turn Undead ability is a key talent that scales with level. Misjudging when it turns reliable leads to wasted opportunities. Turn Undead should not be used on weak undead early on if it won't consistently affect them. Instead, time its use to coincide with the level where it reliably impacts stronger undead, ensuring it delivers its intended effect.",
       "cta": "GMs: Make sure your Priest knows Turn Undead becomes reliable at level 3 - plan encounters with stronger undead accordingly."
+    },
+    {
+      "published_utc": "2026-10-23T14:26:58Z",
+      "day": "2026-10-23",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-23-class-spotlight-class-4-507dfb19135e",
+      "instagram_post_id": "18073009700744119",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "1da4199f3e743acbddc8b279083fdb91eeefc6f28798e76592e4031c2099e503",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-23.mp4",
+      "fact_name": "Thief",
+      "category": "class_spotlight",
+      "hook": "Thieves regain burned Luck in a way no other class can - by performing improbable feats.",
+      "body": "Thief skills use a d20 roll against a set difficulty, covering areas like backstab, stealth, and traps. Backstab grants a +4 bonus and advances the weapon die two steps, making it a potent opener. Earning back burned Luck requires succeeding at improbable stunts, which encourages risk-taking. Thieves level faster than any other class, making consistent skill use crucial for rapid advancement.",
+      "cta": "Judges: Have your thief roll a d20 for backstab every encounter to exploit that +4 bonus and recover Luck."
+    },
+    {
+      "published_utc": "2026-10-23T14:31:27Z",
+      "day": "2026-10-23",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-23-rules-ruling-rule-srd-2024-combat-melee-attacks-4e591b716f79",
+      "instagram_post_id": "18116523470172550",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "e9f519b5f43bc55ed5a44341ee946c926a4e375046438a9d45f33b4feea2cf96",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-23.mp4",
+      "fact_name": "Melee Attacks",
+      "category": "rules_ruling",
+      "hook": "Melee Attacks require a target within reach - not just line of sight.",
+      "body": "Melee Attacks demand a target within the attacker's reach, typically involving a hand-held weapon or an Unarmed Strike. Monsters complicate this with claws, teeth, or other body parts. Speed over clarity leads to disputes about 'within reach'. Establish clear rulings to prevent repetitive arguments.",
+      "cta": "DMs: Enforce that melee attacks require targets to be within reach, not just visible, to avoid endless debates."
+    },
+    {
+      "published_utc": "2026-10-23T14:37:45Z",
+      "day": "2026-10-23",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-23-monster-tactic-creature-2-7b707bfd85cb",
+      "instagram_post_id": "18008647665005924",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "f84453b17f539c3851ed943353d7246413784b67de8938db1a3cc6768dc4665a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-23.mp4",
+      "fact_name": "Acolyte",
+      "category": "monster_tactic",
+      "hook": "Acolyte's Healing Touch often frustrates players - it heals 1d4 HP within close range.",
+      "body": "Healing Touch restores up to 4 HP, which can be pivotal at low levels. Many overlook how this ability prolongs engagements by keeping foes in the fight longer than anticipated. Disrupt the Acolyte's action economy by using terrain and spacing to prevent it from reaching allies. Focus-fire on the Acolyte to eliminate its healing potential early.",
+      "cta": "GMs: Force the Acolyte to waste its Healing Touch by separating it from allies with terrain, then focus-fire to eliminate it quickly."
     }
   ]
 }

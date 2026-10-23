@@ -1282,5 +1282,17 @@
       ],
       "tts_voice_id": "coral"
     }
+  },
+  "2026-10-23": {
+    "monster_tactic": {
+      "angle": "counterplay",
+      "voice": "torchbearer_ref",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "fable"
+    }
   }
 }

@@ -3185,6 +3185,32 @@
         "video_sha256": "c4508d6bcd176de40aa3f20d70bef26442792cac743867aff9f311f738ba7222"
       },
       "tone_lint_violation": "vague filler phrase: often overlooked"
+    },
+    {
+      "published_utc": "2026-10-23T14:30:43Z",
+      "day": "2026-10-23",
+      "content_id": "bgp-2026-10-23-rules-ruling-rule-srd-2024-combat-melee-attacks-4e591b716f79",
+      "publish_hash": "a88c2db21d6c4bc5f37b170715b6e5ca0b2b7e32afd4b370cde83d8d2047dbac",
+      "youtube_video_id": "BuIoxj0i_U4",
+      "youtube_url": "https://www.youtube.com/watch?v=BuIoxj0i_U4",
+      "video_sha256": "e9f519b5f43bc55ed5a44341ee946c926a4e375046438a9d45f33b4feea2cf96",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-23.mp4",
+      "fingerprint": {
+        "day": "2026-10-23",
+        "category": "rules_ruling",
+        "angle": "common_table_mistake",
+        "content_id": "bgp-2026-10-23-rules-ruling-rule-srd-2024-combat-melee-attacks-4e591b716f79",
+        "canonical_hash": "4e591b716f7972fadf6b528ccc277086d5aa82421180e93d3cfa40d9503fe121",
+        "script_id": "5054f6a0bc9977363db32f633df4204621a9f69f8a46297ca00e76b872b3d9e7",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_combat_melee-attacks",
+        "fact_name": "Melee Attacks",
+        "hook": "Melee Attacks require a target within reach - not just line of sight.",
+        "body": "Melee Attacks demand a target within the attacker's reach, typically involving a hand-held weapon or an Unarmed Strike. Monsters complicate this with claws, teeth, or other body parts. Speed over clarity leads to disputes about 'within reach'. Establish clear rulings to prevent repetitive arguments.",
+        "cta": "DMs: Enforce that melee attacks require targets to be within reach, not just visible, to avoid endless debates.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-23.mp4",
+        "video_sha256": "e9f519b5f43bc55ed5a44341ee946c926a4e375046438a9d45f33b4feea2cf96"
+      }
     }
   ]
 }

@@ -1162,5 +1162,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-23": {
+    "class_spotlight": {
+      "angle": "wizard_risk",
+      "voice": "chaos_herald",
+      "tone": "neutral",
+      "persona": "class_mentor",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "fable"
+    }
   }
 }
