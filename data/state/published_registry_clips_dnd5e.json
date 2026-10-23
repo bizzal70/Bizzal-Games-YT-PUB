@@ -571,6 +571,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-14-dnd5e-clip3.mp4",
         "video_sha256": "ec0e4fc221bf46ece3caa645cfb50cf41efed76e13a7e7c17deba0081917ef43"
       }
+    },
+    {
+      "published_utc": "2026-10-23T18:00:41Z",
+      "day": "2026-10-23-dnd5e-clip1",
+      "content_id": "clip:33c84f5c184af892",
+      "publish_hash": "908fcb6c137893c49f7ba9e6371f82a0775337f45156d9bb14e5c2dd739e2a73",
+      "youtube_video_id": "K1PbMD_dY18",
+      "youtube_url": "https://www.youtube.com/watch?v=K1PbMD_dY18",
+      "video_sha256": "be9420432023d064348903c76ab4ceb82c6ca7d549f1690d4a087439825f136a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-23-dnd5e-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-10-23-dnd5e-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:33c84f5c184af892",
+        "canonical_hash": "",
+        "script_id": "33c84f5c184af892b79c57d3d603a686f04635fd2ef1de3b53ed227963f9964d",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Blessing of the Forge boosts equipment daily",
+        "hook": "Blessing of the Forge boosts equipment daily",
+        "body": "Forge Domain clerics can use Blessing of the Forge at the end of each long rest. This feature turns one nonmagical weapon or armor into a magical item, granting a +1 bonus to attack and damage rolls or AC.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-23-dnd5e-clip1.mp4",
+        "video_sha256": "be9420432023d064348903c76ab4ceb82c6ca7d549f1690d4a087439825f136a"
+      }
+    },
+    {
+      "published_utc": "2026-10-23T18:01:59Z",
+      "day": "2026-10-23-dnd5e-clip2",
+      "content_id": "clip:3b1d984763e3b92e",
+      "publish_hash": "e3268abf376ffab3aae2eda116f65a19f01852e0cebfdc22e5a36aeaabf4d850",
+      "youtube_video_id": "3NTDGm8dePQ",
+      "youtube_url": "https://www.youtube.com/watch?v=3NTDGm8dePQ",
+      "video_sha256": "bcaa2e9961e13b1a78ffc02848d54b628dd03d560915c0edf77f8a95980a4ff7",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-23-dnd5e-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-10-23-dnd5e-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:3b1d984763e3b92e",
+        "canonical_hash": "",
+        "script_id": "3b1d984763e3b92e072cafd34677cb18a964fdb898b93345c3b3429a0071d5ce",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Artisan's Blessing creates items from raw materials",
+        "hook": "Artisan's Blessing creates items from raw materials",
+        "body": "At 2nd level, Forge Domain clerics can use Channel Divinity: Artisan's Blessing to create items. Conduct a 1-hour ritual with raw materials equal to the item's value. The item can't be magical and must be something the cleric knows.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-23-dnd5e-clip2.mp4",
+        "video_sha256": "bcaa2e9961e13b1a78ffc02848d54b628dd03d560915c0edf77f8a95980a4ff7"
+      }
+    },
+    {
+      "published_utc": "2026-10-23T18:03:08Z",
+      "day": "2026-10-23-dnd5e-clip3",
+      "content_id": "clip:61c0aea7db9c51e8",
+      "publish_hash": "9a35187f5863012c6ee779a997997d4fae23ad582993914268c9cca92ebb1999",
+      "youtube_video_id": "AMBYcZEYC2g",
+      "youtube_url": "https://www.youtube.com/watch?v=AMBYcZEYC2g",
+      "video_sha256": "c4ea2245a01749bea2893c1871313382c4980b8c508499cce3ef9aecc94b977f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-23-dnd5e-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-10-23-dnd5e-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:61c0aea7db9c51e8",
+        "canonical_hash": "",
+        "script_id": "61c0aea7db9c51e8494692f388a1f445c3f79889657162192a4f89b432ce357d",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Forge Domain clerics enhance allies with tactical spells",
+        "hook": "Forge Domain clerics enhance allies with tactical spells",
+        "body": "Forge Domain clerics use spells like heat metal and magic weapon to enhance allies' gear. Heat metal damages armored foes, while magic weapon boosts attack rolls. These spells are always prepared, offering flexibility in combat.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-23-dnd5e-clip3.mp4",
+        "video_sha256": "c4ea2245a01749bea2893c1871313382c4980b8c508499cce3ef9aecc94b977f"
+      }
     }
   ]
 }
