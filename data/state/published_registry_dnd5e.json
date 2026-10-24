@@ -3211,6 +3211,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-23.mp4",
         "video_sha256": "e9f519b5f43bc55ed5a44341ee946c926a4e375046438a9d45f33b4feea2cf96"
       }
+    },
+    {
+      "published_utc": "2026-10-24T14:24:08Z",
+      "day": "2026-10-24",
+      "content_id": "bgp-2026-10-24-item-spotlight-item-srd-2024-ring-of-spell-turning-1a15d4de18db",
+      "publish_hash": "3325f9d262a7665b7669b7bbf826126cbe2986799dce6a05aa1af9f90a6fb68d",
+      "youtube_video_id": "PA4sCwXSLbw",
+      "youtube_url": "https://www.youtube.com/watch?v=PA4sCwXSLbw",
+      "video_sha256": "4d7ca4f19ef0e415bf0cc95f9b1a98c7b23a3a8d3bc74d6c4e925364b9bf2516",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-24.mp4",
+      "fingerprint": {
+        "day": "2026-10-24",
+        "category": "item_spotlight",
+        "angle": "drawback_watchout",
+        "content_id": "bgp-2026-10-24-item-spotlight-item-srd-2024-ring-of-spell-turning-1a15d4de18db",
+        "canonical_hash": "1a15d4de18db2595b86aaeb6ba0f0ea3a93014ac686c9c1e3fd7abcbc3400a22",
+        "script_id": "9df064360de0d9be6baf9fa8061a8169d9d68d830a97e4cd3a510622fe8bbfe6",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_ring-of-spell-turning",
+        "fact_name": "Ring of Spell Turning",
+        "hook": "Ring of Spell Turning requires attunement - without it, the ring's benefits are unavailable.",
+        "body": "The Ring of Spell Turning offers Advantage on saving throws against spells, but only when attuned. Expecting it to function without attunement leaves the wearer exposed to spell effects. Ensure attunement before any encounter with spellcasters, particularly those casting level 7 or lower spells. Deflecting a spell requires a Reaction and only applies when the spell targets you directly, without an area of effect.",
+        "cta": "DMs: Make sure the Ring of Spell Turning is attuned, or your players will be sitting ducks for spells.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-24.mp4",
+        "video_sha256": "4d7ca4f19ef0e415bf0cc95f9b1a98c7b23a3a8d3bc74d6c4e925364b9bf2516"
+      }
     }
   ]
 }

@@ -2818,6 +2818,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-23.mp4",
         "video_sha256": "f84453b17f539c3851ed943353d7246413784b67de8938db1a3cc6768dc4665a"
       }
+    },
+    {
+      "published_utc": "2026-10-24T14:28:18Z",
+      "day": "2026-10-24",
+      "content_id": "bgp-2026-10-24-rules-ruling-rule-9-ec6259ab0e14",
+      "publish_hash": "c84e9b9f576dd5f552fc2845357ba1029f9ebb56fa9304f67efbe0826e61c217",
+      "youtube_video_id": "Knksa-BC2Tg",
+      "youtube_url": "https://www.youtube.com/watch?v=Knksa-BC2Tg",
+      "video_sha256": "e57af804f4672caa1cb59c7530721c4d04fb67a7c0b479d01be07a4f09991ab3",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-24.mp4",
+      "fingerprint": {
+        "day": "2026-10-24",
+        "category": "rules_ruling",
+        "angle": "edge_case",
+        "content_id": "bgp-2026-10-24-rules-ruling-rule-9-ec6259ab0e14",
+        "canonical_hash": "ec6259ab0e14414d174c9cc18da5cc030767f33c1d97b008ba03cfee08816768",
+        "script_id": "8c9da11d6f17da2cd7183f9337f0ebf63bb6933a7e192dc96ba0d56bcfcba95b",
+        "fact_kind": "rule",
+        "fact_pk": 9,
+        "fact_name": "Encumbrance and Gear Slots",
+        "hook": "Ruling check: Encumbrance and Gear Slots.",
+        "body": "Edge case for Encumbrance and Gear Slots: check order of operations before adjudicating. Characters have gear slots equal to their Strength score (minimum 10). Each item occupies 1 slot unless noted. Exceeding slots imposes disadvantage on physical checks. Clear rulings now save argument time later.",
+        "cta": "GMs: Enforce the Strength-based gear slot limit; exceeding it means disadvantage on all physical checks.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-24.mp4",
+        "video_sha256": "e57af804f4672caa1cb59c7530721c4d04fb67a7c0b479d01be07a4f09991ab3"
+      },
+      "tone_lint_violation": "vague filler phrase: often overlooked"
     }
   ]
 }

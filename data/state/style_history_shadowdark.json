@@ -1294,5 +1294,17 @@
       ],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-10-24": {
+    "rules_ruling": {
+      "angle": "edge_case",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

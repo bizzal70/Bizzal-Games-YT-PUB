@@ -2610,6 +2610,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-23.mp4",
         "video_sha256": "1da4199f3e743acbddc8b279083fdb91eeefc6f28798e76592e4031c2099e503"
       }
+    },
+    {
+      "published_utc": "2026-10-24T14:19:04Z",
+      "day": "2026-10-24",
+      "content_id": "bgp-2026-10-24-rules-myth-rule-17-ebf56e4c9e64",
+      "publish_hash": "7f35c40f781347ba6eba77b32086d45c7b426bd55dee4d34688ccc44ecd5ddcb",
+      "youtube_video_id": "u5Z-6WMgMpM",
+      "youtube_url": "https://www.youtube.com/watch?v=u5Z-6WMgMpM",
+      "video_sha256": "b1d3d72de399f4832b5fcd21275bd4ce3b3a60923515c873ecb8929162662cab",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-24.mp4",
+      "fingerprint": {
+        "day": "2026-10-24",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-10-24-rules-myth-rule-17-ebf56e4c9e64",
+        "canonical_hash": "ebf56e4c9e64917cdab54c2690242bd78a4d0898bafa8b163ab0b9711ffb4a87",
+        "script_id": "0f2d0329a9c45cfaf5fa650cebdab800bf739b782b85de63aaee31c390a630e1",
+        "fact_kind": "rule",
+        "fact_pk": 17,
+        "fact_name": "Spell Duels",
+        "hook": "Spell Duels often end in unexpected chaos - phlogiston disturbances and spellburn escalation are just.",
+        "body": "When spells collide in a Spell Duel, the defender can attempt a counterspell, leading to a series of opposed checks. Players frequently overlook that matched castings can trigger phlogiston disturbances and corruption, often leaving the loser reduced to a pile of ash. The real play is understanding these interactions and preparing for dramatic mishaps, rather than assuming a simple counterspell will suffice.",
+        "cta": "Judges: remind players that matched castings in Spell Duels can trigger phlogiston disturbances and corruption, often reducing the loser to ash.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-24.mp4",
+        "video_sha256": "b1d3d72de399f4832b5fcd21275bd4ce3b3a60923515c873ecb8929162662cab"
+      }
     }
   ]
 }

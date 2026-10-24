@@ -4062,6 +4062,51 @@
       "hook": "Acolyte's Healing Touch often frustrates players - it heals 1d4 HP within close range.",
       "body": "Healing Touch restores up to 4 HP, which can be pivotal at low levels. Many overlook how this ability prolongs engagements by keeping foes in the fight longer than anticipated. Disrupt the Acolyte's action economy by using terrain and spacing to prevent it from reaching allies. Focus-fire on the Acolyte to eliminate its healing potential early.",
       "cta": "GMs: Force the Acolyte to waste its Healing Touch by separating it from allies with terrain, then focus-fire to eliminate it quickly."
+    },
+    {
+      "published_utc": "2026-10-24T14:21:04Z",
+      "day": "2026-10-24",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-24-rules-myth-rule-17-ebf56e4c9e64",
+      "instagram_post_id": "18107474651364598",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "b1d3d72de399f4832b5fcd21275bd4ce3b3a60923515c873ecb8929162662cab",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-24.mp4",
+      "fact_name": "Spell Duels",
+      "category": "rules_myth",
+      "hook": "Spell Duels often end in unexpected chaos - phlogiston disturbances and spellburn escalation are just.",
+      "body": "When spells collide in a Spell Duel, the defender can attempt a counterspell, leading to a series of opposed checks. Players frequently overlook that matched castings can trigger phlogiston disturbances and corruption, often leaving the loser reduced to a pile of ash. The real play is understanding these interactions and preparing for dramatic mishaps, rather than assuming a simple counterspell will suffice.",
+      "cta": "Judges: remind players that matched castings in Spell Duels can trigger phlogiston disturbances and corruption, often reducing the loser to ash."
+    },
+    {
+      "published_utc": "2026-10-24T14:25:53Z",
+      "day": "2026-10-24",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-24-item-spotlight-item-srd-2024-ring-of-spell-turning-1a15d4de18db",
+      "instagram_post_id": "17989622106070755",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "4d7ca4f19ef0e415bf0cc95f9b1a98c7b23a3a8d3bc74d6c4e925364b9bf2516",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-24.mp4",
+      "fact_name": "Ring of Spell Turning",
+      "category": "item_spotlight",
+      "hook": "Ring of Spell Turning requires attunement - without it, the ring's benefits are unavailable.",
+      "body": "The Ring of Spell Turning offers Advantage on saving throws against spells, but only when attuned. Expecting it to function without attunement leaves the wearer exposed to spell effects. Ensure attunement before any encounter with spellcasters, particularly those casting level 7 or lower spells. Deflecting a spell requires a Reaction and only applies when the spell targets you directly, without an area of effect.",
+      "cta": "DMs: Make sure the Ring of Spell Turning is attuned, or your players will be sitting ducks for spells."
+    },
+    {
+      "published_utc": "2026-10-24T14:29:04Z",
+      "day": "2026-10-24",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-24-rules-ruling-rule-9-ec6259ab0e14",
+      "instagram_post_id": "18108862802182295",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "e57af804f4672caa1cb59c7530721c4d04fb67a7c0b479d01be07a4f09991ab3",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-24.mp4",
+      "fact_name": "Encumbrance and Gear Slots",
+      "category": "rules_ruling",
+      "hook": "Ruling check: Encumbrance and Gear Slots.",
+      "body": "Edge case for Encumbrance and Gear Slots: check order of operations before adjudicating. Characters have gear slots equal to their Strength score (minimum 10). Each item occupies 1 slot unless noted. Exceeding slots imposes disadvantage on physical checks. Clear rulings now save argument time later.",
+      "cta": "GMs: Enforce the Strength-based gear slot limit; exceeding it means disadvantage on all physical checks."
     }
   ]
 }

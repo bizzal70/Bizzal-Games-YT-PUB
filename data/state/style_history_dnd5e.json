@@ -1294,5 +1294,17 @@
       ],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-10-24": {
+    "item_spotlight": {
+      "angle": "drawback_watchout",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "sage"
+    }
   }
 }
