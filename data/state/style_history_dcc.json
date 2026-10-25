@@ -1186,5 +1186,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-10-25": {
+    "monster_tactic": {
+      "angle": "death_roll_odds",
+      "voice": "chaos_herald",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "fable"
+    }
   }
 }

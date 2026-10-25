@@ -1306,5 +1306,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-10-25": {
+    "item_spotlight": {
+      "angle": "clever_use",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "dungeon_gear_mentor",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

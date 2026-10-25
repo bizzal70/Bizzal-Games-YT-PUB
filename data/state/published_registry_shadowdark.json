@@ -2845,6 +2845,33 @@
         "video_sha256": "e57af804f4672caa1cb59c7530721c4d04fb67a7c0b479d01be07a4f09991ab3"
       },
       "tone_lint_violation": "vague filler phrase: often overlooked"
+    },
+    {
+      "published_utc": "2026-10-25T14:29:00Z",
+      "day": "2026-10-25",
+      "content_id": "bgp-2026-10-25-item-spotlight-item-51-ec33af2dd3aa",
+      "publish_hash": "993b639e678d48f686438d8aee5b02edeed0702ddbb8501faf8c6daeedcd4cf5",
+      "youtube_video_id": "hARiyvp4kZU",
+      "youtube_url": "https://www.youtube.com/watch?v=hARiyvp4kZU",
+      "video_sha256": "3c23ac5a267c0b5f817715e1fb93a89d8335298d02c2cdcb74e326e1343cc274",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-25.mp4",
+      "fingerprint": {
+        "day": "2026-10-25",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-10-25-item-spotlight-item-51-ec33af2dd3aa",
+        "canonical_hash": "ec33af2dd3aac0c2c5af41d1d0751769a5e8305a793b47425ac5bd0171bae224",
+        "script_id": "0ef00db2adc76407e33f5d88b1b25418fa1d98a5aa54c252ed3683b9034c890b",
+        "fact_kind": "item",
+        "fact_pk": 51,
+        "fact_name": "Pearl Of Power",
+        "hook": "Pearl Of Power's true strength is often overlooked - it only works once per day and can't recover spells lost.",
+        "body": "Once per day, Pearl Of Power lets you regain a spell slot you've already used, but it won't save you from a critical spellcasting failure. Using it at the first opportunity often wastes its potential, as it should be reserved for pivotal moments. Deploy it when a single regained spell can shift the tide, not as a routine recovery tool.",
+        "cta": "GMs: Watch for players burning spells too soon; remind them the Pearl of Power is best saved for pivotal, tide-turning moments.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-25.mp4",
+        "video_sha256": "3c23ac5a267c0b5f817715e1fb93a89d8335298d02c2cdcb74e326e1343cc274"
+      },
+      "tone_lint_violation": "vague filler phrase: often overlooked"
     }
   ]
 }

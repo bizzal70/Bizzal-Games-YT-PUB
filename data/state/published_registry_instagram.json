@@ -4107,6 +4107,51 @@
       "hook": "Ruling check: Encumbrance and Gear Slots.",
       "body": "Edge case for Encumbrance and Gear Slots: check order of operations before adjudicating. Characters have gear slots equal to their Strength score (minimum 10). Each item occupies 1 slot unless noted. Exceeding slots imposes disadvantage on physical checks. Clear rulings now save argument time later.",
       "cta": "GMs: Enforce the Strength-based gear slot limit; exceeding it means disadvantage on all physical checks."
+    },
+    {
+      "published_utc": "2026-10-25T14:21:18Z",
+      "day": "2026-10-25",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-25-monster-tactic-creature-238-544497fa326c",
+      "instagram_post_id": "17869039935679689",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "083e85ae59c7cdac7a2f3510fe135d53ed02e5fa8a9551c6098906d31f915885",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-25.mp4",
+      "fact_name": "Emerald Wanderer",
+      "category": "monster_tactic",
+      "hook": "Emerald Wanderer resists mundane attacks - immune to non-magical weapons that aren't silvered.",
+      "body": "With 10d10 hit dice and an AC of 16, Emerald Wanderer isn't just a sack of hit points. Its chilling touch attack at +8 melee inflicts 3d8+4 damage and can quickly deplete party resources. Immunity to non-magical, non-silvered weapons often leads to wasted actions. Prioritize magical or silvered weapons to bypass its defenses and address its threat effectively.",
+      "cta": "Judges: Remind them that if their weapons aren't magical or silvered, they're just wasting time against the Emerald Wanderer."
+    },
+    {
+      "published_utc": "2026-10-25T14:25:37Z",
+      "day": "2026-10-25",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-25-encounter-seed-creature-srd-2024-steam-mephit-bccf5518d586",
+      "instagram_post_id": "18111084443229030",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "4d04c860e9a7475e55982a19830ee2855348427317b1547ec99c87103de57363",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-25.mp4",
+      "fact_name": "Steam Mephit",
+      "category": "encounter_seed",
+      "hook": "Give Steam Mephit a real price.",
+      "body": "Steam Mephit's Steam Breath recharges on a 6, yet players often forget it only deals 1d8 fire damage and requires a DC 10 Dexterity save. Many assume its immunity to fire and poison makes it a tougher opponent than it is. The real oversight is ignoring its condition immunities, which make attempts to exhaust or poison it a waste of resources.",
+      "cta": "DMs: Remind players that the Steam Mephit's AC is only 10; they should adapt when their fire spells fail."
+    },
+    {
+      "published_utc": "2026-10-25T14:30:45Z",
+      "day": "2026-10-25",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-25-item-spotlight-item-51-ec33af2dd3aa",
+      "instagram_post_id": "18135570493679590",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "3c23ac5a267c0b5f817715e1fb93a89d8335298d02c2cdcb74e326e1343cc274",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-25.mp4",
+      "fact_name": "Pearl Of Power",
+      "category": "item_spotlight",
+      "hook": "Pearl Of Power's true strength is often overlooked - it only works once per day and can't recover spells lost.",
+      "body": "Once per day, Pearl Of Power lets you regain a spell slot you've already used, but it won't save you from a critical spellcasting failure. Using it at the first opportunity often wastes its potential, as it should be reserved for pivotal moments. Deploy it when a single regained spell can shift the tide, not as a routine recovery tool.",
+      "cta": "GMs: Watch for players burning spells too soon; remind them the Pearl of Power is best saved for pivotal, tide-turning moments."
     }
   ]
 }

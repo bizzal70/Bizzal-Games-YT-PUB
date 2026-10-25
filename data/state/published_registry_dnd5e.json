@@ -3237,6 +3237,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-24.mp4",
         "video_sha256": "4d7ca4f19ef0e415bf0cc95f9b1a98c7b23a3a8d3bc74d6c4e925364b9bf2516"
       }
+    },
+    {
+      "published_utc": "2026-10-25T14:24:36Z",
+      "day": "2026-10-25",
+      "content_id": "bgp-2026-10-25-encounter-seed-creature-srd-2024-steam-mephit-bccf5518d586",
+      "publish_hash": "93663fe6e228f5c43396a9e0b20b7bbd149718a2a8c2b5428118943772933175",
+      "youtube_video_id": "3dnUiL3ESBI",
+      "youtube_url": "https://www.youtube.com/watch?v=3dnUiL3ESBI",
+      "video_sha256": "4d04c860e9a7475e55982a19830ee2855348427317b1547ec99c87103de57363",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-25.mp4",
+      "fingerprint": {
+        "day": "2026-10-25",
+        "category": "encounter_seed",
+        "angle": "twist",
+        "content_id": "bgp-2026-10-25-encounter-seed-creature-srd-2024-steam-mephit-bccf5518d586",
+        "canonical_hash": "bccf5518d586b3b01bc2de5b096f5b851a42acac4b51340e9497a2d800100cfe",
+        "script_id": "5072b2b1c4e1723435b0e936118e80c5dc37bba7734f54cc9913fea6a60f8f48",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_steam-mephit",
+        "fact_name": "Steam Mephit",
+        "hook": "Give Steam Mephit a real price.",
+        "body": "Steam Mephit's Steam Breath recharges on a 6, yet players often forget it only deals 1d8 fire damage and requires a DC 10 Dexterity save. Many assume its immunity to fire and poison makes it a tougher opponent than it is. The real oversight is ignoring its condition immunities, which make attempts to exhaust or poison it a waste of resources.",
+        "cta": "DMs: Remind players that the Steam Mephit's AC is only 10; they should adapt when their fire spells fail.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-25.mp4",
+        "video_sha256": "4d04c860e9a7475e55982a19830ee2855348427317b1547ec99c87103de57363"
+      }
     }
   ]
 }

@@ -1306,5 +1306,17 @@
       ],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-10-25": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "dm_story_coach",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

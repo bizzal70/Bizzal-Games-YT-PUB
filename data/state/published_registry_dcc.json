@@ -2636,6 +2636,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-24.mp4",
         "video_sha256": "b1d3d72de399f4832b5fcd21275bd4ce3b3a60923515c873ecb8929162662cab"
       }
+    },
+    {
+      "published_utc": "2026-10-25T14:20:16Z",
+      "day": "2026-10-25",
+      "content_id": "bgp-2026-10-25-monster-tactic-creature-238-544497fa326c",
+      "publish_hash": "f187a270031728025935d65e4780e6ced64b3af31cd5250128b5e99708a6c6df",
+      "youtube_video_id": "ueMJSjRb7iM",
+      "youtube_url": "https://www.youtube.com/watch?v=ueMJSjRb7iM",
+      "video_sha256": "083e85ae59c7cdac7a2f3510fe135d53ed02e5fa8a9551c6098906d31f915885",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-25.mp4",
+      "fingerprint": {
+        "day": "2026-10-25",
+        "category": "monster_tactic",
+        "angle": "death_roll_odds",
+        "content_id": "bgp-2026-10-25-monster-tactic-creature-238-544497fa326c",
+        "canonical_hash": "544497fa326c3ad6bdd99272fc8dce3975eeb544f420d5e4bbce80879147e759",
+        "script_id": "ec776cd33bd55b380c3cdbebbbd92121d729d3858da76fdf4f6cb3e3a9b3c417",
+        "fact_kind": "creature",
+        "fact_pk": 238,
+        "fact_name": "Emerald Wanderer",
+        "hook": "Emerald Wanderer resists mundane attacks - immune to non-magical weapons that aren't silvered.",
+        "body": "With 10d10 hit dice and an AC of 16, Emerald Wanderer isn't just a sack of hit points. Its chilling touch attack at +8 melee inflicts 3d8+4 damage and can quickly deplete party resources. Immunity to non-magical, non-silvered weapons often leads to wasted actions. Prioritize magical or silvered weapons to bypass its defenses and address its threat effectively.",
+        "cta": "Judges: Remind them that if their weapons aren't magical or silvered, they're just wasting time against the Emerald Wanderer.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-25.mp4",
+        "video_sha256": "083e85ae59c7cdac7a2f3510fe135d53ed02e5fa8a9551c6098906d31f915885"
+      },
+      "tone_lint_violation": "vague filler phrase: often leads to"
     }
   ]
 }
