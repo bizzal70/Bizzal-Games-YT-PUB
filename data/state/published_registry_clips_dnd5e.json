@@ -649,6 +649,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-23-dnd5e-clip3.mp4",
         "video_sha256": "c4ea2245a01749bea2893c1871313382c4980b8c508499cce3ef9aecc94b977f"
       }
+    },
+    {
+      "published_utc": "2026-10-26T18:14:35Z",
+      "day": "2026-10-26-dnd5e-clip1",
+      "content_id": "clip:aced2a7ac59230a2",
+      "publish_hash": "01b72ddee51a975006a7491e24f84b82ba2f223bb01f19f04ddcef0a5e9effa0",
+      "youtube_video_id": "9ixQF5bMM1Y",
+      "youtube_url": "https://www.youtube.com/watch?v=9ixQF5bMM1Y",
+      "video_sha256": "8a2d99f4ba4c8342dbae5781cb0d82f8998f96d4f80c19dcdd0c41b0e4361333",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-26-dnd5e-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-10-26-dnd5e-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:aced2a7ac59230a2",
+        "canonical_hash": "",
+        "script_id": "aced2a7ac59230a2c9adeaf75779ffefe3425c264b24c06ccc5b59add93e4066",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Mantle of Inspiration allows safe retreat",
+        "hook": "Mantle of Inspiration allows safe retreat",
+        "body": "Mantle of Inspiration lets up to five creatures move up to their speed without provoking opportunity attacks. Use it to reposition allies safely or retreat from danger. This movement is key, not just the temporary hit points.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-26-dnd5e-clip1.mp4",
+        "video_sha256": "8a2d99f4ba4c8342dbae5781cb0d82f8998f96d4f80c19dcdd0c41b0e4361333"
+      }
+    },
+    {
+      "published_utc": "2026-10-26T18:16:08Z",
+      "day": "2026-10-26-dnd5e-clip2",
+      "content_id": "clip:c48dd08e8a761877",
+      "publish_hash": "7ca2f87a08aeb36d084faf387f37615ca1445d9099b909059f56b54ea11d44db",
+      "youtube_video_id": "FNDSH4eC5cY",
+      "youtube_url": "https://www.youtube.com/watch?v=FNDSH4eC5cY",
+      "video_sha256": "5756e9a76174ce19d1371431a19deac0a79e783e5b3766b047d9799629f2f9dc",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-26-dnd5e-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-10-26-dnd5e-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:c48dd08e8a761877",
+        "canonical_hash": "",
+        "script_id": "c48dd08e8a761877a461639afb9464c1394bd35f38c95242a56d3888eb4de1e7",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Enthralling Performance requires a full minute",
+        "hook": "Enthralling Performance requires a full minute",
+        "body": "Enthralling Performance charms up to five humanoids for an hour after a one-minute performance. This requires planning, as high-pressure situations might not allow for the full minute setup.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-26-dnd5e-clip2.mp4",
+        "video_sha256": "5756e9a76174ce19d1371431a19deac0a79e783e5b3766b047d9799629f2f9dc"
+      }
+    },
+    {
+      "published_utc": "2026-10-26T18:17:31Z",
+      "day": "2026-10-26-dnd5e-clip3",
+      "content_id": "clip:1b245440be4f4334",
+      "publish_hash": "30ce9846bad5f54331a91cf252c2cd751078ec8767de1f91827a66f5d876ffbe",
+      "youtube_video_id": "Riw0otfqTSw",
+      "youtube_url": "https://www.youtube.com/watch?v=Riw0otfqTSw",
+      "video_sha256": "0b72220a5e80b926c2222b419ee574837dd310f7301fb3f8169b5c209583c849",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-26-dnd5e-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-10-26-dnd5e-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:1b245440be4f4334",
+        "canonical_hash": "",
+        "script_id": "1b245440be4f43347a9cdfab5ad4b4c230e07d797a5ff562f60f6dfcb27f9c6e",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Mantle of Majesty allows bonus action command",
+        "hook": "Mantle of Majesty allows bonus action command",
+        "body": "Mantle of Majesty lets you cast 'command' as a bonus action, freeing your action for other tasks. Commands like 'flee' or 'halt' can disrupt enemy plans, making it a versatile combat tool.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dnd5e/by_day/2026-10-26-dnd5e-clip3.mp4",
+        "video_sha256": "0b72220a5e80b926c2222b419ee574837dd310f7301fb3f8169b5c209583c849"
+      }
     }
   ]
 }
