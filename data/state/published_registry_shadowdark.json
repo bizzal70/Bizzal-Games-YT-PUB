@@ -2872,6 +2872,32 @@
         "video_sha256": "3c23ac5a267c0b5f817715e1fb93a89d8335298d02c2cdcb74e326e1343cc274"
       },
       "tone_lint_violation": "vague filler phrase: often overlooked"
+    },
+    {
+      "published_utc": "2026-10-26T15:15:52Z",
+      "day": "2026-10-26",
+      "content_id": "bgp-2026-10-26-encounter-seed-creature-114-b59ba0bf3c6c",
+      "publish_hash": "153afc74b265c53af0a2088d9849fcb2dd3644de79c48d3a6d24dab98b2d57ca",
+      "youtube_video_id": "JHEoQelWNRc",
+      "youtube_url": "https://www.youtube.com/watch?v=JHEoQelWNRc",
+      "video_sha256": "9f833cbc04ba63327aa04e4c45d77a7eff8ab63b7d248d360e53e8571240f835",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-26.mp4",
+      "fingerprint": {
+        "day": "2026-10-26",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-10-26-encounter-seed-creature-114-b59ba0bf3c6c",
+        "canonical_hash": "b59ba0bf3c6c87a646f98653cd73ef9bf9a78e06caf95e3a217af330dc53338e",
+        "script_id": "e51835cbab75ffa8ef12d4b52f9695f2137ab658ae6bc2368db981cf883be492",
+        "fact_kind": "creature",
+        "fact_pk": 114,
+        "fact_name": "Sea Hag",
+        "hook": "Charge Sea Hag a real price.",
+        "body": "Terrify triggers when a creature first sees the Sea Hag's true form, not when the hag attacks. Misreading this timing leads to wasted actions. Shapechange allows the Sea Hag to control when Terrify activates, catching players off-guard. Using Shapechange to approach unseen and then revealing her true form ensures Terrify triggers at the start of combat, imposing disadvantage precisely when players need accuracy most.",
+        "cta": "GMs: Reveal the Sea Hag's true form when players commit to an action, triggering Terrify's disadvantage at DC 15 CHA.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-26.mp4",
+        "video_sha256": "9f833cbc04ba63327aa04e4c45d77a7eff8ab63b7d248d360e53e8571240f835"
+      }
     }
   ]
 }

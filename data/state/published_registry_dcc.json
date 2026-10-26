@@ -2663,6 +2663,32 @@
         "video_sha256": "083e85ae59c7cdac7a2f3510fe135d53ed02e5fa8a9551c6098906d31f915885"
       },
       "tone_lint_violation": "vague filler phrase: often leads to"
+    },
+    {
+      "published_utc": "2026-10-26T15:21:58Z",
+      "day": "2026-10-26",
+      "content_id": "bgp-2026-10-26-spell-use-case-spell-13-513158ce933c",
+      "publish_hash": "babd017b98e35c76dc5bd35cccc6e94416d185c4f662ac02fb89de2ebc77f3ca",
+      "youtube_video_id": "j12LVcSc9RM",
+      "youtube_url": "https://www.youtube.com/watch?v=j12LVcSc9RM",
+      "video_sha256": "50927cbf3122942021a20da38e547bb7c403469ee5577b770338a4d960e63573",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-26.mp4",
+      "fingerprint": {
+        "day": "2026-10-26",
+        "category": "spell_use_case",
+        "angle": "patron_invoke",
+        "content_id": "bgp-2026-10-26-spell-use-case-spell-13-513158ce933c",
+        "canonical_hash": "513158ce933ce995c453fe28fd9a68a263086ff17f45d3ed095560adc166b12c",
+        "script_id": "fe3dce60f6de43f4ce4ae5b8e78b4031f346d56975572c2e0c140e9ef1ff52c7",
+        "fact_kind": "spell",
+        "fact_pk": 13,
+        "fact_name": "Sleep",
+        "hook": "Sleep affects more creatures than most expect - up to 3d6 HD for 1 hour at spell check 18-19.",
+        "body": "Sleep operates on a wizard's spell check, targeting creatures by total HD with a Will save to resist. Lower HD creatures are affected first, and higher rolls extend both the number affected and the duration. The mistake is targeting high-Will creatures that negate the effect. Instead, use Sleep to neutralize groups of weaker foes, altering the battle state significantly.",
+        "cta": "Judges: Cast Sleep when facing a horde of low-HD creatures; a spell check of 18-19 can incapacitate 3d6 HD for an hour.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-26.mp4",
+        "video_sha256": "50927cbf3122942021a20da38e547bb7c403469ee5577b770338a4d960e63573"
+      }
     }
   ]
 }

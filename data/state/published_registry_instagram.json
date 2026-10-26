@@ -4152,6 +4152,51 @@
       "hook": "Pearl Of Power's true strength is often overlooked - it only works once per day and can't recover spells lost.",
       "body": "Once per day, Pearl Of Power lets you regain a spell slot you've already used, but it won't save you from a critical spellcasting failure. Using it at the first opportunity often wastes its potential, as it should be reserved for pivotal moments. Deploy it when a single regained spell can shift the tide, not as a routine recovery tool.",
       "cta": "GMs: Watch for players burning spells too soon; remind them the Pearl of Power is best saved for pivotal, tide-turning moments."
+    },
+    {
+      "published_utc": "2026-10-26T15:10:52Z",
+      "day": "2026-10-26",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-26-rules-myth-rule-srd-2024-combat-ranged-attacks-71ab4a7c4399",
+      "instagram_post_id": "18081895028361757",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "43b86fb61ce8473df59418d74ed29f2c44afcc4047225200571eec95e5be2118",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-26.mp4",
+      "fact_name": "Ranged Attacks",
+      "category": "rules_myth",
+      "hook": "Old-school kit check: Ranged Attacks.",
+      "body": "Why people get Ranged Attacks wrong: shorthand becomes house rule over time. When you make a ranged attack, you fire a bow, hurl an axe, or otherwise send projectiles to strike a foe at a distance. Many spells also involve making a ranged attack. Clear rulings now save argument time later.",
+      "cta": "DMs: Refer to page 14 for Ranged Attacks specifics, then demonstrate with a spell that requires a ranged attack roll."
+    },
+    {
+      "published_utc": "2026-10-26T15:17:36Z",
+      "day": "2026-10-26",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-26-encounter-seed-creature-114-b59ba0bf3c6c",
+      "instagram_post_id": "18132700618690097",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9f833cbc04ba63327aa04e4c45d77a7eff8ab63b7d248d360e53e8571240f835",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-26.mp4",
+      "fact_name": "Sea Hag",
+      "category": "encounter_seed",
+      "hook": "Charge Sea Hag a real price.",
+      "body": "Terrify triggers when a creature first sees the Sea Hag's true form, not when the hag attacks. Misreading this timing leads to wasted actions. Shapechange allows the Sea Hag to control when Terrify activates, catching players off-guard. Using Shapechange to approach unseen and then revealing her true form ensures Terrify triggers at the start of combat, imposing disadvantage precisely when players need accuracy most.",
+      "cta": "GMs: Reveal the Sea Hag's true form when players commit to an action, triggering Terrify's disadvantage at DC 15 CHA."
+    },
+    {
+      "published_utc": "2026-10-26T15:22:59Z",
+      "day": "2026-10-26",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-26-spell-use-case-spell-13-513158ce933c",
+      "instagram_post_id": "17914780098287127",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "50927cbf3122942021a20da38e547bb7c403469ee5577b770338a4d960e63573",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-26.mp4",
+      "fact_name": "Sleep",
+      "category": "spell_use_case",
+      "hook": "Sleep affects more creatures than most expect - up to 3d6 HD for 1 hour at spell check 18-19.",
+      "body": "Sleep operates on a wizard's spell check, targeting creatures by total HD with a Will save to resist. Lower HD creatures are affected first, and higher rolls extend both the number affected and the duration. The mistake is targeting high-Will creatures that negate the effect. Instead, use Sleep to neutralize groups of weaker foes, altering the battle state significantly.",
+      "cta": "Judges: Cast Sleep when facing a horde of low-HD creatures; a spell check of 18-19 can incapacitate 3d6 HD for an hour."
     }
   ]
 }

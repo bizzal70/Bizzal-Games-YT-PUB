@@ -1318,5 +1318,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-10-26": {
+    "encounter_seed": {
+      "angle": "three_beats",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

@@ -3263,6 +3263,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-25.mp4",
         "video_sha256": "4d04c860e9a7475e55982a19830ee2855348427317b1547ec99c87103de57363"
       }
+    },
+    {
+      "published_utc": "2026-10-26T15:09:39Z",
+      "day": "2026-10-26",
+      "content_id": "bgp-2026-10-26-rules-myth-rule-srd-2024-combat-ranged-attacks-71ab4a7c4399",
+      "publish_hash": "579a5804bea6fa544a16c3a9bd23d00c70bb4bb7c71c07fb4b63de7865cd5edd",
+      "youtube_video_id": "Zz4WnDUIE5E",
+      "youtube_url": "https://www.youtube.com/watch?v=Zz4WnDUIE5E",
+      "video_sha256": "43b86fb61ce8473df59418d74ed29f2c44afcc4047225200571eec95e5be2118",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-26.mp4",
+      "fingerprint": {
+        "day": "2026-10-26",
+        "category": "rules_myth",
+        "angle": "why_people_get_it_wrong",
+        "content_id": "bgp-2026-10-26-rules-myth-rule-srd-2024-combat-ranged-attacks-71ab4a7c4399",
+        "canonical_hash": "71ab4a7c4399d07295df40ee359b1d8efe7e6991f0c504d56715ee275d86d298",
+        "script_id": "190a914b9c9550a837c1cffbdeb7095c1b65992fa1194d2816e10f8e7bea52bc",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_combat_ranged-attacks",
+        "fact_name": "Ranged Attacks",
+        "hook": "Old-school kit check: Ranged Attacks.",
+        "body": "Why people get Ranged Attacks wrong: shorthand becomes house rule over time. When you make a ranged attack, you fire a bow, hurl an axe, or otherwise send projectiles to strike a foe at a distance. Many spells also involve making a ranged attack. Clear rulings now save argument time later.",
+        "cta": "DMs: Refer to page 14 for Ranged Attacks specifics, then demonstrate with a spell that requires a ranged attack roll.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-26.mp4",
+        "video_sha256": "43b86fb61ce8473df59418d74ed29f2c44afcc4047225200571eec95e5be2118"
+      }
     }
   ]
 }
