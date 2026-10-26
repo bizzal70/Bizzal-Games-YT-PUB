@@ -1,6 +1,94 @@
 [
   {
     "system": "dnd5e",
+    "title": "Unpacking D&D 5e's New Chaosium Influence: A Deep Dive",
+    "angle": "Focus on the implications of Chaosium's AI stance for D&D 5e's rule evolution.",
+    "rationale": "Chaosium's recent actions against AI are reshaping how publishers handle digital content.",
+    "fixture_hint": "rule",
+    "search_keyword": "Chaosium clamps down on AI and removes 40 community titles",
+    "created_date": "2026-10-26",
+    "status": "pending",
+    "brief_id": "df264e501e4f"
+  },
+  {
+    "system": "dnd5e",
+    "title": "D&D 5e's NPC Unions: Crafting Cohesive Campaigns",
+    "angle": "Examine how the concept of unions can be incorporated into D&D 5e campaigns to deepen narrative complexity.",
+    "rationale": "The ongoing discussion around D&D unionization highlights a growing interest in socio-political themes in RPGs.",
+    "fixture_hint": "rule",
+    "search_keyword": "Wizards of the Coast responds to D&D unionization effort, says they will respect results of union vote",
+    "created_date": "2026-10-26",
+    "status": "pending",
+    "brief_id": "3bc5893c8056"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's Haunted Mansion: Tactical Play with Possessions",
+    "angle": "Delve into the mechanics of possessions in Shadowdark and their impact on dungeon exploration.",
+    "rationale": "Eerie October RPG offerings have brought attention to horror elements in role-playing games.",
+    "fixture_hint": "creature",
+    "search_keyword": "Eerie October offerings with possessions, a haunted mansion, and of course corpse flies",
+    "created_date": "2026-10-26",
+    "status": "pending",
+    "brief_id": "21b70ba4d35f"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Secrets of the Tome: Unveiling Shadowdark's Arcane Mysteries",
+    "angle": "Analyze how new magical items in Shadowdark influence player strategies and campaign dynamics.",
+    "rationale": "The buzz around 'Secrets of the Tome' and its cover art highlights interest in new magical content.",
+    "fixture_hint": "item",
+    "search_keyword": "Check out Secrets of the Tome’s awesome cover art!",
+    "created_date": "2026-10-26",
+    "status": "pending",
+    "brief_id": "6209a7cd1a84"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Navigating Shadowdark's Solo Survival Mechanics",
+    "angle": "Investigate how solo survival mechanics enhance the Shadowdark experience for lone adventurers.",
+    "rationale": "The launch of interactive solo survival games sparks curiosity about solo play in traditional RPGs.",
+    "fixture_hint": "rule",
+    "search_keyword": "Now Live! OɴᴇQᴜᴇsᴛs: Two Interactive Solo Survival Games!",
+    "created_date": "2026-10-26",
+    "status": "pending",
+    "brief_id": "41aa4b1ae858"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Dragon Kings: The Ultimate Mythical Challenge",
+    "angle": "Focus on the unique mechanics and lore surrounding Dragon Kings in DCC.",
+    "rationale": "Dragon Kings are currently a hot topic in RPG crowdfunding and community discussions.",
+    "fixture_hint": "creature",
+    "search_keyword": "RPG Crowdfunding News – 13 Omens, Munchkin, Dragon Kings, and more",
+    "created_date": "2026-10-26",
+    "status": "pending",
+    "brief_id": "e748137bdc60"
+  },
+  {
+    "system": "dcc",
+    "title": "Innovative Tactics with DCC's Colossal Threats",
+    "angle": "Examine advanced combat strategies against colossal creatures in DCC.",
+    "rationale": "Recent discussions about colossal threats in DCC highlight a growing interest in epic-scale battles.",
+    "fixture_hint": "creature",
+    "search_keyword": "DCC's Colossal Threats: Faster, Purple Worm!",
+    "created_date": "2026-10-26",
+    "status": "pending",
+    "brief_id": "cea563997336"
+  },
+  {
+    "system": "dcc",
+    "title": "13 Omens: Harnessing Prophecies in DCC Campaigns",
+    "angle": "Explore how prophecy mechanics from '13 Omens' can shape campaign narratives in DCC.",
+    "rationale": "Paizo's Kickstarter success with '13 Omens' introduces new narrative possibilities for DCC players.",
+    "fixture_hint": "rule",
+    "search_keyword": "Paizo's 13 OMENS now live on Kickstarter",
+    "created_date": "2026-10-26",
+    "status": "pending",
+    "brief_id": "2faf136c0b71"
+  },
+  {
+    "system": "dnd5e",
     "title": "D&D 5e Unionization: What It Means for Your Campaign",
     "angle": "Explore how potential unionization might affect the development and updates of future D&D 5e rules.",
     "rationale": "Wizards of the Coast's potential unionization is a hot topic, affecting the future of D&D.",
