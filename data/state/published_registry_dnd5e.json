@@ -3289,6 +3289,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-26.mp4",
         "video_sha256": "43b86fb61ce8473df59418d74ed29f2c44afcc4047225200571eec95e5be2118"
       }
+    },
+    {
+      "published_utc": "2026-10-27T14:35:22Z",
+      "day": "2026-10-27",
+      "content_id": "bgp-2026-10-27-class-spotlight-class-xanathars-guide-war-magic-60aa529dcf09",
+      "publish_hash": "b7851a4ed1ee3dfe08a4772dd306bac262d5b73126309eb7e5a133ef593dc736",
+      "youtube_video_id": "nV3Hlhrcyl0",
+      "youtube_url": "https://www.youtube.com/watch?v=nV3Hlhrcyl0",
+      "video_sha256": "d9ae7312b6a85b7f1915c1ed21f2ddd69cfd64b46427145231a5b0f143388837",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-27.mp4",
+      "fingerprint": {
+        "day": "2026-10-27",
+        "category": "class_spotlight",
+        "angle": "subclass_identity",
+        "content_id": "bgp-2026-10-27-class-spotlight-class-xanathars-guide-war-magic-60aa529dcf09",
+        "canonical_hash": "60aa529dcf0995635d07e759f7bd3050f25f3be3aaddeb47cb9d09b4eace82da",
+        "script_id": "86ae63491f73da3b72fe2962bf8811632b8855a8bc181e0bf31bcbbbe371ebe0",
+        "fact_kind": "class",
+        "fact_pk": "xanathars-guide_war-magic",
+        "fact_name": "War Magic",
+        "hook": "War Magic enhances survival more often than players expect - Arcane Deflection grants +2 AC or +4 to saving.",
+        "body": "Arcane Deflection uses a reaction to provide a +2 AC or +4 to saving throws, but it restricts casting to cantrips until your next turn. This feature is best used to counter significant threats, such as high-damage attacks or debilitating effects, rather than minor ones. Leveraging this ability effectively reinforces your role as a durable presence on the battlefield.",
+        "cta": "DMs: Use Arcane Deflection to negate one big threat per encounter, not every minor inconvenience.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-27.mp4",
+        "video_sha256": "d9ae7312b6a85b7f1915c1ed21f2ddd69cfd64b46427145231a5b0f143388837"
+      }
     }
   ]
 }

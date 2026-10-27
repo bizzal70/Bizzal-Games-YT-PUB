@@ -8634,6 +8634,72 @@
       "video_id": "Riw0otfqTSw",
       "day": "2026-10-26-dnd5e-clip3",
       "published_at": "2026-10-26T18:17:31+00:00"
+    },
+    {
+      "content_key": "8f4fe3c0f8bfbbdda5dc6a457527ec476a0bf917aa6fd4269cd04029b3b8c38a",
+      "token_text": "arms attack deed hits impact mighty often player surprise work",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Mighty Deeds of Arms often surprise players with their impact #dcc",
+      "video_id": "ynKCvvm_KVc",
+      "day": "2026-10-27",
+      "published_at": "2026-10-27T14:28:50+00:00"
+    },
+    {
+      "content_key": "ea7a7442bb5819d77745690e8ff59737d00ef1f6bd26be42ec3d36b4d1082473",
+      "token_text": "arms attack deed hits impact mighty often player surprise work",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Mighty Deeds of Arms often surprise players with their impact - the Deed works if the attack hits and the Deed.",
+      "video_id": "17992136679106424",
+      "day": "2026-10-27",
+      "published_at": "2026-10-27T14:30:06+00:00"
+    },
+    {
+      "content_key": "aaf5ffeb8a724948e7bce6553e47bdddce7a0ea8fa4efabbdffb4252b78441cb",
+      "token_text": "ac arcane deflection enhance expect grant magic more often player saving survival war",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "War Magic enhances survival more often than players expect #dnd5e",
+      "video_id": "nV3Hlhrcyl0",
+      "day": "2026-10-27",
+      "published_at": "2026-10-27T14:35:22+00:00"
+    },
+    {
+      "content_key": "54a4794ae9b7f0ca5e571897f9d0dc1e642452d125279f14f7aee701953e3d41",
+      "token_text": "ac arcane deflection enhance expect grant magic more often player saving survival war",
+      "system_id": "dnd5e",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "War Magic enhances survival more often than players expect - Arcane Deflection grants +2 AC or +4 to saving.",
+      "video_id": "18115513670162655",
+      "day": "2026-10-27",
+      "published_at": "2026-10-27T14:37:08+00:00"
+    },
+    {
+      "content_key": "55c9ecd4f7af55123a90d3d97c37c3d2a4f41d35fba92abc70ca0624c3491237",
+      "token_text": "15 check dc fall flavor half isn just monster morale rule trigger wis",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Morale isn't just a flavor rule #shadowdark",
+      "video_id": "ZBIRrhroAMo",
+      "day": "2026-10-27",
+      "published_at": "2026-10-27T14:41:03+00:00"
+    },
+    {
+      "content_key": "d9ba582842a06150354a3423f5a820739e077596165d45d9ca93bd3791fe5972",
+      "token_text": "15 check dc fall flavor half isn just monster morale rule trigger wis",
+      "system_id": "shadowdark",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Morale isn't just a flavor rule - it triggers on a DC 15 WIS check when half the monsters fall.",
+      "video_id": "18643355245055406",
+      "day": "2026-10-27",
+      "published_at": "2026-10-27T14:42:02+00:00"
     }
   ]
 }

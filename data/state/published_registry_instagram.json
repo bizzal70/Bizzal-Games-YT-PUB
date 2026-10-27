@@ -4197,6 +4197,51 @@
       "hook": "Sleep affects more creatures than most expect - up to 3d6 HD for 1 hour at spell check 18-19.",
       "body": "Sleep operates on a wizard's spell check, targeting creatures by total HD with a Will save to resist. Lower HD creatures are affected first, and higher rolls extend both the number affected and the duration. The mistake is targeting high-Will creatures that negate the effect. Instead, use Sleep to neutralize groups of weaker foes, altering the battle state significantly.",
       "cta": "Judges: Cast Sleep when facing a horde of low-HD creatures; a spell check of 18-19 can incapacitate 3d6 HD for an hour."
+    },
+    {
+      "published_utc": "2026-10-27T14:30:06Z",
+      "day": "2026-10-27",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-27-rules-ruling-rule-3-123d426238dd",
+      "instagram_post_id": "17992136679106424",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "4b1fd5b9c296996faa51a28fc84fbed7d963f9f0e736dab365d968c5322f2046",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-27.mp4",
+      "fact_name": "Mighty Deeds of Arms",
+      "category": "rules_ruling",
+      "hook": "Mighty Deeds of Arms often surprise players with their impact - the Deed works if the attack hits and the Deed.",
+      "body": "Mighty Deeds of Arms allow Warriors and Dwarves to declare a specific action, like trip or disarm, before making an attack roll. The success of the Deed depends on hitting the target and rolling a 3 or higher on the Deed die, which scales from d3 to d10+ with level. Players frequently misjudge this by assuming a separate roll or save is required. Optimal play involves integrating Deeds into every attack, leveraging the Deed die for consistent tactical advantage.",
+      "cta": "Judges: Remind players their Deed die must show 3+ for success; no extra rolls or saves needed."
+    },
+    {
+      "published_utc": "2026-10-27T14:37:08Z",
+      "day": "2026-10-27",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-27-class-spotlight-class-xanathars-guide-war-magic-60aa529dcf09",
+      "instagram_post_id": "18115513670162655",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d9ae7312b6a85b7f1915c1ed21f2ddd69cfd64b46427145231a5b0f143388837",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-27.mp4",
+      "fact_name": "War Magic",
+      "category": "class_spotlight",
+      "hook": "War Magic enhances survival more often than players expect - Arcane Deflection grants +2 AC or +4 to saving.",
+      "body": "Arcane Deflection uses a reaction to provide a +2 AC or +4 to saving throws, but it restricts casting to cantrips until your next turn. This feature is best used to counter significant threats, such as high-damage attacks or debilitating effects, rather than minor ones. Leveraging this ability effectively reinforces your role as a durable presence on the battlefield.",
+      "cta": "DMs: Use Arcane Deflection to negate one big threat per encounter, not every minor inconvenience."
+    },
+    {
+      "published_utc": "2026-10-27T14:42:02Z",
+      "day": "2026-10-27",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-27-rules-myth-rule-7-741f45ffcc99",
+      "instagram_post_id": "18643355245055406",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "b887297f403ffe06d7b85d542f5d2c312b9c9dcf3170f51fd74394f1d5b1c187",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-27.mp4",
+      "fact_name": "Morale",
+      "category": "rules_myth",
+      "hook": "Morale isn't just a flavor rule - it triggers on a DC 15 WIS check when half the monsters fall.",
+      "body": "Morale checks occur when half of a monster group is defeated or when a significant ally is lost. A failed DC 15 Wisdom check results in monsters fleeing or surrendering. Ignoring morale leads to prolonged and unnecessary combat. Consistent application of morale rules streamlines encounters and reduces disputes.",
+      "cta": "GMs: When half the monsters fall, roll that DC 15 Wisdom check for morale or expect endless, tedious combat."
     }
   ]
 }

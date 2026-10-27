@@ -2898,6 +2898,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-26.mp4",
         "video_sha256": "9f833cbc04ba63327aa04e4c45d77a7eff8ab63b7d248d360e53e8571240f835"
       }
+    },
+    {
+      "published_utc": "2026-10-27T14:41:03Z",
+      "day": "2026-10-27",
+      "content_id": "bgp-2026-10-27-rules-myth-rule-7-741f45ffcc99",
+      "publish_hash": "e1d72297f72dd57cc94f36b76a584a09eaa5845d82367fdabd3793fb2f415608",
+      "youtube_video_id": "ZBIRrhroAMo",
+      "youtube_url": "https://www.youtube.com/watch?v=ZBIRrhroAMo",
+      "video_sha256": "b887297f403ffe06d7b85d542f5d2c312b9c9dcf3170f51fd74394f1d5b1c187",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-27.mp4",
+      "fingerprint": {
+        "day": "2026-10-27",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-10-27-rules-myth-rule-7-741f45ffcc99",
+        "canonical_hash": "741f45ffcc99cffecb6cb04b639b27ed3c28f48f8511c65a3b77035a4c95f417",
+        "script_id": "77cb63010f9ede491bf6610235809c74fcecb97d5ce8307853c5040dfe870793",
+        "fact_kind": "rule",
+        "fact_pk": 7,
+        "fact_name": "Morale",
+        "hook": "Morale isn't just a flavor rule - it triggers on a DC 15 WIS check when half the monsters fall.",
+        "body": "Morale checks occur when half of a monster group is defeated or when a significant ally is lost. A failed DC 15 Wisdom check results in monsters fleeing or surrendering. Ignoring morale leads to prolonged and unnecessary combat. Consistent application of morale rules streamlines encounters and reduces disputes.",
+        "cta": "GMs: When half the monsters fall, roll that DC 15 Wisdom check for morale or expect endless, tedious combat.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-27.mp4",
+        "video_sha256": "b887297f403ffe06d7b85d542f5d2c312b9c9dcf3170f51fd74394f1d5b1c187"
+      }
     }
   ]
 }

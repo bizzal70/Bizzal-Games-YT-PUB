@@ -2689,6 +2689,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-26.mp4",
         "video_sha256": "50927cbf3122942021a20da38e547bb7c403469ee5577b770338a4d960e63573"
       }
+    },
+    {
+      "published_utc": "2026-10-27T14:28:50Z",
+      "day": "2026-10-27",
+      "content_id": "bgp-2026-10-27-rules-ruling-rule-3-123d426238dd",
+      "publish_hash": "d020422a274b27fa61734706bbc89f335d401dcaa6b86998a57ac9fb678fa6ca",
+      "youtube_video_id": "ynKCvvm_KVc",
+      "youtube_url": "https://www.youtube.com/watch?v=ynKCvvm_KVc",
+      "video_sha256": "4b1fd5b9c296996faa51a28fc84fbed7d963f9f0e736dab365d968c5322f2046",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-27.mp4",
+      "fingerprint": {
+        "day": "2026-10-27",
+        "category": "rules_ruling",
+        "angle": "luck_burn_timing",
+        "content_id": "bgp-2026-10-27-rules-ruling-rule-3-123d426238dd",
+        "canonical_hash": "123d426238dd3eb54557316e89fa6cfd73aeb439ed84ff27a47b2de0da380899",
+        "script_id": "c10dfab50dbc3ecc4bda1e82bbbfe8afe6383a3a6cc19a1443ddb3d1eca1c12c",
+        "fact_kind": "rule",
+        "fact_pk": 3,
+        "fact_name": "Mighty Deeds of Arms",
+        "hook": "Mighty Deeds of Arms often surprise players with their impact - the Deed works if the attack hits and the Deed.",
+        "body": "Mighty Deeds of Arms allow Warriors and Dwarves to declare a specific action, like trip or disarm, before making an attack roll. The success of the Deed depends on hitting the target and rolling a 3 or higher on the Deed die, which scales from d3 to d10+ with level. Players frequently misjudge this by assuming a separate roll or save is required. Optimal play involves integrating Deeds into every attack, leveraging the Deed die for consistent tactical advantage.",
+        "cta": "Judges: Remind players their Deed die must show 3+ for success; no extra rolls or saves needed.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-27.mp4",
+        "video_sha256": "4b1fd5b9c296996faa51a28fc84fbed7d963f9f0e736dab365d968c5322f2046"
+      }
     }
   ]
 }

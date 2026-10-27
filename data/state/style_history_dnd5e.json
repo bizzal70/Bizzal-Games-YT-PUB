@@ -1330,5 +1330,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-10-27": {
+    "class_spotlight": {
+      "angle": "subclass_identity",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "class_mentor",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

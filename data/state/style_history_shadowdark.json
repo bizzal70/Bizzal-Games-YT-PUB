@@ -1328,5 +1328,17 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-10-27": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }
