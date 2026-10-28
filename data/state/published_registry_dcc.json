@@ -2715,6 +2715,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-27.mp4",
         "video_sha256": "4b1fd5b9c296996faa51a28fc84fbed7d963f9f0e736dab365d968c5322f2046"
       }
+    },
+    {
+      "published_utc": "2026-10-28T14:17:55Z",
+      "day": "2026-10-28",
+      "content_id": "bgp-2026-10-28-item-spotlight-item-14-ebe5fb15e30d",
+      "publish_hash": "262a128bf0f1c9257796750d1d32051fc82846f7f8fe003a01bcff9e968f4538",
+      "youtube_video_id": "SItNdPLef3E",
+      "youtube_url": "https://www.youtube.com/watch?v=SItNdPLef3E",
+      "video_sha256": "10002cb59d85e63f50304e872eeb04867e395b74ba84fc75122e64bfb6a2b231",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-28.mp4",
+      "fingerprint": {
+        "day": "2026-10-28",
+        "category": "item_spotlight",
+        "angle": "clever_use",
+        "content_id": "bgp-2026-10-28-item-spotlight-item-14-ebe5fb15e30d",
+        "canonical_hash": "ebe5fb15e30d92cdb79e1bed60b64ce0574f27514d42889f919867ff5b780da7",
+        "script_id": "d1a2c50dc4f05b1bb64980b710558f9cb82645b1bda8a87627ff0f6618a60b19",
+        "fact_kind": "item",
+        "fact_pk": 14,
+        "fact_name": "Medusa's Touch Blade",
+        "hook": "Medusa's Touch Blade can end a fight with one hit - Fort save DC is 1d10+10.",
+        "body": "The Medusa's Touch Blade forces a Fortitude save with a DC of 1d10+10, turning the victim to stone on a failure. Swinging it indiscriminately often wastes its potential, as the DC can vary significantly. Timing the strike when the DC roll is high ensures a greater chance of ending the fight decisively.",
+        "cta": "Judges: Wait for a high roll on the 1d10+10 DC before swinging Medusa's Touch Blade to maximize its petrifying potential.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-28.mp4",
+        "video_sha256": "10002cb59d85e63f50304e872eeb04867e395b74ba84fc75122e64bfb6a2b231"
+      }
     }
   ]
 }

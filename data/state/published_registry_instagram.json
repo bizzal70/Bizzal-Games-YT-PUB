@@ -4242,6 +4242,51 @@
       "hook": "Morale isn't just a flavor rule - it triggers on a DC 15 WIS check when half the monsters fall.",
       "body": "Morale checks occur when half of a monster group is defeated or when a significant ally is lost. A failed DC 15 Wisdom check results in monsters fleeing or surrendering. Ignoring morale leads to prolonged and unnecessary combat. Consistent application of morale rules streamlines encounters and reduces disputes.",
       "cta": "GMs: When half the monsters fall, roll that DC 15 Wisdom check for morale or expect endless, tedious combat."
+    },
+    {
+      "published_utc": "2026-10-28T14:18:42Z",
+      "day": "2026-10-28",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-28-item-spotlight-item-14-ebe5fb15e30d",
+      "instagram_post_id": "18098659394649730",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "10002cb59d85e63f50304e872eeb04867e395b74ba84fc75122e64bfb6a2b231",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-28.mp4",
+      "fact_name": "Medusa's Touch Blade",
+      "category": "item_spotlight",
+      "hook": "Medusa's Touch Blade can end a fight with one hit - Fort save DC is 1d10+10.",
+      "body": "The Medusa's Touch Blade forces a Fortitude save with a DC of 1d10+10, turning the victim to stone on a failure. Swinging it indiscriminately often wastes its potential, as the DC can vary significantly. Timing the strike when the DC roll is high ensures a greater chance of ending the fight decisively.",
+      "cta": "Judges: Wait for a high roll on the 1d10+10 DC before swinging Medusa's Touch Blade to maximize its petrifying potential."
+    },
+    {
+      "published_utc": "2026-10-28T14:23:32Z",
+      "day": "2026-10-28",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-28-monster-tactic-creature-srd-2024-druid-ac522227f466",
+      "instagram_post_id": "18143346034619664",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "aa918af3a39eb9f46a6700061e38c788cdd50d486a7dbda6651c15a78b666004",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-28.mp4",
+      "fact_name": "Druid",
+      "category": "monster_tactic",
+      "hook": "Druid's spellcasting punishes poor positioning - Multiattack and area spells exploit clustering.",
+      "body": "Druid's AC 13 and HP 44 often lead players to underestimate its threat level. Multiattack and Spellcasting are where it truly excels, especially when opponents cluster or drift out of formation. This allows the Druid to maximize damage output and control the battlefield. Better play involves maintaining distance and avoiding tight formations to mitigate its area-of-effect capabilities.",
+      "cta": "DMs: Punish clustering by casting Thunderwave; its 15-foot cube and 44 HP will remind them why spacing matters."
+    },
+    {
+      "published_utc": "2026-10-28T14:28:20Z",
+      "day": "2026-10-28",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-28-spell-use-case-spell-66-35f3f52b9d2d",
+      "instagram_post_id": "18101806565545308",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "fdd24fc10fc3667ac6379d044db22d89b306579ab2c3fa9ac23948dee0cfc94b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-28.mp4",
+      "fact_name": "Restoration",
+      "category": "spell_use_case",
+      "hook": "Restoration changes the game more than expected - one curse or illness ends instantly.",
+      "body": "Restoration's range is Close and its duration is Instant. It removes a single curse, illness, or affliction from a target creature. The mistake is casting it just to heal damage numbers. The better move is using it to eliminate a debilitating condition that blocks progress or survival.",
+      "cta": "GMs: Save Restoration for when a curse or illness is the only thing stopping the party from moving forward."
     }
   ]
 }

@@ -2924,6 +2924,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-27.mp4",
         "video_sha256": "b887297f403ffe06d7b85d542f5d2c312b9c9dcf3170f51fd74394f1d5b1c187"
       }
+    },
+    {
+      "published_utc": "2026-10-28T14:26:50Z",
+      "day": "2026-10-28",
+      "content_id": "bgp-2026-10-28-spell-use-case-spell-66-35f3f52b9d2d",
+      "publish_hash": "4074f0910989affaf8d598361b170ee5f5eeb3dcd5a38d6bfbf7e11f7747a7cb",
+      "youtube_video_id": "V2eDE5util8",
+      "youtube_url": "https://www.youtube.com/watch?v=V2eDE5util8",
+      "video_sha256": "fdd24fc10fc3667ac6379d044db22d89b306579ab2c3fa9ac23948dee0cfc94b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-28.mp4",
+      "fingerprint": {
+        "day": "2026-10-28",
+        "category": "spell_use_case",
+        "angle": "best_moment",
+        "content_id": "bgp-2026-10-28-spell-use-case-spell-66-35f3f52b9d2d",
+        "canonical_hash": "35f3f52b9d2d989b2803e40361540ce3bc1697ee3ffe6c1c8739759c435f2ea2",
+        "script_id": "3e5bde9c74f6a9414c78001acbe7fc4d0d684ce3a4751886da8141eba4e469b2",
+        "fact_kind": "spell",
+        "fact_pk": 66,
+        "fact_name": "Restoration",
+        "hook": "Restoration changes the game more than expected - one curse or illness ends instantly.",
+        "body": "Restoration's range is Close and its duration is Instant. It removes a single curse, illness, or affliction from a target creature. The mistake is casting it just to heal damage numbers. The better move is using it to eliminate a debilitating condition that blocks progress or survival.",
+        "cta": "GMs: Save Restoration for when a curse or illness is the only thing stopping the party from moving forward.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-28.mp4",
+        "video_sha256": "fdd24fc10fc3667ac6379d044db22d89b306579ab2c3fa9ac23948dee0cfc94b"
+      }
     }
   ]
 }

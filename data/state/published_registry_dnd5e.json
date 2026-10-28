@@ -3315,6 +3315,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-27.mp4",
         "video_sha256": "d9ae7312b6a85b7f1915c1ed21f2ddd69cfd64b46427145231a5b0f143388837"
       }
+    },
+    {
+      "published_utc": "2026-10-28T14:22:15Z",
+      "day": "2026-10-28",
+      "content_id": "bgp-2026-10-28-monster-tactic-creature-srd-2024-druid-ac522227f466",
+      "publish_hash": "bd10710b5071bdd4da1dfb9b432418bdee2bca38368e3917fa6f8acbb15ccfba",
+      "youtube_video_id": "7oy1GNPggRY",
+      "youtube_url": "https://www.youtube.com/watch?v=7oy1GNPggRY",
+      "video_sha256": "aa918af3a39eb9f46a6700061e38c788cdd50d486a7dbda6651c15a78b666004",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-28.mp4",
+      "fingerprint": {
+        "day": "2026-10-28",
+        "category": "monster_tactic",
+        "angle": "common_mistake",
+        "content_id": "bgp-2026-10-28-monster-tactic-creature-srd-2024-druid-ac522227f466",
+        "canonical_hash": "ac522227f46699c57fbdfb20fa53f2f042dcf747bd323e717a40f240acbd1285",
+        "script_id": "1ba4ff92dd1920043bebe8a1097abd0c140151be1befa3da4b959ce2ab608e17",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_druid",
+        "fact_name": "Druid",
+        "hook": "Druid's spellcasting punishes poor positioning - Multiattack and area spells exploit clustering.",
+        "body": "Druid's AC 13 and HP 44 often lead players to underestimate its threat level. Multiattack and Spellcasting are where it truly excels, especially when opponents cluster or drift out of formation. This allows the Druid to maximize damage output and control the battlefield. Better play involves maintaining distance and avoiding tight formations to mitigate its area-of-effect capabilities.",
+        "cta": "DMs: Punish clustering by casting Thunderwave; its 15-foot cube and 44 HP will remind them why spacing matters.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-28.mp4",
+        "video_sha256": "aa918af3a39eb9f46a6700061e38c788cdd50d486a7dbda6651c15a78b666004"
+      }
     }
   ]
 }
