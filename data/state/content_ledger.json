@@ -8766,6 +8766,50 @@
       "video_id": "18101806565545308",
       "day": "2026-10-28",
       "published_at": "2026-10-28T14:28:20+00:00"
+    },
+    {
+      "content_key": "93647509344957bc6aa1d286b3839b9194a47d3418995a931d571e540b8b6f60",
+      "token_text": "bonestrom immunitie mastering mobility",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Bonestrom: Mastering Mobility and Immunities #dcc",
+      "video_id": "K7oqLR1-78c",
+      "day": "2026-10-28",
+      "published_at": "2026-10-28T18:02:20+00:00"
+    },
+    {
+      "content_key": "7fe5e197658c2e9583f3fcdbdbcaaf34a11b99ecee07dea7ccb56fc4a2607197",
+      "token_text": "attack bonestrom hits multiple target whirlwind",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Bonestrom's whirlwind attack hits multiple targets #dcc",
+      "video_id": "H33YecppoP8",
+      "day": "2026-10-28-dcc-clip1",
+      "published_at": "2026-10-28T18:04:18+00:00"
+    },
+    {
+      "content_key": "f0e79b6ae2554b6364386f2d9a62fceee9e75d11881de032e3c0882fbee9bbea",
+      "token_text": "blindsight bonestrom invisibility negate",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Bonestrom's blindsight negates invisibility #dcc",
+      "video_id": "vjexjSU_tZE",
+      "day": "2026-10-28-dcc-clip2",
+      "published_at": "2026-10-28T18:05:52+00:00"
+    },
+    {
+      "content_key": "45f32f8a3bb779b8e65d52f0fb97c7f2df1c4b461953cfec6d67777fbbed54d7",
+      "token_text": "advantage bonestrom flying offer speed tactical",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Bonestrom's flying speed offers tactical advantages #dcc",
+      "video_id": "jvNSVNgbKTM",
+      "day": "2026-10-28-dcc-clip3",
+      "published_at": "2026-10-28T18:07:28+00:00"
     }
   ]
 }

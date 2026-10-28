@@ -883,6 +883,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-19-dcc-clip3.mp4",
         "video_sha256": "bf82840752b3774ed8bf599e052fd1775f8ae537fdfb879762e38258ee3edfdf"
       }
+    },
+    {
+      "published_utc": "2026-10-28T18:04:18Z",
+      "day": "2026-10-28-dcc-clip1",
+      "content_id": "clip:626e32cb3d039584",
+      "publish_hash": "5088efadf597c6b556845c606b3f7a264a8e0bef1589d5131cd3ca6952cece22",
+      "youtube_video_id": "H33YecppoP8",
+      "youtube_url": "https://www.youtube.com/watch?v=H33YecppoP8",
+      "video_sha256": "18e0d259c6c44789b9552523f4e6800a3399c93242c77cf1fee7780ebce38db9",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-28-dcc-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-10-28-dcc-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:626e32cb3d039584",
+        "canonical_hash": "",
+        "script_id": "626e32cb3d0395840a88277a7d93ac0db8ce8054ad10760ffd3bb722a3ddd4fd",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Bonestrom's whirlwind attack hits multiple targets",
+        "hook": "Bonestrom's whirlwind attack hits multiple targets",
+        "body": "The Bonestrom's whirlwind attack has a +7 bonus and deals 4d6 damage. It can hit multiple targets within 10 feet, making it ideal for dealing with clustered enemies. Players must adapt their positioning to minimize this threat.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-28-dcc-clip1.mp4",
+        "video_sha256": "18e0d259c6c44789b9552523f4e6800a3399c93242c77cf1fee7780ebce38db9"
+      }
+    },
+    {
+      "published_utc": "2026-10-28T18:05:52Z",
+      "day": "2026-10-28-dcc-clip2",
+      "content_id": "clip:1b3ae52b3a755512",
+      "publish_hash": "2a8f5ed2330110ca7785def19510e4bdfdf5503dcad08b51106d4dac041961da",
+      "youtube_video_id": "vjexjSU_tZE",
+      "youtube_url": "https://www.youtube.com/watch?v=vjexjSU_tZE",
+      "video_sha256": "05fb7bd1413cff42bc42a1f8b4570530b6dd4f5e7d549c10e225e7e1fdc4372c",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-28-dcc-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-10-28-dcc-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:1b3ae52b3a755512",
+        "canonical_hash": "",
+        "script_id": "1b3ae52b3a755512bfdad6a7867be5a09f0158d36f43481dacf4dbe57d4ad1df",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Bonestrom's blindsight negates invisibility",
+        "hook": "Bonestrom's blindsight negates invisibility",
+        "body": "The Bonestrom has blindsight up to 60 feet, allowing it to detect opponents in darkness or when invisible. This negates tactics like invisibility spells or hiding, forcing players to rely on direct damage and strategic positioning.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-28-dcc-clip2.mp4",
+        "video_sha256": "05fb7bd1413cff42bc42a1f8b4570530b6dd4f5e7d549c10e225e7e1fdc4372c"
+      }
+    },
+    {
+      "published_utc": "2026-10-28T18:07:28Z",
+      "day": "2026-10-28-dcc-clip3",
+      "content_id": "clip:948b7eb662302843",
+      "publish_hash": "2b28f2be7d26f7d7fecd69eb84988e5f5d967b682cd347cfc1402c43601b1030",
+      "youtube_video_id": "jvNSVNgbKTM",
+      "youtube_url": "https://www.youtube.com/watch?v=jvNSVNgbKTM",
+      "video_sha256": "0c9316632562ccb4997e27abdc4e1e6e9e069329a87600af2fa12373c823c29b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-28-dcc-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-10-28-dcc-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:948b7eb662302843",
+        "canonical_hash": "",
+        "script_id": "948b7eb6623028432dd17a262d23047cff8b220fb17b826ac0b9e97341da7fd0",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Bonestrom's flying speed offers tactical advantages",
+        "hook": "Bonestrom's flying speed offers tactical advantages",
+        "body": "The Bonestrom flies at 60 feet, allowing it to reposition and evade melee attacks. In open or vertical spaces, it gains an edge for its whirlwind attack. Players should exploit terrain to counter its mobility advantage.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_dcc/by_day/2026-10-28-dcc-clip3.mp4",
+        "video_sha256": "0c9316632562ccb4997e27abdc4e1e6e9e069329a87600af2fa12373c823c29b"
+      }
     }
   ]
 }
