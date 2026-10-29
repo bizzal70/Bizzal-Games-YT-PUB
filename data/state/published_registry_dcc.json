@@ -2741,6 +2741,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-28.mp4",
         "video_sha256": "10002cb59d85e63f50304e872eeb04867e395b74ba84fc75122e64bfb6a2b231"
       }
+    },
+    {
+      "published_utc": "2026-10-29T14:19:03Z",
+      "day": "2026-10-29",
+      "content_id": "bgp-2026-10-29-encounter-seed-creature-86-acfbed1278d2",
+      "publish_hash": "a2d811949761a3073b94679216fcfeca74340c989bfcd5f80594254dcffb2cdf",
+      "youtube_video_id": "ZSvSvnjeh4g",
+      "youtube_url": "https://www.youtube.com/watch?v=ZSvSvnjeh4g",
+      "video_sha256": "4cd79b1cba45c5d383c7fcd19fe4087f9056f4d31c639970d9fa0873386ba17b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-29.mp4",
+      "fingerprint": {
+        "day": "2026-10-29",
+        "category": "encounter_seed",
+        "angle": "twist",
+        "content_id": "bgp-2026-10-29-encounter-seed-creature-86-acfbed1278d2",
+        "canonical_hash": "acfbed1278d2b3e25c3204786b6c9020aee45839fdfdc0cc6bc2f288320573a7",
+        "script_id": "34cd0b0163533916e940df536b51616c2d68550f05c1e7a0ea9fd460565dfd2e",
+        "fact_kind": "creature",
+        "fact_pk": 86,
+        "fact_name": "Athasi",
+        "hook": "Run Athasi for stakes, not flavor.",
+        "body": "Athasi's cloak of concealment often leads to underestimating its defensive capabilities. With infravision of 120', it can see most threats long before they see it. Many treat it like a simple bruiser due to its 8d8+20 hit points and 15 AC, overlooking its spellcasting versatility. Disrupting its spellcasting should be a priority, especially the charm person spell, which ignores check penalties for non-humanoid monsters.",
+        "cta": "Judges: Prioritize disrupting Athasi's charm person spell to prevent your party from turning against itself.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-29.mp4",
+        "video_sha256": "4cd79b1cba45c5d383c7fcd19fe4087f9056f4d31c639970d9fa0873386ba17b"
+      },
+      "tone_lint_violation": "vague filler phrase: often leads to"
     }
   ]
 }

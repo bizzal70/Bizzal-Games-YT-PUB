@@ -1350,5 +1350,17 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-10-29": {
+    "class_spotlight": {
+      "angle": "party_role_pivot",
+      "voice": "torchbearer_ref",
+      "tone": "dry",
+      "persona": "class_mentor",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "nova"
+    }
   }
 }

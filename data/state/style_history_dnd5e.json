@@ -1354,5 +1354,15 @@
       ],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-10-29": {
+    "spell_use_case": {
+      "angle": "combo_pairing",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

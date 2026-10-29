@@ -4287,6 +4287,51 @@
       "hook": "Restoration changes the game more than expected - one curse or illness ends instantly.",
       "body": "Restoration's range is Close and its duration is Instant. It removes a single curse, illness, or affliction from a target creature. The mistake is casting it just to heal damage numbers. The better move is using it to eliminate a debilitating condition that blocks progress or survival.",
       "cta": "GMs: Save Restoration for when a curse or illness is the only thing stopping the party from moving forward."
+    },
+    {
+      "published_utc": "2026-10-29T14:20:36Z",
+      "day": "2026-10-29",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-29-encounter-seed-creature-86-acfbed1278d2",
+      "instagram_post_id": "18132650341801784",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "4cd79b1cba45c5d383c7fcd19fe4087f9056f4d31c639970d9fa0873386ba17b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-29.mp4",
+      "fact_name": "Athasi",
+      "category": "encounter_seed",
+      "hook": "Run Athasi for stakes, not flavor.",
+      "body": "Athasi's cloak of concealment often leads to underestimating its defensive capabilities. With infravision of 120', it can see most threats long before they see it. Many treat it like a simple bruiser due to its 8d8+20 hit points and 15 AC, overlooking its spellcasting versatility. Disrupting its spellcasting should be a priority, especially the charm person spell, which ignores check penalties for non-humanoid monsters.",
+      "cta": "Judges: Prioritize disrupting Athasi's charm person spell to prevent your party from turning against itself."
+    },
+    {
+      "published_utc": "2026-10-29T14:25:29Z",
+      "day": "2026-10-29",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-29-spell-use-case-spell-srd-2024-detect-poison-and-disease-943b0529a787",
+      "instagram_post_id": "18569127355078357",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "680d63fa9deab9ff746d1b33126fa765ab760fc22d3257d231c86864be14aa5e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-29.mp4",
+      "fact_name": "Detect Poison and Disease",
+      "category": "spell_use_case",
+      "hook": "Detect Poison and Disease shifts the tactical landscape - Concentration for up to 10 minutes reveals threats.",
+      "body": "Concentration on Detect Poison and Disease competes with other concentration spells, making its timing crucial. Casting it reactively often results in losing the spell due to a failed Constitution save. Instead, use it proactively to identify threats before combat, allowing for strategic positioning and avoidance. The spell's true utility lies in its ability to reveal hidden dangers, not just in mitigating damage.",
+      "cta": "DMs: Cast Detect Poison and Disease as a ritual before entering unknown areas to reveal threats without wasting a spell slot."
+    },
+    {
+      "published_utc": "2026-10-29T14:29:32Z",
+      "day": "2026-10-29",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-29-class-spotlight-class-12-4b4db3957cf4",
+      "instagram_post_id": "18108633782357692",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "6141d66e48eea3bbadcb2ea9743e78854b9a3f214949786b664b1a99141a61c7",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-29.mp4",
+      "fact_name": "Seer",
+      "category": "class_spotlight",
+      "hook": "Seer shifts from support to pressure - Destined and Omen talents enable this pivot with 1d6 bonus rolls.",
+      "body": "Omen talent provides 3 attempts per day to gain a luck token with a DC 9 Wisdom check. Hoarding these tokens often leads to missed opportunities for role pivots. The real value lies in using Destined to add 1d6 to a crucial roll, effectively shifting from support to pressure. This transition becomes essential when the party's momentum shifts and demands a more aggressive stance.",
+      "cta": "GMs: Remind Seers to use Destined's 1d6 bonus when a DC 9 Wisdom check succeeds, shifting from support to pressure."
     }
   ]
 }

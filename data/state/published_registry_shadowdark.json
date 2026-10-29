@@ -2950,6 +2950,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-28.mp4",
         "video_sha256": "fdd24fc10fc3667ac6379d044db22d89b306579ab2c3fa9ac23948dee0cfc94b"
       }
+    },
+    {
+      "published_utc": "2026-10-29T14:28:47Z",
+      "day": "2026-10-29",
+      "content_id": "bgp-2026-10-29-class-spotlight-class-12-4b4db3957cf4",
+      "publish_hash": "b339e3b990bcd6c7e61c90085ca2371fff5836e432b98b8e3f3dc952f31974f3",
+      "youtube_video_id": "_K0WaNIAf2s",
+      "youtube_url": "https://www.youtube.com/watch?v=_K0WaNIAf2s",
+      "video_sha256": "6141d66e48eea3bbadcb2ea9743e78854b9a3f214949786b664b1a99141a61c7",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-29.mp4",
+      "fingerprint": {
+        "day": "2026-10-29",
+        "category": "class_spotlight",
+        "angle": "party_role_pivot",
+        "content_id": "bgp-2026-10-29-class-spotlight-class-12-4b4db3957cf4",
+        "canonical_hash": "4b4db3957cf4de59b9990e73226a591b8249699bfb12ad19782c6057017e4f5a",
+        "script_id": "fe52f0a2ffe703388f2545f692a30dccf2b7ede95d2e7cccbba1d25b7f363cd2",
+        "fact_kind": "class",
+        "fact_pk": 12,
+        "fact_name": "Seer",
+        "hook": "Seer shifts from support to pressure - Destined and Omen talents enable this pivot with 1d6 bonus rolls.",
+        "body": "Omen talent provides 3 attempts per day to gain a luck token with a DC 9 Wisdom check. Hoarding these tokens often leads to missed opportunities for role pivots. The real value lies in using Destined to add 1d6 to a crucial roll, effectively shifting from support to pressure. This transition becomes essential when the party's momentum shifts and demands a more aggressive stance.",
+        "cta": "GMs: Remind Seers to use Destined's 1d6 bonus when a DC 9 Wisdom check succeeds, shifting from support to pressure.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-29.mp4",
+        "video_sha256": "6141d66e48eea3bbadcb2ea9743e78854b9a3f214949786b664b1a99141a61c7"
+      },
+      "tone_lint_violation": "vague filler phrase: often leads to"
     }
   ]
 }

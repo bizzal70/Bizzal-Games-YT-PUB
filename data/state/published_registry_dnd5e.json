@@ -3341,6 +3341,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-28.mp4",
         "video_sha256": "aa918af3a39eb9f46a6700061e38c788cdd50d486a7dbda6651c15a78b666004"
       }
+    },
+    {
+      "published_utc": "2026-10-29T14:24:12Z",
+      "day": "2026-10-29",
+      "content_id": "bgp-2026-10-29-spell-use-case-spell-srd-2024-detect-poison-and-disease-943b0529a787",
+      "publish_hash": "6bbcecd478659422ba22acbf99ee40b631002af970dd297fd7d19d7fd89ebdba",
+      "youtube_video_id": "9OPG_O9IyV0",
+      "youtube_url": "https://www.youtube.com/watch?v=9OPG_O9IyV0",
+      "video_sha256": "680d63fa9deab9ff746d1b33126fa765ab760fc22d3257d231c86864be14aa5e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-29.mp4",
+      "fingerprint": {
+        "day": "2026-10-29",
+        "category": "spell_use_case",
+        "angle": "combo_pairing",
+        "content_id": "bgp-2026-10-29-spell-use-case-spell-srd-2024-detect-poison-and-disease-943b0529a787",
+        "canonical_hash": "943b0529a787611f610d8a3f2b1d52ed435b532e6947310d4cc8e92d51990922",
+        "script_id": "1128c04f5f05e5e3072e523237f471631c8b523689b78722cd506d212280aa93",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_detect-poison-and-disease",
+        "fact_name": "Detect Poison and Disease",
+        "hook": "Detect Poison and Disease shifts the tactical landscape - Concentration for up to 10 minutes reveals threats.",
+        "body": "Concentration on Detect Poison and Disease competes with other concentration spells, making its timing crucial. Casting it reactively often results in losing the spell due to a failed Constitution save. Instead, use it proactively to identify threats before combat, allowing for strategic positioning and avoidance. The spell's true utility lies in its ability to reveal hidden dangers, not just in mitigating damage.",
+        "cta": "DMs: Cast Detect Poison and Disease as a ritual before entering unknown areas to reveal threats without wasting a spell slot.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-29.mp4",
+        "video_sha256": "680d63fa9deab9ff746d1b33126fa765ab760fc22d3257d231c86864be14aa5e"
+      },
+      "tone_lint_violation": "vague filler phrase: often results in"
     }
   ]
 }

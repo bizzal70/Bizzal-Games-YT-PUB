@@ -1228,5 +1228,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-10-29": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "survival_coach",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }
