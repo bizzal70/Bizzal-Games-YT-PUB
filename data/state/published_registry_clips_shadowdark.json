@@ -831,6 +831,58 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-21-shadowdark-clip3.mp4",
         "video_sha256": "7d5c08f7620f32704b064d2726889bcb0c733ac6e09c75c9c036dc8aee50f02e"
       }
+    },
+    {
+      "published_utc": "2026-10-30T18:00:37Z",
+      "day": "2026-10-30-shadowdark-clip1",
+      "content_id": "clip:f7da5d5857ed8393",
+      "publish_hash": "0cb1049c5808f0016288aca360488693d226bccb3d3ef804d7f1c545aa2016d5",
+      "youtube_video_id": "uG78rSjDa9A",
+      "youtube_url": "https://www.youtube.com/watch?v=uG78rSjDa9A",
+      "video_sha256": "99672942a64c731b505e21badef3ac02d9ccfdce36a4f6b9c57cc06b8ad8a5e8",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-30-shadowdark-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-10-30-shadowdark-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:f7da5d5857ed8393",
+        "canonical_hash": "",
+        "script_id": "f7da5d5857ed8393d9fb731f2fc5c13c44128b140463a64e535871137ff2331b",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Ape's climbing ability changes terrain tactics",
+        "hook": "Ape's climbing ability changes terrain tactics",
+        "body": "In Shadowdark RPG, the Ape can climb, giving it an edge in vertical terrain. Use trees or cliffs to gain a vantage point for rock throws. Players should block climbing paths or lure the Ape to open areas to neutralize its advantage.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-30-shadowdark-clip1.mp4",
+        "video_sha256": "99672942a64c731b505e21badef3ac02d9ccfdce36a4f6b9c57cc06b8ad8a5e8"
+      }
+    },
+    {
+      "published_utc": "2026-10-30T18:01:59Z",
+      "day": "2026-10-30-shadowdark-clip2",
+      "content_id": "clip:c269fae812dca8ce",
+      "publish_hash": "98aeecc60ec5f0edf7198c8f51e0f034a412512456efc64b277dc633d985b9a7",
+      "youtube_video_id": "K7IEW3yK-vg",
+      "youtube_url": "https://www.youtube.com/watch?v=K7IEW3yK-vg",
+      "video_sha256": "5ab61739345bd6c853e3e5f01e14fd47c81fa49f4d4c48bf6dd99dad2d948f3b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-30-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-10-30-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:c269fae812dca8ce",
+        "canonical_hash": "",
+        "script_id": "c269fae812dca8ce8a1ed334b670942b32daaee6dd3b108e0a9c56c7cfa9df07",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Ape's dual attacks adapt to combat situations",
+        "hook": "Ape's dual attacks adapt to combat situations",
+        "body": "The Ape in Shadowdark RPG has two attacks: fist and rock throw. Fist deals 1d6 damage in melee, while rock throw deals 1d4 at range. This versatility lets the Ape switch tactics, pressuring players from any distance.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-30-shadowdark-clip2.mp4",
+        "video_sha256": "5ab61739345bd6c853e3e5f01e14fd47c81fa49f4d4c48bf6dd99dad2d948f3b"
+      }
     }
   ]
 }

@@ -8931,6 +8931,39 @@
       "video_id": "CGbOWPIFK5E",
       "day": "2026-10-30",
       "published_at": "2026-10-30T14:27:56+00:00"
+    },
+    {
+      "content_key": "250ee78965be33d0065870683e65ff1b1b9cd147fbb743edc12098ca469106a4",
+      "token_text": "ape attack climbing ranged rpg shadowdark",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Ape: Climbing and Ranged Attacks in Shadowdark RPG",
+      "video_id": "PZNZtlD792E",
+      "day": "2026-10-30",
+      "published_at": "2026-10-30T17:58:54+00:00"
+    },
+    {
+      "content_key": "5bc09d934d74c72a4abcb84a95e4759d69ceefcde24807689d03a96e885c59af",
+      "token_text": "ability ape change climbing tactic terrain",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Ape's climbing ability changes terrain tactics #shadowdark",
+      "video_id": "uG78rSjDa9A",
+      "day": "2026-10-30-shadowdark-clip1",
+      "published_at": "2026-10-30T18:00:37+00:00"
+    },
+    {
+      "content_key": "7143edf34784561df32923fce9907fa45733fcb51174b6e35ad3370a51402d59",
+      "token_text": "adapt ape attack combat dual situation",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Ape's dual attacks adapt to combat situations #shadowdark",
+      "video_id": "K7IEW3yK-vg",
+      "day": "2026-10-30-shadowdark-clip2",
+      "published_at": "2026-10-30T18:01:59+00:00"
     }
   ]
 }
