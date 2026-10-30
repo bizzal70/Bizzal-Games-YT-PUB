@@ -2977,6 +2977,32 @@
         "video_sha256": "6141d66e48eea3bbadcb2ea9743e78854b9a3f214949786b664b1a99141a61c7"
       },
       "tone_lint_violation": "vague filler phrase: often leads to"
+    },
+    {
+      "published_utc": "2026-10-30T14:27:56Z",
+      "day": "2026-10-30",
+      "content_id": "bgp-2026-10-30-monster-tactic-creature-21-ca3fdc1cdf2e",
+      "publish_hash": "b89ae90f52d6bf2a49982ff76a4245fd63b999a9fe0763731b58124a19073556",
+      "youtube_video_id": "CGbOWPIFK5E",
+      "youtube_url": "https://www.youtube.com/watch?v=CGbOWPIFK5E",
+      "video_sha256": "29f93e961f73131b424544c79b800219f8c15f113720d2578c1ba671f36d3009",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-30.mp4",
+      "fingerprint": {
+        "day": "2026-10-30",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-10-30-monster-tactic-creature-21-ca3fdc1cdf2e",
+        "canonical_hash": "ca3fdc1cdf2ef9c1c1fc2efc53357460d1bc759f7394e5a813c1e09458f61756",
+        "script_id": "18395a5e1f8323edc2183a87148519f2869afadfbf3a263fb880e4ed5ae6e826",
+        "fact_kind": "creature",
+        "fact_pk": 21,
+        "fact_name": "Beastman",
+        "hook": "Beastman's spear attack hits harder than expected - 1d6 + 2 damage with Brutal talent.",
+        "body": "Beastman operates with a +2 attack bonus and deals 1d6 + 2 damage at close or near range due to its Brutal talent. Players misjudge its threat level, often ignoring it until it closes distance. Effective counterplay involves prioritizing movement to maintain distance and targeting it early to mitigate its impact.",
+        "cta": "GMs: Beastman hits hard with 1d6 + 2 damage; make players regret ignoring it by closing the distance quickly.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-30.mp4",
+        "video_sha256": "29f93e961f73131b424544c79b800219f8c15f113720d2578c1ba671f36d3009"
+      }
     }
   ]
 }

@@ -3368,6 +3368,32 @@
         "video_sha256": "680d63fa9deab9ff746d1b33126fa765ab760fc22d3257d231c86864be14aa5e"
       },
       "tone_lint_violation": "vague filler phrase: often results in"
+    },
+    {
+      "published_utc": "2026-10-30T14:23:54Z",
+      "day": "2026-10-30",
+      "content_id": "bgp-2026-10-30-rules-ruling-rule-srd-2024-proficiency-bonus-dont-stack-7ecd7a3b6947",
+      "publish_hash": "615a77d972524df5a600850552cfc3252618ee66f5386e25cd717a34311fa411",
+      "youtube_video_id": "wlNcGCl-sOg",
+      "youtube_url": "https://www.youtube.com/watch?v=wlNcGCl-sOg",
+      "video_sha256": "8ef4b7cf02b287754ee84dd933fb29cb905c4e5d05463879f39f7a38c291d0c4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-30.mp4",
+      "fingerprint": {
+        "day": "2026-10-30",
+        "category": "rules_ruling",
+        "angle": "fast_ruling",
+        "content_id": "bgp-2026-10-30-rules-ruling-rule-srd-2024-proficiency-bonus-dont-stack-7ecd7a3b6947",
+        "canonical_hash": "7ecd7a3b69475e97afb03c016860d26213c876c380ea75becc7e83c941568abd",
+        "script_id": "fae94e9e691dd1746640815a1e07365ce232a4e9ed9566dc47713841f04c00e7",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_proficiency_bonus-dont-stack",
+        "fact_name": "The Bonus Doesn’t Stack",
+        "hook": "Dungeon kit spotlight: The Bonus Doesn't Stack.",
+        "body": "Fast ruling for The Bonus Doesn't Stack: decide intent, then resolve with one clear call. Your Proficiency Bonus can't be added to a die roll or another number more than once. For example, if a rule allows you to make a Charisma (Deception or Persuasion) check. Clear rulings now save argument time later.",
+        "cta": "DMs: Enforce that the Proficiency Bonus can't stack; one bonus per roll, then move on.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-30.mp4",
+        "video_sha256": "8ef4b7cf02b287754ee84dd933fb29cb905c4e5d05463879f39f7a38c291d0c4"
+      }
     }
   ]
 }

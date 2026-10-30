@@ -2768,6 +2768,33 @@
         "video_sha256": "4cd79b1cba45c5d383c7fcd19fe4087f9056f4d31c639970d9fa0873386ba17b"
       },
       "tone_lint_violation": "vague filler phrase: often leads to"
+    },
+    {
+      "published_utc": "2026-10-30T14:19:35Z",
+      "day": "2026-10-30",
+      "content_id": "bgp-2026-10-30-class-spotlight-class-5-8d4bc0c7873d",
+      "publish_hash": "ff7b9f1469c7dd31e56b838793950a87825340db0404fd75652c47dd9ecc7b7c",
+      "youtube_video_id": "kW-g588Pzgw",
+      "youtube_url": "https://www.youtube.com/watch?v=kW-g588Pzgw",
+      "video_sha256": "6bead73d7e300e061933fb81b8868716bca767b21bcad1a0f50498343097eb14",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-30.mp4",
+      "fingerprint": {
+        "day": "2026-10-30",
+        "category": "class_spotlight",
+        "angle": "level_1_survival",
+        "content_id": "bgp-2026-10-30-class-spotlight-class-5-8d4bc0c7873d",
+        "canonical_hash": "8d4bc0c7873dd2e7a62746c5ef5ad9926f7468f7af65cad1319d31297e563d18",
+        "script_id": "79a36aa9c4379273f25bf5f64a5372a4deff8acd7573cf37568a8f786a6079bd",
+        "fact_kind": "class",
+        "fact_pk": 5,
+        "fact_name": "Dwarf",
+        "hook": "Dwarf's infravision is longer than most expect - 60 feet in total darkness.",
+        "body": "Dwarves wield all weapons and armor, making them versatile front-line options. Their Mighty Deeds of Arms cap at a d14, not a d16, which means their peak effectiveness is slightly lower than Warriors. Shield Brother grants an adjacent ally +2 AC by body-blocking, yet this is often overlooked when positioning. Maintaining proximity to allies consistently provides this defensive boost, crucial when facing high-damage threats.",
+        "cta": "Judges: Remind your Dwarf to body-block for the +2 AC Shield Brother bonus; it's not just for decoration.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-30.mp4",
+        "video_sha256": "6bead73d7e300e061933fb81b8868716bca767b21bcad1a0f50498343097eb14"
+      },
+      "tone_lint_violation": "vague filler phrase: often overlooked"
     }
   ]
 }

@@ -4332,6 +4332,36 @@
       "hook": "Seer shifts from support to pressure - Destined and Omen talents enable this pivot with 1d6 bonus rolls.",
       "body": "Omen talent provides 3 attempts per day to gain a luck token with a DC 9 Wisdom check. Hoarding these tokens often leads to missed opportunities for role pivots. The real value lies in using Destined to add 1d6 to a crucial roll, effectively shifting from support to pressure. This transition becomes essential when the party's momentum shifts and demands a more aggressive stance.",
       "cta": "GMs: Remind Seers to use Destined's 1d6 bonus when a DC 9 Wisdom check succeeds, shifting from support to pressure."
+    },
+    {
+      "published_utc": "2026-10-30T14:21:04Z",
+      "day": "2026-10-30",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-30-class-spotlight-class-5-8d4bc0c7873d",
+      "instagram_post_id": "18100672577673345",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "6bead73d7e300e061933fb81b8868716bca767b21bcad1a0f50498343097eb14",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-30.mp4",
+      "fact_name": "Dwarf",
+      "category": "class_spotlight",
+      "hook": "Dwarf's infravision is longer than most expect - 60 feet in total darkness.",
+      "body": "Dwarves wield all weapons and armor, making them versatile front-line options. Their Mighty Deeds of Arms cap at a d14, not a d16, which means their peak effectiveness is slightly lower than Warriors. Shield Brother grants an adjacent ally +2 AC by body-blocking, yet this is often overlooked when positioning. Maintaining proximity to allies consistently provides this defensive boost, crucial when facing high-damage threats.",
+      "cta": "Judges: Remind your Dwarf to body-block for the +2 AC Shield Brother bonus; it's not just for decoration."
+    },
+    {
+      "published_utc": "2026-10-30T14:24:51Z",
+      "day": "2026-10-30",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-30-rules-ruling-rule-srd-2024-proficiency-bonus-dont-stack-7ecd7a3b6947",
+      "instagram_post_id": "18083224202708792",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "8ef4b7cf02b287754ee84dd933fb29cb905c4e5d05463879f39f7a38c291d0c4",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-30.mp4",
+      "fact_name": "The Bonus Doesn’t Stack",
+      "category": "rules_ruling",
+      "hook": "Dungeon kit spotlight: The Bonus Doesn't Stack.",
+      "body": "Fast ruling for The Bonus Doesn't Stack: decide intent, then resolve with one clear call. Your Proficiency Bonus can't be added to a die roll or another number more than once. For example, if a rule allows you to make a Charisma (Deception or Persuasion) check. Clear rulings now save argument time later.",
+      "cta": "DMs: Enforce that the Proficiency Bonus can't stack; one bonus per roll, then move on."
     }
   ]
 }
