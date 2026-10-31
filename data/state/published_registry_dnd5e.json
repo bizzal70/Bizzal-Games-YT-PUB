@@ -3394,6 +3394,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-30.mp4",
         "video_sha256": "8ef4b7cf02b287754ee84dd933fb29cb905c4e5d05463879f39f7a38c291d0c4"
       }
+    },
+    {
+      "published_utc": "2026-10-31T14:19:43Z",
+      "day": "2026-10-31",
+      "content_id": "bgp-2026-10-31-item-spotlight-item-tashas-cauldron-coiling-grasp-tattoo-772b2b7001b0",
+      "publish_hash": "2c414cba926bb0b59c773a00190ae6b41dfa08c92040bae2091db0a854a886ef",
+      "youtube_video_id": "50kHSbuoAWE",
+      "youtube_url": "https://www.youtube.com/watch?v=50kHSbuoAWE",
+      "video_sha256": "11fd2187da7deb32d179a087f4eec112603c08d186acd5ee4ac955654e278acb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-31.mp4",
+      "fingerprint": {
+        "day": "2026-10-31",
+        "category": "item_spotlight",
+        "angle": "dm_counterplay",
+        "content_id": "bgp-2026-10-31-item-spotlight-item-tashas-cauldron-coiling-grasp-tattoo-772b2b7001b0",
+        "canonical_hash": "772b2b7001b0d75edc95bb4aa9c58f60238b52fb52a4278034f12c8b119fc806",
+        "script_id": "6fd682ff98972ea0882008bce275428e4866382db997b56bab45e58060ab3442",
+        "fact_kind": "item",
+        "fact_pk": "tashas-cauldron_coiling-grasp-tattoo",
+        "fact_name": "Coiling Grasp Tattoo",
+        "hook": "Coiling Grasp Tattoo's real surprise is its ongoing damage - 3d6 force damage at the start of each of your.",
+        "body": "The Coiling Grasp Tattoo requires an action to make a melee spell attack with a +5 to hit against a target within 15 feet. On a hit, the target takes 3d6 force damage and is grappled with an escape DC of 13. Many players overlook the ongoing 3d6 force damage at the start of each turn when the target remains grappled. Maintaining the grapple to leverage this recurring damage is more effective than treating it solely as a one-time attack.",
+        "cta": "DMs: Remind players to maintain concentration on the grapple for that sweet 3d6 force damage every round.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-31.mp4",
+        "video_sha256": "11fd2187da7deb32d179a087f4eec112603c08d186acd5ee4ac955654e278acb"
+      }
     }
   ]
 }

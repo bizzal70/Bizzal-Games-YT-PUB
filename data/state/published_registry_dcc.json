@@ -2795,6 +2795,32 @@
         "video_sha256": "6bead73d7e300e061933fb81b8868716bca767b21bcad1a0f50498343097eb14"
       },
       "tone_lint_violation": "vague filler phrase: often overlooked"
+    },
+    {
+      "published_utc": "2026-10-31T14:13:59Z",
+      "day": "2026-10-31",
+      "content_id": "bgp-2026-10-31-rules-myth-rule-13-0a6aca53fff9",
+      "publish_hash": "047d1fbfa2b2794f42cbf5a4aaa0c7ef491de2035ecaffc1b1763c642414ecad",
+      "youtube_video_id": "wiFdqIBGH4I",
+      "youtube_url": "https://www.youtube.com/watch?v=wiFdqIBGH4I",
+      "video_sha256": "387cc567b6e654cb645d34b04feb0ea9b7d4ec3aa7b52b630e7a0c6ba6310ce9",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-31.mp4",
+      "fingerprint": {
+        "day": "2026-10-31",
+        "category": "rules_myth",
+        "angle": "quick_example",
+        "content_id": "bgp-2026-10-31-rules-myth-rule-13-0a6aca53fff9",
+        "canonical_hash": "0a6aca53fff9cc8e57c8e447f5167b3ba0add0efe7ef15bde15d411b726c4a8c",
+        "script_id": "d0e3bdd8239d361ea4c5da3943bdcbdff8d66c752106e64a5a5bfbf29369a54b",
+        "fact_kind": "rule",
+        "fact_pk": 13,
+        "fact_name": "Spellburn",
+        "hook": "Spellburn seems like free power - but it permanently burns Strength, Agility, or Stamina.",
+        "body": "Spellburn lets a wizard add points to a spell check by burning Strength, Agility, or Stamina, but this ability loss heals over time like damage. The mistake is treating it as a temporary boost without considering the long-term impact on survival. A better approach is to reserve Spellburn for critical moments where the spell's success outweighs the loss, like a life-or-death situation or a pivotal encounter.",
+        "cta": "Judges: Show them how burning 3 Strength for a spell check can turn a wizard into easy prey for the next goblin.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-31.mp4",
+        "video_sha256": "387cc567b6e654cb645d34b04feb0ea9b7d4ec3aa7b52b630e7a0c6ba6310ce9"
+      }
     }
   ]
 }

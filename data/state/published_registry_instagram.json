@@ -4362,6 +4362,51 @@
       "hook": "Dungeon kit spotlight: The Bonus Doesn't Stack.",
       "body": "Fast ruling for The Bonus Doesn't Stack: decide intent, then resolve with one clear call. Your Proficiency Bonus can't be added to a die roll or another number more than once. For example, if a rule allows you to make a Charisma (Deception or Persuasion) check. Clear rulings now save argument time later.",
       "cta": "DMs: Enforce that the Proficiency Bonus can't stack; one bonus per roll, then move on."
+    },
+    {
+      "published_utc": "2026-10-31T14:15:02Z",
+      "day": "2026-10-31",
+      "system": "dcc",
+      "content_id": "bgp-2026-10-31-rules-myth-rule-13-0a6aca53fff9",
+      "instagram_post_id": "18401213368201410",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "387cc567b6e654cb645d34b04feb0ea9b7d4ec3aa7b52b630e7a0c6ba6310ce9",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-31.mp4",
+      "fact_name": "Spellburn",
+      "category": "rules_myth",
+      "hook": "Spellburn seems like free power - but it permanently burns Strength, Agility, or Stamina.",
+      "body": "Spellburn lets a wizard add points to a spell check by burning Strength, Agility, or Stamina, but this ability loss heals over time like damage. The mistake is treating it as a temporary boost without considering the long-term impact on survival. A better approach is to reserve Spellburn for critical moments where the spell's success outweighs the loss, like a life-or-death situation or a pivotal encounter.",
+      "cta": "Judges: Show them how burning 3 Strength for a spell check can turn a wizard into easy prey for the next goblin."
+    },
+    {
+      "published_utc": "2026-10-31T14:21:15Z",
+      "day": "2026-10-31",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-10-31-item-spotlight-item-tashas-cauldron-coiling-grasp-tattoo-772b2b7001b0",
+      "instagram_post_id": "18153464983552609",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "11fd2187da7deb32d179a087f4eec112603c08d186acd5ee4ac955654e278acb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-31.mp4",
+      "fact_name": "Coiling Grasp Tattoo",
+      "category": "item_spotlight",
+      "hook": "Coiling Grasp Tattoo's real surprise is its ongoing damage - 3d6 force damage at the start of each of your.",
+      "body": "The Coiling Grasp Tattoo requires an action to make a melee spell attack with a +5 to hit against a target within 15 feet. On a hit, the target takes 3d6 force damage and is grappled with an escape DC of 13. Many players overlook the ongoing 3d6 force damage at the start of each turn when the target remains grappled. Maintaining the grapple to leverage this recurring damage is more effective than treating it solely as a one-time attack.",
+      "cta": "DMs: Remind players to maintain concentration on the grapple for that sweet 3d6 force damage every round."
+    },
+    {
+      "published_utc": "2026-10-31T14:25:55Z",
+      "day": "2026-10-31",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-10-31-rules-ruling-rule-6-186b63b9576d",
+      "instagram_post_id": "18099059306206768",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "1d56760e34ee0975dc242c7403d65e4b17b961214cc65e11bac67b25e3724111",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-31.mp4",
+      "fact_name": "Backstab",
+      "category": "rules_ruling",
+      "hook": "Backstab damage stacks higher than most expect - an extra weapon die plus additional dice equal to half.",
+      "body": "Backstab grants an extra weapon die of damage when hitting an unaware creature, with more dice added equal to half the thief's level, rounded down. The mistake: players rush, assuming it's just a single extra die. Clarity in ruling prevents disputes and ensures correct damage application.",
+      "cta": "GMs: Remind players that Backstab adds one weapon die plus half-level dice, rounded down, to avoid damage disputes."
     }
   ]
 }

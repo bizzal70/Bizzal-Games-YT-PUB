@@ -3003,6 +3003,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-30.mp4",
         "video_sha256": "29f93e961f73131b424544c79b800219f8c15f113720d2578c1ba671f36d3009"
       }
+    },
+    {
+      "published_utc": "2026-10-31T14:24:23Z",
+      "day": "2026-10-31",
+      "content_id": "bgp-2026-10-31-rules-ruling-rule-6-186b63b9576d",
+      "publish_hash": "95542808d35602d6585ce857e38906f909cbaf27cd21acdaad6b03f69ffe0d7e",
+      "youtube_video_id": "h59x8P0pTLg",
+      "youtube_url": "https://www.youtube.com/watch?v=h59x8P0pTLg",
+      "video_sha256": "1d56760e34ee0975dc242c7403d65e4b17b961214cc65e11bac67b25e3724111",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-31.mp4",
+      "fingerprint": {
+        "day": "2026-10-31",
+        "category": "rules_ruling",
+        "angle": "common_table_mistake",
+        "content_id": "bgp-2026-10-31-rules-ruling-rule-6-186b63b9576d",
+        "canonical_hash": "186b63b9576d805ee6d1798582f43718867ade58817475640e7999ca7fa19280",
+        "script_id": "d289c270f54cfdbd8f3848fe99ad4a8e73ea1230efc87c1985504c70e89e9e6f",
+        "fact_kind": "rule",
+        "fact_pk": 6,
+        "fact_name": "Backstab",
+        "hook": "Backstab damage stacks higher than most expect - an extra weapon die plus additional dice equal to half.",
+        "body": "Backstab grants an extra weapon die of damage when hitting an unaware creature, with more dice added equal to half the thief's level, rounded down. The mistake: players rush, assuming it's just a single extra die. Clarity in ruling prevents disputes and ensures correct damage application.",
+        "cta": "GMs: Remind players that Backstab adds one weapon die plus half-level dice, rounded down, to avoid damage disputes.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-31.mp4",
+        "video_sha256": "1d56760e34ee0975dc242c7403d65e4b17b961214cc65e11bac67b25e3724111"
+      }
     }
   ]
 }

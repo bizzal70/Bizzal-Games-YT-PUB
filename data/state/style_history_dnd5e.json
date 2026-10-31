@@ -1376,5 +1376,17 @@
       ],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-10-31": {
+    "item_spotlight": {
+      "angle": "dm_counterplay",
+      "voice": "rules_lawyer",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }
