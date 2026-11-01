@@ -3420,6 +3420,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-10-31.mp4",
         "video_sha256": "11fd2187da7deb32d179a087f4eec112603c08d186acd5ee4ac955654e278acb"
       }
+    },
+    {
+      "published_utc": "2026-11-01T15:12:23Z",
+      "day": "2026-11-01",
+      "content_id": "bgp-2026-11-01-encounter-seed-creature-monsters-multiverse-spectator-640caeb4285a",
+      "publish_hash": "fbb70c678223df65575b514d2dbf3bb6cc00805e16596555da4e7e7f072815f1",
+      "youtube_video_id": "eszGslYXdJs",
+      "youtube_url": "https://www.youtube.com/watch?v=eszGslYXdJs",
+      "video_sha256": "35a974c11c8e3ed5ff2d64cb81f60efba2d17050eae69278c31fedab3066b36b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-01.mp4",
+      "fingerprint": {
+        "day": "2026-11-01",
+        "category": "encounter_seed",
+        "angle": "time_pressure",
+        "content_id": "bgp-2026-11-01-encounter-seed-creature-monsters-multiverse-spectator-640caeb4285a",
+        "canonical_hash": "640caeb4285aa6bc0bee05bfc732793e74f372f4df7fc696f7a87dbaad9abcdd",
+        "script_id": "941dc24b0e714469da8ffc0ba0208f4a9c69286c4682f2e01070b882467c12ac",
+        "fact_kind": "creature",
+        "fact_pk": "monsters-multiverse_spectator",
+        "fact_name": "Spectator",
+        "hook": "Put Spectator in terrain with one strong feature and start a visible clock - every delay should make positioning and objective pressure worse.",
+        "body": "Spectator's ability to hover with a fly speed of 30 feet often gets overlooked, leading to poor positioning choices by players. Its darkvision range of 120 feet allows it to spot threats well before players realize they're in its sight. Condition immunity to prone means attempts to knock it down are wasted actions. Effective play involves using ranged attacks to exploit its moderate hit points of 39, while keeping out of range of its perception advantage.",
+        "cta": "DMs: Inform players that the Spectator's darkvision of 120 feet means they're already in its sights, so act quickly.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-01.mp4",
+        "video_sha256": "35a974c11c8e3ed5ff2d64cb81f60efba2d17050eae69278c31fedab3066b36b"
+      }
     }
   ]
 }

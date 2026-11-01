@@ -3029,6 +3029,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-10-31.mp4",
         "video_sha256": "1d56760e34ee0975dc242c7403d65e4b17b961214cc65e11bac67b25e3724111"
       }
+    },
+    {
+      "published_utc": "2026-11-01T15:16:50Z",
+      "day": "2026-11-01",
+      "content_id": "bgp-2026-11-01-item-spotlight-item-103-ae013363957c",
+      "publish_hash": "3c296753ec995f83f8b9c3c2fb126ebefac0f77873efa01764bcaae0a9e756a5",
+      "youtube_video_id": "Pzlq-mle5KE",
+      "youtube_url": "https://www.youtube.com/watch?v=Pzlq-mle5KE",
+      "video_sha256": "1a544a15e3947f20cbfc00e32a569ab6dbd5fab95e97219c911542c3ef2a8d08",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-01.mp4",
+      "fingerprint": {
+        "day": "2026-11-01",
+        "category": "item_spotlight",
+        "angle": "best_user",
+        "content_id": "bgp-2026-11-01-item-spotlight-item-103-ae013363957c",
+        "canonical_hash": "ae013363957cc3a64165b9840f01859bab2b7dd379182ed582a4b6bf5932d1fc",
+        "script_id": "c357d989803932dc2cca3eb7c6accace233fb67d27c33f883e38298f1de91949",
+        "fact_kind": "item",
+        "fact_pk": 103,
+        "fact_name": "Scimitar",
+        "hook": "Scimitar's versatility often goes unnoticed - Finesse lets you use STR or DEX.",
+        "body": "The Scimitar deals 1d6 damage and costs 8 gp, fitting into a single equipment slot. Its Finesse property allows players to choose between Strength or Dexterity for attack rolls, yet many default to Strength without considering their higher Dexterity modifier. Optimal use involves leveraging Dexterity for a higher attack bonus, especially when facing foes with higher AC.",
+        "cta": "GMs: Remind players to leverage the Scimitar's Finesse property using Dexterity for better odds against high AC foes.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-01.mp4",
+        "video_sha256": "1a544a15e3947f20cbfc00e32a569ab6dbd5fab95e97219c911542c3ef2a8d08"
+      }
     }
   ]
 }

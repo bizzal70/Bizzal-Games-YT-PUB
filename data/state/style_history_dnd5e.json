@@ -1388,5 +1388,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-01": {
+    "encounter_seed": {
+      "angle": "time_pressure",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "dm_story_coach",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "alloy"
+    }
   }
 }

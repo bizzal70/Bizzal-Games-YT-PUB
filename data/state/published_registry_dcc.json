@@ -2821,6 +2821,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-10-31.mp4",
         "video_sha256": "387cc567b6e654cb645d34b04feb0ea9b7d4ec3aa7b52b630e7a0c6ba6310ce9"
       }
+    },
+    {
+      "published_utc": "2026-11-01T15:07:10Z",
+      "day": "2026-11-01",
+      "content_id": "bgp-2026-11-01-monster-tactic-creature-244-b5dfb6b629c0",
+      "publish_hash": "1017ab99b3a08645e69107ad6a8df8b373ebecdb63f3fab2087c05006bb69d1e",
+      "youtube_video_id": "_Rw6Vq9PLlo",
+      "youtube_url": "https://www.youtube.com/watch?v=_Rw6Vq9PLlo",
+      "video_sha256": "d108d330cd1a36ab3049b0e348ffe0e3f2fe4fc59c1599acb1055d8cb6e71a36",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-01.mp4",
+      "fingerprint": {
+        "day": "2026-11-01",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-11-01-monster-tactic-creature-244-b5dfb6b629c0",
+        "canonical_hash": "b5dfb6b629c06dab3eed115a5548c3bad9ff1d4715f58133616b302e4addb6dd",
+        "script_id": "1b9c2c05751c8f834f5fbdff920f7ced83954ad085cb40feba16238b1dc73687",
+        "fact_kind": "creature",
+        "fact_pk": 244,
+        "fact_name": "Festhaken",
+        "hook": "Festhaken's bite attack is more lethal than it seems - 2d6 damage plus clench and 4d6 poison with a DC 15 Fort.",
+        "body": "Festhaken's dimensional jaunt allows it to reposition instantly, making escape attempts futile. Its magic resistance gives a 25% chance to negate spells before saves, which often catches players off-guard. Misjudging its climbing speed of 30' can lead to disastrous flanking maneuvers. Optimal play involves leveraging its extradimensional lair for ambushes, forcing opponents into a choke point.",
+        "cta": "Judges: Exploit Festhaken's 25% magic resistance and dimensional jaunt to negate spells and ambush isolated targets.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-01.mp4",
+        "video_sha256": "d108d330cd1a36ab3049b0e348ffe0e3f2fe4fc59c1599acb1055d8cb6e71a36"
+      }
     }
   ]
 }

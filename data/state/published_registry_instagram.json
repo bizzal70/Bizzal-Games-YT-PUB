@@ -4407,6 +4407,51 @@
       "hook": "Backstab damage stacks higher than most expect - an extra weapon die plus additional dice equal to half.",
       "body": "Backstab grants an extra weapon die of damage when hitting an unaware creature, with more dice added equal to half the thief's level, rounded down. The mistake: players rush, assuming it's just a single extra die. Clarity in ruling prevents disputes and ensures correct damage application.",
       "cta": "GMs: Remind players that Backstab adds one weapon die plus half-level dice, rounded down, to avoid damage disputes."
+    },
+    {
+      "published_utc": "2026-11-01T15:08:27Z",
+      "day": "2026-11-01",
+      "system": "dcc",
+      "content_id": "bgp-2026-11-01-monster-tactic-creature-244-b5dfb6b629c0",
+      "instagram_post_id": "18167184229490451",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d108d330cd1a36ab3049b0e348ffe0e3f2fe4fc59c1599acb1055d8cb6e71a36",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-01.mp4",
+      "fact_name": "Festhaken",
+      "category": "monster_tactic",
+      "hook": "Festhaken's bite attack is more lethal than it seems - 2d6 damage plus clench and 4d6 poison with a DC 15 Fort.",
+      "body": "Festhaken's dimensional jaunt allows it to reposition instantly, making escape attempts futile. Its magic resistance gives a 25% chance to negate spells before saves, which often catches players off-guard. Misjudging its climbing speed of 30' can lead to disastrous flanking maneuvers. Optimal play involves leveraging its extradimensional lair for ambushes, forcing opponents into a choke point.",
+      "cta": "Judges: Exploit Festhaken's 25% magic resistance and dimensional jaunt to negate spells and ambush isolated targets."
+    },
+    {
+      "published_utc": "2026-11-01T15:13:26Z",
+      "day": "2026-11-01",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-11-01-encounter-seed-creature-monsters-multiverse-spectator-640caeb4285a",
+      "instagram_post_id": "18129749701907940",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "35a974c11c8e3ed5ff2d64cb81f60efba2d17050eae69278c31fedab3066b36b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-01.mp4",
+      "fact_name": "Spectator",
+      "category": "encounter_seed",
+      "hook": "Put Spectator in terrain with one strong feature and start a visible clock - every delay should make positioning and objective pressure worse.",
+      "body": "Spectator's ability to hover with a fly speed of 30 feet often gets overlooked, leading to poor positioning choices by players. Its darkvision range of 120 feet allows it to spot threats well before players realize they're in its sight. Condition immunity to prone means attempts to knock it down are wasted actions. Effective play involves using ranged attacks to exploit its moderate hit points of 39, while keeping out of range of its perception advantage.",
+      "cta": "DMs: Inform players that the Spectator's darkvision of 120 feet means they're already in its sights, so act quickly."
+    },
+    {
+      "published_utc": "2026-11-01T15:17:51Z",
+      "day": "2026-11-01",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-11-01-item-spotlight-item-103-ae013363957c",
+      "instagram_post_id": "18344316376261817",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "1a544a15e3947f20cbfc00e32a569ab6dbd5fab95e97219c911542c3ef2a8d08",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-01.mp4",
+      "fact_name": "Scimitar",
+      "category": "item_spotlight",
+      "hook": "Scimitar's versatility often goes unnoticed - Finesse lets you use STR or DEX.",
+      "body": "The Scimitar deals 1d6 damage and costs 8 gp, fitting into a single equipment slot. Its Finesse property allows players to choose between Strength or Dexterity for attack rolls, yet many default to Strength without considering their higher Dexterity modifier. Optimal use involves leveraging Dexterity for a higher attack bonus, especially when facing foes with higher AC.",
+      "cta": "GMs: Remind players to leverage the Scimitar's Finesse property using Dexterity for better odds against high AC foes."
     }
   ]
 }
