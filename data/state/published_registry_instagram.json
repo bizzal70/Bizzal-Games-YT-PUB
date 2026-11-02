@@ -4452,6 +4452,36 @@
       "hook": "Scimitar's versatility often goes unnoticed - Finesse lets you use STR or DEX.",
       "body": "The Scimitar deals 1d6 damage and costs 8 gp, fitting into a single equipment slot. Its Finesse property allows players to choose between Strength or Dexterity for attack rolls, yet many default to Strength without considering their higher Dexterity modifier. Optimal use involves leveraging Dexterity for a higher attack bonus, especially when facing foes with higher AC.",
       "cta": "GMs: Remind players to leverage the Scimitar's Finesse property using Dexterity for better odds against high AC foes."
+    },
+    {
+      "published_utc": "2026-11-02T15:08:17Z",
+      "day": "2026-11-02",
+      "system": "dcc",
+      "content_id": "bgp-2026-11-02-spell-use-case-spell-113-8012f3b3d211",
+      "instagram_post_id": "18086125685687663",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "8f5350ad12f3dbd70188d0c2bba00098c09881d030df92d8d4c373bb48fc7103",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-02.mp4",
+      "fact_name": "Fire Resistance",
+      "category": "spell_use_case",
+      "hook": "Fire Resistance is often underestimated for its duration - 1 turn or more can change the course of a battle.",
+      "body": "Fire Resistance, a 2nd-level wizard spell, modifies the encounter state by raising resistance to heat and fire, potentially negating damage. Its range is self or more, allowing for strategic flexibility. The common error is casting it reactively in combat without considering its duration, wasting its potential. Optimal use involves timing the cast to preemptively shield against known fire threats, extending protection to others if the spell check is high enough.",
+      "cta": "Judges: Cast Fire Resistance before the flames start licking, using its 1-turn duration to shield the party from predictable fire hazards."
+    },
+    {
+      "published_utc": "2026-11-02T15:11:51Z",
+      "day": "2026-11-02",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-11-02-encounter-seed-creature-227-89af6c07d416",
+      "instagram_post_id": "17874457320640002",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "40e2573fb71e3d8a47705e6744cd218dbfce225a435aa9bf4afac71a95f8e15f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-02.mp4",
+      "fact_name": "Wyvern",
+      "category": "encounter_seed",
+      "hook": "Run Wyvern for stakes, not flavor.",
+      "body": "Wyvern's stinger attack includes a poison effect with a DC 15 Constitution save, dealing 2d10 damage on a failure. Focusing solely on the rend attacks often results in underestimating the poison's impact. Prioritizing high Constitution saves or mitigation strategies can prevent this from turning a skirmish into a deadly encounter.",
+      "cta": "GMs: Remind them the Wyvern's stinger is DC 15 CON; ignoring it makes their healer's life a nightmare."
     }
   ]
 }

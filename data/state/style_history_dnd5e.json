@@ -1400,5 +1400,15 @@
       ],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-11-02": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

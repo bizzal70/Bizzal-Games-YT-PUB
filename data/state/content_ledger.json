@@ -9096,6 +9096,50 @@
       "video_id": "18344316376261817",
       "day": "2026-11-01",
       "published_at": "2026-11-01T15:17:51+00:00"
+    },
+    {
+      "content_key": "1028f4744dce0a17eea4d81b1a89d2ac4e0819402ebb562c61762c131a5d93cf",
+      "token_text": "battle change course duration fire more often resistance turn underestimated",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Fire Resistance is often underestimated for its duration #dcc",
+      "video_id": "Ki8mpkVFxD0",
+      "day": "2026-11-02",
+      "published_at": "2026-11-02T15:07:00+00:00"
+    },
+    {
+      "content_key": "511fdb80f8685877dcc837348ffb9d2a5fabd77efeac7e6ff876cdaf600dd985",
+      "token_text": "battle change course duration fire more often resistance turn underestimated",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Fire Resistance is often underestimated for its duration - 1 turn or more can change the course of a battle.",
+      "video_id": "18086125685687663",
+      "day": "2026-11-02",
+      "published_at": "2026-11-02T15:08:17+00:00"
+    },
+    {
+      "content_key": "f65da8349911a24128e0899d2fe672157442259e98172fed436e2554ce166881",
+      "token_text": "flavor run stake wyvern",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Run Wyvern for stakes, not flavor #shadowdark",
+      "video_id": "XBBUyrWhbDI",
+      "day": "2026-11-02",
+      "published_at": "2026-11-02T15:10:50+00:00"
+    },
+    {
+      "content_key": "1fabbfbbc19430b0bb938940c13e67615cf0d8b156dde6fea583fac1d93feede",
+      "token_text": "flavor run stake wyvern",
+      "system_id": "shadowdark",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Run Wyvern for stakes, not flavor.",
+      "video_id": "17874457320640002",
+      "day": "2026-11-02",
+      "published_at": "2026-11-02T15:11:51+00:00"
     }
   ]
 }

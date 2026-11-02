@@ -1396,5 +1396,17 @@
       "spice": [],
       "tts_voice_id": "nova"
     }
+  },
+  "2026-11-02": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "torchbearer_ref",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "fable"
+    }
   }
 }

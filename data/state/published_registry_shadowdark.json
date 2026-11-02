@@ -3055,6 +3055,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-01.mp4",
         "video_sha256": "1a544a15e3947f20cbfc00e32a569ab6dbd5fab95e97219c911542c3ef2a8d08"
       }
+    },
+    {
+      "published_utc": "2026-11-02T15:10:50Z",
+      "day": "2026-11-02",
+      "content_id": "bgp-2026-11-02-encounter-seed-creature-227-89af6c07d416",
+      "publish_hash": "b9f3f7357c5b5395114189ba47b841115fac3b1f4b5341f6a7f9fe3d447fede2",
+      "youtube_video_id": "XBBUyrWhbDI",
+      "youtube_url": "https://www.youtube.com/watch?v=XBBUyrWhbDI",
+      "video_sha256": "40e2573fb71e3d8a47705e6744cd218dbfce225a435aa9bf4afac71a95f8e15f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-02.mp4",
+      "fingerprint": {
+        "day": "2026-11-02",
+        "category": "encounter_seed",
+        "angle": "twist",
+        "content_id": "bgp-2026-11-02-encounter-seed-creature-227-89af6c07d416",
+        "canonical_hash": "89af6c07d416542993d978f90987d391514f0f58a80a24ec6cf62ab3a9f9b159",
+        "script_id": "e51050abc9ca9fe9c5008a850d644410729eca7a0d6108d7921458499666625d",
+        "fact_kind": "creature",
+        "fact_pk": 227,
+        "fact_name": "Wyvern",
+        "hook": "Run Wyvern for stakes, not flavor.",
+        "body": "Wyvern's stinger attack includes a poison effect with a DC 15 Constitution save, dealing 2d10 damage on a failure. Focusing solely on the rend attacks often results in underestimating the poison's impact. Prioritizing high Constitution saves or mitigation strategies can prevent this from turning a skirmish into a deadly encounter.",
+        "cta": "GMs: Remind them the Wyvern's stinger is DC 15 CON; ignoring it makes their healer's life a nightmare.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-02.mp4",
+        "video_sha256": "40e2573fb71e3d8a47705e6744cd218dbfce225a435aa9bf4afac71a95f8e15f"
+      },
+      "tone_lint_violation": "vague filler phrase: often results in"
     }
   ]
 }

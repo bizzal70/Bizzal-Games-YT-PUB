@@ -2847,6 +2847,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-01.mp4",
         "video_sha256": "d108d330cd1a36ab3049b0e348ffe0e3f2fe4fc59c1599acb1055d8cb6e71a36"
       }
+    },
+    {
+      "published_utc": "2026-11-02T15:07:00Z",
+      "day": "2026-11-02",
+      "content_id": "bgp-2026-11-02-spell-use-case-spell-113-8012f3b3d211",
+      "publish_hash": "cd2cd0b6579084d5306d9fdddf4a1ba96b32c41c96c644f0ebf5304d279561c3",
+      "youtube_video_id": "Ki8mpkVFxD0",
+      "youtube_url": "https://www.youtube.com/watch?v=Ki8mpkVFxD0",
+      "video_sha256": "8f5350ad12f3dbd70188d0c2bba00098c09881d030df92d8d4c373bb48fc7103",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-02.mp4",
+      "fingerprint": {
+        "day": "2026-11-02",
+        "category": "spell_use_case",
+        "angle": "corruption_risk",
+        "content_id": "bgp-2026-11-02-spell-use-case-spell-113-8012f3b3d211",
+        "canonical_hash": "8012f3b3d211e58554fd33d3d3559d84eb3eed150d57b63e69d8276576daf294",
+        "script_id": "642606d487c24f31d8fe47ebe9dadc3d1a7ca4ecd462fa0d7da9008d113d2b20",
+        "fact_kind": "spell",
+        "fact_pk": 113,
+        "fact_name": "Fire Resistance",
+        "hook": "Fire Resistance is often underestimated for its duration - 1 turn or more can change the course of a battle.",
+        "body": "Fire Resistance, a 2nd-level wizard spell, modifies the encounter state by raising resistance to heat and fire, potentially negating damage. Its range is self or more, allowing for strategic flexibility. The common error is casting it reactively in combat without considering its duration, wasting its potential. Optimal use involves timing the cast to preemptively shield against known fire threats, extending protection to others if the spell check is high enough.",
+        "cta": "Judges: Cast Fire Resistance before the flames start licking, using its 1-turn duration to shield the party from predictable fire hazards.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-02.mp4",
+        "video_sha256": "8f5350ad12f3dbd70188d0c2bba00098c09881d030df92d8d4c373bb48fc7103"
+      }
     }
   ]
 }
