@@ -1,6 +1,105 @@
 [
   {
     "system": "dnd5e",
+    "title": "D&D 5e's Search Function Overhaul: A Game Changer?",
+    "angle": "Examine how the updated search function impacts gameplay efficiency.",
+    "rationale": "D&D Beyond's search function update is significant news for players and DMs.",
+    "fixture_hint": "rule",
+    "search_keyword": "D&D Beyond finally updates its search function",
+    "created_date": "2026-11-02",
+    "status": "pending",
+    "brief_id": "2042c2082a19"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Matt Mercer Miniature: 3D Printing Your Own DM Icon",
+    "angle": "Explore the implications of using iconic DM figures in your campaign.",
+    "rationale": "The release of Matt Mercer miniature 3D files is generating buzz among fans.",
+    "fixture_hint": "item",
+    "search_keyword": "Make your own critical role with Matt Mercer miniature 3D files",
+    "created_date": "2026-11-02",
+    "status": "pending",
+    "brief_id": "85b5a625e944"
+  },
+  {
+    "system": "dnd5e",
+    "title": "WotC's New Leadership: What It Means for D&D 5e",
+    "angle": "Discuss potential changes in game development under Dan Ayoub's leadership.",
+    "rationale": "Dan Ayoub's appointment as WotC head is a major development in the TTRPG community.",
+    "fixture_hint": "rule",
+    "search_keyword": "Dan Ayoub named head of Wizards of the Coast",
+    "created_date": "2026-11-02",
+    "status": "pending",
+    "brief_id": "79be297c4565"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Secrets of the Tome: Unlocking Shadowdark's Hidden Spells",
+    "angle": "Detail how new spells can alter tactical decisions in gameplay.",
+    "rationale": "Recent coverage on magic items in 'Secrets of the Tome' highlights interest in new spells.",
+    "fixture_hint": "spell",
+    "search_keyword": "Let's look at the magic items in Secrets of the Tome",
+    "created_date": "2026-11-02",
+    "status": "pending",
+    "brief_id": "64f5d76cc272"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's Tactical Arcana: Mastering Magic Items",
+    "angle": "Analyze the strategic use of newly introduced magic items for maximum impact.",
+    "rationale": "Magic items from 'Secrets of the Tome' are a hot topic in the Shadowdark community.",
+    "fixture_hint": "item",
+    "search_keyword": "Let's look at the magic items in Secrets of the Tome",
+    "created_date": "2026-11-02",
+    "status": "pending",
+    "brief_id": "7adee52fe59d"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Planetary Invasion: Shadowdark's Interstellar Threats",
+    "angle": "Explore how external cosmic threats can reshape campaign narratives.",
+    "rationale": "The idea of planetary invasion ties into the themes explored in 'The Fall of Lanth'.",
+    "fixture_hint": "creature",
+    "search_keyword": "Witness a planetary invasion from far too close in The Fall of Lanth",
+    "created_date": "2026-11-02",
+    "status": "pending",
+    "brief_id": "8f96f1957329"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Unionization: Impact on the Game's Future",
+    "angle": "Discuss how unionization efforts within D&D might influence DCC's development.",
+    "rationale": "Union votes at WotC are a significant discussion point in the TTRPG industry.",
+    "fixture_hint": "rule",
+    "search_keyword": "Wizards of the Coast retains Fisher Phillips, a union avoidance firm",
+    "created_date": "2026-11-02",
+    "status": "pending",
+    "brief_id": "525fe14ab246"
+  },
+  {
+    "system": "dcc",
+    "title": "13 Omens: Re-Animator Spells in DCC",
+    "angle": "Delve into the mechanics of integrating Re-Animator spells into a DCC campaign.",
+    "rationale": "The licensing of Re-Animator for 13 Omens is creating buzz around DCC.",
+    "fixture_hint": "spell",
+    "search_keyword": "Paizo licenses Re-Animator for 13 Omens",
+    "created_date": "2026-11-02",
+    "status": "pending",
+    "brief_id": "45c8ccda164d"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's New Warpaint: Elevating Your Characters",
+    "angle": "Explore how warpaint as a new item can enhance character development and strategy.",
+    "rationale": "The partnership between The Army Painter and D&D for a new paint line is noteworthy.",
+    "fixture_hint": "item",
+    "search_keyword": "The Army Painter teams up with Dungeons & Dragons for new paint line",
+    "created_date": "2026-11-02",
+    "status": "pending",
+    "brief_id": "863a99a8e739"
+  },
+  {
+    "system": "dnd5e",
     "title": "Unpacking D&D 5e's New Chaosium Influence: A Deep Dive",
     "angle": "Focus on the implications of Chaosium's AI stance for D&D 5e's rule evolution.",
     "rationale": "Chaosium's recent actions against AI are reshaping how publishers handle digital content.",
