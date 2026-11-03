@@ -3446,6 +3446,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-01.mp4",
         "video_sha256": "35a974c11c8e3ed5ff2d64cb81f60efba2d17050eae69278c31fedab3066b36b"
       }
+    },
+    {
+      "published_utc": "2026-11-03T15:21:16Z",
+      "day": "2026-11-03",
+      "content_id": "bgp-2026-11-03-class-spotlight-class-xanathars-guide-way-of-the-kensei-0e00913d471e",
+      "publish_hash": "6cdaca6138c3e4a2ccd4a49a27e34ac0c9e78467a728f76f308a4df80340f5e5",
+      "youtube_video_id": "EdGw0_auImA",
+      "youtube_url": "https://www.youtube.com/watch?v=EdGw0_auImA",
+      "video_sha256": "f44cdb98af4e65f9cf53e050274c4a15a6caaece5233ba85dac1de2a39a729b2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-03.mp4",
+      "fingerprint": {
+        "day": "2026-11-03",
+        "category": "class_spotlight",
+        "angle": "progression_trap",
+        "content_id": "bgp-2026-11-03-class-spotlight-class-xanathars-guide-way-of-the-kensei-0e00913d471e",
+        "canonical_hash": "0e00913d471e1d234f513b3d4dd4928075a37f828615a9400d7eddf44dc98e44",
+        "script_id": "abdd211faa91a4fcbe5e5cf8b414daa23a9d3e6b6dd5e2601b601ea7404a2bfd",
+        "fact_kind": "class",
+        "fact_pk": "xanathars-guide_way-of-the-kensei",
+        "fact_name": "Way of the Kensei",
+        "hook": "Way of the Kensei demands careful weapon selection - improper choices delay your core engine by multiple.",
+        "body": "Path of the Kensei at 3rd level requires choosing two weapons, with at least one being melee. Selecting flashy weapons that don't synergize with your existing abilities delays your effectiveness. Optimal play involves focusing on repeatable actions that leverage your martial arts and ki abilities, rather than relying on high-risk, high-reward spikes.",
+        "cta": "DMs: Ensure players choose a versatile melee weapon at 3rd level to maximize their Kensei's martial arts and ki synergy.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-03.mp4",
+        "video_sha256": "f44cdb98af4e65f9cf53e050274c4a15a6caaece5233ba85dac1de2a39a729b2"
+      }
     }
   ]
 }

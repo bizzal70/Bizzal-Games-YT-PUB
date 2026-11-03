@@ -2873,6 +2873,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-02.mp4",
         "video_sha256": "8f5350ad12f3dbd70188d0c2bba00098c09881d030df92d8d4c373bb48fc7103"
       }
+    },
+    {
+      "published_utc": "2026-11-03T15:16:37Z",
+      "day": "2026-11-03",
+      "content_id": "bgp-2026-11-03-rules-ruling-rule-6-71a1cfd26ca6",
+      "publish_hash": "a9c312bbea06017753b771dc6829932b0a22f91b1f8220e9018da0320f228c2b",
+      "youtube_video_id": "M1V7GOhuUtw",
+      "youtube_url": "https://www.youtube.com/watch?v=M1V7GOhuUtw",
+      "video_sha256": "b47cca8a5fb81967cb6d3072f40b219649c5638de57e48db8492e172349af71f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-03.mp4",
+      "fingerprint": {
+        "day": "2026-11-03",
+        "category": "rules_ruling",
+        "angle": "saving_throw_type",
+        "content_id": "bgp-2026-11-03-rules-ruling-rule-6-71a1cfd26ca6",
+        "canonical_hash": "71a1cfd26ca6a6bc17ea3eeca2fa41887944ca7fff01184b0e939b10cd7fe314",
+        "script_id": "0509f4feaf8715ff787829626556d55ec0593f81a80ade6604e56f03ca3fdb6b",
+        "fact_kind": "rule",
+        "fact_pk": 6,
+        "fact_name": "The Funnel",
+        "hook": "The Funnel surprises players with its lethality - most 0-level characters die in the first session.",
+        "body": "The Funnel begins with each player controlling 3-4 random 0-level characters, each with only 1d4 HP and a single weapon from their trade. The absence of class abilities or spells means survival hinges on clever play and luck rather than optimization. Assumptions about relying on traditional class abilities falter, as players must depend on environmental interactions and creative problem-solving. Ensuring survivors reach 1st level involves avoiding unnecessary risks and leveraging every small advantage.",
+        "cta": "Judges: Keep your rulings tight and consistent, especially on those 1d4 HP rolls, to keep the Funnel's chaos manageable.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-03.mp4",
+        "video_sha256": "b47cca8a5fb81967cb6d3072f40b219649c5638de57e48db8492e172349af71f"
+      },
+      "tone_lint_violation": "vague filler phrase: surprises players"
     }
   ]
 }

@@ -3082,6 +3082,32 @@
         "video_sha256": "40e2573fb71e3d8a47705e6744cd218dbfce225a435aa9bf4afac71a95f8e15f"
       },
       "tone_lint_violation": "vague filler phrase: often results in"
+    },
+    {
+      "published_utc": "2026-11-03T15:26:09Z",
+      "day": "2026-11-03",
+      "content_id": "bgp-2026-11-03-rules-myth-rule-5-751b5317a0f5",
+      "publish_hash": "07628922548b2d373a0b2b75feda57640e4cd2e93f93cc0a4973deea1c92d263",
+      "youtube_video_id": "znRK53wCU7g",
+      "youtube_url": "https://www.youtube.com/watch?v=znRK53wCU7g",
+      "video_sha256": "3b7179005a7b8da937a8627a673e66719deb154ed9f173f91fcf0a0ef6fc3d96",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-03.mp4",
+      "fingerprint": {
+        "day": "2026-11-03",
+        "category": "rules_myth",
+        "angle": "quick_example",
+        "content_id": "bgp-2026-11-03-rules-myth-rule-5-751b5317a0f5",
+        "canonical_hash": "751b5317a0f5d25b10480a2aa4ed2cc1debc1c0aa2087deac7fb48887e6790e1",
+        "script_id": "c0b5058e95d7cd877e6768970bbf2c5f6991b01a61be9e6912f780295894142e",
+        "fact_kind": "rule",
+        "fact_pk": 5,
+        "fact_name": "Spell Casting Check",
+        "hook": "Spell Casting Check often surprises with its resource cost - a failed roll consumes the spell slot without.",
+        "body": "To cast a spell, roll d20 plus relevant stat modifier against a DC of 10 plus the spell's tier. Failure results in the spell slot being consumed without the spell taking effect. Wizards face a critical failure risk, triggering a mishap. Players frequently overlook the importance of timing and preparation, leading to wasted resources. Optimal play involves ensuring favorable conditions before attempting higher-tier spells.",
+        "cta": "GMs: Remind players that a failed Spell Casting Check still burns the slot; timing and preparation are their only allies.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-03.mp4",
+        "video_sha256": "3b7179005a7b8da937a8627a673e66719deb154ed9f173f91fcf0a0ef6fc3d96"
+      }
     }
   ]
 }

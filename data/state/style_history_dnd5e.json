@@ -1410,5 +1410,17 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-11-03": {
+    "class_spotlight": {
+      "angle": "progression_trap",
+      "voice": "gritty_dm",
+      "tone": "heroic",
+      "persona": "class_mentor",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

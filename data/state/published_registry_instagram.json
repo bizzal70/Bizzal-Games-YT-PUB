@@ -4482,6 +4482,51 @@
       "hook": "Run Wyvern for stakes, not flavor.",
       "body": "Wyvern's stinger attack includes a poison effect with a DC 15 Constitution save, dealing 2d10 damage on a failure. Focusing solely on the rend attacks often results in underestimating the poison's impact. Prioritizing high Constitution saves or mitigation strategies can prevent this from turning a skirmish into a deadly encounter.",
       "cta": "GMs: Remind them the Wyvern's stinger is DC 15 CON; ignoring it makes their healer's life a nightmare."
+    },
+    {
+      "published_utc": "2026-11-03T15:17:38Z",
+      "day": "2026-11-03",
+      "system": "dcc",
+      "content_id": "bgp-2026-11-03-rules-ruling-rule-6-71a1cfd26ca6",
+      "instagram_post_id": "17918414643529269",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "b47cca8a5fb81967cb6d3072f40b219649c5638de57e48db8492e172349af71f",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-03.mp4",
+      "fact_name": "The Funnel",
+      "category": "rules_ruling",
+      "hook": "The Funnel surprises players with its lethality - most 0-level characters die in the first session.",
+      "body": "The Funnel begins with each player controlling 3-4 random 0-level characters, each with only 1d4 HP and a single weapon from their trade. The absence of class abilities or spells means survival hinges on clever play and luck rather than optimization. Assumptions about relying on traditional class abilities falter, as players must depend on environmental interactions and creative problem-solving. Ensuring survivors reach 1st level involves avoiding unnecessary risks and leveraging every small advantage.",
+      "cta": "Judges: Keep your rulings tight and consistent, especially on those 1d4 HP rolls, to keep the Funnel's chaos manageable."
+    },
+    {
+      "published_utc": "2026-11-03T15:22:18Z",
+      "day": "2026-11-03",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-11-03-class-spotlight-class-xanathars-guide-way-of-the-kensei-0e00913d471e",
+      "instagram_post_id": "18139942636653287",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "f44cdb98af4e65f9cf53e050274c4a15a6caaece5233ba85dac1de2a39a729b2",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-03.mp4",
+      "fact_name": "Way of the Kensei",
+      "category": "class_spotlight",
+      "hook": "Way of the Kensei demands careful weapon selection - improper choices delay your core engine by multiple.",
+      "body": "Path of the Kensei at 3rd level requires choosing two weapons, with at least one being melee. Selecting flashy weapons that don't synergize with your existing abilities delays your effectiveness. Optimal play involves focusing on repeatable actions that leverage your martial arts and ki abilities, rather than relying on high-risk, high-reward spikes.",
+      "cta": "DMs: Ensure players choose a versatile melee weapon at 3rd level to maximize their Kensei's martial arts and ki synergy."
+    },
+    {
+      "published_utc": "2026-11-03T15:27:10Z",
+      "day": "2026-11-03",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-11-03-rules-myth-rule-5-751b5317a0f5",
+      "instagram_post_id": "18124618249940670",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "3b7179005a7b8da937a8627a673e66719deb154ed9f173f91fcf0a0ef6fc3d96",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-03.mp4",
+      "fact_name": "Spell Casting Check",
+      "category": "rules_myth",
+      "hook": "Spell Casting Check often surprises with its resource cost - a failed roll consumes the spell slot without.",
+      "body": "To cast a spell, roll d20 plus relevant stat modifier against a DC of 10 plus the spell's tier. Failure results in the spell slot being consumed without the spell taking effect. Wizards face a critical failure risk, triggering a mishap. Players frequently overlook the importance of timing and preparation, leading to wasted resources. Optimal play involves ensuring favorable conditions before attempting higher-tier spells.",
+      "cta": "GMs: Remind players that a failed Spell Casting Check still burns the slot; timing and preparation are their only allies."
     }
   ]
 }
