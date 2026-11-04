@@ -1294,5 +1294,17 @@
       ],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-11-04": {
+    "item_spotlight": {
+      "angle": "drawback_watchout",
+      "voice": "grim_referee",
+      "tone": "neutral",
+      "persona": "dungeon_gear_mentor",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

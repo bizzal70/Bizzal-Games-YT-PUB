@@ -3108,6 +3108,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-03.mp4",
         "video_sha256": "3b7179005a7b8da937a8627a673e66719deb154ed9f173f91fcf0a0ef6fc3d96"
       }
+    },
+    {
+      "published_utc": "2026-11-04T15:18:06Z",
+      "day": "2026-11-04",
+      "content_id": "bgp-2026-11-04-spell-use-case-spell-111-e259fa7d9ca5",
+      "publish_hash": "71c216f3058315ef7c67c86d35b25af616e9be5c5d9e84f7ec19a4768223b8f2",
+      "youtube_video_id": "wF0zaYQQhgg",
+      "youtube_url": "https://www.youtube.com/watch?v=wF0zaYQQhgg",
+      "video_sha256": "35d9e31e417517c6ab617b74e229ee5e8ea4958b6b4fefa5258d3f7b928a83e5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-04.mp4",
+      "fingerprint": {
+        "day": "2026-11-04",
+        "category": "spell_use_case",
+        "angle": "common_misplay",
+        "content_id": "bgp-2026-11-04-spell-use-case-spell-111-e259fa7d9ca5",
+        "canonical_hash": "e259fa7d9ca5d4c170f249f8f0606868ba8f7a286fa402a774cd7f61c2ef6142",
+        "script_id": "a77c2f1b95bec0fed0001e5867350b182263a6b506b6e3c0ee1bf425c538355d",
+        "fact_kind": "spell",
+        "fact_pk": 111,
+        "fact_name": "Chant",
+        "hook": "Chant's duration catches many off guard - it only works with Focus duration.",
+        "body": "Chant's range is Self and it lasts as long as you maintain Focus. Casting Chant without a plan often wastes its effect. Use Chant when seeing the invisible forces opponents to reposition, costs them actions, or ends the encounter quickly.",
+        "cta": "GMs: Make them declare their plan before casting Chant, or they'll waste its Focus duration on aimless wandering.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-04.mp4",
+        "video_sha256": "35d9e31e417517c6ab617b74e229ee5e8ea4958b6b4fefa5258d3f7b928a83e5"
+      }
     }
   ]
 }

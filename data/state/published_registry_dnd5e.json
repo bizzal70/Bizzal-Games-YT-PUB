@@ -3472,6 +3472,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-03.mp4",
         "video_sha256": "f44cdb98af4e65f9cf53e050274c4a15a6caaece5233ba85dac1de2a39a729b2"
       }
+    },
+    {
+      "published_utc": "2026-11-04T15:14:12Z",
+      "day": "2026-11-04",
+      "content_id": "bgp-2026-11-04-monster-tactic-creature-srd-2024-grick-32b80eb0fb74",
+      "publish_hash": "6359b151d5cd0e499956d0db1f41cbd010ca0d02c82936923c0f7bda474db2f8",
+      "youtube_video_id": "3jcNIi-Vq9o",
+      "youtube_url": "https://www.youtube.com/watch?v=3jcNIi-Vq9o",
+      "video_sha256": "3eb24e741213ccb57c17bc1903ba0c63273628998367b728cf440a82ef3e071b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-04.mp4",
+      "fingerprint": {
+        "day": "2026-11-04",
+        "category": "monster_tactic",
+        "angle": "how_it_wins",
+        "content_id": "bgp-2026-11-04-monster-tactic-creature-srd-2024-grick-32b80eb0fb74",
+        "canonical_hash": "32b80eb0fb744c35448be4ad76fc6af38033d73aa28a3237cea6ca38fd00dce6",
+        "script_id": "891a8efd3cceb0241dbb4cca370bccb3a5c923b5acab5949612dfee2ed73331c",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_grick",
+        "fact_name": "Grick",
+        "hook": "Grick's pressure cycle catches groups off-guard - Multiattack with Beak can overwhelm quickly.",
+        "body": "The Grick's Multiattack combines its Beak and Tentacles for a potent offensive sequence, exploiting its 14 Dexterity and natural armor. With an Armor Class of 14 and 54 hit points, it withstands initial attacks long enough to apply pressure. Most groups focus on whittling down hit points, missing the tactical threat of its speed and mobility. The optimal strategy is to disrupt its tempo early, forcing the Grick to react defensively rather than maintaining its offensive momentum.",
+        "cta": "DMs: Exploit the Grick's 30-foot climb speed and natural armor to outmaneuver players who underestimate its mobility and durability.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-04.mp4",
+        "video_sha256": "3eb24e741213ccb57c17bc1903ba0c63273628998367b728cf440a82ef3e071b"
+      }
     }
   ]
 }

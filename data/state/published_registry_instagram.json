@@ -4527,6 +4527,51 @@
       "hook": "Spell Casting Check often surprises with its resource cost - a failed roll consumes the spell slot without.",
       "body": "To cast a spell, roll d20 plus relevant stat modifier against a DC of 10 plus the spell's tier. Failure results in the spell slot being consumed without the spell taking effect. Wizards face a critical failure risk, triggering a mishap. Players frequently overlook the importance of timing and preparation, leading to wasted resources. Optimal play involves ensuring favorable conditions before attempting higher-tier spells.",
       "cta": "GMs: Remind players that a failed Spell Casting Check still burns the slot; timing and preparation are their only allies."
+    },
+    {
+      "published_utc": "2026-11-04T15:09:52Z",
+      "day": "2026-11-04",
+      "system": "dcc",
+      "content_id": "bgp-2026-11-04-item-spotlight-item-13-46ee814b4050",
+      "instagram_post_id": "17894926086683724",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "1e3abeabe044fee02e37e4b08c92eef7fe52f08c57067f6d5405ad3e41c61942",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-04.mp4",
+      "fact_name": "Eviscerator Blade",
+      "category": "item_spotlight",
+      "hook": "Eviscerator Blade's damage potential hinges on a specific mechanic - it explodes damage dice on a maximum.",
+      "body": "The Eviscerator Blade allows damage dice to explode, meaning each time the wielder rolls the maximum on a damage die, they roll another and add it. This can escalate a single hit into a significant damage event, but many players misjudge the probability of consecutive maximum rolls. Treat each attack as a standard hit, and consider any additional rolls as a fortunate bonus rather than a guaranteed outcome.",
+      "cta": "Judges: Position the wielder where they can make multiple attacks; don't rely on luck to trigger the Eviscerator Blade's explosive potential."
+    },
+    {
+      "published_utc": "2026-11-04T15:15:30Z",
+      "day": "2026-11-04",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-11-04-monster-tactic-creature-srd-2024-grick-32b80eb0fb74",
+      "instagram_post_id": "17899461330409270",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "3eb24e741213ccb57c17bc1903ba0c63273628998367b728cf440a82ef3e071b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-04.mp4",
+      "fact_name": "Grick",
+      "category": "monster_tactic",
+      "hook": "Grick's pressure cycle catches groups off-guard - Multiattack with Beak can overwhelm quickly.",
+      "body": "The Grick's Multiattack combines its Beak and Tentacles for a potent offensive sequence, exploiting its 14 Dexterity and natural armor. With an Armor Class of 14 and 54 hit points, it withstands initial attacks long enough to apply pressure. Most groups focus on whittling down hit points, missing the tactical threat of its speed and mobility. The optimal strategy is to disrupt its tempo early, forcing the Grick to react defensively rather than maintaining its offensive momentum.",
+      "cta": "DMs: Exploit the Grick's 30-foot climb speed and natural armor to outmaneuver players who underestimate its mobility and durability."
+    },
+    {
+      "published_utc": "2026-11-04T15:18:53Z",
+      "day": "2026-11-04",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-11-04-spell-use-case-spell-111-e259fa7d9ca5",
+      "instagram_post_id": "18107127080261992",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "35d9e31e417517c6ab617b74e229ee5e8ea4958b6b4fefa5258d3f7b928a83e5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-04.mp4",
+      "fact_name": "Chant",
+      "category": "spell_use_case",
+      "hook": "Chant's duration catches many off guard - it only works with Focus duration.",
+      "body": "Chant's range is Self and it lasts as long as you maintain Focus. Casting Chant without a plan often wastes its effect. Use Chant when seeing the invisible forces opponents to reposition, costs them actions, or ends the encounter quickly.",
+      "cta": "GMs: Make them declare their plan before casting Chant, or they'll waste its Focus duration on aimless wandering."
     }
   ]
 }

@@ -1418,5 +1418,15 @@
       "spice": [],
       "tts_voice_id": "nova"
     }
+  },
+  "2026-11-04": {
+    "spell_use_case": {
+      "angle": "common_misplay",
+      "voice": "grim_warden",
+      "tone": "dry",
+      "persona": "arcane_survival_coach",
+      "spice": [],
+      "tts_voice_id": "nova"
+    }
   }
 }

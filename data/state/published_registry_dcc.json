@@ -2900,6 +2900,32 @@
         "video_sha256": "b47cca8a5fb81967cb6d3072f40b219649c5638de57e48db8492e172349af71f"
       },
       "tone_lint_violation": "vague filler phrase: surprises players"
+    },
+    {
+      "published_utc": "2026-11-04T15:08:48Z",
+      "day": "2026-11-04",
+      "content_id": "bgp-2026-11-04-item-spotlight-item-13-46ee814b4050",
+      "publish_hash": "f3a8b5ff9a2ddbd0c4be9f221369aaaf9d231f4e5127cf9bd7153fbcb62607a0",
+      "youtube_video_id": "tUZ2Wl4FawI",
+      "youtube_url": "https://www.youtube.com/watch?v=tUZ2Wl4FawI",
+      "video_sha256": "1e3abeabe044fee02e37e4b08c92eef7fe52f08c57067f6d5405ad3e41c61942",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-04.mp4",
+      "fingerprint": {
+        "day": "2026-11-04",
+        "category": "item_spotlight",
+        "angle": "drawback_watchout",
+        "content_id": "bgp-2026-11-04-item-spotlight-item-13-46ee814b4050",
+        "canonical_hash": "46ee814b4050f861934ec420b9c3a25d09b525d8dc5dd0a19f9cf2f61e3aedd8",
+        "script_id": "734a25c1467f01f98776e595562a0dc05e0cbbe39ff71d65088c663359f19a0a",
+        "fact_kind": "item",
+        "fact_pk": 13,
+        "fact_name": "Eviscerator Blade",
+        "hook": "Eviscerator Blade's damage potential hinges on a specific mechanic - it explodes damage dice on a maximum.",
+        "body": "The Eviscerator Blade allows damage dice to explode, meaning each time the wielder rolls the maximum on a damage die, they roll another and add it. This can escalate a single hit into a significant damage event, but many players misjudge the probability of consecutive maximum rolls. Treat each attack as a standard hit, and consider any additional rolls as a fortunate bonus rather than a guaranteed outcome.",
+        "cta": "Judges: Position the wielder where they can make multiple attacks; don't rely on luck to trigger the Eviscerator Blade's explosive potential.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-04.mp4",
+        "video_sha256": "1e3abeabe044fee02e37e4b08c92eef7fe52f08c57067f6d5405ad3e41c61942"
+      }
     }
   ]
 }
