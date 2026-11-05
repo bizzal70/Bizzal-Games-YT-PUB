@@ -4572,6 +4572,36 @@
       "hook": "Chant's duration catches many off guard - it only works with Focus duration.",
       "body": "Chant's range is Self and it lasts as long as you maintain Focus. Casting Chant without a plan often wastes its effect. Use Chant when seeing the invisible forces opponents to reposition, costs them actions, or ends the encounter quickly.",
       "cta": "GMs: Make them declare their plan before casting Chant, or they'll waste its Focus duration on aimless wandering."
+    },
+    {
+      "published_utc": "2026-11-05T15:13:28Z",
+      "day": "2026-11-05",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-11-05-spell-use-case-spell-srd-2024-pass-without-trace-06c4431a9f8d",
+      "instagram_post_id": "18455293642124869",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "42515ca793e68158ac2d663bf62f8fec4abe7ff5ea1d39d1ac717dd5628e961a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-05.mp4",
+      "fact_name": "Pass without Trace",
+      "category": "spell_use_case",
+      "hook": "Pass without Trace boosts stealth far more than players expect - a +10 bonus to Dexterity (Stealth) checks.",
+      "body": "Pass without Trace lasts for 1 hour with concentration, affecting creatures within a 30-foot radius. The +10 bonus to Dexterity (Stealth) checks often gets overlooked when players use it as a pre-combat buff rather than a strategic repositioning tool. Casting it before entering a stealth-dependent scenario avoids losing concentration to unexpected attacks.",
+      "cta": "DMs: Cast Pass without Trace before entering stealth scenarios to leverage that +10 Stealth bonus and avoid losing concentration to surprise attacks."
+    },
+    {
+      "published_utc": "2026-11-05T15:18:24Z",
+      "day": "2026-11-05",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-11-05-class-spotlight-class-5-3e9cce935c5d",
+      "instagram_post_id": "18218660491343388",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "598f2e5b56fbbf0f27437762772f7a6741ff95af49b8100dc11706837510822e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-05.mp4",
+      "fact_name": "Cursed Knight of St. Ydris",
+      "category": "class_spotlight",
+      "hook": "Cursed Knight of St.",
+      "body": "Cursed Knight of St. Ydris has a hit die of 1d6, which means its survivability is lower than most expect for a melee class. Demonic Possession offers a damage boost of +1 plus half your level for 3 rounds, but only 3 times per day, making it unreliable for sustained combat. Players mistakenly prioritize flashy abilities over consistent damage output, delaying core progression. Focus on repeatable attacks and efficient use of witch spells to maintain effectiveness.",
+      "cta": "GMs: Remind players that with only 1d6 hit dice, they should prioritize survival tactics over flashy Demonic Possession."
     }
   ]
 }

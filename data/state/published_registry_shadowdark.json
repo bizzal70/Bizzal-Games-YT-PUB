@@ -3134,6 +3134,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-04.mp4",
         "video_sha256": "35d9e31e417517c6ab617b74e229ee5e8ea4958b6b4fefa5258d3f7b928a83e5"
       }
+    },
+    {
+      "published_utc": "2026-11-05T15:17:08Z",
+      "day": "2026-11-05",
+      "content_id": "bgp-2026-11-05-class-spotlight-class-5-3e9cce935c5d",
+      "publish_hash": "2719c3488f82f810d362b803d7e811a0a928e26f439e98392c3fe55ed07bd87f",
+      "youtube_video_id": "jYC69WJ45Hk",
+      "youtube_url": "https://www.youtube.com/watch?v=jYC69WJ45Hk",
+      "video_sha256": "598f2e5b56fbbf0f27437762772f7a6741ff95af49b8100dc11706837510822e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-05.mp4",
+      "fingerprint": {
+        "day": "2026-11-05",
+        "category": "class_spotlight",
+        "angle": "progression_trap",
+        "content_id": "bgp-2026-11-05-class-spotlight-class-5-3e9cce935c5d",
+        "canonical_hash": "3e9cce935c5debc1a5cd494ed39d1c2809a50f6e49d666c2768b7df4415df209",
+        "script_id": "b1ae744b13813219cd6191bd3a96b4515a1043cbf9cca2ab1d615148514ef263",
+        "fact_kind": "class",
+        "fact_pk": 5,
+        "fact_name": "Cursed Knight of St. Ydris",
+        "hook": "Cursed Knight of St.",
+        "body": "Cursed Knight of St. Ydris has a hit die of 1d6, which means its survivability is lower than most expect for a melee class. Demonic Possession offers a damage boost of +1 plus half your level for 3 rounds, but only 3 times per day, making it unreliable for sustained combat. Players mistakenly prioritize flashy abilities over consistent damage output, delaying core progression. Focus on repeatable attacks and efficient use of witch spells to maintain effectiveness.",
+        "cta": "GMs: Remind players that with only 1d6 hit dice, they should prioritize survival tactics over flashy Demonic Possession.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-05.mp4",
+        "video_sha256": "598f2e5b56fbbf0f27437762772f7a6741ff95af49b8100dc11706837510822e"
+      }
     }
   ]
 }

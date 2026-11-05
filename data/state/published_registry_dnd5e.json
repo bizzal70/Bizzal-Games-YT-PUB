@@ -3498,6 +3498,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-04.mp4",
         "video_sha256": "3eb24e741213ccb57c17bc1903ba0c63273628998367b728cf440a82ef3e071b"
       }
+    },
+    {
+      "published_utc": "2026-11-05T15:12:11Z",
+      "day": "2026-11-05",
+      "content_id": "bgp-2026-11-05-spell-use-case-spell-srd-2024-pass-without-trace-06c4431a9f8d",
+      "publish_hash": "081e7e50c0648a0731bbdf653810a09d5f562f71d0c24f7424fa9a680e62c57f",
+      "youtube_video_id": "h_OxWIUZeUU",
+      "youtube_url": "https://www.youtube.com/watch?v=h_OxWIUZeUU",
+      "video_sha256": "42515ca793e68158ac2d663bf62f8fec4abe7ff5ea1d39d1ac717dd5628e961a",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-05.mp4",
+      "fingerprint": {
+        "day": "2026-11-05",
+        "category": "spell_use_case",
+        "angle": "best_moment",
+        "content_id": "bgp-2026-11-05-spell-use-case-spell-srd-2024-pass-without-trace-06c4431a9f8d",
+        "canonical_hash": "06c4431a9f8dcf270b1b9ea24a30ec219912b4dce4f1b07f2824ff5638efd036",
+        "script_id": "e9fed9822970c303175845c82cf890649a7d27e83760676a05a031664eb1fde5",
+        "fact_kind": "spell",
+        "fact_pk": "srd-2024_pass-without-trace",
+        "fact_name": "Pass without Trace",
+        "hook": "Pass without Trace boosts stealth far more than players expect - a +10 bonus to Dexterity (Stealth) checks.",
+        "body": "Pass without Trace lasts for 1 hour with concentration, affecting creatures within a 30-foot radius. The +10 bonus to Dexterity (Stealth) checks often gets overlooked when players use it as a pre-combat buff rather than a strategic repositioning tool. Casting it before entering a stealth-dependent scenario avoids losing concentration to unexpected attacks.",
+        "cta": "DMs: Cast Pass without Trace before entering stealth scenarios to leverage that +10 Stealth bonus and avoid losing concentration to surprise attacks.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-05.mp4",
+        "video_sha256": "42515ca793e68158ac2d663bf62f8fec4abe7ff5ea1d39d1ac717dd5628e961a"
+      }
     }
   ]
 }
