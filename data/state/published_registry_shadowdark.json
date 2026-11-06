@@ -3160,6 +3160,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-05.mp4",
         "video_sha256": "598f2e5b56fbbf0f27437762772f7a6741ff95af49b8100dc11706837510822e"
       }
+    },
+    {
+      "published_utc": "2026-11-06T15:50:04Z",
+      "day": "2026-11-06",
+      "content_id": "bgp-2026-11-06-monster-tactic-creature-55-08858a27a4d9",
+      "publish_hash": "9c679d93575dd5ddb5819a6e0c0a69794950865bb3aee37443f0517dafca5e05",
+      "youtube_video_id": "XuhaOsgYXmc",
+      "youtube_url": "https://www.youtube.com/watch?v=XuhaOsgYXmc",
+      "video_sha256": "f9fe983861f3ce5dee687fd751991afadf208c96f7d54901692240e3d095e38b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-06.mp4",
+      "fingerprint": {
+        "day": "2026-11-06",
+        "category": "monster_tactic",
+        "angle": "common_mistake",
+        "content_id": "bgp-2026-11-06-monster-tactic-creature-55-08858a27a4d9",
+        "canonical_hash": "08858a27a4d92f082be8fd1fb0aca3f4fd4bfa1b675330373451ae3f7d75362f",
+        "script_id": "ea098cd6623a062269bdb10470397199676537ec0ba4776d77ea5fb93e7fd539",
+        "fact_kind": "creature",
+        "fact_pk": 55,
+        "fact_name": "Dinosaurs",
+        "hook": "Dinosaurs gain a decisive advantage from lazy positioning - their double near (fly) movement ensures rapid.",
+        "body": "Dinosaurs' movement allows them to cover significant distances quickly, often catching parties off-guard. Their beak attack at +4 to hit deals 1d8 damage and initiates a grab, imposing a DC 15 Strength check to break free. Failing to anticipate their range can lead to resource-draining engagements. Effective play requires maintaining distance and using terrain to limit their approach.",
+        "cta": "GM: Use their double near (fly) to punish players who cluster; force them to respect the 1d8 beak grab.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-06.mp4",
+        "video_sha256": "f9fe983861f3ce5dee687fd751991afadf208c96f7d54901692240e3d095e38b"
+      }
     }
   ]
 }

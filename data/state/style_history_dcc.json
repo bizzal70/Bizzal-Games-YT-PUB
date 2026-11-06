@@ -1318,5 +1318,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-06": {
+    "class_spotlight": {
+      "angle": "thief_gamble",
+      "voice": "chaos_herald",
+      "tone": "gritty",
+      "persona": "class_mentor",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

@@ -1440,5 +1440,15 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-11-06": {
+    "monster_tactic": {
+      "angle": "common_mistake",
+      "voice": "torchbearer_ref",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "fable"
+    }
   }
 }

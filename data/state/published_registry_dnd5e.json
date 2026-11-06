@@ -3524,6 +3524,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-05.mp4",
         "video_sha256": "42515ca793e68158ac2d663bf62f8fec4abe7ff5ea1d39d1ac717dd5628e961a"
       }
+    },
+    {
+      "published_utc": "2026-11-06T15:45:47Z",
+      "day": "2026-11-06",
+      "content_id": "bgp-2026-11-06-rules-ruling-rule-srd-2024-damage-and-healing-dropping-to-zero-hit-points-1f22f777dd9b",
+      "publish_hash": "5f789576066f2ddfbc65ee9a6f2215b187ffc0d7f69fb6547b0aedece2c75b8e",
+      "youtube_video_id": "sYW5Pbpa4b0",
+      "youtube_url": "https://www.youtube.com/watch?v=sYW5Pbpa4b0",
+      "video_sha256": "6d616ec9c71e61fab6f057afb4b6590bf86fd5f80614abe6bdc3c29b8951086b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-06.mp4",
+      "fingerprint": {
+        "day": "2026-11-06",
+        "category": "rules_ruling",
+        "angle": "dm_fairness_tip",
+        "content_id": "bgp-2026-11-06-rules-ruling-rule-srd-2024-damage-and-healing-dropping-to-zero-hit-points-1f22f777dd9b",
+        "canonical_hash": "1f22f777dd9b139a7fd70bc9e1f72885589367da5911dfdaeecdbce08dce22ba",
+        "script_id": "3a5e53b11337cdc495cb56282bb8635994944e57da0df652bbe0a3c7456e0d4c",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_damage-and-healing_dropping-to-zero-hit-points",
+        "fact_name": "Dropping to 0 Hit Points",
+        "hook": "Dropping to 0 Hit Points doesn't always mean death - instant death occurs only when damage exceeds maximum.",
+        "body": "Dropping to 0 Hit Points results in either death or unconsciousness. Instant death happens if the remaining damage after dropping to 0 is equal to or exceeds a creature's maximum hit points. Consistency is key: apply the same rules to both player characters and enemies to avoid disputes. Different rules for allies and foes can create unfair situations.",
+        "cta": "DMs: Apply the same 0 Hit Points rule - instant death if damage exceeds max HP - to both players and monsters.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-06.mp4",
+        "video_sha256": "6d616ec9c71e61fab6f057afb4b6590bf86fd5f80614abe6bdc3c29b8951086b"
+      }
     }
   ]
 }

@@ -2926,6 +2926,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-04.mp4",
         "video_sha256": "1e3abeabe044fee02e37e4b08c92eef7fe52f08c57067f6d5405ad3e41c61942"
       }
+    },
+    {
+      "published_utc": "2026-11-06T15:42:08Z",
+      "day": "2026-11-06",
+      "content_id": "bgp-2026-11-06-class-spotlight-class-4-f9d4928019d5",
+      "publish_hash": "c3bb5b2d9959d54226da806f1cbb1af2b01b13a347d4ad61024666dc8b23d474",
+      "youtube_video_id": "X96gKd5TmJE",
+      "youtube_url": "https://www.youtube.com/watch?v=X96gKd5TmJE",
+      "video_sha256": "354a3591e8e518daf1fec6dde2a9eb76254fc1d9026f3de56c6fb9af9315a571",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-06.mp4",
+      "fingerprint": {
+        "day": "2026-11-06",
+        "category": "class_spotlight",
+        "angle": "thief_gamble",
+        "content_id": "bgp-2026-11-06-class-spotlight-class-4-f9d4928019d5",
+        "canonical_hash": "f9d4928019d50e818fe11be6da9c8b3023a712d14f6b2d767e03d77bd82cd489",
+        "script_id": "a7dd78d84cc9bde58be7e2ea9d3e886450787e562728924a32925ea29fee596f",
+        "fact_kind": "class",
+        "fact_pk": 4,
+        "fact_name": "Thief",
+        "hook": "Patron displeasure incoming: Thief.",
+        "body": "Character tip: Thief. Thieves have a unique set of skills that use a d20 roll vs. a difficulty: Backstab (bonus to attack and damage from hiding; attack die improves to d24 at 5th), Sneak silently, Hide in shadows, Pick pockets, Climb walls. Strong turns come from repeatable decisions, not lucky spikes.",
+        "cta": "Judges: Drill your thieves on earning back burned Luck by pulling off improbable stunts; don't let them coast on fortune.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-06.mp4",
+        "video_sha256": "354a3591e8e518daf1fec6dde2a9eb76254fc1d9026f3de56c6fb9af9315a571"
+      }
     }
   ]
 }
