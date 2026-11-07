@@ -1450,5 +1450,17 @@
       "spice": [],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-11-07": {
+    "rules_ruling": {
+      "angle": "fast_ruling",
+      "voice": "grim_warden",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "coral"
+    }
   }
 }

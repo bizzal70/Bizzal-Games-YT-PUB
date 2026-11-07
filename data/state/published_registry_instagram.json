@@ -4647,6 +4647,36 @@
       "hook": "Dinosaurs gain a decisive advantage from lazy positioning - their double near (fly) movement ensures rapid.",
       "body": "Dinosaurs' movement allows them to cover significant distances quickly, often catching parties off-guard. Their beak attack at +4 to hit deals 1d8 damage and initiates a grab, imposing a DC 15 Strength check to break free. Failing to anticipate their range can lead to resource-draining engagements. Effective play requires maintaining distance and using terrain to limit their approach.",
       "cta": "GM: Use their double near (fly) to punish players who cluster; force them to respect the 1d8 beak grab."
+    },
+    {
+      "published_utc": "2026-11-07T15:11:33Z",
+      "day": "2026-11-07",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-11-07-item-spotlight-item-srd-2024-giant-slayer-rapier-3a8502162364",
+      "instagram_post_id": "18003058155034021",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "dd991786ead118525accf876cdbf41ffff859cc4a7afda395b20cc15925b3bdb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-07.mp4",
+      "fact_name": "Giant Slayer (Rapier)",
+      "category": "item_spotlight",
+      "hook": "Giant Slayer (Rapier) can trip up players expecting easy damage - its bonus only triggers against Giants.",
+      "body": "The Giant Slayer (Rapier) provides a +1 bonus to attack rolls and damage rolls, but its special effect only activates against creatures of the Giant type. On a hit, it deals an extra 2d6 damage and forces a DC 15 Strength saving throw to avoid being knocked Prone. Expecting the extra damage against all foes leads to misplays. Targeting Giants specifically is necessary to leverage its full potential.",
+      "cta": "DMs: Remind players that the Giant Slayer's 2d6 bonus damage and knockdown only trigger against creatures with the Giant type."
+    },
+    {
+      "published_utc": "2026-11-07T15:15:57Z",
+      "day": "2026-11-07",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-11-07-rules-ruling-rule-7-ce2a4f737030",
+      "instagram_post_id": "18232534279330509",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "a4eb8507e65d9b3ba0a044f21e6579c790e26ecd7fca3670bf41133b34e9ada0",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-07.mp4",
+      "fact_name": "Morale",
+      "category": "rules_ruling",
+      "hook": "Morale checks catch players off guard - DC 15 WIS when half the monsters fall.",
+      "body": "Monsters make a Morale check (DC 15 WIS) when half their number are defeated or a powerful ally falls. Failure means they flee or surrender. This trigger often goes unnoticed, leading to unnecessary combat. Anticipate and leverage it for tactical retreats or surrenders.",
+      "cta": "GMs: When half the monsters drop, enforce a DC 15 WIS Morale check to prevent pointless bloodshed."
     }
   ]
 }

@@ -3550,6 +3550,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-06.mp4",
         "video_sha256": "6d616ec9c71e61fab6f057afb4b6590bf86fd5f80614abe6bdc3c29b8951086b"
       }
+    },
+    {
+      "published_utc": "2026-11-07T15:10:31Z",
+      "day": "2026-11-07",
+      "content_id": "bgp-2026-11-07-item-spotlight-item-srd-2024-giant-slayer-rapier-3a8502162364",
+      "publish_hash": "d25d8f38f0c6af147c567a51aadcc1628de4a850f189568b8a1b19bea459e1dc",
+      "youtube_video_id": "bSWbN7VWI-c",
+      "youtube_url": "https://www.youtube.com/watch?v=bSWbN7VWI-c",
+      "video_sha256": "dd991786ead118525accf876cdbf41ffff859cc4a7afda395b20cc15925b3bdb",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-07.mp4",
+      "fingerprint": {
+        "day": "2026-11-07",
+        "category": "item_spotlight",
+        "angle": "drawback_watchout",
+        "content_id": "bgp-2026-11-07-item-spotlight-item-srd-2024-giant-slayer-rapier-3a8502162364",
+        "canonical_hash": "3a850216236454f4a9f3bbcc532678675b43f04a6ce5b6e22a91ed215c5cedb0",
+        "script_id": "0b6ab44ec7df1438ef0a89745fccd4a9750b2b2333b8e2a9112415ad554514b4",
+        "fact_kind": "item",
+        "fact_pk": "srd-2024_giant-slayer-rapier",
+        "fact_name": "Giant Slayer (Rapier)",
+        "hook": "Giant Slayer (Rapier) can trip up players expecting easy damage - its bonus only triggers against Giants.",
+        "body": "The Giant Slayer (Rapier) provides a +1 bonus to attack rolls and damage rolls, but its special effect only activates against creatures of the Giant type. On a hit, it deals an extra 2d6 damage and forces a DC 15 Strength saving throw to avoid being knocked Prone. Expecting the extra damage against all foes leads to misplays. Targeting Giants specifically is necessary to leverage its full potential.",
+        "cta": "DMs: Remind players that the Giant Slayer's 2d6 bonus damage and knockdown only trigger against creatures with the Giant type.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-07.mp4",
+        "video_sha256": "dd991786ead118525accf876cdbf41ffff859cc4a7afda395b20cc15925b3bdb"
+      }
     }
   ]
 }

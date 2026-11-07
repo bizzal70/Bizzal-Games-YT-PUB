@@ -3186,6 +3186,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-06.mp4",
         "video_sha256": "f9fe983861f3ce5dee687fd751991afadf208c96f7d54901692240e3d095e38b"
       }
+    },
+    {
+      "published_utc": "2026-11-07T15:14:38Z",
+      "day": "2026-11-07",
+      "content_id": "bgp-2026-11-07-rules-ruling-rule-7-ce2a4f737030",
+      "publish_hash": "b2f58c95f6949113a801a3098b260d8963741686a2e1f3f8efaf47bbce8fb9ed",
+      "youtube_video_id": "Q3hn_7GqWzc",
+      "youtube_url": "https://www.youtube.com/watch?v=Q3hn_7GqWzc",
+      "video_sha256": "a4eb8507e65d9b3ba0a044f21e6579c790e26ecd7fca3670bf41133b34e9ada0",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-07.mp4",
+      "fingerprint": {
+        "day": "2026-11-07",
+        "category": "rules_ruling",
+        "angle": "fast_ruling",
+        "content_id": "bgp-2026-11-07-rules-ruling-rule-7-ce2a4f737030",
+        "canonical_hash": "ce2a4f7370307656e7231e1512298c7f741be53d389c3cb127463f89456ad8c6",
+        "script_id": "77e87d0c11e7f0e2f69812ad95d4da00d19f333f6605af6ef15e088974781a3e",
+        "fact_kind": "rule",
+        "fact_pk": 7,
+        "fact_name": "Morale",
+        "hook": "Morale checks catch players off guard - DC 15 WIS when half the monsters fall.",
+        "body": "Monsters make a Morale check (DC 15 WIS) when half their number are defeated or a powerful ally falls. Failure means they flee or surrender. This trigger often goes unnoticed, leading to unnecessary combat. Anticipate and leverage it for tactical retreats or surrenders.",
+        "cta": "GMs: When half the monsters drop, enforce a DC 15 WIS Morale check to prevent pointless bloodshed.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-07.mp4",
+        "video_sha256": "a4eb8507e65d9b3ba0a044f21e6579c790e26ecd7fca3670bf41133b34e9ada0"
+      }
     }
   ]
 }
