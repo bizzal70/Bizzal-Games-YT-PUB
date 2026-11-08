@@ -3212,6 +3212,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-07.mp4",
         "video_sha256": "a4eb8507e65d9b3ba0a044f21e6579c790e26ecd7fca3670bf41133b34e9ada0"
       }
+    },
+    {
+      "published_utc": "2026-11-08T15:17:54Z",
+      "day": "2026-11-08",
+      "content_id": "bgp-2026-11-08-item-spotlight-item-92-5d8cb44b11bb",
+      "publish_hash": "7625a7a62c85e813a7cc91d2340c8ce523238e57cad06e47e95ac59ce600d3d4",
+      "youtube_video_id": "WklTaFnaB3s",
+      "youtube_url": "https://www.youtube.com/watch?v=WklTaFnaB3s",
+      "video_sha256": "e6b10f26e5263f2e60600a9a99c30a84cd8a4295b2fb09fd022ccb0c5ed78303",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-08.mp4",
+      "fingerprint": {
+        "day": "2026-11-08",
+        "category": "item_spotlight",
+        "angle": "best_user",
+        "content_id": "bgp-2026-11-08-item-spotlight-item-92-5d8cb44b11bb",
+        "canonical_hash": "5d8cb44b11bb6f3f4bb1d62253092314c930ef3a03863ba0e27703078e083b9e",
+        "script_id": "c7957cb48526c026168890b22a912e9d4db59032417d17e4778b5ac4334e368d",
+        "fact_kind": "item",
+        "fact_pk": 92,
+        "fact_name": "Wand Of Unlife",
+        "hook": "Dungeon brief: Wand Of Unlife.",
+        "body": "The Wand Of Unlife allows casting animate dead and create undead, but each use inflicts 1d4 Constitution damage on the caster. Many players overlook the cumulative risk, using it repeatedly until their Constitution is critically low. Optimal use involves casting strategically to avoid unnecessary Constitution loss, reserving it for pivotal moments when undead minions can decisively alter the encounter's outcome.",
+        "cta": "GMs: Target a challenge where a single animate dead can shift the odds, but don't let them burn more than 2 Constitution.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-08.mp4",
+        "video_sha256": "e6b10f26e5263f2e60600a9a99c30a84cd8a4295b2fb09fd022ccb0c5ed78303"
+      }
     }
   ]
 }

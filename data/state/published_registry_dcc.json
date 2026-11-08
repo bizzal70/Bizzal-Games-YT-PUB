@@ -2952,6 +2952,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-06.mp4",
         "video_sha256": "354a3591e8e518daf1fec6dde2a9eb76254fc1d9026f3de56c6fb9af9315a571"
       }
+    },
+    {
+      "published_utc": "2026-11-08T15:08:16Z",
+      "day": "2026-11-08",
+      "content_id": "bgp-2026-11-08-monster-tactic-creature-340-355ad086be96",
+      "publish_hash": "b44b5b852de6f471223c01600148b2739748b3e5d4466c9e2b503a8a1873c03e",
+      "youtube_video_id": "swlwnsbVVQc",
+      "youtube_url": "https://www.youtube.com/watch?v=swlwnsbVVQc",
+      "video_sha256": "9f02ea649f0a9316fa05b835dcb0f0af8f3360747c103b92cecb63785e90f08b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-08.mp4",
+      "fingerprint": {
+        "day": "2026-11-08",
+        "category": "monster_tactic",
+        "angle": "dungeon_level_fit",
+        "content_id": "bgp-2026-11-08-monster-tactic-creature-340-355ad086be96",
+        "canonical_hash": "355ad086be9610cdcd7b52399d0ca870dc994686a74fc658ce723382505cd8d1",
+        "script_id": "1634bb978af90b988fea00f1696c038d82fb0206fb2f418cd11cd11380c191f7",
+        "fact_kind": "creature",
+        "fact_pk": 340,
+        "fact_name": "Red Robe Hollow One",
+        "hook": "Red Robe Hollow One surprises with its spellcasting versatility - a +6 spell check for 1st-level spells.",
+        "body": "The Red Robe Hollow One's spellcasting uses a +6 spell check, making its spells more reliable than expected for a creature with only 2d8 hit dice. Its ability to cast 'flaming hands' with a d24 action die can deal significant area damage, often catching groups off guard. The 'ward portal' spell, using a d16 action die, allows it to control battlefield movement effectively. Underestimating its ability to split and spatial shift can lead to it maintaining pressure by repositioning itself strategically. Disrupting its spellcasting is crucial to mitigate these threats.",
+        "cta": "Judges: Force it into melee to exploit its AC 12, and disrupt its +6 spellcasting before it splits or shifts.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-08.mp4",
+        "video_sha256": "9f02ea649f0a9316fa05b835dcb0f0af8f3360747c103b92cecb63785e90f08b"
+      }
     }
   ]
 }

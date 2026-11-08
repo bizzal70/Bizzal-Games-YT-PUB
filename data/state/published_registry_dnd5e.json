@@ -3576,6 +3576,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-07.mp4",
         "video_sha256": "dd991786ead118525accf876cdbf41ffff859cc4a7afda395b20cc15925b3bdb"
       }
+    },
+    {
+      "published_utc": "2026-11-08T15:12:58Z",
+      "day": "2026-11-08",
+      "content_id": "bgp-2026-11-08-encounter-seed-creature-srd-2024-gray-ooze-65018c4db153",
+      "publish_hash": "82ae17bef73f2037a4fbedb0d42d5f19e9aa4c794cf4dbc2058682e6eca2ab7a",
+      "youtube_video_id": "gvrPXgACxPE",
+      "youtube_url": "https://www.youtube.com/watch?v=gvrPXgACxPE",
+      "video_sha256": "88c4eda1151a9725bc5b3f6eac4393df19e942838b7482e5a25cdc219bad2b8d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-08.mp4",
+      "fingerprint": {
+        "day": "2026-11-08",
+        "category": "encounter_seed",
+        "angle": "three_beats",
+        "content_id": "bgp-2026-11-08-encounter-seed-creature-srd-2024-gray-ooze-65018c4db153",
+        "canonical_hash": "65018c4db1534521749cd018bbc73a2a7815bf4a125d156d45bafbd230094639",
+        "script_id": "b0e03090f1441f2cdc70060b64d920880c54352a3f8cd79038fc8036c1e13e96",
+        "fact_kind": "creature",
+        "fact_pk": "srd-2024_gray-ooze",
+        "fact_name": "Gray Ooze",
+        "hook": "Give Gray Ooze a real price.",
+        "body": "Gray Ooze has an Armor Class of 9 and 22 hit points, but its resistances to acid, cold, and fire damage often catch players off guard. Many assume a quick takedown with elemental spells, only to find their damage halved. The better approach is using physical attacks or spells that deal other types of damage to bypass these resistances and end the encounter faster.",
+        "cta": "DMs: Place Gray Ooze in areas where players rely on elemental magic, exploiting its resistances to acid, cold, and fire.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-08.mp4",
+        "video_sha256": "88c4eda1151a9725bc5b3f6eac4393df19e942838b7482e5a25cdc219bad2b8d"
+      }
     }
   ]
 }

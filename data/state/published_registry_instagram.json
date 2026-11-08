@@ -4677,6 +4677,51 @@
       "hook": "Morale checks catch players off guard - DC 15 WIS when half the monsters fall.",
       "body": "Monsters make a Morale check (DC 15 WIS) when half their number are defeated or a powerful ally falls. Failure means they flee or surrender. This trigger often goes unnoticed, leading to unnecessary combat. Anticipate and leverage it for tactical retreats or surrenders.",
       "cta": "GMs: When half the monsters drop, enforce a DC 15 WIS Morale check to prevent pointless bloodshed."
+    },
+    {
+      "published_utc": "2026-11-08T15:09:14Z",
+      "day": "2026-11-08",
+      "system": "dcc",
+      "content_id": "bgp-2026-11-08-monster-tactic-creature-340-355ad086be96",
+      "instagram_post_id": "18107726126528832",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "9f02ea649f0a9316fa05b835dcb0f0af8f3360747c103b92cecb63785e90f08b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-08.mp4",
+      "fact_name": "Red Robe Hollow One",
+      "category": "monster_tactic",
+      "hook": "Red Robe Hollow One surprises with its spellcasting versatility - a +6 spell check for 1st-level spells.",
+      "body": "The Red Robe Hollow One's spellcasting uses a +6 spell check, making its spells more reliable than expected for a creature with only 2d8 hit dice. Its ability to cast 'flaming hands' with a d24 action die can deal significant area damage, often catching groups off guard. The 'ward portal' spell, using a d16 action die, allows it to control battlefield movement effectively. Underestimating its ability to split and spatial shift can lead to it maintaining pressure by repositioning itself strategically. Disrupting its spellcasting is crucial to mitigate these threats.",
+      "cta": "Judges: Force it into melee to exploit its AC 12, and disrupt its +6 spellcasting before it splits or shifts."
+    },
+    {
+      "published_utc": "2026-11-08T15:13:59Z",
+      "day": "2026-11-08",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-11-08-encounter-seed-creature-srd-2024-gray-ooze-65018c4db153",
+      "instagram_post_id": "18439773835183659",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "88c4eda1151a9725bc5b3f6eac4393df19e942838b7482e5a25cdc219bad2b8d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-08.mp4",
+      "fact_name": "Gray Ooze",
+      "category": "encounter_seed",
+      "hook": "Give Gray Ooze a real price.",
+      "body": "Gray Ooze has an Armor Class of 9 and 22 hit points, but its resistances to acid, cold, and fire damage often catch players off guard. Many assume a quick takedown with elemental spells, only to find their damage halved. The better approach is using physical attacks or spells that deal other types of damage to bypass these resistances and end the encounter faster.",
+      "cta": "DMs: Place Gray Ooze in areas where players rely on elemental magic, exploiting its resistances to acid, cold, and fire."
+    },
+    {
+      "published_utc": "2026-11-08T15:18:52Z",
+      "day": "2026-11-08",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-11-08-item-spotlight-item-92-5d8cb44b11bb",
+      "instagram_post_id": "18104315309642415",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "e6b10f26e5263f2e60600a9a99c30a84cd8a4295b2fb09fd022ccb0c5ed78303",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-08.mp4",
+      "fact_name": "Wand Of Unlife",
+      "category": "item_spotlight",
+      "hook": "Dungeon brief: Wand Of Unlife.",
+      "body": "The Wand Of Unlife allows casting animate dead and create undead, but each use inflicts 1d4 Constitution damage on the caster. Many players overlook the cumulative risk, using it repeatedly until their Constitution is critically low. Optimal use involves casting strategically to avoid unnecessary Constitution loss, reserving it for pivotal moments when undead minions can decisively alter the encounter's outcome.",
+      "cta": "GMs: Target a challenge where a single animate dead can shift the odds, but don't let them burn more than 2 Constitution."
     }
   ]
 }
