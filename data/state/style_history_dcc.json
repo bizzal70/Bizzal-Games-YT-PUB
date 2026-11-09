@@ -1352,5 +1352,17 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-09": {
+    "spell_use_case": {
+      "angle": "catastrophic_failure",
+      "voice": "survival_coach",
+      "tone": "gritty",
+      "persona": "chaos_arcane_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

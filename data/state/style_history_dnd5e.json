@@ -1474,5 +1474,17 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-09": {
+    "rules_myth": {
+      "angle": "quick_example",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "sage"
+    }
   }
 }

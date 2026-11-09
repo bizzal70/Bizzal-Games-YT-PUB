@@ -2978,6 +2978,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-08.mp4",
         "video_sha256": "9f02ea649f0a9316fa05b835dcb0f0af8f3360747c103b92cecb63785e90f08b"
       }
+    },
+    {
+      "published_utc": "2026-11-09T15:07:36Z",
+      "day": "2026-11-09",
+      "content_id": "bgp-2026-11-09-spell-use-case-spell-5-57954060ed49",
+      "publish_hash": "ff1cf49245d248fa327576811833301c3da19ff4bd6d120596f8f250c335edf0",
+      "youtube_video_id": "yFmtCHGvCR4",
+      "youtube_url": "https://www.youtube.com/watch?v=yFmtCHGvCR4",
+      "video_sha256": "ea8c8ae8fb31799aeca2341c590bbab2bc90118f1346f868241074bb21e7e333",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-09.mp4",
+      "fingerprint": {
+        "day": "2026-11-09",
+        "category": "spell_use_case",
+        "angle": "catastrophic_failure",
+        "content_id": "bgp-2026-11-09-spell-use-case-spell-5-57954060ed49",
+        "canonical_hash": "57954060ed49cee3abcf34e8d1b794c99b7b7865d165a4327e548d65da6e3e2c",
+        "script_id": "01c5a6d7bc8d4f72e0e4710a1427ad884e6a3157bc21a4af82fc4fad340c199b",
+        "fact_kind": "spell",
+        "fact_pk": 5,
+        "fact_name": "Choking Cloud",
+        "hook": "Choking Cloud's lethality often surprises - the spell's power scales dramatically with the roll.",
+        "body": "Choking Cloud starts with a 5' radius and a Fortitude save against coughing at a 12-13 spell check. At 14-17, the radius doubles, lasting 1d3 rounds and imposing a -2 penalty on all rolls for those inside. Targeting creatures with low Fortitude saves maximizes the spell's effectiveness. Avoid using it on high-Fortitude targets to prevent wasted efforts.",
+        "cta": "Judges: Aim Choking Cloud at foes with Fortitude saves under 12; otherwise, you're just wasting a spell and your breath.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-09.mp4",
+        "video_sha256": "ea8c8ae8fb31799aeca2341c590bbab2bc90118f1346f868241074bb21e7e333"
+      }
     }
   ]
 }

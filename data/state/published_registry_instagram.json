@@ -4722,6 +4722,36 @@
       "hook": "Dungeon brief: Wand Of Unlife.",
       "body": "The Wand Of Unlife allows casting animate dead and create undead, but each use inflicts 1d4 Constitution damage on the caster. Many players overlook the cumulative risk, using it repeatedly until their Constitution is critically low. Optimal use involves casting strategically to avoid unnecessary Constitution loss, reserving it for pivotal moments when undead minions can decisively alter the encounter's outcome.",
       "cta": "GMs: Target a challenge where a single animate dead can shift the odds, but don't let them burn more than 2 Constitution."
+    },
+    {
+      "published_utc": "2026-11-09T15:08:55Z",
+      "day": "2026-11-09",
+      "system": "dcc",
+      "content_id": "bgp-2026-11-09-spell-use-case-spell-5-57954060ed49",
+      "instagram_post_id": "18358773007221408",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "ea8c8ae8fb31799aeca2341c590bbab2bc90118f1346f868241074bb21e7e333",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-09.mp4",
+      "fact_name": "Choking Cloud",
+      "category": "spell_use_case",
+      "hook": "Choking Cloud's lethality often surprises - the spell's power scales dramatically with the roll.",
+      "body": "Choking Cloud starts with a 5' radius and a Fortitude save against coughing at a 12-13 spell check. At 14-17, the radius doubles, lasting 1d3 rounds and imposing a -2 penalty on all rolls for those inside. Targeting creatures with low Fortitude saves maximizes the spell's effectiveness. Avoid using it on high-Fortitude targets to prevent wasted efforts.",
+      "cta": "Judges: Aim Choking Cloud at foes with Fortitude saves under 12; otherwise, you're just wasting a spell and your breath."
+    },
+    {
+      "published_utc": "2026-11-09T15:12:45Z",
+      "day": "2026-11-09",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-11-09-rules-myth-rule-srd-2024-exploration-vision-and-light-62f2cceecea6",
+      "instagram_post_id": "18112293539628888",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "dc13fb85c99319ded3eca7ecafb5c3f775480e2d502a25d182df01c20c9a2c3d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-09.mp4",
+      "fact_name": "Vision and Light",
+      "category": "rules_myth",
+      "hook": "Vision and Light mechanics often surprise players - darkness imposes disadvantage on attack rolls.",
+      "body": "Vision and Light rules dictate that darkness grants disadvantage on attack rolls and perception checks reliant on sight. This is frequently overlooked during ranged attacks in dimly lit environments. Using light sources or spells like Darkvision can mitigate these penalties and maintain effectiveness in combat.",
+      "cta": "DMs: Enforce disadvantage on attack rolls in darkness per Vision and Light rules to remind players of their light source negligence."
     }
   ]
 }

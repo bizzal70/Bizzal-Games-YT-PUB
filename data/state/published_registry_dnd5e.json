@@ -3602,6 +3602,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-08.mp4",
         "video_sha256": "88c4eda1151a9725bc5b3f6eac4393df19e942838b7482e5a25cdc219bad2b8d"
       }
+    },
+    {
+      "published_utc": "2026-11-09T15:11:46Z",
+      "day": "2026-11-09",
+      "content_id": "bgp-2026-11-09-rules-myth-rule-srd-2024-exploration-vision-and-light-62f2cceecea6",
+      "publish_hash": "b80b505854f02ad64439cc1774aeb648acd454a2e0cabd1383d5a3c09703dd82",
+      "youtube_video_id": "dU_VmH7IOqI",
+      "youtube_url": "https://www.youtube.com/watch?v=dU_VmH7IOqI",
+      "video_sha256": "dc13fb85c99319ded3eca7ecafb5c3f775480e2d502a25d182df01c20c9a2c3d",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-09.mp4",
+      "fingerprint": {
+        "day": "2026-11-09",
+        "category": "rules_myth",
+        "angle": "quick_example",
+        "content_id": "bgp-2026-11-09-rules-myth-rule-srd-2024-exploration-vision-and-light-62f2cceecea6",
+        "canonical_hash": "62f2cceecea6ee4953e45c14393d0d6391821724835bffb267a079a5e4e0da6b",
+        "script_id": "9277b121ded4ee48efb2f6da60ca646d04648813ec586101a1f9cc779c702ff1",
+        "fact_kind": "rule",
+        "fact_pk": "srd-2024_exploration_vision-and-light",
+        "fact_name": "Vision and Light",
+        "hook": "Vision and Light mechanics often surprise players - darkness imposes disadvantage on attack rolls.",
+        "body": "Vision and Light rules dictate that darkness grants disadvantage on attack rolls and perception checks reliant on sight. This is frequently overlooked during ranged attacks in dimly lit environments. Using light sources or spells like Darkvision can mitigate these penalties and maintain effectiveness in combat.",
+        "cta": "DMs: Enforce disadvantage on attack rolls in darkness per Vision and Light rules to remind players of their light source negligence.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-09.mp4",
+        "video_sha256": "dc13fb85c99319ded3eca7ecafb5c3f775480e2d502a25d182df01c20c9a2c3d"
+      }
     }
   ]
 }
