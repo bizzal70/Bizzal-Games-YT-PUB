@@ -1,6 +1,83 @@
 [
   {
     "system": "dnd5e",
+    "title": "Bariaurs Unleashed: D&D 5e's Newest Playable Species",
+    "angle": "Explore the unique traits and mechanics of the Bariaur, recently added to D&D Beyond.",
+    "rationale": "The addition of Bariaurs to D&D Beyond is part of the new content drops, drawing community interest.",
+    "fixture_hint": "creature",
+    "search_keyword": "D&D Beyond adds Bariaurs, Ysgard content via D&D Beyond Drops program",
+    "created_date": "2026-11-09",
+    "status": "pending",
+    "brief_id": "c05ea7a86459"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Ysgard's Call: Integrating New Planar Content in Your Campaign",
+    "angle": "Discuss the mechanics and thematic elements of Ysgard as introduced in the latest content drop.",
+    "rationale": "Ysgard content has been added via D&D Beyond's new drop, making it a hot topic.",
+    "fixture_hint": "rule",
+    "search_keyword": "D&D Beyond adds Bariaurs, Ysgard content via D&D Beyond Drops program",
+    "created_date": "2026-11-09",
+    "status": "pending",
+    "brief_id": "b17f1032db20"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's Patent Medicines: Alchemy Mechanics Explored",
+    "angle": "Dive into the alchemy system of Shadowdark through the lens of patent medicines.",
+    "rationale": "The mention of Professor Omega and patent medicines in headlines suggests a timely exploration.",
+    "fixture_hint": "item",
+    "search_keyword": "Meet Professor Omega: Purveyor of Patent Medicines",
+    "created_date": "2026-11-09",
+    "status": "pending",
+    "brief_id": "2ddde3046c50"
+  },
+  {
+    "system": "shadowdark",
+    "title": "The Tactical Edge: New Developments in Shadowdark Magic",
+    "angle": "Uncover the latest updates in Shadowdark's magic system with a focus on tactical gameplay.",
+    "rationale": "The tactical nature of Shadowdark's recent updates aligns with the community's interest in strategic play.",
+    "fixture_hint": "rule",
+    "search_keyword": "Secrets of the Tome: Unlocking Shadowdark's Hidden Spells",
+    "created_date": "2026-11-09",
+    "status": "pending",
+    "brief_id": "25a7542b009f"
+  },
+  {
+    "system": "dcc",
+    "title": "13 Omens: Integrating Vintage Horror into DCC Campaigns",
+    "angle": "Discuss how the addition of vintage horror elements can enrich DCC adventures.",
+    "rationale": "Paizo's new horror movie content for 13 Omens highlights a trend towards thematic horror in RPGs.",
+    "fixture_hint": "spell",
+    "search_keyword": "Paizo adds new vintage horror movies to 13 Omens, featuring Dracula, Frankenstein, and The Wicker Man",
+    "created_date": "2026-11-09",
+    "status": "pending",
+    "brief_id": "0ee2173cd626"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Mechanical Marvels: The Role of Constructs in Your Game",
+    "angle": "Evaluate the impact and uses of constructs, inspired by recent tech and machinery discussions.",
+    "rationale": "With the interest in tech-themed deep dives, exploring constructs fits the current community focus.",
+    "fixture_hint": "creature",
+    "search_keyword": "World of Warcraft Deep Dive - Mechagnome",
+    "created_date": "2026-11-09",
+    "status": "pending",
+    "brief_id": "703febfe4d3c"
+  },
+  {
+    "system": "dcc",
+    "title": "Harnessing the Elements: DCC's New Elemental Magic Unveiled",
+    "angle": "Explore recent changes and strategies for using elemental magic in Dungeon Crawl Classics.",
+    "rationale": "The elemental themes in headlines suggest a timely interest in this type of magic within RPGs.",
+    "fixture_hint": "spell",
+    "search_keyword": "World of Warcraft Deep Dive - Earthen",
+    "created_date": "2026-11-09",
+    "status": "pending",
+    "brief_id": "0c5964c91bf8"
+  },
+  {
+    "system": "dnd5e",
     "title": "D&D 5e's Search Function Overhaul: A Game Changer?",
     "angle": "Examine how the updated search function impacts gameplay efficiency.",
     "rationale": "D&D Beyond's search function update is significant news for players and DMs.",
