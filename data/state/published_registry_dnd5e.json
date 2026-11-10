@@ -3628,6 +3628,33 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-09.mp4",
         "video_sha256": "dc13fb85c99319ded3eca7ecafb5c3f775480e2d502a25d182df01c20c9a2c3d"
       }
+    },
+    {
+      "published_utc": "2026-11-10T15:11:27Z",
+      "day": "2026-11-10",
+      "content_id": "bgp-2026-11-10-class-spotlight-class-srd-2024-draconic-sorcery-7d693784f05c",
+      "publish_hash": "f392aaaa1400517f1dc26818e44d3427c6c35cd3a4b49547d667c7a8ee2aa1d8",
+      "youtube_video_id": "hY06ihWAewE",
+      "youtube_url": "https://www.youtube.com/watch?v=hY06ihWAewE",
+      "video_sha256": "d319f8ca84da375e8a84edd56e133f6f9ac36311773b8a61f28e5159dabb0421",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-10.mp4",
+      "fingerprint": {
+        "day": "2026-11-10",
+        "category": "class_spotlight",
+        "angle": "resource_breakpoint",
+        "content_id": "bgp-2026-11-10-class-spotlight-class-srd-2024-draconic-sorcery-7d693784f05c",
+        "canonical_hash": "7d693784f05c5529ef9784ba4647bf5191b05daa62ed0a2e758a200e21f3b031",
+        "script_id": "e19ecf847216f37f1dd8d160211e0893b70fdb84244fb91158ef84d246300765",
+        "fact_kind": "class",
+        "fact_pk": "srd-2024_draconic-sorcery",
+        "fact_name": "Draconic Sorcery",
+        "hook": "Draconic Sorcery's resource allocation surprises many - the real breakpoint is knowing when to conserve.",
+        "body": "Draconic Sorcery lacks the flexibility of a prepared caster, making resource management critical. Many exhaust their limited spell slots on minor encounters, leaving nothing for pivotal moments. Assessing each combat's significance and allocating resources accordingly ensures enough power remains for high-pressure situations. Consistent performance comes from strategic planning, not relying on the occasional lucky roll.",
+        "cta": "DMs: Remind them that Draconic Sorcery's limited spell slots demand conservation; don't waste them before page 69's Warlock showdown.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-10.mp4",
+        "video_sha256": "d319f8ca84da375e8a84edd56e133f6f9ac36311773b8a61f28e5159dabb0421"
+      },
+      "tone_lint_violation": "vague filler phrase: surprises many"
     }
   ]
 }

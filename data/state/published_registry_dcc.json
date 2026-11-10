@@ -3004,6 +3004,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-09.mp4",
         "video_sha256": "ea8c8ae8fb31799aeca2341c590bbab2bc90118f1346f868241074bb21e7e333"
       }
+    },
+    {
+      "published_utc": "2026-11-10T15:06:40Z",
+      "day": "2026-11-10",
+      "content_id": "bgp-2026-11-10-rules-ruling-rule-23-a56ba9a9799e",
+      "publish_hash": "749c6799b9f46745f6ad80aca1bc896434172140ee84b1c9962d1a81256fde8a",
+      "youtube_video_id": "DHNqsBA8Jm0",
+      "youtube_url": "https://www.youtube.com/watch?v=DHNqsBA8Jm0",
+      "video_sha256": "ed78225dca5e8caa07e5be1c89b5e9c1deac1e3845bb8374b5eb0cb9f85d398e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-10.mp4",
+      "fingerprint": {
+        "day": "2026-11-10",
+        "category": "rules_ruling",
+        "angle": "mighty_deed_judge",
+        "content_id": "bgp-2026-11-10-rules-ruling-rule-23-a56ba9a9799e",
+        "canonical_hash": "a56ba9a9799e72544b174b3a114bce12f16644f096e149f194362c9ad0770cbb",
+        "script_id": "9a7db8e7a27d6db22aabb08f95c4b5e1f07db5db7c23eafd3ecaf8184fa30a87",
+        "fact_kind": "rule",
+        "fact_pk": 23,
+        "fact_name": "Alignment",
+        "hook": "Alignment confuses new players - it's cosmic allegiance, not personal morality.",
+        "body": "Alignment in DCC is about cosmic allegiance: Law, Neutrality, or Chaos. It determines patron choice, clerical spell access, and how magic items respond. Mistaking it for personal morality leads to misaligned character actions. Align character actions with their cosmic allegiance, not their personal ethics.",
+        "cta": "Judges: Enforce alignment as cosmic allegiance - Law, Neutrality, or Chaos - to guide patron choices and spell access, not personal ethics.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-10.mp4",
+        "video_sha256": "ed78225dca5e8caa07e5be1c89b5e9c1deac1e3845bb8374b5eb0cb9f85d398e"
+      }
     }
   ]
 }

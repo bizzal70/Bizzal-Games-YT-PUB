@@ -3238,6 +3238,32 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-08.mp4",
         "video_sha256": "e6b10f26e5263f2e60600a9a99c30a84cd8a4295b2fb09fd022ccb0c5ed78303"
       }
+    },
+    {
+      "published_utc": "2026-11-10T15:15:17Z",
+      "day": "2026-11-10",
+      "content_id": "bgp-2026-11-10-rules-myth-rule-11-1cd1c209c5fd",
+      "publish_hash": "f4e87605e823d13a07c94d47f158fdf5daeb377c958c1a33d08e65a3be15e670",
+      "youtube_video_id": "KmZ4hF6RJcg",
+      "youtube_url": "https://www.youtube.com/watch?v=KmZ4hF6RJcg",
+      "video_sha256": "cc8f7d1885c76946d0c97320bc4237e4516c6eb450ba64b635d80634e123705b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-10.mp4",
+      "fingerprint": {
+        "day": "2026-11-10",
+        "category": "rules_myth",
+        "angle": "myth_vs_rule",
+        "content_id": "bgp-2026-11-10-rules-myth-rule-11-1cd1c209c5fd",
+        "canonical_hash": "1cd1c209c5fd86bf30551c390bc389a5cfaa02085895044a143905c297257792",
+        "script_id": "833b0e21f54c2229c42f8aedd8280623ff2f58134ee9269e9455d029db201ecd",
+        "fact_kind": "rule",
+        "fact_pk": 11,
+        "fact_name": "Turn Undead",
+        "hook": "Turn Undead isn't just a spell - it makes undead flee for 2d4 rounds.",
+        "body": "Turn Undead affects all undead of a level equal to or less than the roll result, causing them to flee for 2d4 rounds. This isn't a spell slot issue; it's a class feature, so don't count it against known spells. The mistake is treating it like a one-time cast when it's a tactical tool for crowd control. Use it to break up groups of undead, giving the party breathing room.",
+        "cta": "GMs: Remind your cleric that Turn Undead isn't a spell; it's a reusable crowd control tool for 2d4 rounds.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-10.mp4",
+        "video_sha256": "cc8f7d1885c76946d0c97320bc4237e4516c6eb450ba64b635d80634e123705b"
+      }
     }
   ]
 }

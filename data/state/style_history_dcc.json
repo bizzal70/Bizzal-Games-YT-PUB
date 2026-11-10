@@ -1364,5 +1364,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-11-10": {
+    "rules_ruling": {
+      "angle": "mighty_deed_judge",
+      "voice": "grim_referee",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

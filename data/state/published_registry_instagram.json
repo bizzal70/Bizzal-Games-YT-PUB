@@ -4752,6 +4752,51 @@
       "hook": "Vision and Light mechanics often surprise players - darkness imposes disadvantage on attack rolls.",
       "body": "Vision and Light rules dictate that darkness grants disadvantage on attack rolls and perception checks reliant on sight. This is frequently overlooked during ranged attacks in dimly lit environments. Using light sources or spells like Darkvision can mitigate these penalties and maintain effectiveness in combat.",
       "cta": "DMs: Enforce disadvantage on attack rolls in darkness per Vision and Light rules to remind players of their light source negligence."
+    },
+    {
+      "published_utc": "2026-11-10T15:07:59Z",
+      "day": "2026-11-10",
+      "system": "dcc",
+      "content_id": "bgp-2026-11-10-rules-ruling-rule-23-a56ba9a9799e",
+      "instagram_post_id": "18230693761329358",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "ed78225dca5e8caa07e5be1c89b5e9c1deac1e3845bb8374b5eb0cb9f85d398e",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_dcc/by_day/2026-11-10.mp4",
+      "fact_name": "Alignment",
+      "category": "rules_ruling",
+      "hook": "Alignment confuses new players - it's cosmic allegiance, not personal morality.",
+      "body": "Alignment in DCC is about cosmic allegiance: Law, Neutrality, or Chaos. It determines patron choice, clerical spell access, and how magic items respond. Mistaking it for personal morality leads to misaligned character actions. Align character actions with their cosmic allegiance, not their personal ethics.",
+      "cta": "Judges: Enforce alignment as cosmic allegiance - Law, Neutrality, or Chaos - to guide patron choices and spell access, not personal ethics."
+    },
+    {
+      "published_utc": "2026-11-10T15:12:16Z",
+      "day": "2026-11-10",
+      "system": "dnd5e",
+      "content_id": "bgp-2026-11-10-class-spotlight-class-srd-2024-draconic-sorcery-7d693784f05c",
+      "instagram_post_id": "17955503931344998",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "d319f8ca84da375e8a84edd56e133f6f9ac36311773b8a61f28e5159dabb0421",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders/by_day/2026-11-10.mp4",
+      "fact_name": "Draconic Sorcery",
+      "category": "class_spotlight",
+      "hook": "Draconic Sorcery's resource allocation surprises many - the real breakpoint is knowing when to conserve.",
+      "body": "Draconic Sorcery lacks the flexibility of a prepared caster, making resource management critical. Many exhaust their limited spell slots on minor encounters, leaving nothing for pivotal moments. Assessing each combat's significance and allocating resources accordingly ensures enough power remains for high-pressure situations. Consistent performance comes from strategic planning, not relying on the occasional lucky roll.",
+      "cta": "DMs: Remind them that Draconic Sorcery's limited spell slots demand conservation; don't waste them before page 69's Warlock showdown."
+    },
+    {
+      "published_utc": "2026-11-10T15:17:04Z",
+      "day": "2026-11-10",
+      "system": "shadowdark",
+      "content_id": "bgp-2026-11-10-rules-myth-rule-11-1cd1c209c5fd",
+      "instagram_post_id": "18138569029655871",
+      "instagram_user_id": "17841418484196816",
+      "video_sha256": "cc8f7d1885c76946d0c97320bc4237e4516c6eb450ba64b635d80634e123705b",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_shadowdark/by_day/2026-11-10.mp4",
+      "fact_name": "Turn Undead",
+      "category": "rules_myth",
+      "hook": "Turn Undead isn't just a spell - it makes undead flee for 2d4 rounds.",
+      "body": "Turn Undead affects all undead of a level equal to or less than the roll result, causing them to flee for 2d4 rounds. This isn't a spell slot issue; it's a class feature, so don't count it against known spells. The mistake is treating it like a one-time cast when it's a tactical tool for crowd control. Use it to break up groups of undead, giving the party breathing room.",
+      "cta": "GMs: Remind your cleric that Turn Undead isn't a spell; it's a reusable crowd control tool for 2d4 rounds."
     }
   ]
 }

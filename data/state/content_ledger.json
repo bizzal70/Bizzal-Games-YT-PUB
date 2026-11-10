@@ -9536,6 +9536,72 @@
       "video_id": "18112293539628888",
       "day": "2026-11-09",
       "published_at": "2026-11-09T15:12:45+00:00"
+    },
+    {
+      "content_key": "9e34660f6e069c7c189677325bde71b1996d710a85afe554a74ee057017b6900",
+      "token_text": "alignment allegiance confuse cosmic morality new personal player",
+      "system_id": "dcc",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Alignment confuses new players #dcc",
+      "video_id": "DHNqsBA8Jm0",
+      "day": "2026-11-10",
+      "published_at": "2026-11-10T15:06:40+00:00"
+    },
+    {
+      "content_key": "8bdc4ecd85c2b9c7a4cf9f641a606a411b57ef2c31641877925ffce251d6fb0b",
+      "token_text": "alignment allegiance confuse cosmic morality new personal player",
+      "system_id": "dcc",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Alignment confuses new players - it's cosmic allegiance, not personal morality.",
+      "video_id": "18230693761329358",
+      "day": "2026-11-10",
+      "published_at": "2026-11-10T15:07:59+00:00"
+    },
+    {
+      "content_key": "743b118f7502a4ae5e93ac8a2420f5a6b066ff2f12621f4d7ec8114d53156396",
+      "token_text": "allocation breakpoint conserve draconic knowing many real resource sorcery surprise",
+      "system_id": "dnd5e",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Draconic Sorcery's resource allocation surprises many #dnd5e",
+      "video_id": "hY06ihWAewE",
+      "day": "2026-11-10",
+      "published_at": "2026-11-10T15:11:27+00:00"
+    },
+    {
+      "content_key": "d688d062a00334c62745c44e1b5a31ca6e92e016d48cc494cfa3d49e04dd5a46",
+      "token_text": "allocation breakpoint conserve draconic knowing many real resource sorcery surprise",
+      "system_id": "dnd5e",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Draconic Sorcery's resource allocation surprises many - the real breakpoint is knowing when to conserve.",
+      "video_id": "17955503931344998",
+      "day": "2026-11-10",
+      "published_at": "2026-11-10T15:12:16+00:00"
+    },
+    {
+      "content_key": "647ab7c50d0878057ac45fed5490de20bc66e977f5ff16e5d61ad5e73a945694",
+      "token_text": "2d4 flee isn just make round spell turn undead",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "short",
+      "title": "Turn Undead isn't just a spell #shadowdark",
+      "video_id": "KmZ4hF6RJcg",
+      "day": "2026-11-10",
+      "published_at": "2026-11-10T15:15:17+00:00"
+    },
+    {
+      "content_key": "0bcf2cdc92be355290c6825bc6a4ce1df0d97b0e2c4771094e850fb0e0a56d58",
+      "token_text": "2d4 flee isn just make round spell turn undead",
+      "system_id": "shadowdark",
+      "platform": "instagram",
+      "kind": "reel",
+      "title": "Turn Undead isn't just a spell - it makes undead flee for 2d4 rounds.",
+      "video_id": "18138569029655871",
+      "day": "2026-11-10",
+      "published_at": "2026-11-10T15:17:04+00:00"
     }
   ]
 }

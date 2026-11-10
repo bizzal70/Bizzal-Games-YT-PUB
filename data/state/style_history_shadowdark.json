@@ -1484,5 +1484,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-11-10": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "torchbearer_ref",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }
