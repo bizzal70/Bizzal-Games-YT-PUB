@@ -62,7 +62,7 @@ jobs:
           fi
 
           # Catchup guard
-          if [ "${hour}" -gt "10" ] 2>/dev/null; then
+          if [ "${hour}" -ge "10" ] 2>/dev/null; then
             ran_today=false
             for reg in data/state/published_registry_longform_*.json; do
               if [ -f "${reg}" ] && grep -q "\"day\": \"${today}\"" "${reg}"; then
