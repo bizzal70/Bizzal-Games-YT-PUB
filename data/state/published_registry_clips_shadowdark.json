@@ -883,6 +883,84 @@
         "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-10-30-shadowdark-clip2.mp4",
         "video_sha256": "5ab61739345bd6c853e3e5f01e14fd47c81fa49f4d4c48bf6dd99dad2d948f3b"
       }
+    },
+    {
+      "published_utc": "2026-11-11T17:47:17Z",
+      "day": "2026-11-11-shadowdark-clip1",
+      "content_id": "clip:5c4d20a2ef6cc7d7",
+      "publish_hash": "12fc9c8cbf8fc0f0a13b0e038bc380029959eed5ccac59b1d6528f6e3baf8db8",
+      "youtube_video_id": "ss79Ut4w2gI",
+      "youtube_url": "https://www.youtube.com/watch?v=ss79Ut4w2gI",
+      "video_sha256": "76ce6ee93e41eefbd589deadd80f5011babede668d62906f12322817275372a5",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-11-11-shadowdark-clip1.mp4",
+      "fingerprint": {
+        "day": "2026-11-11-shadowdark-clip1",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:5c4d20a2ef6cc7d7",
+        "canonical_hash": "",
+        "script_id": "5c4d20a2ef6cc7d76d6ddad41245dfd28a84f16396096e21d0315e7e37877c4a",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Cat's Eye requires uninterrupted focus",
+        "hook": "Cat's Eye requires uninterrupted focus",
+        "body": "Casting Cat's Eye lets you see invisible foes and secret doors, but any action that breaks focus, like taking damage or casting another spell, ends it. Position your Witch safely and use allies to protect your concentration.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-11-11-shadowdark-clip1.mp4",
+        "video_sha256": "76ce6ee93e41eefbd589deadd80f5011babede668d62906f12322817275372a5"
+      }
+    },
+    {
+      "published_utc": "2026-11-11T17:48:32Z",
+      "day": "2026-11-11-shadowdark-clip2",
+      "content_id": "clip:e35b79bf00c0b202",
+      "publish_hash": "0ee7b7736e9fa658a4d9d8557f168e937786b07dce8d6977d85a842050d73cee",
+      "youtube_video_id": "MUAui4mlFbs",
+      "youtube_url": "https://www.youtube.com/watch?v=MUAui4mlFbs",
+      "video_sha256": "5c4a9a10bf3c96eeff4f105639c1ffc588a432f1ce96bad8a35fb0c3430e0098",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-11-11-shadowdark-clip2.mp4",
+      "fingerprint": {
+        "day": "2026-11-11-shadowdark-clip2",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:e35b79bf00c0b202",
+        "canonical_hash": "",
+        "script_id": "e35b79bf00c0b202ac9b4c3156a220a50c2d1eba2908b484da4327dbc2902cf5",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Cat's Eye doesn't grant darkvision",
+        "hook": "Cat's Eye doesn't grant darkvision",
+        "body": "While Cat's Eye reveals invisible creatures, it doesn't provide darkvision or negate blindness. In total darkness or if blinded, a Witch might still struggle. Use allies with darkvision to guide you when detecting invisible threats.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-11-11-shadowdark-clip2.mp4",
+        "video_sha256": "5c4a9a10bf3c96eeff4f105639c1ffc588a432f1ce96bad8a35fb0c3430e0098"
+      }
+    },
+    {
+      "published_utc": "2026-11-11T17:49:51Z",
+      "day": "2026-11-11-shadowdark-clip3",
+      "content_id": "clip:dd486a3dd58773eb",
+      "publish_hash": "4c629c80b31da35a9b461b6c466bfffda7f9ec55aea720ade46db41ab49b8d0d",
+      "youtube_video_id": "HwSQZ8fPhcA",
+      "youtube_url": "https://www.youtube.com/watch?v=HwSQZ8fPhcA",
+      "video_sha256": "3c7b1c637713f22677a43315bcb871daa67b726157ba5c7d18fe4a5a57d5f5ed",
+      "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-11-11-shadowdark-clip3.mp4",
+      "fingerprint": {
+        "day": "2026-11-11-shadowdark-clip3",
+        "category": "rules_ruling",
+        "angle": "clip",
+        "content_id": "clip:dd486a3dd58773eb",
+        "canonical_hash": "",
+        "script_id": "dd486a3dd58773eb5d83a294128472db7eed28debe8ca94b7571e475f370fbc6",
+        "fact_kind": "rule",
+        "fact_pk": null,
+        "fact_name": "Cat's Eye's strategic timing is crucial",
+        "hook": "Cat's Eye's strategic timing is crucial",
+        "body": "Timing is key for Cat's Eye. Cast it when invisible foes or secret doors are likely. Avoid wasting it in areas without these elements. Predict hidden threats to maximize utility and conserve spell slots.",
+        "cta": "Full breakdown on the channel — link below.",
+        "video_path": "/home/runner/work/Bizzal-Games-YT-PUB/Bizzal-Games-YT-PUB/data/renders_clips_shadowdark/by_day/2026-11-11-shadowdark-clip3.mp4",
+        "video_sha256": "3c7b1c637713f22677a43315bcb871daa67b726157ba5c7d18fe4a5a57d5f5ed"
+      }
     }
   ]
 }

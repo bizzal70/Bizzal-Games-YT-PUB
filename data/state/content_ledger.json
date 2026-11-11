@@ -9602,6 +9602,50 @@
       "video_id": "18138569029655871",
       "day": "2026-11-10",
       "published_at": "2026-11-10T15:17:04+00:00"
+    },
+    {
+      "content_key": "1243cba6e88e8725fb4de508de592677a1efcb0fb17729651830c174c9a6088e",
+      "token_text": "cat door eye foes invisible secret see",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "longform",
+      "title": "Cat's Eye: See Invisible Foes and Secret Doors #shadowdark",
+      "video_id": "U2L8JFObSvo",
+      "day": "2026-11-11",
+      "published_at": "2026-11-11T17:45:50+00:00"
+    },
+    {
+      "content_key": "5b5b67c50dc41854966584560c0b908bc7043b04960a38912f18ae7a6519560e",
+      "token_text": "cat eye focu require uninterrupted",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Cat's Eye requires uninterrupted focus #shadowdark",
+      "video_id": "ss79Ut4w2gI",
+      "day": "2026-11-11-shadowdark-clip1",
+      "published_at": "2026-11-11T17:47:17+00:00"
+    },
+    {
+      "content_key": "c82f886614d7cfff8fd01c081bd8ef58187b1543d021f5d34f3f0fc6eca3318d",
+      "token_text": "cat darkvision doesn eye grant",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Cat's Eye doesn't grant darkvision #shadowdark",
+      "video_id": "MUAui4mlFbs",
+      "day": "2026-11-11-shadowdark-clip2",
+      "published_at": "2026-11-11T17:48:32+00:00"
+    },
+    {
+      "content_key": "b20245edc4778e2539d280ac0115236e7e211d46a5c80ebed828706b1430b75a",
+      "token_text": "cat crucial eye strategic timing",
+      "system_id": "shadowdark",
+      "platform": "youtube",
+      "kind": "clip",
+      "title": "Cat's Eye's strategic timing is crucial #shadowdark",
+      "video_id": "HwSQZ8fPhcA",
+      "day": "2026-11-11-shadowdark-clip3",
+      "published_at": "2026-11-11T17:49:51+00:00"
     }
   ]
 }
