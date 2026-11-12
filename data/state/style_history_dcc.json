@@ -1376,5 +1376,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-12": {
+    "encounter_seed": {
+      "angle": "terrain_feature",
+      "voice": "survival_coach",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

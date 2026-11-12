@@ -1498,5 +1498,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-12": {
+    "spell_use_case": {
+      "angle": "upcast_tip",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }
