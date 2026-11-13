@@ -1510,5 +1510,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-13": {
+    "rules_ruling": {
+      "angle": "fast_ruling",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "sage"
+    }
   }
 }
