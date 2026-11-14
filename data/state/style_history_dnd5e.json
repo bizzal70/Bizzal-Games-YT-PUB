@@ -1520,5 +1520,17 @@
       "spice": [],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-11-14": {
+    "item_spotlight": {
+      "angle": "dm_counterplay",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

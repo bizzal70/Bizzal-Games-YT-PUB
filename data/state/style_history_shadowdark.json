@@ -1518,5 +1518,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-11-14": {
+    "rules_ruling": {
+      "angle": "common_table_mistake",
+      "voice": "strict_referee",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }
