@@ -1532,5 +1532,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-15": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "friendly_vet",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [],
+      "tts_voice_id": "alloy"
+    }
   }
 }

@@ -1530,5 +1530,15 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-11-15": {
+    "item_spotlight": {
+      "angle": "drawback_watchout",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "dungeon_gear_mentor",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }
