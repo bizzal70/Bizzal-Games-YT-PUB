@@ -1,6 +1,94 @@
 [
   {
     "system": "dnd5e",
+    "title": "Pactweaver Class: Spirit Bargains and Unique Gameplay",
+    "angle": "Explore how the Pactweaver class introduces new strategic options by dealing with spirits.",
+    "rationale": "The introduction of a new class like Pactweaver is a hot topic following the recent announcement.",
+    "fixture_hint": "class",
+    "search_keyword": "Treat with spirits foul and fair with the Pactweaver, a full new D&D class",
+    "created_date": "2026-11-16",
+    "status": "pending",
+    "brief_id": "e54948564a4e"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Chaosium's Influence: D&D 5e's New Chaos Mechanic",
+    "angle": "Delve into Chaosium-inspired chaos mechanics and their impact on gameplay.",
+    "rationale": "Recent discussions on D&D's evolving ruleset highlight the integration of Chaosium influences.",
+    "fixture_hint": "rule",
+    "search_keyword": "Unpacking D&D 5e's New Chaosium Influence: A Deep Dive",
+    "created_date": "2026-11-16",
+    "status": "pending",
+    "brief_id": "83182edbc973"
+  },
+  {
+    "system": "dnd5e",
+    "title": "Stranger Things and D&D 5e: Boxed Set Surprises",
+    "angle": "Analyze the innovative elements within the Stranger Things boxed set that earned it a Toy of the Year nomination.",
+    "rationale": "The nomination of the Stranger Things boxed set brings a spotlight to its unique D&D adaptations.",
+    "fixture_hint": "item",
+    "search_keyword": "Dungeons & Dragons Stranger Things boxed set earns Toy of the Year nomination",
+    "created_date": "2026-11-16",
+    "status": "pending",
+    "brief_id": "e44bddc4b38e"
+  },
+  {
+    "system": "shadowdark",
+    "title": "New Possessions: Shadowdark's Haunted Mansion Update",
+    "angle": "Assess the tactical gameplay introduced by the new haunted mansion possession mechanics.",
+    "rationale": "The community is buzzing about Shadowdark's haunted mansion and its innovative gameplay.",
+    "fixture_hint": "rule",
+    "search_keyword": "Shadowdark's Haunted Mansion: Tactical Play with Possessions",
+    "created_date": "2026-11-16",
+    "status": "pending",
+    "brief_id": "b6048bd8cad0"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Interstellar Threats: Shadowdark's Cosmic Monsters",
+    "angle": "Investigate the new interstellar threats and their impact on campaign dynamics.",
+    "rationale": "Interstellar threats are a fresh and exciting element drawing attention in Shadowdark.",
+    "fixture_hint": "creature",
+    "search_keyword": "Planetary Invasion: Shadowdark's Interstellar Threats",
+    "created_date": "2026-11-16",
+    "status": "pending",
+    "brief_id": "bc0475711774"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Alchemy Mechanics: Shadowdark's Patent Medicines",
+    "angle": "Explore the intricate alchemy mechanics and how they enhance gameplay.",
+    "rationale": "Alchemy in Shadowdark is gaining traction with recent discussions about patent medicines.",
+    "fixture_hint": "item",
+    "search_keyword": "Shadowdark's Patent Medicines: Alchemy Mechanics Explored",
+    "created_date": "2026-11-16",
+    "status": "pending",
+    "brief_id": "623f01a31285"
+  },
+  {
+    "system": "dcc",
+    "title": "The Role of Constructs: DCC's Mechanical Marvels",
+    "angle": "Discuss the strategic implications of introducing constructs into DCC gameplay.",
+    "rationale": "Constructs are a hot topic as players look to enhance their campaign strategies.",
+    "fixture_hint": "creature",
+    "search_keyword": "DCC's Mechanical Marvels: The Role of Constructs in Your Game",
+    "created_date": "2026-11-16",
+    "status": "pending",
+    "brief_id": "97b1d9f9c7a5"
+  },
+  {
+    "system": "dcc",
+    "title": "Elemental Magic: DCC's Latest Spell Dynamics",
+    "angle": "Break down the new elemental magic spells and their tactical applications.",
+    "rationale": "Elemental magic is a current focus with the latest updates in Dungeon Crawl Classics.",
+    "fixture_hint": "spell",
+    "search_keyword": "Harnessing the Elements: DCC's New Elemental Magic Unveiled",
+    "created_date": "2026-11-16",
+    "status": "pending",
+    "brief_id": "702ea9467d4a"
+  },
+  {
+    "system": "dnd5e",
     "title": "Bariaurs Unleashed: D&D 5e's Newest Playable Species",
     "angle": "Explore the unique traits and mechanics of the Bariaur, recently added to D&D Beyond.",
     "rationale": "The addition of Bariaurs to D&D Beyond is part of the new content drops, drawing community interest.",
