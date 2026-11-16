@@ -1542,5 +1542,17 @@
       "spice": [],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-11-16": {
+    "rules_myth": {
+      "angle": "myth_vs_rule",
+      "voice": "friendly_vet",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }
