@@ -1430,5 +1430,15 @@
       "spice": [],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-17": {
+    "rules_ruling": {
+      "angle": "funnel_ruling",
+      "voice": "chaos_herald",
+      "tone": "neutral",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

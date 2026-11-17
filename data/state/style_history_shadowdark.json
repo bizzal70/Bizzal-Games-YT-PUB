@@ -1552,5 +1552,17 @@
       ],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-11-17": {
+    "rules_myth": {
+      "angle": "dm_callout",
+      "voice": "grim_warden",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "coral"
+    }
   }
 }
