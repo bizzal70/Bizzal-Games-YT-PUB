@@ -1566,5 +1566,15 @@
       ],
       "tts_voice_id": "sage"
     }
+  },
+  "2026-11-18": {
+    "monster_tactic": {
+      "angle": "common_mistake",
+      "voice": "gritty_dm",
+      "tone": "gritty",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }

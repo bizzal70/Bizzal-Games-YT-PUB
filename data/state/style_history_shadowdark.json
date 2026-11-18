@@ -1564,5 +1564,17 @@
       ],
       "tts_voice_id": "coral"
     }
+  },
+  "2026-11-18": {
+    "spell_use_case": {
+      "angle": "dm_twist",
+      "voice": "strict_referee",
+      "tone": "dry",
+      "persona": "arcane_survival_coach",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }
