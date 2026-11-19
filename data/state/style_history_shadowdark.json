@@ -1576,5 +1576,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-11-19": {
+    "class_spotlight": {
+      "angle": "early_power_spike",
+      "voice": "strict_referee",
+      "tone": "dry",
+      "persona": "class_mentor",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }

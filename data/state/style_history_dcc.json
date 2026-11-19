@@ -1452,5 +1452,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-19": {
+    "encounter_seed": {
+      "angle": "three_beats",
+      "voice": "chaos_herald",
+      "tone": "ominous",
+      "persona": "dm_story_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }

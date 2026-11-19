@@ -1576,5 +1576,15 @@
       "spice": [],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-11-19": {
+    "spell_use_case": {
+      "angle": "upcast_tip",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "clever_table_vet",
+      "spice": [],
+      "tts_voice_id": "sage"
+    }
   }
 }
