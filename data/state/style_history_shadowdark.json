@@ -1588,5 +1588,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-20": {
+    "monster_tactic": {
+      "angle": "how_it_wins",
+      "voice": "strict_referee",
+      "tone": "ominous",
+      "persona": "tactical_analyst",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "fable"
+    }
   }
 }

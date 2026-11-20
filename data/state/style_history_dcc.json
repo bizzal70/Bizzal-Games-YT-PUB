@@ -1464,5 +1464,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-11-20": {
+    "class_spotlight": {
+      "angle": "wizard_risk",
+      "voice": "survival_coach",
+      "tone": "neutral",
+      "persona": "class_mentor",
+      "spice": [
+        "deadpan"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }
