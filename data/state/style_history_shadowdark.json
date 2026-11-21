@@ -1600,5 +1600,15 @@
       ],
       "tts_voice_id": "fable"
     }
+  },
+  "2026-11-21": {
+    "rules_ruling": {
+      "angle": "common_table_mistake",
+      "voice": "torchbearer_ref",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

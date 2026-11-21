@@ -1598,5 +1598,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-21": {
+    "item_spotlight": {
+      "angle": "clever_use",
+      "voice": "gritty_dm",
+      "tone": "heroic",
+      "persona": "clever_table_vet",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "onyx"
+    }
   }
 }
