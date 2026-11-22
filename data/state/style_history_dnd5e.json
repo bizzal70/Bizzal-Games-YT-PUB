@@ -1610,5 +1610,17 @@
       ],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-11-22": {
+    "encounter_seed": {
+      "angle": "twist",
+      "voice": "friendly_vet",
+      "tone": "gritty",
+      "persona": "dm_story_coach",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "ash"
+    }
   }
 }
