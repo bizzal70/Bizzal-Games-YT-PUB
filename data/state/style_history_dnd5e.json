@@ -1622,5 +1622,17 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-23": {
+    "rules_myth": {
+      "angle": "why_people_get_it_wrong",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [
+        "sardonic"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }
