@@ -1,6 +1,94 @@
 [
   {
     "system": "dnd5e",
+    "title": "D&D 5e's Universe Beyond: Amanda Hamon's Influence",
+    "angle": "Explore how Amanda Hamon's promotion could influence the design of D&D 5e's Universes Beyond line.",
+    "rationale": "Amanda Hamon's promotion is a fresh development, and her future design choices might shape upcoming releases.",
+    "fixture_hint": "rule",
+    "search_keyword": "Amanda Hamon promoted to Principal Game Designer of D&D's Universes Beyond line",
+    "created_date": "2026-11-23",
+    "status": "pending",
+    "brief_id": "0e0d03d291d2"
+  },
+  {
+    "system": "dnd5e",
+    "title": "D&D 5e's Adaptation to Cybersecurity: Lessons from the D&D Beyond Hack",
+    "angle": "Discuss how D&D 5e could incorporate cybersecurity themes or analogues following the D&D Beyond hack news.",
+    "rationale": "The D&D Beyond hack is a current event that might inspire new narratives or mechanics in D&D 5e.",
+    "fixture_hint": "rule",
+    "search_keyword": "D&D Beyond one of hundreds of sites affected by third party hack",
+    "created_date": "2026-11-23",
+    "status": "pending",
+    "brief_id": "4977d1431272"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark’s Enigmatic Items: Secrets of the Tome's Wasteland",
+    "angle": "Delve into unique items found within the Wasteland and their mysterious powers.",
+    "rationale": "The mention of 'Secrets of the Tome's Wasteland' aligns with Shadowdark's penchant for enigmatic magical items.",
+    "fixture_hint": "item",
+    "search_keyword": "Secrets of the Tome's Wasteland is where lost magic goes to die",
+    "created_date": "2026-11-23",
+    "status": "pending",
+    "brief_id": "2ea780ae2058"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowheart Novel Preview: Anticipating New Spells",
+    "angle": "Speculate on potential new spells based on the upcoming Shadowheart novel and its narrative elements.",
+    "rationale": "With a new novel announced, it's timely to explore how its themes might introduce new spells into the game.",
+    "fixture_hint": "spell",
+    "search_keyword": "Shadowheart novel coming in 2027",
+    "created_date": "2026-11-23",
+    "status": "pending",
+    "brief_id": "1e7eb38cfa71"
+  },
+  {
+    "system": "shadowdark",
+    "title": "Shadowdark's Tactical Spellcasting: Innovations in Arcana",
+    "angle": "Investigate recent developments in spellcasting mechanics that enhance tactical gameplay.",
+    "rationale": "The focus on tactical magic in current content makes this a relevant subject for players seeking deeper strategy.",
+    "fixture_hint": "spell",
+    "search_keyword": "The Tactical Edge: New Developments in Shadowdark Magic",
+    "created_date": "2026-11-23",
+    "status": "pending",
+    "brief_id": "e1223bbdf7fd"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Latest Spell Dynamics: Wasteland Magic Explored",
+    "angle": "Explore new spell dynamics inspired by the theme of magic being lost in the wasteland.",
+    "rationale": "The theme of magic in the wasteland from current topics aligns with DCC's penchant for unique spell mechanics.",
+    "fixture_hint": "spell",
+    "search_keyword": "Secrets of the Tome's Wasteland is where lost magic goes to die",
+    "created_date": "2026-11-23",
+    "status": "pending",
+    "brief_id": "ad033fe16981"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Tribute to Ken St. Andre: Tunnels & Trolls Influences",
+    "angle": "Examine how Ken St. Andre’s design philosophies from Tunnels & Trolls have subtly influenced DCC mechanics.",
+    "rationale": "The passing of Ken St. Andre is a significant event, making it timely to honor his influence on DCC.",
+    "fixture_hint": "rule",
+    "search_keyword": "Ken St. Andre, creator of Tunnels & Trolls, passes away at age 79",
+    "created_date": "2026-11-23",
+    "status": "pending",
+    "brief_id": "5c740a611668"
+  },
+  {
+    "system": "dcc",
+    "title": "DCC's Creative Chaos: The Impact of Fraud and Cancellation",
+    "angle": "Analyze how recent events in the industry, like contract cancellations, might affect the creative direction of DCC.",
+    "rationale": "The cancellation of Samuel Bailey's contract for fraud is a notable industry event affecting RPG narratives.",
+    "fixture_hint": "rule",
+    "search_keyword": "Chaosium provides update on Old One Origins, cancels Samuel Bailey's contract for fraud",
+    "created_date": "2026-11-23",
+    "status": "pending",
+    "brief_id": "deff12063850"
+  },
+  {
+    "system": "dnd5e",
     "title": "Pactweaver Class: Spirit Bargains and Unique Gameplay",
     "angle": "Explore how the Pactweaver class introduces new strategic options by dealing with spirits.",
     "rationale": "The introduction of a new class like Pactweaver is a hot topic following the recent announcement.",
