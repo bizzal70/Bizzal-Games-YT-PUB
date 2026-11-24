@@ -1634,5 +1634,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-11-24": {
+    "class_spotlight": {
+      "angle": "early_power_spike",
+      "voice": "friendly_vet",
+      "tone": "heroic",
+      "persona": "class_mentor",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "alloy"
+    }
   }
 }
