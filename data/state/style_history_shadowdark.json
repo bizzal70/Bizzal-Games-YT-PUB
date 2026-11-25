@@ -1644,5 +1644,17 @@
       ],
       "tts_voice_id": "nova"
     }
+  },
+  "2026-11-25": {
+    "spell_use_case": {
+      "angle": "best_moment",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "arcane_survival_coach",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }

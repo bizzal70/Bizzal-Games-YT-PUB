@@ -1646,5 +1646,15 @@
       ],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-11-25": {
+    "monster_tactic": {
+      "angle": "how_it_wins",
+      "voice": "gritty_dm",
+      "tone": "dry",
+      "persona": "tactical_analyst",
+      "spice": [],
+      "tts_voice_id": "onyx"
+    }
   }
 }

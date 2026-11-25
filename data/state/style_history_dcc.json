@@ -1518,5 +1518,15 @@
       ],
       "tts_voice_id": "ash"
     }
+  },
+  "2026-11-25": {
+    "item_spotlight": {
+      "angle": "best_user",
+      "voice": "survival_coach",
+      "tone": "neutral",
+      "persona": "dungeon_gear_mentor",
+      "spice": [],
+      "tts_voice_id": "echo"
+    }
   }
 }
