@@ -1656,5 +1656,17 @@
       ],
       "tts_voice_id": "echo"
     }
+  },
+  "2026-11-26": {
+    "class_spotlight": {
+      "angle": "progression_trap",
+      "voice": "strict_referee",
+      "tone": "dry",
+      "persona": "class_mentor",
+      "spice": [
+        "punchy"
+      ],
+      "tts_voice_id": "nova"
+    }
   }
 }
