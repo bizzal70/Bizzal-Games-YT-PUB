@@ -1668,5 +1668,15 @@
       ],
       "tts_voice_id": "alloy"
     }
+  },
+  "2026-11-27": {
+    "rules_ruling": {
+      "angle": "player_tip",
+      "voice": "rules_lawyer",
+      "tone": "dry",
+      "persona": "rules_referee",
+      "spice": [],
+      "tts_voice_id": "sage"
+    }
   }
 }
