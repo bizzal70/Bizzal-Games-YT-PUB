@@ -1678,5 +1678,17 @@
       "spice": [],
       "tts_voice_id": "onyx"
     }
+  },
+  "2026-11-28": {
+    "rules_ruling": {
+      "angle": "edge_case",
+      "voice": "grim_warden",
+      "tone": "gritty",
+      "persona": "rules_referee",
+      "spice": [
+        "wry"
+      ],
+      "tts_voice_id": "echo"
+    }
   }
 }
